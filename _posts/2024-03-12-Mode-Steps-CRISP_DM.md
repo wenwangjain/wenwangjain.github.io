@@ -6,6 +6,9 @@ categories: AI
 tags: [Steps]
 ---
 <br>
+机器学习建模的详细步骤，以及python实现。
+<br><br>
+
 
 # ***1. 定义问题***
 * [如何定义机器学习问题 - MachineLearningMastery.com](https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/)
