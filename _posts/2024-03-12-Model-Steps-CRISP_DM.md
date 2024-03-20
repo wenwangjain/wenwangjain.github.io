@@ -52,18 +52,18 @@ tags: [Steps]
 ### ***2.1. 工作空间***
 
 
-| Folder           | Describe                                                                                                       |
-| -----------------| ---------------------------------------------------------------------------------------------------------------|
+| Folder| Describe|
+|------------------|-----------|
 | ***input/***     | 所有输入文件、数据文件；<br />NLP 项目，可以将嵌入保留在此处；<br />图像项目，则所有图像都将转到该文件夹中的子文件夹中; |
 | ***src/***       | 所有 python 脚本；                                                                                              |
 | ***models/***    | 所有经过训练的模型；                                                                                             |
 | ***notebooks/*** | 所有jupyter笔记本（即任何*.ipynb文件）都存储在笔记本文件夹中；                                                     |
 | ***README.md***  | 这是一个讲解文件，您可以在其中描述您的项目;如编写关于如何训练模型或在生产环境中提供模型的说明；                         |
 | ***LICENSE***    | 这是一个简单的文本文件，包含项目的许可证，如MIT、Apache等。详细了解许可证超出了本书的范围；                           |
+
 <br>
 
-> （1）python：os 模块常用函数
-<br>
+#### **01）python：os 模块**
 
 ```python
 import os
@@ -74,8 +74,7 @@ os.listdir()       # 列出当前工作空间文件/文件夹
 ```
 <br>
 
-> （2）python: os 模块创建工作空间 ***案例 1***
-<br>
+#### 2）python: os 案例 1
 
 ```python
 import os
@@ -100,8 +99,7 @@ else:
 ```
 <br>
 
-> （3）python：os 模块创建工作空间 ***案例 2***
-<br>
+#### 3）python：os 案例 2
 
 ```python
 import os 
@@ -130,9 +128,9 @@ else:
 
 ### ***2.3. 数据导入***
 
-#### **(01). CSV File**
+#### **01）CSV File**
 
-> **（1）pd.read_csv()**
+##### **（1）pd.read_csv()**
 
 - [(62条消息)pandas.read_csv参数超级详解，好多栗子！_python read csv_BigBai小白的博客-CSDN](https://blog.csdn.net/sinat_35562946/article/details/81058221)
 <br>
@@ -152,7 +150,7 @@ df = pd.read_csv(
 <br>
 
 
-> **（2）open() + csv.reader()**
+##### **（2）open() + csv.reader()**
 
 ```python
 import numpy as np
@@ -196,7 +194,7 @@ X[0:2], y[0:2]
 ```
 <br>
 
-> **（3）open() + np.loadtxt()**
+##### **（3）open() + np.loadtxt()**
 > 此函数假定没有标题行，并且所有数据都具有相同的格式
 
 ```python
@@ -213,7 +211,7 @@ data[0:5]
 <br>
 
 
-#### **(02). Excel File**
+#### **02). Excel File**
 
 
 
