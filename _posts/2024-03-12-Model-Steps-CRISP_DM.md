@@ -65,6 +65,8 @@ tags: [Steps]
 
 #### **01）python：os 模块**
 
+> （1）python os 模块主要函数有四个：如下
+
 ```python
 import os
 os.getcwd()        # 获取当前工作空间/目录
@@ -74,7 +76,7 @@ os.listdir()       # 列出当前工作空间文件/文件夹
 ```
 <br>
 
-#### 2）python: os 案例 1
+>  （2）通过 python os 模块创建工作空间，案例 1 如下，使用循环；可以新建一个 notebook 然后在执行如下代码，可以在现有空间下面创建一个有关该项目的新的工作空间。
 
 ```python
 import os
@@ -99,7 +101,7 @@ else:
 ```
 <br>
 
-#### 3）python：os 案例 2
+> （3）使用 python os 模块创建工作空间，案例 2 如下：不适用循环
 
 ```python
 import os 
@@ -130,7 +132,7 @@ else:
 
 #### **01）CSV File**
 
-##### **（1）pd.read_csv()**
+##### **pd.read_csv()**
 
 - [(62条消息)pandas.read_csv参数超级详解，好多栗子！_python read csv_BigBai小白的博客-CSDN](https://blog.csdn.net/sinat_35562946/article/details/81058221)
 <br>
@@ -150,7 +152,7 @@ df = pd.read_csv(
 <br>
 
 
-##### **（2）open() + csv.reader()**
+##### **open()+csv.reader()**
 
 ```python
 import numpy as np
@@ -194,7 +196,7 @@ X[0:2], y[0:2]
 ```
 <br>
 
-##### **（3）open() + np.loadtxt()**
+##### **open()+np.loadtxt()**
 > 此函数假定没有标题行，并且所有数据都具有相同的格式
 
 ```python
