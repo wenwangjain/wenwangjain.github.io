@@ -346,19 +346,101 @@ df_data.head()
 
 ### ***3.0. 副本，显示设置***
 
-> （1）、创建测试集副本
+
+
+
+- [Python pandas库(21) 设置数字格式，小数位数、百分号、千位分隔符 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/30955381)
+- [pandas round方法保留两位小数的设置 (zhihu.com)](https://www.zhihu.com/tardis/zm/art/155504224?source_id=1005)
+- [pandas 列保留2位小数 - CSDN文库](https://wenku.csdn.net/answer/zefigui2hi#:~:text=pandas%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%201%20%E9%A6%96%E5%85%88%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5pandas%E5%BA%93%E5%B9%B6%E8%AF%BB%E5%8F%96%E4%BD%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E3%80%82%20%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%20import%20pandas%20as%20pd,%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%20df%5B%27your_column%27%5D%20%3D%20df%5B%27your_column%27%5D.apply%28lambda%20x%3A%20round%28x%2C%202%29%29%20%E8%BF%99%E5%B0%86%E5%AF%B9%E4%BD%A0%E7%9A%84%E5%88%97%E8%BF%9B%E8%A1%8C%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%EF%BC%8C%E5%B9%B6%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E3%80%82)
+<br>
+
+#### **1). DF.copy()**
 
 ```python
 train_copy = train.copy()
 ```
 <br>
 
-> （2）、常见显示设置
+#### **2). Library Display Settings**
+
 
 ```python
+# pandas 显示设置
+# ------------------------------------------------------------------------------------------
+pd.set_option('display.float_format','${:,.2f}'.format)  # 显示格式 $0.67
+pd.set_option('display.unicode.east_asian_width', False) # 设置输出右对齐，此代码写入脚本中
+pd.set_option('display.max_info_columns',200) # info()变量最多显示200个 
+pd.set_option('display.max_info_rows',200) # info()缺失值个数上限 
 
+pd.set_option('display.chop_threshold',0.5) # 绝对值小于 0.5 显示 0 
+pd.set_option('display.precision',4) # 保留4位小数 
+pd.set_option('precision', 3) # 保留3位小数
+
+pd.set_option('display.max_rows',5) # 数据框行数 
+pd.set_option('display.max_columns',100) # 数据框列数 
+pd.set_option('display.max_colwidth',200) # 数据框列宽 
+
+pd.options.display.max_colwidth = 80 
+pd.options.display.max_columns = 20 
+pd.options.display.max_rows = 20
+
+# matplotlib 显示设置
+# ------------------------------------------------------------------------------------------
+plt.rcParams['font.sans-serif']=['FangSong'] # 替换sans-serif字体，正常显示中文(体)\'SimHei'\'FangSong' 
+plt.rcParams["font.weight"] = "bold" # 字体加粗 
+plt.rcParams['axes.unicode_minus'] = False # 坐标显示负号 
+plt.rcParams['savefig.dpi'] = 1000 # 图片像素 
+plt.rcParams['figure.dpi'] = 100 # 分辨率（不常用） 
+plt.style.use('classic') 
+plt.style.use('ggplot') 
+matplotlib.rcdefaults() # 恢复默认风格
+
+# numpy 显示设置
+# ------------------------------------------------------------------------------------------
+np.set_printoptions(precision=3, suppress=True) # precision：保留几位小数，后面不会补0，supress=True：对很大/小的数不使用科学计数法 
+np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制格式化，后面会补0
 ```
 <br>
+
+
+#### **3). DF.round(decimals=2)**
+
+```python
+# round() 函数是做四舍五入。而decimals参数是设置保留小数的位数。 
+df['col_name'] = df['col_name'].round(decimals=2)
+df.round({'n1':2, 'n1':1})
+```
+<br>
+
+
+#### **4). DF.map(lambda x:round(x, 2))**
+
+```python
+df['col'] = df['col'].map(lambda x:round(x, 2))
+```
+<br>
+
+#### **5). DF.map(lambda x:format(x, '0.2%'))**
+
+```python
+# 处理后数据从float格式转换成了带2位小数和百分号的对象（object） 
+df['col'] = df['col'].map(lambda x:format(x, '0.2%'))
+```
+<br>
+
+#### **6). DF.map(lambda x:format(x, ','))**
+
+```python
+# 设置千位分隔符
+# 转换后，这些已经不再是数字了，而是数字和逗号组成的字符串。 
+df['col'] = df['col'].map(lambda x:format(x, ','))
+```
+<br>
+
+
+
+
+
 
 ### ***3.1. 初步了解数据集***
 
