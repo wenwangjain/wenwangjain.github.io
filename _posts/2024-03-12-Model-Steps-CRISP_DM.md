@@ -354,14 +354,14 @@ df_data.head()
 - [pandas 列保留2位小数 - CSDN文库](https://wenku.csdn.net/answer/zefigui2hi#:~:text=pandas%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%201%20%E9%A6%96%E5%85%88%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5pandas%E5%BA%93%E5%B9%B6%E8%AF%BB%E5%8F%96%E4%BD%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E3%80%82%20%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%20import%20pandas%20as%20pd,%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%20df%5B%27your_column%27%5D%20%3D%20df%5B%27your_column%27%5D.apply%28lambda%20x%3A%20round%28x%2C%202%29%29%20%E8%BF%99%E5%B0%86%E5%AF%B9%E4%BD%A0%E7%9A%84%E5%88%97%E8%BF%9B%E8%A1%8C%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%EF%BC%8C%E5%B9%B6%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E3%80%82)
 <br>
 
-#### **1). DF.copy()**
+##### **1). DF.copy()**
 
 ```python
 train_copy = train.copy()
 ```
 <br>
 
-#### **2). Library Display Settings**
+##### **2). Library Display Settings**
 
 
 ```python
@@ -403,7 +403,7 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 <br>
 
 
-#### **3). DF.round(decimals=2)**
+##### **3). DF.round(decimals=2)**
 
 ```python
 # round() 函数是做四舍五入。而decimals参数是设置保留小数的位数。 
@@ -413,14 +413,14 @@ df.round({'n1':2, 'n1':1})
 <br>
 
 
-#### **4). DF.map(lambda x:round(x, 2))**
+##### **4). DF.map(lambda x:round(x, 2))**
 
 ```python
 df['col'] = df['col'].map(lambda x:round(x, 2))
 ```
 <br>
 
-#### **5). DF.map(lambda x:format(x, '0.2%'))**
+##### **5). DF.map(lambda x:format(x, '0.2%'))**
 
 ```python
 # 处理后数据从float格式转换成了带2位小数和百分号的对象（object） 
@@ -428,7 +428,7 @@ df['col'] = df['col'].map(lambda x:format(x, '0.2%'))
 ```
 <br>
 
-#### **6). DF.map(lambda x:format(x, ','))**
+##### **6). DF.map(lambda x:format(x, ','))**
 
 ```python
 # 设置千位分隔符
