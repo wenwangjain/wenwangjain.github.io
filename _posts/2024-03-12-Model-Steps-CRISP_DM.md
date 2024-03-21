@@ -216,6 +216,111 @@ data[0:5]
 #### **02). Excel File**
 
 
+### ***2.4. 数据合并***
+
+#### **01). 纵向合并**
+
+##### **pd.concat([],axis=0)**
+
+```python
+# Load library
+import pandas as pd
+
+# Create DataFrame_a
+data_a = {
+     'id': ['1', '2', '3']
+    ,'first': ['Alex', 'Amy', 'Allen']
+    ,'last': ['Anderson', 'Ackerman', 'Ali']
+    }
+
+dataframe_a = pd.DataFrame(data_a, columns = ['id', 'first', 'last'])
+
+# Create DataFrame_b
+data_b = {
+     'id': ['4', '5', '6']
+    ,'first': ['Billy', 'Brian', 'Bran']
+    ,'last': ['Bonder', 'Black', 'Balwner']
+    }
+
+dataframe_b = pd.DataFrame(data_b, columns = ['id', 'first', 'last'])
+
+
+# Concatenate DataFrames by rows
+pd.concat([dataframe_a, dataframe_b], axis=0)
+```
+<br>
+
+|  | id | first | last |
+|---|---|---|---|
+| 0 | 1 | Alex | Anderson |
+| 1 | 2 | Amy | Ackerman |
+| 2 | 3 | Allen | Ali |
+| 0 | 4 | Billy | Bonder |
+| 1 | 5 | Brian | Black |
+| 2 | 6 | Bran | Balwner |
+
+
+## ***3. 数据探索（EDA）***
+
+
+
+### ***3.1. 探索准备：测试集副本，显示设置***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
