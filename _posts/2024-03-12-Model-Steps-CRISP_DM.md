@@ -130,9 +130,11 @@ else:
 
 ### ***2.3. 数据导入***
 
-#### **01）CSV File**
+#### **01). CSV File**
 
 ##### **pd.read_csv()**
+
+> **pd.read_csv()**
 
 - [(62条消息)pandas.read_csv参数超级详解，好多栗子！_python read csv_BigBai小白的博客-CSDN](https://blog.csdn.net/sinat_35562946/article/details/81058221)
 <br>
@@ -153,6 +155,8 @@ df = pd.read_csv(
 
 
 ##### **open()+csv.reader()**
+
+> **open()+csv.reader()**
 
 ```python
 import numpy as np
@@ -218,9 +222,13 @@ data[0:5]
 
 ### ***2.4. 数据合并***
 
+- https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html#
+
 #### **01). 纵向合并**
 
 ##### **pd.concat([],axis=0)**
+
+> **pd.concat([],axis=0)**
 
 ```python
 # Load library
@@ -248,7 +256,6 @@ dataframe_b = pd.DataFrame(data_b, columns = ['id', 'first', 'last'])
 # Concatenate DataFrames by rows
 pd.concat([dataframe_a, dataframe_b], axis=0)
 ```
-<br>
 
 |  | id | first | last |
 |---|---|---|---|
@@ -258,13 +265,64 @@ pd.concat([dataframe_a, dataframe_b], axis=0)
 | 0 | 4 | Billy | Bonder |
 | 1 | 5 | Brian | Black |
 | 2 | 6 | Bran | Balwner |
+<br>
+
+#### **02). 横向合并**
+
+##### **pd.concat([],axis=1)**
+
+> **pd.concat([],axis=1)**
+
+```python
+import pandas as pd
+
+from sklearn.datasets import load_iris
+data = load_iris()
+X, y = data.data, data.target
+
+df_data = pd.concat([
+     pd.DataFrame(X, columns=data.feature_names)
+    ,pd.DataFrame(y, columns=['class'])],axis=1
+    )
+
+df_data.head()
+```
+
+|sepal length (cm)|sepal width (cm)|petal length (cm)|petal width (cm)|class|
+|-----------------|----------------|-----------------|----------------|-----|
+|0 	|5.1 	|3.5 	|1.4 	|0.2 	|0|
+|1 	|4.9 	|3.0 	|1.4 	|0.2 	|0|
+|2 	|4.7 	|3.2 	|1.3 	|0.2 	|0|
+|3 	|4.6 	|3.1 	|1.5 	|0.2 	|0|
+|4 	|5.0 	|3.6 	|1.4 	|0.2 	|0|
+<br>
+
+##### **pd.concat([],axis=1,join='inner')** 
+
+> **pd.concat([],axis=1,join='inner')**
+
+![image](https://github.com/wenwangjain/wenwangjain.github.io/assets/106724523/4cd5c042-6337-45f0-ac59-53bed4a9185b)
+
 
 
 ## ***3. 数据探索（EDA）***
 
 
+> 可以使用可视化、统计方法来了解数据中的结构和关系，主要内容如下：
 
-### ***3.1. 探索准备：测试集副本，显示设置***
+| 类型   | 内容                                                                                                                                                |
+|----|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 初步了解 | 1. 通过描述统计分析，初步了解数据集的分布，数据类型，特征值等信息                                                                                                                |
+| 分类变量 | 1. **众数**：数据集中出现次数最多的类别或值<br>2. **列联表**：一种对两个或两个以上分类变量做计数的表格<br>3. **条形图**：在绘图中，以条形表示每个类别出现的频数或占比情况<br>4. **饼图**：在绘图中，圆饼中的一个扇形部分表示每个类别出现的频数或占比情况。 |
+| 数值变量 | 1. 百分位数、箱线图；<br>2. 频数表；<br>3. 直方图、密度图；<br>4. 期望值：如果类别可以与一个数值相关联，可以根据类别的出现概率计算一个平均值。                                                               |
+| 相关关系 | 1. 百分位数、箱线图；<br>2. 频数表；<br>3. 直方图、密度图；<br>4. 期望值：如果类别可以与一个数值相关联，可以根据类别的出现概率计算一个平均值。                                                               |
+| 属性组合 | 1. 通过不同属性间的关系，重新创建新特征。                                                                                                                            |
+<br>
+
+
+
+
+### ***3.1. 副本，显示设置***
 
 
 
