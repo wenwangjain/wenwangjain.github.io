@@ -437,8 +437,9 @@ df['value8'] = df['value2'].map(lambda x:format(x, ','))
 # 打印结果
 df.head()
 ```
+<br>
 
-| _   | value1   | value2  | value3 | value4 | value5 | value6 | value7  | value8    |
+| id  | value1   | value2  | value3 | value4 | value5 | value6 | value7  | value8    |
 | --- | -------- | ------- | ------ | ------ | ------ | ------ | ------- | --------- |
 | 0   | 1.123456 | 1123456 | 1.123  | 1.12   | 1.1    | 1.12   | 112.35% | 1,123,456 |
 | 1   | 2.654321 | 2654321 | 2.654  | 2.65   | 2.7    | 2.65   | 265.43% | 2,654,321 |
