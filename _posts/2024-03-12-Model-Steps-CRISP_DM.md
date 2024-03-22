@@ -494,6 +494,7 @@ df.head()
 | 30  | ***df.sort_values(by="column")***                         | # 列升序（默认）      |
 | 31  | ***df.sort_values(by="column", ascending=False)***        | # 列降序          |
 | 32  | ***df.sort_index(axis=0, ascending=False,inplace=True)*** | # 轴降序          |
+
 <br>
 
 #### **2). 常用探索库**
@@ -504,7 +505,7 @@ df.head()
 <br>
 
 
-> ***（1）sweetviz.analyze() 查看所有变量概况***
+> ***1、sweetviz.analyze() 查看所有变量概况***
 
 ```python
 import warnings
@@ -539,7 +540,7 @@ my_report.show_html("Report_analyze.html") # .show_notebook()
 ```
 <br>
 
-> ***（2）sweetviz.compare_intra() 查看所有变量关于目标变量不同取值的分布***
+> ***2、sweetviz.compare_intra() 查看所有变量关于目标变量不同取值的分布***
 
 ```python
 # 目标变量取不同值时，其他变量的分布情况对比
@@ -553,7 +554,7 @@ my_report.show_html("Report_compare_intra.html") # .show_notebook()
 ```
 <br>
 
-> ***（3）sweetviz.compare() 查看所有变量关于分类变量不同取值的分布***
+> ***3、sweetviz.compare() 查看所有变量关于分类变量不同取值的分布***
 
 ```python
 A = train.loc[train['Survived'] == 0,:]
@@ -568,7 +569,8 @@ sv.compare([A, 'train_no'], [B, 'train_yes']).show_html( 'Report_compare.html') 
 - [太香了，墙裂推荐3个Python数据分析EDA神器！ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/285240381)
 <br>
 
-> ***（1）安装 pandas_profiling 库***
+> ***1、安装 pandas_profiling 库***
+
 ```python
 # 安装Jupyter扩展widget 
 jupyter nbextension enable --py widgetsnbextension
@@ -581,9 +583,10 @@ conda install -c conda-forge pandas-profiling
 # 或者直接从源地址安装
 pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
 ```
+
 <br>
 
-> ***（2）pandas_profiling 生成 EDA 报告***
+> ***2、pandas_profiling 生成 EDA 报告***
 
 ```python
 from pandas_profiling import ProfileReport
@@ -595,6 +598,7 @@ profile = ProfileReport(
 # profile # 直接在 notebook 上展示
 profile.to_file("data_profiling.html")
 ```
+
 <br>
 
 
@@ -607,6 +611,7 @@ profile.to_file("data_profiling.html")
 import pygwalker as pyg 
 gwalker = pyg.walk(train)
 ```
+
 <br>
 
 ##### **(4). 【pivottablejs】：透视表\图**
@@ -618,6 +623,7 @@ gwalker = pyg.walk(train)
 from pivottablejs import pivot_ui 
 pivot_ui(train)
 ```
+
 <br>
 
 ##### **(5). pandasGUI：拖放 EDA 图\表**
@@ -632,6 +638,7 @@ pip install pandasgui
 # 或者通过源下载
 pip install git+https://github.com/adamerose/pandasgui.git
 ```
+
 <br>
 
 ```python
@@ -639,6 +646,7 @@ from pandasgui import show
 # 部署GUI的数据集 
 gui = show(mpg)
 ```
+
 <br>
 
 #### **3). 分组表\图，唯一值\图**
