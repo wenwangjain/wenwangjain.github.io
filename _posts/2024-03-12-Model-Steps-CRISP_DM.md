@@ -344,9 +344,9 @@ df_data.head()
 1. 通过不同属性间的关系，重新创建新特征。
 <br>
 
+
+
 ### ***3.0. 副本，显示设置***
-
-
 
 
 - [Python pandas库(21) 设置数字格式，小数位数、百分号、千位分隔符 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/30955381)
@@ -354,14 +354,14 @@ df_data.head()
 - [pandas 列保留2位小数 - CSDN文库](https://wenku.csdn.net/answer/zefigui2hi#:~:text=pandas%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%201%20%E9%A6%96%E5%85%88%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E5%AF%BC%E5%85%A5pandas%E5%BA%93%E5%B9%B6%E8%AF%BB%E5%8F%96%E4%BD%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E3%80%82%20%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%20import%20pandas%20as%20pd,%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%20df%5B%27your_column%27%5D%20%3D%20df%5B%27your_column%27%5D.apply%28lambda%20x%3A%20round%28x%2C%202%29%29%20%E8%BF%99%E5%B0%86%E5%AF%B9%E4%BD%A0%E7%9A%84%E5%88%97%E8%BF%9B%E8%A1%8C%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%EF%BC%8C%E5%B9%B6%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E3%80%82)
 <br>
 
-#### **01.DF.copy()**
+#### **1). DF.copy()**
 
 ```python
 train_copy = train.copy()
 ```
 <br>
 
-#### **02.Library Display Settings**
+#### **2). Library Display Settings**
 
 
 ```python
@@ -403,60 +403,67 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 <br>
 
 
-#### **03.DF.round(decimals=2)**
+#### **3). round(), format()**
 
 ```python
-# round() 函数是做四舍五入。而decimals参数是设置保留小数的位数。 
-df['col_name'] = df['col_name'].round(decimals=2)
-df.round({'n1':2, 'n1':1})
+import pandas as pd
+
+# 假设我们有一个 DataFrame df
+df = pd.DataFrame({
+     'value1': [1.123456, 2.654321, 3.141592]
+    ,'value2': [1123456 , 2654321 , 3141592]
+    })
+
+# 【1】使用 .round() 函数将 'values' 列的数值四舍五入到两位小数
+df['value3'] = df['value1'].round(decimals=3)
+
+# 【2】使用 .roung() 函数将 'value4','value5'保留两位、一位小数
+df['value4'] = df['value1']
+df['value5'] = df['value1']
+df = df.round({'value4':2, 'value5':1})
+
+# 【3】对整个df进行四舍五入到两位小数
+# df = df.round(decimals=3)
+
+# 【4】我们可以使用 .round() 函数将 'values' 列的数值四舍五入到两位小数
+df['value6'] = df['value1'].map(lambda x:round(x, 2))
+
+# 【5】处理后数据从float格式转换成了带2位小数和百分号的对象（object） 
+df['value7'] = df['value1'].map(lambda x:format(x, '0.2%'))
+
+# 【6】# 设置千位分隔符，转换后，这些已经不再是数字了，而是数字和逗号组成的字符串。 
+df['value8'] = df['value2'].map(lambda x:format(x, ','))
+
+# 打印结果
+df.head()
 ```
+
+| _   | value1   | value2  | value3 | value4 | value5 | value6 | value7  | value8    |
+| --- | -------- | ------- | ------ | ------ | ------ | ------ | ------- | --------- |
+| 0   | 1.123456 | 1123456 | 1.123  | 1.12   | 1.1    | 1.12   | 112.35% | 1,123,456 |
+| 1   | 2.654321 | 2654321 | 2.654  | 2.65   | 2.7    | 2.65   | 265.43% | 2,654,321 |
+| 2   | 3.141592 | 3141592 | 3.142  | 3.14   | 3.1    | 3.14   | 314.16% | 3,141,592 |
 <br>
-
-
-#### **04.DF.map(lambda x:round(x, 2))**
-
-```python
-df['col'] = df['col'].map(lambda x:round(x, 2))
-```
-<br>
-
-##### **05.DF.map(lambda x:format(x, '0.2%'))**
-
-```python
-# 处理后数据从float格式转换成了带2位小数和百分号的对象（object） 
-df['col'] = df['col'].map(lambda x:format(x, '0.2%'))
-```
-<br>
-
-#### **06.DF.map(lambda x:format(x, ','))**
-
-```python
-# 设置千位分隔符
-# 转换后，这些已经不再是数字了，而是数字和逗号组成的字符串。 
-df['col'] = df['col'].map(lambda x:format(x, ','))
-```
-<br>
-
-
-
-
 
 
 ### ***3.1. 初步了解数据集***
 
-> （1）、常用函数汇总
+#### **1). 常用函数**
 
-| 函数名称      | 解释                         |
-|---------------|--------------------------|
-| df.head() | # 查看前5行，可以自定义函数，如：head(10) |
-|           |                            |
-|           |                            |
-|           |                            |
-
-
-
-
-
+| 序号  | 函数名称                | 解释                         |
+| --- | ------------------- | -------------------------- |
+| 1   | ***df.head()***     | # 查看前5行，可以自定义函数，如：head(10) |
+| 2   | ***df.tail(3)***    | # 查看后三行                    |
+| 3   | ***df.sample(10)*** | # 随机 10 行                  |
+| 4   | ***df.shape***      | # 行数+列数                    |
+| 5   | ******              |                            |
+| 6   | ******              |                            |
+| 7   | ******              |                            |
+| 8   | ******              |                            |
+| 9   | ******              |                            |
+| 10  | ******              |                            |
+| 11  | ******              |                            |
+| 12  | ******              |                            |
 
 
 
