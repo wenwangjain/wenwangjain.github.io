@@ -491,6 +491,70 @@ df.head()
 
 
 
+#### **2). 常用探索库**
+
+##### **(1). Sweetviz：生成 EDA 报告**
+
+- [使用sweetviz库，1行代码生成美观清晰的数据分析报告 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/206597487)
+<br>
+> ***（1）sweetviz.analyze() 查看所有变量概况***
+
+```python
+import warnings
+warnings.filterwarnings("ignore")
+
+import pandas as pd
+import os 
+
+file = os.path.join('datasets', 'train.csv')
+
+train = pd.read_csv(file, header=0)
+train.head()
+```
+
+| id  | PassengerId | Survived | Pclass | Name                                              | Sex    | Age  | SibSp | Parch | Ticket    | Fare    | Cabin | Embarked |
+| --- | ----------- | -------- | ------ | ------------------------------------------------- | ------ | ---- | ----- | ----- | --------- | ------- | ----- | -------- |
+| 0   | 1           | 0        | 3      | Braund, Mr. Owen Harris                           | male   | 22.0 | 1     | 0     | A/5 21171 | 7.2500  | NaN   | S        |
+| 1   | 2           | 1        | 1      | Cumings, Mrs. John Bradley (Florence Briggs Th... | female | 38.0 | 1     | 0     | PC 17599  | 71.2833 | C85   | C        |
+
+
+```python
+import sweetviz as sv
+
+my_report = sv.analyze(
+     train
+    ,target_feat ='Survived' # 目标变量
+    )
+
+my_report.show_html("Report_analyze.html") # .show_notebook()
+```
+
+
+> ***（2）sweetviz.compare_intra() 查看所有变量关于目标变量不同取值的分布***
+
+```python
+# 目标变量取不同值时，其他变量的分布情况对比
+my_report = sv.compare_intra(
+     train
+    ,train['Survived'] == 0
+    ,['Survived_0','Survived_1']
+    ,target_feat ='Survived' # 目标变量
+)
+my_report.show_html("Report_compare_intra.html") # .show_notebook()
+```
+
+
+> ***（3）sweetviz.compare() 查看所有变量关于分类变量不同取值的分布***
+
+```python
+A = train.loc[train['Survived'] == 0,:]
+B = train.loc[train['Survived'] != 0,:]
+
+sv.compare([A, 'train_no'], [B, 'train_yes']).show_html( 'Report_compare.html') #.show_notebook()
+```
+
+
+
 
 
 
