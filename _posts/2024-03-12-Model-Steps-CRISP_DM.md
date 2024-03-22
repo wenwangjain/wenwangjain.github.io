@@ -448,48 +448,53 @@ df.head()
 <br>
 
 
+
+
 ### ***3.1. 初步了解数据集***
 
-#### **1). 常用函数**
+#### **1). 常用函数，统计/排序**
 
-| 序号  | 函数名称                                       | 解释             |
-| --- | ------------------------------------------ | -------------- |
-| 1   | ***df.head()***                            | # 前5行          |
-| 2   | ***df.tail(3)***                           | # 后3行          |
-| 3   | ***df.shape***                             | # 行数+列数        |
-| 4   | ***df.sample(10)***                        | # 随机 10 行      |
-| .   |                                            |                |
-| 5   | ***df.index***                             | # 查看行索引        |
-| 6   | ***df.index.tolist()***                    |                |
-| .   |                                            |                |
-| 7   | ***df.columns***                           | # 列名称          |
-| 8   | ***list(df.columns)***                     |                |
-| 9   | ***df.columns.tolist()***                  |                |
-| 10  | ***df.columns.values.tolist()***           |                |
-| .   |                                            |                |
-| 11  | ***df.dtypes***                            | # 数据类型         |
-| 12  | ***df.dtypes.to_dict()***                  |                |
-| 13  | ***df.dtypes.to_list()***                  |                |
-| .   |                                            |                |
-| 14  | ***df.info()***                            | # 特征类型\非缺失计数   |
-| 15  | ***df.count()***                           | # 非缺失计数        |
-| 16  | ***df.describe()***                        | # 数值变量摘要       |
-| 17  | ***df.describe(include='object').T***      | # 分类变量摘要       |
-| 18  | ***df.describe(include=['O']).T***         |                |
-| .   |                                            |                |
-| 19  | ***df['Age'].skew()***                     | # 偏态系数         |
-| 20  | ***df['Age'].kurt()***                     | # 峰态系数         |
-| 21  | ***df.sum()***                             | ***df.min()*** |
-| 22  | ***df.mean()***                            | ***df.max()*** |
-| 23  | ***df.median()***                          | # 中位数          |
-| 24  | ***df.mode()***                            | # 众数           |
-| 25  | ***df.var()***                             | # 无偏方差         |
-| 26  | ***df.std()***                             | # 无偏标准差        |
-| 27  | ***df.['col_name'].quantile([0.1, 0.9])*** | # 分位数          |
-| 28  | ***df.quantile(q=0.25)***                  |                |
-| 29  | ***df.prod()***                            | # 乘积           |
-
-
+| 序号  | 函数名称                                                      | 解释             |
+| --- | --------------------------------------------------------- | -------------- |
+| 1   | ***df.head()***                                           | # 前5行          |
+| 2   | ***df.tail(3)***                                          | # 后3行          |
+| 3   | ***df.shape***                                            | # 行数+列数        |
+| 4   | ***df.sample(10)***                                       | # 随机 10 行      |
+| .   |                                                           |                |
+| 5   | ***df.index***                                            | # 查看行索引        |
+| 6   | ***df.index.tolist()***                                   |                |
+| .   |                                                           |                |
+| 7   | ***df.columns***                                          | # 列名称          |
+| 8   | ***list(df.columns)***                                    |                |
+| 9   | ***df.columns.tolist()***                                 |                |
+| 10  | ***df.columns.values.tolist()***                          |                |
+| .   |                                                           |                |
+| 11  | ***df.dtypes***                                           | # 数据类型         |
+| 12  | ***df.dtypes.to_dict()***                                 |                |
+| 13  | ***df.dtypes.to_list()***                                 |                |
+| .   |                                                           |                |
+| 14  | ***df.info()***                                           | # 特征类型\非缺失计数   |
+| 15  | ***df.count()***                                          | # 非缺失计数        |
+| 16  | ***df.describe()***                                       | # 数值变量摘要       |
+| 17  | ***df.describe(include='object').T***                     | # 分类变量摘要       |
+| 18  | ***df.describe(include=['O']).T***                        |                |
+| .   |                                                           |                |
+| 19  | ***df['Age'].skew()***                                    | # 偏态系数         |
+| 20  | ***df['Age'].kurt()***                                    | # 峰态系数         |
+| 21  | ***df.sum()***                                            | ***df.min()*** |
+| 22  | ***df.mean()***                                           | ***df.max()*** |
+| 23  | ***df.median()***                                         | # 中位数          |
+| 24  | ***df.mode()***                                           | # 众数           |
+| 25  | ***df.var()***                                            | # 无偏方差         |
+| 26  | ***df.std()***                                            | # 无偏标准差        |
+| 27  | ***df.['col_name'].quantile([0.1, 0.9])***                | # 分位数          |
+| 28  | ***df.quantile(q=0.25)***                                 |                |
+| 29  | ***df.prod()***                                           | # 乘积           |
+| .   |                                                           |                |
+| 30  | ***df.sort_values(by="column")***                         | # 列升序（默认）      |
+| 31  | ***df.sort_values(by="column", ascending=False)***        | # 列降序          |
+| 32  | ***df.sort_index(axis=0, ascending=False,inplace=True)*** | # 轴降序          |
+<br>
 
 #### **2). 常用探索库**
 
@@ -497,6 +502,8 @@ df.head()
 
 - [使用sweetviz库，1行代码生成美观清晰的数据分析报告 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/206597487)
 <br>
+
+
 > ***（1）sweetviz.analyze() 查看所有变量概况***
 
 ```python
@@ -518,6 +525,8 @@ train.head()
 | 1   | 2           | 1        | 1      | Cumings, Mrs. John Bradley (Florence Briggs Th... | female | 38.0 | 1     | 0     | PC 17599  | 71.2833 | C85   | C        |
 
 
+<br>
+
 ```python
 import sweetviz as sv
 
@@ -528,7 +537,7 @@ my_report = sv.analyze(
 
 my_report.show_html("Report_analyze.html") # .show_notebook()
 ```
-
+<br>
 
 > ***（2）sweetviz.compare_intra() 查看所有变量关于目标变量不同取值的分布***
 
@@ -542,7 +551,7 @@ my_report = sv.compare_intra(
 )
 my_report.show_html("Report_compare_intra.html") # .show_notebook()
 ```
-
+<br>
 
 > ***（3）sweetviz.compare() 查看所有变量关于分类变量不同取值的分布***
 
@@ -552,21 +561,529 @@ B = train.loc[train['Survived'] != 0,:]
 
 sv.compare([A, 'train_no'], [B, 'train_yes']).show_html( 'Report_compare.html') #.show_notebook()
 ```
+<br>
+
+##### **(2). pandas_profiling：生成 EDA 报告**
+
+- [太香了，墙裂推荐3个Python数据分析EDA神器！ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/285240381)
+<br>
+
+> ***（1）安装 pandas_profiling 库***
+```python
+# 安装Jupyter扩展widget 
+jupyter nbextension enable --py widgetsnbextension
+
+# 或者通过conda安装
+conda env create -n pandas-profiling
+conda activate pandas-profiling
+conda install -c conda-forge pandas-profiling
+
+# 或者直接从源地址安装
+pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+```
+<br>
+
+> ***（2）pandas_profiling 生成 EDA 报告***
+
+```python
+from pandas_profiling import ProfileReport
+
+profile = ProfileReport(
+     train
+    ,title='MPG Pandas Profiling Report'
+    ,explorative = True)
+# profile # 直接在 notebook 上展示
+profile.to_file("data_profiling.html")
+```
+<br>
 
 
+##### **(3). 【pygwalker】：类似 Tableau 可视化**
 
+- [登上GitHub热榜的Python可视化工具：PyGWalker - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/609129220)
+<br>
 
+```python
+import pygwalker as pyg 
+gwalker = pyg.walk(train)
+```
+<br>
 
+##### **(4). 【pivottablejs】：透视表\图**
 
+- [数据透视表JS ·皮皮 (pypi.org)](https://pypi.org/project/pivottablejs/)
+<br>
 
+```python
+from pivottablejs import pivot_ui 
+pivot_ui(train)
+```
+<br>
 
+##### **(5). pandasGUI：拖放 EDA 图\表**
 
+- [太香了，墙裂推荐3个Python数据分析EDA神器！ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/285240381)
+<br>
 
+```python
+# pip安装
+pip install pandasgui
 
+# 或者通过源下载
+pip install git+https://github.com/adamerose/pandasgui.git
+```
+<br>
 
+```python
+from pandasgui import show 
+# 部署GUI的数据集 
+gui = show(mpg)
+```
+<br>
 
+#### **3). 分组表\图，唯一值\图**
 
+##### **(1). 表：df\['clo'\].value_counts()**
 
+```python
+df["clome_name"].value_counts() 
+df["clome_name"].value_counts().sort_values(ascending=False)
+```
+<br>
+
+##### **(2). 图：df\['col'\].value_counts().plot.bar()**
+
+```python
+df['col_name'].value_counts().plot.bar()
+```
+<br>
+
+```python
+class EDA:
+    def group_bar(df, col):
+        figsize = (5, 2.5)
+        legend_font = {"family" : "Times New Roman", 'weight':'bold', 'size':9}
+        
+        import matplotlib.pyplot as plt
+        
+        fig, ax = plt.subplots(figsize = figsize)
+        
+        # -----------------------------------------------------------------------------------
+        for i in ['left', 'bottom']:
+            ax.spines[i].set_linewidth(0.4) #设置底部坐标轴的粗细
+            ax.spines[i].set_position(("outward", 5)) # 设置坐标轴位置，向外移动
+        
+        for j in ['right', 'top']:
+            ax.spines[j].set_color('none') # 设置坐标轴无色
+            
+        # -----------------------------------------------------------------------------------
+        plt.yticks(fontproperties = 'FangSong', size = 10) 
+        plt.xticks(fontproperties = 'FangSong', size = 10, rotation=0)
+        
+        # -------------------------------------------------------------------------------------
+        df[col].value_counts().plot.bar(alpha=0.8
+                                 , width=0.9 # 条形图宽度
+                                 , facecolor="DimGray" # lightcoral coral\DimGray
+                                 #, edgecolor="white" # 条形图边款色  
+                                )
+        
+        # -----------------------------------------------------------------------------------
+        plt.xlabel(None)
+        plt.title(col, fontproperties = 'FangSong', size = 13, loc='center') # 'left','center','right'
+        plt.show()
+```
+<br>
+
+```python
+EDA.group_bar(train, 'Survived')
+```
+<br>
+
+##### **(3). 图：sns.countplot(x=col, data=df)**
+
+```python
+import seaborn as sns
+
+col = 'Survived'
+df = train.copy()
+
+b = sns.countplot(x=col, data=df , facecolor="coral") # lightcoral coral\DimGray)
+b.set_xlabel(x, fontsize=13)
+b.set_ylabel("count", fontsize=13)
+```
+<br>
+
+##### **(4). 表：df['col'].unique()，.nunique()**
+
+```python
+# Select unique values
+df['Sex'].unique() # 输出：array(['female', 'male'], dtype=object)
+
+# Show number of unique values
+df['Sex'].nunique() # 输出：4
+```
+<br>
+
+##### **(5). 表：np.unique(y)，np.bincount(y)**
+
+```python
+df.values
+np.unique(y)   # 
+np.bincount(y) # 调用NumPy的bincount函数来对阵列中的每个值进行统计
+```
+<br>
+
+#### **4). 【自定义函数】**
+
+```
+class EDA:
+    def title(test):
+        print('\n')
+        from rich.console import Console
+        console=Console()
+        console.print('  .:. ', test , ' .:.','\n' , "="*60 , style="bold green")    #打印红色字体
+        #console.print(,style="bold green")    #打印红色字体
+    
+    def des_table(df, cols=None):
+        import warnings
+        warnings.filterwarnings('ignore')
+        from pandas import DataFrame
+        import pandas as pd
+        import numpy as np
+        
+        pd.set_option('display.max_colwidth',200)                    # 数据框列宽
+        pd.set_option('display.precision',2) # 保留4位小数
+        
+        
+        
+        df01 = DataFrame(df.dtypes ,columns=['Dtypes']).reset_index()
+        #df01['Sample_size'] =  df.shape[0]
+        df01['Feature_Chinese'] = cols
+        df01.rename(columns={'index':'---Feature_Nname---'},inplace=True) 
+        
+        df03  = DataFrame(df.count(),columns=['Count'])
+        des2  = pd.merge(df01,df03,left_on="---Feature_Nname---",right_index=True,how="outer")
+        
+        df04  = DataFrame(df.isnull().sum(),columns=["Null_c"])
+        des3  = pd.merge(des2,df04,left_on="---Feature_Nname---",right_index=True,how="outer")
+        des3["Null%"] = des3["Null_c"]/df.shape[0] #des3["Sample_size"]
+        df_dtr = df.copy()
+        for i in df_dtr.columns.tolist():
+            df_dtr[i] = df_dtr[i].astype('str')
+        df_dtr_des = df_dtr.describe(include='object').T
+        df_dtr_des['Top_1%'] = df_dtr_des['freq']/df.shape[0]
+        df_dtr1 = df_dtr_des[['unique','freq','Top_1%']]
+        df_dtr2 = pd.merge(des3,df_dtr1,left_on="---Feature_Nname---",right_index=True,how="left")
+        
+        
+        
+        df05  = DataFrame(df.describe().T)
+        des4  = pd.merge(df_dtr2,df05,left_on="---Feature_Nname---",right_index=True,how="left")
+        des4.drop('count', axis=1, inplace=True)
+        des4['Inclination'] = 3*(des4["mean"] - des4["50%"])/des4["std"]
+        
+        
+        df06  = DataFrame(df.dtypes,columns=['Dtypes'])
+        df07  = df06.loc[df06['Dtypes'] != "object",:]
+        
+        df_ = df.copy()
+        name01 = []
+        for i in df07.index.tolist():
+            df_[str(i)+"_IQR"] = df_[i].quantile(q=0.75) - df_[i].quantile(q=0.25)
+            df_[str(i)+"_1"] = np.where((df_[i] < (df_[i].quantile(q=0.25) - 1.5 * df_[str(i)+"_IQR"])) | 
+                                   (df_[i] > (df_[i].quantile(q=0.75) + 1.5 * df_[str(i)+"_IQR"])),1,0)
+            name01.append(str(i)+"_1")
+        
+        df08 = df_[name01]
+        df09 = DataFrame(df08.sum(),columns=["IQR_Outlier"])
+        df09.reset_index(inplace=True)
+        df09["index"] = df09["index"].str.replace("_1","")
+    
+        des5 = pd.merge(des4,df09,left_on="---Feature_Nname---",right_on="index",how="left")
+        des5["IQR_Outlier%"] = des5["IQR_Outlier"]/df.shape[0] #des5["Sample_size"]
+        
+        des5.drop('index', axis=1, inplace=True)
+        
+        des5.rename(columns={ 'Count':'--Count--'
+                             ,'Null_c':'-Null_c-'
+                             ,'Null%':'Null%'
+                             ,'Top_1%':'Top_1_c%'
+                             ,'mean':'-Mean-'
+                             ,'std':'--Std--'
+                             ,'min':'--Min--'
+                             ,'25%':'--25%--'
+                             ,'50%':'--50%--'
+                             ,'75%':'--75%--'
+                             ,'max':'--Max--'
+                             ,'unique':'Unique'
+                             ,'freq':'Top_1_c'
+                            }
+                    ,inplace=True)
+        name02 = list(des5.columns)[3:]  
+        describe =(des5.style.format({ name02[2]:"{:.1%}"
+                                      ,name02[3]:"{:.0f}",name02[4]:"{:.0f}",name02[5]:"{:.1%}",name02[6]:"{:.2f}",name02[7]:"{:.2f}"
+                                      ,name02[8]:"{:.2f}",name02[9]:"{:.2f}",name02[10]:"{:.2f}",name02[11]:"{:.2f}"
+                                      ,name02[12]:"{:.2f}",name02[13]:"{:.2f}",name02[14]:"{:.0f}",name02[15]:"{:.2%}"
+                                     }
+                                    ).bar( color='Coral' #'lightcoral'
+                                           , subset=name02
+                                           , align='zero'
+                                           , height=80
+                                           , width=70
+                                         )
+                  )
+        
+        return describe
+
+    def des_chart(df):
+        import numpy as np
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        import scipy.stats as stats
+        import math
+        from statsmodels.distributions.empirical_distribution import ECDF
+        import matplotlib
+        
+        plt.rcParams['font.sans-serif'] = ['FangSong'] # 设置中文黑体 SimHei
+        plt.rcParams['axes.unicode_minus'] = False     # 设置显示负号
+        
+        
+        #sns.set(style="white")
+        matplotlib.rcdefaults()
+        #plt.style.use('ggplot') # classic
+        #sns.set(style="white")
+        plt.rcParams['figure.dpi'] = 115 #分辨率
+         
+        df = df.fillna(value=0)
+        dict_columns = df.dtypes.to_dict()
+        
+        font1 = {'fontproperties':'FangSong', 'fontweight': 'bold', 'size': 10, 'c':'k'} # 
+        
+        for i in df.columns:
+            if str(dict_columns[i]) != 'object':
+                fig = plt.figure(figsize=(16, 0.9))
+          
+                len_plot = 1/(16/1.5)
+                typeface = 'FangSong'
+                bins = 12
+          
+                left_1, width_1 = 0, len_plot*1.3  # left:左边、width:宽度
+                left_2, width_2 = width_1+0.03, len_plot*1.6
+                left_3, width_3 = left_2+width_2+0.03, len_plot*0.8
+                left_4, width_4 = left_3+width_3+0.03, len_plot*0.8
+                left_5, width_5 = left_4+width_4+0.03, len_plot*0.8
+          
+                bottom, height = 0, 0.6 # bottom:底部、height:高度
+          
+                rect_hist1 = [left_1, bottom, width_1, height+0.2]
+                rect_hist2 = [left_2, bottom, width_2, height+0.2]
+                rect_hist3 = [left_3, bottom, width_3, height+0.6]
+                rect_hist4 = [left_4, bottom, width_4, height+0.6]
+                rect_hist5 = [left_5, bottom, width_5, height+0.6]
+        
+                # --------------------------------------------------------------------------------
+                ax_hist1 = plt.axes(rect_hist1)
+                # --------------------------------------------------------------------------------
+                plt.hist( df[i]
+                          , bins=bins
+                          #, density=1 #设置此项目可以使纵坐标显示频率
+                          , facecolor="Coral" # 'lightcoral'/'coral'/'lightblue'/'cornflowerblue'
+                          , edgecolor="white" # 条形边框颜色，不设置显示白色/white/indianred
+                          )
+                ax=plt.gca()
+                ax.spines['left'].set_linewidth(0.47) #设置坐标轴的粗细
+                ax.spines['right'].set_color('none')
+                ax.spines['top'].set_color('none')
+                ax.spines['left'].set_color('none')
+                ax.spines['bottom'].set_linewidth(0.47)
+                #ax.spines["left"].set_position(("outward", 5)) # 设置坐标轴位置
+                ax.spines["bottom"].set_position(("outward", 5))
+                plt.yticks(fontproperties = typeface, size = 8)
+                plt.xticks(fontproperties = typeface, size = 8) 
+                #plt.title(i, font1) # , x=0.45, y=height+0.4 
+                plt.title(i, size = 9
+                       , fontproperties = 'FangSong'
+                       , color = '#525252'
+                       , fontweight='bold' 
+                       , fontfamily='serif'
+                      ) # fontproperties = 'FangSong',                      
+                # --------------------------------------------------------------------------------
+                ax_hist2 = plt.axes(rect_hist2)
+                # --------------------------------------------------------------------------------
+                g1 = sns.kdeplot(df[i],linewidth = 1 ,c='DimGray') # DimGray\cornflowerblue
+                #sns.despine() #可以自动隐藏上部（top）、右部（right）轴 #sns.despine( top=True, right=True)  #,bottom=True,left=True
+                g1.set(xlabel=None)
+                g1.set(ylabel=None)
+                #g1.set(xticklabels=[]) 隐藏坐标轴标签 g1.set(yticklabels=[]) 
+                plt.hist(df[i]
+                          , bins=bins
+                          , density=1 #设置此项目可以使纵坐标显示频率
+                          , facecolor="Coral" # 'lightcoral'/'coral'/'lightblue'
+                          , edgecolor="white" # 条形边框颜色，不设置显示白色/white/indianred
+                          ) 
+                ax=plt.gca()
+                ax.spines['left'].set_linewidth(0.47) #设置坐标轴的粗细
+                ax.spines['right'].set_color('none')
+                ax.spines['top'].set_color('none')
+                ax.spines['left'].set_color('none')
+                ax.spines['bottom'].set_linewidth(0.47); 
+                #ax.spines["left"].set_position(("outward", 5)) # 设置坐标轴位置
+                ax.spines["bottom"].set_position(("outward", 5)) 
+                plt.yticks(fontproperties = typeface, size = 8)
+                plt.xticks(fontproperties = typeface, size = 8) 
+                
+                # --------------------------------------------------------------------------------
+                ax_hist3 = plt.axes(rect_hist3)
+                # --------------------------------------------------------------------------------
+                data = df[i].values
+                ecdf = ECDF(data)
+                cdf = ecdf(data)
+                data.sort()
+                cdf.sort()
+                plt.scatter(data,cdf,c='DimGray',s=5) # cornflowerblue
+                plt.plot(data,cdf,c='Coral',lw=1)
+          
+                ax=plt.gca()
+                ax.spines['left'].set_linewidth(0.47) #设置坐标轴的粗细
+                ax.spines['right'].set_linewidth(0.47) #设置坐标轴的粗细
+                ax.spines['top'].set_linewidth(0.47)
+                ax.spines['bottom'].set_linewidth(0.47)
+                # ax.spines['right'].set_color('none')
+                #ax.spines["left"].set_position(("outward", 5)) # 设置坐标轴位置
+                #ax.spines["bottom"].set_position(("outward", 5)) 
+                #ax.spines["right"].set_position(("outward", 5))
+                #ax.spines["top"].set_position(("outward", 5)) 
+                plt.yticks(fontproperties = typeface, size = 8)
+                plt.xticks(fontproperties = typeface, size = 8)
+                plt.ylim(0,1)#X轴范围
+                #data = churn["Account Length"]
+                #if math.ceil(data.max()) < 0:
+                #    good = - math.ceil(data.max())
+                #else:
+                #    good = math.ceil(data.max())
+                #                         
+                #hist, bin_edges = np.histogram(data, bins=good, density=True)# 计算随机数的频数分布
+                #cdf = np.cumsum(hist * np.diff(bin_edges))# 计算随机数的累积分布函数
+                #plt.plot(cdf, linewidth = 0.9)
+                
+                # --------------------------------------------------------------------------------
+                ax_hist4 = plt.axes(rect_hist4)
+                # --------------------------------------------------------------------------------
+                data = df[i]
+          
+                mu, sigma = 0, 1
+                np.random.seed(12345)
+                x = np.random.normal(mu,sigma,size=len(data))
+                x.sort()
+                plt.scatter(x,data,c='DimGray',s=5) # cornflowerblue
+                z = np.polyfit(x, data, 1)
+                f = np.poly1d(z)
+          
+                # 绘制拟合线
+                plt.plot(x,f(x),c='Coral', linewidth =1)
+                ax=plt.gca()
+                ax.spines['left'].set_linewidth(0.47) #设置坐标轴的粗细
+                ax.spines['right'].set_linewidth(0.47) #设置坐标轴的粗细
+                ax.spines['top'].set_linewidth(0.47)
+                ax.spines['bottom'].set_linewidth(0.47)
+                # ax.spines['right'].set_color('none')
+                #ax.spines["left"].set_position(("outward", 5)) # 设置坐标轴位置
+                #ax.spines["bottom"].set_position(("outward", 5)) 
+                #ax.spines["right"].set_position(("outward", 5))
+                #ax.spines["top"].set_position(("outward", 5)) 
+                plt.yticks(fontproperties = typeface, size = 8)
+                plt.xticks(fontproperties = typeface, size = 8)
+                plt.xlabel('')
+                plt.ylabel('')
+                plt.title('')
+                #stats.probplot(churn["Account Length"], plot=plt,)
+                # --------------------------------------------------------------------------------
+                ax_hist5 = plt.axes(rect_hist5)
+                # --------------------------------------------------------------------------------
+                ax=plt.gca()
+                #ax.spines['left'].set_linewidth(0.47) #设置坐标轴的粗细
+                #ax.spines['right'].set_linewidth(0.47) #设置坐标轴的粗细
+                #ax.spines['top'].set_linewidth(0.47)
+                ax.spines['bottom'].set_linewidth(0.47)
+                for i in ['left', 'right', 'top', 'bottom']:
+                    ax.spines[i].set_color('none')
+                # ax.spines['right'].set_color('none')
+                ax.spines["left"].set_position(("outward", 5)) # 设置坐标轴位置
+                ax.spines["bottom"].set_position(("outward", 5)) 
+                ax.spines["right"].set_position(("outward", 5))
+                ax.spines["top"].set_position(("outward", 5)) 
+                plt.yticks([], fontproperties = typeface, size = 8)
+                plt.xticks([], fontproperties = typeface, size = 8)
+                plt.xlabel('')
+                plt.ylabel('')
+                plt.title('')
+        
+                
+                
+            else:
+                data1 = df[i].value_counts()[0:20]
+                data2 = df[i].value_counts().cumsum()[0:20]/df.shape[0]
+                x = [str(k) for k in data1.index]
+                y =  data2.values
+                z =  data1.values
+                
+                hight = 1.2
+                width = 5 #len(data1)*(10/20)
+                
+                
+                from matplotlib import font_manager
+                my_font=font_manager.FontProperties(fname="C:\Windows\Fonts\SIMYOU.TTF")
+                
+                plt.rcParams['axes.unicode_minus'] = False     # 设置显示负号
+                
+                fig, ax = plt.subplots(figsize=(width,hight))
+                p1 = plt.bar(  x
+                        , z
+                        , facecolor="DimGray" # lightcoral\coral\cornflowerblue\lightblue
+                        #, alpha=0.2
+                        , width = 0.9
+                       )
+                
+                plt.bar_label(p1, label_type='edge', fontproperties = my_font, size = 9, fontweight='bold')
+                
+                ax=plt.gca() 
+                ax.spines['left'].set_color('none')
+                ax.spines['right'].set_color('none')
+                ax.spines['top'].set_color('none')
+                ax.spines['bottom'].set_linewidth(0.47); #设置底部坐标轴的粗细
+                ax.spines["bottom"].set_position(("outward", 5)) 
+                plt.xticks(fontproperties = my_font, size = 8, rotation=60)
+                plt.yticks([]) #fontproperties = 'Times New Roman', size = 8)
+                #plt.title(i, size = 9)  
+                
+                
+                ax_ = ax.twinx()
+                plt.scatter(x,y,c='Coral',s=6)
+                plt.plot(x,y,c='Coral',lw=0.8)
+                
+                ax_=plt.gca() 
+                ax_.spines['left'].set_color('none')
+                ax_.spines['right'].set_color('none')
+                ax_.spines['top'].set_color('none')
+                ax_.spines['bottom'].set_linewidth(0.47); #设置底部坐标轴的粗细
+                ax_.spines["bottom"].set_position(("outward", 5))
+                
+                ax_.set_ylim((0,1.1))
+                
+                plt.yticks(fontproperties = 'Times New Roman', size = 8)
+                plt.xticks(fontproperties = my_font, size = 8, rotation=60)
+                #plt.title(i, size = 9)    
+                
+                #plt.title(i, font1, x=0.08, y=hight+0.05)
+                plt.title(i, size = 9
+                       , fontproperties = 'FangSong'
+                       , color = '#525252'
+                       , fontweight='bold' 
+                       , fontfamily='serif'
+                      ) # fontproperties = 'FangSong',   
+                plt.show()
+```
+<br>
 
 
 
