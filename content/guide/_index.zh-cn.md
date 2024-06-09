@@ -30,7 +30,7 @@ layout: hextra-home
 <div style="display: flex; justify-content: center; width: 100%;">
 
 <div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="python_numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" >}}<br>
+{{< card link="numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" >}}<br>
 {{< card link="python_shap" title="SHAP" subtitle="一种博弈论方法，用于解释任何机器学习模型的输出。" icon="package" >}}<br>
 {{< card link="python_vega-altair" title="Vega-Altair" subtitle="一个基于 Vega 和 Vega-Lite 的 Python 声明式统计可视化库。" icon="vega" >}}<br>
 </div>
