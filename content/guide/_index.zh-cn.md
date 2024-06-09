@@ -9,7 +9,7 @@ layout: hextra-home
 <div style="display: flex; justify-content: center; width: 100%;">
 
 <div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="Python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}<br>
+{{< card link="python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}<br>
 </div>
 <div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
 {{< card link="/guide" title="Callout" subtitle="待补充<br>待补充。" icon="backspace" >}}<br>
