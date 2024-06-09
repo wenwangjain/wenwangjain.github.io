@@ -1,0 +1,174 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DataSP – 2. 端到端的机器学习</title>
+    <link>http://localhost:1313/docs/ai/end_to_end/</link>
+    <description>Recent content in 2. 端到端的机器学习 on DataSP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/docs/ai/end_to_end/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>2.1. AI 概述</title>
+      <link>http://localhost:1313/docs/ai/end_to_end/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/ai/end_to_end/overview/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;&lt;font face=Georgia&gt;1、了解人工智能&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia1了解人工智能font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia1%e4%ba%86%e8%a7%a3%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bdfont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;1.1、相关概念&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia11相关概念font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia11%e7%9b%b8%e5%85%b3%e6%a6%82%e5%bf%b5font&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;人工智能&lt;/strong&gt;&lt;/em&gt;，是指可以像人类一样学习、理解、思考的计算机程序。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;机器学习&lt;/strong&gt;&lt;/em&gt;，是人工智能的一个子集。使用数据训练模型，这些模型可以根据在数据中找到的关系进行预测。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;深度学习&lt;/strong&gt;&lt;/em&gt;，是机器学习的一个分支。
+&lt;ul&gt;
+&lt;li&gt;使用特殊分层结构的机器学习方法（这些分层依次堆叠），形成了一个像堆叠的煎饼一样的“深度”结构。&lt;/li&gt;
+&lt;li&gt;深度学习算法受到大脑结构的启发，可以很好地处理图像、视频或文本等非结构化数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;深度学习框架&lt;/strong&gt;&lt;/em&gt;，是一个拼凑了层和函数等组件的库。具体来说，它是一种具有求导功能的编程语言（有人也成“可微分编程语言”）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;强化学习&lt;/strong&gt;&lt;/em&gt;，这是一种让AI系统通过与环境的交互学习和提升的方法。（用于训练AI玩视频游戏或控制机器人等）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;自然语言&lt;/strong&gt;&lt;/em&gt;，这技术使机器理解并回应人类语言成为可能。（聊天机器人，语音助手，自动翻译系统等）&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;计算机视觉&lt;/strong&gt;&lt;/em&gt;，通过相机、视频和图像直观地解释世界的 AI 功能。（如自动驾驶）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;生成式人工智能&lt;/strong&gt;&lt;/em&gt;，是一种机器学习模型，它可以生成以前从未见过的新内容，如音乐，文本，图像等。对比预测性质的模型，生成性模型可以创造全新的输出。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;1.2、人工智能简史&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia12人工智能简史font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia12%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e7%ae%80%e5%8f%b2font&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;19 世纪 30~40 年代&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;查尔斯 • 巴贝奇 —— 分析机（Analytical Engine）&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+第一台通用的机械式计算机。它的用途仅仅是利用机械操作将数学分析领域的某些计算自动化，因此得名“分析机”&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;20 世纪 50 年代&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;符号主义人工智能（symbolic AI）&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+精心编写足够多的明确规则来处理知识，就可以实现与人类水平相当的人工智能。&lt;br&gt;
+人工智能先驱阿兰 • 图灵在其 1950年发表的具有里程碑意义的论文“计算机器和智能”。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;20 世纪 60~70年代初&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;第一次冬天&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+由于过高的期望未能实现，研究人员和政府资金均转向其他领域。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;20 世纪 80 年代&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;专家系统（expert system）&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+符号主义人工智能热度达到了顶峰。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;20 世纪 90 年代初&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;第二次冬天&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+专家系统维护费用变得很高，难于扩展，并且使用范围有限，人们逐渐对其失去兴趣。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;20 世纪 90 年代&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;机器学习&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+专家系统难于给出明确的规则来解决更加复杂、模糊的问题，比如图像分类、语音识别、和语言翻译。&lt;br&gt;
+于是20世纪90年代出现了机器学习来替代符号人工智能。&lt;br&gt;
+机器学习是训练出来的，而不是明确规地用程序编写出来的。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;21 世纪 20 年代&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;生成式人工智能&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+OpenAI 在2020年6月发布了 GPT-3，这是一个非常大且复杂的模型，拥有1750亿个参数。&lt;br&gt;
+GPT-3 在生成文本和其他语言任务方面的表现令人瞩目，并且激发了大量关于 AI 的讨论。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;font face=Georgia&gt;2、机器学习分类&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia2机器学习分类font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia2%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%88%86%e7%b1%bbfont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;2.1、基本分类&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia21基本分类font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia21%e5%9f%ba%e6%9c%ac%e5%88%86%e7%b1%bbfont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;监督学习（supervised learning）&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;从有标注（标签\标记）的数据中学习预测模型的机器学习问题。&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;分类任务：&lt;/strong&gt;&lt;/em&gt; 预测变量为分类（离散）变量，如：是否流失；&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;回归任务：&lt;/strong&gt;&lt;/em&gt; 预测变量为数值（连续）变量，如：营业收入；&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        ℹ️
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
+      &lt;p&gt;&lt;em&gt;&lt;strong&gt;生成模型\判别模型：&lt;/strong&gt;&lt;/em&gt; 监督学习的任务就是学习一个模型，应用这个模型，对给定的输入预测相应的输出。&lt;br&gt;
+这个模型的一般形式为决策函数（&lt;em&gt;&lt;strong&gt;判别模型&lt;/strong&gt;&lt;/em&gt; ）：
+$$Y = f(X)$$
+或者条件概率分布（&lt;em&gt;&lt;strong&gt;生成模型&lt;/strong&gt;&lt;/em&gt;）：
+$$Y = P(Y|X)$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;判别模型&lt;/strong&gt;&lt;/em&gt;：在已知输入的情况下，预测出输出，常见的判别模型有逻辑回归、支持向量机和深度学习神经网络等。&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;生成模型&lt;/strong&gt;&lt;/em&gt;：尝试捕捉数据中的潜在分布，常见的生成模型有高斯混合模型和朴素贝叶斯分类器等。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  align=center&gt;监督学习（supervised learning）&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; ——
+&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia  align=center&gt;从有标注（标签\标记）的数据中学习预测模型的机器学习问题。&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;分类任务：&lt;/strong&gt;&lt;/em&gt; 预测变量为分类（离散）变量，如：是否流失；&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;回归任务：&lt;/strong&gt;&lt;/em&gt; 预测变量为数值（连续）变量，如：营业收入；&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>2.2. 常用算法</title>
+      <link>http://localhost:1313/docs/ai/end_to_end/algorithms-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/ai/end_to_end/algorithms-/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;&lt;font face=Georgia&gt;1、了解人工智能&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia1了解人工智能font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia1%e4%ba%86%e8%a7%a3%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bdfont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;1.1、相关概念&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia11相关概念font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia11%e7%9b%b8%e5%85%b3%e6%a6%82%e5%bf%b5font&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>2.3. CRISP-DM</title>
+      <link>http://localhost:1313/docs/ai/end_to_end/crisp-dm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/ai/end_to_end/crisp-dm/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;&lt;font face=Georgia&gt;1、了解人工智能&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia1了解人工智能font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia1%e4%ba%86%e8%a7%a3%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bdfont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
