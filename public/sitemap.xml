@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/project/class/class_iris/</loc>
+  </url><url>
+    <loc>http://localhost:1313/project/regression/class_iris/</loc>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/test/</loc>
+    <loc>http://localhost:1313/project/class/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ai/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/test1/</loc>
+    <loc>http://localhost:1313/project/class/test1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/project/regression/test1/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/bigdata/</loc>
   </url><url>
@@ -16,11 +22,17 @@
   </url><url>
     <loc>http://localhost:1313/docs/ai/end_to_end/overview/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/</loc>
+    <loc>http://localhost:1313/guide/math_calculus/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ai/end_to_end/algorithms-/</loc>
   </url><url>
+    <loc>http://localhost:1313/guide/math_linear_algebra/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/ai/end_to_end/crisp-dm/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/math_probability_theory/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/math_mathematical_statistics/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ai/base/</loc>
   </url><url>
@@ -32,35 +44,39 @@
   </url><url>
     <loc>http://localhost:1313/docs/ai/generative/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python_numpy/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_pandas/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_statsmodels/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_sklearn/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_shap/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_matplotlib/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_seaborn/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_plotly/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_vega-altair/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_streamlit/</loc>
+    <loc>http://localhost:1313/guide/python/python/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/bigdata/base/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python_folium/</loc>
+    <loc>http://localhost:1313/guide/python/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python_geopandas/</loc>
+    <loc>http://localhost:1313/guide/python/python_numpy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_pandas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_statsmodels/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_sklearn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_shap/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_matplotlib/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_seaborn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_plotly/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_vega-altair/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_streamlit/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/dama/01_data_management/</loc>
   </url><url>
+    <loc>http://localhost:1313/guide/python/python_folium/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/dama/02_data_ethics/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python/python_geopandas/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/dama/03_data_governance/</loc>
   </url><url>
@@ -83,6 +99,44 @@
     <loc>http://localhost:1313/docs/dama/12_metadata_managtement/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/dama/13_data_quality_management/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/dl_dezero/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/dl_keras/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/dl_pytorch/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/dl_tensorflow/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/software_linux/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/software_git/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/software_github/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/software_docker/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/software_kubernetes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/java/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/database_mysql/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bi_datart/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bi_powerbi/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bi_tableau/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bd_hadoop/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bd_hive/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bd_spark/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bd_flink/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bd_kafka/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</loc>
   </url><url>
@@ -109,6 +163,8 @@
     <loc>http://localhost:1313/docs/</loc>
   </url><url>
     <loc>http://localhost:1313/project/</loc>
+  </url><url>
+    <loc>http://localhost:1313/project/regression/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/</loc>
   </url>

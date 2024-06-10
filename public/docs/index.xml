@@ -15,6 +15,58 @@
     
     
     <item>
+      <title>iris\鸢尾花</title>
+      <link>http://localhost:1313/project/class/class_iris/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/project/class/class_iris/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>iris\鸢尾花</title>
+      <link>http://localhost:1313/project/regression/class_iris/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/project/regression/class_iris/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>标题</title>
+      <link>http://localhost:1313/project/class/test1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/project/class/test1/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>标题</title>
+      <link>http://localhost:1313/project/regression/test1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/project/regression/test1/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>2.1. AI 概述</title>
       <link>http://localhost:1313/docs/ai/end_to_end/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -142,11 +194,11 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Python</title>
-      <link>http://localhost:1313/guide/python/</link>
+      <title>微积分</title>
+      <link>http://localhost:1313/guide/math_calculus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python/</guid>
+      <guid>http://localhost:1313/guide/math_calculus/</guid>
       <description>
         
         
@@ -172,6 +224,21 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
+      <title>线性代数</title>
+      <link>http://localhost:1313/guide/math_linear_algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/math_linear_algebra/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>2.3. CRISP-DM</title>
       <link>http://localhost:1313/docs/ai/end_to_end/crisp-dm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -186,11 +253,56 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Python_Numpy</title>
-      <link>http://localhost:1313/guide/python_numpy/</link>
+      <title>概率论</title>
+      <link>http://localhost:1313/guide/math_probability_theory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_numpy/</guid>
+      <guid>http://localhost:1313/guide/math_probability_theory/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数理统计</title>
+      <link>http://localhost:1313/guide/math_mathematical_statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/math_mathematical_statistics/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/guide/python/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/python/python/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Python_Numpy</title>
+      <link>http://localhost:1313/guide/python/python_numpy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/python/python_numpy/</guid>
       <description>
         
         
@@ -202,10 +314,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_Pandas</title>
-      <link>http://localhost:1313/guide/python_pandas/</link>
+      <link>http://localhost:1313/guide/python/python_pandas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_pandas/</guid>
+      <guid>http://localhost:1313/guide/python/python_pandas/</guid>
       <description>
         
         
@@ -217,10 +329,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_Statsmodels</title>
-      <link>http://localhost:1313/guide/python_statsmodels/</link>
+      <link>http://localhost:1313/guide/python/python_statsmodels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_statsmodels/</guid>
+      <guid>http://localhost:1313/guide/python/python_statsmodels/</guid>
       <description>
         
         
@@ -232,10 +344,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_Sklearn</title>
-      <link>http://localhost:1313/guide/python_sklearn/</link>
+      <link>http://localhost:1313/guide/python/python_sklearn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_sklearn/</guid>
+      <guid>http://localhost:1313/guide/python/python_sklearn/</guid>
       <description>
         
         
@@ -247,10 +359,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_SHAP</title>
-      <link>http://localhost:1313/guide/python_shap/</link>
+      <link>http://localhost:1313/guide/python/python_shap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_shap/</guid>
+      <guid>http://localhost:1313/guide/python/python_shap/</guid>
       <description>
         
         
@@ -262,10 +374,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_Matplotlib</title>
-      <link>http://localhost:1313/guide/python_matplotlib/</link>
+      <link>http://localhost:1313/guide/python/python_matplotlib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_matplotlib/</guid>
+      <guid>http://localhost:1313/guide/python/python_matplotlib/</guid>
       <description>
         
         
@@ -277,10 +389,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_Seaborn</title>
-      <link>http://localhost:1313/guide/python_seaborn/</link>
+      <link>http://localhost:1313/guide/python/python_seaborn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_seaborn/</guid>
+      <guid>http://localhost:1313/guide/python/python_seaborn/</guid>
       <description>
         
         
@@ -292,10 +404,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>Python_Plotly</title>
-      <link>http://localhost:1313/guide/python_plotly/</link>
+      <link>http://localhost:1313/guide/python/python_plotly/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_plotly/</guid>
+      <guid>http://localhost:1313/guide/python/python_plotly/</guid>
       <description>
         
         
@@ -307,10 +419,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>python_Vega-Altair</title>
-      <link>http://localhost:1313/guide/python_vega-altair/</link>
+      <link>http://localhost:1313/guide/python/python_vega-altair/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_vega-altair/</guid>
+      <guid>http://localhost:1313/guide/python/python_vega-altair/</guid>
       <description>
         
         
@@ -322,40 +434,10 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     
     <item>
       <title>python_Streamlit</title>
-      <link>http://localhost:1313/guide/python_streamlit/</link>
+      <link>http://localhost:1313/guide/python/python_streamlit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/guide/python_streamlit/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_Folium</title>
-      <link>http://localhost:1313/guide/python_folium/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_folium/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_GeoPandas</title>
-      <link>http://localhost:1313/guide/python_geopandas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_geopandas/</guid>
+      <guid>http://localhost:1313/guide/python/python_streamlit/</guid>
       <description>
         
         
@@ -380,6 +462,21 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
+      <title>python_Folium</title>
+      <link>http://localhost:1313/guide/python/python_folium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/python/python_folium/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>02. 数据处理伦理</title>
       <link>http://localhost:1313/docs/dama/02_data_ethics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -390,6 +487,21 @@ $$Y = P(Y|X)$$&lt;/p&gt;
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>python_GeoPandas</title>
+      <link>http://localhost:1313/guide/python/python_geopandas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/python/python_geopandas/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
@@ -534,114 +646,212 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
-      <title>数仓基础 1：范式</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</link>
+      <title>DeZero</title>
+      <link>http://localhost:1313/guide/dl_dezero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</guid>
+      <guid>http://localhost:1313/guide/dl_dezero/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓基础 2：ER 模型</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</link>
+      <title>Keras</title>
+      <link>http://localhost:1313/guide/dl_keras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</guid>
+      <guid>http://localhost:1313/guide/dl_keras/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓 1：概述</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</link>
+      <title>PyTorch</title>
+      <link>http://localhost:1313/guide/dl_pytorch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</guid>
+      <guid>http://localhost:1313/guide/dl_pytorch/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓 2：架构</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</link>
+      <title>TensorFlow</title>
+      <link>http://localhost:1313/guide/dl_tensorflow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</guid>
+      <guid>http://localhost:1313/guide/dl_tensorflow/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓 3：规范</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</link>
+      <title>Linux</title>
+      <link>http://localhost:1313/guide/software_linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</guid>
+      <guid>http://localhost:1313/guide/software_linux/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓 4：建模</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</link>
+      <title>Git</title>
+      <link>http://localhost:1313/guide/software_git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</guid>
+      <guid>http://localhost:1313/guide/software_git/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓 5：调度</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</link>
+      <title>Github</title>
+      <link>http://localhost:1313/guide/software_github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</guid>
+      <guid>http://localhost:1313/guide/software_github/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
     <item>
-      <title>数仓 6：监控</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</link>
+      <title>Docker</title>
+      <link>http://localhost:1313/guide/software_docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</guid>
+      <guid>http://localhost:1313/guide/software_docker/</guid>
       <description>
         
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/guide/software_kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/software_kubernetes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/guide/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/java/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://localhost:1313/guide/database_mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/database_mysql/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Datart</title>
+      <link>http://localhost:1313/guide/bi_datart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bi_datart/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Power BI</title>
+      <link>http://localhost:1313/guide/bi_powerbi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bi_powerbi/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tableau</title>
+      <link>http://localhost:1313/guide/bi_tableau/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bi_tableau/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     

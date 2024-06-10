@@ -9,7 +9,7 @@ width: wide
 {{< /hextra/hero-headline >}}
 
 {{< hextra/hero-subtitle >}}
-   学习笔记，关于人工智能，大数据的极简教程
+  关于人工智能，大数据的学习笔记
 {{< /hextra/hero-subtitle >}} <br>
 
 {{< hextra/hero-button text="文档" link="docs" >}}
