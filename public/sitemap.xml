@@ -8,6 +8,8 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/project/test/</loc>
+  </url><url>
     <loc>http://localhost:1313/project/class/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ai/</loc>
@@ -15,6 +17,8 @@
     <loc>http://localhost:1313/project/class/test1/</loc>
   </url><url>
     <loc>http://localhost:1313/project/regression/test1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/project/test1/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/bigdata/</loc>
   </url><url>
@@ -46,7 +50,31 @@
   </url><url>
     <loc>http://localhost:1313/guide/python/python/</loc>
   </url><url>
+    <loc>http://localhost:1313/guide/python_numpy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_pandas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_statsmodels/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_sklearn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_shap/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_matplotlib/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_seaborn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_plotly/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_vega-altair/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_streamlit/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/bigdata/base/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_folium/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_geopandas/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/python/</loc>
   </url><url>
