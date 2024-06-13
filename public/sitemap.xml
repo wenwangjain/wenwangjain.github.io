@@ -48,63 +48,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/ai/generative/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_numpy/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_pandas/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_statsmodels/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_sklearn/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_shap/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_matplotlib/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_seaborn/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_plotly/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_vega-altair/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_streamlit/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/bigdata/base/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_folium/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python_geopandas/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_numpy/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_pandas/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_statsmodels/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_sklearn/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_shap/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_matplotlib/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_seaborn/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_plotly/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_vega-altair/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_streamlit/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/dama/01_data_management/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_folium/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/dama/02_data_ethics/</loc>
-  </url><url>
-    <loc>http://localhost:1313/guide/python/python_geopandas/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/dama/03_data_governance/</loc>
   </url><url>

@@ -273,12 +273,15 @@ $$Y = P(Y|X)$$&lt;/p&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;主动学习：&lt;/strong&gt;&lt;/em&gt; 在训练过程中为模型提供部分数据标签；模型可以选择它认为最需要标签的数据进行标记，从而提高学习效率。&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;算法可以主动地选择它想学习的样本，而不是用全部数据进行训练的算法。&lt;br&gt;
-主要思想是，如果允许学习系统选择它自己的训练集，可能会提高学习的效率和效果。&lt;br&gt;
-它通常用于样本标签成本高、标签难以获得，而未标注样本充足的场景。主动学习可以有效地选择最具信息量、对当前模型最有帮助的样本进行标注，从而减少标注的代价。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;算法可以主动地选择它想学习的样本，而不是用全部数据进行训练的算法。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;主要思想是，如果允许学习系统选择它自己的训练集，可能会提高学习的效率和效果。它通常用于样本标签成本高、标签难以获得，而未标注样本充足的场景。主动学习可以有效地选择最具信息量、对当前模型最有帮助的样本进行标注，从而减少标注的代价。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
     &lt;/div&gt;
   &lt;/div&gt;
@@ -389,351 +392,6 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Python</title>
-      <link>http://localhost:1313/guide/python/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Numpy</title>
-      <link>http://localhost:1313/guide/python_numpy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_numpy/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Pandas</title>
-      <link>http://localhost:1313/guide/python_pandas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_pandas/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Statsmodels</title>
-      <link>http://localhost:1313/guide/python_statsmodels/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_statsmodels/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Sklearn</title>
-      <link>http://localhost:1313/guide/python_sklearn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_sklearn/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_SHAP</title>
-      <link>http://localhost:1313/guide/python_shap/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_shap/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Matplotlib</title>
-      <link>http://localhost:1313/guide/python_matplotlib/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_matplotlib/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Seaborn</title>
-      <link>http://localhost:1313/guide/python_seaborn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_seaborn/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Plotly</title>
-      <link>http://localhost:1313/guide/python_plotly/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_plotly/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_Vega-Altair</title>
-      <link>http://localhost:1313/guide/python_vega-altair/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_vega-altair/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_Streamlit</title>
-      <link>http://localhost:1313/guide/python_streamlit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_streamlit/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_Folium</title>
-      <link>http://localhost:1313/guide/python_folium/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_folium/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_GeoPandas</title>
-      <link>http://localhost:1313/guide/python_geopandas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python_geopandas/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Numpy</title>
-      <link>http://localhost:1313/guide/python/python_numpy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_numpy/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Pandas</title>
-      <link>http://localhost:1313/guide/python/python_pandas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_pandas/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Statsmodels</title>
-      <link>http://localhost:1313/guide/python/python_statsmodels/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_statsmodels/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Sklearn</title>
-      <link>http://localhost:1313/guide/python/python_sklearn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_sklearn/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_SHAP</title>
-      <link>http://localhost:1313/guide/python/python_shap/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_shap/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Matplotlib</title>
-      <link>http://localhost:1313/guide/python/python_matplotlib/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_matplotlib/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Seaborn</title>
-      <link>http://localhost:1313/guide/python/python_seaborn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_seaborn/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Python_Plotly</title>
-      <link>http://localhost:1313/guide/python/python_plotly/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_plotly/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_Vega-Altair</title>
-      <link>http://localhost:1313/guide/python/python_vega-altair/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_vega-altair/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_Streamlit</title>
-      <link>http://localhost:1313/guide/python/python_streamlit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_streamlit/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
       <title>01. 数据管理</title>
       <link>http://localhost:1313/docs/dama/01_data_management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -748,21 +406,6 @@ $$Y = P(Y|X)$$&lt;/p&gt;
     </item>
     
     <item>
-      <title>python_Folium</title>
-      <link>http://localhost:1313/guide/python/python_folium/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_folium/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-      </description>
-    </item>
-    
-    <item>
       <title>02. 数据处理伦理</title>
       <link>http://localhost:1313/docs/dama/02_data_ethics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -773,21 +416,6 @@ $$Y = P(Y|X)$$&lt;/p&gt;
         
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>python_GeoPandas</title>
-      <link>http://localhost:1313/guide/python/python_geopandas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/guide/python/python_geopandas/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
       </description>
     </item>
     
@@ -958,6 +586,373 @@ $$Y = P(Y|X)$$&lt;/p&gt;
         &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>PyTorch</title>
+      <link>http://localhost:1313/guide/dl_pytorch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/dl_pytorch/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>TensorFlow</title>
+      <link>http://localhost:1313/guide/dl_tensorflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/dl_tensorflow/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/guide/software_linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/software_linux/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/guide/software_git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/software_git/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/guide/software_github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/software_github/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/guide/software_docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/software_docker/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/guide/software_kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/software_kubernetes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/guide/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/java/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://localhost:1313/guide/database_mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/database_mysql/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Datart</title>
+      <link>http://localhost:1313/guide/bi_datart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bi_datart/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Power BI</title>
+      <link>http://localhost:1313/guide/bi_powerbi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bi_powerbi/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tableau</title>
+      <link>http://localhost:1313/guide/bi_tableau/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bi_tableau/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Hadoop</title>
+      <link>http://localhost:1313/guide/bd_hadoop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bd_hadoop/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Hive</title>
+      <link>http://localhost:1313/guide/bd_hive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bd_hive/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Spark</title>
+      <link>http://localhost:1313/guide/bd_spark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bd_spark/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Flink</title>
+      <link>http://localhost:1313/guide/bd_flink/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bd_flink/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Kafka</title>
+      <link>http://localhost:1313/guide/bd_kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/guide/bd_kafka/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;test&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓基础 1：范式</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓基础 2：ER 模型</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓 1：概述</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓 2：架构</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓 3：规范</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓 4：建模</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓 5：调度</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>数仓 6：监控</title>
+      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
       </description>
     </item>
     
