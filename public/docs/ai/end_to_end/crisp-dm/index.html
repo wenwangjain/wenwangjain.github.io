@@ -12,7 +12,8 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>2.3. CRISP-DM – DataSP</title>
-  <meta name="description" content="1、了解人工智能 " />
+  <meta name="description" content="1、定义问题 如何定义机器学习问题 - MachineLearningMastery.com 1.1、问题是什么？ 简单描述问题; 定义问题目标; (主要目标，次要目标) 解决问题方案; (假设列表，算法列表; 评价指标; 展示方案，……) 查看相似项目； 例如，展示方案如下：
+编写分析报告展示你的结果； 使用 Streamlit 开发一个 demo 展示模型； 部署模型，并托管，监控…… 部署到移动设备，或其他电子元实现智能化 1.2、为什么需要解决问题？ 练习；不需要使用最合适的算法，而是想探索不熟悉的算法，学习新技能； 工作；解决工作中的数据分析问题； 竞赛；获取良好的排名，提升知名度，获取奖金。 1.3、探索如何解决问题？ 现有：逐步列出您将收集哪些数据？—&gt; 现有数据范围有多大（存储地址\数据量）？—&gt; 都是什么样的（数据质量）？—&gt; 能不能解决我们的问题？ 期望：希望拥有哪些数据？能否获取到这些数据？ 收集您遇到的所有这些详细信息，并更新问题定义的内容。 2、收集数据 《Approaching(Almost) Any Machine Learning Problem》 2.1、工作空间： （1）工作空间概述&gt;（2）Python os 模块&gt; （3）查看文件夹内容 （4）创建工作空间 input/：所有输入文件、数据文件； NLP 项目，可以将嵌入保留在此处；图像项目，则所有图像都将转到该文件夹中的子文件夹中; src/：所有 python 脚本； models/：所有经过训练的模型； notebooks/：所有jupyter笔记本（即任何*.ipynb文件）都存储在笔记本文件夹中； README.md：这是一个讲解文件，您可以在其中描述您的项目；如编写关于如何训练模型或在生产环境中提供模型的说明； LICENSE：这是一个简单的文本文件，包含项目的许可证，如MIT、Apache等。 python_os_example.py 1 2 3 4 5 6 7 import os os.getcwd() # 获取当前工作空间/目录 os.mkdir(&#34;PASH&#34;) # 新建目录 os." />
 
   
     <link rel="canonical" href="http://localhost:1313/docs/ai/end_to_end/crisp-dm/" itemprop="url" />
@@ -21,18 +22,21 @@
   
 
 <meta property="og:title" content="2.3. CRISP-DM" />
-<meta property="og:description" content="1、了解人工智能 " />
+<meta property="og:description" content="1、定义问题 如何定义机器学习问题 - MachineLearningMastery.com 1.1、问题是什么？ 简单描述问题; 定义问题目标; (主要目标，次要目标) 解决问题方案; (假设列表，算法列表; 评价指标; 展示方案，……) 查看相似项目； 例如，展示方案如下：
+编写分析报告展示你的结果； 使用 Streamlit 开发一个 demo 展示模型； 部署模型，并托管，监控…… 部署到移动设备，或其他电子元实现智能化 1.2、为什么需要解决问题？ 练习；不需要使用最合适的算法，而是想探索不熟悉的算法，学习新技能； 工作；解决工作中的数据分析问题； 竞赛；获取良好的排名，提升知名度，获取奖金。 1.3、探索如何解决问题？ 现有：逐步列出您将收集哪些数据？—&gt; 现有数据范围有多大（存储地址\数据量）？—&gt; 都是什么样的（数据质量）？—&gt; 能不能解决我们的问题？ 期望：希望拥有哪些数据？能否获取到这些数据？ 收集您遇到的所有这些详细信息，并更新问题定义的内容。 2、收集数据 《Approaching(Almost) Any Machine Learning Problem》 2.1、工作空间： （1）工作空间概述&gt;（2）Python os 模块&gt; （3）查看文件夹内容 （4）创建工作空间 input/：所有输入文件、数据文件； NLP 项目，可以将嵌入保留在此处；图像项目，则所有图像都将转到该文件夹中的子文件夹中; src/：所有 python 脚本； models/：所有经过训练的模型； notebooks/：所有jupyter笔记本（即任何*.ipynb文件）都存储在笔记本文件夹中； README.md：这是一个讲解文件，您可以在其中描述您的项目；如编写关于如何训练模型或在生产环境中提供模型的说明； LICENSE：这是一个简单的文本文件，包含项目的许可证，如MIT、Apache等。 python_os_example.py 1 2 3 4 5 6 7 import os os.getcwd() # 获取当前工作空间/目录 os.mkdir(&#34;PASH&#34;) # 新建目录 os." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/docs/ai/end_to_end/crisp-dm/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="2.3. CRISP-DM">
-<meta itemprop="description" content="1、了解人工智能 ">
+<meta itemprop="description" content="1、定义问题 如何定义机器学习问题 - MachineLearningMastery.com 1.1、问题是什么？ 简单描述问题; 定义问题目标; (主要目标，次要目标) 解决问题方案; (假设列表，算法列表; 评价指标; 展示方案，……) 查看相似项目； 例如，展示方案如下：
+编写分析报告展示你的结果； 使用 Streamlit 开发一个 demo 展示模型； 部署模型，并托管，监控…… 部署到移动设备，或其他电子元实现智能化 1.2、为什么需要解决问题？ 练习；不需要使用最合适的算法，而是想探索不熟悉的算法，学习新技能； 工作；解决工作中的数据分析问题； 竞赛；获取良好的排名，提升知名度，获取奖金。 1.3、探索如何解决问题？ 现有：逐步列出您将收集哪些数据？—&gt; 现有数据范围有多大（存储地址\数据量）？—&gt; 都是什么样的（数据质量）？—&gt; 能不能解决我们的问题？ 期望：希望拥有哪些数据？能否获取到这些数据？ 收集您遇到的所有这些详细信息，并更新问题定义的内容。 2、收集数据 《Approaching(Almost) Any Machine Learning Problem》 2.1、工作空间： （1）工作空间概述&gt;（2）Python os 模块&gt; （3）查看文件夹内容 （4）创建工作空间 input/：所有输入文件、数据文件； NLP 项目，可以将嵌入保留在此处；图像项目，则所有图像都将转到该文件夹中的子文件夹中; src/：所有 python 脚本； models/：所有经过训练的模型； notebooks/：所有jupyter笔记本（即任何*.ipynb文件）都存储在笔记本文件夹中； README.md：这是一个讲解文件，您可以在其中描述您的项目；如编写关于如何训练模型或在生产环境中提供模型的说明； LICENSE：这是一个简单的文本文件，包含项目的许可证，如MIT、Apache等。 python_os_example.py 1 2 3 4 5 6 7 import os os.getcwd() # 获取当前工作空间/目录 os.mkdir(&#34;PASH&#34;) # 新建目录 os.">
 
-<meta itemprop="wordCount" content="1">
+<meta itemprop="wordCount" content="550">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="2.3. CRISP-DM"/>
-<meta name="twitter:description" content="1、了解人工智能 "/>
+<meta name="twitter:description" content="1、定义问题 如何定义机器学习问题 - MachineLearningMastery.com 1.1、问题是什么？ 简单描述问题; 定义问题目标; (主要目标，次要目标) 解决问题方案; (假设列表，算法列表; 评价指标; 展示方案，……) 查看相似项目； 例如，展示方案如下：
+编写分析报告展示你的结果； 使用 Streamlit 开发一个 demo 展示模型； 部署模型，并托管，监控…… 部署到移动设备，或其他电子元实现智能化 1.2、为什么需要解决问题？ 练习；不需要使用最合适的算法，而是想探索不熟悉的算法，学习新技能； 工作；解决工作中的数据分析问题； 竞赛；获取良好的排名，提升知名度，获取奖金。 1.3、探索如何解决问题？ 现有：逐步列出您将收集哪些数据？—&gt; 现有数据范围有多大（存储地址\数据量）？—&gt; 都是什么样的（数据质量）？—&gt; 能不能解决我们的问题？ 期望：希望拥有哪些数据？能否获取到这些数据？ 收集您遇到的所有这些详细信息，并更新问题定义的内容。 2、收集数据 《Approaching(Almost) Any Machine Learning Problem》 2.1、工作空间： （1）工作空间概述&gt;（2）Python os 模块&gt; （3）查看文件夹内容 （4）创建工作空间 input/：所有输入文件、数据文件； NLP 项目，可以将嵌入保留在此处；图像项目，则所有图像都将转到该文件夹中的子文件夹中; src/：所有 python 脚本； models/：所有经过训练的模型； notebooks/：所有jupyter笔记本（即任何*.ipynb文件）都存储在笔记本文件夹中； README.md：这是一个讲解文件，您可以在其中描述您的项目；如编写关于如何训练模型或在生产环境中提供模型的说明； LICENSE：这是一个简单的文本文件，包含项目的许可证，如MIT、Apache等。 python_os_example.py 1 2 3 4 5 6 7 import os os.getcwd() # 获取当前工作空间/目录 os.mkdir(&#34;PASH&#34;) # 新建目录 os."/>
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -236,9 +240,15 @@
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
-                href="#font-facegeorgia1%e4%ba%86%e8%a7%a3%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bdfont"
+                href="#font-facegeorgia1%e5%ae%9a%e4%b9%89%e9%97%ae%e9%a2%98font"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >&lt;font face=Georgia&gt;1、了解人工智能&lt;/font&gt;</a>
+              >&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia&gt;1、定义问题&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;</a>
+            </li>
+          <li>
+              <a
+                href="#font-facegeorgia2%e6%94%b6%e9%9b%86%e6%95%b0%e6%8d%aefont"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia&gt;2、收集数据&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;</a>
             </li>
           </ul>
   
@@ -1047,7 +1057,39 @@
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">此页上</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia1%e4%ba%86%e8%a7%a3%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bdfont">1、了解人工智能
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia1%e5%ae%9a%e4%b9%89%e9%97%ae%e9%a2%98font">1、定义问题
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia11%e9%97%ae%e9%a2%98%e6%98%af%e4%bb%80%e4%b9%88font">1.1、问题是什么？
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia12%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98font">1.2、为什么需要解决问题？
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia13%e6%8e%a2%e7%b4%a2%e5%a6%82%e4%bd%95%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98font">1.3、探索如何解决问题？
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia2%e6%94%b6%e9%9b%86%e6%95%b0%e6%8d%aefont">2、收集数据
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia21%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4font">2.1、工作空间：
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia22%e6%95%b0%e6%8d%ae%e6%9d%a5%e6%ba%90font">2.2、数据来源：
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia23%e6%98%be%e7%a4%ba%e8%ae%be%e7%bd%ae%e5%ba%93%e7%89%88%e6%9c%acfont">2.3、显示设置\库版本：
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#font-facegeorgia24%e6%95%b0%e6%8d%ae%e5%af%bc%e5%85%a5font">2.4、数据导入：
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -1078,8 +1120,818 @@
 
         <div class="content">
           <h1>2.3. CRISP-DM</h1>
-          <h2><font face=Georgia>1、了解人工智能</font><span class="hx-absolute -hx-mt-20" id="font-facegeorgia1了解人工智能font"></span>
-    <a href="#font-facegeorgia1%e4%ba%86%e8%a7%a3%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bdfont" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+          <h2><em><strong><font face=Georgia>1、定义问题</font></strong></em><span class="hx-absolute -hx-mt-20" id="font-facegeorgia1定义问题font"></span>
+    <a href="#font-facegeorgia1%e5%ae%9a%e4%b9%89%e9%97%ae%e9%a2%98font" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><a href="https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/" target="_blank" rel="noopener">如何定义机器学习问题 - MachineLearningMastery.com</a></li>
+</ul>
+<h3><strong><font face=Georgia>1.1、问题是什么？</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia11问题是什么font"></span>
+    <a href="#font-facegeorgia11%e9%97%ae%e9%a2%98%e6%98%af%e4%bb%80%e4%b9%88font" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>简单描述问题;</li>
+<li>定义问题目标; (<em><strong>主要目标，次要目标</strong></em>)</li>
+<li>解决问题方案; (<em><strong>假设列表，算法列表; 评价指标; 展示方案，……</strong></em>)</li>
+<li>查看相似项目；</li>
+</ul>
+<blockquote>
+<p><em><strong>例如，展示方案如下：</strong></em></p>
+<ol>
+<li>编写分析报告展示你的结果；</li>
+<li>使用 Streamlit 开发一个 demo 展示模型；</li>
+<li>部署模型，并托管，监控……</li>
+<li>部署到移动设备，或其他电子元实现智能化</li>
+</ol>
+</blockquote>
+<p><br><br></p>
+<h3><strong><font face=Georgia>1.2、为什么需要解决问题？</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia12为什么需要解决问题font"></span>
+    <a href="#font-facegeorgia12%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98font" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>练习；不需要使用最合适的算法，而是想探索不熟悉的算法，学习新技能；</li>
+<li>工作；解决工作中的数据分析问题；</li>
+<li>竞赛；获取良好的排名，提升知名度，获取奖金。</li>
+</ul>
+<p><br><br></p>
+<h3><strong><font face=Georgia>1.3、探索如何解决问题？</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia13探索如何解决问题font"></span>
+    <a href="#font-facegeorgia13%e6%8e%a2%e7%b4%a2%e5%a6%82%e4%bd%95%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98font" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>现有：逐步列出您将收集哪些数据？—&gt; 现有数据范围有多大（存储地址\数据量）？—&gt; 都是什么样的（数据质量）？—&gt; 能不能解决我们的问题？</li>
+<li>期望：希望拥有哪些数据？能否获取到这些数据？</li>
+<li>收集您遇到的所有这些详细信息，并更新问题定义的内容。</li>
+</ul>
+<p><br><br><br></p>
+<h2><em><strong><font face=Georgia>2、收集数据</font></strong></em><span class="hx-absolute -hx-mt-20" id="font-facegeorgia2收集数据font"></span>
+    <a href="#font-facegeorgia2%e6%94%b6%e9%9b%86%e6%95%b0%e6%8d%aefont" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><font color=Coral face=Georgia  align=center>《Approaching(Almost) Any Machine Learning Problem》</font></li>
+</ul>
+<h3><strong><font face=Georgia>2.1、工作空间：</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia21工作空间font"></span>
+    <a href="#font-facegeorgia21%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4font" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-0"
+      aria-selected="true"
+      tabindex="0"
+      data-state="selected"
+    >（1）工作空间概述&gt;</button><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-1"
+      
+      
+      
+    >（2）Python os 模块&gt;</button><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-2"
+      
+      
+      
+    > （3）查看文件夹内容</button><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-3"
+      
+      
+      
+    > （4）创建工作空间</button></div>
+<div>
+  
+
+  <div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-0"
+  role="tabpanel"
+  tabindex="0"
+  data-state="selected"
+>
+  <ul>
+<li><em><strong><font color=DarkCyan face=Georgia  align=center>input/</font></strong></em>：所有输入文件、数据文件； NLP 项目，可以将嵌入保留在此处；图像项目，则所有图像都将转到该文件夹中的子文件夹中;</li>
+<li><em><strong><font color=DarkCyan face=Georgia  align=center>src/</font></strong></em>：所有 python 脚本；</li>
+<li><em><strong><font color=DarkCyan face=Georgia  align=center>models/</font></strong></em>：所有经过训练的模型；</li>
+<li><em><strong><font color=DarkCyan face=Georgia  align=center>notebooks/</font></strong></em>：所有jupyter笔记本（即任何*.ipynb文件）都存储在笔记本文件夹中；</li>
+<li><em><strong><font color=DarkCyan face=Georgia  align=center>README.md</font></strong></em>：这是一个讲解文件，您可以在其中描述您的项目；如编写关于如何训练模型或在生产环境中提供模型的说明；</li>
+<li><em><strong><font color=DarkCyan face=Georgia  align=center>LICENSE</font></strong></em>：这是一个简单的文本文件，包含项目的许可证，如MIT、Apache等。</li>
+</ul>
+
+</div>
+
+
+
+
+  <div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-1"
+  role="tabpanel"
+  
+  
+>
+  <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">python_os_example.py</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>                         <span class="c1"># 获取当前工作空间/目录</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&#34;PASH&#34;</span><span class="p">)</span>                    <span class="c1"># 新建目录</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&#34;PATH&#34;</span><span class="p">)</span>                    <span class="c1"># 切换新都工作空间</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>                        <span class="c1"># 列出当前工作空间文件/文件夹</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s2">&#34;PATH&#34;</span><span class="p">)</span>            <span class="c1"># 分离文件名和扩展名</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;PATH1&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH1&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="c1"># 拼接多个目录</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">os.path.splitext()</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># os.path.splitext()是 Python 的 os 模块中的一个函数，它用来分离文件名和扩展名。</span>
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">path_file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (&#39;input\11595\train.csv&#39;, &#39;.zip&#39;)</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">_, </div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">_</span><span class="p">,</span> <span class="n">file_type</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">path_file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 其中的 _ 是一个常规的 Python 变量，并且它被用来存储分离的文件名部分。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 由于文件名部分在这个语句中并不需要，所以采用了 _ 作为变量名，以表示这个值会被忽略。</span>
+</span></span><span class="line"><span class="cl"><span class="n">file_type</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;.zip&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+
+</div>
+
+
+
+
+  <div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-2"
+  role="tabpanel"
+  
+  
+>
+  <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 1</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="c1"># 查看当前工作空间</span>
+</span></span><span class="line"><span class="cl"><span class="n">path_join</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;11595&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path_join</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 2</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="n">path_join</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;11595&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">dirname</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path_join</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+
+</div>
+
+
+
+
+  <div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-3"
+  role="tabpanel"
+  
+  
+>
+  <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 1</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span> 
+</span></span><span class="line"><span class="cl"><span class="n">object_name</span> <span class="o">=</span> <span class="s1">&#39;Kaggle_001_Object-name&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">object_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">object_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">object_name</span><span class="o">+</span><span class="s1">&#39;/input&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">object_name</span><span class="o">+</span><span class="s1">&#39;/src&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">object_name</span><span class="o">+</span><span class="s1">&#39;/models&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">object_name</span><span class="o">+</span><span class="s1">&#39;/notebooks&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">open</span><span class="p">(</span><span class="n">object_name</span><span class="o">+</span><span class="s1">&#39;/README.md&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">open</span><span class="p">(</span><span class="n">object_name</span><span class="o">+</span><span class="s1">&#39;/LICENSE&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">object_name</span> <span class="o">+</span> <span class="s1">&#39; is OK!&#39;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 2</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">project_name</span> <span class="o">=</span> <span class="s1">&#39;Kaggle_002_class-name&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">folder_name</span>  <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="s1">&#39;models&#39;</span><span class="p">,</span> <span class="s1">&#39;notebooks&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">file_name</span>    <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;README.md&#39;</span><span class="p">,</span> <span class="s1">&#39;LICENSE&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">file_list</span>    <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">project_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># （1）、如果该空间不存在则创建工作空间</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ----------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># （2）、创建文件夹：&#39;input&#39;, &#39;src&#39;, &#39;models&#39;, &#39;notebooks&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ----------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">folder_name</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">path_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path_folder</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="c1"># （3）、创建文件：&#39;README.md&#39;, &#39;LICENSE&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ----------------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">file_name</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">path_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">open</span><span class="p">(</span><span class="n">path_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">project_name</span> <span class="o">+</span> <span class="s1">&#39; is OK!&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">project_name</span> <span class="o">+</span> <span class="s1">&#39; is OK!&#39;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">create_markdown</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;cells&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;cell_type&#34;</span><span class="p">:</span> <span class="s2">&#34;code&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;execution_count&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;metadata&#34;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;outputs&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;source&#34;</span><span class="p">:</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;metadata&#34;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;nbformat&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;nbformat_minor&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;new_notebook.ipynb&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+
+</div>
+
+
+</div>
+
+<p><br><br><br></p>
+<h3><strong><font face=Georgia>2.2、数据来源：</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia22数据来源font"></span>
+    <a href="#font-facegeorgia22%e6%95%b0%e6%8d%ae%e6%9d%a5%e6%ba%90font" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>数据文件</li>
+<li>数据库</li>
+<li>API</li>
+<li>流式数据</li>
+</ol>
+<p><br><br><br></p>
+<h3><strong><font face=Georgia>2.3、显示设置\库版本：</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia23显示设置库版本font"></span>
+    <a href="#font-facegeorgia23%e6%98%be%e7%a4%ba%e8%ae%be%e7%bd%ae%e5%ba%93%e7%89%88%e6%9c%acfont" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-0"
+      aria-selected="true"
+      tabindex="0"
+      data-state="selected"
+    >（1）Python 查看库版本&gt;</button><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-1"
+      
+      
+      
+    >（2）Python 显示设置&gt;</button></div>
+<div>
+  
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-0"
+  role="tabpanel"
+  tabindex="0"
+  data-state="selected"
+>
+  <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 1</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># numpy,pandas,matplotlib,sklearn,seaborn version</span>
+</span></span><span class="line"><span class="cl"><span class="o">%</span><span class="n">load_ext</span> <span class="n">watermark</span>
+</span></span><span class="line"><span class="cl"><span class="o">%</span><span class="n">watermark</span> <span class="o">-</span><span class="n">a</span> <span class="s2">&#34;Sebastian Raschka&#34;</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">p</span> <span class="n">numpy</span><span class="p">,</span><span class="n">pandas</span><span class="p">,</span><span class="n">matplotlib</span><span class="p">,</span><span class="n">sklearn</span><span class="p">,</span><span class="n">seaborn</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 2</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># pandas version</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pandas: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">example 3</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># jupyterlab Python version：</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="n">python</span> <span class="o">--</span><span class="n">version</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+
+</div>
+
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-1"
+  role="tabpanel"
+  
+  
+>
+  <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">create_markdown</div><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">warnings</span>
+</span></span><span class="line"><span class="cl"><span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&#34;ignore&#34;</span><span class="p">)</span> <span class="c1"># 禁止显示不需要的警告</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span><span class="s1">&#39;$</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>  <span class="c1"># 显示格式 $0.67</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.unicode.east_asian_width&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># 设置输出右对齐，此代码写入脚本中</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_info_columns&#39;</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span> <span class="c1"># info()变量最多显示200个</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_info_rows&#39;</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>    <span class="c1"># info()缺失值个数上限</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>           <span class="c1"># 数据框行数       </span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>      <span class="c1"># 数据框列数 </span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>     <span class="c1"># 数据框列宽       </span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.chop_threshold&#39;</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>   <span class="c1"># 绝对值小于 0.5 显示 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.precision&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>          <span class="c1"># 保留4位小数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>                 <span class="c1"># 保留3位小数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">80</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">20</span> 
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.colheader_justify&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span> <span class="c1"># 确保列名不换行</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FangSong&#39;</span><span class="p">]</span>  <span class="c1"># 替换sans-serif字体，正常显示中文(黑体)\&#39;SimHei&#39;\&#39;FangSong&#39; </span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&#34;font.weight&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;bold&#34;</span>          <span class="c1"># 字体加粗</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>    <span class="c1"># 坐标显示负号</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;savefig.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>            <span class="c1"># 图片像素</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>              <span class="c1"># 分辨率（不常用）</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;classic&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="n">matplotlib</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span> <span class="c1"># Set default theme</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># precision：保留几位小数，后面不会补0，supress=True：对很大/小的数不使用科学计数法</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{: 0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">})</span> <span class="c1"># formatter：强制格式化，后面会补0 </span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+
+</div>
+
+
+
+</div>
+
+<p><br><br><br></p>
+<h3><strong><font face=Georgia>2.4、数据导入：</font></strong><span class="hx-absolute -hx-mt-20" id="font-facegeorgia24数据导入font"></span>
+    <a href="#font-facegeorgia24%e6%95%b0%e6%8d%ae%e5%af%bc%e5%85%a5font" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-0"
+      aria-selected="true"
+      tabindex="0"
+      data-state="selected"
+    >（1）pd.DataFrame()&gt;</button><button
+      class="tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-1"
+      
+      
+      
+    >（2）&gt;</button></div>
+<div>
+  
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-0"
+  role="tabpanel"
+  tabindex="0"
+  data-state="selected"
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-1"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-2"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-3"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-4"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-5"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-6"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+<div
+  class="tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+  id="tabs-panel-7"
+  role="tabpanel"
+  
+  
+>
+  
+</div>
+
+
+
+</div>
+
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
