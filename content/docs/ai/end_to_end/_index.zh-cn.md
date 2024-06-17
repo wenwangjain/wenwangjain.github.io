@@ -17,7 +17,7 @@ toc: true
 {{< card link="algorithms" title="常用算法" subtitle="了解常用算法原理。了解算法优缺点，原理，应用；" icon="package" >}}<br>
 </div>
 <div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="CRISP_DM" title="CRISP-DM" subtitle="选择并学习一个过程。学习建模分步过程；" icon="package" >}}<br>
+{{< card link="CRISP" title="CRISP-DM" subtitle="选择并学习一个过程。学习建模分步过程；" icon="package" >}}<br>
 </div>
 <div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;"></div>
 </div>
