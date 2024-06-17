@@ -138,6 +138,26 @@ flowchart LR
 
 
 
+<br><br><br>
+
+
+## 创建投资组合
+
+<font color=DarkCyan face=Georgia align=right>***以有数据问题的经理或小企业主的心态去评估交付能力：***</font>
+
+1. 如果您需要一个“数据人员”来交付报告或模型，您会考虑什么来评估候选人是否可以交付结果？
+  
+<br>
+
+<font color=DarkCyan face=Georgia align=right>***选择与众不同的新颖项目：***</font>
+
+1. 以 [Kaggle](https://www.kaggle.com/) 和 [阿里天池](https://tianchi.aliyun.com/competition/activeList) 等竞赛网站为起点；
+2. 将报告在知乎、掘金等平台展示结果
+3. 在 Github 上托管个人博客；
+4. 考虑录制一段简短的视频，展示您的发现；
+
+
+
 
 <br><br>
 
