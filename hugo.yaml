@@ -98,6 +98,11 @@ params:
 
 
 
+services:
+  googleAnalytics:
+    ID: 8280348478
+
+
 
 
 
