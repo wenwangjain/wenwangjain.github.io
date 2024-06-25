@@ -71,7 +71,7 @@ params:
     displayLogo: true
     logo:
       path: images/logo.svg
-      dark: images/logo-dark.svg
+      # dark: images/logo-dark.svg
       width: 50
       height: 50
       # link: /
