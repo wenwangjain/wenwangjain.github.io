@@ -98,6 +98,11 @@ params:
 
 
 
+services:
+  googleAnalytics:
+    ID: G-VZ3Q041EBH
+
+
 
 
 
