@@ -12,9 +12,8 @@ width: wide
   关于人工智能，大数据的学习笔记
 {{< /hextra/hero-subtitle >}} <br>
 
-{{< hextra/hero-button text="文档" link="docs" >}}
 {{< hextra/hero-button text="指南" link="guide" >}}
-{{< hextra/hero-button text="项目实践" link="project" >}}
+{{< hextra/hero-button text="项目" link="project" >}}
 {{< hextra/hero-button text="关于" link="about" >}} 
 
 
