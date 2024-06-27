@@ -2,7 +2,7 @@
 
 ---
 title: Kaggle
-weight: 1
+weight: 2
 #next: /step1
 prev: /project
 #editURL: "https://example.com/edit/this/page"
