@@ -1,7 +1,7 @@
 
 
 ---
-title: UCI
+title: UC Irvine
 weight: 1
 #next: /step1
 prev: /project
