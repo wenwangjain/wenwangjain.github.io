@@ -119,10 +119,6 @@ math: true
 
 <br>
 
- - --
-
-<br>
-
 {{% details title="<font color=Coral face=Georgia size=3>2.1.2、*工作空间案例 —— 《Approaching(Almost) Any Machine Learning Problem》*</font>" closed="true" %}}
   - ***<font color=DarkCyan face=Georgia  >input/</font>***：所有输入文件、数据文件； NLP 项目，可以将嵌入保留在此处；图像项目，则所有图像都将转到该文件夹中的子文件夹中;
   - ***<font color=DarkCyan face=Georgia  >src/</font>***：所有 python 脚本；
@@ -243,29 +239,40 @@ math: true
 
 ### **<font face=Georgia>2.3、显示设置\库版本：</font>**
 
-{{< tabs items="（1）Python 查看库版本>,（2）Python 显示设置>" >}}
+***<font color=Coral face=Georgia >2.3.1、查看库版本</font>***
 
-{{< tab >}}
-```python {linenos=table, linenostart=1, filename="example 1"}
+{{% details title="<font color=Gray face=Georgia size=3>（1）、*%load_ext watermark*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
 # numpy,pandas,matplotlib,sklearn,seaborn version
 %load_ext watermark
 %watermark -a "Sebastian Raschka" -u -d -v -p numpy,pandas,matplotlib,sklearn,seaborn
 ```
+{{% /details %}}
 
-```python {linenos=table, linenostart=1, filename="example 2"}
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（2）、*xxx.\_\_version\_\_*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
 # pandas version
 import pandas
 print('pandas: {}'.format(pandas.__version__))
 ```
+{{% /details %}}
 
-```python {linenos=table, linenostart=1, filename="example 3"}
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（3）、*!python --version*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
 # jupyterlab Python version：
 !python --version
 ```
-{{< /tab >}}
+{{% /details %}}
 
+<br>
 
-{{< tab >}}
+***<font color=Coral face=Georgia >2.3.2、Python 显示设置</font>***
+
+{{% details title="<font color=Gray face=Georgia size=3>（1）、*pandas，numpy，matplotlib 显示设置*</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="create_markdown"}
 import warnings
 warnings.filterwarnings("ignore") # 禁止显示不需要的警告
@@ -301,9 +308,7 @@ matplotlib.rcdefaults() # Set default theme
 np.set_printoptions(precision=3, suppress=True) # precision：保留几位小数，后面不会补0，supress=True：对很大/小的数不使用科学计数法
 np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制格式化，后面会补0 
 ```
-{{< /tab >}}
-
-{{< /tabs >}}
+{{% /details %}}
 
 
 
@@ -313,39 +318,11 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 
 ### **<font face=Georgia>2.4、数据导入：</font>**
 
-{{< tabs items="（1）pd.DataFrame()>,（2）>" >}}
+#### ***<font face=Georgia >2.4.1、创建数据</font>***
 
-{{< tab >}}
-{{< /tab >}}
+{{% details title="<font color=Gray face=Georgia size=3>（1）、*sklearn*</font>" closed="true" %}}
 
-{{< tab >}}
-{{< /tab >}}
-
-{{< tab >}}
-{{< /tab >}}
-
-{{< tab >}}
-{{< /tab >}}
-
-{{< tab >}}
-{{< /tab >}}
-
-{{< tab >}}
-{{< /tab >}}
-
-{{< tab >}}
-{{< /tab >}}
-
-{{< tab >}}
-{{< /tab >}}
-
-{{< /tabs >}}
-
-
-
-
-
-
+{{% /details %}}
 
 
 
@@ -362,9 +339,11 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 
 - <font color=Coral face=Georgia  >《Machine Learning with Python Cookbook》</font>
 
+<br>
+
 ### ***<font face=Georgia>5.1、模型评估：</font>***
 
-#### <font color=Coral face=Georgia>5.1.1、*留出法：训练\测试*</font>
+#### <font face=Georgia >5.1.1、*留出法：训练\测试*</font>
 
 {{% details title="<font color=Gray face=Georgia size=3>（1）、*sklearn.model_selection.train_test_split()*</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1}
@@ -407,15 +386,13 @@ print(("Accuracy: %.3f%%") % (result*100.0))
 
 
 
+<br>
 
 
 
-
-
-#### ***<font color=Coral face=Georgia>5.1.2、交叉验证</font>***
+#### ***<font  face=Georgia >5.1.2、交叉验证</font>***
 
 {{% details title="<font color=Gray face=Georgia   size=3>（1）、*sklearn.model_selection.KFold() —— K 折交叉验证*</font>" closed="true" %}}
-
 ```python {linenos=table, linenostart=1}
 from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
@@ -564,7 +541,790 @@ print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()*100.0, results.std()*100.0)
 
 
 
+{{% details title="<font color=Gray face=Georgia size=3>（5）、*sklearn.model_selection.GroupKFold() —— 分组 K 折交叉验证*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.model_selection import GroupKFold
 
+X = ... # 输入特征
+y = ... # 目标变量
+groups = ... # 数据的组标签
+
+gkf = GroupKFold(n_splits=5)
+
+for train_index, test_index in gkf.split(X, y, groups=groups):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    # 其余的模型训练和评估步骤与常规交叉验证相同
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（6）、*sklearn.model_selection.StratifiedKFold() —— 分层 K 折交叉验证*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.model_selection import StratifiedKFold
+from sklearn.datasets import make_classification
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# 生成一个二分类数据集
+X, y = make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=10, random_state=42)
+
+# 实例化分层k-fold对象
+skf = StratifiedKFold(n_splits=5)
+
+accuracies = []
+
+# 使用分层k-fold
+for train_index, test_index in skf.split(X, y):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+
+    # 拟合逻辑回归模型
+    model = LogisticRegression(random_state=42)
+    model.fit(X_train, y_train)
+
+    # 预测测试集
+    y_pred = model.predict(X_test)
+
+    # 计算准确率并添加到列表
+    accuracy = accuracy_score(y_test, y_pred)
+    accuracies.append(accuracy)
+
+# 计算平均准确率
+average_accuracy = sum(accuracies) / len(accuracies)
+print(f'平均准确率：{average_accuracy}')
+```
+{{% /details %}}
+
+<br>
+
+> ***<font color=DarkCyan face=Georgia  >将交叉验证的结果存储下来，或是新建一列存储交叉验证的折数；</font>***
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（1）、*sklearn.model_selection.KFold() —— K 折交叉验证*</font>" closed="true" %}}
+- 我们可以使用来自scikit learn的KFold将任何数据拆分为k等分。当使用k倍交叉验证时，每个样本被分配一个从0到k-1的值。
+```python {linenos=table, linenostart=1}
+import pandas as pd
+from sklearn import model_selection
+
+if __name__ == "__main__":
+    # Training data is in a CSV file called train.csv
+    df = pd.read_csv('datasets/wine/train.csv')
+  
+    # we create a new column called kfold and fill it with -1
+    df["kfold"] = -1
+
+    # use sample with frac=1 to shuffle the dataframe
+    # the next step is to randomize the rows of the data
+    df = df.sample(frac=1, random_state=2).reset_index(drop=True)
+  
+    # initiate the kfold class from model_selection module
+    kf = model_selection.KFold(n_splits=5) 
+    # shuffle=True # 打乱观测结果
+    # random_state=0
+  
+    # fill the new kfold column
+    for fold, (trn_, val_) in enumerate(kf.split(X=df)):
+        df.loc[val_, 'kfold'] = fold
+      
+    # save the new csv with kfold column
+    df.to_csv("train_folds.csv", index=False)
+```
+```python {linenos=table, linenostart=1}
+for fold, (trn_, val_) in enumerate(kf.split(X=df)):
+    print(fold, (trn_, val_))
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（2）、*sklearn.model_selection.StratifiedKFold() —— 分层 K 折交叉验证*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# import pandas and model_selection module of scikit-learn
+import pandas as pd
+from sklearn import model_selection
+
+if __name__ == "__main__":
+    # Training data is in a csv file called train.csv
+    df = pd.read_csv("datasets/wine/train.csv")
+  
+    # we create a new column called kfold and fill it with -1
+    df["kfold"] = -1
+  
+    # the next step is to randomize the rows of the data
+    df = df.sample(frac=1).reset_index(drop=True)
+  
+    # fetch targets
+    #y = df.target.values
+    y = df.iloc[:, -1].values
+  
+    # initiate the kfold class from model_selection module
+    kf = model_selection.StratifiedKFold(n_splits=5)
+  
+    # fill the new kfold column
+    for f, (t_, v_) in enumerate(kf.split(X=df, y=y)):
+        df.loc[v_, 'kfold'] = f
+      
+    # save the new csv with kfold column
+    df.to_csv("train_folds.csv", index=False)
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（3）、*sklearn.model_selection.StratifiedKFold() —— 回归分层 K 折交叉验证*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# 回归分层交叉验证
+
+import numpy as np
+import pandas as pd
+from sklearn import datasets
+from sklearn import model_selection
+
+def create_folds(data):
+    # we create a new column called kfold and fill it with -1
+    data["kfold"] = -1
+  
+    # the next step is to randomize the rows of the data
+    data = data.sample(frac=1).reset_index(drop=True)
+  
+    # calculate the number of bins by Sturge's rule
+    # I take the floor of the value, you can also
+    # just round it
+    num_bins = int(np.floor(1 + np.log2(len(data))))
+  
+    # bin targets
+    data.loc[:, "bins"] = pd.cut(
+        data["target"], bins=num_bins, labels=False
+    )
+    # initiate the kfold class from model_selection module
+    kf = model_selection.StratifiedKFold(n_splits=5)
+  
+    # fill the new kfold column
+    # note that, instead of targets, we use bins!
+    for f, (t_, v_) in enumerate(kf.split(X=data, y=data.bins.values)):
+        data.loc[v_, 'kfold'] = f
+      
+    # drop the bins column
+    data = data.drop("bins", axis=1)
+    # return dataframe with folds
+    return data
+
+if __name__ == "__main__":
+    # we create a sample dataset with 15000 samples
+    # and 100 features and 1 target
+    X, y = datasets.make_regression(
+        n_samples=15000, n_features=100, n_targets=1
+    )
+    # create a dataframe out of our numpy arrays
+    df = pd.DataFrame(
+        X,columns=[f"f_{i}" for i in range(X.shape[1])]
+    )
+    df.loc[:, "target"] = y
+    # create folds
+    df = create_folds(df)
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia size=3>（4）、*sklearn.model_selection.StratifiedKFold()，GroupKFold() —— 分层分组 K 折交叉验证*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+import numpy as np
+from sklearn.model_selection import StratifiedKFold, GroupKFold
+
+class GroupedStratifiedKFold():
+
+    def __init__(self, n_splits=5):
+        self.n_splits = n_splits
+
+    def split(self, X, y=None, groups=None):
+        kfold = StratifiedKFold(self.n_splits)
+
+        unique_groups = np.unique(groups)
+        group_kfold = GroupKFold(self.n_splits)
+
+        for train_groups, test_groups in group_kfold.split(X, y, groups=unique_groups):
+            train_indices = np.isin(groups, unique_groups[train_groups]).astype(int)
+            test_indices = np.isin(groups, unique_groups[test_groups]).astype(int)
+
+            for train_idx, test_idx in kfold.split(X[train_indices == 1], y[train_indices == 1]):
+                yield (train_idx, test_idx)
+
+# 使用方式
+grouped_stratkfold = GroupedStratifiedKFold(n_splits=5)
+for train_idx, test_idx in grouped_stratkfold.split(X, y, groups):
+    X_train, y_train = X.iloc[train_idx], y.iloc[train_idx]
+    X_test, y_test = X.iloc[test_idx], y.iloc[test_idx]
+```
+{{% /details %}}
+
+
+<br>
+
+
+
+#### ***<font  face=Georgia >5.1.3、自助法</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*sklearn.model_selection.ShuffleSplit() —— 重复随机拆分\抽样*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+import warnings
+warnings.filterwarnings("ignore")
+
+from sklearn.model_selection import ShuffleSplit
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+
+kfold = ShuffleSplit(n_splits=10, test_size=0.33, random_state=42)
+model = LogisticRegression()
+results = cross_val_score(model, X, y, cv=kfold)
+print(("Accuracy: %.3f%% (%.3f%%)") % (results.mean()*100.0, results.std()*100.0))
+```
+{{% /details %}}
+
+
+
+
+{{% details title="<font color=Gray face=Georgia   size=3>（2）、*sklearn.utils.resample() —— 放回随机抽样*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# 放回随机抽取4个样本
+from sklearn.utils import resample
+
+train = resample(df, replace=True, n_samples=4, random_state=42)
+```
+{{% /details %}}
+
+
+
+
+<br><br><br>
+
+
+
+
+### ***<font face=Georgia>5.2、评估指标：</font>***
+
+
+<br>
+
+#### <font face=Georgia >5.2.1、*分类*</font>
+
+***<font color=Coral face=Georgia   size=3>1、Accuracy (A) 准确性\准确率：</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*Python code writing*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+def accuracy(y_true, y_pred):
+    """
+    Function to calculate accuracy
+    :param y_true: list of true values
+    :param y_pred: list of predicted values
+    :return: accuracy score
+    """
+  
+    # initialize a simple counter for correct predictions
+    correct_counter = 0
+  
+    # loop over all elements of y_true
+    # and y_pred "together"
+    for yt, yp in zip(y_true, y_pred):
+        if yt == yp:
+        # if prediction is equal to truth, increase the counter
+            correct_counter += 1
+        
+    # return accuracy
+    # which is correct predictions over the number of samples
+    return correct_counter / len(y_true)
+
+if __name__ == "__main__":
+    l1 = [0,1,1,1,0,0,0,1]
+    l2 = [0,1,0,1,0,1,0,0]
+    print(accuracy(l1, l2))
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia   size=3>（2）、*Sklearn.metrics.accuracy_score()*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.metrics import accuracy_score
+l1 = [0,1,1,1,0,0,0,1]
+l2 = [0,1,0,1,0,1,0,0]
+
+accuracy_score(l1, l2)
+```
+```python {linenos=table, linenostart=1}
+# Load libraries
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.datasets import make_classification
+
+# Generate features matrix and target vector
+X, y = make_classification(
+     n_samples = 10000
+    ,n_features = 3
+    ,n_informative = 3
+    ,n_redundant = 0
+    ,n_classes = 2 # 3 Multiclass
+    ,random_state = 1
+    )
+
+# Create training and test split
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.1,random_state=1)
+
+# Create logistic regression
+logit = LogisticRegression()
+
+# Predict values for training target vector
+y_hat = logit.fit(X_train, y_train).predict(X_test)
+
+# Calculate accuracy
+accuracy_score(y_test, y_hat)
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia   size=3>（3）、*Sklearn.model_selection.cross_val_score(model, X, y, scoring='accuracy')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+import numpy as np
+np.set_printoptions(formatter={'float': '{: 0.3f}'.format})
+
+
+# Load libraries
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import make_classification
+
+# Generate features matrix and target vector
+X, y = make_classification(
+     n_samples = 10000
+    ,n_features = 3
+    ,n_informative = 3
+    ,n_redundant = 0
+    ,n_classes = 2
+    ,random_state = 1
+    )
+
+# Create logistic regression
+logit = LogisticRegression()
+
+# Cross-validate model using accuracy
+cross_val_score(logit, X, y, scoring="accuracy")
+```
+{{% /details %}}
+
+
+
+{{% details title="<font color=Gray face=Georgia   size=3>（4）、*Sklearn.model_selection.cross_val_score(model, X, Y, cv=kfold, scoring=scoring)*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# Cross Validation Classification Accuracy
+from pandas import read_csv
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+
+filename = 'datasets/pima-indians-diabetes.data.csv'
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(filename, names=names)
+
+
+array = dataframe.values
+X = array[:,0:8]
+Y = array[:,8]
+
+kfold = KFold(n_splits=10, random_state=7, shuffle=True)
+model = LogisticRegression(max_iter=10000)
+
+results = cross_val_score(model, X, Y, cv=kfold, scoring="accuracy")
+print(("Accuracy: %.3f (%.3f)") % (results.mean(), results.std()))
+results
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+***<font color=Coral face=Georgia   size=3>2、Precision (P) 精确率\查准率：</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*Sklearn.model_selection.cross_val_score(model, X, y, scoring='precision')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# Cross-validate model using precision
+cross_val_score(logit, X, y, scoring="precision")
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+***<font color=Coral face=Georgia   size=3>3、Recall (R) 召回率\查全率：</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*Sklearn.model_selection.cross_val_score(model, X, y, scoring='recall')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# Cross-validate model using recall
+cross_val_score(logit, X, y, scoring="recall")
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+***<font color=Coral face=Georgia   size=3>4、P-R曲线（Precision Recall Curve）：</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*Sklearn.metrics.precision_recall_curve()*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.metrics import precision_recall_curve
+import matplotlib.pyplot as plt
+from sklearn.svm import SVC
+from sklearn.datasets import make_classification
+
+# 创建一个简单的二分类数据集
+X, y = make_classification(n_samples=1000, n_classes=2, random_state=1)
+
+# 使用支持向量机分类器
+classifier = SVC(random_state=1, kernel='linear', probability=True)
+classifier.fit(X, y)
+
+# 获取预测的概率
+probs_y = classifier.predict_proba(X)
+
+# 计算Precision-Recall值
+precision, recall, _ = precision_recall_curve(y, probs_y[:, 1])
+
+# 绘制Precision-Recall曲线
+plt.plot(recall, precision)
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.title('Precision-Recall Curve')
+plt.show()
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+***<font color=Coral face=Georgia   size=3>5、F1-Score（F1 分数）：精确率（Precision）和召回率（Recall）的调和平均数</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*sklearn.model_selection.cross_val_score(model, X, y, scoring='f1')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# Cross-validate model using F1
+cross_val_score(logit, X, y, scoring="f1")
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+***<font color=Coral face=Georgia   size=3>6、ROC曲线：真正例率（TPR）\敏感度或召回率为纵轴，假正例率（FPR）\（1-特异度）为横轴</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*sklearn.metrics.roc_curve(), auc()*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.metrics import roc_curve, auc
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_breast_cancer
+from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
+
+# 读取数据
+data = load_breast_cancer()
+X = data.data
+y = data.target
+
+# 划分数据集
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+
+# 训练模型
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# 预测，并计算ROC曲线的值
+y_score = model.predict_proba(X_test)[:, 1]
+fpr, tpr, _ = roc_curve(y_test, y_score)
+roc_auc = auc(fpr, tpr)
+
+# 绘制ROC曲线
+plt.figure()
+lw = 2
+plt.plot(fpr, tpr, color='darkorange',
+         lw=lw, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic Example')
+plt.legend(loc="lower right")
+plt.show()
+```
+{{% /details %}}
+
+
+
+<br><br>
+
+
+#### <font face=Georgia >5.2.2、*回归*</font>
+
+
+
+***<font color=Coral face=Georgia   size=3>1、Mean absolute error (MAE) 平均绝对误差</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*cross_val_score(model, X, y, scoring='neg_mean_absolute_error')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# Load libraries
+from sklearn.datasets import make_regression
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LinearRegression
+
+# Generate features matrix, target vector
+features, target = make_regression(
+     n_samples = 100
+    ,n_features = 3
+    ,n_informative = 3
+    ,n_targets = 1
+    ,noise = 50
+    ,coef = False
+    ,random_state = 1
+    )
+
+# Create a linear regression object
+ols = LinearRegression()
+
+# Cross-validate the linear regression using (negative) MSE
+cross_val_score(ols, features, target, scoring='neg_mean_absolute_error')
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+
+***<font color=Coral face=Georgia   size=3>2、Mean squared error (MSE) 均方误差</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*cross_val_score(model, X, y, scoring='neg_mean_squared_error')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+# Cross-validate the linear regression using (negative) MSE
+cross_val_score(ols, features, target, scoring='neg_mean_squared_error')
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+
+***<font color=Coral face=Georgia   size=3>3、Root mean squared error (RMSE) 均方根误差</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*cross_val_score(model, X, y, scoring='neg_mean_squared_error')，np.sqrt()*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# 假设 X 是特征数据，y 是目标数据
+# 初始化你的模型，比如线性回归模型
+model = LinearRegression()
+
+# 使用负均方误差进行交叉验证
+mse_scores = cross_val_score(model, X, y, scoring='neg_mean_squared_error', cv=5)
+
+# inversed negative MSE to positive
+mse_scores_positive = -mse_scores
+
+# 计算每次迭代的RMSE，然后取平均值
+rmse_scores = np.sqrt(mse_scores_positive)
+avg_rmse = np.mean(rmse_scores)
+
+print("RMSE Scores: ", rmse_scores)
+print("Average RMSE: ", avg_rmse)
+```
+{{% /details %}}
+
+
+
+<br>
+
+
+
+***<font color=Coral face=Georgia   size=3>4、Root mean squared logarithmic error (RMSLE) 均方根对数误差</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*cross_val_score(model, X, y, scoring='neg_mean_squared_log_error')，np.sqrt()*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# 假设 X 是特征数据，y 是目标数据
+# 初始化你的模型，比如线性回归模型
+model = LinearRegression()
+
+# 使用负均方对数误差进行交叉验证
+msle_scores = cross_val_score(model, X, y, scoring='neg_mean_squared_log_error', cv=5)
+
+# 转换为正的均方对数误差（MSLE）
+msle_scores_positive = -msle_scores
+
+# 计算每次迭代的 RMSLE，并取平均值
+rmsle_scores = np.sqrt(msle_scores_positive)
+avg_rmsle = np.mean(rmsle_scores)
+
+print("RMSLE Scores: ", rmsle_scores)
+print("Average RMSLE: ", avg_rmsle)
+```
+{{% /details %}}
+
+
+
+
+<br>
+
+
+
+***<font color=Coral face=Georgia   size=3>5、Mean percentage error (MPE) 平均百分比误差</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*make_scorer(自定义评价函数)*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import make_scorer
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# 假设 X 是特征数据，y 是目标数据
+# 初始化你的模型，比如线性回归模型
+model = LinearRegression()
+
+# 定义MPE计算函数
+def mean_percentage_error(y_true, y_pred): 
+    return np.mean((y_true - y_pred) / y_true) * 100
+
+# 创建MPE评估器
+mpe = make_scorer(mean_percentage_error, greater_is_better=False)
+
+# 使用MPE进行交叉验证
+mpe_scores = cross_val_score(model, X, y, scoring=mpe, cv=5)
+
+print("MPE Scores: ", mpe_scores)
+print("Average MPE: ", np.mean(mpe_scores))
+```
+{{% /details %}}
+
+
+
+
+<br>
+
+
+
+***<font color=Coral face=Georgia   size=3>6、Mean absolute percentage error (MAPE) 平均绝对百分比误差</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*make_scorer(自定义评价函数)*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import make_scorer
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# 假设 X 是特征数据，y 是目标数据
+# 初始化你的模型，比如线性回归模型
+model = LinearRegression()
+
+# 定义 MAPE 计算函数
+def mean_absolute_percentage_error(y_true, y_pred):
+    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+
+# 创建 MAPE 评估器
+mape = make_scorer(mean_absolute_percentage_error, greater_is_better=False)
+
+# 使用 MAPE 进行交叉验证
+mape_scores = cross_val_score(model, X, y, scoring=mape, cv=5)
+
+print("MAPE Scores: ", mape_scores)
+print("Average MAPE: ", np.mean(mape_scores))
+```
+{{% /details %}}
+
+
+
+
+<br>
+
+
+
+***<font color=Coral face=Georgia   size=3>7、$R^2$</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*cross_val_score(model, X, y, scoring='r2')*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+```
+{{% /details %}}
+
+
+
+
+<br><br><br>
+
+
+
+
+### ***<font face=Georgia>5.3、模型选择：</font>***
+
+
+
+
+<br><br><br>
+
+
+
+
+### ***<font face=Georgia>5.4、模型解释：</font>***
+
+
+
+
+
+<br><br><br>
+
+
+
+
+### ***<font face=Georgia>5.5、集成算法：</font>***
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+### ***<font face=Georgia>5.6、模型优化：</font>***
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+### ***<font face=Georgia>5.7、模型保存：</font>***
 
 
 
