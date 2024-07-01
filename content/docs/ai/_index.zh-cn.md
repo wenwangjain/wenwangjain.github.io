@@ -25,6 +25,7 @@ flowchart LR
 
     C --> C1(人工智能<br>概述) --> C2(机器学习<br>常用算法) --> C3(建模工具<br>sklearn) --> C4(建模过程<br>CRISP-DM) --> C5(练习<br>UCI 数据) 
           C5 --> Z
+    C --> C11(自动<br>机器学习):::someclassC  --> C12(处理大型<br>数据集):::someclassC
 
     D --> D1(先进的<br>机器学习):::someclassB
           D1 --> D11(集成学习<br>XGBoost) --> D111(深度学习) --> D112(建模工具<br>keras<br>PyTorch<br>tensorflow)
