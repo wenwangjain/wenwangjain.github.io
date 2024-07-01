@@ -1300,31 +1300,9 @@ print("Average MAPE: ", np.mean(mape_scores))
 
 
 
-### ***<font face=Georgia>5.5、集成算法：</font>***
 
 
-
-
-
-<br><br><br>
-
-
-
-
-
-### ***<font face=Georgia>5.6、模型优化：</font>***
-
-
-
-
-
-<br><br><br>
-
-
-
-
-
-### ***<font face=Georgia>5.7、模型保存：</font>***
+### ***<font face=Georgia>5.5、模型保存：</font>***
 
 
 
