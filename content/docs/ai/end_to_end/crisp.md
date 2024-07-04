@@ -1281,10 +1281,121 @@ print("Average MAPE: ", np.mean(mape_scores))
 
 ### ***<font face=Georgia>5.3、模型选择：</font>***
 
+#### <font face=Georgia >5.3.2、*调参*</font>
+
+***<font color=Coral face=Georgia   size=3>1、使用穷举搜索选择最佳模型</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*sklearn.model_selection.GridSearchCV(model, hyperparameters, cv=5, verbose=0)*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.model_selection import GridSearchCV
+
+# Load data
+iris = datasets.load_iris()
+X, y = iris.data, iris.target
+
+# Create logistic regression
+model = linear_model.LogisticRegression(max_iter=1000, solver='liblinear')
+
+# Create range of candidate regularization penalty hyperparameter values
+penalty = ['l1','l2']
+
+# Create range of candidate regularization hyperparameter values
+C = np.logspace(0,4,10)
+
+# Create hyperparameter options
+hyperparameters = dict(C = C, penalty = penalty)
+
+# Create grid search
+gridsearch = GridSearchCV(model, hyperparameters, cv=5, verbose=0)
+
+# Fit grid search
+best_model = gridsearch.fit(X, y)
+
+
+best_model.best_estimator_
+best_model.cv_results_   
+
+
+print('Best Penalty:',best_model.best_estimator_.get_params()['penalty'])
+print('Best C:',best_model.best_estimator_.get_params()['C'])
+```
+
+> <font face=Georgia >***GridSearchCV(model, hyperparameters, cv=5, verbose=0)***</font>
+> 1. <font face=Georgia >***model***</font>：您要优化参数的模型对象。
+> 2. <font face=Georgia >***hyperparameters***</font>：这是一个参数网格，通常以字典的形式指定，其中键是要调整的参数名称，值是要尝试的参数值列表。
+> 3. <font face=Georgia >***cv=5***</font>：指定交叉验证的折数为 5，即将数据分为 5 份，依次选择其中 1 份作为验证集，其余 4 份作为训练集进行训练和验证。
+> 4. <font face=Georgia >***verbose=0***</font>：控制输出的详细程度。0 表示不输出详细信息。1 到 3 输出的消息越来越详细。
+
+<br>
+
+在我们的解决方案中，我们有10个可能的C值，2个可能的正则化惩罚值和5倍。他们创建了10×2×5=100个候选模型，从中选出最佳模型。GridSearchCV完成后，我们可以看到最佳模式的超参数
+
+默认情况下，在确定了最佳超参数后，GridSearchCV将使用整个数据集上的最佳超参数重新训练模型（而不是留下折叠以进行交叉验证）。我们可以像任何其他scikit学习模型一样使用此模型来预测值：
+
+```python {linenos=table, linenostart=1}
+# Predict target vector
+best_model.predict(X)
+```
+> array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,<BR>
+>       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,<BR>
+>       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,<BR>
+>       1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1,<BR>
+>       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,<BR>
+>       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,<BR>
+>       2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+{{% /details %}}
+
+
+
+
+
+***<font color=Coral face=Georgia   size=3>2、使用随机化搜索选择最佳模型</font>***
+
+{{% details title="<font color=Gray face=Georgia   size=3>（1）、*sklearn.model_selection.RandomizedSearchCV(model, hyperparameters, ...)*</font>" closed="true" %}}
+```python {linenos=table, linenostart=1}
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.model_selection import RandomizedSearchCV
+
+# Load data
+iris = datasets.load_iris()
+X, y = iris.data, iris.target
+
+# Create logistic regression
+model = linear_model.LogisticRegression(max_iter=1000, solver='liblinear')
+
+# Create range of candidate regularization penalty hyperparameter values
+penalty = ['l1','l2']
+
+# Create range of candidate regularization hyperparameter values
+C = np.logspace(0,4,10)
+
+# Create hyperparameter options
+hyperparameters = dict(C = C, penalty = penalty)
+
+# Create randomized search
+randomizedsearch = RandomizedSearchCV(
+    model, hyperparameters, random_state=1, n_iter=100, cv=5, verbose=0, n_jobs=-1)
+
+# Fit randomized search
+best_model = randomizedsearch.fit(X, y)
+
+best_model.best_estimator_
+best_model.cv_results_   
+best_model.best_estimator_
+```
+
+
+{{% /details %}}
+
+
 
 
 
 <br><br><br>
+
 
 
 
@@ -1294,15 +1405,13 @@ print("Average MAPE: ", np.mean(mape_scores))
 
 
 
-
 <br><br><br>
 
 
 
 
 
-
-### ***<font face=Georgia>5.5、模型部署：</font>***
+### ***<font face=Georgia>5.5、模型保存：</font>***
 
 
 
