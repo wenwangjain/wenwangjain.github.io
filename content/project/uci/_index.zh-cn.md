@@ -10,3 +10,9 @@ type: "docs"
 toc: true
 math: true
 ---
+
+
+{{< cards >}}
+  {{< card link="/" title="Home" icon="back" >}}
+{{< /cards >}}
+
