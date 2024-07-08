@@ -26,7 +26,7 @@ width: wide
     {{< card link="/project/uci" title="UC Irvine" image="/images/kaggle.jpg" subtitle="目前有665个数据集，为机器学习社区提供服务" >}}<br>
   </div>
   <div style="flex: 10%; padding: 10px; box-sizing: border-box; text-align: left;">
-    {{< card link="/project/kaggle" title="Kaggle" image="/images/kaggle.jpg" subtitle="与最大的 AI 和 ML 社区一起升级         " >}}<br>
+    {{< card link="/project/kaggle" title="Kaggle" image="/images/kaggle.jpg" subtitle="与最大的AI和ML社区一起升级，展示自己的技能和算法" >}}<br>
   </div>
   <div style="flex: 10%; padding: 10px; box-sizing: border-box; text-align: left;">
     {{< card link="/project/tc" title="阿里云天池" image="/images/tc.jpg" subtitle="最前沿的AI赛题和课程，走在技术前线" >}}<br>
