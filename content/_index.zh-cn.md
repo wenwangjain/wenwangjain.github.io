@@ -19,7 +19,7 @@ width: wide
 {{< hextra/hero-button text="关于" link="about" bgColor="00CCFF ">}}
 
 
-<br>
+<br><br>
 
 
 <div style="display: flex; justify-content: center; width: 100%;">
