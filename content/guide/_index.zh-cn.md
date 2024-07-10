@@ -3,7 +3,7 @@ title: "指南"
 layout: hextra-home
 ---
 
-### <font face=Georgia>1、数学基础</font>
+## <font face=Georgia>1、数学基础</font>
 
 {{< cards >}}
   {{< card link="math_calculus" title="微积分"  subtitle="......" icon="package" >}}
@@ -17,7 +17,7 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>2、编程语言</font>
+## <font face=Georgia>2、编程语言</font>
 
 {{< cards >}}
   {{< card link="python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
@@ -30,11 +30,11 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>3、机器学习：Python</font>
+## <font face=Georgia>3、机器学习：Python</font>
 
 <br>
 
-#### <font face=Georgia>3.1、基础库</font>
+### <font face=Georgia>3.1、基础库</font>
 
 {{< cards >}}
   {{< card link="python/python_numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" >}}
@@ -45,7 +45,7 @@ layout: hextra-home
 
 <br><br>
 
-#### <font face=Georgia>3.2、可视化</font>
+### <font face=Georgia>3.2、可视化</font>
 
 {{< cards >}}
   {{< card link="python/python_matplotlib" title="Matplotlib" subtitle="用 Python 创建静态、动画和交互式可视化。" icon="matploblib" >}}
@@ -56,7 +56,7 @@ layout: hextra-home
 
 <br><br>
 
-#### <font face=Georgia>3.3、模型解释</font>
+### <font face=Georgia>3.3、模型解释</font>
 
 {{< cards >}}
   {{< card link="python/python_shap" title="SHAP" subtitle="一种博弈论方法，用于解释任何机器学习模型的输出。" icon="package" >}}
@@ -64,7 +64,7 @@ layout: hextra-home
 
 <br><br>
 
-#### <font face=Georgia>3.4、模型部署</font>
+### <font face=Georgia>3.4、模型部署</font>
 
 {{< cards >}}
   {{< card link="python/python_streamlit" title="Streamlit" subtitle="一个开源 Python 框架；快速构建和部署强大的数据应用程序。" icon="streamlit" >}}
@@ -73,7 +73,7 @@ layout: hextra-home
 
 <br><br>
 
-#### <font face=Georgia>3.5、空间数据</font>
+### <font face=Georgia>3.5、空间数据</font>
 
 {{< cards >}}
   {{< card link="python/python_folium" title="Folium" subtitle="轻松地在交互式传单地图上可视化使用 Python 处理的数据。" icon="folium" >}}
@@ -85,7 +85,7 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>4、深度学习</font>
+## <font face=Georgia>4、深度学习</font>
 
 {{< cards >}}
   {{< card link="dl_dezero" title="DeZero" subtitle="使用 Python 从头开始实现深度神经网络。" icon="package" >}}
@@ -99,7 +99,7 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>5、软件工程</font>
+## <font face=Georgia>5、软件工程</font>
 
 {{< cards >}}
   {{< card link="software_linux" title="Linux" subtitle="Linux 是一种自由和开放源码的类 UNIX 操作系统。" icon="linux" >}}
@@ -113,7 +113,7 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>5、数据库</font>
+## <font face=Georgia>5、数据库</font>
 
 {{< cards >}}
   {{< card link="database_mysql" title="MySQL" subtitle="MySQL 是一个流行的关系型数据库管理系统。" icon="mysql" >}}
@@ -124,7 +124,7 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>6、商业分析：BI</font>
+## <font face=Georgia>6、商业分析：BI</font>
 
 {{< cards >}}
   {{< card link="bi_datart" title="Datart" subtitle="Datart 是新一代数据可视化开放平台。" icon="package" >}}
@@ -137,7 +137,7 @@ layout: hextra-home
 
 
 
-### <font face=Georgia>7、大数据</font>
+## <font face=Georgia>7、大数据</font>
 
 {{< cards >}}
   {{< card link="bd_hadoop" title="Hadoop" subtitle="一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。" icon="hadoop" >}}
