@@ -29,10 +29,27 @@ pre {
 
 
 
+/*图片居中
+img {
+    display: block;
+    margin: 0 auto;
+}
+*/
+
+
 /*20240710*/
-/*cards.html 横向排列最多四个*/
+/*cards.html 一行排列最多 4 个*/
 .hextra-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
+
+.hextra-cardst {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+
+
