@@ -1,5 +1,5 @@
 ---
-title: 2.3. CRISP
+title: 2.3. CRISP-DM
 weight: 103
 #next: /step1
 #prev: /docs
