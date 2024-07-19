@@ -95,8 +95,12 @@ params:
     displayPoweredBy: true
     width: wide
 
-  # https://giscus.app/
-  giscus:
+  comments:
+    enable: false
+    type: giscus
+    
+    # https://giscus.app/
+    giscus:
       repo: wenwangjain/wenwangjain.github.io
       repoId: R_kgDOMGettA
       category: Announcements
