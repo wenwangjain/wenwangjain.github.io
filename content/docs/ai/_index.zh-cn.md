@@ -23,8 +23,9 @@ flowchart LR
 
     B --> B1(pyhon\R) --> B2(微积分<br>线性代数):::someclassC --> B3(概率论<br>数理统计):::someclassC 
 
-    C --> C1(人工智能<br>概述) --> C2(机器学习<br>常用算法) --> C3(建模工具<br>sklearn) --> C4(建模过程<br>CRISP-DM) --> C5(练习<br>UCI 数据) 
+    C --> C1(人工智能<br>概述) --> C2(机器学习<br>常用算法) --> C3(建模工具<br>sklearn) --> C4(步骤\过程<br>CRISP-DM) --> C5(练习<br>UCI 数据) 
           C5 --> Z
+    C --> C11(自动<br>机器学习):::someclassC  --> C12(处理大型<br>数据集):::someclassC
 
     D --> D1(先进的<br>机器学习):::someclassB
           D1 --> D11(集成学习<br>XGBoost) --> D111(深度学习) --> D112(建模工具<br>keras<br>PyTorch<br>tensorflow)
@@ -32,7 +33,7 @@ flowchart LR
                  D112 --> D1122(自然语言处理<br>NLP)
                  D1121 --> Z
                  D1122 --> Z
-          D1 --> D12(机器学习<br>Dode 实现<br>python):::someclassC --> D121(sklearn<br>源码):::someclassC --> D122(深度学习<br>Dode 实现<br>DeZero):::someclassC --> D123(PyTorch<br>tensorflow<br>源码):::someclassC
+          D1 --> D12(机器学习<br>Code 实现<br>python):::someclassC --> D121(sklearn<br>源码):::someclassC --> D122(深度学习<br>Code 实现<br>DeZero):::someclassC --> D123(PyTorch<br>tensorflow<br>源码):::someclassC
 
     D --> D2(模型部署<br>MLOps):::someclassB
           D2 --> D211(git\github\Linux\容器\云<br>MLflow\DVC<br>Pickle\Joblib<br>HF Spaces\Streamlit Sharing<br>云) --> D212(部署方式) --> D213(模型监控) --> D214(CI/CD 流程) 

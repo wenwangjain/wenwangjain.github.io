@@ -38,14 +38,19 @@ menu:
       name: 关于
       pageRef: /about
       weight: 4
+
+    - identifier: Blog
+      name: 博客
+      pageRef: /blog
+      weight: 5
       
     - name: Search
-      weight: 5
+      weight: 6
       params:
         type: search
 
     - name: GitHub
-      weight: 6
+      weight: 7
       url: "https://github.com/wenwangjain/wenwangjain.github.io"
       params:
         icon: github
@@ -70,7 +75,7 @@ params:
     displayTitle: true
     displayLogo: true
     logo:
-      path: images/logo.png
+      path: images/logo2.png
       # dark: images/logo-dark.svg
       width: 50
       height: 50
@@ -95,12 +100,29 @@ params:
     displayPoweredBy: true
     width: wide
 
+  comments:
+    enable: false
+    type: giscus
+    
+    # https://giscus.app/
+    giscus:
+      repo: wenwangjain/wenwangjain.github.io
+      repoId: R_kgDOMGettA
+      category: Announcements
+      categoryId: DIC_kwDOMGettM4Cg8YQ
+      # mapping: pathname
+      # strict: 0
+      # reactionsEnabled: 1
+      # emitMetadata: 0
+      inputPosition: top
+      # lang: en
 
 
 
 services:
   googleAnalytics:
     ID: G-VZ3Q041EBH
+
 
 
 

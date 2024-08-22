@@ -9,14 +9,12 @@ toc: true
 
 <br>
 
-<div style="display: flex; justify-content: center; width: 100%;">
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="/guide/python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}<br>
-</div>
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;"></div>
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;"></div>
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;"></div>
-</div>
-
-
+{{< cards >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="......<br>......" icon="package" >}}
+  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="......" icon="package" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="......" icon="package" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="......" icon="package" >}}
+  {{< card link="/guide/python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
+  {{< card link="/guide/python/python_modules" title="Python 内置模块" subtitle="python 内置模块\函数，按字母排序。" icon="python" >}}
+{{< /cards >}}
 

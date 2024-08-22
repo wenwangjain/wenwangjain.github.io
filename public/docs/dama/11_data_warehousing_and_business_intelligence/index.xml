@@ -23,8 +23,140 @@
       <description>
         
         
-        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+        &lt;h2&gt;&lt;em&gt;&lt;strong&gt;&lt;font face=Georgia&gt;1、定义&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia1定义font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia1%e5%ae%9a%e4%b9%89font&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在数据库领域，范式（Normal Form）是符合某一种级别的关系模式的集合，用于规范数据库设计，减少数据冗余和异常。常见的范式包括第一范式（1NF）、第二范式（2NF）、第三范式（3NF）等。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;&lt;font face=Georgia&gt;2、零范式&lt;/font&gt;&lt;/strong&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia2零范式font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia2%e9%9b%b6%e8%8c%83%e5%bc%8ffont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;零范式：&lt;i&gt;&lt;b&gt;&lt;font color=Coral face=Georgia&gt;数据中不存在重复数据&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;它只满足一个最基本的条件 — &lt;b&gt;数据中不存在重复数据&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;零范式（Zero Normal Form，0NF）并非数据库设计中常见的正式范式。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        ⚠️
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
+      在数据库设计中，一般从第一范式（1NF）开始讨论。零范式可以被认为是一种不符合任何正式范式规则的状态，即数据可能存在大量的冗余、不一致和潜在的错误。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;&lt;font face=Georgia&gt;3、一范式&lt;/font&gt;&lt;/strong&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia3一范式font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia3%e4%b8%80%e8%8c%83%e5%bc%8ffont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;一范式：&lt;i&gt;&lt;b&gt;&lt;font color=Coral face=Georgia&gt;每个属性都必须是不可再分的原子值。&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;也就是说，表中的每个字段只能包含一个值，不能包含多个值或者可分割的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;第一范式（1NF）是关系数据库中的一种 &lt;b&gt;基本范式要求&lt;/b&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;学生 ID&lt;/th&gt;
+&lt;th&gt;学生姓名&lt;/th&gt;
+&lt;th&gt;课程 ID&lt;/th&gt;
+&lt;th&gt;课程名称&lt;/th&gt;
+&lt;th&gt;课程成绩&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;张三&lt;/td&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td&gt;数学&lt;/td&gt;
+&lt;td&gt;85&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;李四&lt;/td&gt;
+&lt;td&gt;102&lt;/td&gt;
+&lt;td&gt;英语&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;王五&lt;/td&gt;
+&lt;td&gt;103&lt;/td&gt;
+&lt;td&gt;物理&lt;/td&gt;
+&lt;td&gt;78&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;赵六&lt;/td&gt;
+&lt;td&gt;104&lt;/td&gt;
+&lt;td&gt;化学&lt;/td&gt;
+&lt;td&gt;88&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        ⚠️
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
+      &lt;p&gt;第一范式虽然是关系数据库设计的基础，但它也存在一些不足之处：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;数据冗余&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：可能存在大量的重复数据。例如，在一个包含学生信息和课程信息的表中，如果每个学生选修的每门课程都要重复记录学生的基本信息，就会导致数据冗余。&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;插入异常&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：当试图插入某些数据时，可能由于部分关键信息缺失而无法插入。比如，如果一个学生还没有选修任何课程，而表结构要求必须同时记录学生和课程的关联信息，就无法插入该学生的基本信息。&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;删除异常&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：可能会因为删除某些数据而意外丢失其他有用的信息。例如，若删除某门课程的所有记录，可能会连带删除了选修该课程的学生的其他相关信息。&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;更新异常&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：当需要更新某些重复的数据时，必须同时更新多个地方，否则会导致数据不一致。&lt;/li&gt;
+&lt;/ol&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;&lt;font face=Georgia&gt;4、二范式&lt;/font&gt;&lt;/strong&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;font-facegeorgia4二范式font&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#font-facegeorgia4%e4%ba%8c%e8%8c%83%e5%bc%8ffont&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
       </description>
     </item>
     

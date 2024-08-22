@@ -26,4 +26,51 @@ pre {
     font-family: normal; /*"Times New Roman", Times, serif;*/
     font-size: 16px;
   }
-  
+
+
+
+/*图片居中*/
+img {
+    display: grid; /*block;*/
+    margin: 0 auto;
+}
+
+
+
+/*20240710*/
+/*cards.html 一行排列最多 4 个*/
+.hextra-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.hextra-cardst {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+
+
+
+
+.hero-headline-style {
+  display: grid;
+  margin: 0 auto;  /* 新增这一行，使元素在水平方向居中 */
+}
+
+
+.hero-subtitle-style {
+  display: grid;
+  margin: 0 auto;  /* 新增这一行，使元素在水平方向居中 */
+}
+
+/*
+.cardst-hero-button {
+  display: grid;
+  margin: 0 auto;  /* 新增这一行，使元素在水平方向居中 */
+}
+*/
+
+

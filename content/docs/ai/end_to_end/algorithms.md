@@ -1,5 +1,5 @@
 ---
-title: 2.2. 常用算法
+title: 2.2. 算法
 weight: 102
 #next: /step1
 #prev: /docs
@@ -9,9 +9,9 @@ math: true
 ---
 
 
-## <font face=Georgia>1、了解人工智能</font>
+## <font face=Georgia>1、</font>
 
-### <font face=Georgia>1.1、相关概念</font>
+
 
 
 
