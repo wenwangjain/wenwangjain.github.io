@@ -36,7 +36,7 @@ flowchart LR
           D1 --> D12(机器学习<br>Code 实现<br>python):::someclassC --> D121(sklearn<br>源码):::someclassC --> D122(深度学习<br>Code 实现<br>DeZero):::someclassC --> D123(PyTorch<br>tensorflow<br>源码):::someclassC
 
     D --> D2(模型部署<br>MLOps):::someclassB
-          D2 --> D211(git\github\Linux\容器\云<br>MLflow\DVC<br>Pickle\Joblib<br>HF Spaces\Streamlit Sharing<br>云) --> D212(部署方式) --> D213(模型监控) --> D214(CI/CD 流程) 
+          D2 --> D211(基础内容<br>git\github\Linux<br>容器<br>云<br>HF Spaces\<br>Streamlit Sharing) --> D212(部署方式) --> D213(主要内容<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> D214(部署工具<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow) 
 
     E --> E10(深度学习) --> E1(生成模型)
           E1 --> E11(自然语言处理<br>NLP) --> E111(大语言模型<br>LLM)
@@ -103,13 +103,16 @@ flowchart LR
 
 <font color=DarkCyan face=Georgia align=right>***MLOps，机器学习的部署和生命周期管理：***</font>
 
-1. 软件工程技能：git\github\Linux\容器\云；
-2. 模型版本控制：MLflow、DVC（Data Version Control）；
-3. 模型打包：了解模型打包或序列化的概念，并学习 Pickle 或 Joblib 等 Python 库以便轻松部署；
-4. 模型服务：Flask API 或 Streamlit/Gradio 应用；
-5. 免费托管：HF Spaces，Streamlit Sharing
-6. 云平台（Azure、AWS），管理整个机器学习项目生命周期：构建、训练、部署和维护；
-
+1. 工程技能：git\github\Linux\容器\云，HF Spaces\Streamlit Sharing；
+2. 部署方法：线上，线下;
+3. 主要内容：自动化管道，监控，生命周期管理，治理；
+4. 主要工具：设计主要内容中使用的相关工具，如开源 MLOps 项目：
+   - MLFlow 管理 ML 生命周期，包括实验、可重复性和部署，并包含模型注册表
+   - DVC 管理 ML 项目的版本控制，使其可共享和可复制
+   - Polyaxon 具有实验、生命周期自动化、协作和部署功能，并包含模型注册表
+   - Metaflow 是 Netflix 的一个前项目，用于管理自动化流程和部署
+   - Kubeflow 具有在 Kubernetes 容器中实现工作流自动化和部署的功能
+  
 
 <br><br><br>
 
@@ -170,6 +173,7 @@ flowchart LR
 3. [从数据收集到模型部署：数据科学项目的 6 个阶段 - KDnuggets](https://www.kdnuggets.com/2023/01/data-collection-model-deployment-6-stages-data-science-project.html)
 4. [全面的 MLOps 学习路径：2024 年版](https://www.analyticsvidhya.com/blog/2023/12/a-comprehensive-mlops-learning-path/)
 5. [2024 年学习生成式人工智能的最佳路线图](https://www.analyticsvidhya.com/blog/2023/05/from-novice-to-pro-the-epic-journey-of-mastering-generative-ai/)
+6. [MLOps 概述](https://www.kdnuggets.com/2021/03/overview-mlops.html)
 
 
 
