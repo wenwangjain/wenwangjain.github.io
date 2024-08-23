@@ -36,7 +36,7 @@ flowchart LR
           D1 --> D12(机器学习<br>Code 实现<br>python):::someclassC --> D121(sklearn<br>源码):::someclassC --> D122(深度学习<br>Code 实现<br>DeZero):::someclassC --> D123(PyTorch<br>tensorflow<br>源码):::someclassC
 
     D --> D2(模型部署<br>MLOps):::someclassB
-          D2 --> D211(基础内容<br>git\github\Linux<br>容器<br>云<br>HF Spaces\<br>Streamlit Sharing) --> D212(部署方式) --> D213(主要内容<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> D214(部署工具<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow) 
+          D2 --> D211(工程基础<br>git\github\Linux<br>容器<br>云<br>HF Spaces\<br>Streamlit Sharing) --> D212(部署方式) --> D213(主要内容<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> D214(部署工具<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow) 
 
     E --> E10(深度学习) --> E1(生成模型)
           E1 --> E11(自然语言处理<br>NLP) --> E111(大语言模型<br>LLM)
