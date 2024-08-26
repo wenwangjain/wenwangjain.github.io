@@ -37,7 +37,7 @@ math: true
 
 <br>
 
-{{% details title="<font color=Coral size=3>***混淆矩阵***：`sklearn.metrics.confusion_matrix()` ***参数***</font>" closed="true" %}}
+{{% details title="<font color=Coral size=3>1. ***混淆矩阵***：`sklearn.metrics.confusion_matrix()` ***参数***</font>" closed="true" %}}
 |*参数*|*解释*|*取值\取值类型*|*默认值*|*是否关联*|*参数类型*|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |***`y_true`***|真实的标签值|一维数组||||
@@ -48,7 +48,7 @@ math: true
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>1. ***混淆矩阵***：`sklearn.metrics.confusion_matrix()`</font>" closed="true" %}}
+{{% details title="<font color=Gray size=3>***混淆矩阵***：`sklearn.metrics.confusion_matrix()`</font>" closed="true" %}}
 ```python
 from sklearn.metrics import confusion_matrix
 import numpy as np
@@ -116,7 +116,7 @@ print(confusion_matrix(y_true, y_pred, normalize='all'), '\n')
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. ***混淆矩阵***：`mypackage.Model.metrics_con_matrix()`</font>" closed="true" %}}
+{{% details title="<font color=Gray size=3>***混淆矩阵***：`mypackage.Model.metrics_con_matrix()`</font>" closed="true" %}}
 ```python
 import warnings
 warnings.filterwarnings("ignore") # Prohibit displaying unnecessary warnings
@@ -159,7 +159,7 @@ Estimate_confusion_matrix(
 {{% /details %}}
 
 
-{{% details title="<font color=Coral size=3>***准确率***：`sklearn.metrics.accuracy_score()` ***参数***</font>" closed="true" %}}
+{{% details title="<font color=Coral size=3>2. ***准确率***：`sklearn.metrics.accuracy_score()` ***参数***</font>" closed="true" %}}
 |*参数*|*解释*|*取值\取值类型*|*默认值*|*是否关联*|*参数类型*|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |***`y_true`***|真实的标签值|||||
@@ -169,7 +169,7 @@ Estimate_confusion_matrix(
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>1. ***准确率***：`sklearn.metrics.accuracy_score()` ***案例***</font>" closed="true" %}}
+{{% details title="<font color=Gray size=3>***准确率***：`sklearn.metrics.accuracy_score()` ***案例***</font>" closed="true" %}}
 ```python
 from sklearn.metrics import accuracy_score
 
