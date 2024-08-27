@@ -480,35 +480,62 @@ $$\mathcal{F}={P\mid P(Y|X)}$$
 
 #### <font color=Coral face=Georgia >***4.2.2、策略：***</font>
 
-策略就是从模型的假设空间中，选择最优模型。
+***策略就是从模型的假设空间中，选择最优模型。***
 使用损失函数`(loss function)` 或 代价函数`(cost function)` 来衡量模型预测的错误程度。
-损失函数是 $f(X)$ 和 $Y$ 的非负实值函数，记作 $L(Y,f(X))$。
+损失函数值越小，模型越好。
 
-***<font color=DarkCyan>常见的损失函数如下：</font>***
+<br>
 
-> ***(1). 0-1 损失函数 `（0-1 loss function）`：***
+***<font color=Coral face=Georgia >1. 损失函数：`(loss function)`：***</font>
+- 损失函数是 $f(X)$ 和 $Y$ 的非负实值函数，记作 $L(Y,f(X))$。
+- 常见的损失函数如下：
 
-$$\left.L(Y,f(X))=\left\{\begin{array}{ll}1,&Y\neq f(X)\\0,&Y=f(X)\end{array}\right.\right.$$
-
-$$\begin{equation}\left.L(Y,f(X))=\left\{\begin{array}{ll}1,&Y\neq f(X)\\0,&Y=f(X)\end{array}\right.\right.\end{equation}$$
-
-$$L(Y,f(X))=\left\1,&Y\neq f(X)\\0,&Y=f(X)\right.$$
-
-$$L(Y,f(X))=1, Y\neq f(X) \\ 0, Y=f(X)$$
-
-$$
-f(i)=
-\left\{\begin{matrix}
-1,i\in Q \\
--1,i\notin Q
-\end{matrix}\right.
-$$
+> ***<font color=DarkCyan face=Georgia >(1). 0-1 损失函数 `（0-1 loss function）`：***</font>
+> $$\small L(Y,f(X))=\begin{cases}1,&Y\neq f(X)\\\ 0,&Y=f(X)\end{cases} \tag{1}$$
 
 
+> ***<font color=DarkCyan face=Georgia >(2). 平方损失函数 `（quadratic loss function）`：***</font>
+> $$\small L(Y,f(X))=(Y-f(X))^{2} \tag{2}$$
 
+
+> ***<font color=DarkCyan face=Georgia >(3). 绝对损失函数 `（absolute loss function）`：***</font>
+> $$\small L(Y,f(X))=|Y-f(X)| \tag{3}$$
+
+
+> ***<font color=DarkCyan face=Georgia >(4). 对数损失函数 `（logarithmic loss function）`：***</font>
+> $$L(Y,P(Y|X))=-\log P(Y|X) \tag{4}$$
+> - 其中：$P(Y|X)$ 是条件概率分布，$-\log P(Y|X)$ 是对数似然函数。
 
 
 <br><br>
+
+
+***<font color=Coral face=Georgia >2. 风险函数：`(risk function)`：***</font>
+- 由于模型的输入、输出 $（X, Y）$ 是随机变量，遵循联合分布 $P(X, Y)$，所以损失函数的期望 $\small R_{\exp}$ 如下；这是理论上模型 $f(X)$ 关于联合分布 $P(X, Y)$ 的平均损失，称为 ***<font color=DarkCyan face=Georgia >风险函数***</font> `(risk function)` 或 ***<font color=DarkCyan face=Georgia >期望损失</font>*** `(expected loss)`。
+$$\small R_{\exp}(f)=E_{P}[L(Y,f(X))]=\int_{x\times y}L(y,f(x))P(x,y)\mathrm{d}x\mathrm{d}y$$
+- 由于联合分布 $P(X,Y)$ 未知，所以无法直接计算期望风险 $\small R_{\exp}(f)$。
+- ***学习的目标（策略）就是选择期望风险最小的模型。*** 
+
+
+<br><br>
+
+
+***<font color=Coral face=Georgia >3. 经验风险：`(empirical risk)`：***</font>
+- 给定一个训练数据集 $T=\{(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{N},y_{N})\}$，模型 $f(X)$ 在训练数据集上的平均损失称为 ***<font color=DarkCyan face=Georgia >经验风险\损失</font>***，记作$\small R_{emp}(f)$： 
+$$R_{\mathrm{emp}}(f)=\frac{1}{N}\sum_{i=l}^{N}L(y_{i},f(x_{i}))$$
+
+{{< callout type="info" emoji=❓ >}}
+***大数定理*** 是概率论中一系列定理的统称，最常见的表述为：
+随着样本数量的增加，样本均值会趋近于总体均值。更严格地说，如果 $X_1, X_2, ... , X_n$ 是一系列独立同分布的随机变量，且它们的期望为 $\mu$，方差为 $\sigma^2$，那么当 $n$ 趋向于无穷大时，样本均值 ${\overline{X}}={\frac{1}{n}}\sum_{i=1}^{n}X_{i}$ 依概率收敛于 $\mu$，即对于任意正数 $\epsilon$ ，有： $$\lim_{n\to\infty}P\left(\left|\overline{X}-\mu\right|<\epsilon\right)=1$$ 
+简单来说，大数定理表明在大量重复试验中，事件发生的频率会趋近于其概率。它是概率论和统计学中非常重要的基础性定理，为用样本估计总体提供了理论依据。
+{{< /callout >}}
+
+
+
+
+
+<br><br><br>
+
 
 
 #### <font color=Coral face=Georgia >***4.2.3、算法：***</font>
@@ -687,6 +714,25 @@ $$
 4. 真阴性 $(TN, true negative)$ 正确的否定。又称：正确拒绝 $(correct rejection)$
 5. 伪阳性 $(FP, false positive)$ 错误的肯定，又称：假警报 $(false alarm)$，第一型错误
 6. 伪阴性 $(FN, false negative)$ 错误的否定，又称：未命中 $(miss)$，第二型错误
+
+<br>
+
+- ***优点：***
+  - 提供了关于分类模型在各个类别上的详细分类情况，包括正确分类和错误分类的数量。
+  - 直观易懂，能够清晰地展示模型的分类效果。
+
+<br>
+
+- ***缺点：*** 
+  - 对于多分类问题，混淆矩阵可能会变得非常复杂和庞大，不太容易直观地理解。
+  - 单独的混淆矩阵本身并不能直接给出一个单一的综合评估指标。
+
+<br>
+
+- ***适用情况：***
+  - 当需要详细了解模型在每个类别上的分类表现时，混淆矩阵非常有用。
+  - 在比较不同分类模型或调整模型参数时，可以通过分析混淆矩阵来洞察模型的行为和改进方向。对于不平衡数据集（某些类别样本数量远多于或少于其他类别），混淆矩阵可以帮助发现模型对少数类别的分类效果。
+
 {{% /details %}}
 
 
@@ -700,7 +746,9 @@ $$Accuracy = \frac{(TP + TN)}{(TP + TN + FP + FN)}$$
 - ***优点：***
   - 直观易懂：是一个非常直观和易于理解的指标，能够简单地反映模型整体分类正确的比例。
   - 综合性：综合考虑了所有类别的分类情况。
-<br><br>
+
+<br>
+
 - ***缺点：***
   - 类别不平衡问题：在数据存在类别不平衡（某些类别样本数量远多于或远少于其他类别）时，准确率可能会产生误导。例如，在一个二分类问题中，99%的样本属于类别 A，1%属于类别 B，如果模型总是预测为类别 A，准确率也能达到 99%，但实际上对类别 B 的分类效果很差。
   - 不能区分不同类别的错误情况：无法提供关于每个类别分类错误的具体信息，可能掩盖了某些重要类别上的糟糕表现。
@@ -780,8 +828,7 @@ $$F_1=\frac{2}{\text{recall}^{-1}+\text{precision}^{-1}}=2\frac{\text{precision}
 
 
 
-||||
-||||
+
 
 
 
