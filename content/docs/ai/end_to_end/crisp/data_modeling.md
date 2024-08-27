@@ -37,7 +37,7 @@ math: true
 
 <br>
 
-{{% details title="<font color=Coral size=3>1. ***混淆矩阵***：`sklearn.metrics.confusion_matrix()` ***参数***</font>" closed="true" %}}
+{{% details title="<font color=Coral size=3>1. ***混淆矩阵***：`sklearn.metrics.confusion_matrix()` ***参数 + 案例***</font>" closed="true" %}}
 |*参数*|*解释*|*取值\取值类型*|*默认值*|*是否关联*|*参数类型*|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |***`y_true`***|真实的标签值|一维数组||||
@@ -45,11 +45,10 @@ math: true
 |`labels`|指定要包含在混淆矩阵<br>中的类别标签列表。|列表（标签列表）|||***可选***|
 |`sample_weight`|设置样本的权重|一维数组|||***可选***|
 |`normalize`|控制混淆矩阵是否<br>进行归一化|`None`：不进行归一化，返回原始的计数值<br>`'true'`：按真实值进行归一化<br>`'pred'`：按预测值进行归一化<br>`'all'`：按所有的值进行归一化<br>|`None`||***可选***|
-{{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>***混淆矩阵***：`sklearn.metrics.confusion_matrix()`</font>" closed="true" %}}
-```python
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred)`</font>" closed="true" %}}
+```python 
 from sklearn.metrics import confusion_matrix
 import numpy as np
 
@@ -63,50 +62,119 @@ print(confusion_matrix(y_true, y_pred), '\n')
  [0 0 1]
  [1 0 2]] 
 """
+```
+{{% /details %}}
 
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred, labels=labels)`</font>" closed="true" %}}
+```python
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y_true = np.array([2, 0, 2, 2, 0, 1])
+y_pred = np.array([0, 0, 2, 2, 0, 2])
 
 # Set labels is [0, 2]
 labels = [0, 2]
 print(confusion_matrix(y_true, y_pred, labels=labels), '\n')
+
 """
 [[2 0]
  [1 2]] 
 """
+```
+{{% /details %}}
 
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred, sample_weight=sample_weight)`</font>" closed="true" %}}
+```python
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y_true = np.array([2, 0, 2, 2, 0, 1])
+y_pred = np.array([0, 0, 2, 2, 0, 2])
 
 # Set sample_weight is [0.5, 1, 0.8, 0.6, 0.7, 0.9]
 sample_weight = np.array([0.5, 1, 0.8, 0.6, 0.7, 0.9])
 print(confusion_matrix(y_true, y_pred, sample_weight=sample_weight), '\n')
+
 """
 [[1.7 0.  0. ]
  [0.  0.  0.9]
  [0.5 0.  1.4]] 
 """
+```
+{{% /details %}}
 
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred, normalize=None)`</font>" closed="true" %}}
+```python
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y_true = np.array([2, 0, 2, 2, 0, 1])
+y_pred = np.array([0, 0, 2, 2, 0, 2])
 
 # Set normalize
 print(confusion_matrix(y_true, y_pred, normalize=None), '\n')
+
 """
 [[2 0 0]
  [0 0 1]
  [1 0 2]] 
 """
+```
+{{% /details %}}
+
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred, normalize='true')`</font>" closed="true" %}}
+```python
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y_true = np.array([2, 0, 2, 2, 0, 1])
+y_pred = np.array([0, 0, 2, 2, 0, 2])
 
 print(confusion_matrix(y_true, y_pred, normalize='true'), '\n')
+
 """
 [[1.         0.         0.        ]
  [0.         0.         1.        ]
  [0.33333333 0.         0.66666667]] 
 """
+```
+{{% /details %}}
+
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred, normalize='pred')`</font>" closed="true" %}}
+```python
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y_true = np.array([2, 0, 2, 2, 0, 1])
+y_pred = np.array([0, 0, 2, 2, 0, 2])
 
 print(confusion_matrix(y_true, y_pred, normalize='pred'), '\n')
+
 """
 [[0.66666667 0.         0.        ]
  [0.         0.         0.33333333]
  [0.33333333 0.         0.66666667]] 
 """
+```
+{{% /details %}}
+
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.confusion_matrix(y_true, y_pred, normalize='all')`</font>" closed="true" %}}
+```python
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y_true = np.array([2, 0, 2, 2, 0, 1])
+y_pred = np.array([0, 0, 2, 2, 0, 2])
 
 print(confusion_matrix(y_true, y_pred, normalize='all'), '\n')
+
 """
 [[0.33333333 0.         0.        ]
  [0.         0.         0.16666667]
@@ -116,8 +184,8 @@ print(confusion_matrix(y_true, y_pred, normalize='all'), '\n')
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>***混淆矩阵***：`mypackage.Model.metrics_con_matrix()`</font>" closed="true" %}}
-```python
+{{% details title="<font color=DarkCyan size=3>`mypackage.Model.metrics_con_matrix()`</font>" closed="true" %}}
+```python {filename="mypackage.Model.metrics_con_matrix()"}
 import warnings
 warnings.filterwarnings("ignore") # Prohibit displaying unnecessary warnings
 
@@ -158,18 +226,22 @@ Estimate_confusion_matrix(
 ```
 {{% /details %}}
 
+{{% /details %}}
 
-{{% details title="<font color=Coral size=3>2. ***准确率***：`sklearn.metrics.accuracy_score()` ***参数***</font>" closed="true" %}}
+
+
+
+
+{{% details title="<font color=Coral size=3>2. ***准确率***：`sklearn.metrics.accuracy_score()` ***参数 + 案例***</font>" closed="true" %}}
 |*参数*|*解释*|*取值\取值类型*|*默认值*|*是否关联*|*参数类型*|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |***`y_true`***|真实的标签值|||||
 |***`y_pred`***|预测的标签值|||||
 |`normalize`|设置输出正确比例、样本数|布尔值<br>`True`：返回比例；<br>`False`：返回样本数；|`True`||***可选***|
 |`sample_weight`|设置样本的权重|根据具体的业务需求和数据特点来设置取值|||***可选***|
-{{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>***准确率***：`sklearn.metrics.accuracy_score()` ***案例***</font>" closed="true" %}}
+{{% details title="<font color=Gray size=3>`sklearn.metrics.accuracy_score(y_true, y_pred)`</font>" closed="true" %}}
 ```python
 from sklearn.metrics import accuracy_score
 
@@ -178,26 +250,70 @@ y_pred = [0, 1, 1, 0, 0, 2]
 
 print(accuracy_score(y_true, y_pred))
 print(accuracy_score(y_true, y_pred, normalize=True))
+"""
+0.6666666666666666
+0.6666666666666666
+"""
+```
+{{% /details %}}
+
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.accuracy_score(y_true, y_pred, normalize=False)`</font>" closed="true" %}}
+```python
+from sklearn.metrics import accuracy_score
+
+y_true = [0, 1, 2, 0, 1, 2]
+y_pred = [0, 1, 1, 0, 0, 2]
 
 # Set normalize is False
 print(accuracy_score(y_true, y_pred, normalize=False))
+
+"""
+4.0
+"""
+```
+{{% /details %}}
+
+
+{{% details title="<font color=Gray size=3>`sklearn.metrics.accuracy_score(y_true, y_pred, sample_weight=sample_weight)`</font>" closed="true" %}}
+```python
+from sklearn.metrics import accuracy_score
+
+y_true = [0, 1, 2, 0, 1, 2]
+y_pred = [0, 1, 1, 0, 0, 2]
 
 # Set sample_weight is [0.5, 1, 0.8, 0.6, 0.9, 0.7]
 sample_weight = [0.5, 1, 0.8, 0.6, 0.9, 0.7]
 print(accuracy_score(y_true, y_pred, sample_weight=sample_weight))
 
 """
-0.6666666666666666
-0.6666666666666666
-4.0
 0.6222222222222222
 """
 ```
 {{% /details %}}
 
+{{% /details %}}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br><br>
+
+
+
+
+
+
 
 
 
