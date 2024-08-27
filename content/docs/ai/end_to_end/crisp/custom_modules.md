@@ -879,4 +879,66 @@ def corr_heatmap(df):
 
 
 
+## 4、Model.py
+
+### 4.1、metrics_con_matrix()
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+from matplotlib.colors import LinearSegmentedColormap
+
+def metrics_con_matrix(real_label, prediction_label, size = 3, serif='FangSong', cmap_color = ['#F5F5F5', 'DimGrey'], rgb_color = (237/255, 243/255, 238/255)):
+    # real_label = real_label
+    # prediction_label = prediction_label
+    # serif = 'FangSong' # \'SimHei'\'FangSong'\'Georgia'
+    # cmap_color = ['#FFFFFF', 'DimGrey'] # '#FFFFFF', 'DimGray'
+    # rgb_color = (237/255, 243/255, 238/255)  # 将每个值除以 255 进行归一化
+
+    # import numpy as np
+    # import matplotlib.pyplot as plt
+    # from sklearn.metrics import confusion_matrix
+
+    plt.rcParams['font.sans-serif']=[serif]    # 替换sans-serif字体，正常显示中文(黑体)\'SimHei'\'FangSong'\'Georgia'
+    plt.rcParams["font.weight"] = "bold"      # 字体加粗
+    plt.rcParams['axes.unicode_minus'] = False # 坐标显示负号
+
+    #from matplotlib.colors import LinearSegmentedColormap
+    cmap = LinearSegmentedColormap.from_list('chaos',cmap_color)
+
+
+    con_matrix = confusion_matrix(real_label, prediction_label)
+    
+    fig, ax = plt.subplots(figsize=(3.5+size,3+size))
+    ax.set_facecolor(rgb_color) # 设置坐标轴的背景颜色
+    fig.patch.set_facecolor(rgb_color) # 设置整个图形的背景颜色
+
+    im = ax.imshow(con_matrix, interpolation='nearest', cmap=cmap) # cmap=plt.cm.Blues
+    cbar = fig.colorbar(im, shrink=0.7)  # shrink 参数控制大小，0.5 表示缩小为原来的一半
+
+    ax.set_title('Confusion Matrix')  # 设置标题
+    ax.set_xlabel('Prediction Label') # 设置 x 轴标签
+    ax.set_ylabel('Real Label') # 设置 y 轴标签
+
+    ax.set_xticks(range(len(np.unique(real_label))), np.unique(real_label))
+    ax.set_yticks(range(len(np.unique(real_label))), np.unique(real_label))
+
+    for i in range(con_matrix.shape[0]):
+        for j in range(con_matrix.shape[1]):
+            ax.text(j, i, str(con_matrix[i, j]), horizontalalignment="center", color="white" if con_matrix[i, j] > con_matrix.max() / 2 or con_matrix[i, j]==0  else "black")
+
+    plt.show()
+```
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
 
