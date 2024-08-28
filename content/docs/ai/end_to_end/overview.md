@@ -480,57 +480,98 @@ $$\mathcal{F}={P\mid P(Y|X)}$$
 
 #### <font color=Coral face=Georgia >***4.2.2、策略：***</font>
 
-***策略就是从模型的假设空间中，选择最优模型。***
+***策略就是从模型的假设空间中，选择损失函数值最小的模型。***
 使用损失函数`(loss function)` 或 代价函数`(cost function)` 来衡量模型预测的错误程度。
 损失函数值越小，模型越好。
 
 <br>
 
-***<font color=Coral face=Georgia >1. 损失函数：`(loss function)`：***</font>
+{{% details title="<font color=DarkCyan face=Georgia size=3>***1. 损失函数：`(loss function)`：***</font>" closed="true" %}}
 - 损失函数是 $f(X)$ 和 $Y$ 的非负实值函数，记作 $L(Y,f(X))$。
 - 常见的损失函数如下：
 
-> ***<font color=DarkCyan face=Georgia >(1). 0-1 损失函数 `（0-1 loss function）`：***</font>
+> ***<font color=DarkCyan face=Georgia size=3>(1). 0-1 损失函数 `（0-1 loss function）`：***</font>
 > $$\small L(Y,f(X))=\begin{cases}1,&Y\neq f(X)\\\ 0,&Y=f(X)\end{cases} \tag{1}$$
 
 
-> ***<font color=DarkCyan face=Georgia >(2). 平方损失函数 `（quadratic loss function）`：***</font>
+> ***<font color=DarkCyan face=Georgia size=3>(2). 平方损失函数 `（quadratic loss function）`：***</font>
 > $$\small L(Y,f(X))=(Y-f(X))^{2} \tag{2}$$
 
 
-> ***<font color=DarkCyan face=Georgia >(3). 绝对损失函数 `（absolute loss function）`：***</font>
+> ***<font color=DarkCyan face=Georgia size=3>(3). 绝对损失函数 `（absolute loss function）`：***</font>
 > $$\small L(Y,f(X))=|Y-f(X)| \tag{3}$$
 
 
-> ***<font color=DarkCyan face=Georgia >(4). 对数损失函数 `（logarithmic loss function）`：***</font>
+> ***<font color=DarkCyan face=Georgia size=3>(4). 对数损失函数 `（logarithmic loss function）`：***</font>
 > $$L(Y,P(Y|X))=-\log P(Y|X) \tag{4}$$
 > - 其中：$P(Y|X)$ 是条件概率分布，$-\log P(Y|X)$ 是对数似然函数。
+{{% /details %}}
 
 
-<br><br>
 
-
-***<font color=Coral face=Georgia >2. 风险函数：`(risk function)`：***</font>
+{{% details title="<font color=DarkCyan face=Georgia size=3>***2. 风险函数：`(risk function)`：***</font>" closed="true" %}}
 - 由于模型的输入、输出 $（X, Y）$ 是随机变量，遵循联合分布 $P(X, Y)$，所以损失函数的期望 $\small R_{\exp}$ 如下；这是理论上模型 $f(X)$ 关于联合分布 $P(X, Y)$ 的平均损失，称为 ***<font color=DarkCyan face=Georgia >风险函数***</font> `(risk function)` 或 ***<font color=DarkCyan face=Georgia >期望损失</font>*** `(expected loss)`。
 $$\small R_{\exp}(f)=E_{P}[L(Y,f(X))]=\int_{x\times y}L(y,f(x))P(x,y)\mathrm{d}x\mathrm{d}y$$
 - 由于联合分布 $P(X,Y)$ 未知，所以无法直接计算期望风险 $\small R_{\exp}(f)$。
 - ***学习的目标（策略）就是选择期望风险最小的模型。*** 
+{{% /details %}}
 
 
-<br><br>
 
-
-***<font color=Coral face=Georgia >3. 经验风险：`(empirical risk)`：***</font>
+{{% details title="<font color=DarkCyan face=Georgia size=3>***3. 经验风险：`(empirical risk)`：***</font>" closed="true" %}}
 - 给定一个训练数据集 $T=\{(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{N},y_{N})\}$，模型 $f(X)$ 在训练数据集上的平均损失称为 ***<font color=DarkCyan face=Georgia >经验风险\损失</font>***，记作$\small R_{emp}(f)$： 
 $$R_{\mathrm{emp}}(f)=\frac{1}{N}\sum_{i=l}^{N}L(y_{i},f(x_{i}))$$
 
+- 根据大数定律，当样本数 $N$ 足够大时，经验风险 $\small R_{emp}(f)$ 收敛于期望风险 $\small R_{\exp}(f)$。所以能用经验风险估计期望风险。
+- 由于现实中训练样本数目有限，甚至很小，所以用经验风险估计期望风险常常并不理想，要对经验风险进行一定的矫正。这就关系到监督学习的两个基本策略:<font color=Coral face=Georgia size=3>***经验风险最小化***</font> 和 <font color=Coral face=Georgia size=3>***结构风险最小化***</font>。
+  
 {{< callout type="info" emoji=❓ >}}
 ***大数定理*** 是概率论中一系列定理的统称，最常见的表述为：
 随着样本数量的增加，样本均值会趋近于总体均值。更严格地说，如果 $X_1, X_2, ... , X_n$ 是一系列独立同分布的随机变量，且它们的期望为 $\mu$，方差为 $\sigma^2$，那么当 $n$ 趋向于无穷大时，样本均值 ${\overline{X}}={\frac{1}{n}}\sum_{i=1}^{n}X_{i}$ 依概率收敛于 $\mu$，即对于任意正数 $\epsilon$ ，有： $$\lim_{n\to\infty}P\left(\left|\overline{X}-\mu\right|<\epsilon\right)=1$$ 
 简单来说，大数定理表明在大量重复试验中，事件发生的频率会趋近于其概率。它是概率论和统计学中非常重要的基础性定理，为用样本估计总体提供了理论依据。
 {{< /callout >}}
+{{% /details %}}
 
 
+
+
+{{% details title="<font color=Coral face=Georgia size=3>***4. 经验风险最小化 `(empirical risk minimization，ERM)`***</font>" closed="true" %}}
+- 在假设空间、损失函数以及训练数据集确定的情况下，经验风险函数就可以确定。 经验风险最小化 `(empirical risk minimization，ERM)` 的策略认为，***经验风险最小的模型是最优的模型***。根据这一策略，按照经验风险最小化求最优模型就是 ***求解最优化问题：***
+$$\min_{f\in\mathcal{F}}\frac{1}{N}\sum_{i=1}^NL(y_i,f(x_i))$$
+其中，$\mathcal{F}$ 是假设空间。
+
+- 当样本容量足够大时，经验风险最小化能保证有很好的学习效果，在现实中被广泛采用。
+> 比如，***极大似然估计*** `(maximumlikelihood estimation)` 就是经验风险最小化的一个例子。当模型是条件概率分布、损失函数是对数损失函数时，经验风险最小化就等价于极大似然估计。
+- 当样本容量很小时，经验风险最小化学习的效果就未必很好，会产生“过拟合”`(over-ftting)` 现象。
+{{% /details %}}
+
+
+
+{{% details title="<font color=Coral face=Georgia size=3>***5. 结构风险最小化 `(structural risk minimization，SRM)`***</font>" closed="true" %}}
+- 结构风险最小化 `(structural risk minimization，SRM)` 是为了防止过拟合而提出来的策略。结构风险最小化等价于正则化 `(regularization)`。结构风险在经验风险上加上表示模型复杂度的正则化项 `(regularizer)` 或罚项 `(penaltyterm)`。
+
+<br>
+
+- 在假设空间、损失函数以及训练数据集确定的情况下， ***结构风险的定义*** 是:
+$$R_{\mathrm{srm}}(f)=\frac1N\sum_{i=1}^NL(y_i,f(x_i))+\lambda J(f)$$
+其中 $J(f)$ 为模型的复杂度，是定义在假设空间 $\mathcal{F}$ 下上的泛函。
+模型 $f$ 越复杂，复杂度 $J(f)$ 就越大;反之，模型 $f$ 越简单，复杂度 $J(f)$ 就越小。
+也就是说，复杂度表示了对复杂模型的惩罚。$\lambda≥0$ 是系数,用以权衡经验风险和模型复杂度。
+
+<br>
+
+- 结构风险小需要经验风险与模型复杂度同时小。结构风险小的模型往往对训练数据以及未知的测试数据都有较好的预测。
+> 比如，贝叶斯估计中的最大后验概率估计 `(maximum posterior probability esti-mation，MAP)` 就是结构风险最小化的一个例子。当模型是条件概率分布、损失函数是对数损失函数、模型复杂度由模型的先验概率表示时，结构风险最小化就等价于最大后验概率估计。
+
+<br>
+
+- 结构风险最小化的策略认为结构风险最小的模型是最优的模型。所以求最优模型，就是求解最优化问题:
+$$\min_{f\in\mathcal{F}}\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i))+\lambda J(f)$$
+
+<br>
+
+- 这样，监督学习问题就变成了 ***经验风险*** 或 ***结构风险函数*** 的最优化问题。这时 ***经验或结构风险函数*** 是最优化的目标函数。
+{{% /details %}}
 
 
 
@@ -540,7 +581,11 @@ $$R_{\mathrm{emp}}(f)=\frac{1}{N}\sum_{i=l}^{N}L(y_{i},f(x_{i}))$$
 
 #### <font color=Coral face=Georgia >***4.2.3、算法：***</font>
 
+算法是指学习模型的具体计算方法。统计学习基于训练数据集，根据学习策略，从假设空间中选择最优模型，最后需要考虑用什么样的计算方法求解最优模型。
 
+这时，统计学习问题归结为最优化问题，统计学习的算法成为求解最优化问题的算法。如果最优化问题有显式的解析解，这个最优化问题就比较简单。但通常解析解不存在，这就需要用数值计算的方法求解。如何保证找到全局最优解，并使求解的过程非常高效，就成为一个重要问题。统计学习可以利用已有的最优化算法，有时也需要开发独自的最优化算法。
+
+统计学习方法之间的不同，主要来自其模型、策略、算法的不同。确定了模型、策略、算法，统计学习的方法也就确定了。这就是将其称为统计学习方法三要素的原因。
 
 
 <br><br><br>
@@ -670,7 +715,7 @@ $$R_{\mathrm{emp}}(f)=\frac{1}{N}\sum_{i=l}^{N}L(y_{i},f(x_{i}))$$
 
 ### <font face=Georgia>5.4、评估指标</font>
 
-#### <font face=Georgia>5.4.1、二分类评估指标</font>
+#### <font face=Georgia>5.4.1、分类评估指标</font>
 
 {{% details title="<font color=DarkCyan face=Georgia size=3>*1、混淆矩阵：*</font>" closed="true" %}}
 <div style="text-align:center">
@@ -844,7 +889,7 @@ $$F_1=\frac{2}{\text{recall}^{-1}+\text{precision}^{-1}}=2\frac{\text{precision}
 
 
 
-#### <font face=Georgia>5.4.2、多分类评估指标</font>
+#### <font face=Georgia>5.4.2、多标签分类评估</font>
 
 
 
@@ -914,7 +959,6 @@ $$F_1=\frac{2}{\text{recall}^{-1}+\text{precision}^{-1}}=2\frac{\text{precision}
 
 
 <br><br><br>
-
 
 
 
