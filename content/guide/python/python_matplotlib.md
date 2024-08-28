@@ -9,11 +9,53 @@ toc: true
 math: true
 ---
 
-## 1. Matplotlib 
+<br>
 
-### 1.1. Coding styles
+## 0. 速查表
 
-#### 1.1.1. the OO-style
+|*对象*|*设置*|*方法*|***`OO-style`***|***`pyplot-style`***|
+|:---:|:---:|:---:|:---|:---|
+|创建|`Figure`|_|`fig = plt.figure(figsize=(3,3))`      |`plt.figure(figsize=(3,3))`   |
+|创建|`Axes`  |_|`fig, ax = plt.subplots(figsize=(3,3))`|`plt.plot()`                  |
+|<br><br>||||
+|标题|内容|_|`ax.set_title('Title')`                   |`plt.title('Title')`          |
+|标题|格式|参数|`ax.set_title('Title', loc='left', font='Georgia', size=12, color='gray', weight='bold')`|`plt.title('Title', loc='left', font='Georgia', size=12, color='gray', weight='bold')`|
+|标题|格式|参数字典|`format_dir = {'fontproperties': 'Georgia', 'fontsize': 15, 'color': 'Gray', 'fontweight': 'bold'}`<br><br>`ax.set_title('Title', loc='left', **format_dir)`|`format_dir = {'fontproperties': 'Georgia', 'fontsize': 15, 'color': 'Gray', 'fontweight': 'bold'}`<br><br>`plt.title('Title', loc='left', **format_dir)`|
+|标题|位置|简单设置|`ax.set_title('Title', loc='left')` <br> <font color=Gray size=2> \<loc>: 'left','center','right'</font>|`plt.title("Title", loc='left')` <br> <font color=Gray size=2> \<loc>: 'left','center','right'</font>|
+|<br><br>||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+
+
+
+<br><br><br><br><br>
+
+|***设置类容***|***`OO-style`***|***`pyplot-style`***|
+|:---:|:---|:---|
+|***关闭*** 坐标轴|`ax.axis('off')`<font color=Gray size=2># 关闭所有坐标轴</font> <br> `ax.spines['top'].set_visible(False)`|`plt.axis('off')` <font color=Gray size=2># 关闭所有坐标轴</font> <br> `plt.gca().spines['top'].set_visible(False)`|
+|坐标轴 ***颜色***|`ax..spines['bottom'].set_color('red')`|`plt.gca().spines['bottom'].set_color('red')`|
+|坐标轴 ***粗细***|`ax.spines['left'].set_linewidth(0.5)`|`plt.gca().spines['left'].set_linewidth(0.5)`|
+|坐标轴 ***位置 1***<br> 单个参数|`ax.spines["right"].set_position()`<br><font color=Gray size=2># </font>|``|
+|坐标轴 ***位置 1***|`ax.spines["right"].set_position(("outward", 5))`<br><font color=Gray size=2># "inward"：向内，"outward"：向外</font>|`plt.gca().spines["right"].set_position(("outward", 5))` <br><font color=Gray size=2># "inward"：向内，"outward"：向外</font>|
+||``|``|
+
+<br><br><br>
+
+
+## 1. 概述
+
+### 1.1. 编码风格
+
+#### (1). the OO-style
 
 ```python
 import numpy as np
@@ -39,7 +81,7 @@ plt.show() # Show the figure.
 
 <br><br>
 
-#### 1.1.2. pyplot-style
+#### (2). pyplot-style
 
 ```python
 import numpy as np
@@ -69,9 +111,9 @@ plt.show() # Show the figure.
 
 
 
-### 1.2. Parts of a Figure
+### 1.2. 图形结构
 
-#### 1.2.1. Figure
+#### (1). Figure
 
 {{< callout emoji=📝 type='default' >}}
 - ***`Figure`*** 是整个窗体，你可以把它想象成一个画板，我们在其上面创建图形进，这是最为外层的对象。
@@ -115,7 +157,7 @@ plt.show()
 <br><br>
 
 
-#### 1.2.2. Axes
+#### (2). Axes
 
 {{< callout emoji=📝 type='default' >}}
 - ***`Axes`*** （子图）对象，是实际进行绘图操作的区域，包含坐标轴、数据点、线条、图例等元素。
@@ -129,7 +171,7 @@ plt.show()
 import matplotlib.pyplot as plt 
 
 # Create a figure with a single Axes
-fig, ax = plt.subplots(figsize=(5, 2.7))      
+fig, ax = plt.subplots(figsize=(3.5, 3))      
 
 plt.show()
 ```
@@ -141,7 +183,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Create a figure
-plt.figure(figsize=(3.5, 3), layout='constrained')
+plt.figure(figsize=(3.5, 3))
 
 # Create a single Axes
 plt.plot() 
@@ -156,7 +198,7 @@ plt.show()
 <br><br>
 
 
-#### 1.2.3. Axis 
+#### (3). Axis 
 
 {{< callout emoji=📝 type='default' >}}
 - ***`Axis`*** （轴）对象，用于控制图形中的刻度、刻度标签和网格线。
@@ -170,7 +212,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Create a figure containing a single Axes.
-fig, ax = plt.subplots(figsize=(5, 2.7))             
+fig, ax = plt.subplots(figsize=(3.5, 3))             
 
 # Plot some data on the Axes.
 ax.plot([1, 2, 3, 4], [1, 4, 2, 3])  
@@ -193,8 +235,147 @@ plt.show()
 
   {{< tab >}}
 ```python
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(3.5, 3))             
+
+plt.plot([1, 2, 3, 4], [1, 4, 2, 3])  
+
+# Create label formatting dictionary
+label_format = {'fontproperties': 'Georgia', 'fontsize': 10, 'color': 'Gray', 'fontweight': 'bold'}
+
+plt.title('This is Title', **label_format, size=15)
+
+plt.xlabel('X Axis Title Here', **label_format)
+plt.ylabel('Y Axis Title Here', **label_format)
+
+plt.show() 
 ```
 > 输出结果如下：
+  {{< /tab >}}
+{{< /tabs >}}
+
+
+<br><br><br>
+
+
+
+## 2. 颜色
+
+
+<br><br><br>
+
+
+## 3. 文本
+
+
+<br><br><br>
+
+
+
+## 4. Figure 图形设置
+
+
+
+## 5. Axes 子图细节设置
+
+### 5.1. 标题：
+
+{{< tabs items="1️⃣ OO-style 位置, 2️⃣ OO-style 格式参数, 3️⃣ OO-style 格式字典, 4️⃣ pyplot-style 位置, 5️⃣ pyplot-style 格式参数, 6️⃣ pyplot-style 格式字典" >}}
+  {{< tab >}}
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(3,3))
+
+ax.plot([1, 2, 3, 4], [8, 4, 2, 3])
+
+ax.set_title('Title', loc='left')
+
+plt.show()                    
+```
+  {{< /tab >}}
+
+  {{< tab >}}
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(3,3))
+
+ax.plot([1, 2, 3, 4], [8, 4, 2, 3])
+
+# Set title
+ax.set_title('This is Title', loc='left', font='Georgia', size=12, color='gray', weight='bold')
+
+plt.show()
+```
+  {{< /tab >}}
+
+  {{< tab >}}
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(3,3))
+
+ax.plot([1, 2, 3, 4], [8, 4, 2, 3])
+
+# Create label formatting dictionary
+format_dir = {'fontproperties': 'Georgia', 'fontsize': 15, 'color': 'Gray', 'fontweight': 'bold'}
+
+# Set title
+ax.set_title('This is Title', loc='left', **format_dir)
+
+plt.show()              
+```
+  {{< /tab >}}
+
+  {{< tab >}}
+```python
+import matplotlib.pyplot as plt
+
+# Create a figure
+plt.figure(figsize=(3, 3))
+
+# Create a single Axes
+plt.plot([1, 2, 3, 4], [8, 4, 2, 3])
+
+plt.title("Title", loc='left')  # 将标题设置在左侧
+
+plt.show()
+```
+  {{< /tab >}}
+
+  {{< tab >}}
+```python
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(3,3))
+
+plt.plot([1, 2, 3, 4], [8, 4, 2, 3])
+
+# Set title
+plt.title('Title', loc='left', font='Georgia', size=12, color='gray', weight='bold')
+
+plt.show()                 
+```
+  {{< /tab >}}
+
+  {{< tab >}}
+```python
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(3, 3))
+
+plt.plot([1, 2, 3, 4], [8, 4, 2, 3])
+
+# Create label formatting dictionary
+format_dir = {'fontproperties': 'Georgia', 'fontsize': 15, 'color': 'Gray', 'fontweight': 'bold'}
+
+# Set title
+plt.title('Title', loc='left', **format_dir)
+
+plt.show()
+```
   {{< /tab >}}
 {{< /tabs >}}
 
@@ -202,7 +383,33 @@ plt.show()
 <br><br>
 
 
+### 5.2. 坐标轴：
 
+{{< tabs items="OO-style,pyplot-style" >}}
+  {{< tab >}}
+```python
+                         
+```
+> 输出结果如下：
+  {{< /tab >}}
+
+  {{< tab >}}
+```python
+ 
+```
+> 输出结果如下：
+  {{< /tab >}}
+{{< /tabs >}}
+
+
+
+<br><br><br>
+
+
+
+## 6. 多子图绘制
+
+### 6.1. 
 
 
 
