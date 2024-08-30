@@ -6,10 +6,10 @@ layout: hextra-home
 ## <font face=Georgia>1、数学基础</font>
 
 {{< cards >}}
-  {{< card link="math_calculus" title="微积分"  subtitle="......<br>......" icon="package" >}}
-  {{< card link="math_linear_algebra" title="线性代数"  subtitle="......" icon="package" >}}
-  {{< card link="math_probability_theory" title="概率论"  subtitle="......" icon="package" >}}
-  {{< card link="math_mathematical_statistics" title="数理统计" subtitle="......" icon="package" >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="......<br>......" icon="calculus" >}}
+  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="......" icon="matrix" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="......" icon="probability" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="......" icon="statistics" >}}
 {{< /cards >}}
 
 <br><br><br>
@@ -70,7 +70,7 @@ layout: hextra-home
 
 {{< cards >}}
   {{< card link="python/python_streamlit" title="Streamlit" subtitle="一个开源 Python 框架；快速构建和部署强大的数据应用程序。" icon="streamlit" >}}
-  {{< card link="python/python_streamlit" title="Flask" subtitle="..." icon="package" >}}
+  {{< card link="python/python_streamlit" title="Flask" subtitle="..." icon="flask" >}}
 {{< /cards >}}
 
 <br><br>
