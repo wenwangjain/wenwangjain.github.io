@@ -71,6 +71,7 @@ layout: hextra-home
 {{< cards >}}
   {{< card link="python/python_streamlit" title="Streamlit" subtitle="一个开源 Python 框架；快速构建和部署强大的数据应用程序。" icon="streamlit" >}}
   {{< card link="python/python_streamlit" title="Flask" subtitle="..." icon="flask" >}}
+  {{< card link="bd_airflow" title="Airflow" subtitle="一个由社区创建的平台，用于以编程方式编写、安排和监控工作流程。" icon="airflow" >}}
 {{< /cards >}}
 
 <br><br>
@@ -144,17 +145,29 @@ layout: hextra-home
 ## <font face=Georgia>7、大数据</font>
 
 {{< cards >}}
+  {{< card link="bd_kafka" title="kafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}
+  {{< card link="bd_flume" title="Flume" subtitle="一种分布式、可靠且可用的服务，用于高效收集、聚合和移动大量日志数据。" icon="apache" >}}
+  {{< card link="bd_flink_cdc" title="Flink CDC" subtitle="一个基于流的数据集成工具，旨在为用户提供一套功能更加全面的编程接口（API）。" icon="flink" >}}
+  {{< card link="bd_flink" title="Flink" subtitle="一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。" icon="flink" >}}
+  {{< card link="bd_airflow" title="Airflow" subtitle="一个由社区创建的平台，用于以编程方式编写、安排和监控工作流程。" icon="airflow" >}}
+  {{< card link="bd_DolphinScheduler" title="DolphinScheduler" subtitle="一个多元化、可扩展的开源工作流协调平台，具有强大的DAG可视化界面。" icon="apache" >}}
+  {{< card link="bd_datahub" title="Datahub" subtitle="一个可扩展的数据目录，它支持数据发现、数据可观察性和联合治理，以帮助控制数据生态系统的复杂性。" icon="package" >}}
+  {{< card link="bd_OpenMetadata" title="OpenMetadata" subtitle="一个统一的元数据平台，用于数据发现、数据可观测性和数据治理，由中央元数据存储库、深入的列级沿袭和无缝团队协作提供支持。" icon="package" >}}
+{{< /cards >}}
+
+<br>
+
+{{< cards >}}
   {{< card link="bd_hadoop" title="Hadoop" subtitle="一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。" icon="hadoop" >}}
   {{< card link="bd_hive" title="Hive" subtitle="Apache Hive 是一个分布式、容错数据仓库系统，可实现大规模分析。" icon="hive" >}}
   {{< card link="bd_spark" title="Spark" subtitle="一个多语言引擎，用于在单节点机器或集群上执行数据工程、数据科学和机器学习。" icon="spark" >}}
-  {{< card link="bd_flink" title="Flink" subtitle="一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。" icon="flink" >}}
-  {{< card link="bd_kafka" title="Fafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}
 {{< /cards >}}
 
 
-
-
 <br><br><br>
+
+
+
 
 
 
