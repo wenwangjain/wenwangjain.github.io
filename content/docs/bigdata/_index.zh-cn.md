@@ -74,7 +74,7 @@ toc: true
 
 {{< cards >}}
   {{< card link="/guide/bd_airflow" title="Airflow" subtitle="一个由社区创建的平台，用于以编程方式编写、安排和监控工作流程。" icon="airflow" >}}
-  {{< card link="/guide/bd_DS" title="DolphinScheduler" subtitle="一个多元化、可扩展的开源工作流协调平台，具有强大的DAG可视化界面。" icon="apache" >}}
+  {{< card link="/guide/bd_DolphinScheduler" title="DolphinScheduler" subtitle="一个多元化、可扩展的开源工作流协调平台，具有强大的DAG可视化界面。" icon="apache" >}}
 {{< /cards >}}
 
 <br>
@@ -102,7 +102,7 @@ toc: true
 
 {{< cards >}}
   {{< card link="/guide/bd_datahub" title="Datahub" subtitle="一个可扩展的数据目录，它支持数据发现、数据可观察性和联合治理，以帮助控制数据生态系统的复杂性。" icon="package" >}}
-  {{< card link="/guide/bd_OM" title="OpenMetadata" subtitle="一个统一的元数据平台，用于数据发现、数据可观测性和数据治理，由中央元数据存储库、深入的列级沿袭和无缝团队协作提供支持。" icon="package" >}}
+  {{< card link="/guide/bd_OpenMetadata" title="OpenMetadata" subtitle="一个统一的元数据平台，用于数据发现、数据可观测性和数据治理，由中央元数据存储库、深入的列级沿袭和无缝团队协作提供支持。" icon="package" >}}
 {{< /cards >}}
 
 <br>
