@@ -9,21 +9,126 @@ toc: true
 
 <br>
 
-<div style="display: flex; justify-content: center; width: 100%;">
+## 1、基础内容
 
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="/guide/bd_hadoop" title="Hadoop" subtitle="一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。" icon="hadoop" >}}<br>
-{{< card link="bd_kafka" title="Fafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}<br>
-</div>
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="/guide/bd_hive" title="Hive" subtitle="Apache Hive 是一个分布式、容错数据仓库系统，可实现大规模分析。" icon="hive" >}}<br>
-</div>
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="/guide/bd_spark" title="Spark" subtitle="一个多语言引擎，用于在单节点机器或集群上执行数据工程、数据科学和机器学习。" icon="spark" >}}<br>
-</div>
-<div style="flex: 20%; padding: 10px; box-sizing: border-box; text-align: left;">
-{{< card link="/guide/bd_flink" title="Flink" subtitle="一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。" icon="flink" >}}<br>
+{{< cards >}}
+  {{< card link="/guide/java" title="Java" subtitle="由 Sun 公司于 1995 年 5 月推出的高级程序设计语言。" icon="java" >}}
+  {{< card link="/guide/software_linux" title="Linux" subtitle="Linux 是一种自由和开放源码的类 UNIX 操作系统。" icon="linux" >}}
+  {{< card link="database_mysql" title="MySQL" subtitle="MySQL 是一个流行的关系型数据库管理系统。" icon="mysql" >}}
+{{< /cards >}}
+
+
+<br><br>
+
+
+## 2、数据传输\ETL
+
+{{< cards >}}
+  {{< card link="/guide/bd_kafka" title="Fafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}
+  {{< card link="/guide/bd_flume" title="Flume" subtitle="一种分布式、可靠且可用的服务，用于高效收集、聚合和移动大量日志数据。" icon="apache" >}}
+  {{< card link="/guide/bd_flink_cdc" title="Flink CDC" subtitle="一个基于流的数据集成工具，旨在为用户提供一套功能更加全面的编程接口（API）。" icon="flink" >}}
+{{< /cards >}}
+
+<br>
+
+<div style="font-size: 14px; color: Gray; border-left=0; border-right=0">
+  <table>
+
+|*工具*|*优点*|*缺点*|*适用情况*|*维护方*|
+|:-:|:-|:-|:-|:-:|
+|`Kettle`|1. 功能强大，支持多种数据源和数据转换操作；2. 具有可视化界面，易于设计和调试 ETL 流程；3. 开源免费，社区活跃，有丰富的文档和插件资源；|1. 对于大规模数据处理性能可能有限；2. 复杂的转换可能导致流程难以维护和理解；|***在很多企业的数据集成项目中被广泛使用；***|Pentaho（后被Hitachi Vantara收购），同时也有活跃的开源社区共同维护|
+|`Sqoop`|1. 与 Hadoop 生态系统紧密集成，适用于大规模数据从关系型数据库导入到Hadoop平台；2. 支持全量和增量数据抽取；|1. 配置相对复杂，对非Hadoop生态的数据源支持有限；2. 随着技术发展，更新相对缓慢；|在早期的大数据项目中广泛使用，随着新工具的出现，使用逐渐减少；|Apache|
+|***`DataX`***|1. 开源免费，支持多种数据源之间的数据同步，扩展性强；2. 配置相对简单，容易上手；3. 性能较好，可以满足大规模数据同步需求|对复杂数据转换的支持相对较弱；|***在国内很多企业中得到广泛应用；***|阿里巴巴|
+|<font color=Coral face=Georgia  >**`Flume`**</font>|1. 开源免费，适用于日志数据收集等场景，具有高可靠性和可扩展性；2. 支持多种数据源和数据输出方式；|配置较为复杂，对于非日志类数据的处理相对不那么灵活；|在大数据<font color=Coral face=Georgia  >***日志收集***</font>场景中非常广泛；|Apache|
+|`Canal`|1. 开源免费，用于 MySQL 数据库的增量数据同步，功能针对性强；2. 性能较好，稳定性高；|主要针对 MySQL，对其他数据库的支持有限；|在涉及 ***MySQL 数据同步***的场景中有较多应用；|阿里巴巴|
+|`Maxwell`|1. 开源免费，轻量级，易于部署和使用；2. 支持 MySQL 数据库的增量数据同步；|功能相对较为简单，对于复杂场景的支持有限；|在一些 ***中小规模的项目***中有一定应用；|不确定具体公司，但有开源社区维护|
+|`StreamSets`|1. 具有可视化的设计界面，易于使用和配置，方便快速构建数据管道；2. 支持多种数据源和目标，包括传统数据库、大数据平台、云服务等；3. 提供实时监控和错误处理机制，保证数据传输的可靠性；|1. 对于复杂的数据转换逻辑可能需要编写自定义代码，增加了一定的复杂性；2. 商业版本可能价格较高；|在一些企业的数据集成项目中逐渐得到应用；|StreamSets Inc|
+|<font color=Coral face=Georgia  >**`FlinkCDC`**</font>|1. 基于 Flink 的强大流处理引擎，能够实现高效的实时数据同步；2. 开源免费，具有良好的扩展性和社区支持；3. 可以处理多种数据库的变更数据捕获，提供了灵活的数据集成方式；|1. 学习曲线相对较陡，需要对 Flink 有一定的了解；2. 配置和使用可能相对复杂，尤其是在处理复杂数据场景时；|随着 Flink 的流行，在<font color=Coral face=Georgia  >***实时数据集成***</font>场景中的应用逐渐增多；|Apache 等 Flink 社区|
+|`Waterdrop`|1. 基于 Flink 开发，具有强大的流处理能力；2. 开源免费，社区活跃，有不断的更新和改进；3. 支持多种数据源和数据格式的处理；|1. 相对较新，文档和案例可能不如一些成熟的工具丰富；2. 对于不熟悉 Flink 的用户来说，学习曲线较陡；|在一些 ***使用 Flink 的项目***中有一定的应用，但整体使用范围相对较窄；|主要由开源社区维护|
+|<font color=Coral face=Georgia  >**`kafka`**</font>|1. 高吞吐量和低延迟：能够处理大量的消息流，具有非常高的性能；2. 分布式架构：可以在多台服务器上运行，实现水平扩展，具有高可用性和容错性；3. 可持久化存储：消息可以被持久化存储，以便在需要时进行回溯和重新处理；4. 多订阅者模式：支持多个消费者从同一个主题订阅消息，实现灵活的消息分发；5. 成熟稳定：经过多年的发展和广泛应用，具有较高的稳定性和可靠性；|1. 配置相对复杂：对于初学者来说，Kafka 的配置可能比较复杂，需要一定的学习成本；2. 依赖 Zookeeper：早期版本的 Kafka 依赖于 Zookeeper 进行协调管理，增加了系统的复杂性和维护成本。不过，新版本的 Kafka 正在逐渐减少对 Zookeeper 的依赖；3. 存储占用空间：如果不及时清理旧数据，可能会占用大量的磁盘空间；|<font color=Coral face=Georgia  >***使用非常广泛***</font>。在大数据处理、实时数据分析、流处理、日志收集等领域被众多企业和组织广泛使用，如互联网公司、金融机构、电信运营商等|Apache|
+
+  </table>
 </div>
 
+
+<br><br>
+
+
+## 3、数据计算
+
+{{< cards >}}
+  {{< card link="/guide/bd_flink" title="Flink" subtitle="一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。" icon="flink" >}}
+
+  {{< card link="/guide/bd_hadoop" title="Hadoop" subtitle="一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。" icon="hadoop" >}}
+  {{< card link="/guide/bd_hive" title="Hive" subtitle="Apache Hive 是一个分布式、容错数据仓库系统，可实现大规模分析。" icon="hive" >}}
+  {{< card link="/guide/bd_spark" title="Spark" subtitle="一个多语言引擎，用于在单节点机器或集群上执行数据工程、数据科学和机器学习。" icon="spark" >}}
+{{< /cards >}}
+
+
+
+<br><br>
+
+
+
+## 4、流程控制
+
+{{< cards >}}
+  {{< card link="/guide/bd_airflow" title="Airflow" subtitle="一个由社区创建的平台，用于以编程方式编写、安排和监控工作流程。" icon="airflow" >}}
+  {{< card link="/guide/bd_DolphinScheduler" title="DolphinScheduler" subtitle="一个多元化、可扩展的开源工作流协调平台，具有强大的DAG可视化界面。" icon="apache" >}}
+{{< /cards >}}
+
+<br>
+
+<div style="font-size: 14px; color: Gray; border-left=0; border-right=0">
+  <table>
+
+|*工具*|*优点*|*缺点*|*适用情况*|*维护方*|
+|:-:|:-|:-|:-|:-:|
+|`Hudson`|1. 历史悠久，功能相对成熟稳定；2. 易于安装和使用，有较为友好的用户界面；|1. 后来发展相对缓慢，在一些新的功能和特性上可能落后于其他工具；2. 安全方面可能存在一些隐患；|曾经比较广泛，但随着其他工具的兴起，其使用逐渐减少；|曾经由Sun Microsystems开发，后被Oracle收购，现在有一些社区在维护|
+|<font color=Coral face=Georgia  >**`Airflow`**</font>|1. 非常灵活，支持复杂的工作流定义，可以通过代码进行任务编排；2. 有丰富的插件和扩展，可与众多工具集成；3. 活跃的开源社区，不断更新和改进；|1. 学习曲线相对较陡，对于不熟悉编程的用户可能有一定难度；2. 配置和管理相对复杂一些；|广泛应用于<font color=Coral face=Georgia  >**数据工程、机器学习等领域**</font>，很多企业和组织都在使用；|Apache|
+|`Azkaban`|1. 简单易用，有直观的用户界面；2. 轻量级，部署相对容易；|1. 功能相对较为简单，对于复杂的工作流可能不够强大；2. 扩展性方面可能不如一些其他工具；|有一定的用户群体，尤其是在一些 ***中小规模的项目中***|LinkedIn 开源，现在有社区维护|
+|`Oozie`|1. 与 Hadoop 生态系统集成较好；2. 支持多种类型的工作流，包括定时任务等；|1. 配置相对复杂，使用起来可能不太方便；2. 对非 Hadoop 任务的支持相对较弱；|在 ***Hadoop 相关的项目***中有一定的应用|Apache|
+|<font color=Coral face=Georgia  >**`DolphinScheduler`**</font>|1. 功能强大，支持多种任务类型和复杂的工作流；2. 易于扩展，有良好的用户界面和交互体验；3. 国产开源工具，对中文支持好，社区活跃；|相对较新，可能在一些稳定性和兼容性方面还需要进一步完善；|<font color=Coral face=Georgia  >***在国内逐渐受到越来越多的关注和使用；***</font>|Apache 软件基金会（孵化中），主要由国内的开发者维护|
+
+  </table>
 </div>
+
+
+
+<br><br>
+
+
+## 5、数据管理\元数据
+
+{{< cards >}}
+  {{< card link="/guide/bd_datahub" title="Datahub" subtitle="一个可扩展的数据目录，它支持数据发现、数据可观察性和联合治理，以帮助控制数据生态系统的复杂性。" icon="package" >}}
+  {{< card link="/guide/bd_OpenMetadata" title="OpenMetadata" subtitle="一个统一的元数据平台，用于数据发现、数据可观测性和数据治理，由中央元数据存储库、深入的列级沿袭和无缝团队协作提供支持。" icon="package" >}}
+{{< /cards >}}
+
+<br>
+
+<div style="font-size: 14px; color: Gray; border-left=0; border-right=0">
+  <table>
+
+|*工具*|*优点*|*缺点*|*适用情况*|*维护方*|
+|:-:|:-|:-|:-|:-:|
+|`Atlas`|1. 与 Hadoop 生态系统深度集成，尤其对 Hive、HBase 等数据源的元数据管理能力强；2. 提供强大的数据血缘分析功能，有助于理解数据的来源和流向；3. 支持多种数据存储格式和数据源类型的元数据采集；|1. 配置和部署相对复杂；2. 对于非 Hadoop 生态的数据源支持有限；|***在 Hadoop 相关的大数据项目中应用较为广泛***|Apache|
+|<font color=Coral face=Georgia  >**`Datahub`**</font>|1. 功能丰富，包括数据血缘、数据目录、数据质量监控等；2. 具有良好的可扩展性，可以通过插件机制扩展功能；3. 社区活跃，不断推出新功能和改进；|1. 学习曲线较陡，对于新手来说可能需要一定时间来熟悉和掌握；2. 一些高级功能的配置可能较为复杂；|在<font color=Coral face=Georgia  >***数据工程***</font>和<font color=Coral face=Georgia  >***数据治理***</font>领域逐渐受到广泛关注，特别是在一些大型企业和技术团队中|由 LinkedIn 开源，社区维护|
+|<font color=Coral face=Georgia  >**`OpenMetadata`**</font>|1. 支持广泛的数据源和数据平台，具有较强的通用性；2. 提供直观的用户界面，方便用户进行元数据管理和搜索；3. 可定制性强，可以根据特定需求进行扩展和定制；|1. 相对较新，可能在稳定性和成熟度方面有待进一步提升；2. 文档和社区资源可能不如一些成熟的工具丰富；|随着其不断发展，***越来越多的企业和组织开始尝试使用 OpenMetadata***，但目前使用广泛程度相对 Atlas 和 Datahub 可能稍低|OpenMetadata 社区|
+|<font color=Coral face=Georgia  >**`Ranger`**</font>|1. 提供 ***强大的安全管理功能***，可以对 Hadoop 生态系统中的各种组件进行细粒度的访问控制；2. 支持多租户环境，方便不同用户和团队的资源隔离和权限管理；3. 与多种大数据平台集成良好；|1. 配置和管理相对复杂，需要一定的专业知识和经验；2. 性能可能会受到一定影响，特别是在大规模集群和高并发访问的情况下；|***在 Hadoop 相关的大数据项目中广泛使用***|Apache|
+|`Amundsen`|1. 专注于数据发现和数据目录功能，提供良好的用户界面和搜索功能，方便用户查找和理解数据；2. 可以与多种数据源和数据平台集成，提供统一的数据视图；3. 社区活跃，不断推出新功能和改进；|1. 功能相对较为单一，主要集中在数据发现方面，其他元数据管理功能可能不够强大；2. 对于大规模数据集和复杂数据环境的支持可能有限；|在数据工程和数据治理领域有一定的应用，但相对其他一些成熟工具，使用广泛程度可能稍低|由 Lyft 开源，社区维护|
+|`Metacat`|1. 提供轻量级的元数据管理服务，易于部署和使用；2. 支持多种数据源，包括 Hive、HBase 等；3. 可以通过 API 进行扩展和集成；|1. 功能相对简单，可能无法满足复杂的数据治理需求；2. 社区规模相对较小，文档和支持资源可能有限；|在一些特定的项目和场景中有应用，但使用广泛程度不如一些主流工具|社区维护|
+|`Marquez`|1. 专注于数据 lineage（血缘）管理，提供清晰的可视化界面展示数据的流转过程；2. 易于集成到现代数据架构中，支持多种数据源和数据处理框架；3. 提供 API 方便与其他工具进行交互；|1. 功能相对较为单一，主要集中在 lineage 方面；2. 对于大规模复杂数据环境，性能可能会受到一定影响；|在数据工程领域有一定的应用，但相对一些更成熟的大数据工具，使用广泛程度有限|由 Launchable Inc. 发起并维护，社区也参与贡献|
+|<font color=Coral face=Georgia  >**`Griffin`**</font>|1. 提供数据质量监测和管理功能，可对大数据平台上的数据进行实时和批量的质量评估；2. 支持多种数据源和数据处理框架，具有较好的扩展性；3. 社区活跃，不断有新功能推出；|1. 配置和使用相对复杂，需要一定的技术水平；2. 对于一些特殊的数据场景，可能需要进行定制开发；|***在大数据数据质量领域有一定的知名度和应用***，但整体使用广泛程度不如一些核心大数据处理框架|Apache|
+|`Stemmaweb`|1. 专注于数据 provenance（起源）管理，帮助用户理解数据的产生和演变过程；2. 提供可视化界面和查询接口，方便用户探索数据的历史；3. 具有一定的灵活性和可扩展性；|1. 相对较新，成熟度和稳定性可能有待进一步检验；2. 社区规模较小，文档和支持资源相对有限；|目前使用广泛程度不高，主要在一些特定的研究和实验项目中使用|通常由开源社区或特定的研究团队维护|
+
+  </table>
+</div>
+
+
+<br><br>
+
+
+
+
 
