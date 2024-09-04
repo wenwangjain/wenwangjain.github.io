@@ -132,7 +132,7 @@ toc: true
 ## 6、数据存储
 
 {{< cards >}}
-  {{< card link="/guide/doris" title="Doris" subtitle="一个用于实时分析的现代数据仓库。它可以对大规模实时数据进行闪电般快速的分析。" icon="apache" >}}
+  {{< card link="/guide/bd_doris" title="Doris" subtitle="一个用于实时分析的现代数据仓库。它可以对大规模实时数据进行闪电般快速的分析。" icon="apache" >}}
 {{< /cards >}}
 
 <br>
@@ -211,7 +211,7 @@ toc: true
 ## 7、数据湖
 
 {{< cards >}}
-  {{< card link="/guide/iceberg" title="Iceberg" subtitle="一种用于大型分析表的高性能格式。Iceberg 为大数据带来了 SQL 表的可靠性和简单性，同时使 Spark、Trino、Flink、Presto、Hive 和 Impala 等引擎能够同时安全地使用相同的表." icon="iceberg" >}}
+  {{< card link="/guide/bd_iceberg" title="Iceberg" subtitle="一种用于大型分析表的高性能格式。Iceberg 为大数据带来了 SQL 表的可靠性和简单性，同时使 Spark、Trino、Flink、Presto、Hive 和 Impala 等引擎能够同时安全地使用相同的表." icon="iceberg" >}}
 {{< /cards >}}
 
 <br>
