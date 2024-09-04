@@ -1,5 +1,5 @@
 ---
-title: LLM 项目
+title: 生成模型
 weight: 13
 #next: /step1
 prev: /project
