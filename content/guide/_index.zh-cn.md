@@ -153,6 +153,8 @@ layout: hextra-home
   {{< card link="bd_dolphinscheduler" title="DolphinScheduler" subtitle="一个多元化、可扩展的开源工作流协调平台，具有强大的DAG可视化界面。" icon="apache" >}}
   {{< card link="bd_datahub" title="Datahub" subtitle="一个可扩展的数据目录，它支持数据发现、数据可观察性和联合治理，以帮助控制数据生态系统的复杂性。" icon="package" >}}
   {{< card link="bd_openmetadata" title="OpenMetadata" subtitle="一个统一的元数据平台，用于数据发现、数据可观测性和数据治理，由中央元数据存储库、深入的列级沿袭和无缝团队协作提供支持。" icon="package" >}}
+  {{< card link="bd_doris" title="Doris" subtitle="一个用于实时分析的现代数据仓库。它可以对大规模实时数据进行闪电般快速的分析。" icon="apache" >}}
+  {{< card link="bd_iceberg" title="Iceberg" subtitle="一种用于大型分析表的高性能格式。" icon="iceberg" >}}
 {{< /cards >}}
 
 <br>
@@ -165,7 +167,6 @@ layout: hextra-home
 
 
 <br><br><br>
-
 
 
 
