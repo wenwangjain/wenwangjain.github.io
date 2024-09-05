@@ -34,21 +34,54 @@ math: true
 
 ### <font face=Georgia>1.2、人工智能简史</font>
 
-***<font color=DarkCyan face=Georgia  >19 世纪 30~40 年代</font>*** —— 
-***<font face=Georgia  >查尔斯 • 巴贝奇 —— 分析机（Analytical Engine）</font>***<br>
-第一台通用的机械式计算机。它的用途仅仅是利用机械操作将数学分析领域的某些计算自动化，因此得名“分析机”
+***<font color=DarkCyan face=Georgia  >19 世纪 30~40 年代</font>***
 
-***<font color=DarkCyan face=Georgia  >20 世纪 50 年代</font>*** —— 
-***<font face=Georgia  >符号主义人工智能（symbolic AI）</font>***<br>
-精心编写足够多的明确规则来处理知识，就可以实现与人类水平相当的人工智能。<br>
-人工智能先驱阿兰 • 图灵在其 1950年发表的具有里程碑意义的论文“计算机器和智能”。
+> ***<font face=Georgia  >查尔斯 • 巴贝奇 —— 分析机（Analytical Engine）理念</font>***<br>
+> - --
+> 查尔斯·巴贝奇从 1834 年开始设计分析机。<br>
+> 分析机被认为是现代计算机的先驱，它具有很多现代计算机的特征，如存储程序、通用计算等理念。<br>
+
+> ***<font face=Georgia  size=3>霍华德·艾肯（Howard Aiken）团队 —— 马克一号（Mark I）</font>***<br>
+> - --
+> 它是 1944 年制造出的一种电动机械计算机，能够进行各种复杂的数学计算，被认为是 <font color=Coral face=Georgia  >第一台通用的机械式计算机</font>。<br>
+> 它的用途仅仅是利用机械操作将数学分析领域的某些计算自动化，因此得名“分析机”。<br>
+
+> ***<font face=Georgia  size=3>沃伦·麦卡洛克（Warren McCulloch）,沃尔特·皮茨（Walter Pitts） —— 神经元的数学模型</font>***<br>
+> - --
+> 1943 年提出了一种形式神经元的数学模型，被认为是 <font color=Coral face=Georgia  >最早的神经网络模型之一</font>。
+
+
+<br>
+
+
+***<font color=DarkCyan face=Georgia  >20 世纪 50 年代 —— 符号主义人工智能（symbolic AI）</font>***
+
+> ***<font face=Georgia size=3>阿兰 • 图灵 —— “图灵测试”</font>***<br>
+> - --
+> 人工智能先驱阿兰 • 图灵在其 1950年发表的具有里程碑意义的论文“计算机器和智能”。<br>
+> 在这篇论文中，图灵提出了著名的“图灵测试”，用于判断机器是否具有智能。他认为如果一台机器能够与人类进行对话而不被人类察觉出其为机器，那么就可以认为这台机器具有智能。这篇论文为人工智能的发展奠定了重要的理论基础。
+
+> ***<font face=Georgia size=3>符号主义人工智能（symbolic AI）</font>***<br>
+> - --
+> 精心编写足够多的<font color=Coral face=Georgia  >明确规则来处理知识</font>，就可以实现与人类水平相当的人工智能。<br>
+
+> ***<font face=Georgia size=3>弗兰克·罗森布拉特（Frank Rosenblatt） —— 感知机</font>***<br>
+> - --
+> 1957 年美国心理学家弗兰克·罗森布拉特（Frank Rosenblatt）提出感知机。<br>
+> 它是一种简单的二分类线性分类模型，它是神经网络和支持向量机的基础。<br>
+> 感知机的提出在当时引起了很大的轰动，但后来人们发现它只能处理线性可分的问题，具有一定的局限性。不过，感知机的出现为后来更复杂的神经网络的发展奠定了基础。<br>
+
+
+<br>
+
 
 ***<font color=DarkCyan face=Georgia  >20 世纪 60~70年代初</font>*** —— 
 ***<font face=Georgia  >第一次冬天</font>***<br>
-由于过高的期望未能实现，研究人员和政府资金均转向其他领域。
+> <font color=Coral face=Georgia  >计算能力的限制</font> 和 <font color=Coral face=Georgia  >数据的缺乏</font>，机器学习的发展陷入了瓶颈。<br>
+> <font color=Coral face=Georgia  >过高的期望未能实现</font>，研究人员和政府资金均转向其他领域。
 
 ***<font color=DarkCyan face=Georgia  >20 世纪 80 年代</font>*** —— 
-***<font face=Georgia  >专家系统（expert system）</font>***<br>
+***<font face=Georgia  >专家系统（expert system）\</font>***<br>
 符号主义人工智能热度达到了顶峰。
 
 ***<font color=DarkCyan face=Georgia  >20 世纪 90 年代初</font>*** —— 
