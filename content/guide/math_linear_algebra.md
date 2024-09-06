@@ -30,7 +30,8 @@ $\boldsymbol{A}=\begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n} \\\ a_{21}&a_{22}&\cd
 ### 2、基本运算
 
 <font color=DarkCyan face=Georgia>***2.1、数乘***</font>：
-- 标量 $c$ 与矩阵 $\boldsymbol{A}$ 的数乘，$c\boldsymbol{A}$ 中的元素是 $\boldsymbol{A}$ 的对应元素与 $c$ 的乘积，
+- 标量 $c$ 与矩阵 $\boldsymbol{A}$ 的数乘，$c\boldsymbol{A}$ 中的元素是 $\boldsymbol{A}$ 的对应元素与 $c$ 的乘积。
+$$2\cdot\begin{bmatrix}2&8&-3 \\\ 6&-2&5\end{bmatrix}=\begin{bmatrix}2\cdot2&2\cdot8&2\cdot(-3) \\\ 2\cdot6&2\cdot(-2)&2\cdot5\end{bmatrix}=\begin{bmatrix}4&16&-6 \\\ 12&-4&10\end{bmatrix}$$
 
 
 <br><br>
