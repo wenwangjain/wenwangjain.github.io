@@ -14,7 +14,7 @@ toc: true
 {{< cards >}}
   {{< card link="/guide/java" title="Java" subtitle="由 Sun 公司于 1995 年 5 月推出的高级程序设计语言。" icon="java" >}}
   {{< card link="/guide/software_linux" title="Linux" subtitle="Linux 是一种自由和开放源码的类 UNIX 操作系统。" icon="linux" >}}
-  {{< card link="database_mysql" title="MySQL" subtitle="MySQL 是一个流行的关系型数据库管理系统。" icon="mysql" >}}
+  {{< card link="/guide/database_mysql" title="MySQL" subtitle="MySQL 是一个流行的关系型数据库管理系统。" icon="mysql" >}}
 {{< /cards >}}
 
 
@@ -133,6 +133,7 @@ toc: true
 
 {{< cards >}}
   {{< card link="/guide/bd_doris" title="Doris" subtitle="一个用于实时分析的现代数据仓库。它可以对大规模实时数据进行闪电般快速的分析。" icon="apache" >}}
+  {{< card link="/guide/bd_druid" title="Druid" subtitle="高性能实时分析数据库，可在大规模和负载下对流式和批量数据进行亚秒级查询。" icon="druid" >}}
 {{< /cards >}}
 
 <br>
@@ -147,15 +148,26 @@ toc: true
 |`Parquet`|1. 高效存储：列式存储，压缩比高，节省存储空间；2. 兼容性好：与多种大数据处理框架兼容；3. 适合分析场景：便于快速查询特定列数据；|1. 不适合频繁的写入操作；2. 不支持事务处理；|在大数据分析和数据仓库中广泛使用；|Apache|
 |`Kudu`|1. 混合存储：结合行存储和列存储优点，支持随机读写和批量分析；2. 高可扩展性：可轻松扩展存储和处理能力；3. 支持事务处理；|1. 相对较新，生态不够成熟；2. 维护成本较高；|有一定的应用，但不如一些成熟技术广泛；|Apache|
 |`Elasticsearch`|1. 强大的搜索功能：支持全文搜索、结构化搜索和地理位置搜索等；2. 实时性高：数据写入后可立即被搜索到；3. 可扩展性强：通过添加节点扩展存储和处理能力；4. 丰富的功能集：包括聚合分析、数据可视化等；|1. 资源消耗较大：对内存和 CPU 需求高；2. 学习曲线较陡；3. 数据一致性问题；|***广泛应用于日志分析、全文搜索、数据分析和可视化、实时监控等领域***；|Elastic 公司|
+|`Druid`|1. 实时数据摄入能力强，延迟低；2. 专为大数据的实时分析而设计，对时间序列数据处理效果好；3. 数据压缩率高，节省存储空间；4. 水平扩展性好；|1. 学习曲线较陡，配置相对复杂；2. 功能相对单一，主要聚焦于数据分析；|使用较为广泛，在互联网公司等大数据场景中有很多应用；***非常适合实时 `OLAP`***|Apache|
+|`Pinot`|1. 快速的查询响应时间，能够满足实时分析的需求；2. 支持多种数据摄入方式，包括实时流和批处理，灵活性高；3. 易于扩展，可以随着数据量和查询负载的增加进行水平扩展；4. 与 Hadoop 和其他大数据生态系统集成良好；|1. 社区相对较小，可能在遇到问题时获取帮助的渠道有限；2. 相对较新，稳定性和成熟度可能不如一些老牌的数据分析工具；3. 配置和管理也有一定的复杂性；|在一些特定的行业和企业中有一定的应用，但整体上不如一些更成熟的工具广泛。能够提供 ***快速的实时数据分析能力***，对于需要 ***实时洞察数据***的场景有较好的表现。|Apache|
 |`ClickHouse`|1. 高性能：查询速度极快，尤其适合大规模数据分析；2. 列式存储：高效压缩，节省存储空间；3. 支持高并发查询；|1. 功能相对单一，不适合复杂的事务处理；2. 对硬件要求较高；|在数据分析和报表场景中越来越受欢迎；|Yandex|
-|<font color=Coral face=Georgia  >**`Doris`**</font>|1. 高性能：MPP 架构，查询速度快；2. 简单易用：标准 SQL 接口，易于上手；3. 可扩展性强：支持横向扩展；|1. 对于超大规模数据处理可能存在一些限制；2. 功能相对较新的技术可能不够完善；|***在数据分析领域逐渐受到关注和应用***|由多家公司和社区共同维护|
+|<font color=Coral face=Georgia  >**`Doris`**</font>|1. 高性能：MPP 架构，查询速度快；2. 简单易用：标准 SQL 接口，易于上手；3. 可扩展性强：支持横向扩展；|1. 对于超大规模数据处理可能存在一些限制；2. 功能相对较新的技术可能不够完善；|***在数据分析领域逐渐受到关注和应用；比较适合 `OLAP`***，可以满足大部分实时 `OLAP` 需求|由多家公司和社区共同维护|
 
 
   </table>
 </div>
 
 
-{{% details title="<font color=Gray size=3>*`hbase` `parqute` `Elasticsearch` `doris` `kudu` 那个跟适合用来实时 `OLAP`：*</font>" closed="true" %}}
+
+
+{{% details title="<font color=Gray size=3>*`hbase` `parqute` `Elasticsearch` `doris` `kudu` `Druid` `Pinot` 那个跟适合用来实时  `OLAP`：*</font>" closed="true" %}}
+
+`Druid`
+> 非常适合实时 OLAP。对实时数据摄入支持良好，具有低延迟的数据处理能力。数据以列存储，能够快速响应复杂的聚合查询。特别适用于大规模数据的实时分析场景，例如互联网广告分析、用户行为分析等。
+
+`Pinot`
+> 也是为实时 OLAP 设计的系统。支持实时流数据和批处理数据摄入，查询响应速度快，针对聚合查询等 OLAP 常见操作进行了优化。
+
 
 `Doris`
 > ***实时性方面：***
@@ -176,18 +188,22 @@ toc: true
 > 3. 支持一定程度的实时性：数据写入后较快可查询。
 > 4. 在查询性能和功能丰富度上可能不如 Doris
 
-`HBase` 主要适合随机读写的场景，对于复杂的  `OLAP` 分析支持有限。
+`HBase` 
+> 主要适合随机读写的场景，对于复杂的  `OLAP` 分析支持有限。
 
-`Parquet` 是一种存储格式，通常需要与其他查询引擎配合使用，单独不适合实时 `OLAP`。
+`Parquet` 
+> 是一种存储格式，通常需要与其他查询引擎配合使用，单独不适合实时 `OLAP`。
 
 `Elasticsearch` 更侧重于全文搜索和日志分析等场景，对于复杂的数值计算和 `OLAP` 分析不是其强项。
 > 1. 虽然具有实时性，但更侧重于全文搜索和日志分析等场景，对于复杂的 OLAP 分析操作支持相对有限。
 > 2. 在处理大规模数值型数据的聚合分析时，性能可能不如专门的 OLAP 工具。
+
+***总体而言，`Druid` 和 `Pinot` 在实时 `OLAP` 场景下表现较为突出，具体选择哪个还需要根据具体的业务需求、数据规模、技术栈等因素综合考虑。***
 {{% /details %}}
 
 
 
-{{% details title="<font color=Gray size=3>*数仓分层一般存储在 `hbase` `parqute` `Elasticsearch` `doris` `kudu` 哪一个：*</font>" closed="true" %}}
+{{% details title="<font color=Gray size=3>*数仓分层一般存储在 `hbase` `parqute` `Elasticsearch` `doris` `kudu` `Druid` `Pinot`哪一个：*</font>" closed="true" %}}
 在数仓分层中，不同的存储技术有不同的适用场景：
 
 - `HBase`：通常用于操作型数据存储（ODS）层或需要随机读写的场景。可以存储原始数据，支持高并发的随机读写操作，但不太适合复杂的分析查询。
@@ -200,7 +216,7 @@ toc: true
 
 - `Kudu`：可以在数据仓库的某些特定层中使用，比如需要快速更新和随机读写同时又要进行一定分析的场景。Kudu 结合了行存储和列存储的优点，可提供较好的实时性和分析能力。
 
-总的来说，没有一种技术适用于所有的数据仓库分层，通常会根据具体的需求组合使用不同的技术。例如，`ODS` 层可能使用 `HBase` 或 `Kudu` 来存储原始数据，明细数据层和汇总层可以使用 `Parquet` 结合 `Hive/Spark` 或者使用 `Doris`，而对于特定的搜索和分析需求可以引入 `Elasticsearch`。
+总的来说，没有一种技术适用于所有的数据仓库分层，通常会根据具体的需求组合使用不同的技术。例如，`ODS` 层可能使用 `HBase` 或 `Kudu` 来存储原始数据，明细数据层和汇总层可以使用 `Parquet` 结合 `Hive/Spark` 或者使用 `Doris`，而对于特定的搜索和分析需求可以引入 `Elasticsearch`；实时数据分析（`OLAP`）可使用 `Druid` `Pinot` `Doris`。
 {{% /details %}}
 
 
@@ -318,5 +334,26 @@ Iceberg 结合使用可以提供更强大的数据处理和管理能力。而在
 
 ## 8、大数据 IDE
 
->  StreamPark、Zeppelin、dinky 和 Scriptis
+{{< cards >}}
+  {{< card link="/guide/bd_zeppelin" title="Zeppelin" subtitle="基于 Web 的笔记本，支持使用 SQL、Scala、Python、R 等进行 数据驱动、交互式数据分析和协作文档。" icon="zeppelin" >}}
+  {{< card link="/guide/bd_streampark" title="StreamPark" subtitle="易于使用的流应用程序开发框架和运行平台，支持 Flink 和 Spark，为流处理应用程序提供完整的生命周期支持。" icon="apache" >}}
+  {{< card link="/guide/bd_dinky" title="Dinky" subtitle="为 Flink 深度定制的新一代实时计算平台，提供敏捷的 Flink SQL, Flink Jar 作业开发、部署及监控能力，助力实时计算高效应用。" icon="package" >}}
+{{< /cards >}}
+
+<br> 
+
+<div style="font-size: 14px; color: Gray; border-left=0; border-right=0">
+  <table>
+
+|*工具*|*优点*|*缺点*|*适用情况*|*维护方*|
+|:-:|:-|:-|:-|:-:|
+|`Zeppelin`|1. 提供了一个交互式的数据分析和可视化平台，可以方便地进行数据探索和分析；2. 支持多种编程语言，如 Scala、Python、SQL 等；3. 具有丰富的插件生态系统，可以扩展其功能；|1. 配置和部署可能相对复杂；2. 在大规模数据处理和高并发场景下，性能可能会受到一定影响；|在数据科学和数据分析领域有一定的使用度，特别是在企业级数据分析场景中；|Apache|
+|`StreamPark`|1. 易于使用，提供简洁的编程接口，方便进行流处理开发；2. 支持多种数据源和数据格式的接入；3. 具有良好的可扩展性，可以方便地集成其他组件和工具；|相对较新，可能在一些功能的稳定性和成熟度上有待进一步提升；|随着流处理需求的增长，其知名度在逐渐提升；|Apache|
+|`Dinky`|1. 专注于 Flink SQL 的开发和调试，提供了便捷的 SQL 开发环境；2. 支持实时任务的监控和管理；3. 易于集成到现有的大数据架构中；|功能相对较为单一，主要围绕 Flink SQL；|在使用 Flink 进行流处理的开发团队中有一定的使用，但整体广泛程度不如一些成熟的大数据工具；|开源社区|
+|`Scriptis`|微众开源项目，用于交互式数据分析，包括脚本开发（SQL、Pyspark、HiveQL）、任务提交（Spark、Hive）、UDF、函数、资源管理和智能诊断；2. 融合了Hue、Zeppelin等开发工具的优点，同时又解决了许多以往存在的不足；3. 管理功能比较强，特别是多租户隔离、资源管控，高可用；|1. Scriptis 后台要对接微众的linkis；2. 暂时不支持 Flink 实时计算；|不广泛|开源社区|
+
+  </table>
+</div>
+
+
 
