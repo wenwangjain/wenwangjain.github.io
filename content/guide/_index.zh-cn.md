@@ -15,7 +15,7 @@ layout: hextra-home
 <br><br><br>
 
 
-
+****
 
 ## <font face=Georgia>2、编程语言</font>
 
@@ -79,8 +79,9 @@ layout: hextra-home
 ### <font face=Georgia>3.5、空间数据</font>
 
 {{< cards >}}
-  {{< card link="python/python_folium" title="Folium" subtitle="轻松地在交互式传单地图上可视化使用 Python 处理的数据。" icon="folium" >}}
   {{< card link="python/python_geopandas" title="GeoPandas" subtitle="旨在让使用 Python 处理地理空间数据变得更加容易。" icon="geopandas" >}}
+  {{< card link="python/python_folium" title="Folium" subtitle="轻松地在交互式传单地图上可视化使用 Python 处理的数据。" icon="folium" >}}
+
 {{< /cards >}}
 
 <br><br><br>
@@ -149,12 +150,20 @@ layout: hextra-home
   {{< card link="bd_flume" title="Flume" subtitle="一种分布式、可靠且可用的服务，用于高效收集、聚合和移动大量日志数据。" icon="apache" >}}
   {{< card link="bd_flink_cdc" title="Flink CDC" subtitle="一个基于流的数据集成工具，旨在为用户提供一套功能更加全面的编程接口（API）。" icon="flink" >}}
   {{< card link="bd_flink" title="Flink" subtitle="一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。" icon="flink" >}}
+  
   {{< card link="bd_airflow" title="Airflow" subtitle="一个由社区创建的平台，用于以编程方式编写、安排和监控工作流程。" icon="airflow" >}}
   {{< card link="bd_dolphinscheduler" title="DolphinScheduler" subtitle="一个多元化、可扩展的开源工作流协调平台，具有强大的DAG可视化界面。" icon="apache" >}}
   {{< card link="bd_datahub" title="Datahub" subtitle="一个可扩展的数据目录，它支持数据发现、数据可观察性和联合治理，以帮助控制数据生态系统的复杂性。" icon="package" >}}
   {{< card link="bd_openmetadata" title="OpenMetadata" subtitle="一个统一的元数据平台，用于数据发现、数据可观测性和数据治理，由中央元数据存储库、深入的列级沿袭和无缝团队协作提供支持。" icon="package" >}}
+
   {{< card link="bd_doris" title="Doris" subtitle="一个用于实时分析的现代数据仓库。它可以对大规模实时数据进行闪电般快速的分析。" icon="apache" >}}
+  {{< card link="bd_druid" title="Druid" subtitle="高性能实时分析数据库，可在大规模和负载下对流式和批量数据进行亚秒级查询。" icon="druid" >}}
   {{< card link="bd_iceberg" title="Iceberg" subtitle="一种用于大型分析表的高性能格式。" icon="iceberg" >}}
+
+  {{< card link="bd_zeppelin" title="Zeppelin" subtitle="基于 Web 的笔记本，支持使用 SQL、Scala、Python、R 等进行 数据驱动、交互式数据分析和协作文档。" icon="zeppelin" >}}
+  {{< card link="bd_streampark" title="StreamPark" subtitle="易于使用的流应用程序开发框架和运行平台，支持 Flink 和 Spark，为流处理应用程序提供完整的生命周期支持。" icon="apache" >}}
+  {{< card link="bd_dinky" title="Dinky" subtitle="为 Flink 深度定制的新一代实时计算平台，提供敏捷的 Flink SQL, Flink Jar 作业开发、部署及监控能力，助力实时计算高效应用。" icon="package" >}}
+
 {{< /cards >}}
 
 <br>
@@ -164,7 +173,6 @@ layout: hextra-home
   {{< card link="bd_hive" title="Hive" subtitle="Apache Hive 是一个分布式、容错数据仓库系统，可实现大规模分析。" icon="hive" >}}
   {{< card link="bd_spark" title="Spark" subtitle="一个多语言引擎，用于在单节点机器或集群上执行数据工程、数据科学和机器学习。" icon="spark" >}}
 {{< /cards >}}
-
 
 <br><br><br>
 
