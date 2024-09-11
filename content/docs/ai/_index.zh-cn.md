@@ -65,43 +65,56 @@ flowchart LR
 } } } }%%
 
 flowchart LR
-    A(人工智能):::someclassA --> B(基础):::someclassA 
+    A(人工智能):::someclassA --> B(基础知识):::someclassA 
         classDef someclassA fill:#58C9B9
         classDef someclassB fill:#9DC8C8
         classDef someclassC fill:#f100
         classDef someclassD fill:#a3c9c7
         classDef someclassE fill:#fff,stroke:#fff,stroke-width:0.5px
-    A -- 阶段 1 --> C(入门):::someclassA
-    A -- 阶段 2 --> D(进阶):::someclassA
-    A -- 阶段 3 --> E(高深):::someclassA
-    A -- 阶段 4 --> F(相关领域专业知识):::someclassA
+        classDef someclassF fill:#ff9900
 
-    B --> B1(Pyhon\R) --> B2(线性代数):::someclassC --> B3(微积分):::someclassC --> B4(概率论):::someclassC --> B5(数理统计):::someclassC
+    A -- 阶段 1：入门 --> C(端到端的<br>机器学习):::someclassA
+    A -- 阶段 2：进阶 --> D(深度学习):::someclassA
+    A -- 阶段 3：高深 --> E(测试):::someclassA
+    A -- AutoML<br>自动机器学习 --> F
 
-    C --> C1(端到端的<br>机器学习):::someclassA --> C111(人工智能<br>概述) --> C112(机器学习<br>常用算法) --> C113(建模工具<br>Sklearn) --> C114(步骤\过程<br>CRISP-DM) --> C115(练习<br>UCI 数据集)
-          C1 --> C121(自动<br>机器学习):::someclassC --> C122(处理大型<br>数据集):::someclassC -.- C123(>):::someclassE -.- C124(>):::someclassE
+
+    B --> B1(编程基础):::someclassA --> B11(Python \ R)  
+    B --> B2(数学基础):::someclassA --> B21(线性代数):::someclassC --> B22(微积分):::someclassC --> B23(概率论):::someclassC --> B24(数理统计):::someclassC
     
     
-    C --> C2(集成学习):::someclassA --> C22(集成学习<br>概述) --> C23(集成学习<br>算法) --> C24(建模工具<br>Sklearn\<br>) -.- C25(>):::someclassE
-    C25 -.-> Y
-    
-    C --> C3(ML 算法<br>深度解析):::someclassA --> C31(ML 算法<br>Code 实现) --> C32(Sklearn<br>源码):::someclassC
+    C --> C11(人工智能<br>概述) --> C12(机器学习<br>常用算法) --> C13(建模工具<br>Sklearn) --> C14(步骤\过程<br>CRISP-DM)
+    C14 --> Y 
 
-    C114 -.-> Y  
-    C124 -.-> Y
-    D --> Y
+
+    D --> D11(深度学习<br>算法) --> D12(自制框架<br>DeZero) --> D13(建模工具<br>keras<br>PyTorch<br>tensorflow) --> D14(NLP<br>自然语言<br>CV<br>计算机视觉)
+    D14 --> Y
+
+
     E --> Y
     F --> Y
 
-    Y(竞赛<br>kaggle<br>阿里天池):::someclassA
 
-    C115 --> Z
+    Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池):::someclassA
+
     Y --> Z
 
-    Z(模型部署<br>MLOps):::someclassA
+    Z(模型部署<br>MLOps):::someclassF
 
 ```
+
+
+
+
 <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    C --> C2(集成学习):::someclassA --> C22(集成学习<br>概述) --> C23(集成学习<br>算法) --> C24(集成学习<br>工具) -.- C25(>):::someclassE
+    C25 -.-> Y
+    
+    C --> C3(ML 算法深度解析):::someclassA --> C31(ML 算法<br>Code 实现):::someclassB --> C32(Sklearn<br>源码):::someclassC
+
+
+
 
 
 ## 阶段一：入门
