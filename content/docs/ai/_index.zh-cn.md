@@ -22,7 +22,7 @@ flowchart LR
     A -- 阶段 3 --> E(生成式人工智能):::someclassA
     A -- 阶段 4 --> F(相关领域专业知识):::someclassA
 
-    B --> B1(pyhon\R) --> B2(微积分<br>线性代数):::someclassC --> B3(概率论<br>数理统计):::someclassC 
+    B --> B1(pyhon) --> B2(微积分<br>线性代数):::someclassC --> B3(概率论<br>数理统计):::someclassC 
 
     C --> C1(人工智能<br>概述) --> C2(机器学习<br>常用算法) --> C3(建模工具<br>sklearn) --> C4(步骤\过程<br>CRISP-DM) --> C5(练习<br>UCI 数据) 
           C5 --> Z
@@ -52,76 +52,103 @@ flowchart LR
 ```
 
 
-<br><br><br><br><br><br><br><br>
 
 
-
-
-
-
-```mermaid
+```markdown
 %%{ init: { 'flowchart': { 'curve': 'bumpX', 'styles': {
    'stroke-width': '1px'
 } } } }%%
-
-flowchart LR
-    A(人工智能):::someclassA --> B(基础知识):::someclassA 
-        classDef someclassA fill:#58C9B9
-        classDef someclassB fill:#9DC8C8
-        classDef someclassC fill:#f100
-        classDef someclassD fill:#a3c9c7
-        classDef someclassE fill:#fff,stroke:#fff,stroke-width:0.5px
-        classDef someclassF fill:#ff9900
-
-    A -- 阶段 1：入门 --> C(端到端的<br>机器学习):::someclassA
-    A -- 阶段 2：进阶 --> D(深度学习):::someclassA
-    A -- 阶段 3：高深 --> E(测试):::someclassA
-    A -- AutoML<br>自动机器学习 --> F
-
-
-    B --> B1(编程基础):::someclassA --> B11(Python \ R)  
-    B --> B2(数学基础):::someclassA --> B21(线性代数):::someclassC --> B22(微积分):::someclassC --> B23(概率论):::someclassC --> B24(数理统计):::someclassC
-    
-    
-    C --> C11(人工智能<br>概述) --> C12(机器学习<br>常用算法) --> C13(建模工具<br>Sklearn) --> C14(步骤\过程<br>CRISP-DM)
-    C14 --> Y 
-
-
-    D --> D11(深度学习<br>算法) --> D12(自制框架<br>DeZero) --> D13(建模工具<br>keras<br>PyTorch<br>tensorflow) --> D14(NLP<br>自然语言<br>CV<br>计算机视觉)
-    D14 --> Y
-
-
-    E --> Y
-    F --> Y
-
-
-    Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池):::someclassA
-
-    Y --> Z
-
-    Z(模型部署<br>MLOps):::someclassF
-
 ```
 
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
-    C --> C2(集成学习):::someclassA --> C22(集成学习<br>概述) --> C23(集成学习<br>算法) --> C24(集成学习<br>工具) -.- C25(>):::someclassE
-    C25 -.-> Y
+
+
+## 学习路径图
+
+```mermaid
+
+flowchart LR
+    A(人工智能):::someclassA --> B(基础知识):::someclassA 
+        classDef someclassA fill:#58C9B9
+        classDef someclassB fill:#9DC8C8
+        classDef someclassC fill:#f100,stroke-width:1px
+        classDef someclassD fill:#a3c9c7
+        classDef someclassE fill:#fff,stroke:#fff,color:#fff
+        classDef someclassF fill:#ff9900
+
+    A -- 阶段 1 --> C(入门训练):::someclassA
+    A -- 阶段 2 --> D(进阶学习):::someclassA
+    A -- 阶段 3 --> E(先进知识):::someclassA
+    A -- 阶段 4 --> F(持续学习):::someclassA
+    A -- AutoML<br>自动机器学习 --> Z
+
+
+
+    B --> B1(编程基础<br>Python) --> B2(线性代数):::someclassC
+    subgraph 数学基础
+    B2 -.-> B3(微积分):::someclassC -.-> B4(概率论):::someclassC -.-> B5(数理统计):::someclassC  
+    end
     
-    C --> C3(ML 算法深度解析):::someclassA --> C31(ML 算法<br>Code 实现):::someclassB --> C32(Sklearn<br>源码):::someclassC
+
+    
+    C --> C11(端到端的<br>机器学习):::someclassB --> C12(人工智能<br>概述) --> C13(机器学习<br>常用算法) --> C14(建模工具<br>Sklearn) --> C15(步骤\过程<br>CRISP-DM)
+    C15 --> Y 
 
 
 
+    D --> D11(集成学习):::someclassB -.- D12(时间序列):::someclassB -.- D13(算法<br>深度解析):::someclassB
+    D --> D21(深度学习):::someclassB --> D22(深度学习<br>算法) --> D23(自制框架<br>DeZero) --> D24(建模工具<br>keras<br>PyTorch<br>tensorflow) --> D25(NLP<br>自然语言<br>CV<br>计算机视觉)
+    D25 --> Y
+    
 
 
-## 阶段一：入门
+    E --> E11(生成式<br>人工智能):::someclassB
 
-{{% steps %}}
+    F --> F11(最新论文) 
 
-### 1、端到端的机器学习：
+    Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池<br>...):::someclassA
+
+
+    Y --> Z
+
+    Z(模型部署<br>MLOps):::someclassF
+
+    
+    X --> Z
+
+```
+
+-.-()
+
+
+<br><br><br><br><br><br><br><br><br>
+
+
+
+## 基础知识
+
+{{< cards >}}
+  {{< card link="/guide/math_linear_algebra" title="*线性代数*"  subtitle="" icon="matrix" >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="" icon="calculus" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="" icon="probability" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="" icon="statistics" >}}
+  {{< card link="/guide/python/python" title="Python" subtitle="" icon="python" >}}
+  {{< card link="/guide/python/python_modules" title="Python Modules" subtitle="" icon="python" >}}
+{{< /cards >}}
+
+
+
+<br><br><br>
+
+
+
+## 阶段一：入门训练
+
+### > 端到端的机器学习：
 
 {{< callout >}}
   以学习完整的建模过程为主要目标，以了解常用机器算法（优缺点，原理，步骤，应用）和学习建模工具（`Sklearn`\ `scikit-learn`）为次要目标，
@@ -140,6 +167,39 @@ flowchart LR
 <font color=DarkCyan face=Georgia align=right>***推荐阅读：***</font>
 
 - 《深度学习：从基础到实践》 （上、下册）- [美] Andrew Glassner
+
+
+
+<br><br><br>
+
+
+
+## 阶段 4：持续学习
+
+<font color=DarkCyan face=Georgia align=right>***持续学习，主要内容参考如下：***</font>
+
+1. [机器学习的最新进展带代码的论文](https://paperswithcode.com/)
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+    C --> C2(集成学习):::someclassA --> C22(集成学习<br>概述) --> C23(集成学习<br>算法) --> C24(集成学习<br>工具) -.- C25(>):::someclassE
+    C25 -.-> Y
+    
+    C --> C3(ML 算法深度解析):::someclassA --> C31(ML 算法<br>Code 实现):::someclassB --> C32(Sklearn<br>源码):::someclassC
+
+
+
+
+
+
+
+
+
 
 <br><br><br>
 
@@ -169,7 +229,7 @@ flowchart LR
 
 - 《achine Learning Algorithms in Depth》 - VADIM SMOLYAKOV
 
-{{% /steps %}}
+
 
 
 
@@ -177,7 +237,7 @@ flowchart LR
 
 
 
-## 阶段一：进阶
+## 阶段 2：进阶
 
 {{% steps %}}
 
