@@ -13,7 +13,7 @@ excludeSearch: true
 
 ## 基础语法
 
-### 标题
+### 1、标题
 
 ```
 # 一级标题
@@ -24,13 +24,56 @@ excludeSearch: true
 ###### 六级标题
 ```
 
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
 
-```text
+
+<br><br><br>
+
+
+
+### 2、列表
+
+```test
+* 项目 1
+* 项目 2
+  * 项目 2a
+  * 项目 2b
+
+- 项目 1
+- 项目 2
+  - 项目 2a
+  - 项目 2b
+```
+
+* 项目 1
+* 项目 2
+  * 项目 2a
+  * 项目 2b
+
+<br>
+
+```test
+1. 项目 1
+2. 项目 2
+3. 项目 3
+   1. 项目 3a
+   2. 项目 3b
+```
+
+1. 项目 1
+2. 项目 2
+3. 项目 3
+   1. 项目 3a
+   2. 项目 3b
+
+
+
+<br><br><br>
+
+
+
+### 3、文字加粗\斜体
+
+```test
 *这段文字将是斜体*
 _这也将是斜体_
 
@@ -40,30 +83,75 @@ __这也将是粗体__
 _你 **可以** 组合它们_
 ```
 
-*这段文字将是斜体*
+*这段文字将是斜体*<br>
 _这也将是斜体_
 
-**这段文字将是粗体**
+**这段文字将是粗体**<br>
 __这也将是粗体__
 
 _你 **可以** 组合它们_
 
-### 列表
 
-#### 无序列表
 
-* 项目 1
-* 项目 2
-  * 项目 2a
-  * 项目 2b
 
-#### 有序列表
+<br><br><br>
 
-1. 项目 1
-2. 项目 2
-3. 项目 3
-   1. 项目 3a
-   2. 项目 3b
+
+
+## 特殊案例：
+
+### 1、内容加 “边框”
+
+```markdown
+<div style="border: 0.5px solid DarkCyan; border-radius: 10px; width: 100%; border-left-width: 5px; padding: 10px;">
+  这是有边框的文字<br>
+  这是有边框的文字<br>
+  这是有边框的文字<br>
+  ......
+</div>
+```
+
+<div style="border: 0.5px solid DarkCyan; border-radius: 10px; width: 100%; border-left-width: 5px; padding: 10px;">
+  这是有边框的文字<br>
+  这是有边框的文字<br>
+  这是有边框的文字<br>
+  ......
+</div>
+
+
+
+<br><br><br>
+
+
+
+### 2、内容 “分栏”
+
+```markdown
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 33%; padding: 10px; box-sizing: border-box; text-align: center;"> 第 1 栏 </div>
+  <div style="flex: 33%; padding: 10px; box-sizing: border-box; text-align: center;"> 第 2 栏 </div>
+  <div style="flex: 33%; padding: 10px; box-sizing: border-box; text-align: center;"> 第 3 栏 </div>
+</div>
+```
+
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 33%; padding: 10px; box-sizing: border-box; text-align: center;"> <font color=DarkCyan face=Georgia  ><b><i>第 1 栏</i></b></font> </div>
+  <div style="flex: 33%; padding: 10px; box-sizing: border-box; text-align: center;"> <font color=DarkCyan face=Georgia  ><b><i>第 2 栏</i></b></font> </div>
+  <div style="flex: 33%; padding: 10px; box-sizing: border-box; text-align: center;"> <font color=DarkCyan face=Georgia  ><b><i>第 3 栏</i></b></font> </div>
+</div>
+
+
+
+<br><br><br>
+
+
+
+## 基础语法
+
+
+
+
+
 
 ### 图片
 
