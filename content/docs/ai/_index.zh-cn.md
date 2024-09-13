@@ -83,8 +83,7 @@ flowchart LR
     A -- 阶段 1 --> C(入门训练):::someclassA
     A -- 阶段 2 --> D(进阶学习):::someclassA
     A -- 阶段 3 --> E(先进知识):::someclassA
-    A -- 阶段 4 --> F(持续学习):::someclassA
-    A -- AutoML<br>自动机器学习 --> Z
+
 
 
 
@@ -96,33 +95,46 @@ flowchart LR
 
     
     C --> C11(端到端的<br>机器学习):::someclassB --> C12(人工智能<br>概述) --> C13(机器学习<br>常用算法) --> C14(建模工具<br>Sklearn) --> C15(步骤\过程<br>CRISP-DM)
-    C15 --> Y 
+    C15 --> Y
 
 
 
-    D --> D11(集成学习):::someclassB -.- D12(时间序列):::someclassB -.- D13(算法<br>深度解析):::someclassB
-    D --> D21(深度学习):::someclassB --> D22(深度学习<br>算法) --> D23(自制框架<br>DeZero) --> D24(建模工具<br>keras<br>PyTorch<br>tensorflow) --> D25(NLP<br>自然语言<br>CV<br>计算机视觉)
+    D --> D21(深度学习):::someclassB --> D22(深度学习<br>算法) --> D23(自制框架<br>DeZero) --> D24(建模工具<br>keras<br>PyTorch<br>Tensorflow) --> D25(NLP \ CV)
     D25 --> Y
+    D -.-> D31(算法解析):::someclassF
+
+
+
+    E --> E11(生成式<br>人工智能):::someclassB --> E16(最新趋势<br>\研究\论文)
+    E16 --> Y
+
+
     
+    A -- 补充知识 --> F1(集成学习):::someclassB -.- F2(时间序列):::someclassB -.- F3(迁移学习):::someclassB
+    F3 --> Y
 
 
-    E --> E11(生成式<br>人工智能):::someclassB
-
-    F --> F11(最新论文) 
 
     Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池<br>...):::someclassA
-
-
     Y --> Z
 
     Z(模型部署<br>MLOps):::someclassF
 
+
+
+    A -- AutoML<br>自动机器学习 --> Z
+
+    Z11(工程基础<br>git\github\Linux<br>容器\云<br>HF Spaces\<br>Streamlit Sharing) --> Z12(MLOps 概述<br>部署方式<br>核心概念<br>......) --> Z13(主要内容<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> Z14(管理工具<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow) 
+    Z14 --> Z
+
+
+
     
-    X --> Z
+
 
 ```
 
--.-()
+
 
 
 <br><br><br><br><br><br><br><br><br>
