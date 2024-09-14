@@ -71,69 +71,45 @@ flowchart LR
 
 ```mermaid
 
+%%{ init: { 'flowchart': { 'curve': 'bumpX', 'styles': {
+   'stroke-width': '1px'
+} } } }%%
+
 flowchart LR
-    A(人工智能):::someclassA --> B(基础知识):::someclassA 
-        classDef someclassA fill:#58C9B9
-        classDef someclassB fill:#9DC8C8
-        classDef someclassC fill:#f100,stroke-width:1px
-        classDef someclassD fill:#a3c9c7
-        classDef someclassE fill:#fff,stroke:#fff,color:#fff
-        classDef someclassF fill:#ff9900
 
-    A -- 阶段 1 --> C(入门训练):::someclassA
-    A -- 阶段 2 --> D(进阶学习):::someclassA
-    A -- 阶段 3 --> E(先进知识):::someclassA
+    classDef someclassA fill:#58C9B9
+    classDef someclassB fill:#9DC8C8
+    classDef someclassC fill:#f100,stroke-width:1px
+    classDef someclassD fill:#a3c9c7
+    classDef someclassE fill:#fff,stroke:#fff,color:#fff
+    classDef someclassF fill:#ff9900
 
-
-
-
-    B --> B1(编程基础<br>Python) --> B2(线性代数):::someclassC
-    subgraph 数学基础
-    B2 -.-> B3(微积分):::someclassC -.-> B4(概率论):::someclassC -.-> B5(数理统计):::someclassC  
-    end
+    A(人工智能):::someclassA 
     
+    A -- 基础知识 --> B1(Python\ R):::someclassC -.-> B2(线性代数<br>微积分):::someclassC -.-> B3(概率论<br>数理统计):::someclassC
 
-    
-    C --> C11(端到端的<br>机器学习):::someclassB --> C12(人工智能<br>概述) --> C13(机器学习<br>常用算法) --> C14(建模工具<br>Sklearn) --> C15(步骤\过程<br>CRISP-DM)
-    C15 --> Y
+    A -- 阶段1：入门 --> C(端到端的<br>机器学习):::someclassA --> C12(机器学习<br>概述) --> C13(机器学习<br>常用算法) --> C14(建模工具<br>Sklearn) --> C15(建模步骤<br>CRISP-DM) --> Y
 
+    A -- 阶段2：进阶 --> D(深度学习):::someclassA --> D11(深度学习<br>概述) --> D12(深度学习<br>算法) --> D13(建模工具<br>keras<br>PyTorch<br>Tensorflow<br>FastAI) --> D14(NLP \ CV) --> Y
 
+    A -- 算法解析 --> E21(算法深度解析):::someclassC  -.- E22(自制框架<br>DeZero):::someclassC
 
-    D --> D21(深度学习):::someclassB --> D22(深度学习<br>算法) --> D23(自制框架<br>DeZero) --> D24(建模工具<br>keras<br>PyTorch<br>Tensorflow) --> D25(NLP \ CV)
-    D25 --> Y
-    D -.-> D31(算法解析):::someclassF
+    A -- 阶段3：先进 --> F(生成式<br>人工智能):::someclassA --> F11(最新趋势<br>\研究\论文) --> Y
 
+    A -- 补充知识 --> G1(集成学习):::someclassB -.- G2(时间序列):::someclassB -.- G3(迁移学习):::someclassB --> Y
 
-
-    E --> E11(生成式<br>人工智能):::someclassB --> E16(最新趋势<br>\研究\论文)
-    E16 --> Y
-
-
-    
-    A -- 补充知识 --> F1(集成学习):::someclassB -.- F2(时间序列):::someclassB -.- F3(迁移学习):::someclassB
-    F3 --> Y
-
-
-
-    Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池<br>...):::someclassA
-    Y --> Z
+    Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池<br>...):::someclassA --> Z
 
     Z(模型部署<br>MLOps):::someclassF
-
-
-
-    A -- AutoML<br>自动机器学习 --> Z
-
-    Z11(工程基础<br>git\github\Linux<br>容器\云<br>HF Spaces\<br>Streamlit Sharing) --> Z12(MLOps 概述<br>部署方式<br>核心概念<br>......) --> Z13(主要内容<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> Z14(管理工具<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow) 
-    Z14 --> Z
-
-
+    Z1(《工程基础》<br>版本控制\协作：<br>Git\Github<br><br>操作系统：Linux<br>容器化\ 云：Docker<br><br>ML应用平台：<br>HF Spaces\<br>Streamlit Sharing) --> Z2(《MLOps 概述》<br>部署方式<br>核心概念<br>......) --> Z3(《主要内容》<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> Z4(《管理工具》<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow)
+    Z4 --> Z
 
     
-
 
 ```
 
+
+A -- AutoML<br>自动机器学习 --> Z
 
 
 
@@ -144,7 +120,7 @@ flowchart LR
 ## 基础知识
 
 {{< cards >}}
-  {{< card link="/guide/math_linear_algebra" title="*线性代数*"  subtitle="" icon="matrix" >}}
+  {{< card link="/guide/math_linear_algebra" title="*线性代数*"  subtitle="<br>" icon="matrix" >}}
   {{< card link="/guide/math_calculus" title="微积分"  subtitle="" icon="calculus" >}}
   {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="" icon="probability" >}}
   {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="" icon="statistics" >}}
