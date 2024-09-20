@@ -71,10 +71,6 @@ flowchart LR
 
 ```mermaid
 
-%%{ init: { 'flowchart': { 'curve': 'bumpX', 'styles': {
-   'stroke-width': '1px'
-} } } }%%
-
 flowchart LR
 
     classDef someclassA fill:#58C9B9
@@ -86,25 +82,28 @@ flowchart LR
 
     A(人工智能):::someclassA 
     
-    A -- 基础知识 --> B1(Python\ R):::someclassC -.-> B2(线性代数<br>微积分):::someclassC -.-> B3(概率论<br>数理统计):::someclassC
+    A -- 基础知识 --> B1(Python\ R):::someclassC -.-> B2(线性代数<br>微积分):::someclassC -.-> B3(概率论<br>数理统计):::someclassC -.-> B4(贝叶斯统计):::someclassC
 
     A -- 阶段1：入门 --> C(端到端的<br>机器学习):::someclassA --> C12(机器学习<br>概述) --> C13(机器学习<br>常用算法) --> C14(建模工具<br>Sklearn) --> C15(建模步骤<br>CRISP-DM) --> Y
 
-    A -- 阶段2：进阶 --> D(深度学习):::someclassA --> D11(深度学习<br>概述) --> D12(深度学习<br>算法) --> D13(建模工具<br>keras<br>PyTorch<br>Tensorflow<br>FastAI) --> D14(NLP \ CV) --> Y
+    A -- 阶段2：进阶 --> D(深度学习):::someclassA --> D11(深度学习<br>概述) --> D12(深度学习<br>算法) --> D13(建模工具<br>keras<br>PyTorch<br>Tensorflow<br>FastAI) 
+        D13 --> D141(自然语言<br>NLP) --> Y
+        D13 --> D142(计算机视觉<br>CV) --> Y
 
-    A -- 算法解析 --> E21(算法深度解析):::someclassC  -.- E22(自制框架<br>DeZero):::someclassC
+    A -- 算法解析 --> E21(深度解析<br>算法):::someclassF  -.- E22(自制框架<br>DeZero):::someclassC
 
-    A -- 阶段3：先进 --> F(生成式<br>人工智能):::someclassA --> F11(最新趋势<br>\研究\论文) --> Y
+    A -- 阶段3：先进 --> F(生成式<br>人工智能):::someclassA --> F1(提示工程)
+        F3(从头构建<br>生成模型) --> F4(最新趋势<br>\研究\论文) --> Y
+        F1 --> F21(NLP -> LLM) --> F3
+        F1 --> F22(CV -> VLM) --> F3
 
-    A -- 补充知识 --> G1(集成学习):::someclassB -.- G2(时间序列):::someclassB -.- G3(迁移学习):::someclassB --> Y
+    A -- 补充知识 --> G1(自动 ML<br>AutoML):::someclassB --> G2(集成学习):::someclassB -.- G3(时间序列):::someclassB -.- G4(迁移学习):::someclassB 
 
     Y(练习<br>UCI 数据集<br><br>竞赛<br>kaggle<br>阿里天池<br>...):::someclassA --> Z
 
     Z(模型部署<br>MLOps):::someclassF
-    Z1(《工程基础》<br>版本控制\协作：<br>Git\Github<br><br>操作系统：Linux<br>容器化\ 云：Docker<br><br>ML应用平台：<br>HF Spaces\<br>Streamlit Sharing) --> Z2(《MLOps 概述》<br>部署方式<br>核心概念<br>......) --> Z3(《主要内容》<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> Z4(《管理工具》<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow)
+    Z1(版本控制\协作:<br>Git\Github) -.-> Z12(操作系统:Linux<br>容器化\云:Docker) -.->  Z13(ML应用平台：<br>HF Spaces\<br>Streamlit Sharing) -.-> Z2(《MLOps 概述》<br>部署方式<br>核心概念<br>......) --> Z3(《主要内容》<br>自动化管道<br>监控<br>生命周期管理<br>治理) --> Z4(《管理工具》<br>MLFlow<br>DVC<br>Polyaxon<br>Metaflow<br>Kubeflow)
     Z4 --> Z
-
-    
 
 ```
 
