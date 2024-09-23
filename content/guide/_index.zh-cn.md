@@ -95,6 +95,7 @@ layout: hextra-home
   {{< card link="dl_keras" title="Keras" subtitle="一个用 Python 编写的开源神经网络库。" icon="keras" >}}
   {{< card link="dl_pytorch" title="PyTorch" subtitle="一个基于 Python 的开源机器学习库。" icon="pytorch" >}}
   {{< card link="dl_tensorflow" title="TensorFlow" subtitle="Google Brain 团队开发的一个机器学习和深度学习的开源库。" icon="tensorflow" >}}
+  {{< card link="dl_fastai" title="FastAI" subtitle="fastai 是一个深度学习库，易于使用且快速高效。" icon="package" >}}
   {{< card link="sc_pytorch" title="PyTorch Source Code" subtitle="PyTorch 源码<br>......" icon="pytorch" >}}
   {{< card link="sc_tensorflow" title="TensorFlow Source Code" subtitle="Tensorflow 源码" icon="tensorflow" >}}
 {{< /cards >}}
