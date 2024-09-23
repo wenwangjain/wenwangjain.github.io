@@ -41,8 +41,7 @@ layout: hextra-home
   {{< card link="python/python_pandas" title="pandas" subtitle="一个快速、强大、灵活且易于使用的开源数据分析和操作工具。" icon="pandas" >}}
   {{< card link="python/python_statsmodels" title="Statsmodels" subtitle="Python 统计建模库；用于进行统计测试和统计数据探索。" icon="package" >}}
   {{< card link="python/python_sklearn" title="Sklearn" subtitle="Python 中的机器学习；简单有效的预测数据分析工具。" icon="sklearn" >}}
-  {{< card link="ml_code_python" title="ML Code" subtitle="深入理解机器学习算法，并用 python 简单实现" icon="python" >}}
-  {{< card link="sc_sklearn" title="Sklearn Source Code" subtitle="Sklearn 源码<br>" icon="sklearn" >}}
+  {{< card link="sc_sklearn" title="Sklearn Source Code" subtitle="Sklearn 源码<br><br>" icon="sklearn" >}}
 {{< /cards >}}
 
 <br><br>
