@@ -14,7 +14,12 @@ toc: true
   {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="......" icon="matrix" >}}
   {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="......" icon="probability" >}}
   {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="......" icon="statistics" >}}
+  
+  {{< card link="/guide/math_mathematical_statistics" title="贝叶斯统计" subtitle="......<br>......" icon="statistics" >}}
+
   {{< card link="/guide/python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
   {{< card link="/guide/python/python_modules" title="Python 内置模块" subtitle="python 内置模块\函数，按字母排序。" icon="python" >}}
 {{< /cards >}}
+
+
 
