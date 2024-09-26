@@ -1,6 +1,6 @@
 ---
-title: 3. 深度学习
-weight: 113
+title: 2. 深度学习
+weight: 112
 #next: /step1
 #prev: /docs
 editURL: "https://example.com/edit/this/page"
