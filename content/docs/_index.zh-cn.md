@@ -1,4 +1,3 @@
-
 ---
 title: "文档"
 layout: hextra-home
@@ -10,7 +9,7 @@ layout: hextra-home
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
     title="人工智能 (AI)"
-    subtitle="机器学习，深度学习，强化学习，计算机视觉，自然语言处理，MLOps，生成式人工智能，通用人工智能......<br><br><br>"
+    subtitle="机器学习，深度学习，强化学习，计算机视觉，自然语言处理，MLOps，生成式人工智能，通用人工智能......<br><br>"
     link="ai"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(165, 16, 80, 0.15),hsla(0,0%,100%,0));"
   >}}
@@ -28,4 +27,19 @@ layout: hextra-home
     link="dama"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(165, 16, 80, 0.15),hsla(0,0%,100%,0));"
   >}}
+
+  {{< hextra/feature-card
+    title="数据分析"
+    subtitle="......<br><br><br><br><br>"
+    link="ai"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(165, 16, 80, 0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
+    title="数据可视化"
+    subtitle="......<br><br><br>"
+    link="ai"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(165, 16, 80, 0.15),hsla(0,0%,100%,0));"
+  >}}
+
 {{< /hextra/feature-grid >}}
