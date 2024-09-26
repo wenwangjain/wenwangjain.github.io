@@ -56,6 +56,26 @@ flowchart LR
 
 
 
+## 基础知识
+
+{{< cards >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="......<br>......" icon="calculus" >}}
+  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="......" icon="matrix" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="......" icon="probability" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="......" icon="statistics" >}}
+  
+  {{< card link="/guide/math_mathematical_statistics" title="贝叶斯统计" subtitle="......<br>......" icon="statistics" >}}
+
+  {{< card link="/guide/python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
+  {{< card link="/guide/python/python_modules" title="Python 内置模块" subtitle="python 内置模块\函数，按字母排序。" icon="python" >}}
+{{< /cards >}}
+
+
+
+<br><br><br>
+
+
+
 ## 阶段 1：端到端的机器学习
 
 
@@ -96,6 +116,7 @@ flowchart LR
 2. 学习深度学习常用算法及深度学习方法体系（`CNN`，`RNN`，`LSTM`，`Transformer`，等）；
 3. 学习深度学习框架\工具（`keras`，`PyTorch`，`Tensorflow`，`FastAI`）；
 4. 学习自然语言处理，计算机视觉；
+5. 在 KAggle，阿里天池上练习；
 
 
 <font color=DarkCyan face=Georgia align=right>***补充内容：***</font>
