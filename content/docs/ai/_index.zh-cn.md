@@ -24,7 +24,7 @@ flowchart LR
 
     A(人工智能):::someclassA 
     
-    A -- 基础知识 --> B1(Python\ R):::someclassC -.-> B2(线性代数<br>微积分):::someclassC -.-> B3(概率论<br>数理统计<br>贝叶斯统计):::someclassC
+    A -- 阶段0：基础 --> B(基础知识):::someclassB --> B1(Python\ R):::someclassC -.-> B2(线性代数<br>微积分):::someclassC -.-> B3(概率论<br>数理统计<br>贝叶斯统计):::someclassC
 
     A -- 阶段1：入门 --> C(端到端的<br>机器学习):::someclassA --> C12(机器学习概述) --> C13(机器学习算法) --> C14(建模工具<br>Sklearn) --> C15(建模步骤<br>CRISP-DM) --> Y
         C -.-> C21(自动机器学习<br>Auto ML):::someclassC -.-> C22(大数据集处理):::someclassC
@@ -56,18 +56,19 @@ flowchart LR
 
 
 
-## 基础知识
+
+## 阶段 0：基础知识
 
 {{< cards >}}
-  {{< card link="/guide/math_calculus" title="微积分"  subtitle="......<br>......" icon="calculus" >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="............" icon="calculus" >}}
   {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="......" icon="matrix" >}}
   {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="......" icon="probability" >}}
   {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="......" icon="statistics" >}}
   
-  {{< card link="/guide/math_mathematical_statistics" title="贝叶斯统计" subtitle="......<br>......" icon="statistics" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="贝叶斯统计" subtitle="............" icon="statistics" >}}
 
-  {{< card link="/guide/python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
-  {{< card link="/guide/python/python_modules" title="Python 内置模块" subtitle="python 内置模块\函数，按字母排序。" icon="python" >}}
+  {{< card link="/guide/python/python" title="Python" subtitle="一种解释型、高级的编程语言。" icon="python" >}}
+  {{< card link="/guide/python/python_modules" title="Python 内置模块" subtitle="python 内置模块\函数。" icon="python" >}}
 {{< /cards >}}
 
 
