@@ -43,9 +43,17 @@ math: true
 
 ## 3、工作空间：
 
+{{< callout >}}
+  工作空间可以理解为数据科学项目的目录结构\项目模板。
+  - [Jupyter Notebook 上数据科学项目的 5 个免费模板](https://www.kdnuggets.com/5-free-templates-for-data-science-projects-on-jupyter-notebook)
+  - 《Approaching(Almost) AnyMachineLearningProblem》 Abhishek Thakur
+{{< /callout >}}
+
+
+
 ### 3.1、Abhishek Thakur
 
-{{% details title="<font color=Gray size=3>1. Python *创建工作空间案例 1*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. Python *创建工作空间案例 1*</font>" closed="true" %}}
   ```python {linenos=table, linenostart=1, filename="example 1"}
   import os 
   object_name = 'Kaggle_001_Object-name'
@@ -63,7 +71,7 @@ math: true
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. Python *创建工作空间案例 2*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia  size=3>2. Python *创建工作空间案例 2*</font>" closed="true" %}}
   ```python {linenos=table, linenostart=1, filename="example 2"}
   import os
   
@@ -98,7 +106,7 @@ math: true
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>3. Python *创建 .ipynb 文件*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>3. Python *创建 .ipynb 文件*</font>" closed="true" %}}
   ```python {linenos=table, linenostart=1, filename="创建 .ipynb 文件"}
   import json
   
@@ -122,9 +130,14 @@ math: true
   ```
 {{% /details %}}
 
+
 {{< cards >}}
-  {{< card link="/guide/python/python_modules" title="Python os 模块" icon="back" >}}
+  {{< card link="/guide/python/python_modules" title="Python os Module" icon="back" >}}
 {{< /cards >}}
+
+<br>
+
+
 
 
 
@@ -137,7 +150,7 @@ math: true
 ### 4.1、查看库版本
 
 
-{{% details title="<font color=Gray size=3>1. %load_ext watermark</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. %load_ext watermark</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1}
 # numpy,pandas,matplotlib,sklearn,seaborn version
 %load_ext watermark
@@ -146,7 +159,7 @@ math: true
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. xxx.\_\_version\_\_</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. xxx.\_\_version\_\_</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1}
 # pandas version
 import pandas
@@ -155,7 +168,7 @@ print('pandas: {}'.format(pandas.__version__))
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>3. !python --version</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>3. !python --version</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1}
 # jupyterlab Python version：
 !python --version
@@ -168,7 +181,7 @@ print('pandas: {}'.format(pandas.__version__))
 
 ### 4.2、Python 显示设置
 
-{{% details title="<font color=Gray size=3>1. pandas，numpy，matplotlib *显示设置*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. pandas，numpy，matplotlib *显示设置*</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="create_markdown"}
 import warnings
 warnings.filterwarnings("ignore") # 禁止显示不需要的警告
@@ -216,7 +229,7 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 
 ### 5.1、Sklearn 创建数据
 
-{{% details title="<font color=Gray size=3>1. sklearn.datasets.make_regression() *—— 回归*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. sklearn.datasets.make_regression() *—— 回归*</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.datasets.make_regression()"}
 # Load library
 from sklearn.datasets import make_regression
@@ -242,7 +255,7 @@ features, target, coefficients = make_regression(
 
 
 
-{{% details title="<font color=Gray size=3>2. sklearn.datasets.make_classification() *—— 分类* </font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. sklearn.datasets.make_classification() *—— 分类* </font>" closed="true" %}}
 > 生成具有特定分类特征和复杂分布的数据集
 ```python {linenos=table, linenostart=1, filename="sklearn.datasets.make_classification()"}
 # Load library
@@ -275,7 +288,7 @@ features, target = make_classification(
 
 
 
-{{% details title="<font color=Gray size=3>3. sklearn.datasets.make_blobs() *—— 聚类*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>3. sklearn.datasets.make_blobs() *—— 聚类*</font>" closed="true" %}}
 > 生成简单的聚类型数据集
 ```python {linenos=table, linenostart=1, filename="sklearn.datasets.make_blobs()"}
 # Load library
@@ -309,6 +322,9 @@ features, target = make_blobs(
 
 ### 5.2、Sklearn.datasets
 
+<div style="font-size: 14px; border-left=0; border-right=0">
+  <table>
+
 | ***数据集*** | ***数据集描述*** |
 | :-: | :-: |
 |load_iris          |鸢尾花数据集（分类）。|
@@ -317,8 +333,10 @@ features, target = make_blobs(
 |load_linnerud      |体力锻炼 Linnerud 数据集。|
 |load_wine          |葡萄酒数据集（分类）。|
 |load_breast_cancer |威斯康星州乳腺癌数据集（分类）。|
+  </table>
+</div>
 
-{{% details title="<font color=Gray size=3>1. sklearn.datasets.load_digits()</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. sklearn.datasets.load_digits()</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.datasets.make_blobs()"}
 # Load scikit-learn's datasets
 from sklearn import datasets
@@ -350,7 +368,7 @@ print(digits.keys())
 
 ### 5.3、Dictionary OR Array
 
-{{% details title="<font color=Gray size=3>1. pd.DataFrame(Dictionary)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. pd.DataFrame(Dictionary)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="pd.DataFrame(Dictionary)"}
 import numpy as np
 import pandas as pd
@@ -368,16 +386,23 @@ df2 = pd.DataFrame(directory)
 df2
 ```
 
+<div style="font-size: 14px; border-left=0; border-right=0">
+  <table>
+
 |	A|	B|	C|	D|	E|	F|
 |-|-|-|-|-|-|
 |0	|1.0	|2013-01-02	|1.0	|3	|test	|foo|
 |1	|1.0	|2013-01-02	|1.0	|3	|train  |foo|
 |2	|1.0	|2013-01-02	|1.0	|3	|test	|foo|
 |3	|1.0	|2013-01-02	|1.0	|3	|train  |foo|
+
+  </table>
+</div>
+
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. pd.DataFrame(Array, index, ,columns)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. pd.DataFrame(Array, index, ,columns)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.datasets.make_blobs()"}
 import numpy as np
 import pandas as pd
@@ -396,6 +421,8 @@ df3 = df.copy()
 df3["E"] = ["one", "one", "two", "three", "four", "three"]
 df3
 ```
+<div style="font-size: 14px; border-left=0; border-right=0">
+  <table>
 
 |A|	B|	C|	D|	E|
 |-|-|-|-|-|
@@ -405,8 +432,10 @@ df3
 |2013-01-04 |	-0.436956 |	0.469009	  |-0.054018	|  -0.103285	|three| 
 |2013-01-05	|  -0.865556| 	-0.818567	|  1.058492|	  -1.623429	|four | 
 |2013-01-06 |	-0.172757 |	-1.730109	 | 0.898024	|  -0.339679	  |three| 
-{{% /details %}}
+  </table>
+</div>
 
+{{% /details %}}
 
 
 <br><br>
@@ -414,7 +443,7 @@ df3
 
 ### 5.4、.csv
 
-{{% details title="<font color=Gray size=3>1. pd.read_csv()</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. pd.read_csv()</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="pd.read_csv()"}
 import pandas as pd
 
@@ -430,7 +459,7 @@ df = pd.read_csv(
 
 
 
-{{% details title="<font color=Gray size=3>2. open() + csv.reader()</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. open() + csv.reader()</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="open() + csv.reader()"}
 import numpy as np
 import csv
@@ -449,7 +478,7 @@ iris_data[0:5]
 
 
 
-{{% details title="<font color=Gray size=3>3. open() + np.loadtxt()</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>3. open() + np.loadtxt()</font>" closed="true" %}}
 > ***此函数假定没有标题行，并且所有数据都具有相同的格式***
 ```python {linenos=table, linenostart=1, filename="open() + np.loadtxt()"}
 import numpy as np
@@ -474,7 +503,7 @@ data[0:5]
 
 ### 6.1、纵向合并
 
-{{% details title="<font color=Gray size=3>1. pd.concat([df1, df2], axis=0)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. pd.concat([df1, df2], axis=0)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="pd.concat([df1, df2], axis=0)"}
 import pandas as pd
 
@@ -496,7 +525,7 @@ print(result)
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. np.vstack((a, b))</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. np.vstack((a, b))</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="np.vstack((a, b))"}
 import numpy as np
 
@@ -514,7 +543,7 @@ print(result)
 
 ### 6.2、横向合并
 
-{{% details title="<font color=Gray size=3>1. pd.concat([df1, df2], axis=1)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. pd.concat([df1, df2], axis=1)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="pd.concat([df1, df2], axis=1)"}
 import pandas as pd
 
@@ -531,7 +560,7 @@ result
 
 
 
-{{% details title="<font color=Gray size=3>2. np.hstack((a, b))</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. np.hstack((a, b))</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="np.hstack((a, b))"}
 import numpy as np
 
@@ -551,22 +580,23 @@ result
 
 ## 7、数据抽样：
 
-可用的选定数据可能比您需要使用的要多得多。更多的数据可能导致算法的运行时间更长，计算和内存要求更高。在考虑整个数据集之前，您可以对所选数据进行较小的代表性示例，这些样本对于探索和原型设计解决方案可能要快得多。 在数据上使用的机器学习工具很可能会影响您需要执行的预处理。您可能会重新访问此步骤。
+{{< callout >}}
+  可用的选定数据可能比您需要使用的要多得多。更多的数据可能导致算法的运行时间更长，计算和内存要求更高。在考虑整个数据集之前，您可以对所选数据进行较小的代表性示例，这些样本对于探索和原型设计解决方案可能要快得多。 在数据上使用的机器学习工具很可能会影响您需要执行的预处理。您可能会重新访问此步骤。
+{{< /callout >}}
 
-<br>
 
 ### 7.1、随机抽样
 
-{{% details title="<font color=Gray size=3>1. df.sample(100)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. df.sample(100)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="df.sample(100)"}
-df.sample(100)        # 随机抽取100个样本
+df.sample(100, random_state=42)        # 随机抽取100个样本
 ```
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. df.sample(frac=0.1)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. df.sample(frac=0.1)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="df.sample(frac=0.1)"}
-df.sample(frac=0.1)   # 随机抽取 10% 样本
+df.sample(frac=0.1, random_state=42)   # 随机抽取 10% 样本
 ```
 {{% /details %}}
 
@@ -578,7 +608,7 @@ df.sample(frac=0.1)   # 随机抽取 10% 样本
 
 ### 7.2、放回随机抽样
 
-{{% details title="<font color=Gray size=3>1. sklearn.utils.resample()</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. sklearn.utils.resample()</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.utils.resample()"}
 from sklearn.utils import resample
 
@@ -587,7 +617,7 @@ train = resample(df, replace=True, n_samples=4, random_state=42)
 {{% /details %}}
 
 
-{{% details title="<font color=Gray size=3>2. df.sample(n=3, replace=True)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. df.sample(n=3, replace=True)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.utils.resample()"}
 import pandas as pd
 
@@ -596,7 +626,7 @@ data = {'A': [1, 2, 3, 4, 5]}
 df = pd.DataFrame(data)
 
 # 进行放回随机抽样，抽取 3 个样本
-sampled_df = df.sample(n=3, replace=True)
+sampled_df = df.sample(n=3, replace=True, random_state=42)
 
 print(sampled_df)
 ```
@@ -604,7 +634,7 @@ print(sampled_df)
 
 
 
-{{% details title="<font color=Gray size=3>3. df.sample(frac=0.8, replace=True)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>3. df.sample(frac=0.8, replace=True)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.utils.resample()"}
 import pandas as pd
 
@@ -613,7 +643,7 @@ data = {'A': [1, 2, 3, 4, 5]}
 df = pd.DataFrame(data)
 
 # 进行放回随机抽样，抽取 3 个样本
-sampled_df = df.sample(frac=0.8, replace=True)
+sampled_df = df.sample(frac=0.8, replace=True, random_state=42)
 
 print(sampled_df)
 ```
@@ -627,7 +657,7 @@ print(sampled_df)
 
 ### 7.3、分层随机抽样
 
-{{% details title="<font color=Gray size=3>1. df.groupby('layer').sample(frac=0.5)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. df.groupby('layer').sample(frac=0.5)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="df.groupby('layer').sample(frac=0.5)"}
 import pandas as pd
 
@@ -637,7 +667,7 @@ data = {'layer': ['A', 'A', 'A', 'B', 'B', 'B'],
 df = pd.DataFrame(data)
 
 # 按 'layer' 列进行分层随机抽样，每个层抽取 50% 的样本
-sampled_df = df.groupby('layer').sample(frac=0.5)
+sampled_df = df.groupby('layer').sample(frac=0.5, random_state=42)
 
 print(sampled_df)
 ```
@@ -651,7 +681,7 @@ print(sampled_df)
 
 ## 8、数据拆分\训练\测试：
 
-{{% details title="<font color=Gray size=3>1. sklearn.model_selection.train_test_split</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>1. sklearn.model_selection.train_test_split</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="sklearn.model_selection.train_test_split"}
 from sklearn.model_selection import train_test_split
 
@@ -666,7 +696,7 @@ features_train, features_test, target_train, target_test = train_test_split(
 
 
 
-{{% details title="<font color=Gray size=3>2. df.sample(frac=0.5)</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>2. df.sample(frac=0.5)</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="df.sample(frac=)"}
 import pandas as pd
 
@@ -692,7 +722,7 @@ print(part2)
 
 
 
-{{% details title="<font color=Gray size=3>3. df.sample(frac=0.5) *—分层*</font>" closed="true" %}}
+{{% details title="<font color=Gray face=Georgia size=3>3. df.sample(frac=0.5) *—分层*</font>" closed="true" %}}
 ```python {linenos=table, linenostart=1, filename="df.sample(frac=0.5)"}
 import pandas as pd
 import numpy as np
