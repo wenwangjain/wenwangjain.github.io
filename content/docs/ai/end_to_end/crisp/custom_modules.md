@@ -39,7 +39,6 @@ math: true
       {{< filetree/file name="View.py" >}}
       {{< filetree/file name="EDA.py" >}}
     {{< /filetree/folder >}}
-  {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
 
