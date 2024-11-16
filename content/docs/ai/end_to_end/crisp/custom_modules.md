@@ -32,6 +32,17 @@ math: true
 {{< /filetree/container >}}
 
 
+{{< filetree/container >}}
+  {{< filetree/folder name="my_package" state="open" >}}
+    {{< filetree/folder name="__pycache__" state="close" >}}
+    {{< /filetree/folder >}}
+      {{< filetree/file name="View.py" >}}
+      {{< filetree/file name="EDA.py" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+
 > ***下载解压后后放在 .ipynb 相同的文件夹下面就可以在 jupyter lab 笔记本中使用。***<br>
 > 下载地址如下：
 
