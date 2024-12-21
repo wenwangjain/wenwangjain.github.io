@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataSP – 3. 生成式人工智能</title>
-    <link>http://localhost:13420/docs/ai/generative/</link>
+    <link>http://localhost:14184/docs/ai/generative/</link>
     <description>Recent content in 3. 生成式人工智能 on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:13420/docs/ai/generative/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:14184/docs/ai/generative/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>5.1. 提示工程</title>
-      <link>http://localhost:13420/docs/ai/generative/prompt_engineer/</link>
+      <link>http://localhost:14184/docs/ai/generative/prompt_engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/ai/generative/prompt_engineer/</guid>
+      <guid>http://localhost:14184/docs/ai/generative/prompt_engineer/</guid>
       <description>
         
         
@@ -30,10 +30,10 @@
     
     <item>
       <title>5.2. 自然语言生成</title>
-      <link>http://localhost:13420/docs/ai/generative/nlp/</link>
+      <link>http://localhost:14184/docs/ai/generative/nlp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/ai/generative/nlp/</guid>
+      <guid>http://localhost:14184/docs/ai/generative/nlp/</guid>
       <description>
         
         
@@ -44,10 +44,10 @@
     
     <item>
       <title>5.3. 计算机视觉生成</title>
-      <link>http://localhost:13420/docs/ai/generative/cv/</link>
+      <link>http://localhost:14184/docs/ai/generative/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/ai/generative/cv/</guid>
+      <guid>http://localhost:14184/docs/ai/generative/cv/</guid>
       <description>
         
         
@@ -58,10 +58,10 @@
     
     <item>
       <title>5.4. 构建生成模型</title>
-      <link>http://localhost:13420/docs/ai/generative/build_model/</link>
+      <link>http://localhost:14184/docs/ai/generative/build_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/ai/generative/build_model/</guid>
+      <guid>http://localhost:14184/docs/ai/generative/build_model/</guid>
       <description>
         
         
@@ -72,10 +72,10 @@
     
     <item>
       <title>5.5. 最新研究\论文</title>
-      <link>http://localhost:13420/docs/ai/generative/latest_research/</link>
+      <link>http://localhost:14184/docs/ai/generative/latest_research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/ai/generative/latest_research/</guid>
+      <guid>http://localhost:14184/docs/ai/generative/latest_research/</guid>
       <description>
         
         

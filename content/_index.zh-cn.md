@@ -4,17 +4,22 @@ layout: hextra-home
 width: wide  
 ---
 
+
 {{< hextra/hero-headline >}}
   数据科学实践
 {{< /hextra/hero-headline >}}
 
-<br>
+
+
+
 
 {{< hextra/hero-subtitle >}}
-  关于人工智能，大数据的学习笔记，项目实践
+  关于 AI，大数据的学习笔记，项目实践
 {{< /hextra/hero-subtitle >}}
 
+
 <br>
+
 
 <div style="display: flex; justify-content: center; width: 100%;">
   <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
@@ -24,10 +29,11 @@ width: wide
   </div>
 </div>
 
+
 <br>
 
-<div style="display: flex; justify-content: center; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left;">
+
+
 {{< cards >}}
 
   {{< card link="/project/data_analysis" title="数据分析" subtitle="关于业务的简单数据分析；<br>..." icon="data_analysis" >}}
@@ -50,9 +56,9 @@ width: wide
   {{< card link="/project/computer_vision" title="计算机视觉" subtitle="让计算机能够理解和分析图像和视频内容；<br>..." icon="computer_vision" >}}
   {{< card link="/project/generative_model" title="生成模型" subtitle="生成文字，图片，视频等<br>..." icon="package" >}}
 
+
 {{< /cards >}}
-  </div>
-</div>
+
 
 <br><br>
 

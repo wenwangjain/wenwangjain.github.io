@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataSP – Python</title>
-    <link>http://localhost:13420/guide/python/</link>
+    <link>http://localhost:14184/guide/python/</link>
     <description>Recent content in Python on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:13420/guide/python/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:14184/guide/python/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Python</title>
-      <link>http://localhost:13420/guide/python/python/</link>
+      <link>http://localhost:14184/guide/python/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python/</guid>
+      <guid>http://localhost:14184/guide/python/python/</guid>
       <description>
         
         
@@ -31,10 +31,10 @@
     
     <item>
       <title>Python 内置模块</title>
-      <link>http://localhost:13420/guide/python/python_modules/</link>
+      <link>http://localhost:14184/guide/python/python_modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_modules/</guid>
+      <guid>http://localhost:14184/guide/python/python_modules/</guid>
       <description>
         
         
@@ -298,10 +298,10 @@
     
     <item>
       <title>Python_Numpy</title>
-      <link>http://localhost:13420/guide/python/python_numpy/</link>
+      <link>http://localhost:14184/guide/python/python_numpy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_numpy/</guid>
+      <guid>http://localhost:14184/guide/python/python_numpy/</guid>
       <description>
         
         
@@ -313,10 +313,10 @@
     
     <item>
       <title>Python_Pandas</title>
-      <link>http://localhost:13420/guide/python/python_pandas/</link>
+      <link>http://localhost:14184/guide/python/python_pandas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_pandas/</guid>
+      <guid>http://localhost:14184/guide/python/python_pandas/</guid>
       <description>
         
         
@@ -328,10 +328,10 @@
     
     <item>
       <title>Python_Statsmodels</title>
-      <link>http://localhost:13420/guide/python/python_statsmodels/</link>
+      <link>http://localhost:14184/guide/python/python_statsmodels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_statsmodels/</guid>
+      <guid>http://localhost:14184/guide/python/python_statsmodels/</guid>
       <description>
         
         
@@ -343,10 +343,10 @@
     
     <item>
       <title>Python_Sklearn</title>
-      <link>http://localhost:13420/guide/python/python_sklearn/</link>
+      <link>http://localhost:14184/guide/python/python_sklearn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_sklearn/</guid>
+      <guid>http://localhost:14184/guide/python/python_sklearn/</guid>
       <description>
         
         
@@ -358,10 +358,10 @@
     
     <item>
       <title>Python_SHAP</title>
-      <link>http://localhost:13420/guide/python/python_shap/</link>
+      <link>http://localhost:14184/guide/python/python_shap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_shap/</guid>
+      <guid>http://localhost:14184/guide/python/python_shap/</guid>
       <description>
         
         
@@ -373,10 +373,10 @@
     
     <item>
       <title>Python_Matplotlib</title>
-      <link>http://localhost:13420/guide/python/python_matplotlib/</link>
+      <link>http://localhost:14184/guide/python/python_matplotlib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_matplotlib/</guid>
+      <guid>http://localhost:14184/guide/python/python_matplotlib/</guid>
       <description>
         
         
@@ -1226,10 +1226,10 @@
     
     <item>
       <title>Python_Seaborn</title>
-      <link>http://localhost:13420/guide/python/python_seaborn/</link>
+      <link>http://localhost:14184/guide/python/python_seaborn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_seaborn/</guid>
+      <guid>http://localhost:14184/guide/python/python_seaborn/</guid>
       <description>
         
         
@@ -1241,10 +1241,10 @@
     
     <item>
       <title>Python_Plotly</title>
-      <link>http://localhost:13420/guide/python/python_plotly/</link>
+      <link>http://localhost:14184/guide/python/python_plotly/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_plotly/</guid>
+      <guid>http://localhost:14184/guide/python/python_plotly/</guid>
       <description>
         
         
@@ -1256,10 +1256,10 @@
     
     <item>
       <title>python_Vega-Altair</title>
-      <link>http://localhost:13420/guide/python/python_vega-altair/</link>
+      <link>http://localhost:14184/guide/python/python_vega-altair/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_vega-altair/</guid>
+      <guid>http://localhost:14184/guide/python/python_vega-altair/</guid>
       <description>
         
         
@@ -1271,10 +1271,10 @@
     
     <item>
       <title>python_Streamlit</title>
-      <link>http://localhost:13420/guide/python/python_streamlit/</link>
+      <link>http://localhost:14184/guide/python/python_streamlit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_streamlit/</guid>
+      <guid>http://localhost:14184/guide/python/python_streamlit/</guid>
       <description>
         
         
@@ -1286,10 +1286,10 @@
     
     <item>
       <title>python_Folium</title>
-      <link>http://localhost:13420/guide/python/python_folium/</link>
+      <link>http://localhost:14184/guide/python/python_folium/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_folium/</guid>
+      <guid>http://localhost:14184/guide/python/python_folium/</guid>
       <description>
         
         
@@ -1301,10 +1301,10 @@
     
     <item>
       <title>python_GeoPandas</title>
-      <link>http://localhost:13420/guide/python/python_geopandas/</link>
+      <link>http://localhost:14184/guide/python/python_geopandas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/guide/python/python_geopandas/</guid>
+      <guid>http://localhost:14184/guide/python/python_geopandas/</guid>
       <description>
         
         

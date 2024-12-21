@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataSP – 11. 数据仓库\商务智能</title>
-    <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/</link>
+    <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/</link>
     <description>Recent content in 11. 数据仓库\商务智能 on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>数仓基础 1：范式</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</guid>
       <description>
         
         
@@ -120,10 +120,10 @@
     
     <item>
       <title>数仓基础 2：ER 模型</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</guid>
       <description>
         
         
@@ -134,10 +134,10 @@
     
     <item>
       <title>数仓 1：概述</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</guid>
       <description>
         
         
@@ -148,10 +148,10 @@
     
     <item>
       <title>数仓 2：架构</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</guid>
       <description>
         
         
@@ -162,10 +162,10 @@
     
     <item>
       <title>数仓 3：规范</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</guid>
       <description>
         
         
@@ -176,10 +176,10 @@
     
     <item>
       <title>数仓 4：建模</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</guid>
       <description>
         
         
@@ -190,10 +190,10 @@
     
     <item>
       <title>数仓 5：调度</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</guid>
       <description>
         
         
@@ -204,10 +204,10 @@
     
     <item>
       <title>数仓 6：监控</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</guid>
       <description>
         
         

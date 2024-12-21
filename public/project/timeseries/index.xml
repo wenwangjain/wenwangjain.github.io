@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataSP – 时间序列</title>
-    <link>http://localhost:13420/project/timeseries/</link>
+    <link>http://localhost:14184/project/timeseries/</link>
     <description>Recent content in 时间序列 on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:13420/project/timeseries/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:14184/project/timeseries/index.xml" rel="self" type="application/rss+xml" />
     
     
       

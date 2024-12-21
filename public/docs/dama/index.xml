@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataSP – 数据治理</title>
-    <link>http://localhost:13420/docs/dama/</link>
+    <link>http://localhost:14184/docs/dama/</link>
     <description>Recent content in 数据治理 on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:13420/docs/dama/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:14184/docs/dama/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>01. 数据管理</title>
-      <link>http://localhost:13420/docs/dama/01_data_management/</link>
+      <link>http://localhost:14184/docs/dama/01_data_management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/01_data_management/</guid>
+      <guid>http://localhost:14184/docs/dama/01_data_management/</guid>
       <description>
         
         
@@ -30,10 +30,10 @@
     
     <item>
       <title>02. 数据处理伦理</title>
-      <link>http://localhost:13420/docs/dama/02_data_ethics/</link>
+      <link>http://localhost:14184/docs/dama/02_data_ethics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/02_data_ethics/</guid>
+      <guid>http://localhost:14184/docs/dama/02_data_ethics/</guid>
       <description>
         
         
@@ -44,10 +44,10 @@
     
     <item>
       <title>03. 数据治理</title>
-      <link>http://localhost:13420/docs/dama/03_data_governance/</link>
+      <link>http://localhost:14184/docs/dama/03_data_governance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/03_data_governance/</guid>
+      <guid>http://localhost:14184/docs/dama/03_data_governance/</guid>
       <description>
         
         
@@ -58,10 +58,10 @@
     
     <item>
       <title>04. 数据架构</title>
-      <link>http://localhost:13420/docs/dama/04_data_architecture/</link>
+      <link>http://localhost:14184/docs/dama/04_data_architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/04_data_architecture/</guid>
+      <guid>http://localhost:14184/docs/dama/04_data_architecture/</guid>
       <description>
         
         
@@ -72,10 +72,10 @@
     
     <item>
       <title>05. 数据建模和设计</title>
-      <link>http://localhost:13420/docs/dama/05_data_modeling_and_design/</link>
+      <link>http://localhost:14184/docs/dama/05_data_modeling_and_design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/05_data_modeling_and_design/</guid>
+      <guid>http://localhost:14184/docs/dama/05_data_modeling_and_design/</guid>
       <description>
         
         
@@ -86,10 +86,10 @@
     
     <item>
       <title>06. 数据存储和操作</title>
-      <link>http://localhost:13420/docs/dama/06_data_storage_and_operations/</link>
+      <link>http://localhost:14184/docs/dama/06_data_storage_and_operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/06_data_storage_and_operations/</guid>
+      <guid>http://localhost:14184/docs/dama/06_data_storage_and_operations/</guid>
       <description>
         
         
@@ -100,10 +100,10 @@
     
     <item>
       <title>07. 数据安全</title>
-      <link>http://localhost:13420/docs/dama/07_data_security/</link>
+      <link>http://localhost:14184/docs/dama/07_data_security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/07_data_security/</guid>
+      <guid>http://localhost:14184/docs/dama/07_data_security/</guid>
       <description>
         
         
@@ -114,10 +114,10 @@
     
     <item>
       <title>08. 数据整合与互操作</title>
-      <link>http://localhost:13420/docs/dama/08_data_integration_interoperability/</link>
+      <link>http://localhost:14184/docs/dama/08_data_integration_interoperability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/08_data_integration_interoperability/</guid>
+      <guid>http://localhost:14184/docs/dama/08_data_integration_interoperability/</guid>
       <description>
         
         
@@ -128,10 +128,10 @@
     
     <item>
       <title>09. 文档和内容管理</title>
-      <link>http://localhost:13420/docs/dama/09_document_and_content_management/</link>
+      <link>http://localhost:14184/docs/dama/09_document_and_content_management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/09_document_and_content_management/</guid>
+      <guid>http://localhost:14184/docs/dama/09_document_and_content_management/</guid>
       <description>
         
         
@@ -142,10 +142,10 @@
     
     <item>
       <title>10. 参考数据和主数据管理</title>
-      <link>http://localhost:13420/docs/dama/10_reference_and_master_data_management/</link>
+      <link>http://localhost:14184/docs/dama/10_reference_and_master_data_management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/10_reference_and_master_data_management/</guid>
+      <guid>http://localhost:14184/docs/dama/10_reference_and_master_data_management/</guid>
       <description>
         
         
@@ -156,10 +156,10 @@
     
     <item>
       <title>11. 数据仓库\商务智能</title>
-      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/</link>
+      <link>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/</guid>
+      <guid>http://localhost:14184/docs/dama/11_data_warehousing_and_business_intelligence/</guid>
       <description>
         
         
@@ -170,10 +170,10 @@
     
     <item>
       <title>12. 元数据管理</title>
-      <link>http://localhost:13420/docs/dama/12_metadata_managtement/</link>
+      <link>http://localhost:14184/docs/dama/12_metadata_managtement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/12_metadata_managtement/</guid>
+      <guid>http://localhost:14184/docs/dama/12_metadata_managtement/</guid>
       <description>
         
         
@@ -184,10 +184,10 @@
     
     <item>
       <title>13. 数据质量管理</title>
-      <link>http://localhost:13420/docs/dama/13_data_quality_management/</link>
+      <link>http://localhost:14184/docs/dama/13_data_quality_management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:13420/docs/dama/13_data_quality_management/</guid>
+      <guid>http://localhost:14184/docs/dama/13_data_quality_management/</guid>
       <description>
         
         
