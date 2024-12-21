@@ -170,17 +170,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 ;
-document.querySelectorAll('.tabs-toggle').forEach(function (button) {
+document.querySelectorAll('.hextra-tabs-toggle').forEach(function (button) {
   button.addEventListener('click', function (e) {
     // set parent tabs to unselected
-    const tabs = Array.from(e.target.parentElement.querySelectorAll('.tabs-toggle'));
+    const tabs = Array.from(e.target.parentElement.querySelectorAll('.hextra-tabs-toggle'));
     tabs.map(tab => tab.dataset.state = '');
 
     // set current tab to selected
     e.target.dataset.state = 'selected';
 
     // set all panels to unselected
-    const panelsContainer = e.target.parentElement.nextElementSibling;
+    const panelsContainer = e.target.parentElement.parentElement.nextElementSibling;
     Array.from(panelsContainer.children).forEach(function (panel) {
       panel.dataset.state = '';
     });
@@ -238,6 +238,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ;
 document.addEventListener("DOMContentLoaded", function () {
+  scrollToActiveItem();
+  enableCollapsibles();
+});
+
+function enableCollapsibles() {
   const buttons = document.querySelectorAll(".hextra-sidebar-collapsible-button");
   buttons.forEach(function (button) {
     button.addEventListener("click", function (e) {
@@ -248,7 +253,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
+
+function scrollToActiveItem() {
+  const sidebarScrollbar = document.querySelector("aside.sidebar-container > .hextra-scrollbar");
+  const activeItems = document.querySelectorAll(".sidebar-active-item");
+  const visibleActiveItem = Array.from(activeItems).find(function (activeItem) {
+    return activeItem.getBoundingClientRect().height > 0;
+  });
+
+  if (!visibleActiveItem) {
+    return;
+  }
+
+  const yOffset = visibleActiveItem.clientHeight;
+  const yDistance = visibleActiveItem.getBoundingClientRect().top - sidebarScrollbar.getBoundingClientRect().top;
+  sidebarScrollbar.scrollTo({
+    behavior: "instant",
+    top: yDistance - yOffset
+  });
+}
 
 ;
 // Back to top button

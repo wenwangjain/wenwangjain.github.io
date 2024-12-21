@@ -1,44 +1,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DataSP – 项目</title>
-    <link>http://localhost:1313/project/regression/</link>
-    <description>Recent content in 项目 on DataSP</description>
+    <title>DataSP – 回归</title>
+    <link>http://localhost:13420/project/regression/</link>
+    <description>Recent content in 回归 on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:1313/project/regression/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:13420/project/regression/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
-    
-    <item>
-      <title>iris\鸢尾花</title>
-      <link>http://localhost:1313/project/regression/class_iris/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/project/regression/class_iris/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>标题</title>
-      <link>http://localhost:1313/project/regression/test1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/project/regression/test1/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
     
   </channel>
 </rss>

@@ -3,10 +3,18 @@ const colors = require('tailwindcss/colors')
 const makePrimaryColor =
   l =>
     ({ opacityValue }) => {
-      return (
-        `hsl(var(--primary-hue) var(--primary-saturation) ${l}%` +
-        (opacityValue ? ` / ${opacityValue})` : ')')
-      )
+      let result = "hsl(var(--primary-hue) var(--primary-saturation) ";
+        if (l <= 50) {
+          // Interpolate between lower values
+          result+= `calc(calc(var(--primary-lightness) / 50) * ${l})`;
+        }
+        else {
+          // Interpolate between higher values
+          result+= `calc(var(--primary-lightness) + calc(calc(100% - var(--primary-lightness)) / 50) * ${l - 50})`;
+        }
+
+      result += (opacityValue ? ` / ${opacityValue})` : ')');
+      return result;
     }
 
 /** @type {import('tailwindcss').Config} */
@@ -53,8 +61,11 @@ module.exports = {
       neutral: colors.neutral,
       red: colors.red,
       orange: colors.orange,
+      green: colors.green,
+      indigo: colors.indigo,
       blue: colors.blue,
       yellow: colors.yellow,
+      amber: colors.amber,
       primary: {
         50: makePrimaryColor(97),
         100: makePrimaryColor(94),

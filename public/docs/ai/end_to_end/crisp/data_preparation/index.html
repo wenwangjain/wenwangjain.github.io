@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="zh-cn"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=13420&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
@@ -10,55 +10,747 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-
-  <title>【4】数据准备 – DataSP</title>
-  <meta name="description" content="1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
+<title>【4】数据准备 – DataSP</title>
+  <meta name="description" content="
+1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
 以下是一些数据常见问题：
 过时和坈余字； 缺失值； 异常值/离群值； 其形式不适合数据挖掘模型的数据； 与策略或常识不一致的值。 两个常见的数据预处理内容是：
 数据清理 ：删除或修复缺失（重复\异常\不一致\不规范等）的数据。此外，某些属性中可能存在敏感信息，这些属性可能需要匿名化或从数据中完全删除。 数据转换： 通过使用缩放、属性分解和属性聚合工程，转换准备好用于学习的预处理数据。 2. 特征工程：选择或重塑对分析问题有用的特征，可以提高分析准确率。
-特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd." />
-
-  
-    <link rel="canonical" href="http://localhost:1313/docs/ai/end_to_end/crisp/data_preparation/" itemprop="url" />
-  
-
-  
+特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd.DataFrame(data) df ID Name City Age Income 0 1 Alice New York 25 50000 1 2 Bob London 30 60000 2 3 Charlie Paris 35 70000 3 4 Wu new york 25 40000 4 5 Zhang PAR 30 30000 5 6 Wang China 35 90000 1 2 3 df = df.set_index(df[&#39;ID&#39;]) df = df.drop(&#39;ID&#39;, axis=1) df ID Name City Age Income 1 Alice New York 25 50000 2 Bob London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 2. 通过索引修改值：df.iloc[0,0]=&#39;new_value&#39; 1 2 3 # 通过索引修改值 df.iloc[0,0]=&#39;《China》&#39; df ID Name City Age Income 1 《China》 New York 25 50000 2 Bob London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 3. 通过标签修改值：df.loc[2,&#39;Column_Name&#39;]=&#39;new_value&#39; 1 2 3 # 通过标签修改值 df.loc[2,&#39;Name&#39;]=&#39;《Bob》&#39; df ID Name City Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 4. 通过替换修改值：df\df[].replace(replace_value, replace_to, inplace=True) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 单个列，单个值，替换 def replace_value_one_to_one(df, column, replace_value, replace_to): df[column].replace(replace_value, replace_to, inplace=True) return df # 单个列，多个值，替换 def replace_value_more_to_one(df, column, replace_value_array, replace_to): for i in replace_value_array: df[column].replace(i, replace_to, inplace=True) return df # 全部列，单个值/多个值，替换 def replace_value_df(df, replace_value_array, replace_to): for i in replace_value_array: df.replace(i, replace_to, inplace=True) return df df = replace_value_one_to_one(df, &#39;Name&#39;, &#39;Charlie&#39;, &#39;《Zuo》&#39;) df ID Name City Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 5. 修改多个列名称：df.rename(columns={&#39;col1&#39;:&#39;new_name1&#39;, &#39;col2&#39;:&#39;new_name2&#39;}, inplace=True) 1 df.rename(columns={&#39;Name&#39;:&#39;name&#39;, &#39;City&#39;:&#39;city&#39;}, inplace=True) ID 《name》 《city》 Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 6. 修改全部列名称：df.columns = [&#39;&#39;, &#39;&#39;,...] 1 2 3 name = [&#39;name&#39;, &#39;city&#39;, &#39;age&#39;, &#39;income&#39;] df.columns = name df ID name city age income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 7. 修改列数据类型：df1[&#39;age&#39;].astype(&#39;object&#39;)、df.astype({&#39;col1&#39;:&#39;int32&#39;}) 1 2 3 4 5 6 7 df1 = df.copy() df1[&#39;age&#39;] = df1[&#39;age&#39;].astype(&#39;object&#39;) # 修改多列数据类型 # df.astype({&#39;col1&#39;:&#39;int32&#39;}) # 指定字段转指定类型 df[&#39;age&#39;].info(), df1[&#39;age&#39;].info() &lt;class &#39;pandas.core.series.Series&#39;&gt; Index: 6 entries, 1 to 6 Series name: age Non-Null Count Dtype -------------- ----- 6 non-null int64 dtypes: int64(1) memory usage: 268.0 bytes &lt;class &#39;pandas.core.series.Series&#39;&gt; Index: 6 entries, 1 to 6 Series name: age Non-Null Count Dtype -------------- ----- 6 non-null object dtypes: object(1) memory usage: 268.0&#43; bytes &lt;button class=“hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50” title=“Copy code”" /><link rel="canonical" href="http://localhost:13420/docs/ai/end_to_end/crisp/data_preparation/" itemprop="url" />
 
 <meta property="og:title" content="【4】数据准备" />
-<meta property="og:description" content="1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
-以下是一些数据常见问题：
-过时和坈余字； 缺失值； 异常值/离群值； 其形式不适合数据挖掘模型的数据； 与策略或常识不一致的值。 两个常见的数据预处理内容是：
-数据清理 ：删除或修复缺失（重复\异常\不一致\不规范等）的数据。此外，某些属性中可能存在敏感信息，这些属性可能需要匿名化或从数据中完全删除。 数据转换： 通过使用缩放、属性分解和属性聚合工程，转换准备好用于学习的预处理数据。 2. 特征工程：选择或重塑对分析问题有用的特征，可以提高分析准确率。
-特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd." />
+<meta property="og:description" content="
+1、主要内容：
+    1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
+
+  以下是一些数据常见问题：
+
+过时和坈余字；
+缺失值；
+异常值/离群值；
+其形式不适合数据挖掘模型的数据；
+与策略或常识不一致的值。
+
+
+
+
+  两个常见的数据预处理内容是：
+
+数据清理 ：删除或修复缺失（重复\异常\不一致\不规范等）的数据。此外，某些属性中可能存在敏感信息，这些属性可能需要匿名化或从数据中完全删除。
+数据转换： 通过使用缩放、属性分解和属性聚合工程，转换准备好用于学习的预处理数据。
+
+
+
+
+2. 特征工程：选择或重塑对分析问题有用的特征，可以提高分析准确率。
+
+  
+特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。
+特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。
+
+
+
+
+2、预处理
+    2.1、初步整理：
+    
+  
+    1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;])
+  
+  
+    
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+
+
+import numpy as np
+import pandas as pd
+
+data = {
+    &#39;ID&#39;: [1,2,3,4,5,6]
+    ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;]
+    ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;]
+    ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35]
+    ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000]
+}
+
+df = pd.DataFrame(data)
+df
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          
+          ID
+          Name
+          City
+          Age
+          Income
+      
+  
+  
+      
+          0
+          1
+          Alice
+          New York
+          25
+          50000
+      
+      
+          1
+          2
+          Bob
+          London
+          30
+          60000
+      
+      
+          2
+          3
+          Charlie
+          Paris
+          35
+          70000
+      
+      
+          3
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          4
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          5
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+
+
+
+1
+2
+3
+
+
+df = df.set_index(df[&#39;ID&#39;])
+df = df.drop(&#39;ID&#39;, axis=1)
+df
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          ID
+          Name
+          City
+          Age
+          Income
+      
+  
+  
+      
+          1
+          Alice
+          New York
+          25
+          50000
+      
+      
+          2
+          Bob
+          London
+          30
+          60000
+      
+      
+          3
+          Charlie
+          Paris
+          35
+          70000
+      
+      
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+  
+
+
+
+  
+    2. 通过索引修改值：df.iloc[0,0]=&#39;new_value&#39;
+  
+  
+    
+
+
+1
+2
+3
+
+
+# 通过索引修改值
+df.iloc[0,0]=&#39;《China》&#39;
+df
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          ID
+          Name
+          City
+          Age
+          Income
+      
+  
+  
+      
+          1
+          《China》
+          New York
+          25
+          50000
+      
+      
+          2
+          Bob
+          London
+          30
+          60000
+      
+      
+          3
+          Charlie
+          Paris
+          35
+          70000
+      
+      
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+  
+
+
+  
+    3. 通过标签修改值：df.loc[2,&#39;Column_Name&#39;]=&#39;new_value&#39;
+  
+  
+    
+
+
+1
+2
+3
+
+
+# 通过标签修改值
+df.loc[2,&#39;Name&#39;]=&#39;《Bob》&#39;
+df
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          ID
+          Name
+          City
+          Age
+          Income
+      
+  
+  
+      
+          1
+          《China》
+          New York
+          25
+          50000
+      
+      
+          2
+          《Bob》
+          London
+          30
+          60000
+      
+      
+          3
+          Charlie
+          Paris
+          35
+          70000
+      
+      
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+  
+
+
+  
+    4. 通过替换修改值：df\df[].replace(replace_value, replace_to, inplace=True)
+  
+  
+    
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+
+# 单个列，单个值，替换
+def replace_value_one_to_one(df, column, replace_value, replace_to):
+    df[column].replace(replace_value, replace_to, inplace=True)
+    return df
+
+# 单个列，多个值，替换
+def replace_value_more_to_one(df, column, replace_value_array, replace_to):
+    for i in replace_value_array:
+        df[column].replace(i, replace_to, inplace=True)
+    return df
+
+# 全部列，单个值/多个值，替换
+def replace_value_df(df, replace_value_array, replace_to):
+    for i in replace_value_array:
+        df.replace(i, replace_to, inplace=True)
+    return df
+
+
+df = replace_value_one_to_one(df, &#39;Name&#39;, &#39;Charlie&#39;, &#39;《Zuo》&#39;)
+df
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          ID
+          Name
+          City
+          Age
+          Income
+      
+  
+  
+      
+          1
+          《China》
+          New York
+          25
+          50000
+      
+      
+          2
+          《Bob》
+          London
+          30
+          60000
+      
+      
+          3
+          《Zuo》
+          Paris
+          35
+          70000
+      
+      
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+  
+
+
+
+  
+    5. 修改多个列名称：df.rename(columns={&#39;col1&#39;:&#39;new_name1&#39;, &#39;col2&#39;:&#39;new_name2&#39;}, inplace=True)
+  
+  
+    
+
+
+1
+
+
+df.rename(columns={&#39;Name&#39;:&#39;name&#39;, &#39;City&#39;:&#39;city&#39;}, inplace=True)
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          ID
+          《name》
+          《city》
+          Age
+          Income
+      
+  
+  
+      
+          1
+          《China》
+          New York
+          25
+          50000
+      
+      
+          2
+          《Bob》
+          London
+          30
+          60000
+      
+      
+          3
+          《Zuo》
+          Paris
+          35
+          70000
+      
+      
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+  
+
+
+  
+    6. 修改全部列名称：df.columns = [&#39;&#39;, &#39;&#39;,...]
+  
+  
+    
+
+
+1
+2
+3
+
+
+name = [&#39;name&#39;, &#39;city&#39;, &#39;age&#39;, &#39;income&#39;]
+df.columns = name
+df
+
+
+  
+    
+    
+  
+
+
+
+  
+      
+          ID
+          name
+          city
+          age
+          income
+      
+  
+  
+      
+          1
+          《China》
+          New York
+          25
+          50000
+      
+      
+          2
+          《Bob》
+          London
+          30
+          60000
+      
+      
+          3
+          《Zuo》
+          Paris
+          35
+          70000
+      
+      
+          4
+          Wu
+          new york
+          25
+          40000
+      
+      
+          5
+          Zhang
+          PAR
+          30
+          30000
+      
+      
+          6
+          Wang
+          China
+          35
+          90000
+      
+  
+
+  
+
+
+
+  
+    7. 修改列数据类型：df1[&#39;age&#39;].astype(&#39;object&#39;)、df.astype({&#39;col1&#39;:&#39;int32&#39;})
+  
+  
+    
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+df1 = df.copy()
+
+df1[&#39;age&#39;] = df1[&#39;age&#39;].astype(&#39;object&#39;)
+# 修改多列数据类型
+# df.astype({&#39;col1&#39;:&#39;int32&#39;}) # 指定字段转指定类型
+
+df[&#39;age&#39;].info(), df1[&#39;age&#39;].info()
+
+
+  
+    
+    
+  
+
+
+
+&lt;class &#39;pandas.core.series.Series&#39;&gt;
+Index: 6 entries, 1 to 6
+Series name: age
+Non-Null Count  Dtype
+--------------  -----
+6 non-null      int64
+dtypes: int64(1)
+memory usage: 268.0 bytes
+
+&lt;class &#39;pandas.core.series.Series&#39;&gt;
+Index: 6 entries, 1 to 6
+Series name: age
+Non-Null Count  Dtype 
+--------------  ----- 
+6 non-null      object
+dtypes: object(1)
+memory usage: 268.0&#43; bytes
+&lt;button
+class=&ldquo;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&rdquo;
+title=&ldquo;Copy code&rdquo;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/docs/ai/end_to_end/crisp/data_preparation/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:13420/docs/ai/end_to_end/crisp/data_preparation/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="【4】数据准备">
-<meta itemprop="description" content="1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
+  <meta itemprop="description" content="1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
 以下是一些数据常见问题：
 过时和坈余字； 缺失值； 异常值/离群值； 其形式不适合数据挖掘模型的数据； 与策略或常识不一致的值。 两个常见的数据预处理内容是：
 数据清理 ：删除或修复缺失（重复\异常\不一致\不规范等）的数据。此外，某些属性中可能存在敏感信息，这些属性可能需要匿名化或从数据中完全删除。 数据转换： 通过使用缩放、属性分解和属性聚合工程，转换准备好用于学习的预处理数据。 2. 特征工程：选择或重塑对分析问题有用的特征，可以提高分析准确率。
-特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd.">
-
-<meta itemprop="wordCount" content="1527">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="【4】数据准备"/>
-<meta name="twitter:description" content="1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
+特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd.DataFrame(data) df ID Name City Age Income 0 1 Alice New York 25 50000 1 2 Bob London 30 60000 2 3 Charlie Paris 35 70000 3 4 Wu new york 25 40000 4 5 Zhang PAR 30 30000 5 6 Wang China 35 90000 1 2 3 df = df.set_index(df[&#39;ID&#39;]) df = df.drop(&#39;ID&#39;, axis=1) df ID Name City Age Income 1 Alice New York 25 50000 2 Bob London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 2. 通过索引修改值：df.iloc[0,0]=&#39;new_value&#39; 1 2 3 # 通过索引修改值 df.iloc[0,0]=&#39;《China》&#39; df ID Name City Age Income 1 《China》 New York 25 50000 2 Bob London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 3. 通过标签修改值：df.loc[2,&#39;Column_Name&#39;]=&#39;new_value&#39; 1 2 3 # 通过标签修改值 df.loc[2,&#39;Name&#39;]=&#39;《Bob》&#39; df ID Name City Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 4. 通过替换修改值：df\df[].replace(replace_value, replace_to, inplace=True) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 单个列，单个值，替换 def replace_value_one_to_one(df, column, replace_value, replace_to): df[column].replace(replace_value, replace_to, inplace=True) return df # 单个列，多个值，替换 def replace_value_more_to_one(df, column, replace_value_array, replace_to): for i in replace_value_array: df[column].replace(i, replace_to, inplace=True) return df # 全部列，单个值/多个值，替换 def replace_value_df(df, replace_value_array, replace_to): for i in replace_value_array: df.replace(i, replace_to, inplace=True) return df df = replace_value_one_to_one(df, &#39;Name&#39;, &#39;Charlie&#39;, &#39;《Zuo》&#39;) df ID Name City Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 5. 修改多个列名称：df.rename(columns={&#39;col1&#39;:&#39;new_name1&#39;, &#39;col2&#39;:&#39;new_name2&#39;}, inplace=True) 1 df.rename(columns={&#39;Name&#39;:&#39;name&#39;, &#39;City&#39;:&#39;city&#39;}, inplace=True) ID 《name》 《city》 Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 6. 修改全部列名称：df.columns = [&#39;&#39;, &#39;&#39;,...] 1 2 3 name = [&#39;name&#39;, &#39;city&#39;, &#39;age&#39;, &#39;income&#39;] df.columns = name df ID name city age income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 7. 修改列数据类型：df1[&#39;age&#39;].astype(&#39;object&#39;)、df.astype({&#39;col1&#39;:&#39;int32&#39;}) 1 2 3 4 5 6 7 df1 = df.copy() df1[&#39;age&#39;] = df1[&#39;age&#39;].astype(&#39;object&#39;) # 修改多列数据类型 # df.astype({&#39;col1&#39;:&#39;int32&#39;}) # 指定字段转指定类型 df[&#39;age&#39;].info(), df1[&#39;age&#39;].info() &lt;class &#39;pandas.core.series.Series&#39;&gt; Index: 6 entries, 1 to 6 Series name: age Non-Null Count Dtype -------------- ----- 6 non-null int64 dtypes: int64(1) memory usage: 268.0 bytes &lt;class &#39;pandas.core.series.Series&#39;&gt; Index: 6 entries, 1 to 6 Series name: age Non-Null Count Dtype -------------- ----- 6 non-null object dtypes: object(1) memory usage: 268.0&#43; bytes &lt;button class=“hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50” title=“Copy code”">
+  <meta itemprop="wordCount" content="1527">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="【4】数据准备">
+  <meta name="twitter:description" content="1、主要内容： 1. 预处理：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。
 以下是一些数据常见问题：
 过时和坈余字； 缺失值； 异常值/离群值； 其形式不适合数据挖掘模型的数据； 与策略或常识不一致的值。 两个常见的数据预处理内容是：
 数据清理 ：删除或修复缺失（重复\异常\不一致\不规范等）的数据。此外，某些属性中可能存在敏感信息，这些属性可能需要匿名化或从数据中完全删除。 数据转换： 通过使用缩放、属性分解和属性聚合工程，转换准备好用于学习的预处理数据。 2. 特征工程：选择或重塑对分析问题有用的特征，可以提高分析准确率。
-特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd."/>
+特征提取：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。 特征选择：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。 2、预处理 2.1、初步整理： 1. 重新设置行索引：df.set_index(dataframe[&#39;Name&#39;]) 1 2 3 4 5 6 7 8 9 10 11 12 13 import numpy as np import pandas as pd data = { &#39;ID&#39;: [1,2,3,4,5,6] ,&#39;Name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Wu&#39;, &#39;Zhang&#39;, &#39;Wang&#39;] ,&#39;City&#39;: [&#39;New York&#39;, &#39;London&#39;, &#39;Paris&#39;, &#39;new york&#39;, &#39;PAR&#39;, &#39;China&#39;] ,&#39;Age&#39;: [25, 30, 35, 25, 30, 35] ,&#39;Income&#39;: [50000, 60000, 70000, 40000, 30000, 90000] } df = pd.DataFrame(data) df ID Name City Age Income 0 1 Alice New York 25 50000 1 2 Bob London 30 60000 2 3 Charlie Paris 35 70000 3 4 Wu new york 25 40000 4 5 Zhang PAR 30 30000 5 6 Wang China 35 90000 1 2 3 df = df.set_index(df[&#39;ID&#39;]) df = df.drop(&#39;ID&#39;, axis=1) df ID Name City Age Income 1 Alice New York 25 50000 2 Bob London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 2. 通过索引修改值：df.iloc[0,0]=&#39;new_value&#39; 1 2 3 # 通过索引修改值 df.iloc[0,0]=&#39;《China》&#39; df ID Name City Age Income 1 《China》 New York 25 50000 2 Bob London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 3. 通过标签修改值：df.loc[2,&#39;Column_Name&#39;]=&#39;new_value&#39; 1 2 3 # 通过标签修改值 df.loc[2,&#39;Name&#39;]=&#39;《Bob》&#39; df ID Name City Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 Charlie Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 4. 通过替换修改值：df\df[].replace(replace_value, replace_to, inplace=True) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 单个列，单个值，替换 def replace_value_one_to_one(df, column, replace_value, replace_to): df[column].replace(replace_value, replace_to, inplace=True) return df # 单个列，多个值，替换 def replace_value_more_to_one(df, column, replace_value_array, replace_to): for i in replace_value_array: df[column].replace(i, replace_to, inplace=True) return df # 全部列，单个值/多个值，替换 def replace_value_df(df, replace_value_array, replace_to): for i in replace_value_array: df.replace(i, replace_to, inplace=True) return df df = replace_value_one_to_one(df, &#39;Name&#39;, &#39;Charlie&#39;, &#39;《Zuo》&#39;) df ID Name City Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 5. 修改多个列名称：df.rename(columns={&#39;col1&#39;:&#39;new_name1&#39;, &#39;col2&#39;:&#39;new_name2&#39;}, inplace=True) 1 df.rename(columns={&#39;Name&#39;:&#39;name&#39;, &#39;City&#39;:&#39;city&#39;}, inplace=True) ID 《name》 《city》 Age Income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 6. 修改全部列名称：df.columns = [&#39;&#39;, &#39;&#39;,...] 1 2 3 name = [&#39;name&#39;, &#39;city&#39;, &#39;age&#39;, &#39;income&#39;] df.columns = name df ID name city age income 1 《China》 New York 25 50000 2 《Bob》 London 30 60000 3 《Zuo》 Paris 35 70000 4 Wu new york 25 40000 5 Zhang PAR 30 30000 6 Wang China 35 90000 7. 修改列数据类型：df1[&#39;age&#39;].astype(&#39;object&#39;)、df.astype({&#39;col1&#39;:&#39;int32&#39;}) 1 2 3 4 5 6 7 df1 = df.copy() df1[&#39;age&#39;] = df1[&#39;age&#39;].astype(&#39;object&#39;) # 修改多列数据类型 # df.astype({&#39;col1&#39;:&#39;int32&#39;}) # 指定字段转指定类型 df[&#39;age&#39;].info(), df1[&#39;age&#39;].info() &lt;class &#39;pandas.core.series.Series&#39;&gt; Index: 6 entries, 1 to 6 Series name: age Non-Null Count Dtype -------------- ----- 6 non-null int64 dtypes: int64(1) memory usage: 268.0 bytes &lt;class &#39;pandas.core.series.Series&#39;&gt; Index: 6 entries, 1 to 6 Series name: age Non-Null Count Dtype -------------- ----- 6 non-null object dtypes: object(1) memory usage: 268.0&#43; bytes &lt;button class=“hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50” title=“Copy code”">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
   <link href="/css/custom.css" rel="stylesheet" />
-
-
-
-  
 
 
   <script>
@@ -122,13 +814,6 @@
             class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
           >
             <span class="hx-text-center">关于</span>
-          </a><a
-            title="博客"
-            href="/blog"
-            
-            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
-          >
-            <span class="hx-text-center">博客</span>
           </a><div class="search-wrapper hx-relative md:hx-w-64">
   <div class="hx-relative hx-flex hx-items-center hx-text-gray-900 contrast-more:hx-text-gray-800 dark:hx-text-gray-300 contrast-more:dark:hx-text-gray-300">
     <input
@@ -153,7 +838,7 @@
   </div>
 </div>
 
-          <a class="hx-p-2 hx-text-current" target="_blank" rel="noreferer" href="https://github.com/wenwangjain/wenwangjain.github.io" title="GitHub"><svg height=24 xmlns="http://www.w3.org/2000/svg" width="2em" height="1.5em" viewBox="0 0 128 128"><g fill="#181616"><path fill-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388c0 26.682 17.303 49.317 41.297 57.303c3.017.56 4.125-1.31 4.125-2.905c0-1.44-.056-6.197-.082-11.243c-16.8 3.653-20.345-7.125-20.345-7.125c-2.747-6.98-6.705-8.836-6.705-8.836c-5.48-3.748.413-3.67.413-3.67c6.063.425 9.257 6.223 9.257 6.223c5.386 9.23 14.127 6.562 17.573 5.02c.542-3.903 2.107-6.568 3.834-8.076c-13.413-1.525-27.514-6.704-27.514-29.843c0-6.593 2.36-11.98 6.223-16.21c-.628-1.52-2.695-7.662.584-15.98c0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033c11.526-7.813 16.59-6.19 16.59-6.19c3.287 8.317 1.22 14.46.593 15.98c3.872 4.23 6.215 9.617 6.215 16.21c0 23.194-14.127 28.3-27.574 29.796c2.167 1.874 4.097 5.55 4.097 11.183c0 8.08-.07 14.583-.07 16.572c0 1.607 1.088 3.49 4.148 2.897c23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" clip-rule="evenodd"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185c-.44-.196-.685-.605-.543-.906c.13-.31.603-.395 1.04-.188c.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28c-.396-.42-.47-.983-.177-1.254c.298-.266.844-.14 1.24.28c.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52c-.37-.538-.37-1.183.01-1.44c.373-.258.97-.025 1.35.507c.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23c-.527-.487-.674-1.18-.343-1.544c.336-.366 1.045-.264 1.564.23c.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486c-.683-.207-1.13-.76-.99-1.238c.14-.477.823-.7 1.512-.485c.683.206 1.13.756.988 1.237m4.943.361c.017.498-.563.91-1.28.92c-.723.017-1.308-.387-1.315-.877c0-.503.568-.91 1.29-.924c.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117c-.7.13-1.35-.172-1.44-.653c-.086-.498.422-.997 1.122-1.126c.714-.123 1.354.17 1.444.663zm0 0"/></g></svg><span class="hx-sr-only">GitHub</span>
+          <a class="hx-p-2 hx-text-current" target="_blank" rel="noreferrer" href="https://github.com/wenwangjain/wenwangjain.github.io" title="GitHub"><svg height=24 xmlns="http://www.w3.org/2000/svg" width="2em" height="1.5em" viewBox="0 0 128 128"><g fill="#181616"><path fill-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388c0 26.682 17.303 49.317 41.297 57.303c3.017.56 4.125-1.31 4.125-2.905c0-1.44-.056-6.197-.082-11.243c-16.8 3.653-20.345-7.125-20.345-7.125c-2.747-6.98-6.705-8.836-6.705-8.836c-5.48-3.748.413-3.67.413-3.67c6.063.425 9.257 6.223 9.257 6.223c5.386 9.23 14.127 6.562 17.573 5.02c.542-3.903 2.107-6.568 3.834-8.076c-13.413-1.525-27.514-6.704-27.514-29.843c0-6.593 2.36-11.98 6.223-16.21c-.628-1.52-2.695-7.662.584-15.98c0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033c11.526-7.813 16.59-6.19 16.59-6.19c3.287 8.317 1.22 14.46.593 15.98c3.872 4.23 6.215 9.617 6.215 16.21c0 23.194-14.127 28.3-27.574 29.796c2.167 1.874 4.097 5.55 4.097 11.183c0 8.08-.07 14.583-.07 16.572c0 1.607 1.088 3.49 4.148 2.897c23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" clip-rule="evenodd"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185c-.44-.196-.685-.605-.543-.906c.13-.31.603-.395 1.04-.188c.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28c-.396-.42-.47-.983-.177-1.254c.298-.266.844-.14 1.24.28c.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52c-.37-.538-.37-1.183.01-1.44c.373-.258.97-.025 1.35.507c.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23c-.527-.487-.674-1.18-.343-1.544c.336-.366 1.045-.264 1.564.23c.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486c-.683-.207-1.13-.76-.99-1.238c.14-.477.823-.7 1.512-.485c.683.206 1.13.756.988 1.237m4.943.361c.017.498-.563.91-1.28.92c-.723.017-1.308-.387-1.315-.877c0-.503.568-.91 1.29-.924c.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117c-.7.13-1.35-.172-1.44-.653c-.086-.498.422-.997 1.122-1.126c.714-.123 1.354.17 1.444.663zm0 0"/></g></svg><span class="hx-sr-only">GitHub</span>
           </a><button type="button" aria-label="Menu" class="hamburger-menu -hx-mr-2 hx-rounded hx-p-2 active:hx-bg-gray-400/20 md:hx-hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
   </nav>
 </div>
@@ -199,24 +884,6 @@
     
   >标题
     </a></li>
-          <li class=""><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/blog/"
-    
-  >博客
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
-    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/blog/markdown/"
-    
-  >Markdown 语法指南
-    </a>
-              
-            </li></ul>
-      </div></li>
           <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
@@ -234,20 +901,12 @@
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/base/"
-    
-  >1. 基础内容
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/ai/end_to_end/"
     
-  >2. 端到端的机器学习
+  >1. 端到端的机器学习
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
@@ -384,24 +1043,24 @@
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/ai/advanced/"
     
-  >3. 先进的机器学习
+  >2. 深度学习
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/ensemble/"
+    href="/docs/ai/advanced/dl_overview/"
     
-  >3.1. 集成学习
+  >3.1. 概述
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/deep/"
+    href="/docs/ai/advanced/dl_algorithms/"
     
-  >3.2. 深度学习
+  >3.2. 算法
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -431,41 +1090,60 @@
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/ml_code_python/"
+    href="/docs/ai/advanced/understanding_algorithms/"
     
-  >3.6. ML Code Python
+  >3.6. 深入理解算法
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/generative/"
+    
+  >3. 生成式人工智能
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/generative/prompt_engineer/"
+    
+  >5.1. 提示工程
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/dl_dezero/"
+    href="/docs/ai/generative/nlp/"
     
-  >3.7. DeZero
+  >5.2. 自然语言生成
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/sc_sklearn/"
+    href="/docs/ai/generative/cv/"
     
-  >3.8. Sklearn SC
+  >5.3. 计算机视觉生成
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/sc_pytorch/"
+    href="/docs/ai/generative/build_model/"
     
-  >3.9. PyTorch SC
+  >5.4. 构建生成模型
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/sc_tensorflow/"
+    href="/docs/ai/generative/latest_research/"
     
-  >3.10. TensorFlow SC
+  >5.5. 最新研究\论文
     </a>
               
             </li></ul>
@@ -476,16 +1154,70 @@
     href="/docs/ai/mlops/"
     
   >4. 模型部署 MLOps
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/mlops/base/"
+    
+  >4.1. 工程基础
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/generative/"
+    href="/docs/ai/mlops/mlops_overview/"
     
-  >5. 生成式人工智能
+  >4.2. MLOps 概述
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/mlops/mlops_contents/"
+    
+  >4.3. MLOps 内容
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/mlops/mlops_tool/"
+    
+  >4.4. MLOps 工具
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/expertise/"
+    
+  >5. 补充知识
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/expertise/ensemble_learning/"
+    
+  >6.1. 集成学习
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/expertise/knowledge/"
+    
+  >6.5. 领域专业知识
+    </a>
+              
+            </li></ul>
+      </div>
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col "><a
@@ -691,57 +1423,129 @@
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/uci/"
+    href="/project/data_analysis/"
     
-  >UC Irvine
+  >数据分析
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/kaggle/"
+    href="/project/data_visualization/"
     
-  >Kaggle
+  >可视化
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/tc/"
+    href="/project/automated_reporte/"
     
-  >阿里云天池
+  >自动化报表
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/datacastle/"
+    href="/project/data_warehouse/"
     
-  >DataCastle
+  >数据仓库
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/datafountain/"
+    href="/project/class/"
     
-  >DataFountain
+  >分类
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/drivendata/"
+    href="/project/regression/"
     
-  >DRIVENDATA
+  >回归
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/project/fj/"
+    href="/project/cluster/"
     
-  >百度飞桨
+  >聚类
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/abnormal/"
+    
+  >异常检测
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/recommend/"
+    
+  >推荐系统
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/timeseries/"
+    
+  >时间序列
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/natural_language/"
+    
+  >自然语言
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/computer_vision/"
+    
+  >计算机视觉
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/generative_model/"
+    
+  >生成模型
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/algorithm/"
+    
+  >算法优化
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/survival_analysis/"
+    
+  >生存分析
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/causal_inference/"
+    
+  >因果推断
     </a>
               
             </li></ul>
@@ -944,6 +1748,14 @@
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/dl_fastai/"
+    
+  >FastAI
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/guide/software_linux/"
     
   >Linux
@@ -1064,9 +1876,97 @@
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/guide/ml_code_python/"
+    href="/guide/bd_flume/"
     
-  >ML Code Python
+  >Flume
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_flink_cdc/"
+    
+  >Flink CDC
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_airflow/"
+    
+  >Airflow
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_dolphinscheduler/"
+    
+  >DolphinScheduler
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_datahub/"
+    
+  >Datahub
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_openmetadata/"
+    
+  >OpenMetadata
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_doris/"
+    
+  >Doris
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_iceberg/"
+    
+  >Iceberg
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_druid/"
+    
+  >Druid
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_zeppelin/"
+    
+  >Zeppelin
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_streampark/"
+    
+  >StreamPark
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_dinky/"
+    
+  >Dinky
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -1107,20 +2007,12 @@
   >人工智能
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/base/"
-    
-  >1. 基础内容
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/ai/end_to_end/"
     
-  >2. 端到端的机器学习
+  >1. 端到端的机器学习
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
@@ -1230,24 +2122,24 @@
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/ai/advanced/"
     
-  >3. 先进的机器学习
+  >2. 深度学习
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/ensemble/"
+    href="/docs/ai/advanced/dl_overview/"
     
-  >3.1. 集成学习
+  >3.1. 概述
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/deep/"
+    href="/docs/ai/advanced/dl_algorithms/"
     
-  >3.2. 深度学习
+  >3.2. 算法
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -1277,41 +2169,60 @@
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/ml_code_python/"
+    href="/docs/ai/advanced/understanding_algorithms/"
     
-  >3.6. ML Code Python
+  >3.6. 深入理解算法
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/generative/"
+    
+  >3. 生成式人工智能
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/generative/prompt_engineer/"
+    
+  >5.1. 提示工程
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/dl_dezero/"
+    href="/docs/ai/generative/nlp/"
     
-  >3.7. DeZero
+  >5.2. 自然语言生成
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/sc_sklearn/"
+    href="/docs/ai/generative/cv/"
     
-  >3.8. Sklearn SC
+  >5.3. 计算机视觉生成
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/sc_pytorch/"
+    href="/docs/ai/generative/build_model/"
     
-  >3.9. PyTorch SC
+  >5.4. 构建生成模型
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/advanced/sc_tensorflow/"
+    href="/docs/ai/generative/latest_research/"
     
-  >3.10. TensorFlow SC
+  >5.5. 最新研究\论文
     </a>
               
             </li></ul>
@@ -1322,16 +2233,70 @@
     href="/docs/ai/mlops/"
     
   >4. 模型部署 MLOps
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/mlops/base/"
+    
+  >4.1. 工程基础
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/ai/generative/"
+    href="/docs/ai/mlops/mlops_overview/"
     
-  >5. 生成式人工智能
+  >4.2. MLOps 概述
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/mlops/mlops_contents/"
+    
+  >4.3. MLOps 内容
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/mlops/mlops_tool/"
+    
+  >4.4. MLOps 工具
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/expertise/"
+    
+  >5. 补充知识
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/expertise/ensemble_learning/"
+    
+  >6.1. 集成学习
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/ai/expertise/knowledge/"
+    
+  >6.5. 领域专业知识
+    </a>
+              
+            </li></ul>
+      </div>
             </li></ul>
       </div></li>
           <li class=""><a
@@ -1638,20 +2603,21 @@
 
     <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
-        <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
-      <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-        <a href="http://localhost:1313/docs/">文档</a>
-      </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-        <a href="http://localhost:1313/docs/ai/">人工智能</a>
-      </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-        <a href="http://localhost:1313/docs/ai/end_to_end/">2. 端到端的机器学习</a>
-      </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-        <a href="http://localhost:1313/docs/ai/end_to_end/crisp/">2.4. 步骤</a>
-      </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">【4】数据准备</div>
-</div>
+        
+  <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/docs/">文档</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/docs/ai/">人工智能</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/docs/ai/end_to_end/">1. 端到端的机器学习</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/docs/ai/end_to_end/crisp/">2.4. 步骤</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">【4】数据准备</div>
+  </div>
 
         <div class="content">
           <h1>【4】数据准备</h1>
@@ -1659,7 +2625,7 @@
 <h2>1、主要内容：<span class="hx-absolute -hx-mt-20" id="1主要内容"></span>
     <a href="#1%e4%b8%bb%e8%a6%81%e5%86%85%e5%ae%b9" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><em><strong>1. 预处理</strong></em>：大部分原始数据未被处理，是不完整且含有噪声的。预处理步骤是将所选数据转换为可以处理的表单。</p>
 <blockquote>
-<p><em><strong>以下是一些数据常见问题：</strong></em></p>
+  <p><em><strong>以下是一些数据常见问题：</strong></em></p>
 <ul>
 <li>过时和坈余字；</li>
 <li>缺失值；</li>
@@ -1667,21 +2633,24 @@
 <li>其形式不适合数据挖掘模型的数据；</li>
 <li>与策略或常识不一致的值。</li>
 </ul>
+
 </blockquote>
 <blockquote>
-<p><em><strong>两个常见的数据预处理内容是：</strong></em></p>
+  <p><em><strong>两个常见的数据预处理内容是：</strong></em></p>
 <ul>
 <li><em><strong>数据清理</strong></em> ：删除或修复缺失（重复\异常\不一致\不规范等）的数据。此外，某些属性中可能存在敏感信息，这些属性可能需要匿名化或从数据中完全删除。</li>
 <li><em><strong>数据转换</strong></em>： 通过使用缩放、属性分解和属性聚合工程，转换准备好用于学习的预处理数据。</li>
 </ul>
+
 </blockquote>
 <br>
 <p><em><strong>2. 特征工程</strong></em>：选择或重塑对分析问题有用的特征，可以提高分析准确率。</p>
 <blockquote>
-<ul>
+  <ul>
 <li><em><strong>特征提取</strong></em>：转换特征集，得到一个新的特征集，仍然保留了大部分信息。生成的新特征将无法被人类解释。</li>
 <li><em><strong>特征选择</strong></em>：删除不重要的特征，但保留了其他特征的当前状态。在分析过程中可以完全被人类解释。</li>
 </ul>
+
 </blockquote>
 <p><br><br><br></p>
 <h2>2、预处理<span class="hx-absolute -hx-mt-20" id="2预处理"></span>
@@ -1734,66 +2703,66 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right"></th>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">City</th>
-<th style="text-align:right">Age</th>
-<th style="text-align:right">Income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">0</td>
-<td style="text-align:right">1</td>
-<td style="text-align:left">Alice</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:right">2</td>
-<td style="text-align:left">Bob</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:right">3</td>
-<td style="text-align:left">Charlie</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right"></th>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">City</th>
+          <th style="text-align: right">Age</th>
+          <th style="text-align: right">Income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">0</td>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">Alice</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">Bob</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">Charlie</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 <div><div class="highlight"><div class="chroma">
@@ -1818,59 +2787,59 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">City</th>
-<th style="text-align:right">Age</th>
-<th style="text-align:right">Income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:left">Alice</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:left">Bob</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:left">Charlie</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">City</th>
+          <th style="text-align: right">Age</th>
+          <th style="text-align: right">Income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">Alice</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">Bob</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">Charlie</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
   </div>
 </details>
@@ -1903,59 +2872,59 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">City</th>
-<th style="text-align:right">Age</th>
-<th style="text-align:right">Income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:left">《China》</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:left">Bob</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:left">Charlie</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">City</th>
+          <th style="text-align: right">Age</th>
+          <th style="text-align: right">Income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">《China》</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">Bob</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">Charlie</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
   </div>
 </details>
@@ -1987,59 +2956,59 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">City</th>
-<th style="text-align:right">Age</th>
-<th style="text-align:right">Income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:left">《China》</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:left">《Bob》</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:left">Charlie</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">City</th>
+          <th style="text-align: right">Age</th>
+          <th style="text-align: right">Income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">《China》</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">《Bob》</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">Charlie</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
   </div>
 </details>
@@ -2105,59 +3074,59 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">City</th>
-<th style="text-align:right">Age</th>
-<th style="text-align:right">Income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:left">《China》</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:left">《Bob》</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:left">《Zuo》</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">City</th>
+          <th style="text-align: right">Age</th>
+          <th style="text-align: right">Income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">《China》</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">《Bob》</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">《Zuo》</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
   </div>
 </details>
@@ -2186,59 +3155,59 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">《name》</th>
-<th style="text-align:left">《city》</th>
-<th style="text-align:right">Age</th>
-<th style="text-align:right">Income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:left">《China》</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:left">《Bob》</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:left">《Zuo》</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">《name》</th>
+          <th style="text-align: left">《city》</th>
+          <th style="text-align: right">Age</th>
+          <th style="text-align: right">Income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">《China》</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">《Bob》</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">《Zuo》</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
   </div>
 </details>
@@ -2270,59 +3239,59 @@
 </div>
 </div>
 <table>
-<thead>
-<tr>
-<th style="text-align:right">ID</th>
-<th style="text-align:left">name</th>
-<th style="text-align:left">city</th>
-<th style="text-align:right">age</th>
-<th style="text-align:right">income</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:left">《China》</td>
-<td style="text-align:left">New York</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">50000</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:left">《Bob》</td>
-<td style="text-align:left">London</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">60000</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:left">《Zuo》</td>
-<td style="text-align:left">Paris</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">70000</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:left">Wu</td>
-<td style="text-align:left">new york</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">40000</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:left">Zhang</td>
-<td style="text-align:left">PAR</td>
-<td style="text-align:right">30</td>
-<td style="text-align:right">30000</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:left">Wang</td>
-<td style="text-align:left">China</td>
-<td style="text-align:right">35</td>
-<td style="text-align:right">90000</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: right">ID</th>
+          <th style="text-align: left">name</th>
+          <th style="text-align: left">city</th>
+          <th style="text-align: right">age</th>
+          <th style="text-align: right">income</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td style="text-align: left">《China》</td>
+          <td style="text-align: left">New York</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">50000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">《Bob》</td>
+          <td style="text-align: left">London</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">60000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td style="text-align: left">《Zuo》</td>
+          <td style="text-align: left">Paris</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">70000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">Wu</td>
+          <td style="text-align: left">new york</td>
+          <td style="text-align: right">25</td>
+          <td style="text-align: right">40000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td style="text-align: left">Zhang</td>
+          <td style="text-align: left">PAR</td>
+          <td style="text-align: right">30</td>
+          <td style="text-align: right">30000</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td style="text-align: left">Wang</td>
+          <td style="text-align: left">China</td>
+          <td style="text-align: right">35</td>
+          <td style="text-align: right">90000</td>
+      </tr>
+  </tbody>
 </table>
   </div>
 </details>
@@ -2384,6 +3353,7 @@ memory usage: 268.0&#43; bytes</code></pre><div class="hextra-code-copy-btn-cont
 class=&ldquo;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&rdquo;
 title=&ldquo;Copy code&rdquo;</p>
 <blockquote>
+  
 </blockquote>
 <pre><code>&lt;div class=&quot;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&quot;&gt;&lt;/div&gt;
@@ -2505,25 +3475,25 @@ title=&ldquo;Copy code&rdquo;</p>
 <h3>2.2、数据清理：<span class="hx-absolute -hx-mt-20" id="22数据清理"></span>
     <a href="#22%e6%95%b0%e6%8d%ae%e6%b8%85%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>(1). 重复值：<span class="hx-absolute -hx-mt-20" id="1-重复值"></span>
     <a href="#1-%e9%87%8d%e5%a4%8d%e5%80%bc" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
-<thead>
-<tr>
-<th style="text-align:center"><em>方法</em></th>
-<th style="text-align:center"><em>优点</em></th>
-<th style="text-align:center"><em>确点</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><em><strong>标记</strong></em></td>
-<td style="text-align:center">1. 保留了数据的完整性，您可以直观地看到哪些行是重复的，同时保留了所有原始数据以便进行进一步的分析或比较。<br><br>2. 有助于理解数据的分布和重复模式，可能会发现一些潜在的规律或问题。</td>
-<td style="text-align:center">1. 数据量较大时，增加了数据的复杂性和存储空间。<br><br>2. 如果后续的分析或处理不需要关注重复值的标记，那么这些标记可能会造成干扰。</td>
-</tr>
-<tr>
-<td style="text-align:center"><em><strong>删除</strong></em></td>
-<td style="text-align:center">1. 可以减少数据量，提高数据处理和分析的效率，特别是在处理大规模数据时。<br><br>2. 使数据更加简洁和清晰，避免重复值可能带来的混淆和错误。</td>
-<td style="text-align:center">1. 可能会丢失一些信息，尤其是在不确定重复值的含义和重要性时。<br><br>2. 如果删除操作有误，可能无法恢复原始的完整数据。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center"><em>方法</em></th>
+          <th style="text-align: center"><em>优点</em></th>
+          <th style="text-align: center"><em>确点</em></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em><strong>标记</strong></em></td>
+          <td style="text-align: center">1. 保留了数据的完整性，您可以直观地看到哪些行是重复的，同时保留了所有原始数据以便进行进一步的分析或比较。<br><br>2. 有助于理解数据的分布和重复模式，可能会发现一些潜在的规律或问题。</td>
+          <td style="text-align: center">1. 数据量较大时，增加了数据的复杂性和存储空间。<br><br>2. 如果后续的分析或处理不需要关注重复值的标记，那么这些标记可能会造成干扰。</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em><strong>删除</strong></em></td>
+          <td style="text-align: center">1. 可以减少数据量，提高数据处理和分析的效率，特别是在处理大规模数据时。<br><br>2. 使数据更加简洁和清晰，避免重复值可能带来的混淆和错误。</td>
+          <td style="text-align: center">1. 可能会丢失一些信息，尤其是在不确定重复值的含义和重要性时。<br><br>2. 如果删除操作有误，可能无法恢复原始的完整数据。</td>
+      </tr>
+  </tbody>
 </table>
 <br>
 <details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
@@ -2611,40 +3581,40 @@ title=&ldquo;Copy code&rdquo;</p>
 <p><br><br></p>
 <h4>(2). 缺失值：<span class="hx-absolute -hx-mt-20" id="2-缺失值"></span>
     <a href="#2-%e7%bc%ba%e5%a4%b1%e5%80%bc" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
-<thead>
-<tr>
-<th style="text-align:center">方法</th>
-<th style="text-align:center">优点</th>
-<th style="text-align:center">缺点</th>
-<th style="text-align:center">适用情况</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><em><strong>删除</strong></em></td>
-<td style="text-align:center">简单直接，不需要进行复杂的处理</td>
-<td style="text-align:center">可能会丢失大量有价值的信息，减少了样本量，可能影响模型的准确性和稳定性</td>
-<td style="text-align:center">缺失值的比例较小，且数据量较大，缺失值的分布是随机的，且与其他变量没有明显的关联</td>
-</tr>
-<tr>
-<td style="text-align:center"><em><strong>填充</strong></em></td>
-<td style="text-align:center">保留了更多的数据，避免了因删除数据而导致的信息丢失</td>
-<td style="text-align:center">填充的值可能不准确，引入一定的偏差，填充方法的选择可能会对结果产生影响</td>
-<td style="text-align:center">缺失值的比例适中，且数据的特征对模型较为重要，可以根据数据的分布和特征选择合适的填充方法</td>
-</tr>
-<tr>
-<td style="text-align:center"><em><strong>预测</strong></em></td>
-<td style="text-align:center">利用已有数据的模式和关系来推测缺失值，可能更准确</td>
-<td style="text-align:center">计算成本较高，需要建立预测模型，预测模型可能存在过拟合或欠拟合的风险</td>
-<td style="text-align:center">缺失值与其他变量存在较强的相关性，可以建立有效的预测模型，对数据的准确性要求较高，且有足够的计算资源和数据来训练预测模型</td>
-</tr>
-<tr>
-<td style="text-align:center"><em><strong>标记</strong></em></td>
-<td style="text-align:center">保留了原始数据的完整性，同时明确标识了缺失值</td>
-<td style="text-align:center">可能需要对模型进行特殊处理，以适应标记后的缺失值</td>
-<td style="text-align:center">希望在后续的分析中明确考虑缺失值的存在及其影响，数据的缺失具有特殊的意义或模式，需要单独分析</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">方法</th>
+          <th style="text-align: center">优点</th>
+          <th style="text-align: center">缺点</th>
+          <th style="text-align: center">适用情况</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em><strong>删除</strong></em></td>
+          <td style="text-align: center">简单直接，不需要进行复杂的处理</td>
+          <td style="text-align: center">可能会丢失大量有价值的信息，减少了样本量，可能影响模型的准确性和稳定性</td>
+          <td style="text-align: center">缺失值的比例较小，且数据量较大，缺失值的分布是随机的，且与其他变量没有明显的关联</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em><strong>填充</strong></em></td>
+          <td style="text-align: center">保留了更多的数据，避免了因删除数据而导致的信息丢失</td>
+          <td style="text-align: center">填充的值可能不准确，引入一定的偏差，填充方法的选择可能会对结果产生影响</td>
+          <td style="text-align: center">缺失值的比例适中，且数据的特征对模型较为重要，可以根据数据的分布和特征选择合适的填充方法</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em><strong>预测</strong></em></td>
+          <td style="text-align: center">利用已有数据的模式和关系来推测缺失值，可能更准确</td>
+          <td style="text-align: center">计算成本较高，需要建立预测模型，预测模型可能存在过拟合或欠拟合的风险</td>
+          <td style="text-align: center">缺失值与其他变量存在较强的相关性，可以建立有效的预测模型，对数据的准确性要求较高，且有足够的计算资源和数据来训练预测模型</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em><strong>标记</strong></em></td>
+          <td style="text-align: center">保留了原始数据的完整性，同时明确标识了缺失值</td>
+          <td style="text-align: center">可能需要对模型进行特殊处理，以适应标记后的缺失值</td>
+          <td style="text-align: center">希望在后续的分析中明确考虑缺失值的存在及其影响，数据的缺失具有特殊的意义或模式，需要单独分析</td>
+      </tr>
+  </tbody>
 </table>
 <br>
 <details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
@@ -2972,30 +3942,30 @@ title=&ldquo;Copy code&rdquo;</p>
 <h2>3、特征工程<span class="hx-absolute -hx-mt-20" id="3特征工程"></span>
     <a href="#3%e7%89%b9%e5%be%81%e5%b7%a5%e7%a8%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>3.1、特征选择<span class="hx-absolute -hx-mt-20" id="31特征选择"></span>
     <a href="#31%e7%89%b9%e5%be%81%e9%80%89%e6%8b%a9" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-<thead>
-<tr>
-<th style="text-align:center"><em>特征选择方法</em></th>
-<th style="text-align:left"><em>优点</em></th>
-<th style="text-align:left"><em>缺点</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><em>过滤方法（Filter）</em></td>
-<td style="text-align:left">1. 算效率高，因为它独立于后续的学习算法，不需要多次运行学习算法来评估特征子集。<br><br>2. 可以快速处理高维数据，对大型数据集较为适用。<br><br>3. 基于数据的一般特征（如相关性、方差等）进行选择，具有较好的通用性。</td>
-<td style="text-align:left">1. 没有考虑特征之间的相互关系，可能会忽略一些对模型有协同作用的特征组合。<br><br>2. 所选特征子集可能不是针对特定学习算法的最优选择，因为没有直接基于模型的性能来评估特征。</td>
-</tr>
-<tr>
-<td style="text-align:center"><em>包装方法（Wrapper）</em></td>
-<td style="text-align:left">1. 直接基于特定学习算法的性能来选择特征，通常能找到对给定模型性能最优的特征子集。<br><br>2. 考虑了特征之间的相互作用。</td>
-<td style="text-align:left">1. 计算成本高，因为需要多次训练学习算法来评估不同的特征子集。<br><br>2. 容易过拟合，可能会选择出过于针对特定训练集的特征子集，导致在新数据上的泛化能力不佳。<br><br>3. 对于高维数据，搜索空间过大，计算复杂度难以承受。</td>
-</tr>
-<tr>
-<td style="text-align:center"><em>嵌入方法（Embedded）</em></td>
-<td style="text-align:left">1. 在学习模型的过程中同时进行特征选择，效率相对较高。<br><br>2. 考虑了特征与模型的相关性，能够选择出对模型有重要影响的特征。<br><br>3. 可以处理高维数据，并且在一定程度上避免了过拟合。</td>
-<td style="text-align:left">1. 特征选择的过程可能不够直观，难以解释。<br><br>2. 对于某些复杂的嵌入方法，可能需要较多的计算资源和调参工作。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center"><em>特征选择方法</em></th>
+          <th style="text-align: left"><em>优点</em></th>
+          <th style="text-align: left"><em>缺点</em></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em>过滤方法（Filter）</em></td>
+          <td style="text-align: left">1. 算效率高，因为它独立于后续的学习算法，不需要多次运行学习算法来评估特征子集。<br><br>2. 可以快速处理高维数据，对大型数据集较为适用。<br><br>3. 基于数据的一般特征（如相关性、方差等）进行选择，具有较好的通用性。</td>
+          <td style="text-align: left">1. 没有考虑特征之间的相互关系，可能会忽略一些对模型有协同作用的特征组合。<br><br>2. 所选特征子集可能不是针对特定学习算法的最优选择，因为没有直接基于模型的性能来评估特征。</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em>包装方法（Wrapper）</em></td>
+          <td style="text-align: left">1. 直接基于特定学习算法的性能来选择特征，通常能找到对给定模型性能最优的特征子集。<br><br>2. 考虑了特征之间的相互作用。</td>
+          <td style="text-align: left">1. 计算成本高，因为需要多次训练学习算法来评估不同的特征子集。<br><br>2. 容易过拟合，可能会选择出过于针对特定训练集的特征子集，导致在新数据上的泛化能力不佳。<br><br>3. 对于高维数据，搜索空间过大，计算复杂度难以承受。</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em>嵌入方法（Embedded）</em></td>
+          <td style="text-align: left">1. 在学习模型的过程中同时进行特征选择，效率相对较高。<br><br>2. 考虑了特征与模型的相关性，能够选择出对模型有重要影响的特征。<br><br>3. 可以处理高维数据，并且在一定程度上避免了过拟合。</td>
+          <td style="text-align: left">1. 特征选择的过程可能不够直观，难以解释。<br><br>2. 对于某些复杂的嵌入方法，可能需要较多的计算资源和调参工作。</td>
+      </tr>
+  </tbody>
 </table>
 <p><br><br></p>
 <h4>(1). 过滤方法(Filter)<span class="hx-absolute -hx-mt-20" id="1-过滤方法filter"></span>
@@ -3225,7 +4195,7 @@ title=&ldquo;Copy code&rdquo;</p>
   </summary>
   <div class="hx-p-2 hx-overflow-hidden">
     <blockquote>
-<p>流水线里面有很多步骤，需要单独查看流水线的一部分执行结果，或是一个结果</p>
+  <p>流水线里面有很多步骤，需要单独查看流水线的一部分执行结果，或是一个结果</p>
 </blockquote>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 <div><div class="highlight"><div class="chroma">
@@ -3484,17 +4454,17 @@ title=&ldquo;Copy code&rdquo;</p>
   </div>
 </footer>
     
-  </body>
-  <script defer src="/js/main.js" integrity=""></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
-<script defer src="/lib/flexsearch/flexsearch.bundle.min.e45e7eb129aae9f684e7f863bb7c1d612ea124b7068e12af80c58c62764a5379.js" integrity="sha256-5F5&#43;sSmq6faE5/hju3wdYS6hJLcGjhKvgMWMYnZKU3k="></script>
+<script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
     <script defer src="/zh-cn.search.js" integrity=""></script>
-<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.df9ef84e97d38557de02183e238f8ddfd10988b37741492e12c3157bc856011e.css" integrity="sha256-3574TpfThVfeAhg&#43;I4&#43;N39EJiLN3QUkuEsMVe8hWAR4=" />
-  <script defer src="/lib/katex/katex.min.d4f0ea25c4ccb7986b229d6427794b7063cf3209b0376cf5a64bfc4dd7918c95.js" integrity="sha256-1PDqJcTMt5hrIp1kJ3lLcGPPMgmwN2z1pkv8TdeRjJU="></script>
-  <script defer src="/lib/katex/auto-render.min.9cb8dacfc086c2966c9ec4ba54f4a2dc43b7cbe2b33cec1a2743d886c7fb47a7.js" integrity="sha256-nLjaz8CGwpZsnsS6VPSi3EO3y&#43;KzPOwaJ0PYhsf7R6c="></script>
+<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.7e5db7914b97e596a36c1abb67ccc7f174f8bb71d38c9a88c55b262ed1737f97.css" integrity="sha256-fl23kUuX5ZajbBq7Z8zH8XT4u3HTjJqIxVsmLtFzf5c=" />
+  <script defer src="/lib/katex/katex.min.9f45307c5794ed247a0d095f3a62e52ef2215a67b2327203a7fd919959ae79d1.js" integrity="sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE="></script>
+  <script defer src="/lib/katex/auto-render.min.7b57d427ac6270677daf8d8380ded2cc73336f9149a167b8e1fe0d6ef66604ae.js" integrity="sha256-e1fUJ6xicGd9r42DgN7SzHMzb5FJoWe44f4NbvZmBK4="></script>
   <script defer src="/lib/katex/mhchem.min.f0ca03df194b8c3d6017ff455db6a0ef98857905663fa311a6cded788b15340b.js" integrity="sha256-8MoD3xlLjD1gF/9FXbag75iFeQVmP6MRps3teIsVNAs="></script>
   <script>
+    
     
     document.addEventListener("DOMContentLoaded", function () {
       renderMathInElement(document.body, {
@@ -3502,6 +4472,11 @@ title=&ldquo;Copy code&rdquo;</p>
           { left: "$$", right: "$$", display: true },
           { left: "$", right: "$", display: false },
           { left: "\\(", right: "\\)", display: false },
+          { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\begin{CD}", right: "\\end{CD}", display: true},
           { left: "\\[", right: "\\]", display: true },
         ],
         throwOnError: false,
@@ -3510,4 +4485,5 @@ title=&ldquo;Copy code&rdquo;</p>
   </script>
 
 
+  </body>
 </html>

@@ -2,225 +2,274 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/custom_modules/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/custom_modules/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/defining_the_problem/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/defining_the_problem/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/uci/</loc>
+    <loc>http://localhost:13420/docs/ai/mlops/base/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:13420/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/</loc>
+    <loc>http://localhost:13420/docs/ai/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/gather_data/</loc>
+    <loc>http://localhost:13420/project/data_analysis/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/kaggle/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/gather_data/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/bigdata/</loc>
+    <loc>http://localhost:13420/docs/ai/mlops/mlops_overview/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/data_exploration/</loc>
+    <loc>http://localhost:13420/docs/bigdata/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/tc/</loc>
+    <loc>http://localhost:13420/project/data_visualization/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/data_exploration/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/data_preparation/</loc>
+    <loc>http://localhost:13420/docs/ai/mlops/mlops_contents/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/datacastle/</loc>
+    <loc>http://localhost:13420/docs/dama/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/data_modeling/</loc>
+    <loc>http://localhost:13420/project/automated_reporte/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/datafountain/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/data_preparation/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/drivendata/</loc>
+    <loc>http://localhost:13420/docs/ai/mlops/mlops_tool/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/fj/</loc>
+    <loc>http://localhost:13420/project/data_warehouse/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/overview/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/data_modeling/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/math_calculus/</loc>
+    <loc>http://localhost:13420/project/class/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/algorithms/</loc>
+    <loc>http://localhost:13420/project/regression/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/math_linear_algebra/</loc>
+    <loc>http://localhost:13420/project/cluster/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/tool/</loc>
+    <loc>http://localhost:13420/project/abnormal/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/math_probability_theory/</loc>
+    <loc>http://localhost:13420/project/recommend/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/crisp/</loc>
+    <loc>http://localhost:13420/project/timeseries/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/math_mathematical_statistics/</loc>
+    <loc>http://localhost:13420/project/natural_language/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/automl/</loc>
+    <loc>http://localhost:13420/project/computer_vision/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/large_datasets/</loc>
+    <loc>http://localhost:13420/project/generative_model/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/base/</loc>
+    <loc>http://localhost:13420/project/algorithm/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/end_to_end/</loc>
+    <loc>http://localhost:13420/project/survival_analysis/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/</loc>
+    <loc>http://localhost:13420/project/causal_inference/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/mlops/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/overview/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/generative/</loc>
+    <loc>http://localhost:13420/guide/math_calculus/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/algorithms/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_modules/</loc>
+    <loc>http://localhost:13420/guide/math_linear_algebra/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/ensemble/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/tool/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/</loc>
+    <loc>http://localhost:13420/guide/math_probability_theory/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_numpy/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/crisp/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/deep/</loc>
+    <loc>http://localhost:13420/guide/math_mathematical_statistics/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_pandas/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/automl/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/tool/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/large_datasets/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_statsmodels/</loc>
+    <loc>http://localhost:13420/docs/ai/end_to_end/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/cv/</loc>
+    <loc>http://localhost:13420/docs/ai/generative/prompt_engineer/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_sklearn/</loc>
+    <loc>http://localhost:13420/docs/ai/expertise/ensemble_learning/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/nlp/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_shap/</loc>
+    <loc>http://localhost:13420/docs/ai/generative/nlp/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/ml_code_python/</loc>
+    <loc>http://localhost:13420/docs/ai/generative/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_matplotlib/</loc>
+    <loc>http://localhost:13420/docs/ai/generative/cv/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/dl_dezero/</loc>
+    <loc>http://localhost:13420/docs/ai/mlops/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_seaborn/</loc>
+    <loc>http://localhost:13420/docs/ai/generative/build_model/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/sc_sklearn/</loc>
+    <loc>http://localhost:13420/docs/ai/expertise/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_plotly/</loc>
+    <loc>http://localhost:13420/docs/ai/generative/latest_research/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/sc_pytorch/</loc>
+    <loc>http://localhost:13420/docs/ai/expertise/knowledge/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_vega-altair/</loc>
+    <loc>http://localhost:13420/guide/python/python/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_streamlit/</loc>
+    <loc>http://localhost:13420/guide/python/python_modules/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/01_data_management/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/dl_overview/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_folium/</loc>
+    <loc>http://localhost:13420/guide/python/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/02_data_ethics/</loc>
+    <loc>http://localhost:13420/guide/python/python_numpy/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/python/python_geopandas/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/dl_algorithms/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/03_data_governance/</loc>
+    <loc>http://localhost:13420/guide/python/python_pandas/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/04_data_architecture/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/tool/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/05_data_modeling_and_design/</loc>
+    <loc>http://localhost:13420/guide/python/python_statsmodels/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/06_data_storage_and_operations/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/cv/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/07_data_security/</loc>
+    <loc>http://localhost:13420/guide/python/python_sklearn/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/08_data_integration_interoperability/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/nlp/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/09_document_and_content_management/</loc>
+    <loc>http://localhost:13420/guide/python/python_shap/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/10_reference_and_master_data_management/</loc>
+    <loc>http://localhost:13420/docs/ai/advanced/understanding_algorithms/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/</loc>
+    <loc>http://localhost:13420/guide/python/python_matplotlib/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/12_metadata_managtement/</loc>
+    <loc>http://localhost:13420/guide/python/python_seaborn/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/13_data_quality_management/</loc>
+    <loc>http://localhost:13420/guide/python/python_plotly/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/dl_dezero/</loc>
+    <loc>http://localhost:13420/guide/python/python_vega-altair/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/dl_keras/</loc>
+    <loc>http://localhost:13420/guide/python/python_streamlit/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/dl_pytorch/</loc>
+    <loc>http://localhost:13420/docs/dama/01_data_management/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/dl_tensorflow/</loc>
+    <loc>http://localhost:13420/guide/python/python_folium/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/software_linux/</loc>
+    <loc>http://localhost:13420/docs/dama/02_data_ethics/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/software_git/</loc>
+    <loc>http://localhost:13420/guide/python/python_geopandas/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/software_github/</loc>
+    <loc>http://localhost:13420/docs/dama/03_data_governance/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/software_docker/</loc>
+    <loc>http://localhost:13420/docs/dama/04_data_architecture/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/software_kubernetes/</loc>
+    <loc>http://localhost:13420/docs/dama/05_data_modeling_and_design/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/java/</loc>
+    <loc>http://localhost:13420/docs/dama/06_data_storage_and_operations/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/database_mysql/</loc>
+    <loc>http://localhost:13420/docs/dama/07_data_security/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bi_datart/</loc>
+    <loc>http://localhost:13420/docs/dama/08_data_integration_interoperability/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bi_powerbi/</loc>
+    <loc>http://localhost:13420/docs/dama/09_document_and_content_management/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bi_tableau/</loc>
+    <loc>http://localhost:13420/docs/dama/10_reference_and_master_data_management/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bd_hadoop/</loc>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bd_hive/</loc>
+    <loc>http://localhost:13420/docs/dama/12_metadata_managtement/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bd_spark/</loc>
+    <loc>http://localhost:13420/docs/dama/13_data_quality_management/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bd_flink/</loc>
+    <loc>http://localhost:13420/guide/dl_dezero/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/bd_kafka/</loc>
+    <loc>http://localhost:13420/guide/dl_keras/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/ai/advanced/sc_tensorflow/</loc>
+    <loc>http://localhost:13420/guide/dl_pytorch/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</loc>
+    <loc>http://localhost:13420/guide/dl_tensorflow/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</loc>
+    <loc>http://localhost:13420/guide/dl_fastai/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</loc>
+    <loc>http://localhost:13420/guide/software_linux/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</loc>
+    <loc>http://localhost:13420/guide/software_git/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</loc>
+    <loc>http://localhost:13420/guide/software_github/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</loc>
+    <loc>http://localhost:13420/guide/software_docker/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</loc>
+    <loc>http://localhost:13420/guide/software_kubernetes/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</loc>
+    <loc>http://localhost:13420/guide/java/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/ml_code_python/</loc>
+    <loc>http://localhost:13420/guide/database_mysql/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/sc_sklearn/</loc>
+    <loc>http://localhost:13420/guide/bi_datart/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/sc_pytorch/</loc>
+    <loc>http://localhost:13420/guide/bi_powerbi/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/sc_tensorflow/</loc>
+    <loc>http://localhost:13420/guide/bi_tableau/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/markdown/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:13420/guide/bd_hadoop/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:13420/guide/bd_hive/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:13420/guide/bd_spark/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:13420/guide/bd_flink/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:13420/guide/bd_kafka/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>http://localhost:13420/guide/bd_flume/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/</loc>
+    <loc>http://localhost:13420/guide/bd_flink_cdc/</loc>
   </url><url>
-    <loc>http://localhost:1313/guide/</loc>
+    <loc>http://localhost:13420/guide/bd_airflow/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_dolphinscheduler/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_datahub/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_openmetadata/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_doris/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_iceberg/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_druid/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_zeppelin/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_streampark/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/bd_dinky/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/sc_sklearn/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/sc_pytorch/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/sc_tensorflow/</loc>
+  </url><url>
+    <loc>http://localhost:13420/categories/</loc>
+  </url><url>
+    <loc>http://localhost:13420/tags/</loc>
+  </url><url>
+    <loc>http://localhost:13420/</loc>
+  </url><url>
+    <loc>http://localhost:13420/docs/</loc>
+  </url><url>
+    <loc>http://localhost:13420/project/</loc>
+  </url><url>
+    <loc>http://localhost:13420/guide/</loc>
   </url>
 </urlset>

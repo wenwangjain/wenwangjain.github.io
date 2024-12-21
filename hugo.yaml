@@ -38,11 +38,6 @@ menu:
       name: 关于
       pageRef: /about
       weight: 4
-
-    - identifier: Blog
-      name: 博客
-      pageRef: /blog
-      weight: 5
       
     - name: Search
       weight: 6

@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataSP – 11. 数据仓库\商务智能</title>
-    <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/</link>
+    <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/</link>
     <description>Recent content in 11. 数据仓库\商务智能 on DataSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>数仓基础 1：范式</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/01_dw_paradigm/</guid>
       <description>
         
         
@@ -31,38 +31,17 @@
 &lt;li&gt;零范式：&lt;i&gt;&lt;b&gt;&lt;font color=Coral face=Georgia&gt;数据中不存在重复数据&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;ol&gt;
+  &lt;ol&gt;
 &lt;li&gt;它只满足一个最基本的条件 — &lt;b&gt;数据中不存在重复数据&lt;/b&gt;&lt;/li&gt;
 &lt;li&gt;零范式（Zero Normal Form，0NF）并非数据库设计中常见的正式范式。&lt;/li&gt;
 &lt;/ol&gt;
+
 &lt;/blockquote&gt;
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 &lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200&#34;&gt;
-  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
-        ⚠️
-      &lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;⚠️&lt;/div&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
-      在数据库设计中，一般从第一范式（1NF）开始讨论。零范式可以被认为是一种不符合任何正式范式规则的状态，即数据可能存在大量的冗余、不一致和潜在的错误。
-    &lt;/div&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;在数据库设计中，一般从第一范式（1NF）开始讨论。零范式可以被认为是一种不符合任何正式范式规则的状态，即数据可能存在大量的冗余、不一致和潜在的错误。&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -72,85 +51,64 @@
 &lt;li&gt;一范式：&lt;i&gt;&lt;b&gt;&lt;font color=Coral face=Georgia&gt;每个属性都必须是不可再分的原子值。&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;也就是说，表中的每个字段只能包含一个值，不能包含多个值或者可分割的数据。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;ol&gt;
+  &lt;ol&gt;
 &lt;li&gt;第一范式（1NF）是关系数据库中的一种 &lt;b&gt;基本范式要求&lt;/b&gt;。&lt;/li&gt;
 &lt;/ol&gt;
+
 &lt;/blockquote&gt;
 &lt;br&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;学生 ID&lt;/th&gt;
-&lt;th&gt;学生姓名&lt;/th&gt;
-&lt;th&gt;课程 ID&lt;/th&gt;
-&lt;th&gt;课程名称&lt;/th&gt;
-&lt;th&gt;课程成绩&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;张三&lt;/td&gt;
-&lt;td&gt;101&lt;/td&gt;
-&lt;td&gt;数学&lt;/td&gt;
-&lt;td&gt;85&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;李四&lt;/td&gt;
-&lt;td&gt;102&lt;/td&gt;
-&lt;td&gt;英语&lt;/td&gt;
-&lt;td&gt;90&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;王五&lt;/td&gt;
-&lt;td&gt;103&lt;/td&gt;
-&lt;td&gt;物理&lt;/td&gt;
-&lt;td&gt;78&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;赵六&lt;/td&gt;
-&lt;td&gt;104&lt;/td&gt;
-&lt;td&gt;化学&lt;/td&gt;
-&lt;td&gt;88&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;学生 ID&lt;/th&gt;
+          &lt;th&gt;学生姓名&lt;/th&gt;
+          &lt;th&gt;课程 ID&lt;/th&gt;
+          &lt;th&gt;课程名称&lt;/th&gt;
+          &lt;th&gt;课程成绩&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;张三&lt;/td&gt;
+          &lt;td&gt;101&lt;/td&gt;
+          &lt;td&gt;数学&lt;/td&gt;
+          &lt;td&gt;85&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;李四&lt;/td&gt;
+          &lt;td&gt;102&lt;/td&gt;
+          &lt;td&gt;英语&lt;/td&gt;
+          &lt;td&gt;90&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;王五&lt;/td&gt;
+          &lt;td&gt;103&lt;/td&gt;
+          &lt;td&gt;物理&lt;/td&gt;
+          &lt;td&gt;78&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;赵六&lt;/td&gt;
+          &lt;td&gt;104&lt;/td&gt;
+          &lt;td&gt;化学&lt;/td&gt;
+          &lt;td&gt;88&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 &lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200&#34;&gt;
-  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
-        ⚠️
-      &lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;⚠️&lt;/div&gt;&lt;/div&gt;
 
   &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
-      &lt;p&gt;第一范式虽然是关系数据库设计的基础，但它也存在一些不足之处：&lt;/p&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;第一范式虽然是关系数据库设计的基础，但它也存在一些不足之处：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;数据冗余&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：可能存在大量的重复数据。例如，在一个包含学生信息和课程信息的表中，如果每个学生选修的每门课程都要重复记录学生的基本信息，就会导致数据冗余。&lt;/li&gt;
 &lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;插入异常&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：当试图插入某些数据时，可能由于部分关键信息缺失而无法插入。比如，如果一个学生还没有选修任何课程，而表结构要求必须同时记录学生和课程的关联信息，就无法插入该学生的基本信息。&lt;/li&gt;
 &lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;删除异常&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：可能会因为删除某些数据而意外丢失其他有用的信息。例如，若删除某门课程的所有记录，可能会连带删除了选修该课程的学生的其他相关信息。&lt;/li&gt;
 &lt;li&gt;&lt;i&gt;&lt;b&gt;&lt;font color=DarkCyan face=Georgia&gt;更新异常&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;：当需要更新某些重复的数据时，必须同时更新多个地方，否则会导致数据不一致。&lt;/li&gt;
-&lt;/ol&gt;
-    &lt;/div&gt;
+&lt;/ol&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -162,10 +120,10 @@
     
     <item>
       <title>数仓基础 2：ER 模型</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/02_dw_er_model/</guid>
       <description>
         
         
@@ -176,10 +134,10 @@
     
     <item>
       <title>数仓 1：概述</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/03_dw_overview/</guid>
       <description>
         
         
@@ -190,10 +148,10 @@
     
     <item>
       <title>数仓 2：架构</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/04_dw_framework/</guid>
       <description>
         
         
@@ -204,10 +162,10 @@
     
     <item>
       <title>数仓 3：规范</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/05_dw_standard/</guid>
       <description>
         
         
@@ -218,10 +176,10 @@
     
     <item>
       <title>数仓 4：建模</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/06_dw_modeling/</guid>
       <description>
         
         
@@ -232,10 +190,10 @@
     
     <item>
       <title>数仓 5：调度</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/07_dw_dispatch/</guid>
       <description>
         
         
@@ -246,10 +204,10 @@
     
     <item>
       <title>数仓 6：监控</title>
-      <link>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</link>
+      <link>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</guid>
+      <guid>http://localhost:13420/docs/dama/11_data_warehousing_and_business_intelligence/08_dw_monitor/</guid>
       <description>
         
         

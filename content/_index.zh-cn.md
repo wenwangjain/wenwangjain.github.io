@@ -21,7 +21,6 @@ width: wide
 {{< hextra/hero-button text="文档" link="docs" bgColor="orange">}}
 {{< hextra/hero-button text="指南" link="guide" bgColor="#707070">}}
 {{< hextra/hero-button text="项目" link="project" bgColor="orange">}}
-{{< hextra/hero-button text="关于" link="about" bgColor="CCFFFF">}}
   </div>
 </div>
 

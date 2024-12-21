@@ -27,6 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener('focus', init);
     el.addEventListener('keyup', search);
     el.addEventListener('keydown', handleKeyDown);
+    el.addEventListener('input', handleInputChange);
+  }
+
+  const shortcutElements = document.querySelectorAll('.search-wrapper kbd');
+
+  function setShortcutElementsOpacity(opacity) {
+    shortcutElements.forEach(el => {
+      el.style.opacity = opacity;
+    });
+  }
+
+  function handleInputChange(e) {
+    const opacity = e.target.value.length > 0 ? 0 : 100;
+    setShortcutElementsOpacity(opacity);
   }
 
   // Get the search wrapper, input, and results elements.
@@ -79,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target !== resultsElement &&
       !resultsElement.contains(e.target)
     ) {
+      setShortcutElementsOpacity(100);
       hideSearchResults();
     }
   });
@@ -157,6 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
       case 'Escape':
         e.preventDefault();
         hideSearchResults();
+        // Clear the input when pressing escape
+        inputElement.value = '';
+        inputElement.dispatchEvent(new Event('input'));
+        // Remove focus from the input
         inputElement.blur();
         break;
     }
@@ -170,7 +189,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Preload the search index.
+  /**
+   * Preloads the search index by fetching data and adding it to the FlexSearch index.
+   * @returns {Promise<void>} A promise that resolves when the index is preloaded.
+   */
   async function preloadIndex() {
     const tokenize = '{{- site.Params.search.flexsearch.tokenize | default  "forward" -}}';
     window.pageIndex = new FlexSearch.Document({
@@ -178,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cache: 100,
       document: {
         id: 'id',
-        store: ['title'],
+        store: ['title', 'crumb'],
         index: "content"
       }
     });
@@ -188,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cache: 100,
       document: {
         id: 'id',
-        store: ['title', 'content', 'url', 'display'],
+        store: ['title', 'content', 'url', 'display', 'crumb'],
         index: "content",
         tag: 'pageId'
       }
@@ -200,6 +222,30 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const route in data) {
       let pageContent = '';
       ++pageId;
+      const urlParts = route.split('/').filter(x => x != "" && !x.startsWith('#'));
+
+      let crumb = '';
+      let searchUrl = '/'
+      for (let i = 0; i < urlParts.length; i++) {
+        const urlPart = urlParts[i];
+        searchUrl += urlPart + '/'
+
+        const crumbData = data[searchUrl];
+        if (!crumbData) {
+          console.warn('Excluded page', searchUrl, '- will not be included for search result breadcrumb for', route);
+          continue;
+        }
+
+        let title = data[searchUrl].title;
+        if (title == "_index") {
+          title = urlPart.split("-").map(x => x).join(" ");
+        }
+        crumb += title;
+
+        if (i < urlParts.length - 1) {
+          crumb += ' > ';
+        }
+      }
 
       for (const heading in data[route].data) {
         const [hash, text] = heading.split('#');
@@ -213,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
           id: url,
           url,
           title,
+          crumb,
           pageId: `page_${pageId}`,
           content: title,
           ...(paragraphs[0] && { display: paragraphs[0] })
@@ -223,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
             id: `${url}_${i}`,
             url,
             title,
+            crumb,
             pageId: `page_${pageId}`,
             content: paragraphs[i]
           });
@@ -234,12 +282,17 @@ document.addEventListener("DOMContentLoaded", function () {
       window.pageIndex.add({
         id: pageId,
         title: data[route].title,
+        crumb,
         content: pageContent
       });
 
     }
   }
 
+  /**
+   * Performs a search based on the provided query and displays the results.
+   * @param {Event} e - The event object.
+   */
   function search(e) {
     const query = e.target.value;
     if (!e.target.value) {
@@ -282,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
           _page_rk: i,
           _section_rk: j,
           route: url,
-          prefix: isFirstItemOfPage ? result.doc.title : undefined,
+          prefix: isFirstItemOfPage ? result.doc.crumb : undefined,
           children: { title, content }
         })
         isFirstItemOfPage = false
@@ -308,6 +361,12 @@ document.addEventListener("DOMContentLoaded", function () {
     displayResults(sortedResults, query);
   }
 
+  /**
+   * Displays the search results on the page.
+   *
+   * @param {Array} results - The array of search results.
+   * @param {string} query - The search query.
+   */
   function displayResults(results, query) {
     const { resultsElement } = getActiveSearchElement();
     if (!resultsElement) return;

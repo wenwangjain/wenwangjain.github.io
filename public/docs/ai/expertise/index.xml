@@ -1,0 +1,46 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DataSP – 5. 补充知识</title>
+    <link>http://localhost:13420/docs/ai/expertise/</link>
+    <description>Recent content in 5. 补充知识 on DataSP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:13420/docs/ai/expertise/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>6.1. 集成学习</title>
+      <link>http://localhost:13420/docs/ai/expertise/ensemble_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:13420/docs/ai/expertise/ensemble_learning/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>6.5. 领域专业知识</title>
+      <link>http://localhost:13420/docs/ai/expertise/knowledge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:13420/docs/ai/expertise/knowledge/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;good&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;good&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#good&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

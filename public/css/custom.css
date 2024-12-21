@@ -5,7 +5,7 @@
 4. Correct the odd `em` font sizing in all browsers.
 */
 
-code,
+/*code,*/
 kbd,
 samp,
 pre {
@@ -66,11 +66,6 @@ img {
   margin: 0 auto;  /* 新增这一行，使元素在水平方向居中 */
 }
 
-/*
-.cardst-hero-button {
-  display: grid;
-  margin: 0 auto;  /* 新增这一行，使元素在水平方向居中 */
-}
-*/
+
 
 
