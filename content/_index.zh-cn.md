@@ -33,8 +33,7 @@ width: wide
 <br>
 
 
-
-{{< cards >}}
+{{< hextra/feature-grid >}}
 
   {{< card link="/project/data_analysis" title="数据分析" subtitle="关于业务的简单数据分析；<br>..." icon="data_analysis" >}}
   {{< card link="/project/data_visualization" title="可视化" subtitle="Python 绘制漂亮的图表；<br>使用 Datart 等 BI 工具，绘制图表、大屏等；" icon="data_visualization" >}}
@@ -57,7 +56,8 @@ width: wide
   {{< card link="/project/generative_model" title="生成模型" subtitle="生成文字，图片，视频等<br>..." icon="package" >}}
 
 
-{{< /cards >}}
+
+{{< /hextra/feature-grid >}}
 
 
 <br><br>

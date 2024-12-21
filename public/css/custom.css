@@ -39,18 +39,20 @@ img {
 
 /*20240710*/
 /*cards.html 一行排列最多 4 个*/
+/*
 .hextra-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
 
+
 .hextra-cardst {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 4px;
 }
-
+*/
 
 
 
