@@ -36,8 +36,6 @@ width: wide
 {{< hextra/feature-grid >}}
 
   {{< card link="/project/data_analysis" title="数据分析" subtitle="关于业务的简单数据分析；<br>..." icon="data_analysis" >}}
-  {{< card link="/project/data_visualization" title="可视化" subtitle="Python 绘制漂亮的图表；<br>使用 Datart 等 BI 工具，绘制图表、大屏等；" icon="data_visualization" >}}
-  {{< card link="/project/automated_reporte" title="自动化报表" subtitle="使用 Excel 插件，实现报表自动化；<br>使用 Python 操作 Excel，实现报表自动化；" icon="automated_reporte" >}}
   {{< card link="/project/data_warehouse" title="数据仓库" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
 
   {{< card link="/project/class" title="分类" subtitle="二分类，多分类，不平衡分类；<br>多标签分类；" icon="class" >}}
@@ -55,7 +53,8 @@ width: wide
   {{< card link="/project/computer_vision" title="计算机视觉" subtitle="让计算机能够理解和分析图像和视频内容；<br>..." icon="computer_vision" >}}
   {{< card link="/project/generative_model" title="生成模型" subtitle="生成文字，图片，视频等<br>..." icon="package" >}}
 
-
+  {{< card link="/project/data_visualization" title="可视化" subtitle="Python 绘制漂亮的图表；<br>使用 Datart 等 BI 工具，绘制图表、大屏等；" icon="data_visualization" >}}
+  {{< card link="/project/automated_reporte" title="自动化报表" subtitle="使用 Excel 插件，实现报表自动化；<br>使用 Python 操作 Excel，实现报表自动化；" icon="automated_reporte" >}}
 
 {{< /hextra/feature-grid >}}
 
