@@ -7,9 +7,11 @@ layout: hextra-home
 
 
 
+
 <div style="display: flex; justify-content: center; width: 100%;">
   <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
-{{< badge content="微积分" type="info" >}}
+  数学<br>
+{{< badge content="微积分" type="info" icon="calculus">}}
 {{< badge content="线性代数" type="warning" >}}
 {{< badge content="概率论" type="error" >}}
 {{< badge content="数理统计" type="error" >}}
@@ -18,10 +20,9 @@ layout: hextra-home
 
 <div style="display: flex; justify-content: center; width: 100%;">
   <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
+  编程<br>
 {{< badge content="Python" type="info" >}}
 {{< badge content="Java" type="warning" >}}
-{{< badge content="C" type="error" >}}
-{{< badge content="C++" type="error" >}}
   </div>
 </div>
 
@@ -29,21 +30,21 @@ layout: hextra-home
 
 
 
-## <font face=Georgia>1、数学基础</font>
+#### 1、数学基础
 
 {{< cards >}}
-  {{< card link="/guide/math_calculus" title="微积分"  subtitle="" icon="calculus" >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="...<br>..." icon="calculus" >}}
   {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="" icon="matrix" >}}
   {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="" icon="probability" >}}
   {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="" icon="statistics" >}}
 {{< /cards >}}
 
-<br><br><br>
+
+<br>
 
 
 
-
-## <font face=Georgia>2、编程语言</font>
+#### 2、编程语言
 
 {{< cards >}}
   {{< card link="python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
@@ -51,16 +52,14 @@ layout: hextra-home
   {{< card link="java" title="Java" subtitle="由 Sun 公司于 1995 年 5 月推出的高级程序设计语言。" icon="java" >}}
 {{< /cards >}}
 
-<br><br><br>
-
-
-
-
-## <font face=Georgia>3、机器学习：Python</font>
-
 <br>
 
-### <font face=Georgia>3.1、基础库</font>
+
+
+
+#### 3、机器学习：Python
+
+##### 3.1、基础库
 
 {{< cards >}}
   {{< card link="python/python_numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" >}}
@@ -70,9 +69,8 @@ layout: hextra-home
   {{< card link="sc_sklearn" title="Sklearn Source Code" subtitle="Sklearn 源码<br><br>" icon="sklearn" >}}
 {{< /cards >}}
 
-<br><br>
 
-### <font face=Georgia>3.2、可视化</font>
+##### 3.2、可视化
 
 {{< cards >}}
   {{< card link="python/python_matplotlib" title="Matplotlib" subtitle="用 Python 创建静态、动画和交互式可视化。" icon="matploblib" >}}
