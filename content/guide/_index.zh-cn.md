@@ -3,13 +3,39 @@ title: "指南"
 layout: hextra-home
 ---
 
+
+
+
+
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
+{{< badge content="微积分" type="info" >}}
+{{< badge content="线性代数" type="warning" >}}
+{{< badge content="概率论" type="error" >}}
+{{< badge content="数理统计" type="error" >}}
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
+{{< badge content="Python" type="info" >}}
+{{< badge content="Java" type="warning" >}}
+{{< badge content="C" type="error" >}}
+{{< badge content="C++" type="error" >}}
+  </div>
+</div>
+
+
+
+
+
 ## <font face=Georgia>1、数学基础</font>
 
 {{< cards >}}
-  {{< card link="/guide/math_calculus" title="微积分"  subtitle="......<br>......" icon="calculus" >}}
-  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="......" icon="matrix" >}}
-  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="......" icon="probability" >}}
-  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="......" icon="statistics" >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="" icon="calculus" >}}
+  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="" icon="matrix" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="" icon="probability" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="" icon="statistics" >}}
 {{< /cards >}}
 
 <br><br><br>
