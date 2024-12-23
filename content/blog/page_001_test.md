@@ -13,4 +13,4 @@ math: true
 <!--more-->
 
 
-{{% jupyter "test.ipynb" %}}
+{{% jupyter "blog_page_001_test.ipynb" %}}
