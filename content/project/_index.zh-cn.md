@@ -4,11 +4,9 @@ layout: hextra-home
 width: full  
 ---
 
-## 项目导航：
-
 <div style="display: flex; justify-content: center; width: 100%;">
   <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
-  <b>迷你导航</b>：用于移动端<br><br>
+  <b>移动端迷你导航</b>：<br><br>
   {{< badge content="数据分析" type="info" link="/project/data_analysis">}}&nbsp;
   {{< badge content="数据仓库" type="error" link="/project/data_warehouse">}}&nbsp;<br>
 
@@ -29,14 +27,29 @@ width: full
 
   {{< badge content="可视化" type="warning" link="/project/data_visualization">}}&nbsp;
   {{< badge content="自动化报表" type="error" link="/project/automated_reporte">}}&nbsp;
-  
+
+  </div>
+</div>
+
+
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
+  <b>项目来源：</b><br>
+
+   [UCI ML](https://archive.ics.uci.edu/) ，加州大学欧文分校机器学习库（UCI数据集）。<br>
+   [kaggle](https://www.kaggle.com/)，与最大的 AI 和 ML 社区一起升级。<br>
+   [阿里云天池](https://tianchi.aliyun.com/)，最前沿的 AI 赛题和课程，走在技术前线。<br>
+   [DataCastle](https://www.datacastle.cn/index.html)，DC 数据科学创新与实践平台。<br>
+   [DataFountain](https://www.datafountain.cn/)，DF 数据科学竞赛创新平台。<br>
+   [百度飞桨](https://aistudio.baidu.com/competition)，人工智能学习与实训社区。<br>
+   [DRIVENDATA](https://www.drivendata.org/)，数据科学竞赛-旨在建设更美好的世界。<br>
+   [Analytics Vidhya](https://datahack.analyticsvidhya.com/)，数据科学家的终极战场。<br>
+
   </div>
 </div>
 
 
 <br><br>
-
-
 
 
 {{< hextra/feature-grid >}}
@@ -65,26 +78,8 @@ width: full
 {{< /hextra/feature-grid >}}
 
 
-
-
-
-
-
-
-
-
 <br>
 
-## 项目来源：
-
-1. [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/) ，加州大学欧文分校机器学习库。目前维护着674 个数据集，为机器学习社区提供服务。
-2. [kaggle](https://www.kaggle.com/)，与最大的 AI 和 ML 社区一起升级。
-3. [阿里云天池](https://tianchi.aliyun.com/)，最前沿的 AI 赛题和课程，走在技术前线。
-4. [DataCastle](https://www.datacastle.cn/index.html)，DC 数据科学创新与实践平台。
-5. [DataFountain](https://www.datafountain.cn/)，DF 数据科学竞赛创新平台。
-6. [百度飞桨](https://aistudio.baidu.com/competition)，人工智能学习与实训社区|中国|百度。
-7. [DRIVENDATA](https://www.drivendata.org/)，数据科学竞赛-旨在建设更美好的世界。
-8. [Analytics Vidhya](https://datahack.analyticsvidhya.com/)，数据科学家的终极战场。
 
 
 
