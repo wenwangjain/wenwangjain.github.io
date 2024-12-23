@@ -5,7 +5,7 @@ layout: hextra-home
 
 
 
-#### 1、数学基础
+## 1、数学基础
 
 {{< cards >}}
   {{< card link="/guide/math_calculus" title="微积分"  subtitle="" icon="calculus" >}}
@@ -17,7 +17,7 @@ layout: hextra-home
 
 <br>
 
-#### 2、编程语言
+## 2、编程语言
 
 {{< cards >}}
   {{< card link="python/python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" >}}
@@ -29,9 +29,9 @@ layout: hextra-home
 
 
 
-#### 3、机器学习：Python
+## 3、机器学习：Python
 
-##### 3.1、基础库
+### 3.1、基础库
 
 {{< cards >}}
   {{< card link="python/python_numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" >}}
@@ -43,7 +43,7 @@ layout: hextra-home
 
 <br>
 
-##### 3.2、可视化
+### 3.2、可视化
 
 {{< cards >}}
   {{< card link="python/python_matplotlib" title="Matplotlib" subtitle="用 Python 创建静态、动画和交互式可视化。" icon="matploblib" >}}
@@ -54,7 +54,7 @@ layout: hextra-home
 
 <br>
 
-##### 3.3、模型解释
+### 3.3、模型解释
 
 {{< cards >}}
   {{< card link="python/python_shap" title="SHAP" subtitle="一种博弈论方法，用于解释任何机器学习模型的输出。" icon="package" >}}
@@ -62,7 +62,7 @@ layout: hextra-home
 
 <br>
 
-##### 3.4、模型部署
+### 3.4、模型部署
 
 {{< cards >}}
   {{< card link="python/python_streamlit" title="Streamlit" subtitle="一个开源 Python 框架；快速构建和部署强大的数据应用程序。" icon="streamlit" >}}
@@ -72,7 +72,7 @@ layout: hextra-home
 
 <br>
 
-##### 3.5、空间数据
+### 3.5、空间数据
 
 {{< cards >}}
   {{< card link="python/python_geopandas" title="GeoPandas" subtitle="旨在让使用 Python 处理地理空间数据变得更加容易。" icon="geopandas" >}}
@@ -85,7 +85,7 @@ layout: hextra-home
 
 
 
-#### 4、深度学习
+## 4、深度学习
 
 {{< cards >}}
   {{< card link="dl_dezero" title="DeZero" subtitle="使用 Python 从头开始实现深度神经网络。" icon="package" >}}
@@ -102,7 +102,7 @@ layout: hextra-home
 
 
 
-#### 5、软件工程
+## 5、软件工程
 
 {{< cards >}}
   {{< card link="software_linux" title="Linux" subtitle="Linux 是一种自由和开放源码的类 UNIX 操作系统。" icon="linux" >}}
@@ -116,7 +116,7 @@ layout: hextra-home
 
 
 
-#### 5、数据库
+## 5、数据库
 
 {{< cards >}}
   {{< card link="database_mysql" title="MySQL" subtitle="MySQL 是一个流行的关系型数据库管理系统。" icon="mysql" >}}
@@ -127,7 +127,7 @@ layout: hextra-home
 
 
 
-#### 6、商业分析：BI
+## 6、商业分析：BI
 
 {{< cards >}}
   {{< card link="bi_datart" title="Datart" subtitle="Datart 是新一代数据可视化开放平台。" icon="package" >}}
@@ -140,7 +140,7 @@ layout: hextra-home
 
 
 
-#### 7、大数据
+## 7、大数据
 
 {{< cards >}}
   {{< card link="bd_kafka" title="kafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}
