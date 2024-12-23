@@ -30,6 +30,13 @@ width: wide
 </div>
 
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
+{{< badge content="👋 关于作者 " type="error" link="about">}}
+  </div>
+</div>
+
+
 <br>
 
 
