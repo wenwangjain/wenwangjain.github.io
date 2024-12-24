@@ -3,6 +3,81 @@ title: "指南"
 layout: hextra-home
 ---
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
+
+  {{< badge content="微积分" type="info" link="/guide/math_calculus">}}&nbsp;
+  {{< badge content="线性代数" type="info" link="/guide/math_linear_algebra">}}&nbsp;
+  {{< badge content="概率论" type="info" link="/guide/math_probability_theory">}}&nbsp;
+  {{< badge content="数理统计" type="info" link="/guide/math_mathematical_statistics">}}&nbsp;
+
+  {{< badge content="Python" type="warning" link="python/python">}}&nbsp;
+  {{< badge content="java" type="warning" link="Java">}}&nbsp;
+
+  {{< badge content="Numpy" type="error" link="python/python_numpy">}}&nbsp;
+  {{< badge content="Pandas" type="error" link="python/python_pandas">}}&nbsp;
+  {{< badge content="Statsmodels" type="error" link="python/python_statsmodels">}}&nbsp;
+  {{< badge content="Sklearn" type="error" link="python/python_sklearn">}}&nbsp;
+  {{< badge content="Sklearn 源码" type="" link="sc_sklearn">}}&nbsp;
+
+  {{< badge content="Matplotlib" type="error" link="python/python_matplotlib">}}&nbsp;
+  {{< badge content="Seaborn" type="error" link="python/python_seaborn">}}&nbsp;
+  {{< badge content="Plotly" type="error" link="python/python_plotly">}}&nbsp;
+  {{< badge content="Vega-Altair" type="error" link="python/python_vega-altair">}}&nbsp;
+
+  {{< badge content="SHAP" type="" link="python/python_shap">}}&nbsp;
+  {{< badge content="Streamlit" type="info" link="python/python_streamlit">}}&nbsp;
+  {{< badge content="Flask" type="info" link="python/python_streamlit">}}&nbsp;
+  {{< badge content="Airflow" type="info" link="bd_airflow">}}&nbsp;
+
+  {{< badge content="GeoPandas" type="error" link="python/python_geopandas">}}&nbsp;
+  {{< badge content="Folium" type="error" link="python/python_folium">}}&nbsp;
+
+  {{< badge content="DeZero" type="info" link="dl_dezero">}}&nbsp;
+  {{< badge content="Keras" type="info" link="dl_keras">}}&nbsp;
+  {{< badge content="PyTorch" type="info" link="dl_pytorch">}}&nbsp;
+  {{< badge content="TensorFlow" type="info" link="dl_tensorflow">}}&nbsp;
+  {{< badge content="FastAI" type="info" link="dl_fastai">}}&nbsp;
+
+  {{< badge content="PyTorch 源码" type="" link="sc_pytorch">}}&nbsp;
+  {{< badge content="TensorFlow 源码" type="" link="sc_tensorflow">}}&nbsp;
+
+  {{< badge content="Linux" type="warning" link="software_linux">}}&nbsp;
+  {{< badge content="Git" type="warning" link="software_git">}}&nbsp;
+  {{< badge content="Github" type="warning" link="software_github">}}&nbsp;
+  {{< badge content="Docker" type="warning" link="software_docker">}}&nbsp;
+  {{< badge content="Kubernetes" type="warning" link="software_kubernetes">}}&nbsp;
+
+  {{< badge content="MySQL" type="info" link="database_mysql">}}&nbsp;
+  {{< badge content="Datart" type="error" link="bi_datart">}}&nbsp;
+  {{< badge content="PowerBI" type="error" link="bi_powerbi">}}&nbsp;
+  {{< badge content="Tableau" type="error" link="bi_tableau">}}&nbsp;
+
+  {{< badge content="Kafka" type="info" link="bd_kafka">}}&nbsp;
+  {{< badge content="Flume" type="" link="bd_flume">}}&nbsp;
+  {{< badge content="Flink CDC" type="info" link="bd_flink_cdc">}}&nbsp;
+  {{< badge content="Flink" type="info" link="bd_flink">}}&nbsp;
+
+  {{< badge content="Airflow" type="info" link="bd_airflow">}}&nbsp;
+  {{< badge content="DolphinScheduler" type="info" link="bd_dolphinscheduler">}}&nbsp;
+  {{< badge content="Datahub" type="info" link="bd_datahub">}}&nbsp;
+  {{< badge content="OpenMetadata" type="info" link="bd_openmetadata">}}&nbsp;
+
+  {{< badge content="Doris" type="info" link="bd_doris">}}&nbsp;
+  {{< badge content="Druid" type="info" link="bd_druid">}}&nbsp;
+  {{< badge content="Iceberg" type="info" link="bd_iceberg">}}&nbsp;
+  {{< badge content="Zeppelin" type="error" link="bd_zeppelin">}}&nbsp;
+  {{< badge content="StreamPark" type="error" link="bd_streampark">}}&nbsp;
+  {{< badge content="Dinky" type="error" link="bd_dinky">}}&nbsp;
+
+  {{< badge content="Hadoop" type="warning" link="bd_hadoop">}}&nbsp;
+  {{< badge content="Hive" type="warning" link="bd_hive">}}&nbsp;
+  {{< badge content="Spark" type="warning" link="bd_spark">}}&nbsp;
+    </div>
+</div>
+
+
+<br>
 
 
 ## 1、数学基础
@@ -35,7 +110,7 @@ layout: hextra-home
 
 {{< cards >}}
   {{< card link="python/python_numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" >}}
-  {{< card link="python/python_pandas" title="pandas" subtitle="一个快速、强大、灵活且易于使用的开源数据分析和操作工具。" icon="pandas" >}}
+  {{< card link="python/python_pandas" title="Pandas" subtitle="一个快速、强大、灵活且易于使用的开源数据分析和操作工具。" icon="pandas" >}}
   {{< card link="python/python_statsmodels" title="Statsmodels" subtitle="Python 统计建模库；用于进行统计测试和统计数据探索。" icon="package" >}}
   {{< card link="python/python_sklearn" title="Sklearn" subtitle="Python 中的机器学习；简单有效的预测数据分析工具。" icon="sklearn" >}}
   {{< card link="sc_sklearn" title="Sklearn 源码" subtitle="Sklearn 源码<br><br>" icon="sklearn" >}}
@@ -77,7 +152,6 @@ layout: hextra-home
 {{< cards >}}
   {{< card link="python/python_geopandas" title="GeoPandas" subtitle="旨在让使用 Python 处理地理空间数据变得更加容易。" icon="geopandas" >}}
   {{< card link="python/python_folium" title="Folium" subtitle="轻松地在交互式传单地图上可视化使用 Python 处理的数据。" icon="folium" >}}
-
 {{< /cards >}}
 
 <br>
@@ -115,7 +189,6 @@ layout: hextra-home
 <br>
 
 
-
 ## 5、数据库
 
 {{< cards >}}
@@ -123,8 +196,6 @@ layout: hextra-home
 {{< /cards >}}
 
 <br>
-
-
 
 
 ## 6、商业分析：BI
@@ -143,7 +214,7 @@ layout: hextra-home
 ## 7、大数据
 
 {{< cards >}}
-  {{< card link="bd_kafka" title="kafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}
+  {{< card link="bd_kafka" title="Kafka" subtitle="一个开源分布式事件流平台，实现高性能数据管道、流分析、数据集成和关键任务应用程序。" icon="kafka" >}}
   {{< card link="bd_flume" title="Flume" subtitle="一种分布式、可靠且可用的服务，用于高效收集、聚合和移动大量日志数据。" icon="apache" >}}
   {{< card link="bd_flink_cdc" title="Flink CDC" subtitle="一个基于流的数据集成工具，旨在为用户提供一套功能更加全面的编程接口（API）。" icon="flink" >}}
   {{< card link="bd_flink" title="Flink" subtitle="一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。" icon="flink" >}}
