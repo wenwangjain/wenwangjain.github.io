@@ -7,26 +7,26 @@ width: full
 
 <div style="display: flex; justify-content: center; width: 100%;">
   <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
-  {{< badge content="数据分析" type="info" link="/project/data_analysis">}}
+  {{< badge content="数据分析" type="info" link="/project/data_analysis">}}&nbsp;
   {{< badge content="数据仓库" type="info" link="/project/data_warehouse">}}
 
-  {{< badge content="分类" type="error" link="/project/class">}}
-  {{< badge content="回归" type="error" link="/project/regression">}}
-  {{< badge content="聚类" type="error" link="/project/cluster">}}
+  {{< badge content="分类" type="error" link="/project/class">}}&nbsp;
+  {{< badge content="回归" type="error" link="/project/regression">}}&nbsp;
+  {{< badge content="聚类" type="error" link="/project/cluster">}}&nbsp;
   {{< badge content="异常检测" type="error" link="/project/abnormal">}}<br>
 
-  {{< badge content="算法优化" type="warning" link="/project/algorithm">}}
-  {{< badge content="生存分析" type="warning" link="/project/survival_analysis">}}
-  {{< badge content="因果推断" type="warning" link="/project/causal_inference">}}
+  {{< badge content="算法优化" type="warning" link="/project/algorithm">}}&nbsp;
+  {{< badge content="生存分析" type="warning" link="/project/survival_analysis">}}&nbsp;
+  {{< badge content="因果推断" type="warning" link="/project/causal_inference">}}&nbsp;
   {{< badge content="时间序列" type="error" link="/project/timeseries">}}<br>
 
-  {{< badge content="推荐系统" type="warning" link="/project/recommend">}}
-  {{< badge content="自然语言" type="info" link="/project/natural_language">}}
-  {{< badge content="计算机视觉" type="info" link="/project/computer_vision">}}
+  {{< badge content="推荐系统" type="warning" link="/project/recommend">}}&nbsp;
+  {{< badge content="自然语言" type="info" link="/project/natural_language">}}&nbsp;
+  {{< badge content="计算机视觉" type="info" link="/project/computer_vision">}}&nbsp;
   {{< badge content="生成模型" type="error" link="/project/generative_model">}}<br>
 
-  {{< badge content="可视化" type="" link="/project/data_visualization">}}
-  {{< badge content="自动化报表" type="" link="/project/automated_reporte">}}
+  {{< badge content="可视化" type="" link="/project/data_visualization">}}&nbsp;
+  {{< badge content="自动化报表" type="" link="/project/automated_reporte">}}&nbsp;
     </div>
 </div>
 
