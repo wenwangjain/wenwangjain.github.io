@@ -35,30 +35,6 @@ width: full
 <br>
 
 
-{{< cards >}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="error">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="warning">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="info">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="error">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="warning">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="info">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="error">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="warning">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="info">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="error">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="warning">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="info">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="error">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="warning">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="info">}}
-{{< card link="/blog/page_001_test" title="01-数据分析" subtitle="Kaggle" icon="jupyter" tag= "A custom tag" tagType="">}}
-{{< /cards >}}
-
-
 
 ## 2、项目导航
 
@@ -66,46 +42,143 @@ width: full
 
 #### 2.1.1、入门练习
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 #### 2.1.2、推荐项目
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 <br>
+
+
 
 
 ### 2.2、机器学习项目列表
 
 #### 2.2.1、入门练习
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 #### 2.2.2、推荐项目
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 <br>
+
+
+
 
 
 ### 2.3、深度学习项目列表
 
 #### 2.3.1、入门练习
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 #### 2.3.2、推荐项目
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 <br>
+
+
+
+
 
 ### 2.4、生成式 AI 项目列表
 
 #### 2.4.1、入门练习
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 #### 2.4.2、推荐项目
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 <br>
+
+
+
 
 ### 2.5、大数据\数仓项目列表
 
 #### 2.5.1、入门练习
 
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
 #### 2.5.2、推荐项目
+
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+
+1. [TEST](https://www.kaggle.com/)，待补充。
+
+    </div>
+</div>
+
+<br>
 
 <br>
 
 
 ## 3、项目来源
+
+<div style="display: flex; justify-content: left; width: 100%;">
+  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
 
 1. [UCI ML](https://archive.ics.uci.edu/) ，加州大学欧文分校机器学习库（UCI数据集）。
 2. [kaggle](https://www.kaggle.com/)，与最大的 AI 和 ML 社区一起升级。
@@ -115,6 +188,8 @@ width: full
 6. [百度飞桨](https://aistudio.baidu.com/competition)，人工智能学习与实训社区。
 7. [DRIVENDATA](https://www.drivendata.org/)，数据科学竞赛-旨在建设更美好的世界。
 8. [Analytics Vidhya](https://datahack.analyticsvidhya.com/)，数据科学家的终极战场。
+    </div>
+</div>
 
 <br>
 
