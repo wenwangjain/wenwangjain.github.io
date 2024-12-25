@@ -5,87 +5,54 @@ width: full
 ---
 
 
-<div style="display: flex; justify-content: center; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: center;">
-  {{< badge content="数据分析" type="info" link="/project/data_analysis">}}&nbsp;
-  {{< badge content="数据仓库" type="info" link="/project/data_warehouse">}}
+## 1、项目导航
 
-  {{< badge content="分类" type="error" link="/project/class">}}&nbsp;
-  {{< badge content="回归" type="error" link="/project/regression">}}&nbsp;
-  {{< badge content="聚类" type="error" link="/project/cluster">}}&nbsp;
-  {{< badge content="异常检测" type="error" link="/project/abnormal">}}<br>
+### 1.1、数据分析项目列表
 
-  {{< badge content="算法优化" type="warning" link="/project/algorithm">}}&nbsp;
-  {{< badge content="生存分析" type="warning" link="/project/survival_analysis">}}&nbsp;
-  {{< badge content="因果推断" type="warning" link="/project/causal_inference">}}&nbsp;
-  {{< badge content="时间序列" type="error" link="/project/timeseries">}}<br>
+#### 1.1.1、入门练习
 
-  {{< badge content="推荐系统" type="warning" link="/project/recommend">}}&nbsp;
-  {{< badge content="自然语言" type="info" link="/project/natural_language">}}&nbsp;
-  {{< badge content="计算机视觉" type="info" link="/project/computer_vision">}}&nbsp;
-  {{< badge content="生成模型" type="error" link="/project/generative_model">}}<br>
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-  {{< badge content="可视化" type="" link="/project/data_visualization">}}&nbsp;
-  {{< badge content="自动化报表" type="" link="/project/automated_reporte">}}&nbsp;
-    </div>
-</div>
+#### 1.1.2、推荐练习
 
-
-
-<br>
-
-
-
-## 2、项目导航
-
-### 2.1、数据分析项目列表
-
-#### 2.1.1、入门练习
-
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
-
-1. [TEST](https://www.kaggle.com/)，待补充。
-
-    </div>
-</div>
-
-#### 2.1.2、推荐项目
-
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
-
-1. [TEST](https://www.kaggle.com/)，待补充。
-
-    </div>
-</div>
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
 <br>
 
 
 
 
-### 2.2、机器学习项目列表
+### 1.2、机器学习项目列表
 
-#### 2.2.1、入门练习
+#### 1.2.1、入门练习
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-1. [TEST](https://www.kaggle.com/)，待补充。
 
-    </div>
-</div>
+#### 1.2.2、推荐练习
 
-#### 2.2.2、推荐项目
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
-
-1. [TEST](https://www.kaggle.com/)，待补充。
-
-    </div>
-</div>
 
 <br>
 
@@ -93,27 +60,27 @@ width: full
 
 
 
-### 2.3、深度学习项目列表
+### 1.3、深度学习项目列表
 
-#### 2.3.1、入门练习
+#### 1.3.1、入门练习
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-1. [TEST](https://www.kaggle.com/)，待补充。
 
-    </div>
-</div>
+#### 1.3.2、推荐练习
 
-#### 2.3.2、推荐项目
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
-
-1. [TEST](https://www.kaggle.com/)，待补充。
-
-    </div>
-</div>
 
 <br>
 
@@ -121,61 +88,60 @@ width: full
 
 
 
-### 2.4、生成式 AI 项目列表
+### 1.4、生成式 AI 项目列表
 
-#### 2.4.1、入门练习
+#### 1.4.1、入门练习
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-1. [TEST](https://www.kaggle.com/)，待补充。
 
-    </div>
-</div>
+#### 1.4.2、推荐练习
 
-#### 2.4.2、推荐项目
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
-
-1. [TEST](https://www.kaggle.com/)，待补充。
-
-    </div>
-</div>
 
 <br>
 
 
 
 
-### 2.5、大数据\数仓项目列表
+### 1.5、大数据\数仓项目列表
 
-#### 2.5.1、入门练习
+#### 1.5.1、入门练习
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-1. [TEST](https://www.kaggle.com/)，待补充。
 
-    </div>
-</div>
+#### 1.5.2、推荐练习
 
-#### 2.5.2、推荐项目
+{{< cards >}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="error">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="warning">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="info">}}
+  {{< card link="/" title="待补充" subtitle="测试" icon="jupyter" tag= "测试" tagType="">}}
+{{< /cards >}}
 
-<div style="display: flex; justify-content: left; width: 100%;">
-  <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
-
-1. [TEST](https://www.kaggle.com/)，待补充。
-
-    </div>
-</div>
 
 <br>
 
-<br>
 
 
-## 3、项目来源
+## 2、项目来源
 
 <div style="display: flex; justify-content: left; width: 100%;">
   <div style="flex: 100%; padding: 10px; box-sizing: border-box; text-align: left; font-size: 15px;">
@@ -188,6 +154,7 @@ width: full
 6. [百度飞桨](https://aistudio.baidu.com/competition)，人工智能学习与实训社区。
 7. [DRIVENDATA](https://www.drivendata.org/)，数据科学竞赛-旨在建设更美好的世界。
 8. [Analytics Vidhya](https://datahack.analyticsvidhya.com/)，数据科学家的终极战场。
+
     </div>
 </div>
 
