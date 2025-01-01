@@ -1,5 +1,5 @@
 ---
-title: 【4】数据准备
+title: 4. 数据准备
 weight: 4
 #next: /step1
 #prev: /docs
