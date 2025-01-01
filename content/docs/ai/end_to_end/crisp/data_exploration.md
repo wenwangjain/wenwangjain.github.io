@@ -1,5 +1,5 @@
 ---
-title: 【3】数据探索
+title: 3. 数据探索
 weight: 3
 #next: /step1
 #prev: /docs
