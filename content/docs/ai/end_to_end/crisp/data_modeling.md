@@ -1,5 +1,5 @@
 ---
-title: 【5】数据建模
+title: 5. 数据建模
 weight: 5
 #next: /step1
 #prev: /docs
