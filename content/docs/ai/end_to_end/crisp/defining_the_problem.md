@@ -1,5 +1,5 @@
 ---
-title: 【1】定义问题
+title: 1. 定义问题
 weight: 1
 #next: /step1
 #prev: /docs
