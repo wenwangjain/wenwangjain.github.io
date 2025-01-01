@@ -1,5 +1,5 @@
 ---
-title: 【2】收集数据
+title: 2. 收集数据
 weight: 2
 #next: /step1
 #prev: /docs
