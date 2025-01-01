@@ -1,5 +1,5 @@
 ---
-title: 【0】自定义模块
+title: 0. 自定义模块
 weight: 1
 #next: /step1
 #prev: /docs
