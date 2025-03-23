@@ -4,74 +4,89 @@ layout: hextra-home
 width: wide  
 ---
 
-{{< hextra/hero-badge >}}
-  <div class="hx-w-2 hx-h-2 hx-rounded-full hx-bg-primary-400"></div>
-  <span>免费 开源</span>
-  {{< icon name="arrow-circle-right" attributes="height=14" >}}
-{{< /hextra/hero-badge >}}
 
-<div class="hx-mt-6 hx-mb-6">
+<div class="hx-mb-4">
 {{< hextra/hero-headline >}}
-  创建现代化网站&nbsp;<br class="sm:hx-block hx-hidden" />由 Markdown 和 Hugo 驱动
+  数据科学实践
 {{< /hextra/hero-headline >}}
 </div>
 
-<div class="hx-mb-12">
+<div class="hx-mb-6">
 {{< hextra/hero-subtitle >}}
-  极速且全能的 Hugo 主题框架&nbsp;<br class="sm:hx-block hx-hidden" />为构建现代化的静态网站而生
+  关于 AI，大数据的学习笔记，项目实践&nbsp;<br class="sm:hx-block hx-hidden" />
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="hx-mb-6">
-{{< hextra/hero-button text="现在开始" link="docs" >}}
+<div class="hx-mb-8">
+{{< hextra/hero-button text="⚓ 指南" link="guide" bgColor="#2d3a4a">}}
+{{< hextra/hero-button text="✍ 练习" link="blog"  bgColor="#e76f51">}}
+{{< hextra/hero-button text="👻 关于" link="about" bgColor="#f4a261">}}
 </div>
+
 
 <div class="hx-mt-6"></div>
 
 {{< hextra/feature-grid >}}
+
   {{< hextra/feature-card
-    title="快速且功能全面"
-    subtitle="简单易用，功能强大丰富。"
+    title="可视化"
+    subtitle="....."
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
+    image="/images/hextra-markdown.webp"
+    imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
+    title="数据分析"
+    subtitle="....."
+    link="/project/data_analysis"
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="/images/hextra-doc.webp"
-    imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="Markdown 写作"
-    subtitle="只需使用 Markdown 进行编辑。多样的 Shortcode 组件开箱即用。"
+    title="人工智能"
+    subtitle="机器学习，深度学习，强化学习，计算机视觉，自然语言处理，MLOps，生成式人工智能，通用人工智能....."
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="/images/hextra-markdown.webp"
-    imageClass="hx-top-[40%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="全文搜索"
-    subtitle="内置 FlexSearch 全文搜索，无需额外设置。"
+    title="大数据"
+    subtitle="传输，存储，计算，展示；Flink，Kafka, DolphinScheduler，Zeppelin，Doris，Hudi，Datart......"
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="/images/hextra-search.webp"
-    imageClass="hx-top-[40%] hx-left-[36px] hx-w-[110%] sm:hx-w-[110%] dark:hx-opacity-80"
+    imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
   >}}
-  {{< hextra/feature-card
-    title="轻如羽毛"
-    subtitle="使用 Hextra 无需依赖 Node.js。由 Hugo 提供支持，Hugo 是最快的静态网站生成器之一，只需一个二进制文件即可在数秒内创建网站。"
-  >}}
-  {{< hextra/feature-card
-    title="响应式布局，暗黑模式"
-    subtitle="适应不同的屏幕尺寸。内置暗黑模式支持，并根据用户的系统偏好自动切换。"
-  >}}
-  {{< hextra/feature-card
-    title="免费构建和托管"
-    subtitle="使用 GitHub Actions 进行构建，并在 GitHub Pages 上免费托管。也可以托管在任何静态托管服务上。"
-  >}}
-  {{< hextra/feature-card
-    title="多语言轻松实现"
-    subtitle="仅需通过在 Markdown 文件后添加语言代码即可创建多语言页面。向您的站点添加 i18n 支持直观易行。"
-  >}}
-  {{< hextra/feature-card
-    title="还有更多..."
-    icon="sparkles"
-    subtitle="代码高亮 / 目录 / SEO / RSS / LaTeX 公式 / Mermaid 图标 / 自定义 / 等等..."
-  >}}
+  
+  {{< card link="/guide/math_calculus" title="Python 数据可视化"  subtitle="Matplotlib，seaborn，plotly" icon="python" >}}
+  {{< card link="/guide/math_linear_algebra" title="分析方法"  subtitle="....." icon="class" >}}
+  {{< card link="/guide/math_probability_theory" title="人工智能学习路线"  subtitle="简单易用，功能强大丰富。" icon="route" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="简单易用，功能强大丰富。" icon="data_visualization" >}}
+
+  <div></div>
+  {{< card link="/guide/math_linear_algebra" title="分析案例"  subtitle="....." icon="data_analysis" >}}
+  {{< card link="/guide/math_probability_theory" title="端到端的机器学习"  subtitle="简单易用，功能强大丰富。" icon="flowsheet" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="简单易用，功能强大丰富。" icon="probability" >}}
+
+  <div></div>
+  <div></div>
+  {{< card link="/guide/math_mathematical_statistics" title="深度学习" subtitle="简单易用，功能强大丰富。" icon="blue_code" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="简单易用，功能强大丰富。" icon="statistics" >}}
+
+  <div></div>
+  <div></div>
+  {{< card link="/guide/math_mathematical_statistics" title="生成式人工智能" subtitle="简单易用，功能强大丰富。" icon="blue_code" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="简单易用，功能强大丰富。" icon="statistics" >}}
+
+  <div></div>
+  <div></div>
+  {{< card link="/guide/math_mathematical_statistics" title="模型部署 MLOps" subtitle="简单易用，功能强大丰富。" icon="blue_code" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="简单易用，功能强大丰富。" icon="statistics" >}}
+
+  
 {{< /hextra/feature-grid >}}
