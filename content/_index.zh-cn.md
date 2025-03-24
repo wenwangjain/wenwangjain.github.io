@@ -34,7 +34,7 @@ width: wide
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="/images/hextra-markdown.webp"
     imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(19, 12, 12, 0.2),hsla(0,0%,100%,0));"
   >}}
 
   {{< hextra/feature-card
@@ -44,7 +44,7 @@ width: wide
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="/images/hextra-doc.webp"
     imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(252, 22, 5, 0.2),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
     title="人工智能"
@@ -52,7 +52,7 @@ width: wide
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="/images/hextra-markdown.webp"
     imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(250, 116, 6, 0.2),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
     title="大数据"
@@ -60,33 +60,32 @@ width: wide
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="/images/hextra-search.webp"
     imageClass="hx-top-[50%] hx-left-[36px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.2),hsla(0,0%,100%,0));"
   >}}
-  
+
   {{< card link="/guide/math_calculus" title="Python 数据可视化"  subtitle="Matplotlib，seaborn，plotly" icon="python" >}}
-  {{< card link="/guide/math_linear_algebra" title="分析方法"  subtitle="....." icon="class" >}}
-  {{< card link="/guide/math_probability_theory" title="人工智能学习路线"  subtitle="简单易用，功能强大丰富。" icon="route" >}}
-  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="简单易用，功能强大丰富。" icon="data_visualization" >}}
-
-  <div></div>
-  {{< card link="/guide/math_linear_algebra" title="分析案例"  subtitle="....." icon="data_analysis" >}}
+  {{< card link="/guide/math_linear_algebra" title="数据分析方法"  subtitle="....." icon="class" >}}
   {{< card link="/guide/math_probability_theory" title="端到端的机器学习"  subtitle="简单易用，功能强大丰富。" icon="flowsheet" >}}
-  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="简单易用，功能强大丰富。" icon="probability" >}}
+  {{< card link="/guide/math_probability_theory" title="大数据基础"  subtitle="简单易用，功能强大丰富。" icon="foundation" >}}
+
+  <div></div>
+  {{< card link="/guide/math_linear_algebra" title="商业数据分析方法"  subtitle="....." icon="data_analysis" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="深度学习" subtitle="简单易用，功能强大丰富。" icon="neuron" >}}
+  {{< card link="/project/data_warehouse" title="数据仓库" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
 
   <div></div>
   <div></div>
-  {{< card link="/guide/math_mathematical_statistics" title="深度学习" subtitle="简单易用，功能强大丰富。" icon="blue_code" >}}
-  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="简单易用，功能强大丰富。" icon="statistics" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="模型部署 MLOps" subtitle="简单易用，功能强大丰富。" icon="automated_reporte" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数据治理" subtitle="简单易用，功能强大丰富。" icon="dama" >}}
 
   <div></div>
   <div></div>
-  {{< card link="/guide/math_mathematical_statistics" title="生成式人工智能" subtitle="简单易用，功能强大丰富。" icon="blue_code" >}}
-  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="简单易用，功能强大丰富。" icon="statistics" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="分布式建模" subtitle="简单易用，功能强大丰富。" icon="algorithm" >}}
+  <div></div>
 
   <div></div>
   <div></div>
-  {{< card link="/guide/math_mathematical_statistics" title="模型部署 MLOps" subtitle="简单易用，功能强大丰富。" icon="blue_code" >}}
-  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="简单易用，功能强大丰富。" icon="statistics" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="生成式人工智能" subtitle="简单易用，功能强大丰富。" icon="natural_language" >}}
+  <div></div>
 
-  
 {{< /hextra/feature-grid >}}
