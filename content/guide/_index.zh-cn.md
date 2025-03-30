@@ -1,6 +1,6 @@
 ---
 title: "指南"
-layout: hextra-home
+layout: hextra-home 
 ---
 
 
@@ -82,8 +82,9 @@ layout: hextra-home
 
 <br>
 
+### 3.6、自动机器学习
 
-
+<br>
 
 ## 4、深度学习
 

@@ -4,6 +4,10 @@
   <url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/ai/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ai/end_to_end/</loc>
+  </url><url>
     <loc>http://localhost:1313/guide/math_calculus/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/math_linear_algebra/</loc>
