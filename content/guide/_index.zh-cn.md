@@ -9,10 +9,10 @@ layout: hextra-home
 ## 1、数学基础
 
 {{< cards >}}
-  {{< card link="/guide/math_calculus" title="微积分"  subtitle="" icon="calculus" >}}
-  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="" icon="matrix" >}}
-  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="" icon="probability" >}}
-  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="" icon="statistics" >}}
+  {{< card link="/guide/math_calculus" title="微积分"  subtitle="是研究变化\微分与累积\积分的数学分支，用于解决运动、曲线、面积等动态问题。" icon="calculus" >}}
+  {{< card link="/guide/math_linear_algebra" title="线性代数"  subtitle="是研究向量、矩阵和线性变换的数学分支，核心用来解方程、处理空间变换和数据分析。" icon="matrix" >}}
+  {{< card link="/guide/math_probability_theory" title="概率论"  subtitle="是研究随机现象规律性的数学分支，用概率量化不确定性。" icon="probability" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="数理统计" subtitle="是用数学工具（尤其是概率论）从数据中总结规律、预测未知的学科，核心是抽样、估计和假设检验。" icon="statistics" >}}
 {{< /cards >}}
 
 

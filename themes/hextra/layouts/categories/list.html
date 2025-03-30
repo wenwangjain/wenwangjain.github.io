@@ -62,6 +62,13 @@
       {{- $readMore := (T "readMore") | default "Read more →" -}}
       {{ partial "custom/blog-sidebar" . }}
     </div>
+        <!-- 添加返回博客按钮 -->
+        <div class="hx-mt-6">
+          <a href="{{ "/blog/" | relLangURL }}" 
+             class="hx-inline-flex hx-items-center hx-px-4 hx-py-2 hx-border hx-border-transparent hx-text-sm hx-font-medium hx-rounded-3xl hx-text-white hx-bg-primary-600 hover:hx-bg-primary-700 hx-transition-colors">
+            ← {{ (T "backToBlog") | default "返回项目列表" }}
+          </a>
+        </div>
   </div>
   
   <div style="flex: 10%; padding: 10px; box-sizing: border-box; text-align: left;"></div>

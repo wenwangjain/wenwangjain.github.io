@@ -1,0 +1,22 @@
+{{ if gt .Paginator.TotalPages 1 }}
+<nav class="hx-mt-12 hx-flex hx-items-center hx-justify-center hx-gap-2">
+  {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" class="hx-flex hx-h-10 hx-w-10 hx-items-center hx-justify-center hx-rounded-full hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800">
+      &larr;
+    </a>
+  {{ end }}
+
+  {{ range .Paginator.Pagers }}
+    <a href="{{ .URL }}" 
+       class="hx-flex hx-h-10 hx-w-10 hx-items-center hx-justify-center hx-rounded-full {{ if eq .PageNumber $.Paginator.PageNumber }}hx-bg-primary-500 hx-text-white{{ else }}hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800{{ end }}">
+      {{ .PageNumber }}
+    </a>
+  {{ end }}
+
+  {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" class="hx-flex hx-h-10 hx-w-10 hx-items-center hx-justify-center hx-rounded-full hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800">
+      &rarr;
+    </a>
+  {{ end }}
+</nav>
+{{ end }}

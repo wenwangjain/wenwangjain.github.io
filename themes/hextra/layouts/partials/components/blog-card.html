@@ -1,0 +1,23 @@
+<article class="hx-border-b hx-border-gray-200 hx-pb-12 dark:hx-border-neutral-800">
+  <h2 class="hx-text-2xl hx-font-bold hx-mb-4">
+    <a href="{{ .RelPermalink }}" class="hover:hx-text-primary-500">{{ .Title }}</a>
+  </h2>
+  
+  <div class="hx-flex hx-items-center hx-gap-3 hx-mb-4">
+    <time class="hx-text-sm hx-text-gray-500">{{ .Date | time.Format ":date_long" }}</time>
+    {{ with .Params.categories }}
+      <span class="hx-text-sm hx-text-gray-500">•</span>
+      <div class="hx-flex hx-gap-2">
+        {{ range . }}
+          <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="hx-text-sm hx-text-gray-600 hover:hx-text-primary-500">{{ . }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+  
+  <p class="hx-text-gray-600 dark:hx-text-gray-400 hx-mb-4">{{ .Summary }}</p>
+  
+  <a href="{{ .RelPermalink }}" class="hx-inline-flex hx-items-center hx-text-primary-500">
+    阅读更多 →
+  </a>
+</article>
