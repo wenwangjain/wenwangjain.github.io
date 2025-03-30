@@ -1,12 +1,12 @@
 <div class="hx-sticky hx-top-24 hx-space-y-8">
   <!-- 分类区块 -->
   <div class="hx-border hx-border-gray-200 hx-rounded-xl hx-p-6 dark:hx-border-neutral-800">
-    <h3 class="hx-text-lg hx-font-semibold hx-mb-4">分类</h1>
+    <h3 class="hx-text-lg hx-font-semibold hx-mb-4">分类</h3>
     <ul class="hx-space-y-3">
       {{ range .Site.Taxonomies.categories }}
       <li class="hx-flex hx-items-center hx-justify-between">
         <a href="{{ .Page.RelPermalink }}" 
-           class="hx-text-gray-700 hover:hx-text-primary-500 dark:hx-text-gray-300">
+           class="hx-text-sm hx-text-gray-700 hover:hx-text-primary-500 dark:hx-text-gray-300">
           {{ .Page.Title }}
         </a>
         <span class="hx-text-xs hx-bg-gray-100 hx-px-2 hx-py-1 hx-rounded-full dark:hx-bg-neutral-700">
