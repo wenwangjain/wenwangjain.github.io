@@ -12,6 +12,40 @@
   </url><url>
     <loc>http://localhost:1313/guide/math_mathematical_statistics/</loc>
   </url><url>
+    <loc>http://localhost:1313/guide/program_python/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/program_java/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/program_scala/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/program_go/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_numpy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_pandas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_sklearn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_sklearn_source_code/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_statsmodels/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_matplotlib/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_seaborn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_plotly/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_shap/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_streamlit/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_flask/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_geopandas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/python_folium/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url><url>

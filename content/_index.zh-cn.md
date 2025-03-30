@@ -60,7 +60,7 @@ width: wide
   {{< card link="/ai/ml" title="端到端的机器学习"  subtitle="简单易用，功能强大丰富。" icon="route" >}}
   {{< card link="/guide/math_probability_theory" title="核心框架"  subtitle="简单易用，功能强大丰富。" icon="dack_apache" >}}
   <div></div>
-  {{< card link="/guide/math_calculus" title="图表"  subtitle="Pandas，Matplotlib，Seabotn，Plotly" icon="chart" >}}
+  {{< card link="/guide/math_calculus" title="图表"  subtitle="折线图，条形图，直方图，饼图，散点图..." icon="chart" >}}
 
   {{< card link="/ai/dl" title="深度学习" subtitle="简单易用，功能强大丰富。" icon="neuron" >}}
   {{< card link="/project/data_warehouse" title="数据仓库" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
@@ -70,7 +70,7 @@ width: wide
   {{< card link="/ai/gai" title="生成式人工智能" subtitle="大模型" icon="natural_language" >}}
   {{< card link="/guide/math_mathematical_statistics" title="数据治理" subtitle="简单易用，功能强大丰富。" icon="dama" >}}
   <div></div>
-  {{< card link="/guide/math_calculus" title="BI 可视化"  subtitle="Datart" icon="data_visualization" >}}
+  {{< card link="/guide/math_calculus" title="BI 可视化"  subtitle="Datart，观远BI，PowerBI..." icon="data_visualization" >}}
 
   {{< card link="/ai/distributed" title="分布式训练" subtitle="简单易用，功能强大丰富。" icon="algorithm" >}}
   {{< card link="/guide/math_mathematical_statistics" title="云原生" subtitle="简单易用，功能强大丰富。" icon="cloud" >}}

@@ -1,6 +1,6 @@
 ---
 title: 线性代数
-weight: 102
+weight: 1002
 #next: /step1
 prev: /guide
 #editURL: "https://example.com/edit/this/page"

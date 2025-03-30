@@ -1,6 +1,6 @@
 ---
 title: 概率论
-weight: 103
+weight: 1003
 #next: /step1
 prev: /guide
 #editURL: "https://example.com/edit/this/page"
