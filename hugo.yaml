@@ -30,13 +30,13 @@ menu:
       name: 大数据
       pageRef: /bigdata
       weight: 2
+    - identifier: cloud
+      name: 云计算
+      pageRef: /cloud
+      weight: 3
     - identifier: iot
       name: 物联网
       pageRef: /iot
-      weight: 3
-    - identifier: visualization
-      name: 可视化
-      pageRef: /visualization
       weight: 4
     - identifier: guide
       name: 指南

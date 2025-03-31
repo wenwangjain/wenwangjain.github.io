@@ -13,7 +13,7 @@ width: wide
 
 <div class="hx-mb-6">
 {{< hextra/hero-subtitle >}}
-  关于全栈AI，大数据的学习笔记，项目实践&nbsp;<br class="sm:hx-block hx-hidden" />
+  关于AI，大数据，云原生的学习笔记，项目实践&nbsp;<br class="sm:hx-block hx-hidden" />
 {{< /hextra/hero-subtitle >}}
 </div>
 
@@ -43,37 +43,40 @@ width: wide
     style="background: radial-gradient(ellipse at 50% 80%,rgba(231,111,81,0.3),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="物联网"
-    subtitle="....."
-    link="/iot"
-    class="hx-aspect-auto md:hx-aspect-[0.6/1] max-md:hx-min-h-[340px]"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(244,162,97, 0.3),hsla(0,0%,100%,0));"
-  >}}
-  {{< hextra/feature-card
-    title="可视化"
-    subtitle="Python（Pandas，Matplotlib，Seabotn，Plotly），BI（观远，Quick BI，PowerBI，Datart）....."
+    title="云计算"
+    subtitle="云原生（容器化）....."
     link="/visualization"
     class="hx-aspect-auto md:hx-aspect-[0.6/1] max-lg:hx-min-h-[340px]"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(45,58,74,0.3),hsla(0,0%,100%,0));"
   >}}
+  {{< hextra/feature-card
+    title="物联网"
+    subtitle="边缘计算（边缘AI推理，IoT数据处理，联邦学习）....."
+    link="/iot"
+    class="hx-aspect-auto md:hx-aspect-[0.6/1] max-md:hx-min-h-[340px]"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(244,162,97, 0.3),hsla(0,0%,100%,0));"
+  >}}
+
 
   {{< card link="/ai/ml" title="端到端的机器学习"  subtitle="简单易用，功能强大丰富。" icon="route" >}}
   {{< card link="/guide/math_probability_theory" title="核心框架"  subtitle="简单易用，功能强大丰富。" icon="dack_apache" >}}
+  {{< card link="/guide/math_mathematical_statistics" title="云原生" subtitle="简单易用，功能强大丰富。" icon="cloud" >}}
   <div></div>
-  {{< card link="/guide/math_calculus" title="图表"  subtitle="折线图，条形图，直方图，饼图，散点图..." icon="chart" >}}
 
   {{< card link="/ai/dl" title="深度学习" subtitle="简单易用，功能强大丰富。" icon="neuron" >}}
   {{< card link="/project/data_warehouse" title="数据仓库" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
   <div></div>
-  {{< card link="/guide/math_calculus" title="Python 可视化"  subtitle="Pandas，Matplotlib，Seabotn，Plotly" icon="chart1" >}}
+  <div></div>
+  
 
   {{< card link="/ai/gai" title="生成式人工智能" subtitle="大模型" icon="natural_language" >}}
   {{< card link="/guide/math_mathematical_statistics" title="数据治理" subtitle="简单易用，功能强大丰富。" icon="dama" >}}
   <div></div>
-  {{< card link="/guide/math_calculus" title="BI 可视化"  subtitle="Datart，观远BI，PowerBI..." icon="data_visualization" >}}
+  <div></div>
+  
 
   {{< card link="/ai/distributed" title="分布式训练" subtitle="简单易用，功能强大丰富。" icon="algorithm" >}}
-  {{< card link="/guide/math_mathematical_statistics" title="云原生" subtitle="简单易用，功能强大丰富。" icon="cloud" >}}
+  {{< card link="/guide/math_calculus" title="BI 可视化"  subtitle="Datart，观远BI，PowerBI..." icon="data_visualization" >}}
   <div></div>
   <div></div>
 
@@ -82,6 +85,10 @@ width: wide
   <div></div>
   <div></div>
 
+  {{< card link="/guide/math_calculus" title="Python 可视化"  subtitle="Pandas，Matplotlib，Seabotn，Plotly" icon="chart1" >}}
+  <div></div>
+  <div></div>
+  <div></div>
 {{< /hextra/feature-grid >}}
 
 

@@ -4,7 +4,7 @@ weight: 111
 #next: /step1
 prev: /ai
 #editURL: "https://example.com/edit/this/page"
-type: "ai"
+type: "ai "
 toc: true
 math: true
 ---
