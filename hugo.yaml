@@ -97,7 +97,7 @@ params:
   page:
     # 页面的宽度
     # full (100%), wide (90rem), normal (1280px)
-    width: full
+    width: wide
   
   footer:
     enable: true

@@ -13,9 +13,11 @@ width: wide
 
 <div class="hx-mb-6">
 {{< hextra/hero-subtitle >}}
-  关于AI，大数据，云原生的学习笔记，项目实践&nbsp;<br class="sm:hx-block hx-hidden" />
+  关于全栈数据工程师的学习笔记，项目实践&nbsp;<br class="sm:hx-block hx-hidden" />
+  四维（AI+大数据+云计算+物联网）全栈学习实践
 {{< /hextra/hero-subtitle >}}
 </div>
+
 
 <div class="hx-mb-8">
 {{< hextra/hero-button text="⚓ 指南" link="guide" bgColor="#2d3a4a">}}

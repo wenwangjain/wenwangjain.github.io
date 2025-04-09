@@ -1,6 +1,7 @@
 ---
 title: "指南"
-layout: hextra-home 
+layout: hextra-home
+width: wide  
 ---
 
 
@@ -21,6 +22,7 @@ layout: hextra-home
 ## 2、编程语言
 
 {{< cards >}}
+  {{< card link="/guide/program_linux" title="Linux\Shell" subtitle="Linux 是一种自由和开放源码的类 UNIX 操作系统。" icon="linux" tag= "大数据\云计算基础">}}
   {{< card link="/guide/program_python" title="Python" subtitle="一种广泛使用的解释型、高级和通用的编程语言。" icon="python" tag= "AI 基础">}}
   {{< card link="/guide/program_java" title="Java" subtitle="由 Sun 公司于 1995 年 5 月推出的高级程序设计语言。" icon="java" tag= "大数据基础">}}
   {{< card link="/guide/program_scala" title="Scala" subtitle="一种可随您扩展的编程语言：从小型脚本到大型多平台应用程序。" icon="scala" tag= "大数据基础">}}
@@ -106,7 +108,7 @@ layout: hextra-home
 ## 5、软件工程
 
 {{< cards >}}
-  {{< card link="/guide/software_linux" title="Linux" subtitle="Linux 是一种自由和开放源码的类 UNIX 操作系统。" icon="linux" >}}
+  
   {{< card link="/guide/software_git" title="Git" subtitle="Git 是一个免费的开源 分布式版本控制系统。" icon="git" >}}
   {{< card link="/guide/software_github" title="Github" subtitle="一个在线软件源代码托管服务平台，使用Git作为版本控制软件。" icon="github" >}}
   {{< card link="/guide/software_docker" title="Docker" subtitle="一个开源的应用容器引擎，基于 Go 语言。" icon="docker" tag= "云原生">}}
