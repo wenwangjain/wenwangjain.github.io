@@ -1,7 +1,6 @@
 ---
 title: "指南"
 layout: hextra-home
-width: wide  
 ---
 
 
@@ -36,7 +35,7 @@ width: wide
 
 ## 3、机器学习：Python
 
-### 3.1、科学计算
+### 3.1、科学计算\建模
 
 {{< cards >}}
   {{< card link="/guide/python_numpy" title="Numpy" subtitle="Python 科学计算的基本包；强大的 N 维数组；数值计算工具。" icon="numpy" tag= "数据分析">}}

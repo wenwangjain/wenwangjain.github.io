@@ -104,7 +104,7 @@ params:
     displayCopyright: false
     displayPoweredBy: true
     # 页脚的宽度
-    width: full
+    width: wide
 
 
   theme:

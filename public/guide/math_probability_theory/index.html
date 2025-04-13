@@ -11,23 +11,45 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>概率论 – 数据科学实践</title>
-  <meta name="description" content="good test " /><link rel="canonical" href="http://localhost:1313/guide/math_probability_theory/" itemprop="url" />
+  <meta name="description" content="概率论我们简略回顾概率论原理、随机变量概念和实例分布。
+A.1 概率论原理 随机试验是其结果不能提前以确定的方式预测的试验（Ross 1987；Casella 和 Berger 1990）。所有可能的结果的集合称作样本空间 ( S )。一个样本空间是离散的，如果它由结果的有限(或可数无限)集组成；否则是连续的。( S ) 的任意子集 ( E ) 是一个事件。事件是集合，并且我们可以谈论它们的补、交、并等。
+概率的一种解释是频率 (frequency)。当一个试验在完全相同的条件下不断重复时，对于任意事件 ( E )，结果在 ( E ) 中的次数所占的比例趋向于某个常数值。这个常数极限频率是事件的概率，而我们也记作 ( P(E) )。
+有时，概率可解释成可存程度 (degree of belief)。例如，当我们说土耳其赢得 2010 年足球世界杯冠军的概率时，我们并不是指出现的频率，因为 2010 年足球世界杯只进行一次，并且(在写本书时)它还未进行。在这种情况下，我们的意思是我们在观察相位事件中出现的程度。由于是主观的，因此对同一事件，不同的人可能指派不同的概率。
+A.1.1 概率论公理 公理确保随机试验中指派的概率可以解释成相对频率，并且这些指派符合我们对相对频率之间关系的直观理解：
+( 0 \leq P(E) \leq 1 )。如果 ( E_1 ) 是不可能出现的事件，则 ( P(E_1) = 0 )。如果 ( E_2 ) 是一定出现的事件，则 ( P(E_2) = 1 )。" /><link rel="canonical" href="http://localhost:1313/guide/math_probability_theory/" itemprop="url" />
 
 <meta property="og:title" content="概率论" />
-<meta property="og:description" content="good
-    test
-    " />
+<meta property="og:description" content="概率论我们简略回顾概率论原理、随机变量概念和实例分布。
+A.1 概率论原理
+    随机试验是其结果不能提前以确定的方式预测的试验（Ross 1987；Casella 和 Berger 1990）。所有可能的结果的集合称作样本空间 ( S )。一个样本空间是离散的，如果它由结果的有限(或可数无限)集组成；否则是连续的。( S ) 的任意子集 ( E ) 是一个事件。事件是集合，并且我们可以谈论它们的补、交、并等。
+概率的一种解释是频率 (frequency)。当一个试验在完全相同的条件下不断重复时，对于任意事件 ( E )，结果在 ( E ) 中的次数所占的比例趋向于某个常数值。这个常数极限频率是事件的概率，而我们也记作 ( P(E) )。
+有时，概率可解释成可存程度 (degree of belief)。例如，当我们说土耳其赢得 2010 年足球世界杯冠军的概率时，我们并不是指出现的频率，因为 2010 年足球世界杯只进行一次，并且(在写本书时)它还未进行。在这种情况下，我们的意思是我们在观察相位事件中出现的程度。由于是主观的，因此对同一事件，不同的人可能指派不同的概率。
+A.1.1 概率论公理
+    公理确保随机试验中指派的概率可以解释成相对频率，并且这些指派符合我们对相对频率之间关系的直观理解：
+
+
+( 0 \leq P(E) \leq 1 )。如果 ( E_1 ) 是不可能出现的事件，则 ( P(E_1) = 0 )。如果 ( E_2 ) 是一定出现的事件，则 ( P(E_2) = 1 )。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/guide/math_probability_theory/" /><meta property="article:section" content="guide" />
 
 
 
   <meta itemprop="name" content="概率论">
-  <meta itemprop="description" content="good test">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="description" content="概率论我们简略回顾概率论原理、随机变量概念和实例分布。
+A.1 概率论原理 随机试验是其结果不能提前以确定的方式预测的试验（Ross 1987；Casella 和 Berger 1990）。所有可能的结果的集合称作样本空间 ( S )。一个样本空间是离散的，如果它由结果的有限(或可数无限)集组成；否则是连续的。( S ) 的任意子集 ( E ) 是一个事件。事件是集合，并且我们可以谈论它们的补、交、并等。
+概率的一种解释是频率 (frequency)。当一个试验在完全相同的条件下不断重复时，对于任意事件 ( E )，结果在 ( E ) 中的次数所占的比例趋向于某个常数值。这个常数极限频率是事件的概率，而我们也记作 ( P(E) )。
+有时，概率可解释成可存程度 (degree of belief)。例如，当我们说土耳其赢得 2010 年足球世界杯冠军的概率时，我们并不是指出现的频率，因为 2010 年足球世界杯只进行一次，并且(在写本书时)它还未进行。在这种情况下，我们的意思是我们在观察相位事件中出现的程度。由于是主观的，因此对同一事件，不同的人可能指派不同的概率。
+A.1.1 概率论公理 公理确保随机试验中指派的概率可以解释成相对频率，并且这些指派符合我们对相对频率之间关系的直观理解：
+( 0 \leq P(E) \leq 1 )。如果 ( E_1 ) 是不可能出现的事件，则 ( P(E_1) = 0 )。如果 ( E_2 ) 是一定出现的事件，则 ( P(E_2) = 1 )。">
+  <meta itemprop="wordCount" content="169">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="概率论">
-  <meta name="twitter:description" content="good test">
+  <meta name="twitter:description" content="概率论我们简略回顾概率论原理、随机变量概念和实例分布。
+A.1 概率论原理 随机试验是其结果不能提前以确定的方式预测的试验（Ross 1987；Casella 和 Berger 1990）。所有可能的结果的集合称作样本空间 ( S )。一个样本空间是离散的，如果它由结果的有限(或可数无限)集组成；否则是连续的。( S ) 的任意子集 ( E ) 是一个事件。事件是集合，并且我们可以谈论它们的补、交、并等。
+概率的一种解释是频率 (frequency)。当一个试验在完全相同的条件下不断重复时，对于任意事件 ( E )，结果在 ( E ) 中的次数所占的比例趋向于某个常数值。这个常数极限频率是事件的概率，而我们也记作 ( P(E) )。
+有时，概率可解释成可存程度 (degree of belief)。例如，当我们说土耳其赢得 2010 年足球世界杯冠军的概率时，我们并不是指出现的频率，因为 2010 年足球世界杯只进行一次，并且(在写本书时)它还未进行。在这种情况下，我们的意思是我们在观察相位事件中出现的程度。由于是主观的，因此对同一事件，不同的人可能指派不同的概率。
+A.1.1 概率论公理 公理确保随机试验中指派的概率可以解释成相对频率，并且这些指派符合我们对相对频率之间关系的直观理解：
+( 0 \leq P(E) \leq 1 )。如果 ( E_1 ) 是不可能出现的事件，则 ( P(E_1) = 0 )。如果 ( E_2 ) 是一定出现的事件，则 ( P(E_2) = 1 )。">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -202,8 +224,27 @@
     href="/ai/end_to_end/"
     
   >1. 端到端的机器学习
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/ai/end_to_end/overview/"
+    
+  >1️⃣ 概述
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/ai/end_to_end/tool/"
+    
+  >2️⃣ 工具
+    </a>
+              
+            </li></ul>
+      </div>
             </li></ul>
       </div></li>
           <li class=""><a
@@ -266,9 +307,9 @@
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
-                href="#good"
+                href="#a1-%e6%a6%82%e7%8e%87%e8%ae%ba%e5%8e%9f%e7%90%86"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >good</a>
+              >A.1 概率论原理</a>
             </li>
           </ul>
   
@@ -604,11 +645,11 @@
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">此页上</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#good">good
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#a1-%e6%a6%82%e7%8e%87%e8%ae%ba%e5%8e%9f%e7%90%86">A.1 概率论原理
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#test">test
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#a11-%e6%a6%82%e7%8e%87%e8%ae%ba%e5%85%ac%e7%90%86">A.1.1 概率论公理
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -634,9 +675,41 @@
 
         <div class="content">
           <h1>概率论</h1>
-          <h2>good<span class="hx-absolute -hx-mt-20" id="good"></span>
-    <a href="#good" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>test<span class="hx-absolute -hx-mt-20" id="test"></span>
-    <a href="#test" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+          <h1>概率论</h1><p>我们简略回顾概率论原理、随机变量概念和实例分布。</p>
+<h2>A.1 概率论原理<span class="hx-absolute -hx-mt-20" id="a1-概率论原理"></span>
+    <a href="#a1-%e6%a6%82%e7%8e%87%e8%ae%ba%e5%8e%9f%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>随机试验是其结果不能提前以确定的方式预测的试验（Ross 1987；Casella 和 Berger 1990）。所有可能的结果的集合称作样本空间 ( S )。一个样本空间是离散的，如果它由结果的有限(或可数无限)集组成；否则是连续的。( S ) 的任意子集 ( E ) 是一个事件。事件是集合，并且我们可以谈论它们的补、交、并等。</p>
+<p>概率的一种解释是频率 (frequency)。当一个试验在完全相同的条件下不断重复时，对于任意事件 ( E )，结果在 ( E ) 中的次数所占的比例趋向于某个常数值。这个常数极限频率是事件的概率，而我们也记作 ( P(E) )。</p>
+<p>有时，概率可解释成可存程度 (degree of belief)。例如，当我们说土耳其赢得 2010 年足球世界杯冠军的概率时，我们并不是指出现的频率，因为 2010 年足球世界杯只进行一次，并且(在写本书时)它还未进行。在这种情况下，我们的意思是我们在观察相位事件中出现的程度。由于是主观的，因此对同一事件，不同的人可能指派不同的概率。</p>
+<h3>A.1.1 概率论公理<span class="hx-absolute -hx-mt-20" id="a11-概率论公理"></span>
+    <a href="#a11-%e6%a6%82%e7%8e%87%e8%ae%ba%e5%85%ac%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>公理确保随机试验中指派的概率可以解释成相对频率，并且这些指派符合我们对相对频率之间关系的直观理解：</p>
+<ol>
+<li>
+<p>( 0 \leq P(E) \leq 1 )。如果 ( E_1 ) 是不可能出现的事件，则 ( P(E_1) = 0 )。如果 ( E_2 ) 是一定出现的事件，则 ( P(E_2) = 1 )。</p>
+</li>
+<li>
+<p>如果 ( S ) 是包含所有可能结果的样本空间，则 ( P(S) = 1 )。</p>
+</li>
+<li>
+<p>如果 ( E_i, i = 1, \cdots, n )，是互斥的(即如果它们不可能同时出现：( E_i \cap E_j = \emptyset, i \neq j )，其中 (\emptyset) 是不包含任何可能结果的空事件)，则我们有<br>
+[
+P\left(\bigcup_{i=1}^{n} E_i\right) = \sum_{i=1}^{n} P(E_i)
+]<br>
+（A.1）</p>
+</li>
+</ol>
+<p>例如，设 ( E^c ) 表示 ( E ) 的补，由不在 ( E ) 中的 ( S ) 中所有可能的结果组成，我们有 ( E \cap E^c = \emptyset )，并且<br>
+[
+P(E \cup E^c) = P(E) + P(E^c) = 1
+]<br>
+[
+P(E^c) = 1 - P(E)
+]</p>
+<p>如果 ( E ) 和 ( F ) 的交非空，则我们有<br>
+[
+P(E \cup F) = P(E) + P(F) - P(E \cap F)
+]<br>
+（A.2）</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -654,9 +727,9 @@
   </div>
 
       <footer class="hextra-footer hx-bg-gray-100 hx-pb-[env(safe-area-inset-bottom)] dark:hx-bg-neutral-900 print:hx-bg-transparent"><div
-      class="hextra-custom-footer max-w-full hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400"
+      class="hextra-custom-footer hx-max-w-[90rem] hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400"
     ></div><div
-        class="max-w-full hx-mx-auto hx-flex hx-justify-center hx-py-12 hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400 md:hx-justify-start"
+        class="hx-max-w-[90rem] hx-mx-auto hx-flex hx-justify-center hx-py-12 hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400 md:hx-justify-start"
       >
         <div class="hx-flex hx-w-full hx-flex-col hx-items-center sm:hx-items-start"><div class="hx-font-semibold"><a class="hx-flex hx-text-sm hx-items-center hx-gap-1 hx-text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
     <span>由 Hextra 驱动<svg height=1em class="hx-inline-block ltr:hx-ml-1 rtl:hx-mr-1 hx-align-[-2.5px]" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>

@@ -5,7 +5,7 @@ weight: 1
 #prev: /docs
 editURL: "https://example.com/edit/this/page"
 toc: true
-width: full
+
 ---
 
 <br>
