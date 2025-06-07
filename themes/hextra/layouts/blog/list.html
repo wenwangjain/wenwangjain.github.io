@@ -1,72 +1,96 @@
 {{ define "main" }}
-<div style="display: flex; justify-content: center; width: 100%;">
+  {{- $readMore := (T "readMore") | default "Read more →" -}}
+  <div class="hx-mx-auto hx-flex {{ partial `utils/page-width` . }}">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+    
+    <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+        {{ if .Title }}
+          <h1 class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">
+            {{ .Title }}
+          </h1>
+          <br>
+        {{ end }}
 
-  <div style="flex: 3%; padding: 10px; box-sizing: border-box; text-align: left;"></div>
-
-  <div style="flex: 75%; padding: 10px; box-sizing: border-box; text-align: left;">
-    <div class="hx-container hx-mx-auto hx-px-4">
-      {{ if .Title }}
-        <h1 class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">
-          {{ .Title }}
-        </h1>
-        <br>
-      {{ end }}
-
-      <!-- 三列网格布局 - 已添加间距 -->
-      <div class="hx-grid hx-grid-cols-1 sm:hx-grid-cols-2 lg:hx-grid-cols-3" style="gap: 1rem;">
-        {{ range .Paginator.Pages }}
-          <div class="hx-border hx-border-gray-200 hx-rounded-xl hx-p-6 hx-transition-all hover:hx-shadow-md dark:hx-border-neutral-700">
-            <h2 class="hx-font-semibold hx-text-xl hx-mb-3">
-              <a href="{{ .RelPermalink }}" class="hover:hx-text-primary-500">{{ .Title }}</a>
-            </h2>
-            
-            {{ with .Params.categories }}
-              <div class="hx-flex hx-gap-2 hx-mb-3">
-                {{ range . }}
-                  <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" 
-                    class="hx-text-xs hx-px-2 hx-py-1 hx-bg-gray-100 hx-rounded-full dark:hx-bg-neutral-800">
-                    {{ . }}
-                  </a>
-                {{ end }}
+        <!-- 三列网格布局 - 保持与主题一致的间距系统 -->
+        <div class="hx-grid hx-grid-cols-1 sm:hx-grid-cols-2 lg:hx-grid-cols-3 hx-gap-6">
+          {{ range .Paginator.Pages }}
+            <div class="hx-border hx-border-gray-200 hx-rounded-xl hx-p-6 hx-transition-all hover:hx-shadow-md dark:hx-border-neutral-700 hx-h-full">
+              <h2 class="hx-font-semibold hx-text-xl hx-mb-4">
+                <a href="{{ .RelPermalink }}" class="hover:hx-text-primary-500 hx-text-slate-900 dark:hx-text-slate-100">
+                  {{ .Title }}
+                </a>
+              </h2>
+              
+              {{ with .Params.categories }}
+                <div class="hx-flex hx-gap-2 hx-mb-4 hx-flex-wrap">
+                  {{ range . }}
+                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" 
+                      class="hx-text-xs hx-px-2 hx-py-1 hx-bg-gray-100 hx-rounded-full dark:hx-bg-neutral-800 hx-text-slate-600 dark:hx-text-slate-300">
+                      {{ . }}
+                    </a>
+                  {{ end }}
+                </div>
+              {{ end }}
+              
+              <p class="hx-text-gray-600 dark:hx-text-gray-400 hx-text-sm hx-line-clamp-3 hx-mb-4">
+                {{ .Summary | plainify }}
+              </p>
+              
+              <div class="hx-flex hx-items-center hx-justify-between hx-mt-auto">
+                <time class="hx-text-xs hx-text-gray-500">
+                  {{ .Date | time.Format ":date_long" }}
+                </time>
+                <a href="{{ .RelPermalink }}" class="hx-text-primary-500 hx-text-sm hx-underline hx-underline-offset-2">
+                  {{ $readMore }}
+                </a>
               </div>
-            {{ end }}
-            
-            <p class="hx-text-gray-600 dark:hx-text-gray-400 hx-text-sm hx-line-clamp-3">
-              {{ .Summary | plainify }}
-            </p>
-            
-            <div class="hx-flex hx-items-center hx-justify-between hx-mt-4">
-              <time class="hx-text-xs hx-text-gray-500">
-                {{ .Date | time.Format ":date_long" }}
-              </time>
-              <a href="{{ .RelPermalink }}" class="hx-text-primary-500 hx-text-sm">
-                {{ (T "readMore") | default "Read more →" }}
-              </a>
             </div>
+          {{ end }}
+        </div>
+
+        <!-- 分页 - 使用主题原生样式 -->
+        {{ if gt .Paginator.TotalPages 1 }}
+          <div class="hx-mt-12 hx-flex hx-justify-center">
+            <nav class="pagination hx-flex hx-gap-2">
+              {{ template "_internal/pagination.html" . }}
+            </nav>
           </div>
         {{ end }}
+      </main>
+    </article>
+
+    <!-- 右侧分类侧边栏 -->
+    <aside class="max-xl:hx-hidden hx-w-64 hx-pl-8 hx-pt-4 hx-sticky hx-top-[var(--navbar-height)] hx-h-[calc(100vh-var(--navbar-height))] hx-overflow-y-auto">
+      <div class="hx-mb-8">
+        <h1 class="hx-text-lg hx-font-semibold hx-mb-4">分类</h1>
+        {{ partial "custom/blog-sidebar" . }}
       </div>
-
-      {{ if gt .Paginator.TotalPages 1 }}
-        <div class="hx-mt-12 hx-flex hx-justify-center">
-          {{ template "_internal/pagination.html" . }}
-        </div>
-      {{ end }}
-    </div>
+      
+      <!-- 返回博客按钮 -->
+      <div class="hx-mt-6">
+        <a href="{{ "/blog/" | relLangURL }}" 
+           class="hx-inline-flex hx-items-center hx-px-4 hx-py-2 hx-text-sm hx-font-medium hx-rounded-3xl hx-text-white hx-bg-primary-600 hover:hx-bg-primary-700 hx-transition-colors">
+          ← {{ (T "backToBlog") | default "返回列表" }}
+        </a>
+      </div>
+    </aside>
   </div>
 
-  <div style="flex: 18%; padding: 10px; box-sizing: border-box; text-align: left;">
-    <!-- 右侧：分类/标签侧边栏 -->
-    <br><br>
-    <div class="lg:hx-w-1/4 hx-mt-8 lg:hx-mt-0">
-      {{- $readMore := (T "readMore") | default "Read more →" -}}
-      {{ partial "custom/blog-sidebar" . }}
-    </div>
-  </div>
-  
-  <div style="flex: 3%; padding: 10px; box-sizing: border-box; text-align: left;"></div>
-
-  <br>
-</div>
-
+  <!-- 确保页脚正常显示 -->
+  <style>
+    :root {
+      --navbar-height: 4rem;
+    }
+    article {
+      flex-grow: 1;
+    }
+    .pagination {
+      display: flex !important;
+      flex-direction: row !important;
+    }
+    .pagination li {
+      display: inline-block !important;
+    }
+  </style>
 {{ end }}
