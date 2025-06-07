@@ -13,15 +13,16 @@
       {{ end }}
 
       <!-- 三列网格布局 - 已添加间距 -->
-      <div class="hx-grid hx-grid-cols-1 sm:hx-grid-cols-2 lg:hx-grid-cols-3" style="gap: 1rem;">
+      <div class="hx-grid hx-grid-cols-3 sm:hx-grid-cols-2 lg:hx-grid-cols-3" style="gap: 1rem;">
+        {{ $paginator := .Paginate .Pages 9 }}  <!-- 关键修改：每页 9 个 -->
         {{ range .Paginator.Pages }}
           <div class="hx-border hx-border-gray-200 hx-rounded-xl hx-p-6 hx-transition-all hover:hx-shadow-md dark:hx-border-neutral-700">
-            <h2 class="hx-font-semibold hx-text-xl hx-mb-3">
+            <h2 class="hx-font-semibold hx-text-xl hx-mb-4">
               <a href="{{ .RelPermalink }}" class="hover:hx-text-primary-500">{{ .Title }}</a>
             </h2>
             
             {{ with .Params.categories }}
-              <div class="hx-flex hx-gap-2 hx-mb-3">
+              <div class="hx-flex hx-gap-2 hx-mb-4">
                 {{ range . }}
                   <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" 
                     class="hx-text-xs hx-px-2 hx-py-1 hx-bg-gray-100 hx-rounded-full dark:hx-bg-neutral-800">
@@ -75,5 +76,42 @@
 
   <br>
 </div>
+
+<style>
+    :root {
+      --navbar-height: 4rem;
+    }
+    .pagination {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 0.5rem; /* 页码之间的间距 */
+    }
+    .pagination li {
+      display: inline-block !important;
+      margin: 0 0.5rem; /* 页码左右间距 */
+    }
+    /* 当前页样式（蓝色背景 + 白色文字） */
+    .pagination li.active a,
+    .pagination li.current a,
+    .pagination li [aria-current="page"] {
+      background-color: #2563eb; /* 蓝色背景 */
+      color: white !important; /* 白色文字 */
+      padding: 0.25rem 0.75rem; /* 可选：增加内边距 */
+      border-radius: 0.25rem; /* 可选：圆角 */
+    }
+    /* 确保布局比例 */
+    @media (min-width: 1280px) {
+      div.hx-flex.hx-w-full.hx-px-\[5\%\] {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      article.hx-w-\[70\%\] {
+        width: 70%;
+      }
+      aside.hx-w-\[20\%\] {
+        width: 20%;
+      }
+    }
+</style>
 
 {{ end }}
