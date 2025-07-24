@@ -1,0 +1,9 @@
+/* 调整代码块字体大小 */
+.chroma {
+  font-size: 0.9rem; /* 可根据需要调整大小 */
+}
+
+/* 调整行内代码字体大小 */
+code:not(pre code) {
+  font-size: 0.85em;
+}
