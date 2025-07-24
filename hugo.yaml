@@ -141,7 +141,7 @@ params:
   
   markup:
     highlight:
-      style: 'monokailight'
+      style: 'base16-snazzy'
   
 taxonomies:
   category: categories
