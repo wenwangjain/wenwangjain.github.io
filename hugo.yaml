@@ -136,6 +136,12 @@ params:
   article:
       # 文章分页显示
       displayPagination: true
+
+    # 代码高亮主题
+  
+  markup:
+    highlight:
+      style: 'monokailight'
   
 taxonomies:
   category: categories
