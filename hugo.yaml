@@ -137,11 +137,7 @@ params:
       # 文章分页显示
       displayPagination: true
 
-    # 代码高亮主题
-  
-  markup:
-    highlight:
-      style: 'base16-snazzy'
+
   
 taxonomies:
   category: categories
@@ -150,3 +146,13 @@ taxonomies:
 services:
   googleAnalytics:
     ID: G-VZ3Q041EBH
+
+
+markup:
+  highlight:
+    # 可用的主题列表见下文
+    style: 'monokailight' 
+    # 可选设置
+    lineNos: true
+    lineNumbersInTable: false
+    noClasses: false
