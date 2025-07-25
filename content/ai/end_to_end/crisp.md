@@ -92,7 +92,7 @@ math: true
 1. 《Approaching (Almost)  Any Machine Learning Problem》 Abhishek Thakur
 {{< /callout >}}
 
-{{< tabs items="1️⃣ 创建工作空间案例1, 2️⃣ 创建工作空间案例2" >}}
+{{< tabs items="1️⃣ 创建案例1, 2️⃣ 创建案例2" >}}
 {{< tab >}}
 ```python
 import os 
@@ -164,19 +164,19 @@ else:
 ```
 
 ```
-Author: Sebastian Raschka<br>
-<br>
-Last updated: 2025-07-25<br>
-<br>
-Python implementation: CPython<br>
-Python version       : 3.12.7<br>
-IPython version      : 8.27.0<br>
-<br>
-numpy     : 1.26.4<br>
-pandas    : 2.2.2<br>
-matplotlib: 3.9.2<br>
-sklearn   : 1.5.1<br>
-seaborn   : 0.13.2<br>
+Author: Sebastian Raschka
+
+Last updated: 2025-07-25
+
+Python implementation: CPython
+Python version       : 3.12.7
+IPython version      : 8.27.0
+
+numpy     : 1.26.4
+pandas    : 2.2.2
+matplotlib: 3.9.2
+sklearn   : 1.5.1
+seaborn   : 0.13.2
 ```
 
 <br>
@@ -205,7 +205,8 @@ Python 3.12.7
 
 {{< tab >}}
 
-这里介绍的显示设置主要是关于 pandas 数据框，numpy 数组，matplotlib 的一些常规显示设置 。如，小数位数，matplotlib 主题等，主要是在 jupyter lab 中展示时需要设置。
+这里介绍的显示设置主要是关于 pandas 数据框，numpy 数组，matplotlib 的一些常规显示设置 。<br>
+如，小数位数，matplotlib 主题等，主要是在 jupyter lab 中展示时需要设置。
 
 ```python
 # （1）禁止显示不需要的警告
@@ -346,7 +347,7 @@ pd.DataFrame(random_floats)
 
 {{< tabs items="1️⃣ 字典, 2️⃣ 列表, 3️⃣ sklearn, 4️⃣ .csv, 5️⃣ .xlsx, 6️⃣ 数据库" >}}
   {{< tab >}}
-> 通过 `pd.DataFrame()` 函数将字典转换为数据框格式。
+通过 `pd.DataFrame()` 函数将字典转换为数据框格式。
 
 ```python
 import numpy as np
@@ -376,6 +377,8 @@ df2
 
 
   {{< tab >}}
+通过 `pd.DataFrame()` 函数将列表转换为数据框格式。
+
 ```python
 import numpy as np
 import pandas as pd
@@ -400,9 +403,9 @@ df.head(3)
 
 
   {{< tab >}}
-**（1）Sklearn 库自带数据如下表**
+Sklearn 库自带数据如下表
 
-| ***数据集*** | ***数据集描述*** |
+| **数据集** | **数据集描述**|
 | :-: | :-: |
 |load_iris         |鸢尾花数据集（分类）|
 |load_diabetes     |糖尿病数据集（回归）|
@@ -413,7 +416,7 @@ df.head(3)
 
 <br>
 
-> 案例：查看鸢尾花分类数据集
+案例：查看鸢尾花分类数据集
 
 ```python
 # 导入 sklearn.datasets 数据集
@@ -540,6 +543,8 @@ pd.DataFrame(data).iloc[:3,0:4]
 
 
   {{< tab >}}
+**（1）pandas.read_excel()**
+
 ```python
 import pandas as pd
 
@@ -559,7 +564,7 @@ df.iloc[:3,0:4]
 
 **（1）MySql -> DataFrame**
 
-> 使用 pymysql 链接数据库，并使用 pd.read_sql 读取数据。
+使用 pymysql 链接数据库，并使用 pd.read_sql 读取数据。
 
 ```python
 # 禁止显示不需要的警告
@@ -606,10 +611,11 @@ df_student.head()
 4. `make_moons` 函数：创建两个交错的半圆数据。
 5. `make_circles` 函数：在 2d 中画一个大圆，里面包含一个小圆。一个简单的玩具数据集，用于可视化聚类和分类算法。
 
+<br>
 
 {{< tabs items="1️⃣ make_classification, 2️⃣ make_regression, 3️⃣ make_blobs, 4️⃣ make_moons, 5️⃣ make_circles" >}}
   {{< tab >}}
-> 生成具有特定分类特征和复杂分布的数据集。***注***：`make_classification` 函数较多，这里简单列举了几个常用的。 
+生成具有特定分类特征和复杂分布的数据集。***注***：`make_classification` 函数较多，这里简单列举了几个常用的。 
 
 ```python
 from sklearn.datasets import make_classification
@@ -632,7 +638,7 @@ print(target[0:5])
 
 
   {{< tab >}}
-> 生成连续目标特征的数据集。
+生成连续目标特征的数据集。
 
 ```python
 from sklearn.datasets import make_regression
@@ -660,7 +666,7 @@ print(coefficients)
 
 
   {{< tab >}}
-> 生成简单的聚类型数据集。
+生成简单的聚类型数据集。
 
 ```python
 from sklearn.datasets import make_blobs
@@ -680,7 +686,7 @@ print(target[0:5],'\n')
 
 <br>
 
-> 绘制创建数据集的散点图：
+绘制创建数据集的散点图：
 
 ```python
 import matplotlib.pyplot as plt
@@ -701,7 +707,7 @@ plt.show()
 
 
   {{< tab >}}
-> 创建两个交错的半圆数据。
+创建两个交错的半圆数据。
 
 ```python
 from sklearn.datasets import make_moons
@@ -720,7 +726,7 @@ print(target[0:5],'\n')
 
 <br>
 
-> 绘制创建数据集的散点图：
+绘制创建数据集的散点图：
 
 ```python
 import matplotlib.pyplot as plt
@@ -739,7 +745,7 @@ plt.show()
   {{< /tab >}}
 
   {{< tab >}}
-> 在 2d 中画一个大圆，里面包含一个小圆。一个简单的玩具数据集，用于可视化聚类和分类算法。
+在 2d 中画一个大圆，里面包含一个小圆。一个简单的玩具数据集，用于可视化聚类和分类算法。
 
 ```python
 from sklearn.datasets import make_circles
@@ -759,7 +765,7 @@ print(target[0:5],'\n')
 
 <br>
 
-> 绘制创建数据集的散点图：
+绘制创建数据集的散点图：
 
 ```python
 import matplotlib.pyplot as plt
@@ -790,9 +796,9 @@ plt.show()
 {{< tabs items="1️⃣ 数据库" >}}
   {{< tab >}}
 
- **（1）将 Pandas 数据框导入 MySQL**
+ **（1）将 `Pandas` 数据框导入 `MySQL`**
 
- > 使用 python pandas 生成一个数据框。
+ >  使用 python pandas 生成一个数据框。
 
 ```python
 import pandas as pd
