@@ -91,7 +91,7 @@ math: true
 
 {{< callout emoji=📝 type='default' >}}
 参考网址\书籍：
-1. <font color=DarkCyan face=Georgia size=2>《Approaching (Almost)  Any Machine Learning Problem》 Abhishek Thakur</font>
+1. 《Approaching (Almost)  Any Machine Learning Problem》 Abhishek Thakur
 {{< /callout >}}
 
 {{< tabs items="1️⃣ 创建工作空间案例1, 2️⃣ 创建工作空间案例2" >}}
@@ -145,13 +145,204 @@ else:
 {{< /tabs >}}
 
 
+<br>
+
+
+### 2.4、显示设置\库版本
+
+
+{{< tabs items="1️⃣ 查看库版本, 2️⃣ 显示设置, 3️⃣ 显示设置案例" >}}
+{{< tab >}}
+
+***（1）`%load_ext watermark` 查看库版本：***
+
+```python
+# 在 jupyter lab 执行以下代码查看库版本
+# 需要先安装 watermark 库
+# numpy,pandas,matplotlib,sklearn,seaborn version
+%load_ext watermark
+%watermark -a "Sebastian Raschka" -u -d -v -p\
+    numpy,pandas,matplotlib,sklearn,seaborn
+```
+
+Author: Sebastian Raschka<br>
+<br>
+Last updated: 2025-07-25<br>
+<br>
+Python implementation: CPython<br>
+Python version       : 3.12.7<br>
+IPython version      : 8.27.0<br>
+<br>
+numpy     : 1.26.4<br>
+pandas    : 2.2.2<br>
+matplotlib: 3.9.2<br>
+sklearn   : 1.5.1<br>
+seaborn   : 0.13.2<br>
+
+
+<br>
+
+***（2）`xxx.\_\_version\_\_` 查看库版本：***
+
+```python
+# 在 jupyter lab 执行以下代码查看 pandas 版本
+import pandas
+print('pandas: {}'.format(pandas.__version__))
+```
+pandas: 2.2.2
+
+<br>
+
+***（3）`!python --version` 查看 python 版本：***
+
+```python
+# 在 jupyter lab 执行以下代码查看 python 版本
+!python --version
+```
+Python 3.12.7
+
+{{< /tab >}}
+
+
+{{< tab >}}
+
+这里介绍的显示设置主要是关于 pandas 数据框，numpy 数组，matplotlib 的一些常规显示设置 。如，小数位数，matplotlib 主题等，主要是在 jupyter lab 中展示时需要设置。
+
+```python
+# （1）禁止显示不需要的警告
+# -------------------------
+import warnings
+warnings.filterwarnings("ignore") 
+
+
+# （2）pandas 设置
+# -------------------------
+
+pd.set_option('display.max_info_columns',200) # info()变量最多显示200个
+pd.set_option('display.max_info_rows',200)    # info()缺失值个数上限
+
+pd.set_option('display.float_format','${:,.2f}'.format)  # 显示格式 $0.67
+pd.set_option('display.unicode.east_asian_width', False) # 设置输出右对齐，此代码写入脚本中
+pd.set_option('display.precision',4)          # 保留4位小数
+pd.set_option('precision', 3)                 # 保留3位小数
+pd.set_option('display.chop_threshold',0.5)   # 绝对值小于 0.5 显示 0
+
+pd.set_option('display.max_rows',5)           # 设置显示数据框行数       
+pd.set_option('display.max_columns',100)      # 设置显示数据框列数 
+pd.set_option('display.max_colwidth',200)     # 设置显示数据框列宽       
+pd.options.display.max_colwidth = 80          # 设置显示数据框列宽  
+pd.options.display.max_columns = 20           # 设置显示数据框列数 
+pd.options.display.max_rows = 20              # 设置显示数据框行数
+
+pd.set_option('display.colheader_justify', 'left') # 确保列名不换行
+
+
+# （3）matplotlib 设置
+# -------------------------
+plt.rcParams['font.sans-serif']=['FangSong']  # 替换sans-serif字体，正常显示中文(黑体)\'SimHei'\'FangSong' 
+plt.rcParams["font.weight"] = "bold"          # 字体加粗
+plt.rcParams['axes.unicode_minus'] = False    # 坐标显示负号
+plt.rcParams['savefig.dpi'] = 1000            # 图片像素
+plt.rcParams['figure.dpi'] = 100              # 分辨率（不常用）
+
+plt.style.use('classic')                      # 设置绘图风格'ggplot'\'classic' 
+matplotlib.rcdefaults()                       # 使用默认绘图风格
+
+
+# （4）numpy 设置
+# -------------------------
+np.set_printoptions(precision=3, suppress=True) # precision：保留几位小数，后面不会补0，supress=True：对很大/小的数不使用科学计数法
+np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制格式化，后面会补0 
+```
+
+{{< /tab >}}
+
+
+<br>
+
+
+{{< tab >}}
+
+***显示设置案例：***
+
+```python
+import numpy as np
+
+# 创建三个随机小数
+random_floats = np.random.rand(3)
+print(random_floats)
+```
+[0.28369287 0.16186594 0.76617009]
+
+<br>
+
+
+```python
+# formatter：强制格式化，后面会补0 
+np.set_printoptions(
+    formatter={'float': '{: 0.3f}'.format}
+    )
+ 
+print(random_floats)
+```
+[ 0.284  0.162  0.766]
+
+<br>
+
+
+```python
+import pandas as pd
+# 将列表转换为数据框
+pd.DataFrame(random_floats)
+```
+	
+||	0|
+|-|-|
+|0	|0.283693|
+|1	|0.161866|
+|2	|0.766170|
 
 
 
+<br>
+
+```python
+import pandas as pd
+
+# 保留3位小数
+pd.set_option('display.precision',3)          
+pd.DataFrame(random_floats)
+```
+
+||	0|
+|-|-|
+|0	|0.284|
+|1	|0.162|
+|2	|0.766|
 
 
+<br>
+
+```python
+import pandas as pd
+
+# 显示格式 $0.67
+pd.set_option('display.float_format','${:,.2f}'.format)     
+pd.DataFrame(random_floats)
+```
+
+||	0|
+|-|-|
+|0|	$0.28|
+|1|	$0.16|
+|2|	$0.77|
+
+{{< /tab >}}
 
 
+{{< /tabs >}}
+
+<br>
 
 
 
