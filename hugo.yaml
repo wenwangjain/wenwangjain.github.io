@@ -139,7 +139,7 @@ params:
 
 markup:
   highlight:
-    style: 'monokai' # 'catppuccin-latte'
+    style: 'autumn' # 'catppuccin-latte'
     lineNos: true
     #codeFences: true        # 启用 ```代码块``` 高亮（关键！）
     #lineNumbersInTable: false
