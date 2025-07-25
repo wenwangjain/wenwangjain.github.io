@@ -1,13 +1,1 @@
-/* 保留Hextra的代码块背景样式 */
-.chroma {
-  background-color: var(--hextra-code-bg) !important;
-  border-radius: var(--hextra-code-radius) !important;
-  padding: var(--hextra-code-padding) !important;
-  margin: var(--hextra-code-margin) !important;
-}
 
-/* 保留Hextra的行号样式 */
-.chroma .lnt {
-  color: var(--hextra-code-ln-color) !important;
-  background-color: var(--hextra-code-ln-bg) !important;
-}
