@@ -13,8 +13,6 @@ math: true
 2. 为什么需要解决问题？
 3. 探索如何解决问题？
 
-<br>
-
 {{< callout emoji=📝 type='default' >}}
 参考网址\书籍：
 1. https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/
@@ -264,7 +262,6 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 
 {{< tab >}}
 
-***显示设置案例：***
 
 ```python
 import numpy as np
@@ -340,10 +337,162 @@ pd.DataFrame(random_floats)
 
 {{< /tab >}}
 
-
 {{< /tabs >}}
 
+
 <br>
+
+
+### 2.5、导入数据
+
+
+{{< tabs items="1️⃣ 字典, 2️⃣ 列表, 3️⃣ Sklearn, 4️⃣ .csv, 5️⃣ .xlsx, 6️⃣ 数据库" >}}
+  {{< tab >}}
+  {{< /tab >}}
+
+  {{< tab >}}
+  {{< /tab >}}
+
+  {{< tab >}}
+  {{< /tab >}}
+
+  {{< tab >}}
+  {{< /tab >}}
+
+  {{< tab >}}
+  {{< /tab >}}
+
+  {{< tab >}}
+  {{< /tab >}}
+{{< /tabs >}}
+
+
+<br>
+
+
+### 2.6、导出数据
+
+
+{{< tabs items="1️⃣ 数据库" >}}
+  {{< tab >}}
+
+ ***（1）将 Pandas 数据框导入 MySQL*** 
+
+ > 使用 python pandas 生成一个数据框。
+
+```python
+import pandas as pd
+import numpy as np
+import random
+
+cities = ['北京', '上海', '广州', '深圳', '成都']
+address_samples = ['中山路{}号'.format(i) for i in range(1000)]
+
+data = {
+    'id': range(1, 101),
+    'city': [random.choice(cities) for _ in range(100)],
+    'address': [random.choice(address_samples) for _ in range(100)],
+    'price': np.random.randint(1000000, 10000000, 100)
+}
+
+df = pd.DataFrame(data)
+
+df.head()
+```
+
+
+<BR>
+
+
+> 使用 python sqlalchemy 库将生成的数据直接写入 MySQL。
+
+```python
+from sqlalchemy import create_engine
+import sqlalchemy
+
+engine = create_engine('mysql+pymysql://root:123456@localhost:3306/test')
+
+df.to_sql( 'housing_price' # 数据库表名
+    , con=engine
+    , index=False 
+    , if_exists='replace' # 如果表已经存在，它会被替换
+    , dtype={ 
+        'id': sqlalchemy.types.INT
+        ,'city':  sqlalchemy.types.NVARCHAR(length=10)
+        ,'address': sqlalchemy.types.NVARCHAR(length=40)
+        ,'price': sqlalchemy.types.DECIMAL(15, 3)
+    }
+)
+```
+  
+  {{< /tab >}}
+{{< /tabs >}}
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
