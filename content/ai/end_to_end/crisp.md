@@ -9,11 +9,10 @@ math: true
 
 ## 1、定义问题
 
-{{< callout emoji=📝 type='default' >}}
 1. 问题是什么？
 2. 为什么需要解决问题？
 3. 探索如何解决问题？
-{{< /callout >}}
+
 
 <br>
 
