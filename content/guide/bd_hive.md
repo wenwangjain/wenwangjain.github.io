@@ -122,7 +122,40 @@ WITH DBPROPERTIES ('owner' = 'John', 'created_date' = '2024-01-01');
 
 ## 四、Hive DML（数据操作）
 
+```MySQL
+CREATE DATABASE my_database_with_properties
+WITH DBPROPERTIES ('owner' = 'John', 'created_date' = '2024-01-01');
+```
 
+
+```python
+import os
+
+project_name = 'Kaggle_002_class-name'
+folder_name  = ['input', 'src', 'models', 'notebooks']
+file_name    = ['README.md', 'LICENSE']
+file_list    = os.listdir()
+
+if project_name not in file_list:
+  
+    # （1）、如果该空间不存在则创建工作空间
+    os.mkdir(project_name)
+  
+    # （2）、创建文件夹：'input', 'src', 'models', 'notebooks'
+    for i in folder_name:
+        path_folder = os.path.join(project_name, i)
+        os.mkdir(path_folder)
+      
+    # （3）、创建文件：'README.md', 'LICENSE'
+    for j in file_name:
+        path_file = os.path.join(project_name, j)
+        open(path_file, 'w', encoding='utf-8')
+  
+    print(project_name + ' is OK!')
+    
+else:
+    print(project_name + ' is OK!')
+```
 
 
 
