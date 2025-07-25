@@ -137,7 +137,14 @@ params:
       # 文章分页显示
       displayPagination: true
 
-
+markup:
+  highlight:
+    # 可用的主题列表见下文
+    style: 'monokailight' 
+    # 可选设置
+    #lineNos: true
+    lineNumbersInTable: false
+    #noClasses: false
   
 taxonomies:
   category: categories
@@ -148,11 +155,4 @@ services:
     ID: G-VZ3Q041EBH
 
 
-markup:
-  highlight:
-    # 可用的主题列表见下文
-    style: 'monokailight' 
-    # 可选设置
-    lineNos: true
-    lineNumbersInTable: false
-    noClasses: false
+
