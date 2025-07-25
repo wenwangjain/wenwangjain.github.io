@@ -205,8 +205,7 @@ Python 3.12.7
 
 {{< tab >}}
 
-这里介绍的显示设置主要是关于 pandas 数据框，numpy 数组，matplotlib 的一些常规显示设置 。<br>
-如，小数位数，matplotlib 主题等，主要是在 jupyter lab 中展示时需要设置。
+这里介绍的显示设置主要是关于 pandas 数据框，numpy 数组，matplotlib 的一些常规显示设置 。如，小数位数，matplotlib 主题等，主要是在 jupyter lab 中展示时需要设置。
 
 ```python
 # （1）禁止显示不需要的警告
@@ -262,8 +261,6 @@ np.set_printoptions(formatter={'float': '{: 0.3f}'.format}) # formatter：强制
 
 
 {{< tab >}}
-
-
 ```python
 import numpy as np
 
@@ -798,7 +795,7 @@ plt.show()
 
  **（1）将 `Pandas` 数据框导入 `MySQL`**
 
- >  使用 python pandas 生成一个数据框。
+ 使用 python pandas 生成一个数据框。
 
 ```python
 import pandas as pd
@@ -824,7 +821,7 @@ df.head()
 <BR>
 
 
-> 使用 python sqlalchemy 库将生成的数据直接写入 MySQL。
+使用 python sqlalchemy 库将生成的数据直接写入 MySQL。
 
 ```python
 from sqlalchemy import create_engine
