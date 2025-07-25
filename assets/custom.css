@@ -1,1 +1,10 @@
 
+/* 设置表格字体大小 */
+.markdown table {
+  font-size: 0.9rem; /* 调整为你需要的大小 */
+}
+
+/* 如果需要单独设置表头 */
+.markdown table th {
+  font-size: 0.95rem;
+}
