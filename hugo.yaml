@@ -70,11 +70,11 @@ menu:
 
 markup:
   highlight:
-    style: 'monokai' # 'catppuccin-latte'
+    style: 'catppuccin-latte' # 'catppuccin-latte'
     lineNos: true
     codeFences: true        # 启用 ```代码块``` 高亮（关键！）
     lineNumbersInTable: false
-    noClasses: false         #  false（保留 Hextra 的 CSS 类）
+    noClasses: true         #  false（保留 Hextra 的 CSS 类）
     guessSyntax: true       # 允许未指定语言时自动猜测
   goldmark:
     parser:
