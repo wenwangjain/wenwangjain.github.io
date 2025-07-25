@@ -139,7 +139,9 @@ params:
 
 markup:
   highlight:
-    style: 'monokai-light'
+    style: 'monokailight'
+    lineNos: true
+    lineNumbersInTable: false
     noClasses: false     # 避免 CSS 类名冲突
   goldmark:
     parser:
