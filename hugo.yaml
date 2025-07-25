@@ -67,12 +67,22 @@ menu:
 
 
 # Hugo 使用 Goldmark 解析 Markdown。 Markdown 渲染可以在 hugo.yaml 中的 markup.goldmark 中配置。以下是Hextra的默认配置：
+
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
   highlight:
-    noClasses: false
+    style: 'monokai' # 'catppuccin-latte'
+    lineNos: true
+    codeFences: true        # 启用 ```代码块``` 高亮（关键！）
+    lineNumbersInTable: false
+    noClasses: true         #  false（保留 Hextra 的 CSS 类）
+    guessSyntax: true       # 允许未指定语言时自动猜测
+  goldmark:
+    parser:
+      attribute: true    # 允许短代码属性解析
+    renderer:
+      unsafe: true       # 允许原始 HTML/短代码
+
+
 
 
 
@@ -136,20 +146,6 @@ params:
   article:
       # 文章分页显示
       displayPagination: true
-
-markup:
-  highlight:
-    style: 'monokai' # 'catppuccin-latte'
-    lineNos: true
-    codeFences: true        # 启用 ```代码块``` 高亮（关键！）
-    lineNumbersInTable: false
-    noClasses: false           #  false（保留 Hextra 的 CSS 类）
-    guessSyntax: true       # 允许未指定语言时自动猜测
-  goldmark:
-    parser:
-      attribute: true    # 允许短代码属性解析
-    renderer:
-      unsafe: true       # 允许原始 HTML/短代码
   
 taxonomies:
   category: categories
