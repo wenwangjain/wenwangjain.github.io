@@ -139,10 +139,12 @@ params:
 
 markup:
   highlight:
-    style: "catppuccin-latte"
+    style: "monokailight"
     lineNos: true
     lineNumbersInTable: false
     noClasses: false     # 避免 CSS 类名冲突
+    codeFences: true        # 启用 ```代码块``` 高亮（关键！）
+    guessSyntax: true       # 允许未指定语言时自动猜测
   goldmark:
     parser:
       attribute: true    # 允许短代码属性解析
