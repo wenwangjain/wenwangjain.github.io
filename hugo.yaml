@@ -142,7 +142,7 @@ markup:
     # 可用的主题列表见下文
     style: 'monokailight' 
     # 可选设置
-    #lineNos: true
+    lineNos: true
     lineNumbersInTable: false
     #noClasses: false
   
