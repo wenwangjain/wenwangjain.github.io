@@ -13,6 +13,12 @@ math: true
 2. 为什么需要解决问题？
 3. 探索如何解决问题？
 
+<br>
+
+{{< callout emoji=📝 type='default' >}}
+参考网址\书籍：
+1. https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/
+{{< /callout >}}
 
 <br>
 
@@ -37,12 +43,6 @@ math: true
 2. 工作；解决工作中的数据分析问题；
 3. 竞赛；获取良好的排名，提升知名度，获取奖金。
 
-<br>
-
-{{< callout emoji=📝 type='default' >}}
-参考网址\书籍：
-1. https://machinelearningmastery.com/how-to-define-your-machine-learning-problem/
-{{< /callout >}}
 
 <br>
 
@@ -165,6 +165,7 @@ else:
     numpy,pandas,matplotlib,sklearn,seaborn
 ```
 
+```
 Author: Sebastian Raschka<br>
 <br>
 Last updated: 2025-07-25<br>
@@ -178,7 +179,7 @@ pandas    : 2.2.2<br>
 matplotlib: 3.9.2<br>
 sklearn   : 1.5.1<br>
 seaborn   : 0.13.2<br>
-
+```
 
 <br>
 
