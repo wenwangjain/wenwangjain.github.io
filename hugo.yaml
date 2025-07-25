@@ -70,7 +70,7 @@ menu:
 
 markup:
   highlight:
-    style: 'catppuccin-latte' # 'catppuccin-latte'
+    style: 'manni' # 'catppuccin-latte'
     lineNos: true
     codeFences: true        # 启用 ```代码块``` 高亮（关键！）
     lineNumbersInTable: false
