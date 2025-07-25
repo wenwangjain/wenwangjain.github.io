@@ -4,15 +4,6 @@ layout: hextra-home
 width: wide  
 ---
 
-{{< hextra/hero-headline >}}
-  数据科学实践
-{{< /hextra/hero-headline >}}
-
-{{< hextra/hero-subtitle >}}
-  关于全栈数据工程师的学习笔记，项目实践&nbsp;<br class="sm:hx-block hx-hidden" />
-  四维（AI+大数据+云计算+物联网）全栈学习实践
-{{< /hextra/hero-subtitle >}}
-
 <div class="hx-mb-4">
 {{< hextra/hero-headline >}}
   数据科学实践
