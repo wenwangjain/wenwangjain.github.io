@@ -1,1 +1,6 @@
 
+/* 强制使用 Hextra 的背景 */
+.highlight {
+  background: var(--hextra-code-bg) !important;
+  border-radius: var(--hextra-code-radius) !important;
+}
