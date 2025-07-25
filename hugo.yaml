@@ -137,14 +137,14 @@ params:
       # 文章分页显示
       displayPagination: true
 
-markup:
-  highlight:
+# markup:
+  # highlight:
     # 可用的主题列表见下文
-    style: 'monokailight' 
+    # style: 'monokailight' 
     # 可选设置
-    lineNos: true
-    lineNumbersInTable: false
-    #noClasses: false
+    # lineNos: true
+    # lineNumbersInTable: false
+    # noClasses: false
   
 taxonomies:
   category: categories
