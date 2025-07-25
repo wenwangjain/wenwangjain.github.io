@@ -143,7 +143,7 @@ markup:
     lineNos: true
     codeFences: true        # 启用 ```代码块``` 高亮（关键！）
     lineNumbersInTable: false
-    noClasses: true     # false 避免 CSS 类名冲突
+    noClasses: false           #  false（保留 Hextra 的 CSS 类）
     guessSyntax: true       # 允许未指定语言时自动猜测
   goldmark:
     parser:
