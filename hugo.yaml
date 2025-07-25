@@ -141,7 +141,7 @@ markup:
   highlight:
     style: 'github' # 'catppuccin-latte'
     lineNos: true
-    codeFences: true        # 启用 ```代码块``` 高亮（关键！）
+    #codeFences: true        # 启用 ```代码块``` 高亮（关键！）
     #lineNumbersInTable: false
     #noClasses: false     # 避免 CSS 类名冲突
     #guessSyntax: true       # 允许未指定语言时自动猜测
