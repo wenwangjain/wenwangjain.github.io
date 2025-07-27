@@ -1,5 +1,5 @@
 ---
-title: 2️⃣ 工具
+title: 1.2. 工具
 weight: 112
 prev: /end_to_end
 type: "docs" # 点击后任然显示左边目录
