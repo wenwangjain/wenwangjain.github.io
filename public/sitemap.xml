@@ -12,6 +12,8 @@
   </url><url>
     <loc>http://localhost:1313/ai/end_to_end/tool/</loc>
   </url><url>
+    <loc>http://localhost:1313/ai/end_to_end/crisp/</loc>
+  </url><url>
     <loc>http://localhost:1313/guide/math_calculus/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/math_linear_algebra/</loc>
@@ -19,6 +21,10 @@
     <loc>http://localhost:1313/guide/math_probability_theory/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/math_mathematical_statistics/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ai/end_to_end/crisp/define_problem/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ai/end_to_end/crisp/collect_data/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/program_python/</loc>
   </url><url>
@@ -55,6 +61,8 @@
     <loc>http://localhost:1313/guide/python_geopandas/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/python_folium/</loc>
+  </url><url>
+    <loc>http://localhost:1313/guide/bd_hive/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>

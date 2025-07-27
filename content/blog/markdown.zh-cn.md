@@ -225,3 +225,33 @@ func main() {
 
 - [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 - [Hugo Markdown](https://gohugo.io/content-management/formats/#markdown)
+
+
+
+
+
+
+<div style="background-color: #f0f8ff; border-left: 4px solid #1e90ff; padding: 12px; margin-bottom: 16px;">
+  <input type="checkbox" disabled> <strong>Note</strong><br>
+  Useful information that users should know, even when skimming content.
+</div>
+
+<div style="background-color: #f0fff0; border-left: 4px solid #2e8b57; padding: 12px; margin-bottom: 16px;">
+  <input type="checkbox" checked disabled> <strong>Tip</strong><br>
+  Helpful advice for doing things better or more easily.
+</div>
+
+<div style="background-color: #fffaf0; border-left: 4px solid #ffa500; padding: 12px; margin-bottom: 16px;">
+  <input type="checkbox" disabled> <strong>Important</strong><br>
+  Key information users need to know to achieve their goal.
+</div>
+
+<div style="background-color: #fff0f5; border-left: 4px solid #ff69b4; padding: 12px; margin-bottom: 16px;">
+  <input type="checkbox" disabled> <strong>Warning</strong><br>
+  Urgent info that needs immediate user attention to avoid problems.
+</div>
+
+<div style="background-color: #f5f5f5; border-left: 4px solid #a9a9a9; padding: 12px; margin-bottom: 16px;">
+  <input type="checkbox" disabled> <strong>Caution</strong><br>
+  Advises about risks or negative outcomes of certain actions.
+</div>
