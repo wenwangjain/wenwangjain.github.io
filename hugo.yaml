@@ -103,7 +103,6 @@ params:
     # full (100%), wide (90rem), normal (1280px)
     width: full
 
-
   page:
     # 页面的宽度
     # full (100%), wide (90rem), normal (1280px)
@@ -116,13 +115,10 @@ params:
     # 页脚的宽度
     width: wide
 
-
   theme:
     # light | dark | system
     default: system
     displayToggle: true
-
-
 
   comments:
     enable: false
@@ -146,7 +142,15 @@ params:
   article:
       # 文章分页显示
       displayPagination: true
-  
+
+  assets:
+    customCSS:
+      - css/custom.css  # 确保路径正确
+
+build:
+  writeStats: true  # 启用CSS构建统计
+
+
 taxonomies:
   category: categories
   tag: tags
@@ -156,4 +160,7 @@ services:
     ID: G-VZ3Q041EBH
 
 
-
+# 检查是否重复渲染
+markdown:
+  render:
+    jupyter: true  # 确保只有一个渲染器
