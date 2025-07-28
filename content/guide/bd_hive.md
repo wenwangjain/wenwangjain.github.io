@@ -115,6 +115,8 @@ WITH DBPROPERTIES ('owner' = 'John', 'created_date' = '2024-01-01');
 
 {{< tab >}}
 
+> ***SHOW DATABASES 展示所有数据库***
+
 ```mysql
 SHOW DATABASES [LIKE 'identifier_with_wildcards'];
 ```
@@ -148,13 +150,60 @@ SHOW DATABASES LIKE '%data%';
 SHOW DATABASES LIKE '_a%';
 ```
 
+<br><br>
+
+> ***DESCRIBE DATABASE 查看数据库信息***
+
+```myysql
+DESCRIBE DATABASE [EXTENDED] db_name;
+```
+- 显示指定数据库的元数据信息
+- 不使用 `EXTENDED` 时显示基本信息
+- 使用 `EXTENDED` 时显示更详细的扩展信息
+
+{{< callout emoji=📝 type='default' >}}
+- 基本信息 (DESCRIBE DATABASE)：
+  - 数据库名称
+  - 描述信息
+  - 位置 URI
+  - 所有者名称
+  - 所有者类型
+  - 权限信息
+
+- 扩展信息 (DESCRIBE DATABASE EXTENDED)：
+  - 包含基本所有信息
+  - 附加参数信息
+  - 创建时间等更多元数据
+ 
+- 注意事项
+  1. 数据库名称区分大小写（取决于 Hive 配置）
+  2. 需要有相应的权限才能查看数据库信息
+  3. `DESCRIBE DATABASE` 命令在Hive 0.14 及以上版本才完全支持
+  4. 在旧版本 Hive 中，可能需要使用 `DESCRIBE SCHEMA` 替代
+{{< /callout >}}
+
 <br>
+
+***（1）、查看数据库的基本信息：***
+```mysql
+DESCRIBE DATABASE mydb;
+```
+
+<br>
+
+***（2）、查看数据库的详细信息：***
+```mysql
+DESC DATABASE EXTENDED mydb;
+```
+
+<br><br>
 
 {{< /tab >}}
 
 
 
 {{< tab >}}
+
 {{< /tab >}}
 
 
