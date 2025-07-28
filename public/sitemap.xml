@@ -12,6 +12,8 @@
   </url><url>
     <loc>http://localhost:1313/ai/end_to_end/tool/</loc>
   </url><url>
+    <loc>http://localhost:1313/ai/end_to_end/algorithm/</loc>
+  </url><url>
     <loc>http://localhost:1313/ai/end_to_end/crisp/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/math_calculus/</loc>
