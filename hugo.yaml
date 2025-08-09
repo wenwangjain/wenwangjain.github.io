@@ -22,34 +22,22 @@ languages:
 
 menu:
   main:
-    - identifier: ai
-      name: 人工智能
-      pageRef: /ai
+    - identifier: documentation
+      name: 文档
+      pageRef: /documentation
       weight: 1
-    - identifier: bigdata
-      name: 大数据
-      pageRef: /bigdata
-      weight: 2
-    - identifier: cloud
-      name: 云计算
-      pageRef: /cloud
-      weight: 3
-    - identifier: iot
-      name: 物联网
-      pageRef: /iot
-      weight: 4
     - identifier: guide
       name: 指南
       pageRef: /guide
-      weight: 5
-    - identifier: blog
+      weight: 2
+    - identifier: project
       name: 项目
-      pageRef: /blog
-      weight: 6
+      pageRef: /project
+      weight: 3
     - identifier: about
       name: 关于
       pageRef: /about
-      weight: 7
+      weight: 4
       
     - name: Search
       weight: 8
@@ -137,7 +125,8 @@ params:
       inputPosition: top
       # lang: en
 
-  sidebarWidth: 1000
+  sidebar:
+    Width: 400
 
   article:
       # 文章分页显示
@@ -147,20 +136,20 @@ params:
     customCSS:
       - css/custom.css  # 确保路径正确
 
-build:
-  writeStats: true  # 启用CSS构建统计
+  build:
+    writeStats: true  # 启用CSS构建统计
 
 
-taxonomies:
-  category: categories
-  tag: tags
+  taxonomies:
+    category: categories
+    tag: tags
 
-services:
-  googleAnalytics:
-    ID: G-VZ3Q041EBH
+  services:
+    googleAnalytics:
+      ID: G-VZ3Q041EBH
 
 
-# 检查是否重复渲染
-markdown:
-  render:
-    jupyter: true  # 确保只有一个渲染器
+  # 检查是否重复渲染
+  markdown:
+    render:
+      jupyter: true  # 确保只有一个渲染器

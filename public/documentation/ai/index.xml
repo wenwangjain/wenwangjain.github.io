@@ -1,0 +1,105 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 人工智能</title>
+    <link>http://localhost:1313/documentation/ai/</link>
+    <description>Recent content in 人工智能 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/documentation/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>1. 端到端的机器学习</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;div class=&#34;hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 3;&#34;&gt;
+&lt;a
+  class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;overview&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 32 32&#34;&gt;&lt;path fill=&#34;#0384f4&#34; d=&#34;m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464&#34;/&gt;&lt;path fill=&#34;#82d7ff&#34; d=&#34;M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2&#34;/&gt;&lt;/svg&gt;概述&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;人工智能，机器学习，深度学习，统计机器学习等相关概念；&lt;/div&gt;&lt;/a&gt;
+&lt;a
+  class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;tool&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 32 32&#34;&gt;&lt;path fill=&#34;#0384f4&#34; d=&#34;m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464&#34;/&gt;&lt;path fill=&#34;#82d7ff&#34; d=&#34;M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2&#34;/&gt;&lt;/svg&gt;工具&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;Python 中的机器学习；简单有效的预测数据分析工具；&lt;/div&gt;&lt;/a&gt;
+&lt;a
+  class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;algorithms&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 32 32&#34;&gt;&lt;path fill=&#34;#0384f4&#34; d=&#34;m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464&#34;/&gt;&lt;path fill=&#34;#82d7ff&#34; d=&#34;M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2&#34;/&gt;&lt;/svg&gt;算法&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;了解常用算法原理。了解算法优缺点，原理，应用；&lt;/div&gt;&lt;/a&gt;
+&lt;a
+  class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;crisp&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 32 32&#34;&gt;&lt;path fill=&#34;#0384f4&#34; d=&#34;m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464&#34;/&gt;&lt;path fill=&#34;#82d7ff&#34; d=&#34;M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2&#34;/&gt;&lt;/svg&gt;步骤&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;选择并学习一个过程（CRISP-DM）。学习建模分步过程；&lt;/div&gt;&lt;/a&gt;
+&lt;a
+  class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;automl&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 32 32&#34;&gt;&lt;path fill=&#34;#0384f4&#34; d=&#34;m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464&#34;/&gt;&lt;path fill=&#34;#82d7ff&#34; d=&#34;M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2&#34;/&gt;&lt;/svg&gt;自动机器学习&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;python 自动机器学习的常用库概述；可用来快速选择模型\算法；&lt;/div&gt;&lt;/a&gt;
+&lt;a
+  class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;large_datasets&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 32 32&#34;&gt;&lt;path fill=&#34;#0384f4&#34; d=&#34;m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464&#34;/&gt;&lt;path fill=&#34;#82d7ff&#34; d=&#34;M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2&#34;/&gt;&lt;/svg&gt;大数据集&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;python 处理大数据集的方法；&lt;/div&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>2. 深度学习</title>
+      <link>http://localhost:1313/documentation/ai/deep_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/deep_learning/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>3. 生成式人工智能</title>
+      <link>http://localhost:1313/documentation/ai/gai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/gai/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>4. 模型部署 MLOps</title>
+      <link>http://localhost:1313/documentation/ai/mlops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/mlops/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>5. 分布式训练</title>
+      <link>http://localhost:1313/documentation/ai/distributed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/distributed/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

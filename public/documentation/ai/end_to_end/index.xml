@@ -1,0 +1,1251 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 1. 端到端的机器学习</title>
+    <link>http://localhost:1313/documentation/ai/end_to_end/</link>
+    <description>Recent content in 1. 端到端的机器学习 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/documentation/ai/end_to_end/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>1.1. 概述</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/overview/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;h2&gt;&lt;font face=Georgia&gt;1、人工智能概述&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1人工智能概述&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e6%a6%82%e8%bf%b0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;1.1、相关概念&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;11相关概念&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#11%e7%9b%b8%e5%85%b3%e6%a6%82%e5%bf%b5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;b&gt;&lt;i&gt;人工智能&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;可以像人类一样学习、理解、思考的计算机程序；
+  &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;b&gt;&lt;i&gt;机器学习&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;人工智能的一个子集。使用数据训练模型，这些模型可以根据在数据中找到的关系进行预测；
+    &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;b&gt;&lt;i&gt;深度学习&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;机器学习的一个分支。使用特殊分层结构的机器学习方法（这些分层依次堆叠）；&lt;br&gt;
+      &lt;u&gt;深度学习算法&lt;/u&gt;，受到大脑结构的启发，可以很好地处理图像、视频或文本等非结构化数据；&lt;br&gt;
+      &lt;u&gt;深度学习框架&lt;/u&gt;，是一个拼凑了层和函数等组件的库。是一种具有求导功能的编程语言（“可微分编程语言”）；&lt;br&gt;&lt;br&gt;
+      &lt;u&gt;自然语言&lt;/u&gt;，让计算机理解、分析和生成人类自然语言；&lt;br&gt;
+      &lt;u&gt;计算机视觉&lt;/u&gt;，让计算机理解和处理图像及视频信息；
+        &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;b&gt;&lt;i&gt;生成式人工智能&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;可以生成以前从未见过的新内容，如文本，图像，视频等；&lt;br&gt;
+        &lt;u&gt;自然语言方向&lt;/u&gt;，&lt;u&gt;计算机视觉方向&lt;/u&gt;；
+        &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+    &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;1.2、人工智能简史&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;12人工智能简史&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e7%ae%80%e5%8f%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;19 世纪 30~40 年代 —— 分析机（Analytical Engine）&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;1️⃣ 查尔斯 • 巴贝奇 —— 分析机（Analytical Engine）理念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查尔斯·巴贝奇从 1834 年开始设计分析机。分析机被认为是现代计算机的先驱，它具有很多现代计算机的特征，如存储程序、通用计算等理念。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;2️⃣ 霍华德·艾肯（Howard Aiken）团队 —— 马克一号（Mark I）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它是 1944 年制造出的一种电动机械计算机，能够进行各种复杂的数学计算，被认为是 &lt;font color=Coral face=Georgia  &gt;第一台通用的机械式计算机&lt;/font&gt;。它的用途仅仅是利用机械操作将数学分析领域的某些计算自动化，因此得名“分析机”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;3️⃣ 沃伦·麦卡洛克（Warren McCulloch）,沃尔特·皮茨（Walter Pitts） —— 神经元的数学模型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1943 年提出了一种形式神经元的数学模型，被认为是 &lt;font color=Coral face=Georgia  &gt;最早的神经网络模型之一&lt;/font&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;20 世纪 50 年代 —— 符号主义人工智能（symbolic AI）&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;1️⃣ 符号主义人工智能（symbolic AI）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;精心编写足够多的&lt;font color=Coral face=Georgia  &gt;明确规则来处理知识&lt;/font&gt;，就可以实现与人类水平相当的人工智能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;2️⃣ 阿兰 • 图灵 —— “图灵测试”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人工智能先驱阿兰 • 图灵在其 1950年发表的具有里程碑意义的论文“计算机器和智能”。
+在这篇论文中，图灵提出了著名的“图灵测试”，用于判断机器是否具有智能。他认为如果一台机器能够与人类进行对话而不被人类察觉出其为机器，那么就可以认为这台机器具有智能。这篇论文为人工智能的发展奠定了重要的理论基础。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;3️⃣ 弗兰克·罗森布拉特（Frank Rosenblatt） —— 感知机&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1957 年美国心理学家弗兰克·罗森布拉特（Frank Rosenblatt）提出感知机。它是一种简单的二分类线性分类模型，它是神经网络和支持向量机的基础。&lt;/li&gt;
+&lt;li&gt;感知机的提出在当时引起了很大的轰动，但后来人们发现它只能处理线性可分的问题，具有一定的局限性。不过，感知机的出现为后来更复杂的神经网络的发展奠定了基础。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;20 世纪 60 ~ 70年代初 —— 第一次冬天&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;font color=Coral face=Georgia  &gt;计算能力的限制&lt;/font&gt; 和 &lt;font color=Coral face=Georgia&gt;数据的缺乏&lt;/font&gt;，机器学习的发展陷入了瓶颈。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font color=Coral face=Georgia  &gt;过高的期望未能实现&lt;/font&gt;，研究人员和政府资金均转向其他领域。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;20 世纪 80 年代 —— 专家系统（expert system）&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;font color=Coral face=Georgia  &gt;专家系统&lt;/font&gt; 使得符号主义人工智能热度达到了顶峰。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;20 世纪 90 年代初 —— 第二次冬天&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;font color=Coral face=Georgia  &gt;专家系统&lt;/font&gt; 维护费用变得很高，难于扩展，并且使用范围有限，人们逐渐对其失去兴趣。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;20 世纪 90 年代 —— 机器学习&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;专家系统难于给出明确的规则来解决更加复杂、模糊的问题，比如图像分类、语音识别、和语言翻译。&lt;/li&gt;
+&lt;li&gt;于是 20 世纪 90 年代出现了 &lt;font color=Coral face=Georgia  &gt;机器学习&lt;/font&gt; 来替代符号人工智能。&lt;/li&gt;
+&lt;li&gt;机器学习是训练出来的，而不是明确规地用程序编写出来的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;21 世纪 20 年代 —— 生成式人工智能&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;OpenAI 在2020年6月发布了 GPT-3，这是一个非常大且复杂的模型，拥有 1750亿个参数。&lt;/li&gt;
+&lt;li&gt;GPT-3 在生成文本和其他语言任务方面的表现令人瞩目，并且激发了大量关于 AI 的讨论。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;font face=Georgia&gt;2、机器学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2机器学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;2.1、概述&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;21概述&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21%e6%a6%82%e8%bf%b0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;机器学习&lt;/strong&gt;&lt;/em&gt; 是一门多领域学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;机器学习&lt;/strong&gt;&lt;/em&gt; 主要是设计和分析一些让计算机可以自动“学习”的算法。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;机器学习算法&lt;/strong&gt;&lt;/em&gt; 是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。&lt;/li&gt;
+&lt;li&gt;由于学习算法中涉及了大量的统计学理论，机器学习与推断统计学联系尤为密切，也被称为 &lt;em&gt;&lt;strong&gt;统计机器学习&lt;/strong&gt;&lt;/em&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;2.2、分类&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;22分类&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#22%e5%88%86%e7%b1%bb&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font face=Georgia&gt;1️⃣ 监督学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-监督学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e7%9b%91%e7%9d%a3%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia size=3&gt;监督学习&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;：从有标注（标签\标记）的数据中学习预测模型的机器学习问题；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;监督学习主要任务 —— 分类、回归；&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;分类任务：&lt;/strong&gt;&lt;/em&gt; 将实例数据划分到预设的某些类别中，是一种离散型预测。如，判断一封电子邮件是不是垃圾邮件；&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;回归任务：&lt;/strong&gt;&lt;/em&gt; 用于预测连续值。比如预测房价，股票价格等；&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;生成模型 \ 判别模型：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;&lt;font face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;生成模型 \ 判别模型：&lt;/strong&gt;&lt;/em&gt; 监督学习的任务就是学习一个模型，应用这个模型，对给定的输入预测相应的输出。&lt;/font&gt;&lt;br&gt;&lt;br&gt;
+这个模型的一般形式为决策函数（&lt;em&gt;&lt;strong&gt;判别模型&lt;/strong&gt;&lt;/em&gt; ）：
+$$Y = f(X)$$
+或者条件概率分布（&lt;em&gt;&lt;strong&gt;生成模型&lt;/strong&gt;&lt;/em&gt;）：
+$$Y = P(Y|X)$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;判别模型&lt;/strong&gt;&lt;/em&gt;：在已知输入的情况下，预测出输出，常见的判别模型有逻辑回归、支持向量机和深度学习神经网络等。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;生成模型&lt;/strong&gt;&lt;/em&gt;：尝试捕捉数据中的潜在分布，常见的生成模型有高斯混合模型和朴素贝叶斯分类器等。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;2️⃣ 无监督学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-无监督学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e6%97%a0%e7%9b%91%e7%9d%a3%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  size=3&gt;无监督学习&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;：从无标注（标签\标记）的、或结构未知的数据中学习预测模型的机器学习问题；&lt;br&gt;
+这种学习方式的目标通常是为了探索数据，找出其中的结构或者模式；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;无监督学习主要任务 —— 聚类、降维、异常检测、关联规则&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;聚类：目标是发现并识别数据中的自然分组。是构造信息和从数据中导出有意义关系的一种有用的技术；&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;例如，将客户分为几个群体进行市场细分；为分析过程中出现的每个群定义一组对象，&lt;br&gt;
+它们之间都具有一定程度的相似性，但与其他群中对象的差异性更大；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;降维：特征预处理中数据去噪的一种常用方法，这个过程叫作特征提取。目标是在不丢失太多信息的前提下简化数据；&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;将多个相关特征合并为一个。降低了某些算法对预测性能的要求，&lt;br&gt;
+并在保留大部分相关信息的同时将数据压缩到较小维数的子空间上。&lt;br&gt;
+案例：汽车的里程与其使用年限存在很大的相关性，所以降维算法会将它们合并成一个代表汽车磨损的特征。&lt;br&gt;
+这个过程叫作特征提取。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;异常检测：异常检测的目标是检测出不符合其他正常数据行为的数据点；&lt;/strong&gt;&lt;/em&gt; &lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;比如，检测信用卡交易中的欺诈行为；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;关联规则：挖掘大量数据，发现属性之间的有趣联系；&lt;/strong&gt;&lt;/em&gt; &lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;比如，在超市销售日志上运行关联规则之后发现买烧烤酱和薯片的人也倾向于购买牛排。那么，可以将这几样商品摆放得更近一些；&lt;/p&gt;
+&lt;/blockquote&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;3️⃣ 半监督学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-半监督学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e5%8d%8a%e7%9b%91%e7%9d%a3%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia size=3&gt;半监督学习&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;：半监督学习：利用少量的有标注数据和大量的无标注数据来进行学习。在只有少量标注数据的情况下，通过利用大量的无标注数据，可以提高机器学习模型的性能和泛化能力。大多数半监督式学习算法是无监督式和监督式算法的结合。&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;例如，在图像分类任务中，如果只有少量标注过的图片（比如只有几百张标有 “猫”“狗”“鸟” 的图片），但同时有大量未标注的图片，半监督式学习算法就可以先通过无监督学习从这些未标注的图片中提取一些通用的图像特征，然后再利用少量标注过的图片进行监督学习，调整模型参数，从而提高分类的准确性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;学习过程：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ol&gt;
+&lt;li&gt;首先，半监督学习算法会利用少量的有标注数据来建立一个初步的模型。&lt;/li&gt;
+&lt;li&gt;然后，半监督学习算法会利用大量的无标注数据来进一步改进和优化模型。无标注数据虽然没有明确的类别或目标值信息，但是它们可以提供关于数据分布和潜在结构的信息。&lt;/li&gt;
+&lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;学习方法：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;自我训练&lt;/strong&gt;&lt;/em&gt;：一种常见的方法是自我训练。算法首先使用有标注数据训练一个模型，然后用这个模型对无标注数据进行预测，将预测结果比较有把握的无标注数据加入到有标注数据集中，再次训练模型。这个过程不断重复，直到模型性能不再提高或者达到一定的迭代次数。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;生成模型&lt;/strong&gt;&lt;/em&gt;：另一种方法是使用生成模型。生成模型可以学习数据的分布，然后根据这个分布生成新的数据或者对无标注数据进行标注。例如，在图像生成任务中，生成对抗网络（GAN）可以学习图像的分布，然后生成新的图像。在半监督学习中，生成模型可以利用无标注数据来学习数据的分布，然后帮助分类器更好地对有标注数据进行分类。&lt;/li&gt;
+&lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;4️⃣ 强化学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;4-强化学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-%e5%bc%ba%e5%8c%96%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia size=3&gt;强化学习&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;：智能系统在与环境的连续互动中学习最有行为策略的机器学习问题；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;它的学习系统（在其语境中称为智能体）能够观察环境，做出选择，执行操作，并获得回报（reward），或者是以负面回报的形式获得惩罚；&lt;/li&gt;
+&lt;li&gt;它必须自行学习什么是最好的策略（policy），从而随着时间推移获得最大的回报。策略代表智能体在特定情况下应该选择的操作。；&lt;/li&gt;
+&lt;li&gt;强化学习可以被认为是一种自学习的方法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;例如，许多机器人通过强化学习算法来学习如何行走；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;5️⃣ 主动学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;5-主动学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#5-%e4%b8%bb%e5%8a%a8%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  size=3&gt;主动学习：&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; 在训练过程中为模型提供部分数据标签；模型可以选择它认为最需要标签的数据进行标记，从而提高学习效率。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;算法可以主动地选择它想学习的样本，而不是用全部数据进行训练的算法。&lt;/li&gt;
+&lt;li&gt;如果允许学习系统选择它自己的训练集，可能会提高学习的效率和效果。&lt;/li&gt;
+&lt;li&gt;它通常用于样本标签成本高、标签难以获得，而未标注样本充足的场景。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;主动学习可以有效地选择最具信息量、对当前模型最有帮助的样本进行标注，从而减少标注的代价。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;例如，在只有少量标注图像的情况下，可以通过主动学习选择最有代表性的图像进行标注，提高图像分类的准确性。在医学领域，标注大量的医疗数据是非常昂贵的。主动学习可以选择那些最具诊断价值的数据进行标注，帮助医生提高诊断准确性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;选择哪些未标注数据进行标注是主动学习的关键。常见策略如下：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;1️⃣ 估计标注某个数据点后模型的变化程度，选择那些预计会使模型变化最大的数据进行标注。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;高效利用标注资源&lt;/strong&gt;&lt;/em&gt;：如果标注一个数据点后能使模型发生较大变化，说明这个数据点携带了丰富的信息，对模型的优化具有重要意义。通过选择这样的数据进行标注，可以用较少的标注成本获得较大的模型性能提升。避免浪费标注资源在那些对模型影响较小的数据上，从而提高标注的效率和效果。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;加速模型收敛&lt;/strong&gt;&lt;/em&gt;：模型变化程度大的数据点往往能够引导模型更快地朝着更优的方向进行调整和收敛。这些数据点可能揭示了模型当前的不足之处，通过标注它们并将其纳入训练，可以促使模型更快地适应数据的分布，提高模型的准确性和泛化能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ 使用多个不同的模型对未标注数据进行预测，选择那些分歧最大的数据进行标注。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;探索数据的不确定性&lt;/strong&gt;&lt;/em&gt;：不同的模型可能从不同的角度看待数据，当多个模型对某个数据点的预测存在较大分歧时，说明这个数据点具有较高的不确定性。这种不确定性可能源于数据的复杂性、噪声或者数据处于不同类别之间的边界区域。标注这样的数据可以帮助模型更好地理解这些不确定区域，减少模型的模糊性，提高模型在复杂情况下的决策能力。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;集成多个模型的优势&lt;/strong&gt;&lt;/em&gt;：通过选择分歧最大的数据进行标注，可以综合多个模型的观点，充分发挥不同模型的优势。当这些数据被标注后加入训练集，可以促使各个模型之间进行相互学习和调整，从而提高整个模型集成的性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3️⃣ 选择那些模型对其预测最不确定的数据进行标注。例如，对于分类问题，可以选择那些模型预测概率最接近 0.5 的数据点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;聚焦难以判断的数据&lt;/strong&gt;&lt;/em&gt;：预测概率接近 0.5 的数据点意味着模型对其所属类别难以确定。这些数据点通常处于不同类别之间的边界或者具有一些模糊的特征，对于模型来说是具有挑战性的。标注这些数据可以帮助模型更好地学习边界情况和模糊特征，提高模型在分类边界上的准确性，减少错误分类的发生。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;高降低模型的风险&lt;/strong&gt;&lt;/em&gt;：如果模型对某些数据过于自信地做出错误预测，可能会导致严重的后果。通过选择不确定的数据进行标注，可以让模型更加谨慎地对待各种情况，降低模型的风险。同时，也可以避免模型过度拟合某些特定的数据模式，提高模型的泛化能力。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;6️⃣ 自学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;6-自学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#6-%e8%87%aa%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;font color=Coral face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;自学习（Self-training）：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;自监督学习是通过自动从数据本身中生成监督信号来进行学习。是指系统能够自主地进行学习和改进的过程。这是一个更加广泛的概念，它涵盖了多种机器学习算法（监督\无监督\强化等）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;这种方法的基本思想是先使用已有的标签数据训练出一个初步的模型，然后用这个模型预测未标签数据，把预测结果作为标签，再和原有标签数据一起重新训练模型。这个过程可以重复进行直到模型收敛。&lt;/li&gt;
+&lt;li&gt;如果在自学习的过程中，既使用了少量有标注的数据，又利用了大量无标注的数据来提升学习效果，那么此时的自学习可以被认为是采用了半监督学习的方法。&lt;/li&gt;
+&lt;li&gt;自学习也可以完全基于有监督学习（只使用有标注数据不断改进）或者无监督学习（仅从无标注数据中发现模式）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;例如，自动驾驶汽车、智能机器人、语音识别系统等都需要具备自学习能力，才能不断地提高自己的性能和适应不同的环境。自学习的数据挖掘算法可以自动地从大量数据中挖掘出有价值的信息，为企业决策提供支持。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;实现方法：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;1️⃣ &lt;em&gt;&lt;strong&gt;机器学习算法&lt;/strong&gt;&lt;/em&gt; ：自学习系统通常采用机器学习算法，如深度学习、强化学习等，来实现自主学习和改进。这些算法可以通过对大量数据的学习，自动地提取特征、建立模型，并进行预测和决策。&lt;/p&gt;
+&lt;p&gt;2️⃣ &lt;em&gt;&lt;strong&gt;反馈机制&lt;/strong&gt;&lt;/em&gt; ：自学习系统需要建立有效的反馈机制，以便能够根据环境的反馈和自身的表现进行调整和优化。例如，一个自学习的智能机器人可以通过传感器获取环境的反馈信息，然后根据这些信息调整自己的行为策略。&lt;/p&gt;
+&lt;p&gt;3️⃣ &lt;em&gt;&lt;strong&gt;数据驱动&lt;/strong&gt;&lt;/em&gt; ：自学习系统通常是数据驱动的，需要大量的数据来进行学习和训练。这些数据可以来自于各种来源，如传感器、网络、数据库等。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;7️⃣ 多视图学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;7-多视图学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#7-%e5%a4%9a%e8%a7%86%e5%9b%be%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;font color=Coral face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;多视图学习（Multi-view learning）：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt; 是一种机器学习方法，主要用于处理具有多个不同视角或特征表示的数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;在多视图学习中我们假设数据是由多个视图或者说多个不同的特征集生成的，每个视图都可以进行学习和推断，不同视图之间的一致性被用作一种约束以引导学习过程。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;多视图&lt;/strong&gt;&lt;/em&gt;：假设我们有一个物体，从不同的角度去观察它，会得到不同的视图。例如，对于一个苹果，从正面看、侧面看、上面看会有不同的样子。在机器学习中，数据也可以有多个视图。比如一张图片可以有颜色特征、纹理特征、形状特征等不同的视图。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;学习过程：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;1️⃣ &lt;em&gt;&lt;strong&gt;数据表示&lt;/strong&gt;&lt;/em&gt; ：多视图学习首先要将数据表示为多个视图的形式。每个视图可以是不同类型的特征或者从不同角度提取的信息。例如，在图像分类任务中，一个视图可以是图像的颜色直方图，另一个视图可以是图像的纹理特征矩阵。&lt;/p&gt;
+&lt;p&gt;2️⃣ &lt;em&gt;&lt;strong&gt;协同学习&lt;/strong&gt;&lt;/em&gt; ：多视图学习的核心是让不同的视图相互协作，共同学习一个更好的模型。这就像多个专家从不同的角度一起讨论问题，最终得出一个更全面、更准确的结论。不同视图之间可以通过信息共享、互补学习等方式来提高学习效果。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;信息共享&lt;/strong&gt;&lt;/em&gt; ：各个视图可以共享一些共同的信息，例如在文档分类中，不同的主题特征视图可能会共享一些常见的关键词信息。通过共享信息，不同视图可以相互补充，提高对数据的理解和建模能力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;互补学习&lt;/strong&gt;&lt;/em&gt; ：不同视图也可以从不同的方面捕捉数据的特征，从而实现互补学习。比如在图像识别中，颜色视图可能更擅长区分不同颜色的物体，而形状视图可能更擅长区分不同形状的物体。通过结合这两个视图，模型可以更好地识别各种图像。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3️⃣ &lt;em&gt;&lt;strong&gt;模型融合&lt;/strong&gt;&lt;/em&gt; ：在多视图学习的最后阶段，通常需要将不同视图学习到的模型进行融合，得到一个最终的预测结果。融合的方法可以有很多种，比如简单的投票法、加权平均法，或者更复杂的基于深度学习的融合方法。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;8️⃣ 生成模型&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;8-生成模型&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#8-%e7%94%9f%e6%88%90%e6%a8%a1%e5%9e%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;
+  &lt;p&gt;&lt;font color=Coral face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;生成模型（Generative models）：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;是一种机器学习模型，它的目标是学习数据的分布，以便能够生成与训练数据相似的新数据样本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;生成模型通过学习训练数据的概率分布来实现生成新数据的目的。&lt;/li&gt;
+&lt;li&gt;尝试估计数据的联合概率分布 ，其中  表示数据的特征向量。一旦生成模型学习到了数据的分布，它就可以通过从这个分布中采样来生成新的数据样本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;例如，在图像生成任务中，生成模型可以学习图像的分布，然后生成新的图像。生成的图像可以与训练数据中的图像具有相似的特征和风格。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia  size=3&gt;&lt;em&gt;&lt;strong&gt;常见类型：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;p&gt;1️⃣ &lt;em&gt;&lt;strong&gt;朴素贝叶斯模型&lt;/strong&gt;&lt;/em&gt;， 是一种简单的生成模型，它基于贝叶斯定理和特征之间的独立性假设。朴素贝叶斯模型通过估计每个类别的先验概率和每个特征在每个类别下的条件概率来进行分类。在文本分类等任务中表现出了很好的性能。&lt;/p&gt;
+&lt;p&gt;2️⃣ &lt;em&gt;&lt;strong&gt;隐马尔可夫模型（HMM）&lt;/strong&gt;&lt;/em&gt; ，是一种用于序列数据建模的生成模型。它由一个隐藏状态序列和一个观察序列组成，隐藏状态之间存在转移概率，观察值由隐藏状态生成。在语音识别、自然语言处理等领域有广泛的应用。&lt;/p&gt;
+&lt;p&gt;3️⃣ &lt;em&gt;&lt;strong&gt;变分自编码器（VAE）&lt;/strong&gt;&lt;/em&gt; ，是一种基于深度学习的生成模型。它由一个编码器和一个解码器组成，编码器将输入数据映射到一个低维的潜在空间，解码器则从潜在空间中生成新的数据样本。VAE 通过最大化数据的似然函数来学习潜在空间的分布，同时通过约束潜在空间的分布使其接近一个标准的高斯分布，从而实现了生成新数据的目的。&lt;/p&gt;
+&lt;p&gt;4️⃣ &lt;em&gt;&lt;strong&gt;生成对抗网络（GAN）&lt;/strong&gt;&lt;/em&gt; ，生成对抗网络是一种由生成器和判别器组成的深度学习模型。生成器的目标是生成与真实数据相似的假数据，判别器的目标是区分真实数据和生成器生成的假数据。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;2.3、其他分类&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;23其他分类&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#23%e5%85%b6%e4%bb%96%e5%88%86%e7%b1%bb&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;br&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;2.3.1、线性\非线性&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;线性模型；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;线性模型是一种最简单也最重要的统计与机器学习模型。&lt;br&gt;
+在线性模型中，输出是输入特征的线性组合。换句话说，假设特征和输出之间的关系是线性的，即满足一次方程。&lt;br&gt;
+线性模型的一个主要优点是简单易理解、计算效率高，例如线性回归和逻辑回归。&lt;br&gt;
+然而，现实生活中很多问题，特征和输出之间的关系复杂，非线性的。对于这类问题，线性模型的表达能力就显得不够。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;非线性模型；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非线性模型则假设输入与输出之间是非线性关系。&lt;br&gt;
+非线性关系的形式有很多，可能是二次、三次甚至更高次的多项式形式，也可能是指数、对数形式，等等。&lt;br&gt;
+非线性模型的一个主要优点是可以拟合更复杂的关系，例如决策树、神经网络等。&lt;br&gt;
+然而，非线性模型的主要挑战在于可能会过拟合数据（即模型对训练数据学习的过于复杂，不能很好地泛化到新的数据上）、和计算上的复杂性。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;2.3.2、概率\非概率&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;概率模型；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;概率模型是一种基于概率理论的统计模型，它描述了随机变量之间的概率关系。&lt;br&gt;
+在概率模型中，我们不仅预测某一结果，而且还给出了预测的不确定性（以概率的形式）。&lt;br&gt;
+例如，朴素贝叶斯，高斯混合模型，隐马尔可夫模型，逻辑回归等都是概率模型。&lt;/p&gt;
+&lt;p&gt;概率模型的一个主要好处是给出了预测的不确定性，这在许多应用中是非常有用的，如天气预测、医疗诊断等。&lt;br&gt;
+但是概率模型一般假定数据满足某种分布，这种假设在一些情况下可能过于严格，限制了模型的适应性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;非概率模型；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非概率模型不依赖于先验的可能性模型，而通常依赖于万丽最优化级星拉。&lt;br&gt;
+非概率模型给出明确的预测，不提供预测的不确定性（即预测的概率）。&lt;br&gt;
+例如，支持向量机，决策树，深度学习神经网络等都属于非概率模型。&lt;/p&gt;
+&lt;p&gt;非概率模型的优点是无需对数据分布做过多假设，这使得它们更具有适应性，能够处理各种复杂的数据情况。&lt;br&gt;
+然而，非概率模型并不提供预测的不确定性，这在某些情况下可能是一个缺点。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;2.3.3、参数\非参数&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;参数模型；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参数模型是一种假设输入和输出之间的关系可以由一组参数完全确定，并且这组参数的数量是固定的。&lt;br&gt;
+参数模型一般都有严格的假设，例如假设数据是正态分布的，或者输入和输出之间的关系是线性的等。&lt;br&gt;
+常见的参数模型包括线性回归、逻辑回归、线性判别分析等。&lt;/p&gt;
+&lt;p&gt;参数模型的优点是理论清晰，计算相对简单。&lt;br&gt;
+然而，缺点是对数据的假设可能过于严格，如果实际数据的分布或者结构与模型的假设不符，那么参数模型的表现可能会很差。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;非参数模型；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非参数模型非常灵活，它不假设数据必须符合某一特定的分布，或者输入和输出间的关系必须是某一特定的形式。&lt;br&gt;
+非参数模型的参数数量通常会随着数据量的增加而增加。&lt;br&gt;
+常见的非参数模型包括决策树、随机森林、支持向量机等。&lt;/p&gt;
+&lt;p&gt;非参数模型的优点是非常灵活，可以处理各种复杂的数据情况。&lt;br&gt;
+然而，非参数模型的缺点是计算上可能会比较复杂，而且由于模型过于灵活，如果数据量不足，可能会导致过度拟合。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;2.3.4、基于实例\模型&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;基于实例的学习；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统先完全记住学习示例（example），然后通过某种相似度度量方式将其泛化到新的实例。&lt;br&gt;
+基于实例的算法直接记住并使用训练实例进行预测，它们是一种惰性学习算法，因为它们仅在预测时进行计算。&lt;br&gt;
+一个典型例子就是最近邻算法。&lt;/p&gt;
+&lt;p&gt;基于实例的学习的优点是可以适应复杂的问题，因为它们不需要进行任何明确的模拟。&lt;br&gt;
+然而，存储和比较所有训练实例通常会造成大量的计算开销。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;基于模型的学习；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在训练过程中会构建一个预测模型，然后使用该模型进行预测。这就是基于模型的学习。&lt;br&gt;
+这种模型可以是线性的（例如线性回归），也可以是非线性的（例如神经网络），或者是更复杂的结构（例如决策树或随机森林）。&lt;br&gt;
+构建模型的敏感过程（例如参数选择，模型选择）通常是自动进行的，并且侧重于提高预测的准确性。&lt;/p&gt;
+&lt;p&gt;基于模型的学习的一个主要优点是它们通常可以更有效地处理大量数据。&lt;br&gt;
+然而，选择正确的模型并调整模型参数通常需要专门知识，并可能需要大量时间来得到满意的结果。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;2.3.5、离线\在线学习&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;离线学习；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;离线学习，又称为批量学习，是最常见的学习方式。&lt;br&gt;
+在离线学习中，我们先从一个固定的训练集中学习模型，然后将该模型应用于新的未知数据。&lt;/p&gt;
+&lt;p&gt;由于训练过程是从一个固定的数据集中进行的，因此可以对数据进行多次处理，也就是说可以重复训练。&lt;br&gt;
+此外，训练过程通常需要大量的计算资源，因此通常在专用的机器上进行，并可能需要花费很长时间。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=Coral face=Georgia  &gt;在线学习；&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在线学习是一种连续的学习方式，可以适应新数据的出现。&lt;br&gt;
+在在线学习中，模型以连续的方式接收数据并不断调整，因此能够实时适应新的信息。&lt;/p&gt;
+&lt;p&gt;这种学习方式非常适合那些需要不断适应新数据或数据量过大无法一次性处理的场景。&lt;br&gt;
+然而，由于在线学习需要实时进行，因此其计算资源的需求通常比离线学习要更高。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;font face=Georgia&gt;3、统计机器学习&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3统计机器学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3%e7%bb%9f%e8%ae%a1%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;3.1、定义&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;31定义&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#31%e5%ae%9a%e4%b9%89&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;从给定的数据集合出发，&lt;em&gt;&lt;strong&gt;假设数据是独立同分布&lt;/strong&gt;&lt;/em&gt; 产生的：并且假设要学习的 &lt;em&gt;&lt;strong&gt;模型属于某个函数的集合&lt;/strong&gt;&lt;/em&gt; ，称为 &lt;em&gt;&lt;strong&gt;假设空间&lt;/strong&gt;&lt;/em&gt; ；&lt;em&gt;&lt;strong&gt;应用某个评价准则&lt;/strong&gt;&lt;/em&gt;，从假设空间中 &lt;em&gt;&lt;strong&gt;选取一个最优模型&lt;/strong&gt;&lt;/em&gt;，使它对已知的训练数据及未知的测试数据在给定的评价准则下有最优的预测；&lt;em&gt;&lt;strong&gt;最优模型的选取由算法实现&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;统计学习方法包括：&lt;em&gt;&lt;strong&gt;模型的假设空间&lt;/strong&gt;&lt;/em&gt;、&lt;em&gt;&lt;strong&gt;模型选择的准则&lt;/strong&gt;&lt;/em&gt;  及 &lt;em&gt;&lt;strong&gt;模型学习的算法&lt;/strong&gt;&lt;/em&gt; 。&lt;/li&gt;
+&lt;li&gt;统称为统计学习方法的三要素，简称为 &lt;em&gt;&lt;strong&gt;模型&lt;/strong&gt;&lt;/em&gt;、&lt;em&gt;&lt;strong&gt;策略&lt;/strong&gt;&lt;/em&gt; 和  &lt;em&gt;&lt;strong&gt;算法&lt;/strong&gt;&lt;/em&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;3.2、三要素&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;32三要素&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#32%e4%b8%89%e8%a6%81%e7%b4%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font color=Coral face=Georgia &gt;1️⃣ &lt;em&gt;&lt;strong&gt;模型：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-模型&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e6%a8%a1%e5%9e%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;在监督学习过程中，模型就是所要学习的 &lt;em&gt;&lt;strong&gt;条件概率分布&lt;/strong&gt;&lt;/em&gt; 或 &lt;em&gt;&lt;strong&gt;决策函数&lt;/strong&gt;&lt;/em&gt;。模型的 &lt;em&gt;&lt;strong&gt;假设空间&lt;/strong&gt;&lt;/em&gt; 包含所有可能的 &lt;em&gt;&lt;strong&gt;条件概率分布&lt;/strong&gt;&lt;/em&gt; 或 &lt;em&gt;&lt;strong&gt;决策函数&lt;/strong&gt;&lt;/em&gt;。例如，假设决策函数是输入变量的线性函数，那么模型的假设空间就是所有这些线性函数构成的函数集合。假设空间一般有无穷多个。&lt;/p&gt;
+&lt;p&gt;&lt;font color=DarkCyan face=Georgia &gt;&lt;em&gt;&lt;strong&gt;决策函数：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt; 假设假设空间用 $\mathcal{F}$ 表示。假设空间可以定义为 &lt;em&gt;&lt;strong&gt;决策函数的集合&lt;/strong&gt;&lt;/em&gt;：&lt;/p&gt;
+&lt;p&gt;$$\mathcal{F}={\begin{array}{c}f\mid Y=f(X)\end{array}}$$&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;其中：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$X$ 和 $Y$ 是定义在输入空间 $\mathcal{X}$ 和输出空间 $\mathcal{Y}$ 上的变量。&lt;/li&gt;
+&lt;li&gt;这时 $\mathcal{F}$ 通常是由一个参数向量决定的函数族： ${\mathcal F}={f|Y=f_{\theta}(X),\theta\in\mathbf{R}^{n}}$。&lt;/li&gt;
+&lt;li&gt;参数向量 $\theta$ 取值于 $n$ 维欧式空间 $\mathbf{R}^{n}$ ，称为参数空间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;font color=DarkCyan face=Georgia &gt;&lt;em&gt;&lt;strong&gt;条件概率分布：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;假设空间 $\mathcal{F}$ 也可以定义为 &lt;em&gt;&lt;strong&gt;条件概率的集合&lt;/strong&gt;&lt;/em&gt;：&lt;/p&gt;
+&lt;p&gt;$$\mathcal{F}={P\mid P(Y|X)}$$&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;其中：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$X$ 和 $Y$ 是定义在输入空间 $\mathcal{X}$ 和输出空间 $\mathcal{Y}$ 上的随机变量。&lt;/li&gt;
+&lt;li&gt;这时 $\mathcal{F}$ 通常是由一个参数向量决定的条件概率分布族： ${\mathcal F}={P\mid P_{\theta}(Y|X),\theta\in\mathbf{R}^{n}}$。&lt;/li&gt;
+&lt;li&gt;参数向量 $\theta$ 取值于 $n$ 维欧式空间 $\mathbf{R}^{n}$ ，称为参数空间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font color=Coral face=Georgia &gt;2️⃣ &lt;em&gt;&lt;strong&gt;策略：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-策略&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e7%ad%96%e7%95%a5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;策略就是从模型的假设空间中，选择损失函数值最小的模型。&lt;/strong&gt;&lt;/em&gt;
+使用损失函数&lt;code&gt;(loss function)&lt;/code&gt; 或 代价函数&lt;code&gt;(cost function)&lt;/code&gt; 来衡量模型预测的错误程度。
+损失函数值越小，模型越好。&lt;/p&gt;
+&lt;br&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;1. 损失函数：&lt;code&gt;(loss function)&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;损失函数是 $f(X)$ 和 $Y$ 的非负实值函数，记作 $L(Y,f(X))$。&lt;/li&gt;
+&lt;li&gt;常见的损失函数如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;(1). 0-1 损失函数 &lt;code&gt;（0-1 loss function）&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;
+$$\small L(Y,f(X))=\begin{cases}1,&amp;amp;Y\neq f(X)\\ 0,&amp;amp;Y=f(X)\end{cases} \tag{1}$$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;(2). 平方损失函数 &lt;code&gt;（quadratic loss function）&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;
+$$\small L(Y,f(X))=(Y-f(X))^{2} \tag{2}$$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;(3). 绝对损失函数 &lt;code&gt;（absolute loss function）&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;
+$$\small L(Y,f(X))=|Y-f(X)| \tag{3}$$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;(4). 对数损失函数 &lt;code&gt;（logarithmic loss function）&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;
+$$L(Y,P(Y|X))=-\log P(Y|X) \tag{4}$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其中：$P(Y|X)$ 是条件概率分布，$-\log P(Y|X)$ 是对数似然函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;2. 风险函数：&lt;code&gt;(risk function)&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;由于模型的输入、输出 $（X, Y）$ 是随机变量，遵循联合分布 $P(X, Y)$，所以损失函数的期望 $\small R_{\exp}$ 如下；这是理论上模型 $f(X)$ 关于联合分布 $P(X, Y)$ 的平均损失，称为 &lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia &gt;风险函数&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt; &lt;code&gt;(risk function)&lt;/code&gt; 或 &lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia &gt;期望损失&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt; &lt;code&gt;(expected loss)&lt;/code&gt;。
+$$\small R_{\exp}(f)=E_{P}[L(Y,f(X))]=\int_{x\times y}L(y,f(x))P(x,y)\mathrm{d}x\mathrm{d}y$$&lt;/li&gt;
+&lt;li&gt;由于联合分布 $P(X,Y)$ 未知，所以无法直接计算期望风险 $\small R_{\exp}(f)$。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;学习的目标（策略）就是选择期望风险最小的模型。&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;3. 经验风险：&lt;code&gt;(empirical risk)&lt;/code&gt;：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;给定一个训练数据集 $T={(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{N},y_{N})}$，模型 $f(X)$ 在训练数据集上的平均损失称为 &lt;em&gt;&lt;strong&gt;&lt;font color=DarkCyan face=Georgia &gt;经验风险\损失&lt;/font&gt;&lt;/strong&gt;&lt;/em&gt;，记作$\small R_{emp}(f)$：
+$$R_{\mathrm{emp}}(f)=\frac{1}{N}\sum_{i=l}^{N}L(y_{i},f(x_{i}))$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据大数定律，当样本数 $N$ 足够大时，经验风险 $\small R_{emp}(f)$ 收敛于期望风险 $\small R_{\exp}(f)$。所以能用经验风险估计期望风险。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于现实中训练样本数目有限，甚至很小，所以用经验风险估计期望风险常常并不理想，要对经验风险进行一定的矫正。这就关系到监督学习的两个基本策略:&lt;font color=Coral face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;经验风险最小化&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt; 和 &lt;font color=Coral face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;结构风险最小化&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;❓&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;em&gt;&lt;strong&gt;大数定理&lt;/strong&gt;&lt;/em&gt; 是概率论中一系列定理的统称，最常见的表述为：
+随着样本数量的增加，样本均值会趋近于总体均值。更严格地说，如果 $X_1, X_2, &amp;hellip; , X_n$ 是一系列独立同分布的随机变量，且它们的期望为 $\mu$，方差为 $\sigma^2$，那么当 $n$ 趋向于无穷大时，样本均值 ${\overline{X}}={\frac{1}{n}}\sum_{i=1}^{n}X_{i}$ 依概率收敛于 $\mu$，即对于任意正数 $\epsilon$ ，有： $$\lim_{n\to\infty}P\left(\left|\overline{X}-\mu\right|&amp;lt;\epsilon\right)=1$$
+简单来说，大数定理表明在大量重复试验中，事件发生的频率会趋近于其概率。它是概率论和统计学中非常重要的基础性定理，为用样本估计总体提供了理论依据。&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=Coral face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;4. 经验风险最小化 &lt;code&gt;(empirical risk minimization，ERM)&lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在假设空间、损失函数以及训练数据集确定的情况下，经验风险函数就可以确定。 经验风险最小化 &lt;code&gt;(empirical risk minimization，ERM)&lt;/code&gt; 的策略认为，&lt;em&gt;&lt;strong&gt;经验风险最小的模型是最优的模型&lt;/strong&gt;&lt;/em&gt;。根据这一策略，按照经验风险最小化求最优模型就是 &lt;em&gt;&lt;strong&gt;求解最优化问题：&lt;/strong&gt;&lt;/em&gt;
+$$\min_{f\in\mathcal{F}}\frac{1}{N}\sum_{i=1}^NL(y_i,f(x_i))$$
+其中，$\mathcal{F}$ 是假设空间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当样本容量足够大时，经验风险最小化能保证有很好的学习效果，在现实中被广泛采用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;比如，&lt;em&gt;&lt;strong&gt;极大似然估计&lt;/strong&gt;&lt;/em&gt; &lt;code&gt;(maximumlikelihood estimation)&lt;/code&gt; 就是经验风险最小化的一个例子。当模型是条件概率分布、损失函数是对数损失函数时，经验风险最小化就等价于极大似然估计。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;当样本容量很小时，经验风险最小化学习的效果就未必很好，会产生“过拟合”&lt;code&gt;(over-ftting)&lt;/code&gt; 现象。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=Coral face=Georgia size=3&gt;&lt;em&gt;&lt;strong&gt;5. 结构风险最小化 &lt;code&gt;(structural risk minimization，SRM)&lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;结构风险最小化 &lt;code&gt;(structural risk minimization，SRM)&lt;/code&gt; 是为了防止过拟合而提出来的策略。结构风险最小化等价于正则化 &lt;code&gt;(regularization)&lt;/code&gt;。结构风险在经验风险上加上表示模型复杂度的正则化项 &lt;code&gt;(regularizer)&lt;/code&gt; 或罚项 &lt;code&gt;(penaltyterm)&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;在假设空间、损失函数以及训练数据集确定的情况下， &lt;em&gt;&lt;strong&gt;结构风险的定义&lt;/strong&gt;&lt;/em&gt; 是:
+$$R_{\mathrm{srm}}(f)=\frac1N\sum_{i=1}^NL(y_i,f(x_i))+\lambda J(f)$$
+其中 $J(f)$ 为模型的复杂度，是定义在假设空间 $\mathcal{F}$ 下上的泛函。
+模型 $f$ 越复杂，复杂度 $J(f)$ 就越大;反之，模型 $f$ 越简单，复杂度 $J(f)$ 就越小。
+也就是说，复杂度表示了对复杂模型的惩罚。$\lambda≥0$ 是系数,用以权衡经验风险和模型复杂度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;结构风险小需要经验风险与模型复杂度同时小。结构风险小的模型往往对训练数据以及未知的测试数据都有较好的预测。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;比如，贝叶斯估计中的最大后验概率估计 &lt;code&gt;(maximum posterior probability esti-mation，MAP)&lt;/code&gt; 就是结构风险最小化的一个例子。当模型是条件概率分布、损失函数是对数损失函数、模型复杂度由模型的先验概率表示时，结构风险最小化就等价于最大后验概率估计。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;结构风险最小化的策略认为结构风险最小的模型是最优的模型。所以求最优模型，就是求解最优化问题:
+$$\min_{f\in\mathcal{F}}\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i))+\lambda J(f)$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;这样，监督学习问题就变成了 &lt;em&gt;&lt;strong&gt;经验风险&lt;/strong&gt;&lt;/em&gt; 或 &lt;em&gt;&lt;strong&gt;结构风险函数&lt;/strong&gt;&lt;/em&gt; 的最优化问题。这时 &lt;em&gt;&lt;strong&gt;经验或结构风险函数&lt;/strong&gt;&lt;/em&gt; 是最优化的目标函数。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font color=Coral face=Georgia &gt;3️⃣ &lt;em&gt;&lt;strong&gt;算法：&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-算法&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e7%ae%97%e6%b3%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;算法是指学习模型的具体计算方法。统计学习基于训练数据集，根据学习策略，从假设空间中选择最优模型，最后需要考虑用什么样的计算方法求解最优模型。&lt;/p&gt;
+&lt;p&gt;这时，统计学习问题归结为最优化问题，统计学习的算法成为求解最优化问题的算法。如果最优化问题有显式的解析解，这个最优化问题就比较简单。但通常解析解不存在，这就需要用数值计算的方法求解。如何保证找到全局最优解，并使求解的过程非常高效，就成为一个重要问题。统计学习可以利用已有的最优化算法，有时也需要开发独自的最优化算法。&lt;/p&gt;
+&lt;p&gt;统计学习方法之间的不同，主要来自其模型、策略、算法的不同。确定了模型、策略、算法，统计学习的方法也就确定了。这就是将其称为统计学习方法三要素的原因。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;&lt;strong&gt;3.3. 步骤：&lt;/strong&gt;&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;33-步骤&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#33-%e6%ad%a5%e9%aa%a4&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;得到一个有限的训练数据集合；&lt;/li&gt;
+&lt;li&gt;确定包含所有可能的模型的假设空间，即学习 &lt;em&gt;&lt;strong&gt;模型的集合&lt;/strong&gt;&lt;/em&gt; （&lt;em&gt;&lt;strong&gt;条件概率分布&lt;/strong&gt;&lt;/em&gt; 或 &lt;em&gt;&lt;strong&gt;决策函数&lt;/strong&gt;&lt;/em&gt;）；&lt;/li&gt;
+&lt;li&gt;确定模型选择的准则，即学习的 &lt;em&gt;&lt;strong&gt;策略（损失函数）&lt;/strong&gt;&lt;/em&gt;；&lt;/li&gt;
+&lt;li&gt;实现求解最优模型的算法，即学习的算法；&lt;/li&gt;
+&lt;li&gt;通过学习方法选择最优模型；&lt;/li&gt;
+&lt;li&gt;利用学习的最优模型对新数据进行预测或分析；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia &gt;&lt;strong&gt;3.4. 统计机器学习 VS 统计学&lt;/strong&gt;&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;34-统计机器学习-vs-统计学&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#34-%e7%bb%9f%e8%ae%a1%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0-vs-%e7%bb%9f%e8%ae%a1%e5%ad%a6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;font color=DarkCyan face=Georgia &gt;&lt;em&gt;&lt;strong&gt;统计学&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt; 的最新进展均致力于为回归和分类提供更强大的自动预测建模技术。这些方法都属于统计机器学习。&lt;/li&gt;
+&lt;li&gt;不同于经典的统计方法，&lt;font color=DarkCyan face=Georgia &gt;&lt;em&gt;&lt;strong&gt;统计机器学习&lt;/strong&gt;&lt;/em&gt;&lt;/font&gt; 是数据驱动的，并不试图在数据上强加线性结构或其他的整体结构。&lt;br&gt;不需要过多关注数据分布、假设检验，数据泛化能力更有用。
+&lt;ul&gt;
+&lt;li&gt;最近邻算法就是一种非常简单的方法，它根据与一个记录相似的记录的分类情况，对该记录进行分类。&lt;/li&gt;
+&lt;li&gt;最为成功的技术，是结合决策树的集成学习。集成学习的基本理念是，运用多个模型而非单一模型去生成预测。&lt;/li&gt;
+&lt;li&gt;决策树对于学习预测变量和结果变量之间关系的规则，是一种灵活且自动化的技术。&lt;/li&gt;
+&lt;li&gt;事实证明，集成学习与决策树相结合，可以得到性能优良的、可用的预测建模技术。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia &gt;&lt;strong&gt;3.5. 统计机器学习 VS 机器学习&lt;/strong&gt;&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;35-统计机器学习-vs-机器学习&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#35-%e7%bb%9f%e8%ae%a1%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0-vs-%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;二者之间并不存在一条明确的分界线。&lt;/li&gt;
+&lt;li&gt;机器学习更关注 &lt;em&gt;&lt;strong&gt;如何开发可扩展到大规模数据上的高效算法，以便于优化预测模型&lt;/strong&gt;&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;统计学更关注的是 &lt;em&gt;&lt;strong&gt;概率理论和模型的底层结构&lt;/strong&gt;&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Bagging算法&lt;/strong&gt;&lt;/em&gt;  和 &lt;em&gt;&lt;strong&gt;随机森林&lt;/strong&gt;&lt;/em&gt; 方法完全是从统计学领域发展出来的。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Boosting方法&lt;/strong&gt;&lt;/em&gt; 从这两个学科中发展起来的，只是在机器学习一方得到了更多的关注。&lt;/li&gt;
+&lt;li&gt;如果不看历史的话，&lt;em&gt;&lt;strong&gt;Boosting&lt;/strong&gt;&lt;/em&gt; 的发展确保了该技术同时适用于统计学和机器学习这两个领域。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;font face=Georgia&gt;4、模型评估选择&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;4模型评估选择&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4%e6%a8%a1%e5%9e%8b%e8%af%84%e4%bc%b0%e9%80%89%e6%8b%a9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;font face=Georgia&gt;4.1、模型泛化&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;41模型泛化&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#41%e6%a8%a1%e5%9e%8b%e6%b3%9b%e5%8c%96&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;font color=DarkCyan face=Georgia &gt; &lt;em&gt;&lt;strong&gt;模型泛化&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt; 指的是模型对新的、未曾见过的数据的适应能力和预测能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;一个具有良好泛化能力的模型，不仅在训练数据上表现出色，在面对新的、来自相同分布的测试数据或实际应用中的数据时，也能给出准确和可靠的预测结果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;如果模型 &lt;em&gt;&lt;strong&gt;过度拟合&lt;/strong&gt;&lt;/em&gt; 训练数据，会记住训练数据中的噪声和特定细节，导致泛化能力差，在新数据上表现不佳；而如果模型 &lt;em&gt;&lt;strong&gt;欠拟合&lt;/strong&gt;&lt;/em&gt; 训练数据，则无法充分学习到数据中的模式和规律，同样泛化能力不佳。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;评估模型泛化能力的常见方式是在独立的测试集上对模型进行测试，并观察其性能指标&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;4.2、过拟合&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;42过拟合&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#42%e8%bf%87%e6%8b%9f%e5%90%88&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;font color=DarkCyan face=Georgia &gt; &lt;em&gt;&lt;strong&gt;过拟合$（Overfitting）$&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt; 指模型在训练数据上表现得非常好，但在新的、未见过的数据上表现很差。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;通常是因为&lt;/strong&gt;&lt;/em&gt; 模型过于复杂，学习到了训练数据中的噪声和一些特定的、不具有普遍性的特征，而不是真正的数据模式和规律。
+过拟合的 &lt;em&gt;&lt;strong&gt;表现包括&lt;/strong&gt;&lt;/em&gt; ：在训练集上准确率很高，但在测试集上准确率显著下降；模型对训练数据的微小变化非常敏感。
+导致过拟合的 &lt;em&gt;&lt;strong&gt;原因可能有&lt;/strong&gt;&lt;/em&gt; ：数据量过少、模型过于复杂（例如层数过多、参数过多）、训练时间过长等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;font color=DarkCyan face=Georgia &gt; &lt;em&gt;&lt;strong&gt;处理过拟合的方法主要有以下几种：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;增加数据量&lt;/strong&gt;&lt;/em&gt;：收集更多的相关数据，以丰富模型的学习内容，使其能够更好地捕捉数据的普遍规律，而不是局限于训练数据中的噪声和特殊情况。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;数据增强&lt;/strong&gt;&lt;/em&gt;：通过对现有数据进行随机变换，如翻转、旋转、缩放、添加噪声等，增加数据的多样性。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;简化模型&lt;/strong&gt;&lt;/em&gt;：减少模型的复杂度，例如减少网络层数、神经元数量，或者使用更简单的模型结构。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;正则化&lt;/strong&gt;&lt;/em&gt;：
+&lt;ul&gt;
+&lt;li&gt;L1 和 L2 正则化：在损失函数中添加对模型参数的惩罚项，限制模型参数的大小，防止过度拟合。&lt;/li&gt;
+&lt;li&gt;Dropout：在训练过程中随机地将神经元的输出设置为 0，强迫模型学习更鲁棒的特征表示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;早停法&lt;/strong&gt;&lt;/em&gt;\Early Stopping：在训练过程中，持续监测模型在验证集上的性能，当性能不再提升时提前停止训练。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;集成学习&lt;/strong&gt;&lt;/em&gt;：例如使用随机森林等集成学习方法，通过组合多个模型来降低过拟合的风险。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;特征选择&lt;/strong&gt;&lt;/em&gt;：去除一些不重要或冗余的特征，降低模型学习的难度。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;交叉验证&lt;/strong&gt;&lt;/em&gt;：使用多种交叉验证方法，如 K 折交叉验证，更准确地评估模型性能，并选择合适的超参数。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;4.3、欠拟合&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;43欠拟合&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#43%e6%ac%a0%e6%8b%9f%e5%90%88&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;font color=DarkCyan face=Georgia &gt; &lt;em&gt;&lt;strong&gt;欠拟合$（Underfitting）$&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt; 指模型在训练数据和测试数据上的表现都不好。这意味着模型没有充分学习到数据中的模式和规律，过于简单或者训练不充分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;欠拟合的 &lt;em&gt;&lt;strong&gt;表现是&lt;/strong&gt;&lt;/em&gt; 模型在训练集和测试集上的误差都较大，且两者的差距较小。
+导致欠拟合的 &lt;em&gt;&lt;strong&gt;原因可能是&lt;/strong&gt;&lt;/em&gt; ：模型的能力不足、特征选择不当、训练次数太少等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;font color=DarkCyan face=Georgia &gt; &lt;em&gt;&lt;strong&gt;处理欠拟合的方法通常包括以下几种：&lt;/strong&gt;&lt;/em&gt; &lt;/font&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;增加模型复杂度&lt;/strong&gt;&lt;/em&gt;：
+&lt;ul&gt;
+&lt;li&gt;对于神经网络，可以增加层数或神经元数量。&lt;/li&gt;
+&lt;li&gt;对于传统机器学习算法，例如决策树，可以增加树的深度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;增加特征数量&lt;/strong&gt;&lt;/em&gt;：尝试引入更多相关的特征，以提供更多信息给模型进行学习。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;选择更强大的模型&lt;/strong&gt;&lt;/em&gt;：例如从线性模型切换到非线性模型，如使用支持向量机、决策树或神经网络等。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;调整超参数&lt;/strong&gt;&lt;/em&gt;：通过试验不同的超参数组合，找到最适合当前数据和任务的设置。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;延长训练时间&lt;/strong&gt;&lt;/em&gt;：确保模型有足够的时间来学习数据中的模式。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;数据预处理&lt;/strong&gt;&lt;/em&gt;：对数据进行更有效的清洗、归一化、标准化等处理，以改善数据质量和模型的学习效果。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;组合多个模型&lt;/strong&gt;&lt;/em&gt;：通过集成多个弱学习器来构建一个更强的学习器。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;尝试新的算法&lt;/strong&gt;&lt;/em&gt;：如果当前使用的算法效果不佳，可以尝试其他适合该任务和数据特点的算法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;font face=Georgia&gt;4.4、评估指标&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;44评估指标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#44%e8%af%84%e4%bc%b0%e6%8c%87%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;font face=Georgia&gt;（1）分类评估指标&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1分类评估指标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1%e5%88%86%e7%b1%bb%e8%af%84%e4%bc%b0%e6%8c%87%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;1、混淆矩阵：&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;div style=&#34;text-align:center&#34;&gt;
+  &lt;table border=&#34;2&#34;&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&#34;2&#34; colspan=&#34;2&#34;&gt;&lt;/td&gt;
+      &lt;td colspan=&#34;2&#34;&gt;&lt;b&gt;&lt;i&gt;真实值&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td rowspan=&#34;2&#34; &gt;&lt;b&gt;&lt;i&gt;总数&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&#34;1&#34; &gt;&lt;b&gt;&lt;i&gt;$\pmb{\it{p}} \,(positive)$&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td rowspan=&#34;1&#34; &gt;&lt;b&gt;&lt;i&gt;$\pmb{\it{n}}\,(negative)$&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&#34;2&#34; &gt;&lt;b&gt;&lt;i&gt;预测值&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;$\pmb{\it{p&#39;}}\,(positive)$&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;TP&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;FP&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;P&#39;&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;$\pmb{\it{n&#39;}}\,(negative)$&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;FN&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;TN&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;N&#39;&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&#34;2&#34; &gt;&lt;b&gt;&lt;i&gt;总数&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;P&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;i&gt;N&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;阳性 $(P, positive)$&lt;/li&gt;
+&lt;li&gt;阴性 $(N, Negative)$&lt;/li&gt;
+&lt;li&gt;真阳性 $(TP, true positive)$ 正确的肯定。又称：命中 $(hit)$&lt;/li&gt;
+&lt;li&gt;真阴性 $(TN, true negative)$ 正确的否定。又称：正确拒绝 $(correct rejection)$&lt;/li&gt;
+&lt;li&gt;伪阳性 $(FP, false positive)$ 错误的肯定，又称：假警报 $(false alarm)$，第一型错误&lt;/li&gt;
+&lt;li&gt;伪阴性 $(FN, false negative)$ 错误的否定，又称：未命中 $(miss)$，第二型错误&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;提供了关于分类模型在各个类别上的详细分类情况，包括正确分类和错误分类的数量。&lt;/li&gt;
+&lt;li&gt;直观易懂，能够清晰地展示模型的分类效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;对于多分类问题，混淆矩阵可能会变得非常复杂和庞大，不太容易直观地理解。&lt;/li&gt;
+&lt;li&gt;单独的混淆矩阵本身并不能直接给出一个单一的综合评估指标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;适用情况：&lt;/strong&gt;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;当需要详细了解模型在每个类别上的分类表现时，混淆矩阵非常有用。&lt;/li&gt;
+&lt;li&gt;在比较不同分类模型或调整模型参数时，可以通过分析混淆矩阵来洞察模型的行为和改进方向。对于不平衡数据集（某些类别样本数量远多于或少于其他类别），混淆矩阵可以帮助发现模型对少数类别的分类效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;2、准确率$（Accuracy）$：&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;准确率&lt;/strong&gt;&lt;/em&gt; $（Accuracy）$：正确预测的样本数占总样本数的比例。公式为：
+$$Accuracy = \frac{(TP + TN)}{(TP + TN + FP + FN)}$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直观易懂：是一个非常直观和易于理解的指标，能够简单地反映模型整体分类正确的比例。&lt;/li&gt;
+&lt;li&gt;综合性：综合考虑了所有类别的分类情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;类别不平衡问题：在数据存在类别不平衡（某些类别样本数量远多于或远少于其他类别）时，准确率可能会产生误导。例如，在一个二分类问题中，99%的样本属于类别 A，1%属于类别 B，如果模型总是预测为类别 A，准确率也能达到 99%，但实际上对类别 B 的分类效果很差。&lt;/li&gt;
+&lt;li&gt;不能区分不同类别的错误情况：无法提供关于每个类别分类错误的具体信息，可能掩盖了某些重要类别上的糟糕表现。&lt;/li&gt;
+&lt;li&gt;缺乏细节：不能反映模型在不同类别上的性能差异，对于需要深入了解模型在各个类别上表现的情况，准确率提供的信息有限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;3、精确率$（Precision）$：&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;精确率&lt;/strong&gt;&lt;/em&gt;$（Precision）$： 在被预测为正例的样本中，真正的正例所占的比例。公式为：
+$$Precision = \frac{TP}{TP + FP}$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;聚焦正例的准确性：精确率重点关注被模型预测为正例的样本中，真正为正例的比例。这在一些对正例预测的准确性要求较高的场景中非常有用，例如在疾病诊断中，确保被诊断为患病的人确实患病是至关重要的。&lt;/li&gt;
+&lt;li&gt;适用于类别不平衡数据：在正例样本相对较少的不平衡数据集中，精确率能够更有针对性地评估模型对正例的预测能力。
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;忽略了负例的情况：精确率只考虑了被预测为正例的样本，而完全忽略了被预测为负例的样本，可能会导致对模型整体性能的评估不全面。&lt;/li&gt;
+&lt;li&gt;孤立的评估指标：单独依靠精确率不能完全反映模型的综合性能，往往需要结合其他指标如召回率、F1 值等来进行更全面的评估。&lt;/li&gt;
+&lt;li&gt;受阈值影响：精确率的值会受到分类阈值的选择影响，不同的阈值可能会导致精确率的变化，这使得在比较不同模型或方法时需要谨慎处理阈值的设置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;4、召回率$（Recall）$、命中率 $(hit rate)$、敏感度 $(sensitivity)$：&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;召回率$（Recall）$&lt;/strong&gt;&lt;/em&gt;： 实际的正例样本中，被正确预测为正例的比例。公式为：
+$$Recall = \frac{TP}{TP + FN}$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;强调对正例的全面覆盖：召回率关注的是在所有实际为正例的样本中，被正确预测为正例的比例。这对于一些重视不能遗漏正例的任务非常重要，比如疾病检测，确保尽可能多地发现真正的患者。&lt;/li&gt;
+&lt;li&gt;适用于不平衡数据：在数据集中正例相对较少的情况下，召回率能够反映出模型在捕捉少数类（正例）方面的能力。
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能忽视误报：高召回率可能是以增加误报（将负例错误地预测为正例）为代价的，而召回率本身并不能直接反映这一情况。&lt;/li&gt;
+&lt;li&gt;单独使用不够全面：仅依靠召回率来评估模型的性能可能不够全面，通常需要结合准确率、F1 值等其他指标进行综合评估。&lt;/li&gt;
+&lt;li&gt;对负例的判断不敏感：召回率主要关注正例的预测情况，对于负例的准确预测情况反映较少。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group&#34; &gt;
+  &lt;summary class=&#34;hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[&#39;&#39;] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90&#34;&gt;
+    &lt;strong class=&#34;hx-text-lg&#34;&gt;&lt;font color=DarkCyan face=Georgia size=3&gt;&lt;em&gt;5、F1 分数$（F1-score）$：&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;hx-p-2 hx-overflow-hidden&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;F1 分数$（F1-score）$&lt;/strong&gt;&lt;/em&gt;： 是精确率和召回率的调和平均数，综合考虑了两者的平衡。一般式为：
+$$F_\beta=(1+\beta^2)\cdot\frac{\text{precision}\cdot\text{recall}}{(\beta^2\cdot\text{precision})+\text{recall}}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$\beta$ 是使用者自行定义的参数，由一般式可见 $F-score$ 能同时考虑 $precision$ 和 $recall$ 这两种数值。分子为 $precision$ 和 $recall$ 相乘，根据这个式子，只要 $precision$ 或 $recall$ 趋近于 0，$F-score$ 就会趋近于0，代表着这个算法的精确度非常低。一个好的算法，最好能够平衡 $recall$ 和 $precision$ ，且尽量让两种指标都很高。所以有一套判断方式可以同时考虑 $recall$ 和 $precision$ 。当 $\beta\to0$ 时，$F-score$ 退化为 $precision$ ；当 $\beta\rightarrow\infty$ 时，$F-score$ 退化为 $recall$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;$Precision$ 和 $Recall$ 权重一样时&lt;/strong&gt;&lt;/em&gt;：一般上来说，提到 $F-score$ 且没有特别的定义时，是指 $\beta=1$ 时的 $F-score$，亦有写作 $F1-score$。代表使用者同样的注重 $precision$ 和 $recall$ 的这两个指标。其分数可以说是 $precision$ 和 $recall$ 的调和平均，式子如下：&lt;/p&gt;
+&lt;p&gt;$$F_1=\frac{2}{\text{recall}^{-1}+\text{precision}^{-1}}=2\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}=\frac{2TP}{2TP+FP+FN}$$&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$F-score$ 最理想的数值是趋近于1，做法是让 $precision$ 和 $recall$ 都有很高的值。若两者皆为1，使得 $2*\frac{1}{2}=1$，则 $F-score = 1$ （100%），代表该算法有着最佳的精确度。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;综合考虑了准确率和召回率：F1 分数是准确率和召回率的调和平均数，能够平衡模型在这两个方面的表现，对于需要同时关注查准和查全的任务非常有用。&lt;/li&gt;
+&lt;li&gt;适用于不平衡数据：在正例和负例数量差异较大的情况下，F1 分数能够更全面地评估模型性能，避免只侧重准确率或召回率中的某一个。&lt;/li&gt;
+&lt;li&gt;单一数值便于比较：F1 分数是一个单一的数值，便于在不同模型或不同参数设置之间进行比较和选择。
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;对极端值敏感：当准确率或召回率中有一个非常接近 0 时，F1 分数会受到较大影响。&lt;/li&gt;
+&lt;li&gt;可能掩盖某些问题：虽然综合了准确率和召回率，但不能直接反映出模型在这两个指标上的具体差异和潜在的问题。&lt;/li&gt;
+&lt;li&gt;不完全反映实际需求：在某些特定场景中，可能更关注准确率或者召回率中的某一个，而 F1 分数不能完全突出这种特定的需求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;font face=Georgia&gt;（2）多标签分类评估&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2多标签分类评估&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2%e5%a4%9a%e6%a0%87%e7%ad%be%e5%88%86%e7%b1%bb%e8%af%84%e4%bc%b0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;4.5、评估方法&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;45评估方法&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#45%e8%af%84%e4%bc%b0%e6%96%b9%e6%b3%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;（1）留出法&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1留出法&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1%e7%95%99%e5%87%ba%e6%b3%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;留出法&lt;/strong&gt;&lt;/em&gt; $（Hold-out Method）$ 是一种常见的机器学习模型评估方法。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;基本思想：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;将数据集划分为两个互斥的集合，分别是 &lt;em&gt;&lt;strong&gt;训练集&lt;/strong&gt;&lt;/em&gt; 和 &lt;em&gt;&lt;strong&gt;测试集&lt;/strong&gt;&lt;/em&gt;。通常，大部分数据被分配到训练集，用于模型的学习和训练；小部分数据被分配到测试集，用于评估训练好的模型的性能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+&lt;li&gt;划分要具有随机性，以避免数据的偏差。&lt;/li&gt;
+&lt;li&gt;训练集和测试集的样本分布应尽量与原始数据集的分布保持一致。注意通过关键分类指标进行分层拆分。&lt;/li&gt;
+&lt;li&gt;通常，将大约 70%-80% 的数据作为训练集，20%-30% 的数据作为测试集，但具体比例可以根据数据规模和实际需求进行调整。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;如果需要查看模型在新数据上的表现情况，或是模型需要调整参数，也可以在 &lt;em&gt;&lt;strong&gt;验证集&lt;/strong&gt;&lt;/em&gt; 上测试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+&lt;li&gt;将数据集划分为三个互斥的集合，分别是 &lt;em&gt;&lt;strong&gt;训练集&lt;/strong&gt;&lt;/em&gt;，&lt;em&gt;&lt;strong&gt;测试集&lt;/strong&gt;&lt;/em&gt; 和 &lt;em&gt;&lt;strong&gt;验证集&lt;/strong&gt;&lt;/em&gt;， 比例可以为 60%，20%，20%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;简单、直接；&lt;/li&gt;
+&lt;li&gt;计算开销小；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;评估结果可能不稳定；&lt;/li&gt;
+&lt;li&gt;受划分数据随机性影响较大&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;（2）交叉验证&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2交叉验证&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;交叉验证&lt;/strong&gt;&lt;/em&gt;（Cross Validation）是一种用于评估机器学习模型性能和选择合适模型超参数的技术。如，常见的 K 折交叉验证。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;K 折交叉验证原理：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;将数据集随机平均分成 K 份。每次选择其中 1 份作为测试集，其余 K - 1 份作为训练集，重复 K 次，这样每个子集都有机会作为测试集，最终得到 K 个模型的评估结果。综合这 K 个结果来估计模型的泛化能力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;例如，对于 5 折交叉验证，数据被分为 5 份。第一次，第 1 份作为测试集，其余 4 份作为训练集；第二次，第 2 份作为测试集，其余 4 份作为训练集，以此类推，共进行 5 次训练和测试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;更充分地利用了数据，减少了由于数据划分随机性导致的偏差。&lt;/li&gt;
+&lt;li&gt;可以用于评估模型在不同数据子集上的稳定性和泛化能力。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算成本相对较高，特别是当 K 值较大或数据集较大时。&lt;/li&gt;
+&lt;li&gt;对于时间开销较大的模型，可能会耗费较多的时间。&lt;/li&gt;
+&lt;li&gt;交叉验证在模型选择、超参数调优、评估模型稳定性等方面都有广泛的应用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;（3）留一法&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3留一法&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3%e7%95%99%e4%b8%80%e6%b3%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;留一法&lt;/strong&gt;&lt;/em&gt;（Leave-One-Out，LOO）是一种特殊的交叉验证方法。在留一法中，每次从样本集中取出一个样本作为测试集，其余的样本作为训练集，重复这个过程直到所有的样本都被用作一次测试样本。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;假设样本集有 $n$ 个样本，那么就会进行 $n$ 次训练和测试。在每次迭代中，将其中一个样本作为测试样本，其余 $n-1$ 个样本作为训练样本进行模型训练，然后用训练好的模型对那个被取出的样本进行预测，并记录预测结果。最后，综合这 $n$ 次预测结果来评估模型的性能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;充分利用数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;由于每次只留下一个样本进行测试，几乎使用了所有的样本进行训练，因此对于小样本数据集来说，可以最大限度地利用数据信息，使得评估结果更加准确。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;无偏估计&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;留一法的评估结果通常是无偏的，因为每个样本都被单独用作测试集，避免了随机划分训练集和测试集可能带来的偏差。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算成本高&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;由于需要进行  次训练和测试，当样本数量较大时，计算量会非常大，导致训练和评估过程非常耗时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;不一定反映真实性能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;在某些情况下，留一法可能会过于乐观地估计模型的性能，因为每次训练集和测试集之间的差异非常小，模型可能会过度拟合到特定的测试样本。而且，由于每次只改变一个样本进行测试，可能无法很好地反映模型在不同数据分布下的泛化能力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;font face=Georgia&gt;参考网址：&lt;/font&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;参考网址&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%8f%82%e8%80%83%e7%bd%91%e5%9d%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-cn/training/modules/get-started-ai-fundamentals/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Training | Microsoft Learn — 基本 AI 概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://weread.qq.com/web/reader/33f32c90813ab71c6g018fffkd3d322001ad3d9446802347?&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《Python深度学习》- 第2版 - 弗朗索瓦·肖莱&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font color=Coral face=Georgia  &gt;《机器学习实战：基于 Scikit-Learn、Keras 和 TensorFlow》 第2版&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font color=Coral face=Georgia  &gt;《统计学习方法》 第2版 - 李航&lt;/font&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>1.2. 工具</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/tool/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;div class=&#34;hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 3;&#34;&gt;
+  &lt;a
+    class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;http://localhost:1313/guide/python_pandas&#34;
+      &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;1em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 128 128&#34;&gt;&lt;path fill=&#34;#130754&#34; d=&#34;M46.236 7.567h13.99v29.047h-13.99Zm0 59.668h13.99V96.28h-13.99Z&#34;/&gt;&lt;path fill=&#34;#ffca00&#34; d=&#34;M46.236 45.092h13.99v13.705h-13.99Z&#34;/&gt;&lt;path fill=&#34;#130754&#34; d=&#34;M23.763 31.446h13.989V128h-13.99ZM68.245 91.2h13.99v29.046h-13.99Zm0-59.72h13.99v29.047h-13.99Z&#34;/&gt;&lt;path fill=&#34;#e70488&#34; d=&#34;M68.245 69.011h13.99v13.705h-13.99Z&#34;/&gt;&lt;path fill=&#34;#130754&#34; d=&#34;M90.248 0h13.99v96.554h-13.99Z&#34;/&gt;&lt;/svg&gt;Pandas&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;一个快速、强大、灵活且易于使用的开源数据分析和操作工具。&lt;/div&gt;&lt;div class=&#34;hextra-badge hextra-card-tag&#34;&gt;
+    &lt;div class=&#34;hx-inline-flex hx-gap-1 hx-items-center hx-rounded-full hx-px-2.5 hx-leading-6 hx-text-[.65rem] hx-border hx-text-gray-600 hx-bg-gray-100 dark:hx-bg-neutral-800 dark:hx-text-neutral-200 hx-border-gray-200 dark:hx-border-neutral-700&#34;&gt;数据分析&lt;/div&gt;
+  &lt;/div&gt;&lt;/a&gt;
+  &lt;a
+    class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;http://localhost:1313/guide/python_sklearn&#34;
+      &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;2em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 128 128&#34;&gt;&lt;path fill=&#34;#f89939&#34; d=&#34;M98.18 88.13c15.63-15.62 18.23-38.36 5.8-50.78s-35.17-9.82-50.8 5.8s-11.11 45.48-5.8 50.78c4.29 4.29 35.17 9.82 50.8-5.8&#34;/&gt;&lt;path fill=&#34;#3499cd&#34; d=&#34;M34.04 65.56c-9.07-9.06-22.27-10.57-29.48-3.37c-7.21 7.21-5.7 20.4 3.37 29.46c9.07 9.07 26.4 6.44 29.48 3.37c2.49-2.49 5.71-20.4-3.37-29.46&#34;/&gt;&lt;path fill=&#34;#010101&#34; d=&#34;M123.82 85.68c-.58 0-.87-.35-.87-1.06c0-.53.35-1.69 1.04-3.46c1.01-2.59 1.52-4.45 1.52-5.58c0-.68-.2-1.25-.6-1.7s-.9-.68-1.5-.68c-.88 0-1.89.41-3.03 1.24s-2.67 2.32-4.6 4.48c.28-1.4.88-3.32 1.78-5.76l-4.31.83q-1.47 3.18-2.13 5.73c-.22.83-.38 1.69-.49 2.56c-1.35 1.31-2.23 2.1-2.61 2.39c-.39.29-.8.43-1.22.43c-.39 0-.7-.15-.93-.44s-.34-.69-.34-1.18q0-.795.3-1.83c.3-1.035.64-1.99 1.33-3.9l1.64-4.52l-1.61.07c-1.46 2.78-3.17 4.28-5.13 4.49c.53-1.38.8-2.44.8-3.18q0-1.41-1.38-1.41c-1.09 0-1.94.51-2.55 1.54Q98 76.285 98 77.65c0 1.365.51 1.55 1.52 2c-.66.97-1.4 1.88-2.2 2.74c-.95.94-1.69 1.66-2.23 2.13c-.55.49-1.06.73-1.52.73c-.72 0-1.08-.51-1.08-1.52s.4-2.75 1.2-5.35l1.56-5.18h-.99l-3.61 2c-.59-1.35-1.62-2.03-3.09-2.03c-1.17 0-2.51.5-4.03 1.49s-2.77 2.28-3.74 3.89c-.75 1.24-1.21 2.54-1.38 3.88c-1.36 1.36-2.38 2.24-3.06 2.65c-.71.42-1.45.63-2.23.63q-2.985 0-3.69-3.45c5.19-1.52 7.78-3.5 7.78-5.94c0-.92-.33-1.66-.99-2.23s-1.54-.85-2.63-.85q-3.165 0-5.76 3.03c-1.57 1.83-2.42 3.86-2.57 6.09c-1.43 1.41-2.51 2.34-3.21 2.79c-.72.46-1.4.69-2.03.69s-1.13-.3-1.5-.9c-.38-.6-.57-1.41-.57-2.44c0-.46.05-1.3.14-2.53c2.36-2.56 4.09-4.96 5.2-7.21s1.66-4.58 1.66-6.98c0-.85-.11-1.52-.33-2.02q-.33-.75-.84-.75c-.07 0-.18.02-.32.07l-4.49 1.66c-1.53 2.92-2.84 6.11-3.91 9.58c-1.07 3.46-1.61 6.43-1.61 8.9c0 1.65.38 2.96 1.16 3.94c.77.98 1.79 1.47 3.05 1.47c1.1 0 2.25-.35 3.46-1.05s2.61-1.79 4.22-3.26s0-.02 0-.02c.19 1.11.65 2.04 1.37 2.8c.99 1.02 2.28 1.54 3.88 1.54c1.44 0 2.75-.35 3.94-1.05c1.15-.67 2.44-1.72 3.88-3.11c.12 1.04.46 1.94 1.03 2.71c.73.97 1.61 1.46 2.64 1.46s2.09-.4 3.09-1.2s2.08-2.05 3.26-3.73c-.11 3.29.77 4.93 2.63 4.93c.74 0 1.52-.27 2.33-.81s2.16-1.71 4.05-3.5c1.64-1.62 2.84-3.14 3.61-4.56c1.04-.18 1.99-.49 2.86-.94c-1.78 2.79-2.67 5.02-2.67 6.68c0 .9.25 1.65.74 2.25s1.1.91 1.82.91c1.57 0 3.8-1.41 6.68-4.2c0 .22-.02.43-.02.65c0 .78.07 1.96.19 3.55l3.91-.92c0-1.06.02-1.9.05-2.53c.06-.84.18-1.76.35-2.76q.165-.885.81-1.68l.99-1.15c.36-.42.71-.8 1.02-1.13q.555-.585.99-.99c.33-.29.62-.53.87-.69c.27-.16.49-.25.65-.25c.29 0 .44.19.44.57s-.28 1.26-.83 2.65c-1.04 2.59-1.56 4.52-1.56 5.78c0 .93.24 1.67.73 2.23c.48.55 1.12.83 1.91.83c1.94 0 4.28-1.44 7-4.31V82.3c-1.93 2.27-3.32 3.41-4.18 3.41Zm-65.26-8.29c.8-3.91 1.62-6.94 2.45-9.11s1.47-3.26 1.9-3.26c.2 0 .37.13.5.4c.13.26.19.62.19 1.05c0 1.49-.46 3.26-1.4 5.33c-.93 2.06-2.15 3.93-3.64 5.59m11.79-.98c.71-1.19 1.45-1.78 2.23-1.78c.82 0 1.24.57 1.24 1.7c0 2.29-1.51 3.85-4.53 4.7c0-1.9.35-3.44 1.06-4.62m17.48 5.85c-1.04 2.01-2.16 3.01-3.33 3.01c-.48 0-.88-.2-1.19-.59s-.47-.91-.47-1.55c0-1.68.53-3.53 1.58-5.53s2.17-3 3.35-3c.49 0 .89.18 1.18.56c.29.37.44.89.44 1.55c0 1.7-.52 3.55-1.56 5.56Z&#34;/&gt;&lt;path fill=&#34;#fff&#34; d=&#34;M75.46 64.88c.15.21.22.48.22.8s-.09.61-.27.88s-.44.49-.79.64c-.34.15-.73.23-1.16.23c-.72 0-1.26-.15-1.64-.45s-.62-.74-.72-1.33l.93-.15c.05.37.2.66.43.85c.24.2.57.3 1 .3s.75-.09.96-.26s.31-.38.31-.62c0-.21-.09-.38-.28-.5c-.13-.08-.45-.19-.96-.32c-.69-.17-1.16-.32-1.43-.45s-.47-.3-.6-.53s-.21-.47-.21-.74c0-.25.06-.47.17-.68s.27-.38.46-.52c.15-.11.34-.2.59-.27s.52-.11.81-.11c.43 0 .81.06 1.14.19c.33.12.57.29.73.51c.16.21.26.5.32.86l-.92.12c-.04-.28-.16-.51-.36-.67s-.48-.24-.85-.24c-.43 0-.74.07-.92.21s-.28.31-.28.5c0 .12.04.23.11.33c.08.1.2.18.36.25c.09.03.37.11.83.24c.66.18 1.12.32 1.39.43c.26.11.47.28.62.49Zm4.47 1.44c-.25.23-.55.34-.92.34c-.46 0-.83-.17-1.11-.5s-.43-.88-.43-1.62s.15-1.27.44-1.6s.68-.51 1.15-.51c.31 0 .58.09.8.28s.37.47.46.84l.91-.14c-.11-.56-.35-.99-.73-1.29q-.57-.45-1.47-.45c-.48 0-.91.11-1.32.34c-.4.22-.71.56-.9 1.01c-.2.45-.3.97-.3 1.57c0 .92.23 1.63.69 2.12s1.07.74 1.82.74q.9 0 1.53-.54c.41-.36.67-.86.77-1.49l-.92-.12c-.07.47-.22.81-.47 1.04Zm2.19.98h.94v-5.52h-.94zm0-6.55h.94v-1.08h-.94zm6.73 1.02h-1.21l-2.22 2.25v-4.35h-.94v7.62h.94V65.1l.66-.63l1.83 2.82h1.16l-2.33-3.47zm.96-1.02h.94v-1.08h-.94zm0 6.55h.94v-5.52h-.94zm4.41-.84c-.17.02-.31.04-.41.04c-.14 0-.25-.02-.32-.07s-.13-.11-.16-.18c-.03-.08-.05-.25-.05-.51v-3.23h.94v-.73h-.94v-1.93l-.93.56v1.37h-.69v.73h.69v3.18c0 .56.04.93.11 1.1q.12.27.39.42c.19.11.45.16.79.16c.21 0 .44-.03.71-.08l-.14-.83Z&#34;/&gt;&lt;/svg&gt;Sklearn&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;Python 中的机器学习；简单有效的预测数据分析工具。&lt;/div&gt;&lt;div class=&#34;hextra-badge hextra-card-tag&#34;&gt;
+    &lt;div class=&#34;hx-inline-flex hx-gap-1 hx-items-center hx-rounded-full hx-px-2.5 hx-leading-6 hx-text-[.65rem] hx-border hx-text-gray-600 hx-bg-gray-100 dark:hx-bg-neutral-800 dark:hx-text-neutral-200 hx-border-gray-200 dark:hx-border-neutral-700&#34;&gt;机器学习&lt;/div&gt;
+  &lt;/div&gt;&lt;/a&gt;
+  &lt;a
+    class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;href=&#34;http://localhost:1313/guide/python_matplotlib&#34;
+      &gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;2em&#34; height=&#34;1.5em&#34; viewBox=&#34;0 0 256 256&#34;&gt;&lt;path fill=&#34;#fff&#34; d=&#34;M128 254.617c69.928 0 126.617-56.689 126.617-126.617S197.928 1.383 128 1.383A126.617 126.617 0 0 0 1.383 128c0 69.928 56.689 126.617 126.617 126.617&#34;/&gt;&lt;path fill=&#34;#11557c&#34; d=&#34;M128 0A128 128 0 0 0 0 128c0 70.692 57.308 128 128 128s128-57.308 128-128S198.692 0 128 0m0 2.767c69.164 0 125.233 56.069 125.233 125.233S197.164 253.233 128 253.233S2.767 197.164 2.767 128A125.233 125.233 0 0 1 128 2.767&#34;/&gt;&lt;path fill=&#34;#858585&#34; d=&#34;M128.011 253.715c.168 0 .308.12.34.278l.008.07v.552a.347.347 0 0 1-.688.07l-.007-.07v-.552c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-89.383.128a.347.347 0 0 1 .541.429l-.05.063l-.385.385a.347.347 0 0 1-.541-.428l.05-.063zm178.275 0a.35.35 0 0 1 .429-.05l.062.05l.386.386a.347.347 0 0 1-.428.541l-.063-.05l-.386-.385a.347.347 0 0 1 0-.492m-176.738-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm175.201 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-87.355-.764c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-86.31-.772a.347.347 0 0 1 .542.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm172.128 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-85.818-1.402c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-84.772-.135a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm169.053 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-167.516-1.537a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm165.98 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-82.745-.501c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-81.699-1.036a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm162.907 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m-81.208-1.138c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-80.162-.399a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm159.833 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-79.67-1.774c.167 0 .307.119.34.277l.007.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m-78.626.237a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm156.76 0a.35.35 0 0 1 .428-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492M50.922 204.6a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm153.685 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-76.597-.874c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-75.551-.662a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm150.611 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-75.06-1.511c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07V201.9c0-.191.155-.347.347-.347m73.524-.026a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-147.538 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm1.537-1.537a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm144.464 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-71.987-.61c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m70.45-.927a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m-141.39 0a.347.347 0 0 1 .54.429l-.05.062l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm70.94-1.247c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-69.404-.29a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm138.317 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-68.913-1.883c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m67.376.346a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-135.243 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm133.706-1.536a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-132.17 0a.347.347 0 0 1 .542.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm66.331-.984c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m64.302-.553a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-129.095 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm64.793-1.62c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m62.766.083a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-126.022 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm124.485-1.537a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m-122.948 0a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm61.72-.72a.35.35 0 0 1 .34.278l.007.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m59.69-.817a.35.35 0 0 1 .43-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m-119.874 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm60.183-1.356c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m-58.646-.18a.347.347 0 0 1 .541.428l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm116.801 0a.35.35 0 0 1 .429-.05l.062.05l.737.736a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-115.263-1.54a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm113.727 0a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-56.618-.456c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-55.572-1.08a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm110.653 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-55.08-1.093a.35.35 0 0 1 .34.277l.007.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-54.036-.444a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm107.58 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-53.545-1.73c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-52.498.193a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm104.506 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-1.537-1.537a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m-101.433 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm50.962-.829c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-49.425-.708a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.542-.428l.05-.063zm98.359 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m-48.934-1.465c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-47.888-.072a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm95.285 0a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-93.748-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm92.211 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-45.86-.565c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m44.323-.971a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-89.137 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm44.814-1.202c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m42.786-.335a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-86.063 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm43.277-1.839c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V169.3c0-.192.155-.348.347-.348m41.25.302a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-82.99 0a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm81.453-1.537a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m-79.917 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm40.204-.938c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-38.667-.599a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm76.843 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-38.176-1.574c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-37.13.037a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm73.77 0a.35.35 0 0 1 .428-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-72.233-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm70.695 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-35.102-.674c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-34.056-.862a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm67.621 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-33.565-1.311c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-32.52-.226a.347.347 0 0 1 .542.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm64.548 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.738-.737a.347.347 0 0 1 0-.491m-63.01-1.537a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm61.474 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-30.492-.41c.168 0 .308.118.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-29.446-1.127a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm58.4 0a.35.35 0 0 1 .43-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m-28.954-1.047c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m-27.909-.49a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm55.327 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-27.418-1.684c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m25.881.147a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-52.253 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm50.716-1.536a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-49.179 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm24.835-.784c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m22.807-.753a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-46.105 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm23.298-1.42c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m21.27-.117a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-43.031 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm41.495-1.537a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m-39.958 0a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm20.224-.52c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-18.688-1.017a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm36.885 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m-18.197-1.156c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-17.15-.38a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm33.81 0a.35.35 0 0 1 .428-.05l.063.05l.737.736a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-16.66-1.794c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-15.614.256a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm30.737 0a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-29.2-1.536a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm27.663 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-13.586-.893c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-12.54-.644a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm24.59 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-12.05-1.53c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-11.003-.007a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm21.516 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-19.98-1.537a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm18.443 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m-8.976-.63c.168 0 .308.12.34.278l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m-7.93-.907a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.542-.428l.05-.063zm15.369 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m-7.439-1.266c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-6.393-.27a.347.347 0 0 1 .541.428l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm12.295 0a.35.35 0 0 1 .429-.05l.062.05l.737.736a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m-5.902-1.903c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-4.856.365a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm9.221 0a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m-7.684-1.536a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm6.147 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m-2.828-1.002c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m1.291-.535a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m-3.073 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm1.782-2.681c.168 0 .308.119.34.277l.008.07v.203l.144-.143a.35.35 0 0 1 .428-.05l.063.05a.35.35 0 0 1 .05.428l-.05.063l-.145.143l.205.001c.167 0 .308.12.34.278l.007.07c0 .167-.12.308-.277.34l-.07.007h-.205l.145.144a.35.35 0 0 1 .05.428l-.05.063a.35.35 0 0 1-.429.05l-.062-.05l-.145-.144v.204a.346.346 0 0 1-.277.34l-.07.007a.35.35 0 0 1-.34-.277l-.007-.07l-.001-.204l-.143.144a.35.35 0 0 1-.429.05l-.062-.05a.35.35 0 0 1-.05-.428l.05-.063l.143-.145l-.203.001a.35.35 0 0 1-.34-.277l-.007-.07c0-.168.119-.308.277-.34l.07-.008h.203l-.143-.144a.35.35 0 0 1-.05-.428l.05-.063a.35.35 0 0 1 .428-.05l.063.05l.143.143v-.203c0-.168.12-.308.278-.34zM4.125 127.656a.347.347 0 0 1 .07.688l-.07.007H3.083a.347.347 0 0 1-.07-.688l.07-.007zm187.958 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-107.54 0a.347.347 0 0 1 .07.688l-.07.007H83.5a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007H76.98a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007H70.46a.347.347 0 0 1-.07-.688l.07-.007zm15.214 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-17.388 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm56.51 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.173 0a.347.347 0 0 1 .07.688l-.07.007H90.02a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-30.428 0a.347.347 0 0 1 .07.688l-.07.007H57.42a.347.347 0 0 1-.07-.688l.07-.007zm60.857 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-65.203 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm190.131 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-244.467 0a.347.347 0 0 1 .07.688l-.07.007H7.43a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007H9.603a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007H13.95a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007H20.47a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007H40.03a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm81.459 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-77.113 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm81.46 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007H178a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm63.03 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm-60.857 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm64.713 0a.347.347 0 0 1 .07.688l-.07.007h-.552a.347.347 0 0 1-.07-.688l.07-.007zm-60.366 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-91.285 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm93.458 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.043a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm2.173 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-240.12 0a.347.347 0 0 1 .07.688l-.07.007H1.4a.347.347 0 0 1-.07-.688l.07-.007zm123.886 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-2.174 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm-117.365 0a.347.347 0 0 1 .07.688l-.07.007H5.256a.347.347 0 0 1-.07-.688l.07-.007zm45.642 0a.347.347 0 0 1 .07.688l-.07.007h-1.042a.347.347 0 0 1-.07-.688l.07-.007zm78.098-2.172a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-4.547 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m2.52-1.044a.35.35 0 0 1 .34.278l.007.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m3.564-.493a.347.347 0 0 1 .541.429l-.05.062l-.736.738a.347.347 0 0 1-.542-.429l.05-.063zm-7.621 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m4.056-1.68c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-5.593.143a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m10.695 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm1.537-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm-13.769 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m7.13-.78c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-8.667-.756a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m16.843 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm-8.176-1.417c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m9.713-.12a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-19.917 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m21.454-1.537a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-22.99 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m11.74-.516c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-13.277-1.021a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m26.063 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-12.786-1.153c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-14.814-.384a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m29.137 0a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-14.323-1.79c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-16.35.253a.35.35 0 0 1 .428-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m32.21 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm1.537-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm-35.285 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m17.888-.889c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-19.425-.647a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m38.359 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm-18.934-1.526c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07V107.4c0-.192.155-.347.347-.347m-20.961-.011a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m41.432 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-42.97-1.537a.35.35 0 0 1 .43-.05l.062.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m44.507 0a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-22.008-.626c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-24.035-.91a.35.35 0 0 1 .428-.05l.063.05l.737.736a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m47.58 0a.347.347 0 0 1 .54.428l-.05.062l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-23.545-1.263c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m25.081-.275a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-50.653 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m25.572-1.898c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-27.109.361a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m53.727 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm-55.264-1.536a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m56.8 0a.347.347 0 0 1 .542.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm-28.154-.999c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m29.692-.538a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm-59.875 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m30.183-1.635c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m31.229.098a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-62.948 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m64.485-1.537a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-66.022 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m33.256-.735c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V94.36c0-.192.155-.348.347-.348m34.302-.802a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-69.095 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m34.793-1.371c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m35.84-.166a.347.347 0 0 1 .54.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-72.17 0a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m73.706-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm-75.243 0a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m37.867-.47c.168 0 .308.118.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m38.913-1.066a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm-78.317 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m39.404-1.108c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-40.94-.43a.35.35 0 0 1 .428-.05l.063.05l.737.738a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m81.39 0a.347.347 0 0 1 .54.43l-.049.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-40.45-1.743c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m41.987.207a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-84.464 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-1.537-1.537a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m87.537 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-43.523-.844c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m45.06-.693a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.542-.428l.05-.063zm-90.611 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m45.551-1.48c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V81.32c0-.192.155-.347.347-.347m-47.088-.057a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m93.685 0a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-95.222-1.537a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m96.759 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm-48.134-.58c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m49.67-.956a.347.347 0 0 1 .542.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm-99.832 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m50.162-1.217c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-51.699-.32a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m102.907 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zM128.01 74.45c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m52.745.317a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-105.98 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m-1.537-1.537a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m109.053 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-54.28-.953c.167 0 .307.119.34.277l.007.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m55.817-.584a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-112.127 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m56.31-1.59a.35.35 0 0 1 .34.278l.007.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m57.354.053a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm-115.2 0a.35.35 0 0 1 .428-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m116.737-1.537a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.063zm-118.275 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m59.383-.689c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m60.429-.847a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zm-121.349 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m60.92-1.326c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-62.457-.211a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.738-.737a.347.347 0 0 1 0-.491m124.423 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm1.537-1.537a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-127.496 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m63.993-.426c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m65.04-1.11a.347.347 0 0 1 .54.428l-.05.062l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-130.57 0a.35.35 0 0 1 .428-.05l.063.05l.737.736a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m65.53-1.063c.168 0 .308.119.34.277l.008.07V62.8a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m66.576-.475a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-133.643 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m67.067-1.699c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-68.604.162a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m136.717 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zM57.87 57.863a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m139.791 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm-69.65-.8c.168 0 .308.12.34.278l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07V57.41c0-.192.155-.347.347-.347m-71.678-.737a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m142.865 0a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.541-.429l.05-.062zM128.01 54.89c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-73.214-.101a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m145.938 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zM53.26 53.252a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m149.012 0a.347.347 0 0 1 .54.428l-.05.063l-.736.737a.347.347 0 0 1-.541-.428l.05-.063zm-74.26-.535c.167 0 .307.119.34.277l.007.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m-76.29-1.002a.35.35 0 0 1 .43-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m152.086 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-75.797-1.171c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-77.825-.366a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m155.16 0a.347.347 0 0 1 .54.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zM128.01 48.37c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-79.362.271a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.542l-.063-.05l-.737-.737a.347.347 0 0 1 0-.492m158.233 0a.347.347 0 0 1 .541.429l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.05-.063zm1.537-1.536a.347.347 0 0 1 .541.428l-.05.063l-.737.737a.347.347 0 0 1-.54-.429l.049-.062zm-161.307 0a.35.35 0 0 1 .429-.05l.063.05l.737.737a.347.347 0 0 1-.429.54l-.063-.05l-.737-.736a.347.347 0 0 1 0-.491m80.9-.908c.167 0 .307.119.34.277l.007.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-82.437-.63a.35.35 0 0 1 .429-.05l.063.05l.737.738a.347.347 0 0 1-.429.54l-.063-.049l-.737-.737a.347.347 0 0 1 0-.491m164.38 0a.347.347 0 0 1 .542.43l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-81.944-1.544c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V44.37c0-.192.155-.348.347-.348m-83.972.008a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.429.541l-.062-.05l-.737-.737a.347.347 0 0 1 0-.491m167.454 0a.347.347 0 0 1 .54.428l-.049.063l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm1.536-1.537a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.541-.428l.05-.063zm-170.527 0a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.491m85.51-.644c.167 0 .307.119.34.277l.007.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m-87.047-.893a.35.35 0 0 1 .428-.05l.063.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.737a.347.347 0 0 1 0-.49m173.601 0a.347.347 0 0 1 .542.429l-.05.062l-.737.737a.347.347 0 0 1-.542-.428l.05-.063zm-86.555-1.28c.168 0 .308.118.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m-88.583-.257a.35.35 0 0 1 .429-.05l.062.05l.737.737a.347.347 0 0 1-.428.541l-.063-.05l-.737-.736a.347.347 0 0 1 0-.492m176.675 0a.347.347 0 0 1 .541.429l-.05.063l-.736.737a.347.347 0 0 1-.542-.429l.05-.063zm-88.092-1.917c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07V37.85c0-.192.155-.347.347-.347m-89.769.732a.35.35 0 0 1 .429-.05l.063.05l.386.385a.347.347 0 0 1-.429.542l-.063-.05l-.386-.386a.347.347 0 0 1 0-.491m179.047 0a.347.347 0 0 1 .54.428l-.049.063l-.386.386a.347.347 0 0 1-.54-.429l.049-.063zm-89.278-2.906c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V31.33c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V24.81c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.043c0-.191.155-.347.347-.347m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07v-1.042c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V11.77c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V9.596c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.042a.347.347 0 0 1-.688.07l-.007-.07V7.422c0-.192.155-.347.347-.347m0-2.174c.168 0 .308.12.34.278l.008.07V6.29a.347.347 0 0 1-.688.07l-.007-.07V5.249c0-.192.155-.348.347-.348m0-2.173c.168 0 .308.119.34.277l.008.07v1.043a.347.347 0 0 1-.688.07l-.007-.07V3.075c0-.192.155-.347.347-.347m0-1.683c.168 0 .308.119.34.277l.008.07v.552a.347.347 0 0 1-.688.07l-.007-.07v-.552c0-.192.155-.347.347-.347&#34;/&gt;&lt;path fill=&#34;#818181&#34; d=&#34;m126.825 226.031l1.206.063l.494-.025l.035.694l-.529.025l-1.241-.063zm3.87-.073l.036.694l-1.735.089l-.036-.694zm-6.04-.038l1.734.089l-.035.694l-1.735-.089zm8.21-.073l.036.694l-1.735.089l-.035-.694zm-10.381-.038l1.735.089l-.036.694l-1.735-.089zm12.552-.073l.036.694l-1.735.09l-.036-.695zm-14.723-.038l1.735.089l-.035.694l-1.735-.089zm16.894-.072l.035.694l-1.734.088l-.036-.694zm-19.064-.039l1.735.089l-.036.694l-1.735-.089zm21.186-.18l.11.687l-1.066.168l-.695.035l-.035-.694l.658-.031zm-23.3-.117l1.715.273l-.109.687l-1.715-.274zm25.446-.224l.11.686l-1.716.273l-.11-.686zm-27.592-.118l1.715.273l-.11.687l-1.715-.274zm29.739-.224l.11.686l-1.716.274l-.11-.687zm-31.886-.118l1.716.274l-.11.686l-1.715-.273zm34.032-.224l.11.687l-1.716.273l-.11-.686zm-36.178-.117l1.715.273l-.109.686l-1.715-.273zm38.325-.224l.109.686l-1.716.273l-.109-.686zm-40.472-.118l1.716.273l-.11.686l-1.715-.273zm42.55-.376l.178.671l-1.68.444l-.177-.672zm-44.613-.192l1.68.444l-.178.672l-1.68-.444zm46.715-.364l.177.672l-1.68.444l-.177-.672zm-48.816-.19l1.68.443l-.178.672l-1.68-.444zm50.917-.365l.177.672l-1.68.444l-.177-.672zm-53.018-.19l1.68.443l-.178.672l-1.68-.444zm55.12-.365l.177.672l-1.68.444l-.177-.672zm-57.222-.191l1.68.444l-.178.671l-1.68-.443zm59.323-.364l.177.672l-1.68.444l-.177-.672zm-61.364-.257l.672.26l.947.25l-.177.671l-.983-.261l-.707-.271zm63.358-.51l.248.65l-1.622.62l-.249-.648zm-65.388-.267l1.623.621l-.249.649l-1.622-.621zm67.418-.51l.248.65l-1.622.62l-.249-.648zm-69.447-.267l1.622.621l-.248.649l-1.623-.621zm71.476-.51l.249.65l-1.623.62l-.248-.648zm-73.506-.267l1.622.621l-.248.649l-1.623-.621zm75.536-.51l.249.65l-1.623.62l-.248-.648zm-77.566-.267l1.622.62l-.248.65l-1.622-.621zm79.539-.549l.315.62l-.537.27l-1.095.42l-.248-.65l1.061-.404zm-81.48-.339l1.138.58l.396.152l-.249.649l-.324-.124l-.104-.042l-1.172-.595zm83.417-.645l.315.62l-1.548.786l-.315-.62zm-85.354-.34l1.548.787l-.315.62l-1.548-.787zm87.292-.645l.315.62l-1.549.787l-.315-.62zm-89.23-.34l1.549.788l-.315.62l-1.549-.788zm91.168-.645l.314.62l-1.548.787l-.315-.62zm-93.106-.339l1.55.787l-.316.62l-1.548-.787zm95.043-.645l.315.62l-1.549.786l-.315-.62zm-96.98-.34l1.549.787l-.315.62l-1.549-.787zm98.824-.732l.38.582l-.985.64l-.535.272l-.315-.62l.503-.253zm-100.628-.41l1.455.95l-.38.582l-1.454-.95zm102.449-.777l.38.582l-1.456.948l-.38-.582zm-104.27-.41l1.456.95l-.38.581l-1.455-.949zm106.09-.778l.38.582l-1.455.95l-.38-.583zm-107.91-.409l1.455.949l-.38.582l-1.454-.949zm109.73-.778l.38.582l-1.455.949l-.38-.582zm-111.55-.41l1.455.95l-.38.582l-1.455-.95zm113.371-.777l.38.582l-1.455.949l-.38-.582zm-115.192-.41l1.455.95l-.38.581l-1.454-.948zm116.884-.894l.437.54l-1.352 1.092l-.436-.54zm-118.531-.47l1.351 1.09l-.436.541l-1.352-1.091zm120.222-.896l.437.54l-1.352 1.092l-.436-.54zm-121.913-.47l1.351 1.091l-.436.54l-1.352-1.09zm123.604-.895l.437.54l-1.352 1.092l-.436-.54zm-125.295-.47l1.351 1.09l-.436.541l-1.352-1.091zm126.986-.896l.437.541l-1.352 1.091l-.436-.54zm-128.677-.47l1.351 1.091l-.436.54l-1.352-1.09zm130.368-.895l.437.54l-1.352 1.092l-.437-.54zm-131.973-.51l.552.555l.713.576l-.436.54l-.74-.6l-.58-.58zm133.477-1.008l.492.491l-1.229 1.229l-.49-.492zm-135.014-.53l1.228 1.229l-.491.491l-1.229-1.228zm136.551-1.007l.492.492l-1.229 1.228l-.491-.491zm-138.088-.53l1.228 1.229l-.491.491l-1.229-1.228zm67.867.623l1.349.071l.35-.018l.036.694l-.347.018h-.04l-1.384-.07zm3.87-.058l.035.694l-1.735.089l-.035-.694zm-6.04-.053l1.734.089l-.036.694l-1.734-.09zm8.21-.058l.036.694l-1.735.089l-.036-.694zm-10.381-.053l1.734.089l-.035.693l-1.735-.089zm12.552-.059l.035.694l-1.734.09l-.036-.695zm-14.681-.107l.52.083l1.173.06l-.036.694l-1.209-.064l-.555-.086zm16.798-.174l.107.686l-1.717.267l-.107-.687zm-18.946-.16l1.716.267l-.106.687l-1.717-.267zm80.376-.908l.491.492l-1.228 1.228l-.491-.491zm-59.282.734l.106.686l-1.716.267l-.107-.686zm-23.242-.16l1.717.267l-.107.687l-1.716-.267zm25.39-.174l.106.687l-1.717.266l-.106-.686zm-27.537-.16l1.716.268l-.107.686l-1.716-.267zm-56.491-.77l1.228 1.229l-.491.491l-1.228-1.228zm86.121.515l.177.672l-.88.23l-.853.133l-.107-.687l.819-.125zm-31.703-.263l1.68.442l-.177.672l-1.68-.442zm33.805-.29l.177.672l-1.68.442l-.177-.672zm-35.907-.263l1.68.442l-.177.672l-1.68-.442zm90.383-.705l.491.49l-1.228 1.23l-.491-.492zm-52.374.415l.177.672l-1.68.442l-.177-.672zm-40.11-.264l1.68.443l-.177.672l-1.68-.443zm-51.752-.681l1.228 1.228l-.49.492l-1.23-1.229zm93.964.392l.177.672l-1.68.442l-.177-.672zm-44.244-.359l.935.36l.675.177l-.177.672l-.71-.189l-.972-.371zm46.238-.406l.248.649l-1.622.62l-.248-.649zm49.741-.65l.54.435l-.412.51l-.791.79l-.492-.491l.767-.764zm-98.01.28l1.623.62l-.248.65l-1.623-.622zm-49.093-.864l.834 1.037l.262.261l-.492.492l-.245-.246l-.04-.043l-.86-1.064zm99.392.457l.248.65l-1.622.62l-.248-.65zm-52.328-.37l1.622.62l-.248.65l-1.623-.621zm54.358-.406l.248.649l-1.622.62l-.248-.649zm47.046-.79l.54.437l-1.09 1.352l-.541-.436zm-103.434.42l1.622.62l-.248.65l-1.623-.622zm58.322-.527l.32.618l-1.215.625l-.383.147l-.248-.65l.324-.123l.023-.007zm-104.722-.475l1.092 1.352l-.541.437l-1.091-1.352zm44.513 0l1.543.798l-.319.617l-1.543-.798zm62.14-.523l.319.617l-1.543.798l-.32-.617zm44.545-.586l.541.436l-1.09 1.352l-.541-.436zm-108.615.11l1.543.798l-.32.617l-1.542-.798zm-43.948-.691l1.091 1.351l-.54.437l-1.092-1.352zm109.948.168l.32.617l-1.544.799l-.32-.618zm-67.93-.476l1.542.799l-.319.617l-1.543-.798zm111.91-.803l.54.436l-1.09 1.352l-.541-.436zm-42.101.258l.376.584l-.43.276l-1.118.578l-.32-.617l1.09-.562zm-71.633-.567l1.455.949l-.38.582l-1.455-.95zm-41.56-.271l1.092 1.351l-.54.437l-1.092-1.352zm115.02-.34l.376.584l-1.46.942l-.376-.584zm41.638-.772l.541.437l-1.09 1.352l-.541-.437zm-116.918.195l1.455.95l-.38.581l-1.455-.949zM48.8 185.86l1.091 1.351l-.54.437l-1.092-1.352zm118.212.174l.376.584l-1.46.941l-.377-.584zm-78.928-.588l1.455.95l-.38.582l-1.454-.95zm119.982-.744l.582.38l-.698 1.067l-.312.387l-.54-.436l.29-.359zm-39.228.154l.377.584l-1.46.942l-.377-.585zm-121.224-.774l.949 1.455l-.582.38l-.95-1.456zm38.72.142l.49.4l.895.584l-.38.582l-.923-.604l-.52-.421zm84.19-.675l.438.54l-1.35 1.092l-.438-.54zm38.73-.667l.581.38l-.949 1.455l-.582-.38zm-124.61-.025l1.35 1.093l-.437.54l-1.35-1.093zm-38.217-.596l.949 1.455l-.582.38l-.95-1.455zm125.787-.08l.437.54l-1.35 1.093l-.437-.54zm-89.26-.691l1.35 1.093l-.437.54l-1.35-1.093zm127.487-.429l.582.38l-.95 1.455l-.581-.38zm-36.537-.247l.437.54l-1.35 1.093l-.438-.54zm-128.665-.373l.95 1.455l-.583.38l-.949-1.456zm36.025-.318l1.35 1.093l-.436.54l-1.35-1.093zm94.238-.723l.492.492l-.67.667l-.644.52l-.437-.54l.616-.496zm36.126-.159l.582.38l-.95 1.455l-.581-.38zm-167.576-.62l.949 1.454l-.582.38L43.47 179zm35.691.002l1.228 1.229l-.49.491l-1.23-1.228zm97.296-.76l.492.492l-1.229 1.228l-.491-.491zm35.776-.443l.582.38l-.949 1.455l-.582-.38zm-134.609-.334l1.229 1.229l-.492.491l-1.228-1.228zm-35.341-.286l.949 1.455l-.582.38l-.95-1.456zm135.711-.473l.491.491l-1.228 1.228l-.491-.491zm35.242-.79l.62.314l-.788 1.549l-.62-.315zm-137.149.013l1.229 1.228l-.492.491l-1.228-1.228zm-34.742-.672l.787 1.549l-.62.315l-.787-1.549zm138.186-.088l.491.491l-1.228 1.228l-.491-.49zm-104.863-.834l.722.897l.389.388l-.491.491l-.413-.415l-.747-.923zm139.552-.357l.62.315l-.787 1.548l-.62-.314zm-33.353-.478l.54.437l-1.093 1.35l-.54-.436zm-140.507-.18l.787 1.548l-.62.315l-.786-1.548zm32.94-.674l1.093 1.35l-.54.437l-1.093-1.35zm141.905-.606l.62.315l-.787 1.549l-.62-.315zm-32.971-.23l.54.438l-1.093 1.35l-.54-.437zm-142.858-.428l.787 1.549l-.62.315l-.787-1.55zm32.557-.426l1.093 1.35l-.54.438l-1.093-1.35zm144.257-.853l.62.315l-.788 1.548l-.62-.315zm-32.589.018l.54.437l-1.092 1.35l-.54-.437zm-145.21-.676l.787 1.548l-.62.315l-.787-1.549zm32.225-.17l.19.29l.853 1.052l-.54.437l-.895-1.11l-.19-.29zm59.265.896l.07.691l-1.104.11l-.673-.021l.022-.695l.347.011l.28.012zm-3.857.015l1.736.056l-.022.695l-1.737-.056zm-2.173-.07l1.736.056l-.022.695l-1.736-.056zm8.192-.167l.07.691l-1.728.178l-.07-.692zm-10.296-.083l1.255.224l.413.013l-.022.694l-.347-.01l-.115-.008l-1.304-.229zm12.458-.139l.07.692l-1.727.177l-.071-.691zm-14.599-.236l1.711.3l-.12.684l-1.71-.3zm16.67-.214l.169.675l-1.685.42l-.169-.673zm48.554-.903l.581.38l-.949 1.455l-.582-.38zm-67.365.741l1.711.3l-.12.685l-1.71-.3zm99.71-.95l.619.315l-.787 1.549l-.62-.315zm-78.79.585l.169.674l-1.686.422l-.168-.674zm-22.95-.258l1.654.53l-.212.661l-1.654-.53zm-77.93-.989l.297.783l.391.77l-.62.314l-.405-.803l-.312-.816zm102.989.72l.168.674l-1.685.422l-.169-.674zm-71.065-.77l.949 1.456l-.582.38l-.95-1.455zm43.935.377l1.655.53l-.212.66l-1.654-.529zm29.083-.441l.266.642l-1.606.664l-.265-.642zm43.57-.835l.582.38l-.95 1.455l-.581-.38zm-74.65.578l.31.156l1.272.409l-.212.662l-1.337-.433l-.345-.172zm106.553-.971l.649.248l-.621 1.623l-.65-.249zm-73.465.397l.266.642l-1.605.664l-.266-.642zm-35.033-.397l1.554.776l-.31.622l-1.555-.777zm-41.181-.527l.95 1.455l-.583.38l-.949-1.456zm-31.514-.16l.621 1.622l-.648.248l-.622-1.622zm109.654.186l.345.602l-.3.173l-.395.223l-.907.375l-.266-.642l.867-.356zm-38.903-.471l1.554.776l-.31.622l-1.555-.777zm79.727-.455l.582.38l-.95 1.454l-.581-.38zm-38.939-.156l.346.603l-1.507.864l-.346-.603zm70.43-.447l.65.249l-.621 1.622l-.65-.248zm-151.643-.318l.95 1.455l-.582.38l-.95-1.455zm38.588.311l.288.195l.516.353l.643.321l-.31.622l-.311-.155l-.372-.19l-.843-.57zm-69.69-.68l.62 1.622l-.648.248l-.622-1.622zm114.2.053l.346.603l-1.507.864l-.345-.603zm38.173-.583l.617.32l-.285.547l-.63.967l-.583-.38l.614-.937zm-84.483-.008l1.439.974l-.39.575l-1.438-.974zm115.633-.805l.649.249l-.621 1.622l-.65-.248zm-67.587.18l.427.547l-1.127.876l-.311.179l-.346-.603l.287-.165zm-85.857-.343l.798 1.543l-.618.32l-.798-1.544zm-30.857-.524l.621 1.622l-.649.248l-.62-1.622zm66.868.273l1.439.974l-.39.576l-1.438-.974zm87.282-.703l.617.319l-.798 1.543l-.617-.32zm-35.723-.04l.428.547l-1.37 1.069l-.427-.548zm-53.178-.625l1.288 1.165l-.467.516l-1.288-1.166zm119.829-.247l.649.248l-.621 1.622l-.65-.248zm-155.22-.064l.798 1.543l-.617.319l-.798-1.543zm-30.635-.624l.621 1.622l-.649.249l-.62-1.623zm120.918.222l.427.548l-1.37 1.069l-.427-.548zm35.007-.553l.617.32l-.798 1.542l-.617-.319zm-91.51-.193l1.287 1.166l-.466.515l-1.288-1.166zm-34.778-.783l.798 1.543l-.618.32l-.798-1.544zm156.909-.024l.671.178l-.198.745l-.36.937l-.648-.249l.347-.901zm-64.135.042l.498.485l-1.211 1.244l-.498-.484zm-123.03-.753l.443 1.68l-.671.177l-.444-1.68zm63.422.06l1.288 1.165l-.466.515l-1.288-1.165zm94.12-.28l.618.32l-.798 1.543l-.617-.32zm-32.996-.585l.498.485l-1.211 1.245l-.498-.485zm-95.188-.393l.282.742l.415.804l-.617.319l-.431-.839l-.298-.778zm158.362-.192l.671.177l-.443 1.68l-.672-.178zm-125.646-.194l1.112 1.334l-.534.445l-1.112-1.334zm-62.63-.517l.444 1.68l-.671.177l-.444-1.68zm158.886-.1l.65.248l-.621 1.622l-.65-.248zm-32.35-.164l.563.408l-.203.281l-.09.118l-.901.926l-.498-.485l.869-.887zm-97.399-.863l.621 1.623l-.649.248l-.62-1.623zm32.102-.026l1.112 1.335l-.534.444l-1.112-1.334zm127.592-.238l.672.178l-.444 1.68l-.672-.178zm-61.02-.633l.564.408l-1.02 1.406l-.562-.407zM33.25 152.76l.443 1.68l-.672.177l-.443-1.68zm160.217-.03l.649.249l-.62 1.622l-.65-.248zm-99.706-.712l.184.294l.18.295l.638.766l-.533.445l-.667-.805l-.391-.628zm-31.596-.314l.62 1.623l-.648.248l-.621-1.623zm161.025-.335l.672.178l-.444 1.68l-.672-.178zm-60.3-.292l.564.407l-1.02 1.407l-.562-.407zm31.353-.377l.65.249l-.621 1.622l-.65-.248zm-161.548-.042l.443 1.68l-.672.177l-.443-1.68zm59.915-.484l.92 1.473l-.59.368l-.92-1.473zm-31.222-.5l.621 1.623l-.649.248l-.62-1.623zm102.625-.395l.614.325l-.524.984l-.393.543l-.563-.407l.204-.282l.163-.22zm59.732-.011l.672.177l-.444 1.68l-.672-.178zm-28.845-.597l.672.177l-.28 1.059l-.244.634l-.649-.248l.232-.599zm-162.76-.114l.443 1.68l-.672.177l-.443-1.68zm59.32-.227l.92 1.474l-.59.367l-.92-1.473zm-30.615-.722l.442 1.68l-.672.177l-.442-1.68zm104.184-.25l.615.325l-.813 1.535l-.614-.325zm59.137-.184l.686.109l-.21 1.31l-.114.43l-.672-.177l.107-.397zm-28.713-.605l.672.177l-.442 1.68l-.672-.177zm-104.957-.129l.535 1.203l.198.317l-.59.368l-.184-.295l-.036-.065l-.557-1.244zm-58.71.009l.274 1.715l-.686.11l-.274-1.716zm28.506-.942l.442 1.68l-.672.176l-.442-1.68zm105.754-.07l.614.325l-.812 1.535l-.615-.325zm58.462-.41l.686.11l-.273 1.715l-.686-.11zm-134.9-.57l.71 1.585l-.634.284l-.71-1.586zm106.398.01l.672.177l-.442 1.68l-.672-.177zm-164.561-.165l.273 1.716l-.686.109l-.273-1.716zm135.387-.838l.653.24l-.6 1.63l-.651-.24zm-107.093-.06l.442 1.68l-.672.177l-.442-1.68zm165.11-.523l.687.11l-.273 1.715l-.686-.11zm-136.128-.408l.71 1.585l-.635.284l-.71-1.586zm107.838-.107l.672.176l-.442 1.68l-.672-.177zm-165.456-.21l.273 1.715l-.686.11l-.273-1.716zm136.479-.732l.652.24l-.599 1.63l-.652-.24zm-108.26-.113l.191 1.236l.115.436l-.672.177l-.089-.336l-.033-.135l-.198-1.272zm165.87-.576l.686.109l-.273 1.715l-.687-.109zm-96.695.945l.038.694l-1.734.096l-.039-.694zm2.17-.12l.038.693l-1.734.096l-.039-.693zm-5.953-.243l1.707.323l-.129.683l-1.707-.323zm-36.6-.879l.479 1.67l-.668.192l-.479-1.67zm108.753-.189l.686.107l-.267 1.716l-.686-.107zm-64.22.617l.206.663l-1.659.515l-.206-.663zm-9.887-.21l.313.15l.64.322l.573.108l-.13.683l-.34-.064l-.318-.072l-1.04-.502zm-91.999-.647l.273 1.716l-.686.11l-.273-1.716zm103.769-.014l.358.595l-.297.18l-.796.467l-.525.163l-.206-.663l.332-.103l.117-.026zm33.801-.611l.653.24l-.6 1.63l-.652-.24zm-47.53.328l1.566.754l-.302.626l-1.565-.754zm-61.812-.549l.267 1.717l-.687.106l-.267-1.716zm166.544-.575l.687.11l-.274 1.715l-.686-.11zm-89.142.285l.359.595l-1.488.897l-.358-.595zm-48.876-.524l.479 1.67l-.668.191l-.479-1.67zm31.653.061l1.347 1.097l-.44.539l-1.346-1.097zm78.033-.309l.686.107l-.267 1.717l-.686-.107zm-166.736-.205l.018.347l-.001.012l.21 1.324l-.686.109l-.214-1.36l-.02-.397zm138.288-.597l.68.147l-.367 1.698l-.679-.147zm-30.881.102l.49.491l-1.227 1.228l-.492-.491zm-79.217-.386l.267 1.717l-.687.107l-.266-1.717zm59.027-.053l.209.277l.222.313l.716.583l-.439.538l-.269-.219l-.505-.424l-.49-.65zm107.99-.504l.694.035l-.089 1.735l-.693-.035zm-138.683-.165l.05.344l.006.073l.35 1.22l-.668.191l-.36-1.267l-.065-.463zm110.545-.34l.687.107l-.267 1.717l-.686-.107zm-58.345-.154l.595.359l-.18.297l-.325.52l-.608.608l-.49-.49l.245-.247l.31-.295zm-108.835-.074l.09 1.735l-.695.035l-.089-1.735zm86.02-.499l1.045 1.387l-.555.419l-1.045-1.388zm52.837-.051l.68.146l-.367 1.698l-.679-.146zm-110.839-.276l.018.346l.002.078l.196 1.261l-.686.107l-.2-1.297l-.024-.46zm167.411-.612l.694.036l-.089 1.735l-.694-.036zm-139.099-.146l.244 1.72l-.688.098l-.244-1.72zm53.627-.204l.595.359l-.897 1.488l-.595-.359zm57.396-.112l.694.036l-.089 1.735l-.694-.036zm-167.463-.27l.088 1.734l-.694.036l-.088-1.735zm85.222-.2l.684 1.597l-.639.273l-.684-1.596zm54.079-.27l.693.044l-.022.347l-.036.506l-.197.913l-.68-.147l.074-.34l.116-.521zm-111.284-.357l.089 1.735l-.694.035l-.09-1.734zm167.633-.611l.694.035l-.089 1.735l-.694-.036zm-84.891-.142l.663.206l-.514 1.659l-.664-.206zm-54.624.014l.244 1.72l-.688.098l-.244-1.72zm111.44-.334l.694.035l-.09 1.735l-.693-.035zm-83.075-.246l.053.343l-.007.027l.504 1.175l-.639.274l-.137-.32l-.39-.94l-.07-.452zm-84.611-.025l.088 1.735l-.694.035l-.088-1.735zm139.55-.468l.694.044l-.111 1.734l-.694-.045zm-111.533-.359l.089 1.735l-.694.036l-.09-1.735zm83.371-.61l.692.065l-.032.346l-.032.269l-.353 1.137l-.664-.206l.103-.332l.236-.734zm84.484-.001l.694.035l-.089 1.735l-.694-.035zm-139.774-.07l-.003 1.05l.09.632l-.689.097l-.048-.344l-.045-.336v-1.1zm111.699-.392l.694.036l-.089 1.735l-.694-.036zm-83.52-.223l.267 1.717l-.687.107l-.267-1.717zm-84.388-.048l.088 1.735l-.694.035l-.088-1.734zm139.8-.466l.694.044l-.111 1.734l-.693-.045zm-111.784-.36l.09 1.735l-.695.035l-.089-1.735zm84.234-1.803l.14 1.263v.002l.052.461l-.096.01l-.115 1.257l-.692-.064l.153-1.66l-.133-1.192zm84.492.014l.088 1.735l-.07.004l-.06 1.209l-.695-.036l.089-1.735h.012l-.058-1.142zM86.23 127.702v1.737h-.695v-1.737zm112.397-1.104l.056 1.112l.033.002l-.017.31l.017.31l-.033.003l-.038.75l-.694-.036l.052-1.026l-.07-1.39zm-84.908.527l.693.062l-.031.346l-.094.944l.055.353l-.687.107l-.053-.343l-.005-.095zm-84.407-.082l.694.035l-.048.908l.04.791l-.693.036l-.04-.827zm112.408.74l-.007.07l.06.534l.594-.066l.044-.472v-.002zm28.753-1.189l.111 1.734l-.693.044l-.112-1.733zm27.549 1.082l-.019.347l.019.345l.661-.033l.016-.312l-.016-.313zm28.105.1l.03.592l.624-.031l.028-.526zm-168.71-1.56l.694.036l-.089 1.735l-.694-.036zm28.813-.687v1.737h-.695v-1.737zm27.682-.568l.692.061l-.154 1.73l-.692-.061zm-84.489-.09l.694.036l-.089 1.735l-.693-.035zm112.608-.447l.192 1.726l-.69.077l-.193-1.726zm28.303.001l.11 1.734l-.692.044l-.112-1.733zm28.181.002l.09 1.735l-.695.036l-.089-1.735zm28.137 0l.089 1.735l-.694.036l-.09-1.735zm-169.123-.381l.694.035l-.09 1.735l-.693-.036zm28.25-.723l.689.098l-.244 1.72l-.688-.098zm28.904-.49l.656.229l-.572 1.64l-.656-.23zm-85.149-.132l.694.036l-.089 1.735l-.694-.036zm111.65-.381l.628 1.62l-.648.25l-.628-1.618zm29.01-.064l.112 1.734l-.694.045l-.11-1.734zm28.21 0l.089 1.736l-.694.035l-.089-1.735zm28.137 0l.089 1.736l-.694.035l-.089-1.735zm-168.901-.381l.694.036l-.089 1.734l-.694-.035zm28.445-.703l.688.097l-.244 1.72l-.688-.098zm29.588-.351l.58.382l-.19.29l-.362.531l-.218.626l-.656-.23l.114-.327l.141-.374zm-86.028-.29l.694.035l-.089 1.735l-.694-.035zm110.49-.19l.198.285l.453.67l.24.617l-.648.252l-.126-.324l-.076-.222l-.612-.883zm29.615-.263l.367 1.698l-.68.147l-.366-1.699zm28.481-.021l.09.594l.06 1.17l-.693.036l-.057-1.135l-.086-.559zm28.2.03l.088 1.734l-.694.035l-.089-1.734zm-168.575-.408l.686.107l-.147.938l-.039.75l-.694-.035l.042-.786zm59.012-.674l.58.382l-.954 1.451l-.58-.382zm-30.477.015l.687.097l-.244 1.72l-.688-.097zm52.506-.466l.99 1.428l-.571.396l-.99-1.428zm-109.141-.194l.694.036l-.089 1.734l-.694-.035zm139.536-.407l.367 1.698l-.68.147l-.366-1.698zm28.605-.044l.267 1.716l-.686.107l-.267-1.716zm28.422.006l.089 1.735l-.694.036l-.089-1.735zm-168.13-.383l.687.106l-.267 1.717l-.686-.107zm60.296-.094l.472.51l-1.275 1.18l-.472-.51zm-31.462-.55l.668.192l-.479 1.67l-.668-.192zm50.2.154l1.318 1.13l-.452.528l-1.319-1.13zm-107.194-.873l.686.11l-.273 1.715l-.686-.11zm138.726-.368l.12.326l.062.18l.263 1.22l-.679.146l-.25-1.173l-.168-.46zm-48.5.257l.334.61l-.304.166l-.275.14l-.732.678l-.472-.51l.255-.236l.545-.491zm77.309-.297l.266 1.717l-.686.106l-.267-1.716zm28.435-.031l.273 1.715l-.686.11l-.274-1.716zm-90.591-.008l.31.155l.38.202l.793.68l-.452.527l-.264-.226l-.458-.406l-.62-.31zm-76.884-.338l.686.107l-.267 1.716l-.686-.107zm29.098-.585l.668.192l-.48 1.67l-.667-.192zm34.537.212l.335.609l-1.522.837l-.335-.61zm11.305-.261l1.553.777l-.31.621l-1.554-.776zm-103.093-.727l.686.11l-.273 1.715l-.686-.11zm137.634-.262l.6 1.63l-.653.24l-.599-1.63zm29.225-.147l.267 1.716l-.687.107l-.267-1.717zm-72.945.68l.183.67l-1.676.458l-.182-.67zm101.372-.71l.273 1.715l-.686.109l-.273-1.716zm-94.354.552l1.695.376l-.15.679l-1.696-.377zm-72.446-.9l.687.107l-.267 1.717l-.686-.107zm67.623.57l.015.694l-.347.008l-1.259.342l-.183-.67l.336-.092l1.043-.274zm2.956-.067l.118.008l1.323.294l-.151.678l-.34-.075l-.9-.21l-.382.008l-.015-.695zm-41.09-1.035l.635.283l-.142.318l-.177.388l-.252.878l-.668-.191l.269-.925zm40.307 1.053l.015.695l-1.737.038l-.015-.694zm-97.94-1.88l.686.109l-.273 1.715l-.686-.11zm136.543-.156l.599 1.63l-.652.24l-.6-1.63zm29.44-.25l.442 1.68l-.672.177l-.442-1.68zm28.619-.034l.273 1.715l-.686.11l-.273-1.716zm-165.881-.334l.672.177l-.442 1.68l-.672-.177zm29.8-.383l.635.284l-.71 1.585l-.634-.284zm-58.18-.99l.687.11l-.273 1.715l-.687-.11zm135.296-.03l.543 1.031l.213.58l-.653.24l-.12-.326l-.074-.211l-.523-.99zm29.792-.33l.443 1.68l-.672.176l-.443-1.68zm28.831-.08l.273 1.716l-.686.11l-.273-1.716zM59.987 109l.672.178l-.442 1.68l-.672-.177zm30.136-.264l.634.284l-.71 1.585l-.634-.283zm75.21-.958l.813 1.536l-.614.325l-.812-1.536zm-133.937-.194l.687.109l-.274 1.715l-.686-.109zm164.193-.317l.442 1.68l-.672.177l-.442-1.68zm29.042-.123l.273 1.716l-.686.109l-.273-1.716zm-164.09-.245l.671.177l-.442 1.68l-.672-.177zm30.667-.095l.59.367l-.92 1.474l-.59-.368zm73.11-.947l.812 1.536l-.614.324l-.813-1.535zm-132.369-.41l.672.177l-.444 1.68l-.672-.178zm162.969-.283l.384 1.01l.176.671l-.672.177l-.165-.636l-.372-.973zm29.117-.148l.444 1.68l-.672.177l-.444-1.68zm-131.676-.056l.59.368l-.92 1.473l-.59-.368zm-31.104-.15l.649.248l-.62 1.622l-.65-.248zm101.81-.785l1.02 1.407l-.563.408l-1.02-1.407zm-130.56-.68l.671.177l-.444 1.68l-.671-.178zm161.636-.21l.62 1.622l-.648.248l-.62-1.622zm-100.631-.02l.59.369l-.92 1.473l-.59-.367zm129.97-.2l.444 1.679l-.672.177l-.444-1.68zm-161.45-.135l.65.248l-.621 1.622l-.65-.248zm99.76-.515l1.018 1.407l-.563.408l-1.019-1.407zm-66.873-.865l.534.445l-1.112 1.334l-.534-.445zm-61.859-.157l.672.178l-.444 1.68l-.671-.178zm160.306-.139l.62 1.623l-.649.248l-.62-1.622zm29.56-.291l.443 1.68l-.671.177l-.444-1.68zm-160.117-.063l.649.248l-.62 1.623l-.65-.249zm97.707-.245l1.02 1.407l-.564.408l-1.019-1.407zM96.31 99.73l.534.445l-1.112 1.334l-.534-.444zm-62.695-.588l.672.178l-.443 1.68l-.672-.178zm158.974-.068l.62 1.623l-.648.248l-.62-1.622zm-33.645-.145l1.211 1.245l-.497.485l-1.212-1.245zm-95.28-.217l.617.32l-.16.308l-.105.2l-.402 1.05l-.65-.248l.418-1.085zm158.707 0l.443 1.68l-.671.177l-.444-1.68zm-124.58-.634l.466.515l-.258.234l-.113.097l-.763.916l-.533-.445l.796-.95zm59.637-.706l1.211 1.245l-.497.484l-1.212-1.244zm34.127-.255l.798 1.543l-.617.32l-.798-1.544zM34.228 97.02l.649.249l-.153.393l-.326 1.236l-.672-.178l.338-1.271zm30.434-.238l.617.32l-.798 1.542l-.618-.32zm157.049-.177l.335.88l.212.805l-.672.177l-.2-.77l-.324-.844zM99.4 96.62l.466.515L98.58 98.3l-.466-.516zm56.402-.756l.668.526l.651.67l-.498.484l-.615-.637l-.634-.495zm34.752-.677l.798 1.543l-.617.319l-.798-1.543zm-155.55-.196l.649.248l-.621 1.622l-.65-.248zm66.007.17l.467.515l-1.288 1.166l-.467-.515zm-35.352-.31l.617.32l-.798 1.543l-.617-.32zm155.274-.276l.62 1.622l-.648.249l-.621-1.623zm-66.845-.048l1.37 1.069l-.428.548l-1.37-1.07zm-51.325-.724l.39.575l-.939.632l-.413.373l-.466-.515l.257-.233l.194-.17zm86.793-.547l.798 1.543l-.617.32l-.798-1.544zm-153.775-.295l.649.248l-.621 1.622l-.65-.248zm116.594.229l1.37 1.069l-.428.548l-1.37-1.07zm-85.717-.27l.617.32l-.798 1.543l-.618-.32zm153.498-.375l.62 1.622l-.648.249l-.621-1.623zm-115.593.04l.39.575l-1.439.974l-.39-.576zm45.942-.588l1.507.864l-.345.603l-1.507-.865zm37.903-.625l.949 1.455l-.582.38l-.95-1.455zm-82.045-.006l.39.576l-1.439.973l-.39-.575zm-38.52-.308l.581.38l-.949 1.455l-.582-.38zm-31.285-.127l.649.248l-.621 1.623l-.65-.249zm182.82-.416l.622 1.623l-.65.248l-.62-1.622zm-70.758.4l1.507.864l-.346.603l-1.507-.864zm-40.299-.587l.311.622l-1.554.777l-.31-.622zm78.899-.776l.95 1.455l-.583.38l-.949-1.455zm-40.485.282l1.507.864l-.346.603l-1.507-.864zm-77.705-.596l.582.38l-.95 1.455l-.581-.38zm-31.695-.337l.649.249l-.621 1.622l-.65-.249zm72.93.455l.311.622l-1.554.777l-.31-.622zm108.337-.87l.62 1.622l-.648.248l-.621-1.622zm-73.91.486l1.605.664l-.266.643l-1.605-.665zm-32.483-.588l.311.622l-1.554.777l-.31-.622zm73.823-.652l.95 1.455l-.582.38l-.95-1.455zm-43.349.41l1.606.663l-.266.642l-1.605-.664zm-72.465-.724l.582.38l-.95 1.454l-.582-.38zm44.126.32l.211.662l-1.654.53l-.212-.663zm-76.12-.857l.62.315l-.446.872l-.258.674l-.65-.248l.274-.708zm102.378.486l.338.084l.218.059l1.122.464l-.265.642l-1.074-.448l-.507-.127zm77.068-.883l.787 1.549l-.619.315l-.787-1.549zm-101.256.592l.211.661l-1.654.53l-.212-.662zm22.08-.236l1.685.421l-.168.675l-1.686-.422zm46.274-.917l.444.552l.582.892l-.582.38l-.56-.864l-.424-.523zm-66.21.591l.12.685l-.343.06l-.45.075l-.844.27l-.212-.661l.89-.282zm-47.042-.88l.54.438l-.666.82l-.352.54l-.582-.38l.373-.568zm64.87.679l1.685.421l-.169.674l-1.685-.42zm-15.688-.174l.12.684l-1.711.3l-.12-.684zm13.502-.2l1.192.126l.57.142l-.168.674l-.337-.084l-.185-.05l-1.143-.117zm-94.992-.995l.62.314l-.787 1.55l-.62-.316zm83.63.82l.12.684l-1.71.3l-.12-.684zm9.2-.047l1.728.177l-.071.691l-1.728-.177zm84.648-1.17l.787 1.548l-.62.315l-.787-1.548zm-86.81.948l1.728.177l-.071.692l-1.728-.178zm-4.826.098l.022.694l-1.736.056l-.022-.694zm2.172-.07l.023.695l-1.737.055l-.022-.694zm2.173-.07l.022.695l-1.736.056l-.022-.695zm54.006-1.22l1.093 1.351l-.54.437l-1.093-1.35zm-110.517-.288l.54.437l-1.093 1.35l-.54-.437zm-32.691-.939l.62.315l-.788 1.549l-.619-.315zm175.508-.397l.787 1.549l-.62.315l-.786-1.549zm-33.667-.065l1.093 1.35l-.54.438l-1.093-1.35zm-107.783-.288l.54.437l-1.093 1.35l-.54-.437zm-33.073-1.188l.62.315l-.788 1.549l-.62-.315zm139.489-.213l1.092 1.35l-.54.437l-1.092-1.35zm34.05-.183l.786 1.548l-.619.315l-.787-1.549zm-139.099-.106l.54.437l-1.093 1.35l-.54-.437zm103.5-1.287l1.228 1.229l-.49.491l-1.23-1.228zm-136.956-.148l.62.315l-.787 1.548l-.62-.314zm35.037-.11l.492.49l-1.229 1.229l-.491-.492zm136.533-.287l.787 1.549l-.62.314l-.787-1.548zm-36.15-.991l1.228 1.228l-.492.491l-1.228-1.228zm-98.846-.26l.492.492L78 79.203l-.491-.491zm-35.422-.237l.582.38l-.95 1.455l-.581-.38zm169.225-.372l.949 1.455l-.582.38l-.95-1.456zm-36.495-.668l1.229 1.228l-.492.491l-1.228-1.228zm-95.77-.26l.49.492l-1.228 1.228l-.491-.491zm-35.773-.52l.582.38l-.949 1.455l-.582-.38zm166.85-.373l.95 1.455l-.582.38l-.95-1.455zm-36.95-.318l.949.776l.386.386l-.491.492l-.36-.363l-.923-.753zm-92.466-.239l.44.538l-1.343 1.101l-.44-.537zm-36.247-.89l.582.379l-.949 1.455l-.582-.38zm164.476-.373l.95 1.455l-.583.38l-.949-1.456zm-37.447.128l1.346 1.098l-.44.538l-1.346-1.098zm-89.102-.243l.441.538l-1.343 1.101l-.44-.537zm87.418-1.131l1.346 1.098l-.44.538l-1.346-1.098zm-124.157-.202l.582.38l-.95 1.455l-.581-.38zm38.42-.045l.44.537l-1.343 1.102l-.44-.537zm123.681-.328l.949 1.455l-.582.38l-.949-1.455zm-39.629-.8l1.346 1.099l-.439.538l-1.346-1.098zm-82.29-.206l.376.584l-.292.188l-.288.183l-.78.64l-.44-.537l.812-.664zm-38.995-.442l.582.38l-.95 1.455l-.581-.38zm159.673-.377l.219.27l.052.068l.732 1.122l-.582.38l-.711-1.094l-.25-.31zm-40.258-.155l1.454.95l-.38.581l-1.454-.949zm-78.593-.204l.376.584l-1.46.942l-.376-.584zm-39.44-.986l.54.437l-1.09 1.351l-.541-.436zm116.212.002l1.455.95l-.38.582l-1.454-.95zm40.714-.348l1.091 1.351l-.54.437l-1.092-1.352zm-115.66.155l.377.584l-1.46.941l-.377-.584zm73.126-.994l1.455.949l-.38.582l-1.455-.95zm-71.299-.184l.377.584l-1.46.941l-.377-.584zm-41.727-.322l.54.437l-1.091 1.351l-.54-.436zm154.195-.346l1.09 1.351l-.54.437l-1.091-1.352zm-43.104-.209l1.543.798l-.319.617l-1.543-.798zm-67.413-.153l.319.618l-1.543.798l-.32-.618zm-42.313-.983l.54.437l-1.09 1.351l-.541-.436zm107.796.138l1.543.798l-.32.617l-1.542-.798zm43.668-.484l1.091 1.351l-.54.437l-1.092-1.352zm-107.22.33l.318.618l-1.542.798l-.32-.617zM158.041 64l1.543.798l-.319.617l-1.543-.798zm-59.691-.153l.319.617l-1.543.799l-.32-.618zm-44.809-.677l.541.437l-1.091 1.351l-.54-.436zm148.734-.346l1.091 1.351l-.54.437l-1.092-1.351zm-46.237.245l.794.306l.822.425l-.32.617l-.785-.41l-.76-.29zm-55.67-.12l.248.65l-1.033.393l-.527.272l-.319-.617l.562-.288zm53.64-.657l1.623.62l-.249.65l-1.622-.62zm-51.61-.119l.248.65l-1.622.62l-.248-.65zm-47.425-.684l.491.491l-.246.246l-.098.096l-.764.945l-.54-.436l.788-.973zm145.835-.315l.709.711l.483.6l-.54.436l-.46-.572l-.683-.683zm-48.83.342l1.623.62l-.249.65l-1.622-.621zm-47.55-.12l.248.65l-1.622.62l-.248-.649zm45.52-.657l1.623.62l-.249.65l-1.622-.62zm-43.49-.119l.248.65l-1.622.62l-.248-.65zm-49.948-.668l.49.491l-1.227 1.229l-.492-.492zm142.761-.315l1.229 1.229l-.492.491l-1.228-1.228zm-51.46.534l1.68.442l-.176.672l-1.68-.442zm-39.206-.085l.177.672l-1.68.442l-.177-.672zm37.105-.469l1.68.443l-.177.672l-1.68-.443zm-35.003-.084l.177.672l-1.68.442l-.177-.672zm32.901-.469l1.68.442l-.177.672l-1.68-.442zm-85.562-.649l.492.492l-1.229 1.228l-.49-.491zm54.763.565l.177.672l-1.68.442l-.177-.672zm84.926-.88l1.228 1.229l-.491.491l-1.229-1.228zm-56.29.532l1.286.202l.455.12l-.177.671l-.42-.112l-1.251-.195zm-26.465-.051l.107.686l-1.717.267l-.107-.687zm24.317-.283l1.716.267l-.106.686l-1.717-.267zm-22.17-.051l.107.686l-1.716.267l-.107-.686zm20.022-.283l1.717.267l-.107.686l-1.717-.266zm-17.874-.051l.107.687l-1.717.266l-.106-.686zm-59.692-1.035l.492.492l-1.229 1.228l-.491-.491zm75.378.794l.475.026l1.282.199l-.107.687l-1.246-.196l-.44-.022zm-13.495-.017l.036.693l-.736.036l-.953.149l-.107-.687l.99-.152zm11.325-.095l1.735.09l-.036.693l-1.735-.089zm-9.154-.017l.036.694l-1.735.09l-.036-.695zm72.56-.98l1.23 1.229l-.492.491l-1.229-1.228zm-65.577.886l1.735.089l-.036.694l-1.734-.09zm-4.812-.017l.035.694l-1.735.089l-.035-.694zm2.642-.094l1.734.089l-.035.694l-1.735-.09zm-.472-.017l.036.694l-1.735.089l-.036-.694zm-66.858-1.98l.491.492l-1.228 1.228l-.491-.491zm133.54-.314l1.23 1.228l-.492.491l-1.228-1.228zm-131.9-1.163l.437.541l-.805.647l-.472.472l-.491-.491l.5-.497zm130.23-.28l1.35 1.092l-.436.54l-1.351-1.09zM64.451 52.499l.437.54l-1.352 1.092l-.436-.54zm126.847-.28l1.352 1.092l-.437.54l-1.351-1.091zM66.143 51.132l.437.541l-1.352 1.091l-.436-.54zm123.465-.28l1.352 1.092l-.437.54l-1.351-1.09zM67.834 49.768l.437.54l-1.352 1.092l-.436-.54zm120.083-.28l1.352 1.092l-.437.54l-1.351-1.091zM69.525 48.401l.437.541l-1.352 1.091l-.437-.54zm116.701-.28l1.352 1.092l-.437.54l-1.351-1.09zM71.342 47.15l.38.582l-1.455.949l-.38-.582zm113.04-.244l1.456.95l-.38.581l-1.455-.949zm-111.22-.944l.38.582l-1.455.95l-.38-.583zm109.4-.243l1.455.95l-.38.581l-1.454-.949zm-107.579-.944l.38.582l-1.455.949l-.38-.582zm105.759-.243l1.455.949l-.38.582l-1.455-.95zm-103.938-.944l.38.582l-1.456.949l-.38-.582zm102.117-.243l1.455.949l-.38.582l-1.454-.95zM78.624 42.4l.38.583l-1.455.948l-.38-.582zm98.42-.22l.31.158l.122.064l1.08.704l-.38.582l-1.047-.685l-.4-.203zm-96.45-.783l.315.62l-1.549.787l-.314-.62zm94.513-.201l1.548.787l-.314.62l-1.55-.788zm-92.575-.783l.315.62l-1.55.786l-.314-.62zm90.637-.202l1.549.787l-.315.62l-1.549-.788zm-88.7-.783l.315.62l-1.548.787l-.315-.62zm86.763-.202l1.548.787l-.315.62l-1.548-.787zm-84.825-.783l.315.62l-1.549.787l-.315-.62zm82.887-.201l1.549.787l-.315.62l-1.549-.788zm-80.892-.743l.249.649l-.504.19l-1.036.527l-.315-.62l1.069-.54zm78.878-.16l.986.38l.639.325l-.315.62l-.606-.31l-.953-.365zm-76.848-.617l.248.649l-1.622.62l-.248-.648zm74.818-.16l1.622.622l-.248.649l-1.622-.621zm-72.788-.617l.248.649l-1.622.62l-.249-.648zm70.758-.16l1.623.622l-.249.649l-1.622-.621zm-68.729-.617l.249.649l-1.622.62l-.249-.648zm66.7-.16l1.622.622l-.249.649l-1.622-.621zm-64.67-.617l.249.649l-1.623.62l-.248-.648zm62.64-.16l1.622.622l-.248.649l-1.623-.621zm-60.537-.513l.177.672l-1.058.277l-.566.217l-.248-.65l.6-.227zm58.42-.114l1.68.444l-.178.672l-1.68-.444zm-56.319-.441l.178.672l-1.68.443l-.177-.672zm54.217-.114l1.68.444l-.178.672l-1.68-.444zm-52.115-.441l.177.672l-1.68.443l-.177-.672zm50.014-.114l1.68.444l-.178.671l-1.68-.443zm-47.913-.441l.177.671l-1.68.444l-.177-.672zm45.811-.114l1.68.444l-.177.671l-1.68-.443zm-43.71-.441l.178.671l-1.68.444l-.177-.672zm41.61-.114l1.679.444l-.178.671l-1.68-.443zm-39.44-.283l.11.686l-1.716.273l-.109-.686zm37.26-.07l1.715.273l-.11.686l-1.715-.273zm-35.113-.272l.11.686l-1.716.274l-.11-.687zm32.966-.07l1.716.273l-.11.687l-1.715-.274zm-30.82-.272l.11.687l-1.716.273l-.109-.686zm28.674-.07l1.715.274l-.11.686l-1.715-.273zm-26.527-.271l.11.686l-1.716.273l-.11-.686zm24.38-.07l1.716.273l-.11.686l-1.715-.273zm-22.234-.272l.11.686l-1.716.273l-.11-.686zm20.045-.016l.58.031l1.178.188l-.109.686l-1.141-.184l-.544-.027zm-17.836-.089l.035.694l-1.735.089l-.035-.694zm15.665-.022l1.735.088l-.035.694l-1.735-.088zm-13.495-.089l.036.694l-1.735.09l-.035-.695zm11.325-.022l1.735.088l-.036.694l-1.735-.088zm-9.154-.088l.036.694l-1.735.088l-.036-.694zm6.983-.023l1.735.088l-.035.694l-1.735-.088zm-4.812-.088l.035.694l-1.735.088l-.035-.694zm2.641-.023l1.735.089l-.035.694l-1.735-.09zm-1.08-.055l.645.033l-.036.694l-.61-.033l-1.09.055l-.035-.694z&#34;/&gt;&lt;g fill-opacity=&#34;0.56&#34;&gt;&lt;path fill=&#34;#004cff&#34; d=&#34;m128.011 128.003l26.82-8.538l.037.075l.113.376l.038.188l.113.376l.037.188l.113.377l.151.601l.112.527l.113.602l.076.451l.037.188l.038.376v.188l.075.452v.188l.038.376l.037.188l.038.376l.037.264v.263l.038.376v1.73h-27.835z&#34;/&gt;&lt;path fill=&#34;#ceff29&#34; d=&#34;m128.011 128.003l30.168-78.84l1.504.564l1.505.602l.225.113l1.204.526l.226.113l1.429.677l1.655.828l1.129.602l.451.263l.94.489l.452.263l1.128.64l.226.15l1.354.828l1.354.827l.226.151l1.128.752l.226.15l1.316.903l1.317.903l.226.15l1.053.753l.376.3l.828.64l.376.376l.376.376l-52.097 65.337z&#34;/&gt;&lt;path fill=&#34;#ff6800&#34; d=&#34;M128.011 128.003L55.904 41.602l1.655-1.354l2.069-1.655l1.279-.94l.376-.301l1.279-.941l.865-.602l.865-.601l.865-.602l.865-.602l1.317-.865l.451-.301l1.354-.828l.452-.263l1.88-1.128l1.881-1.054l2.332-1.278l1.43-.753l.489-.225l1.88-.941l1.881-.903l2.445-1.053l1.505-.602l.489-.188l1.956-.752l1.993-.752l2.52-.865l1.505-.489l.489-.151l2.031-.602l2.031-.564l2.558-.677l1.505-.376l.526-.113l24.826 108.631z&#34;/&gt;&lt;path fill=&#34;#ffc400&#34; d=&#34;m128.011 128.003l-96.895 17.566l-.113-.601l-.188-1.204l-.188-1.241l-.075-.602l-.151-1.242l-.075-.601l-.151-1.242l-.075-.602l-.188-1.88l-.15-1.881l-.113-1.881l-.038-.602l-.037-1.241v-.602l-.038-1.241v-3.686l.038-1.242l.037-.601l.075-1.242l.076-1.241v-.602l.113-1.241l.075-.602l.113-1.241l.15-1.241l.075-.602l.151-1.242l.075-.601l.188-1.242l.113-.602l.376-1.88l.376-1.806l.376-1.805l.151-.602l.301-1.204l.15-.602l.301-1.203l.151-.602l.376-1.204l.376-1.203l.188-.602l.376-1.129l.188-.602l.376-1.128l.376-1.128l.226-.565l.376-1.128l.226-.564l.451-1.129l.226-.564l.752-1.73l.753-1.693l.752-1.693l.263-.564l87.831 42.279z&#34;/&gt;&lt;path fill=&#34;#29ffce&#34; d=&#34;M128.011 128.003L81.52 159.675l-.188-.301l-.452-.677l-.188-.301l-.376-.602l-.226-.376l-.376-.602l-.226-.376l-.301-.527l-.263-.451l-.301-.527l-.263-.451l-.263-.451l-.301-.565l-.226-.489l-.263-.564l50.178-24.186z&#34;/&gt;&lt;path fill=&#34;#7dff7a&#34; d=&#34;m128.011 128.003l11.774 69.362l-1.354.226h-.264l-1.128.15l-.263.038l-1.129.113h-.263l-1.128.112l-.264.038l-1.128.075h-.264l-1.128.075h-.564l-.828.038h-4.137l-1.129-.038h-.263l-1.129-.075h-.263l-1.128-.075l-.565-.038l-.564-.037h-.827l-.828-.113l-.564-.075l-.828-.113h-.564l-.827-.113l-.527-.075l-.827-.151l-.527-.113l-.828-.15l-.526-.113l-1.129-.226l15.498-67.894z&#34;/&gt;&lt;path fill=&#34;#ff6800&#34; d=&#34;m128.011 128.003l88.621 69.4l-1.317 1.655l-1.504 1.88l-1.392 1.618l-1.58 1.768l-1.504 1.504l-1.655 1.693l-1.505 1.504l-1.73 1.656l-1.58 1.429l-1.806 1.58l-1.617 1.354l-1.241 1.015l-69.437-87.191z&#34;/&gt;&lt;/g&gt;&lt;path d=&#34;m155.438 119.255l-.282-.563l-28.446 9.057l1.296 1.08h28.703v-2.368l-.04-.44l.002-.2l-.044-.353l-.034-.35l-.047-.249l-.028-.314l.003-.125l-.009-.105l-.067-.396v-.139l-.04-.44l-.047-.249l-.072-.431l-.115-.614l-.116-.543l-.155-.623l-.12-.405l-.024-.13l-.127-.434l-.023-.13l-.128-.434zm-1.034 1.013l.117.395l.023.13l.127.435l.143.573l.108.506l.11.585l.072.439l.042.208l.028.315l-.003.124l.008.105l.067.401v.134l.04.44l.048.25l.028.314l.04.29l-.006.173l.041.44l-.003 1.029h-23.91z&#34;/&gt;&lt;path d=&#34;m159.92 49.135l-2.111-.791l-30.393 79.431l1.157.528l.272-.51l52.417-65.739l-1.155-1.155l-.889-.693l-.368-.294l-1.08-.773l-.243-.163l-2.626-1.8l-1.587-1.058l-2.73-1.669l-.204-.137l-1.168-.663l-.444-.26l-.968-.504l-.424-.248l-1.15-.614l-1.67-.835l-1.441-.683l-.214-.107l-1.233-.54l-.196-.1zm-1.374.847l.913.342l1.491.597l.178.09l1.233.541l.196.1l1.442.682l1.642.822l1.114.594l.43.251l.968.504l.424.249l1.135.643l.187.126l2.73 1.669l1.558 1.04l2.626 1.8l.232.156l1.037.74l.348.28l.836.646l.289.295l-49.343 61.882z&#34;/&gt;&lt;path d=&#34;M128.367 126.763L103.403 17.526l-1.141.245l-1.526.38l-2.566.68l-2.039.566l-2.042.605l-.495.152l-1.514.492l-2.53.869l-2.012.759l-2.449.941l-1.512.605l-2.46 1.06l-1.905.914l-1.89.944l-.471.218l-1.46.766l-2.34 1.285l-1.887 1.056l-1.897 1.138l-.444.259l-1.366.834l-.472.314l-1.313.863l-3.475 2.417l-1.292.95l-.397.317l-1.258.924l-2.09 1.671l-2.158 1.766l74.27 88.992zM102.44 19.038l24.338 106.494l-69.973-83.845l1.157-.946l2.063-1.65l1.259-.925l.396-.317l1.259-.924l3.447-2.398l1.302-.855l.455-.304l1.333-.814l.44-.256l1.888-1.133l1.864-1.043l2.327-1.277l1.42-.747l.46-.21l1.898-.95l1.871-.898l2.422-1.042l1.489-.596l2.437-.937l1.99-.751l2.502-.859l1.494-.485l.48-.148l2.025-.6l2.02-.56l2.55-.676z&#34;/&gt;&lt;path d=&#34;m127.353 127.039l-88.38-42.545l-.536 1.149l-1.51 3.396l-.754 1.735l-.91 2.274l-.39 1.164l-.212.529l-.765 2.292l-.192.613l-.372 1.117l-.944 3.02l-1.064 4.25l-.758 3.635l-.377 1.885l-.114.61l-.192 1.263l-.454 3.705l-.115 1.26l-.073.58l-.115 1.264l-.002.66l-.187 3.044l-.039 1.261v3.706l.038 1.26v.583l.038 1.26l.15 2.502l.152 1.894l.19 1.893l.528 4.304l.19 1.257l.189 1.207l.232 1.244l99.644-18.065zm-87.77-40.837l86.294 41.54l-94.252 17.087l-.181-1.164l-.188-1.238l-.448-3.667l-.076-.605l-.186-1.865l-.15-1.868l-.15-2.471l-.036-1.221v-.583l-.038-1.26v-3.667l.038-1.222l.187-3.065l.001-.64l.11-1.184l.074-.58l.115-1.263l.223-1.822l.15-1.244l.076-.6l.186-1.224l.109-.58l.374-1.873l.752-3.606l1.047-4.189l.93-2.973l.373-1.117l.192-.613l.749-2.246l.212-.529l.39-1.164l.89-2.221l.744-1.713z&#34;/&gt;&lt;path d=&#34;m127.76 127.417l-.527.226l-50.77 24.471l.753 1.622l.318.597l.538.924l.298.521l.266.457l.298.521l.233.388l.382.612l.22.366l.57.913l.462.693l.529.847l47.04-32.045zm-7.033 4.776L81.7 158.78l-.29-.437l-.554-.887l-.22-.366l-.382-.612l-.22-.366l-.294-.515l-.266-.456l-.298-.522l-.53-.907l-.288-.543l-.208-.455z&#34;/&gt;&lt;path d=&#34;m140.52 197.889l-12.207-71.915l-1.286 2.572l-.051.143l-15.643 68.533l1.77.354l.518.111l.847.155l.507.109l.847.154l.551.079l.832.113l.65.006l.741.107l1.392.188l.914.006l2.214.15h.306l1.086.074l.306.002l1.107.037h4.159l.856-.038h.535l1.171-.076l.221.002l1.171-.077l.311-.043l1.102-.11l.2.004l1.192-.116l.29-.041l1.122-.15l.18.006l.104-.009zm-12.697-67.184l11.225 66.136l-.673.112h-.208l-1.213.156l-.269.039l-1.102.11l-.2-.004l-1.192.116l-.29.041l-1.08.07l-.221-.001l-1.171.076l-.522-.001l-.856.038h-4.109l-1.107-.038h-.285l-1.086-.074l-.305-.001l-2.215-.15h-.87l-.741-.108l-1.392-.188l-.65-.006l-1.264-.181l-.804-.147l-.507-.109l-.847-.154l-.507-.11l-.496-.098z&#34;/&gt;&lt;path d=&#34;m128.404 127.501l-.874.92l.752.866l69.822 87.675l1.74-1.425l1.624-1.359l1.816-1.588l1.588-1.437l1.743-1.667l1.515-1.514l1.66-1.698l1.5-1.5l1.604-1.794l1.4-1.626l1.518-1.898l1.718-2.16zm3.652 4.478l83.676 65.529l-.916 1.153l-1.504 1.88l-1.377 1.599l-1.572 1.759l-1.48 1.479l-1.66 1.697l-1.5 1.5l-1.72 1.645l-1.566 1.417l-1.798 1.573l-1.607 1.345l-.736.602z&#34;/&gt;&lt;/svg&gt;Matplotlib&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;用 Python 创建静态、动画和交互式可视化。&lt;/div&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>1.3. 算法</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/algorithms/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>1.4 步骤</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/crisp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/crisp/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;CRISP-DM&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;crisp-dm&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#crisp-dm&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;CRISP-DM（CRoss Industry Standard Process for Data Mining）是数据挖掘领域的标准流程框架，被广泛应用于从数据中发现商业价值的系统化方法。以下是其核心要点：&lt;/p&gt;
+&lt;p&gt;&lt;img 
+src=&#34;http://localhost:1313/images/crisp_dm.jpg&#34; 
+alt=&#34;图片描述&#34; 
+style=&#34;width: 80%; border: 1px solid #eee;&#34;
+/&gt;&lt;/p&gt;
+&lt;div class=&#34;steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;1️⃣ 业务/研究理解（定义问题）&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-业务研究理解定义问题&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e4%b8%9a%e5%8a%a1%e7%a0%94%e7%a9%b6%e7%90%86%e8%a7%a3%e5%ae%9a%e4%b9%89%e9%97%ae%e9%a2%98&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。&lt;/li&gt;
+&lt;li&gt;然后，将这些目标和约束转换为数据挖掘问题定义的公式。&lt;/li&gt;
+&lt;li&gt;最后，准备实现这些目标的初步策略。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2️⃣ 数据准备&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-数据准备&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e6%95%b0%e6%8d%ae%e5%87%86%e5%a4%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。&lt;/li&gt;
+&lt;li&gt;选择要分析的案例和变量，为分析做好准备工作。&lt;/li&gt;
+&lt;li&gt;如果需要的话，对确定的变量进行转换。&lt;/li&gt;
+&lt;li&gt;对原始数据展开清理工作，为使用建模工具建模打下基础。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;数据准备可以细分如下&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据收集&lt;/li&gt;
+&lt;li&gt;数据初步准备&lt;/li&gt;
+&lt;li&gt;数据预处理&lt;/li&gt;
+&lt;li&gt;数据转换&lt;/li&gt;
+&lt;li&gt;特征构建&lt;/li&gt;
+&lt;li&gt;特征选择&lt;/li&gt;
+&lt;li&gt;降维&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;3️⃣ 数据理解&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-数据理解&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e6%95%b0%e6%8d%ae%e7%90%86%e8%a7%a3&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。&lt;/li&gt;
+&lt;li&gt;然后，评估数据质量。&lt;/li&gt;
+&lt;li&gt;最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;4️⃣ 建模阶段&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;4-建模阶段&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-%e5%bb%ba%e6%a8%a1%e9%98%b6%e6%ae%b5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;选择并应用适当的建模技术。&lt;/li&gt;
+&lt;li&gt;校准模型设置以优化结果。&lt;/li&gt;
+&lt;li&gt;通常，对同一个数据挖掘问题坑你要应用多种不同的技术。&lt;/li&gt;
+&lt;li&gt;可能需要返回数据准备阶段，以便使用数据形式能够符合特定数据挖掘技术对数据的特定需求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;5️⃣ 评估阶段&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;5-评估阶段&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#5-%e8%af%84%e4%bc%b0%e9%98%b6%e6%ae%b5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;建模阶段将发布一个或多个模型。在将这些模型部署到现场进行使用前，对模型质量和效果开展评估工作。&lt;/li&gt;
+&lt;li&gt;同时要确认模型是否能完成阶段1设定的目标。&lt;/li&gt;
+&lt;li&gt;确认业务或研究问题的重要组成部分是否未被清楚的解释。&lt;/li&gt;
+&lt;li&gt;最后，做出有关是否使用数据挖掘结果的决定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;6️⃣ 部署阶段&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;6-部署阶段&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#6-%e9%83%a8%e7%bd%b2%e9%98%b6%e6%ae%b5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;建立了模型并不意味着项目已经完成。需要应用已建立的模型。&lt;/li&gt;
+&lt;li&gt;简单部署实例：建立报表。&lt;/li&gt;
+&lt;li&gt;复杂一些的部署实例：在其他部门实现并行数据挖掘过程。&lt;/li&gt;
+&lt;li&gt;对商业应用来说，客户通常会基于建立的模型开展部署工作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;📝&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;p&gt;参考网址\书籍：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;《数据挖掘与预测分析》 Daniel T. Larose，Chantal D. Larose&lt;/li&gt;
+&lt;li&gt;官方文档： &lt;a href=&#34;https://www.datascience-pm.com/crisp-dm-2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.datascience-pm.com/crisp-dm-2/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>1.5. 自动 ML</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/automl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/automl/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;hextra-jupyter-code-cell hextra-scrollbar&#34;&gt;&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>1.6. 大数据集</title>
+      <link>http://localhost:1313/documentation/ai/end_to_end/large_datasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/ai/end_to_end/large_datasets/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
