@@ -14,7 +14,7 @@
   <meta name="description" content="1. 什么是范式？ 王珊的《数据库系统概论》中的定义，范式是“符合某一种级别的关系模式的集合，表示一个关系内部各属性之间的联系的合理化程度”。
 简单说就是 数据表结构符合某种设计标准的级别。 2. 范式特点 范式级别越高，表设计越标准、规范化；（数据冗余更少；数据一致性更强；依赖关系更合理） 高级别范式必定符合低级别范式要求(如符合2NF必定符合1NF)； 常见范式有1NF、2NF、3NF、BCNF、4NF、5NF； 零范式：数据中不存在重复数据； 一范式：在零范式的基础上，加上关系中的 每个属性（字段）都不可再分（原子性）； 3. 常见范式 3.1. 零范式 零范式：数据中不存在重复数据。 学生成绩记录 1001,张三,CS101,90 1002,李四,MATH202,85 1003,王五,PHYS101,92 1004,赵六,CHEM304,88 3.2. 一范式 一范式：在零范式的基础上，加上关系中的每个属性（字段）都不可再分（原子性）
 在零范式的基础上 加上关系中的每个属性（字段）都不可再分（原子性） 这个条件后便形成了符合一范式的表。
-1NF是所有关系型数据库的最基本要求。 学号 姓名 课程编号 课程名称 成绩 教师 1001 张三 CS101 数据库 90 王老师 1001 张三 MATH202 高等数学 85 李老师 1002 李四 CS101 数据库 88 王老师 1002 李四 CS101 python 98 张老师 一范式（1NP）存在的问题：" /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/" itemprop="url" />
+1NF是所有关系型数据库的最基本要求。 学号 姓名 课程编号 课程名称 成绩 教师 1001 张三 CS101 数据库 90 王老师 1001 张三 MATH202 高等数学 85 李老师 1002 李四 CS101 数据库 88 王老师 1002 李四 CS102 python 98 张老师 一范式（1NP）存在的问题：" /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/" itemprop="url" />
 
 <meta property="og:title" content="3.1. 范式" />
 <meta property="og:description" content="1. 什么是范式？
@@ -124,7 +124,7 @@
       
           1002
           李四
-          CS101
+          CS102
           python
           98
           张老师
@@ -141,14 +141,14 @@
   <meta itemprop="description" content="1. 什么是范式？ 王珊的《数据库系统概论》中的定义，范式是“符合某一种级别的关系模式的集合，表示一个关系内部各属性之间的联系的合理化程度”。
 简单说就是 数据表结构符合某种设计标准的级别。 2. 范式特点 范式级别越高，表设计越标准、规范化；（数据冗余更少；数据一致性更强；依赖关系更合理） 高级别范式必定符合低级别范式要求(如符合2NF必定符合1NF)； 常见范式有1NF、2NF、3NF、BCNF、4NF、5NF； 零范式：数据中不存在重复数据； 一范式：在零范式的基础上，加上关系中的 每个属性（字段）都不可再分（原子性）； 3. 常见范式 3.1. 零范式 零范式：数据中不存在重复数据。 学生成绩记录 1001,张三,CS101,90 1002,李四,MATH202,85 1003,王五,PHYS101,92 1004,赵六,CHEM304,88 3.2. 一范式 一范式：在零范式的基础上，加上关系中的每个属性（字段）都不可再分（原子性）
 在零范式的基础上 加上关系中的每个属性（字段）都不可再分（原子性） 这个条件后便形成了符合一范式的表。
-1NF是所有关系型数据库的最基本要求。 学号 姓名 课程编号 课程名称 成绩 教师 1001 张三 CS101 数据库 90 王老师 1001 张三 MATH202 高等数学 85 李老师 1002 李四 CS101 数据库 88 王老师 1002 李四 CS101 python 98 张老师 一范式（1NP）存在的问题：">
-  <meta itemprop="wordCount" content="62">
+1NF是所有关系型数据库的最基本要求。 学号 姓名 课程编号 课程名称 成绩 教师 1001 张三 CS101 数据库 90 王老师 1001 张三 MATH202 高等数学 85 李老师 1002 李四 CS101 数据库 88 王老师 1002 李四 CS102 python 98 张老师 一范式（1NP）存在的问题：">
+  <meta itemprop="wordCount" content="175">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="3.1. 范式">
   <meta name="twitter:description" content="1. 什么是范式？ 王珊的《数据库系统概论》中的定义，范式是“符合某一种级别的关系模式的集合，表示一个关系内部各属性之间的联系的合理化程度”。
 简单说就是 数据表结构符合某种设计标准的级别。 2. 范式特点 范式级别越高，表设计越标准、规范化；（数据冗余更少；数据一致性更强；依赖关系更合理） 高级别范式必定符合低级别范式要求(如符合2NF必定符合1NF)； 常见范式有1NF、2NF、3NF、BCNF、4NF、5NF； 零范式：数据中不存在重复数据； 一范式：在零范式的基础上，加上关系中的 每个属性（字段）都不可再分（原子性）； 3. 常见范式 3.1. 零范式 零范式：数据中不存在重复数据。 学生成绩记录 1001,张三,CS101,90 1002,李四,MATH202,85 1003,王五,PHYS101,92 1004,赵六,CHEM304,88 3.2. 一范式 一范式：在零范式的基础上，加上关系中的每个属性（字段）都不可再分（原子性）
 在零范式的基础上 加上关系中的每个属性（字段）都不可再分（原子性） 这个条件后便形成了符合一范式的表。
-1NF是所有关系型数据库的最基本要求。 学号 姓名 课程编号 课程名称 成绩 教师 1001 张三 CS101 数据库 90 王老师 1001 张三 MATH202 高等数学 85 李老师 1002 李四 CS101 数据库 88 王老师 1002 李四 CS101 python 98 张老师 一范式（1NP）存在的问题：">
+1NF是所有关系型数据库的最基本要求。 学号 姓名 课程编号 课程名称 成绩 教师 1001 张三 CS101 数据库 90 王老师 1001 张三 MATH202 高等数学 85 李老师 1002 李四 CS101 数据库 88 王老师 1002 李四 CS102 python 98 张老师 一范式（1NP）存在的问题：">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -1047,7 +1047,7 @@
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#33">3.3.
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#33-%e4%ba%8c%e8%8c%83%e5%bc%8f">3.3. 二范式
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -1186,17 +1186,199 @@
       <tr>
           <td>1002</td>
           <td>李四</td>
-          <td>CS101</td>
+          <td>CS102</td>
           <td>python</td>
           <td>98</td>
           <td>张老师</td>
       </tr>
   </tbody>
 </table>
-<p>一范式（1NP）存在的问题：</p>
+<p><em><strong>一范式（1NP）存在的问题：</strong></em></p>
+<ol>
+<li><em><strong>数据冗余</strong></em>：相同信息在多个行中重复存储，特别是当存在部分依赖时。如，学生姓名、课程名称和教师信息被重复存储；</li>
+<li><em><strong>更新异常</strong></em>：修改一处信息需要更新多处，容易造成数据不一致。如，如果&quot;数据库&quot;课程改名为&quot;数据库系统&quot;，需要更新所有相关行；</li>
+<li><em><strong>插入异常</strong></em>：无法单独插入某些信息，必须依赖主键完整信息。如，无法单独添加一个新课程（没有学生选修时）；</li>
+<li><em><strong>删除异常</strong></em>：删除某些信息会导致连带删除有用信息。如，删除最后一个选修某课程的学生记录会连带删除该课程信息；</li>
+<li><em><strong>空间浪费</strong></em>：固定长度字段可能浪费空间，变长字段管理开销大；</li>
+</ol>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">ℹ️</div></div>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">1NF虽然消除了0NF的非原子值问题，但仍需进一步规范化以减少数据冗余和维护异常。</div>
+  </div>
+</div>
+
 <br>
-<h3>3.3.<span class="hx-absolute -hx-mt-20" id="33"></span>
-    <a href="#33" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<h3>3.3. 二范式<span class="hx-absolute -hx-mt-20" id="33-二范式"></span>
+    <a href="#33-%e4%ba%8c%e8%8c%83%e5%bc%8f" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300">
+  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"></div>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">二范式：在 1NF 基础上，<em><strong>消除了非主属性对码的部分依赖</strong></em>。<br>
+<em><strong>确保每一列都和主键完全相关，而不能只与主键的某一部分相关</strong></em>。</div>
+  </div>
+</div>
+
+<p>如下表满足1NF，但存在如下问题，可以将表分解为多个表，消除部分依赖：</p>
+<ul>
+<li><em><strong>部分依赖</strong></em>（姓名和系别只依赖于学号）</li>
+<li><em><strong>数据冗余</strong></em>（同一个学生的姓名和系别信息重复存储），</li>
+<li><em><strong>更新异常</strong></em>（修改学生系别需要更新多行） 等问题。</li>
+<li>&hellip;&hellip;</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>学号</th>
+          <th>姓名</th>
+          <th>课程编号</th>
+          <th>课程名称</th>
+          <th>成绩</th>
+          <th>教师</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1001</td>
+          <td>张三</td>
+          <td>CS101</td>
+          <td>数据库</td>
+          <td>90</td>
+          <td>王老师</td>
+      </tr>
+      <tr>
+          <td>1001</td>
+          <td>张三</td>
+          <td>MATH202</td>
+          <td>高等数学</td>
+          <td>85</td>
+          <td>李老师</td>
+      </tr>
+      <tr>
+          <td>1002</td>
+          <td>李四</td>
+          <td>CS101</td>
+          <td>数据库</td>
+          <td>88</td>
+          <td>王老师</td>
+      </tr>
+      <tr>
+          <td>1002</td>
+          <td>李四</td>
+          <td>CS102</td>
+          <td>python</td>
+          <td>98</td>
+          <td>张老师</td>
+      </tr>
+  </tbody>
+</table>
+<p>将原表拆分为3个表，确保 <em><strong>每个非主键属性完全依赖于主键</strong></em>：转换为2NF（2NF在1NF的基础之上，消除了非主属性对于码的部分函数依赖）</p>
+<ol>
+<li>学生表（Student），主键：学号，存储学生信息（仅依赖于学号）；</li>
+<li>课程表（Course），主键：课程编号，存储课程信息（仅依赖于课程编号）；</li>
+<li>选课表（Enrollment），主键：(学号, 课程编号)，存储学生选课及成绩（完全依赖于主键）；</li>
+</ol>
+<br>
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div style="flex: 17%; padding: 10px; box-sizing: border-box; text-align: center;"> 
+<table>
+  <thead>
+      <tr>
+          <th>学号</th>
+          <th>姓名</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1001</td>
+          <td>张三</td>
+      </tr>
+      <tr>
+          <td>1002</td>
+          <td>李四</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  <div style="flex: 30%; padding: 10px; box-sizing: border-box; text-align: center;">
+<table>
+  <thead>
+      <tr>
+          <th>课程编号</th>
+          <th>课程名称</th>
+          <th>教师</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CS101</td>
+          <td>数据库</td>
+          <td>王老师</td>
+      </tr>
+      <tr>
+          <td>MATH202</td>
+          <td>高等数学</td>
+          <td>李老师</td>
+      </tr>
+      <tr>
+          <td>CS102</td>
+          <td>Python</td>
+          <td>张老师</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  <div style="flex: 30%; padding: 10px; box-sizing: border-box; text-align: center;">
+<table>
+  <thead>
+      <tr>
+          <th>学号</th>
+          <th>课程编号</th>
+          <th>成绩</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1001</td>
+          <td>CS101</td>
+          <td>90</td>
+      </tr>
+      <tr>
+          <td>1001</td>
+          <td>MATH202</td>
+          <td>85</td>
+      </tr>
+      <tr>
+          <td>1002</td>
+          <td>CS101</td>
+          <td>88</td>
+      </tr>
+      <tr>
+          <td>1002</td>
+          <td>CS102</td>
+          <td>98</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  <div style="flex: 30%; padding: 10px; box-sizing: border-box; text-align: center;"></div>
+</div>
+<br>
+<details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
+  <summary class="hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[''] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90">
+    <strong class="hx-text-lg"><font color=Gray face=Georgia size=3><em><strong>函数依赖（Functional Dependency）</strong></em></font></strong>
+  </summary>
+  <div class="hx-p-2 hx-overflow-hidden">
+    <p>在一张表中，在属性（或属性组） $X$ 的值确定的情况下，必定能确定属性 $Y$ 的值，那么就可以说 $Y$ 函数依赖于 $X$ ，写作。类似于函数关系 $y=f(x)$ ，在 $x$ 的值确定的情况下， $y$ 的值一定是确定的。</p>
+<ol>
+<li>学号 → 姓名</li>
+<li>系名 → 系主任</li>
+<li>（学号，课名） → 分数</li>
+</ol>
+  </div>
+</details>
+
         </div>
         <div class="hx-mt-16"></div>
         
