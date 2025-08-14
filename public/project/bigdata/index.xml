@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>数据科学实践 – 数据仓库</title>
+    <title>数据科学实践 – 大数据项目</title>
     <link>http://localhost:1313/project/bigdata/</link>
-    <description>Recent content in 数据仓库 on 数据科学实践</description>
+    <description>Recent content in 大数据项目 on 数据科学实践</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     

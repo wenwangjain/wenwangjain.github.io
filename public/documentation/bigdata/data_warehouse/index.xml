@@ -1,0 +1,148 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 3. 数据仓库</title>
+    <link>http://localhost:1313/documentation/bigdata/data_warehouse/</link>
+    <description>Recent content in 3. 数据仓库 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/documentation/bigdata/data_warehouse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>3.1. 范式</title>
+      <link>http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;1. 什么是范式？&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-什么是范式&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e4%bb%80%e4%b9%88%e6%98%af%e8%8c%83%e5%bc%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;王珊的《数据库系统概论》中的定义，范式是“&lt;em&gt;&lt;strong&gt;符合某一种级别的关系模式的集合，表示一个关系内部各属性之间的联系的合理化程度&lt;/strong&gt;&lt;/em&gt;”。&lt;br&gt;简单说就是 &lt;em&gt;&lt;strong&gt;数据表结构符合某种设计标准的级别&lt;/strong&gt;&lt;/em&gt;。&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;2. 范式特点&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-范式特点&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e8%8c%83%e5%bc%8f%e7%89%b9%e7%82%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;范式级别越高，表设计越标准、规范化；（数据冗余更少；数据一致性更强；依赖关系更合理）&lt;/li&gt;
+&lt;li&gt;高级别范式必定符合低级别范式要求(如符合2NF必定符合1NF)；&lt;/li&gt;
+&lt;li&gt;常见范式有1NF、2NF、3NF、BCNF、4NF、5NF；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+&lt;li&gt;零范式：&lt;em&gt;&lt;strong&gt;数据中不存在重复数据&lt;/strong&gt;&lt;/em&gt;；&lt;/li&gt;
+&lt;li&gt;一范式：在零范式的基础上，加上关系中的 &lt;em&gt;&lt;strong&gt;每个属性（字段）都不可再分（原子性）&lt;/strong&gt;&lt;/em&gt;；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;3. 常见范式&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-常见范式&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e5%b8%b8%e8%a7%81%e8%8c%83%e5%bc%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;3.1. 零范式&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;31-零范式&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#31-%e9%9b%b6%e8%8c%83%e5%bc%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;零范式：&lt;em&gt;&lt;strong&gt;数据中不存在重复数据&lt;/strong&gt;&lt;/em&gt;。&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;学生成绩记录&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1001,张三,CS101,90&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1002,李四,MATH202,85&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1003,王五,PHYS101,92&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1004,赵六,CHEM304,88&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h3&gt;3.2. 一范式&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;32-一范式&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#32-%e4%b8%80%e8%8c%83%e5%bc%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;一范式：在零范式的基础上，加上关系中的&lt;em&gt;&lt;strong&gt;每个属性（字段）都不可再分（原子性）&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在零范式的基础上 &lt;em&gt;&lt;strong&gt;加上关系中的每个属性（字段）都不可再分（原子性）&lt;/strong&gt;&lt;/em&gt; 这个条件后便形成了符合一范式的表。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;1NF是所有关系型数据库的最基本要求&lt;/strong&gt;&lt;/em&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;学号&lt;/th&gt;
+          &lt;th&gt;姓名&lt;/th&gt;
+          &lt;th&gt;课程编号&lt;/th&gt;
+          &lt;th&gt;课程名称&lt;/th&gt;
+          &lt;th&gt;成绩&lt;/th&gt;
+          &lt;th&gt;教师&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1001&lt;/td&gt;
+          &lt;td&gt;张三&lt;/td&gt;
+          &lt;td&gt;CS101&lt;/td&gt;
+          &lt;td&gt;数据库&lt;/td&gt;
+          &lt;td&gt;90&lt;/td&gt;
+          &lt;td&gt;王老师&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1001&lt;/td&gt;
+          &lt;td&gt;张三&lt;/td&gt;
+          &lt;td&gt;MATH202&lt;/td&gt;
+          &lt;td&gt;高等数学&lt;/td&gt;
+          &lt;td&gt;85&lt;/td&gt;
+          &lt;td&gt;李老师&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1002&lt;/td&gt;
+          &lt;td&gt;李四&lt;/td&gt;
+          &lt;td&gt;CS101&lt;/td&gt;
+          &lt;td&gt;数据库&lt;/td&gt;
+          &lt;td&gt;88&lt;/td&gt;
+          &lt;td&gt;王老师&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1002&lt;/td&gt;
+          &lt;td&gt;李四&lt;/td&gt;
+          &lt;td&gt;CS101&lt;/td&gt;
+          &lt;td&gt;python&lt;/td&gt;
+          &lt;td&gt;98&lt;/td&gt;
+          &lt;td&gt;张老师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;一范式（1NP）存在的问题：&lt;/p&gt;
+&lt;br&gt;
+&lt;h3&gt;3.3.&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;33&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#33&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

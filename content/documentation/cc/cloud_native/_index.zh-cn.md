@@ -1,6 +1,6 @@
 ---
-title: 1. 云原生
-weight: 1
+title: 2. 云原生
+weight: 2
 #next: /step1
 prev: /documentation/cc
 editURL: "https://example.com/edit/this/page"

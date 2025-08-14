@@ -6,9 +6,11 @@
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/base/</loc>
   </url><url>
-    <loc>http://localhost:1313/documentation/cc/cloud_native/</loc>
+    <loc>http://localhost:1313/documentation/cc/base/</loc>
   </url><url>
     <loc>http://localhost:1313/project/competition/page_001_test/</loc>
+  </url><url>
+    <loc>http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/markdown/</loc>
   </url><url>
@@ -16,7 +18,7 @@
   </url><url>
     <loc>http://localhost:1313/documentation/ai/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/bigdata/</loc>
+    <loc>http://localhost:1313/project/competition/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/</loc>
   </url><url>
@@ -24,15 +26,19 @@
   </url><url>
     <loc>http://localhost:1313/documentation/ai/deep_learning/</loc>
   </url><url>
+    <loc>http://localhost:1313/documentation/cc/cloud_native/</loc>
+  </url><url>
     <loc>http://localhost:1313/documentation/bigdata/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/competition/</loc>
+    <loc>http://localhost:1313/project/bigdata/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/ai/gai/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/</loc>
+  </url><url>
+    <loc>http://localhost:1313/project/visualization/</loc>
   </url><url>
     <loc>http://localhost:1313/project/</loc>
   </url><url>
@@ -43,8 +49,6 @@
     <loc>http://localhost:1313/documentation/bigdata/data_governance/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/iot/</loc>
-  </url><url>
-    <loc>http://localhost:1313/documentation/bigdata/bi/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/ai/distributed/</loc>
   </url><url>

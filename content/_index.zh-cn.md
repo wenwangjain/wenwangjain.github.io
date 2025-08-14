@@ -64,10 +64,13 @@ width: wide
 
 
   {{< card link="/project/competition" title="数据竞赛"  subtitle="kaggle，阿里天池..." icon="route" >}}
-  {{< card link="/project/bigdata" title="数仓项目" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
+  {{< card link="/project/bigdata" title="大数据项目" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
+  <div></div>
+  <div></div>
+
+  {{< card link="/project/visualization" title="可视化"  subtitle="Python，Datart，观远BI，PowerBI..." icon="data_visualization" >}}
   
-  <div></div>
-  <div></div>
+
 
 {{< /hextra/feature-grid >}}
 

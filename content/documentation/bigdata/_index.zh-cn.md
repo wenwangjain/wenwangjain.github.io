@@ -15,5 +15,4 @@ math: true
 {{< card link="/documentation/bigdata/frame" title="核心框架"  subtitle="简单易用，功能强大丰富。" icon="dack_apache" >}}
 {{< card link="/documentation/bigdata/data_warehouse" title="数据仓库" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
 {{< card link="/documentation/bigdata/data_governance" title="数据治理" subtitle="简单易用，功能强大丰富。" icon="dama" >}}
-{{< card link="/documentation/bigdata/bi" title="BI 可视化"  subtitle="Datart，观远BI，PowerBI..." icon="data_visualization" >}}
 {{< /cards >}}

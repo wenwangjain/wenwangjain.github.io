@@ -11,5 +11,6 @@ math: true
 
 
 {{< cards >}}
+{{< card link="/documentation/cc/base" title="基础知识" subtitle="简单易用，功能强大丰富。" icon="package" >}}
 {{< card link="/documentation/cc/cloud_native" title="云原生" subtitle="简单易用，功能强大丰富。" icon="cloud" >}}
 {{< /cards >}}
