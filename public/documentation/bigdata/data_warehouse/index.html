@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>3. 数据仓库 – 数据科学实践</title>
-  <meta name="description" content=" 范式数据表结构符合某种设计标准的级别。 " /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/" itemprop="url" />
+  <meta name="description" content=" 范式数据表结构符合某种设计标准的级别。 ER 模型实体关系模型（数据库设计的理论基础）。 数仓概述什么是数据仓库？ vs 数据库，OLTP vs OLTP。 数仓架构Lambda &gt; Kappa &gt; 流批一体 &gt; 数据湖。 数仓规范数仓分层，数据域（主题）划分，命名规范。 数仓建模Inmon，kimball，星型，雪花 " /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/" itemprop="url" />
 
 <meta property="og:title" content="3. 数据仓库" />
 <meta property="og:description" content="Modern, responsive, batteries-included Hugo theme for creating beautiful static websites." />
@@ -19,11 +19,11 @@
 <meta property="og:url" content="http://localhost:1313/documentation/bigdata/data_warehouse/" />
 
   <meta itemprop="name" content="3. 数据仓库">
-  <meta itemprop="description" content="范式数据表结构符合某种设计标准的级别。">
-  <meta itemprop="wordCount" content="1">
+  <meta itemprop="description" content="范式数据表结构符合某种设计标准的级别。 ER 模型实体关系模型（数据库设计的理论基础）。 数仓概述什么是数据仓库？ vs 数据库，OLTP vs OLTP。 数仓架构Lambda &gt; Kappa &gt; 流批一体 &gt; 数据湖。 数仓规范数仓分层，数据域（主题）划分，命名规范。 数仓建模Inmon，kimball，星型，雪花">
+  <meta itemprop="wordCount" content="17">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="3. 数据仓库">
-  <meta name="twitter:description" content="范式数据表结构符合某种设计标准的级别。">
+  <meta name="twitter:description" content="范式数据表结构符合某种设计标准的级别。 ER 模型实体关系模型（数据库设计的理论基础）。 数仓概述什么是数据仓库？ vs 数据库，OLTP vs OLTP。 数仓架构Lambda &gt; Kappa &gt; 流批一体 &gt; 数据湖。 数仓规范数仓分层，数据域（主题）划分，命名规范。 数仓建模Inmon，kimball，星型，雪花">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -344,6 +344,46 @@
     href="/documentation/bigdata/data_warehouse/paradigm/"
     
   >3.1. 范式
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/er_model/"
+    
+  >3.2. ER 模型
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/overview/"
+    
+  >3.3. 数仓概述
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/framework/"
+    
+  >3.4. 数仓架构
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/standard/"
+    
+  >3.5. 数仓规范
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/model/"
+    
+  >3.6. 数仓建模
     </a>
               
             </li></ul>
@@ -818,6 +858,46 @@
   >3.1. 范式
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/er_model/"
+    
+  >3.2. ER 模型
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/overview/"
+    
+  >3.3. 数仓概述
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/framework/"
+    
+  >3.4. 数仓架构
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/standard/"
+    
+  >3.5. 数仓规范
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/model/"
+    
+  >3.6. 数仓建模
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col "><a
@@ -911,6 +991,21 @@
 <a
   class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="paradigm"
     ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="1.5em" viewBox="0 0 32 32"><path fill="#0384f4" d="m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464"/><path fill="#82d7ff" d="M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2"/></svg>范式</span><div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">数据表结构符合某种设计标准的级别。</div></a>
+<a
+  class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="er_model"
+    ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="1.5em" viewBox="0 0 32 32"><path fill="#0384f4" d="m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464"/><path fill="#82d7ff" d="M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2"/></svg>ER 模型</span><div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">实体关系模型（数据库设计的理论基础）。</div></a>
+<a
+  class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="overview"
+    ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="1.5em" viewBox="0 0 32 32"><path fill="#0384f4" d="m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464"/><path fill="#82d7ff" d="M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2"/></svg>数仓概述</span><div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">什么是数据仓库？ vs 数据库，OLTP vs OLTP。</div></a>
+<a
+  class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="framework"
+    ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="1.5em" viewBox="0 0 32 32"><path fill="#0384f4" d="m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464"/><path fill="#82d7ff" d="M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2"/></svg>数仓架构</span><div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">Lambda &gt; Kappa &gt; 流批一体 &gt; 数据湖。</div></a>
+<a
+  class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="standard"
+    ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="1.5em" viewBox="0 0 32 32"><path fill="#0384f4" d="m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464"/><path fill="#82d7ff" d="M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2"/></svg>数仓规范</span><div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">数仓分层，数据域（主题）划分，命名规范。</div></a>
+<a
+  class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="model"
+    ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="1.5em" viewBox="0 0 32 32"><path fill="#0384f4" d="m13.844 7.536l-1.288-1.072A2 2 0 0 0 11.276 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H15.124a2 2 0 0 1-1.28-.464"/><path fill="#82d7ff" d="M31.25 14.034a1 1 0 0 0-.285-.034H14.496a1.03 1.03 0 0 0-.996.731l-3.461 12A1.007 1.007 0 0 0 11.035 28h16.469a1.03 1.03 0 0 0 .996-.731l3.461-12a1.007 1.007 0 0 0-.71-1.235ZM15.001 26a1 1 0 0 1-.556-1.832l4.986-3.323l-3.138-3.138a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1-.152 1.54l-6 4A1 1 0 0 1 15 26ZM26 26h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2"/></svg>数仓建模</span><div class="hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2">Inmon，kimball，星型，雪花</div></a>
 </div>
 
 

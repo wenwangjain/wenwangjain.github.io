@@ -1000,5 +1000,1043 @@
       </description>
     </item>
     
+    <item>
+      <title>3.2. ER 模型</title>
+      <link>http://localhost:1313/documentation/bigdata/data_warehouse/er_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/bigdata/data_warehouse/er_model/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;1. 什么是 ER 模型？&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-什么是-er-模型&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e4%bb%80%e4%b9%88%e6%98%af-er-%e6%a8%a1%e5%9e%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;ER (Entity-Relationship) &lt;em&gt;&lt;strong&gt;实体关系模型&lt;/strong&gt;&lt;/em&gt;，是数据库设计的图形化表示方法，由Peter Chen于1976年提出，用于描述现实世界中的数据关系。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;2. 核心三要素&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-核心三要素&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e6%a0%b8%e5%bf%83%e4%b8%89%e8%a6%81%e7%b4%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;实体：数据对象（现实世界中可区分的对象）示例：学生、课程、教师&lt;/li&gt;
+&lt;li&gt;属性：对象的修饰（实体的特征）示例：学号、姓名、成绩&lt;/li&gt;
+&lt;li&gt;关系：实体之间的联系，示例：选课、授课、管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755338047537.jpg&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;3. 实践案例&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-实践案例&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;案例：电商购物系统中，对商品、用户设计 ER 实体关系模型图，表示业务联系，如何实现？&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/image.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755338559804.png&#34; alt=&#34;1755338559804&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;参考网址：&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;参考网址&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%8f%82%e8%80%83%e7%bd%91%e5%9d%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1qv411y7Wv/?spm_id_from=333.337.search-card.all.click&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【入门精讲】数据仓库原理&amp;amp;实战 - 哈喽鹏程&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>3.3. 数仓概述</title>
+      <link>http://localhost:1313/documentation/bigdata/data_warehouse/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/bigdata/data_warehouse/overview/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;1. 为什么要构建数据仓库？&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-为什么要构建数据仓库&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e6%9e%84%e5%bb%ba%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;1.1、历史问题&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;11历史问题&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#11%e5%8e%86%e5%8f%b2%e9%97%ae%e9%a2%98&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;历史数据积存&lt;/strong&gt;&lt;/em&gt;：历史数据使用频率低，堆积在业务库中，导致性能下降。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;数据使用困难&lt;/strong&gt;&lt;/em&gt;：各个部门自己建立独立的抽取系统，导致数据不一致，且使用效率低。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;业务系统常见问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;业务系统的表结构为事务处理性能而优化，有时并不适合查询与分析。&lt;/li&gt;
+&lt;li&gt;某些业务数据由于安全或其他因素不能直接访问；&lt;/li&gt;
+&lt;li&gt;业务系统多，数据格式多元化（如日期、数字格式不统一）；&lt;/li&gt;
+&lt;li&gt;业务系统的列名通常是硬编码，有时仅仅是无意义的字符串，这让编写分析系统更加困难；&lt;/li&gt;
+&lt;li&gt;没有适当的方式将有价值的数据合并进特定应用的数据库。&lt;/li&gt;
+&lt;li&gt;没有适当的位置存储元数据。&lt;/li&gt;
+&lt;li&gt;通常事务处理的优先级比分析系统高，所以如果将分析系统和事务处理运行在同一硬件之上，分析系统往往性能很差。&lt;/li&gt;
+&lt;li&gt;有误用业务数据的风险。&lt;/li&gt;
+&lt;li&gt;用户需要看到的显示数据字段，有时在数据库中并不存在。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;业务系统版本问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;业务系统的版本变更很频繁，每次变更都需要重写分析系统并重新测试；&lt;/li&gt;
+&lt;li&gt;数据来源于多个业务系统版本的报表，很难建立和维护；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h3&gt;1.2、业务驱动因素&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;12业务驱动因素&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12%e4%b8%9a%e5%8a%a1%e9%a9%b1%e5%8a%a8%e5%9b%a0%e7%b4%a0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;决策支持：&lt;/strong&gt;&lt;/em&gt; 公司业务对于数据的实时性越来越迫切，需要有实时数据来辅助完成决策。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;合规需求：&lt;/strong&gt;&lt;/em&gt; 随着数据监管法规（如 GDPR、CCPA、《数据安全法》）的加强，企业必须确保数据的准确性，可审计性，时效性等。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;商务智能：&lt;/strong&gt;&lt;/em&gt; 商务智能为组织、客户及产品提供洞察。是建设数仓的主要原因。通过 &lt;em&gt;&lt;strong&gt;商务智能获得决策知识，能提升公司运营效率，增强其竞争优势&lt;/strong&gt;&lt;/em&gt;。数据使用速度加快，商务智能从回顾性评价发展到预测分析领域。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h3&gt;1.3、技术进步&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;13技术进步&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#13%e6%8a%80%e6%9c%af%e8%bf%9b%e6%ad%a5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;数据平台工具对整体实时开发的支持也日渐趋于成熟，开发成本降低。&lt;/li&gt;
+&lt;li&gt;尽管需要增加软硬件的投入，但建立独立数据仓库与直接访问业务数据相比，无论是成本还是带来的好处，这样做都是值得的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;2. 什么是数据仓库？&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-什么是数据仓库&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e4%bb%80%e4%b9%88%e6%98%af%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;2.1、定义&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;21定义&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21%e5%ae%9a%e4%b9%89&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;简单来说，数据仓库就是一个 &lt;em&gt;&lt;strong&gt;支持决策的数据池&lt;/strong&gt;&lt;/em&gt;，同时还是管理者可能感兴趣的企业 &lt;em&gt;&lt;strong&gt;当前和历史数据的存储库&lt;/strong&gt;&lt;/em&gt;。通常数据被组织成分析处理可用的形式（例如在线分析处理、数据挖掘、查询、报表和其他支持决策的应用）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;数据仓库，是一个用来 &lt;em&gt;&lt;strong&gt;支持管理者决策&lt;/strong&gt;&lt;/em&gt;（Decision Making Support）、&lt;em&gt;&lt;strong&gt;面向主题的&lt;/strong&gt;&lt;/em&gt;（Subject Oriented）、&lt;em&gt;&lt;strong&gt;集成的&lt;/strong&gt;&lt;/em&gt;（Integrate）、&lt;em&gt;&lt;strong&gt;非易失/稳定的&lt;/strong&gt;&lt;/em&gt;（Non-Volatile）、&lt;em&gt;&lt;strong&gt;随时间变/化反映历史变化的&lt;/strong&gt;&lt;/em&gt;（Time Variant）数据集合。主要用于组织积累的历史数据，并使用分析方法（OLAP、数据分析）进行整理，进而辅助决策，为管理者、企业系统提供数据支持，构建商务智能（BI）和决策支持系统（decision support system/DDS）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h3&gt;2.2、特点&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;22特点&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#22%e7%89%b9%e7%82%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;1️⃣ 面向主题的&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-面向主题的&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e9%9d%a2%e5%90%91%e4%b8%bb%e9%a2%98%e7%9a%84&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;传统数据库中，最大的特点是面向应用进行数据的组织，各个业务系统可能是相互分离的。&lt;/p&gt;
+&lt;p&gt;数仓为数据分析提供服务，&lt;em&gt;&lt;strong&gt;根据主题组织将原始数据集合在一起。面向主题（销售、客户、财务、人员、生产），用户可以确定业务如何开展&lt;/strong&gt;&lt;/em&gt;，以及为什么要这样开展。面向主题它提供了一个对企业进行更加全面分析的视觉。&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755348578544.png&#34; alt=&#34;1755348578544&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h4&gt;2️⃣ 集成的&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-集成的&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e9%9b%86%e6%88%90%e7%9a%84&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;集成与面向主题密切相关。原始数据来源于不同数据源（分散、独立、异构的数据库），&lt;em&gt;&lt;strong&gt;要整合成最终数据，需要经过抽取、清洗、转换的过程，最终将不同数据源的数据以一致（命名冲突、计量单位差异等）的格式存储&lt;/strong&gt;&lt;/em&gt;    。&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755348764276.png&#34; alt=&#34;1755348764276&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h4&gt;3️⃣ 非易失&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-非易失&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e9%9d%9e%e6%98%93%e5%a4%b1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;数据仓库 &lt;em&gt;&lt;strong&gt;保存的数据是一系列历史快照，不允许被修改，只允许通过工具进行查询、分析&lt;/strong&gt;&lt;/em&gt;。过时的数据将会被抛弃，而更新的数据则作为新数据被记录下来。&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755348890393.png&#34; alt=&#34;1755348890393&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h4&gt;4️⃣ 时变性&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;4-时变性&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-%e6%97%b6%e5%8f%98%e6%80%a7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;数仓会 &lt;em&gt;&lt;strong&gt;定期接受、集成新的数据，从而反应出数据的最新变化&lt;/strong&gt;&lt;/em&gt;。（每天同步一次）每个数仓都具有时间属性，时间是所有数据仓库都支持的一个重要维度。在数据仓库中，用于分析的多元数据包括不同的时间点（如日、周和月等）。&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;上述这些特点是数据仓库非常便于数据访问。此外，数据仓库还有一些其他特点:&lt;/p&gt;
+&lt;p&gt;5️⃣ &lt;em&gt;&lt;strong&gt;基于网络&lt;/strong&gt;&lt;/em&gt;：数据仓库通常被用来为基于网络的应用提供高效的计算环境。&lt;br&gt;
+6️⃣ &lt;em&gt;&lt;strong&gt;关系的/多维的&lt;/strong&gt;&lt;/em&gt;：数据仓库常常是基于关系结构或多维结构。（参考 Romero 和 Abello 的文章）。&lt;br&gt;
+7️⃣ &lt;em&gt;&lt;strong&gt;客户端/服务器&lt;/strong&gt;&lt;/em&gt;：数据仓库运用客户端/服务器架构为终端用户提供更轻松便捷的访问。&lt;br&gt;
+8️⃣ &lt;em&gt;&lt;strong&gt;实时的&lt;/strong&gt;&lt;/em&gt;：新型的数据仓库已经具备提供实时或动态的数据访问和分析能力。&lt;br&gt;
+9️⃣ &lt;em&gt;&lt;strong&gt;元数据&lt;/strong&gt;&lt;/em&gt;：数据仓库通过元数据（即关于数据的数据）来描述数据的组成方式，以及如何有效的使用数据。&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h3&gt;2.3、作用&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;23作用&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#23%e4%bd%9c%e7%94%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;以统一的形式存储数据，并以一种易于理解的形式提供给使用者，可以一览公司业务的实时状态，并快速识别问题，这是解决问题的首要步骤，也是最重要的一步。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;科学的数仓能够持续高效的为业务分析服务，可以帮助企业，&lt;strong&gt;改进业务流程&lt;/strong&gt;、&lt;strong&gt;提升运营效率&lt;/strong&gt;、&lt;strong&gt;提高产品质量&lt;/strong&gt;等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为企业制定决策，提供数据支持，检测趋势、偏差和长期关系以便进行预测与比较，从而&lt;strong&gt;支持业务决策&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;综合应用 &lt;em&gt;&lt;strong&gt;实时数据仓库&lt;/strong&gt;&lt;/em&gt;（real-time data warehouse/RDW），&lt;em&gt;&lt;strong&gt;决策支持系统&lt;/strong&gt;&lt;/em&gt;（Decision support system/DDS）和 &lt;em&gt;&lt;strong&gt;商务智能（BI）&lt;/strong&gt;&lt;/em&gt; 技术是实施业务的一种重要手段。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h3&gt;2.4、目标&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;24目标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#24%e7%9b%ae%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;参考：《DAMA 数据管理知识体系指南》原书第2版&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;支持决策分析：核心目标是提供一致、集成的历史数据，支撑企业级分析。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;消除信息孤岛&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提升数据质量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分离 OLTP 与 OLAP&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支撑数据资产化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;满足合规要求&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h3&gt;2.5、历史&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;25历史&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#25%e5%8e%86%e5%8f%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;
+    &lt;img src=&#34;../image/1755349736076.png&#34; alt=&#34;1755349736076&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;萌芽阶段（1978-1988年）将业务处理系统和分析系统分开。&lt;/li&gt;
+&lt;li&gt;探索阶段（1988年左右）DEC公司提出TA2规范，定义分析系统的四个部分：数据获取、数据访问、目录和用户服务。&lt;/li&gt;
+&lt;li&gt;雏形阶段（1988年左右）IBM，信息仓库，数据抽取、转换、有效性验证、加载、Cube 开发、图像化查询工具。&lt;/li&gt;
+&lt;li&gt;确立阶段（1991年）比尔-恩门，《Building the Data Warehouse》，数据仓库之父&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755349877539.png&#34; alt=&#34;1755349877539&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755350134300.png&#34; alt=&#34;1755350134300&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确立阶段（1994年）拉尔夫-金博尔《The DataWarehouse Toolkit》，维度建模。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image/1755350090245.png&#34; alt=&#34;1755350090245&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;争吵与混乱（1996-1997年）比尔-恩门 &amp;amp; 拉尔夫-金博尔&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;合并阶段（1998-2001年）比尔-恩门提出 &lt;em&gt;&lt;strong&gt;CIF 架构&lt;/strong&gt;&lt;/em&gt;：数仓分层，不同层采取不同的建模方式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h3&gt;2.6、内容&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;26内容&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#26%e5%86%85%e5%ae%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;em&gt;&lt;strong&gt;数据仓库 ≠ 仅技术工具&lt;/strong&gt;&lt;/em&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;数据仓库不仅仅是 SQL脚本、编程语言或ETL工具的使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;核心在于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;业务理解（业务流程、指标口径、分析需求）&lt;/li&gt;
+&lt;li&gt;数据建模能力（维度建模、星型/雪花模型、数据分层）&lt;/li&gt;
+&lt;li&gt;架构设计（ODS → DWD → DWS → ADS 分层设计）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;数据仓应用库三大核心内容：&lt;br&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;模块&lt;/th&gt;
+          &lt;th&gt;关键内容&lt;/th&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据存储与管理&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;- 数据分层（ODS/DWD/DWS/ADS）&lt;br&gt;- 维度建模（事实表、维度表）&lt;br&gt;- 数据质量监控&lt;/td&gt;
+          &lt;td&gt;Hive、HDFS、Iceberg、ClickHouse&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据采集与计算（ETL）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;- 数据抽取（Extract）&lt;br&gt;- 数据清洗转换（Transform）&lt;br&gt;- 数据加载（Load）&lt;br&gt;- 实时/离线调度&lt;/td&gt;
+          &lt;td&gt;Flink、Kafka、Airflow、DataX&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据应用（BI/分析）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;- 报表开发&lt;br&gt;- 即席查询（Ad-hoc）&lt;br&gt;- 数据挖掘（预测模型）&lt;br&gt;- 数据服务API&lt;/td&gt;
+          &lt;td&gt;Tableau、Superset、机器学习平台&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;3. 数据仓库 vs 数据库&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-数据仓库-vs-数据库&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93-vs-%e6%95%b0%e6%8d%ae%e5%ba%93&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;对比维度&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;数据仓库 (Data Warehouse)&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;数据库 (Database)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;设计目的&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;面向事务&lt;br&gt;属于 OLTP（在线事务处理）系统&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;面向主题/分析&lt;br&gt;属于 OLAP（在线分析处理）系统&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;典型应用&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;面向高层管理人员的，为其提供决策支持； &lt;br&gt; 长期信息需求、为分析数据\数据挖掘而设计； &lt;br&gt; &lt;em&gt;&lt;strong&gt;报表系统、多维分析、决策支持系统&amp;hellip;&lt;/strong&gt;&lt;/em&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;面相业务处理人员日常操作，为捕获数据设计；&lt;br&gt; 为业务处理人员提供信息处理的支持； &lt;br&gt; &lt;em&gt;&lt;strong&gt;管理系统、交易系统、在线应用&amp;hellip;&lt;/strong&gt;&lt;/em&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;数据特性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;集成、历史&lt;br&gt; 只读 &lt;br&gt; 延迟（ETL处理后可用）&lt;br&gt;&lt;br&gt; 数据是静态的历史数据，只能定期添加、刷新&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;当前 &lt;br&gt; 可更新  &lt;br&gt; 实时  &lt;br&gt;&lt;br&gt; 数据是动态变化的，只要有业务发生，数据就会被更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;数据规模&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;TB~PB级&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;GB~TB级&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;数据结构&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;星型/雪花模型（维度建模）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;关系模型（3NF规范化）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;典型操作&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;复杂查询、全表扫描&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;增删改查、索引查询&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;响应时间&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;秒~分钟级&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;毫秒~秒级&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;用户类型&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;数据分析师、决策者&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;业务操作人员、开发人员&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;更新频率&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;定时批量加载（T+1/小时级）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;实时更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;典型技术&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Hive/Redshift/Snowflake&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;MySQL/Oracle/SQL Server&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;存储成本&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;高（保留多年历史数据）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;中（主要存储当前数据）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;查询复杂度&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;多表关联、聚合运算&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;简单条件查询&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;4. OLTP vs OLTP&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;4-oltp-vs-oltp&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-oltp-vs-oltp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;对比维度&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;OLAP (联机分析处理)&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;OLTP (联机事务处理)&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;设计目的&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;支持复杂分析决策&lt;/td&gt;
+          &lt;td&gt;支持日常业务操作&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据特性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;集成、历史、只读&lt;/td&gt;
+          &lt;td&gt;当前、可更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;典型操作&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;复杂查询、多表关联、聚合计算&lt;/td&gt;
+          &lt;td&gt;简单的增删改查操作&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;响应时间要求&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;秒级到分钟级&lt;/td&gt;
+          &lt;td&gt;毫秒级&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据模型&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;星型/雪花模型&lt;/td&gt;
+          &lt;td&gt;关系模型(3NF)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据规模&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;TB到PB级&lt;/td&gt;
+          &lt;td&gt;GB到TB级&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;用户类型&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;数据分析师、决策者&lt;/td&gt;
+          &lt;td&gt;业务操作人员、前端应用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;查询模式&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;不固定、ad-hoc查询&lt;/td&gt;
+          &lt;td&gt;固定模式、预定义查询&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;数据更新方式&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;批量加载(ETL)&lt;/td&gt;
+          &lt;td&gt;实时单条记录更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;索引使用&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;位图索引、列存储&lt;/td&gt;
+          &lt;td&gt;B树索引、哈希索引&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;典型技术&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Snowflake、Redshift、ClickHouse、Doris&lt;/td&gt;
+          &lt;td&gt;MySQL、PostgreSQL、Oracle&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;并发量&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;低到中(10-100)&lt;/td&gt;
+          &lt;td&gt;高(1000+)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;事务特性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;不需要ACID&lt;/td&gt;
+          &lt;td&gt;严格遵循ACID&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;典型场景&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;月度销售分析、客户行为分析&lt;/td&gt;
+          &lt;td&gt;订单处理、账户余额查询&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;关键差异图解&lt;/p&gt;
+&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;graph LR
+    OLTP[OLTP系统] --&gt;|ETL处理| OLAP[OLAP系统]
+    OLAP --&gt; BI[BI工具]
+    style OLTP fill:#f9f,stroke:#333
+    style OLAP fill:#bbf,stroke:#333&lt;/pre&gt;&lt;br&gt;
+&lt;h3&gt;4.1、OLTP 联机事物处理&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;41oltp-联机事物处理&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#41oltp-%e8%81%94%e6%9c%ba%e4%ba%8b%e7%89%a9%e5%a4%84%e7%90%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;OLTP&lt;/strong&gt;&lt;/em&gt;（On-Line Transaction Processing）是面向 &lt;em&gt;&lt;strong&gt;高并发事务处理&lt;/strong&gt;&lt;/em&gt;的数据库系统，主要特征包括：&lt;/p&gt;
+&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;graph TD
+    A[OLTP] --&gt; B[高并发]
+    A --&gt; C[短事务]
+    A --&gt; D[实时响应]
+    A --&gt; E[ACID保证]&lt;/pre&gt;&lt;br&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;主流 OLTP 数据库&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;类型&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;代表产品&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;适用场景&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;关系型&lt;/td&gt;
+          &lt;td&gt;MySQL, PostgreSQL, Oracle&lt;/td&gt;
+          &lt;td&gt;通用业务系统&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;分布式&lt;/td&gt;
+          &lt;td&gt;CockroachDB, TiDB&lt;/td&gt;
+          &lt;td&gt;高扩展需求&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;内存数据库&lt;/td&gt;
+          &lt;td&gt;Redis, MemSQL&lt;/td&gt;
+          &lt;td&gt;极致性能场景&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;OLTP 联机事物处理存在许多不便，具体如下：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;数据过于分散。存放在多个数据库，甚至是异构数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标准规则及编码不统一。不同业务系统间不统一，甚至单个业务系统不同时间段间也可能不统一。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据质量问题。会有部分垃圾数据、测试数据、系统 bug 等产生的错误数据，都会影响到数据质量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;历史数据缺失。通常只会保留最近半年到一年左右数据，历史数据会被转移甚至删除。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对业务系统性能的影响。过量的分析计算会抢占计算资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;面向 OLTP 的数据存储，有时候并不适合数据分析。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;为了更好的支持各种数据应用，上世纪 90 年代初，&lt;em&gt;&lt;strong&gt;联机分析处理&lt;/strong&gt;&lt;/em&gt;（On-Line Analysis Processing）&lt;em&gt;&lt;strong&gt;及数据仓库&lt;/strong&gt;&lt;/em&gt; （Data Warehouse）的概念应运而生。&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h3&gt;4.2、OLAP 联机分析处理&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;42olap-联机分析处理&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#42olap-%e8%81%94%e6%9c%ba%e5%88%86%e6%9e%90%e5%a4%84%e7%90%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;OLAP（On-Line Analysis Processing）联机分析处理：联机分析处理的概念最早由关系数据库之父 E．F．Codd 于 1993 年提出。Codd 提出了 &lt;em&gt;&lt;strong&gt;多维数据库&lt;/strong&gt;&lt;/em&gt; 和 &lt;em&gt;&lt;strong&gt;多维分析&lt;/strong&gt;&lt;/em&gt;的概念，把业务系统面向业务逻辑、面向事务增删改查而设计的存储结构，转换成面向分析、侧重查询的多维分析型存储结构。&lt;/p&gt;
+&lt;h4&gt;1️⃣ 维度,属性,度量&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-维度属性度量&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e7%bb%b4%e5%ba%a6%e5%b1%9e%e6%80%a7%e5%ba%a6%e9%87%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;多维分析将所有对象都抽象为维度、度量、属性三类：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;要素类型&lt;/th&gt;
+          &lt;th&gt;定义&lt;/th&gt;
+          &lt;th&gt;业务意义&lt;/th&gt;
+          &lt;th&gt;技术特征&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;维度&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;分析视角/观察角度&lt;/td&gt;
+          &lt;td&gt;确定&amp;quot;按什么分析&amp;quot;&lt;/td&gt;
+          &lt;td&gt;通常作为GROUP BY字段&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;属性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;维度的描述性特征&lt;/td&gt;
+          &lt;td&gt;定义&amp;quot;这个视角的具体分类&amp;quot;&lt;/td&gt;
+          &lt;td&gt;维度表的列&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;度量&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可计算的数值指标&lt;/td&gt;
+          &lt;td&gt;回答&amp;quot;分析结果是多少&amp;quot;&lt;/td&gt;
+          &lt;td&gt;聚合函数(SUM/AVG等)操作对象&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;零售行业维度分析\建模示例如下：&lt;/p&gt;
+&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;erDiagram
+    DIM_DATE ||--o{ FACT_SALES : &#34;时间维度&#34;
+    DIM_PRODUCT ||--o{ FACT_SALES : &#34;商品维度&#34;
+    DIM_STORE ||--o{ FACT_SALES : &#34;门店维度&#34;
+    
+    DIM_PRODUCT {
+        string product_id PK
+        string product_name
+        string category
+        decimal price
+    }
+    
+    FACT_SALES {
+        string transaction_id PK
+        date sale_date FK
+        string product_id FK
+        string store_id FK
+        int quantity
+        decimal amount
+    }&lt;/pre&gt;&lt;br&gt;
+&lt;h4&gt;2️⃣ R\M\HOLAP&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-rmholap&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-rmholap&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;OLAP 可细分为 ROLAP ， MOLAP ， HOLAP 三类&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;对比维度&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;ROLAP&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;MOLAP&lt;/strong&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;HOLAP&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;全称&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Relational OLAP&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Multidimensional OLAP&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Hybrid OLAP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;定义&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;基于关系型数据库实现的OLAP&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;通过预计算多维数据立方体(Cube)实现的OLAP&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;混合ROLAP和MOLAP的实现方式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;存储结构&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;关系型数据库(星型/雪花模型)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;专有多维数组(Cube)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;混合存储(关系型+Cube)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;数据粒度&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;存储原始明细数据&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;只存储预聚合数据&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;热数据Cube+冷数据关系存储&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;查询性能&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;中等(依赖SQL优化)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;极快(毫秒级响应)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;热数据快/冷数据中等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;存储效率&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;高(关系型压缩)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;低(存在维度爆炸)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;中(智能分层存储)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;维度灵活性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;高(支持动态增加维度)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;低(需预定义维度)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;热数据固定/冷数据灵活&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;更新延迟&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;近实时(分钟级)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;批量更新(小时/天级)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;热数据延迟/冷数据实时&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;明细查询支持&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✔️ 完整支持&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;❌ 不支持&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✔️ 仅冷数据支持&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;预计算开销&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;部分预聚合&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;全量预计算&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;按需预计算&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;典型工具&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Snowflake, StarRocks&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Apache Kylin, SSAS&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ClickHouse, Azure Analysis Services&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;最佳适用场景&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;即席分析/需要明细数据&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;固定报表/高频聚合查询&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;混合工作负载环境&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;❌ 查询性能中等&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;❌ 维度爆炸风险&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;❌ 架构复杂&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;graph TB
+
+    subgraph HOLAP
+    F[热数据Cube] --&gt;|快速查询| G[前端应用]
+    H[冷数据RDBMS] --&gt;|ETL| F
+    style F fill:#f9f,stroke:#333
+    style H fill:#bbf,stroke:#333
+    end
+
+    subgraph MOLAP
+    Cube[销售Cube] --&gt; Time[时间维度]
+    Cube --&gt; Product[产品维度]
+    Cube --&gt; Region[地域维度]
+    style Cube fill:#f9f,stroke:#333
+    end
+
+    subgraph ROLAP
+    A[事实表] --&gt; B[产品维度]
+    A --&gt; C[时间维度]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bbf,stroke:#333
+    end&lt;/pre&gt;&lt;br&gt;
+&lt;h4&gt;3️⃣ OLAP 工具&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-olap-工具&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-olap-%e5%b7%a5%e5%85%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h5&gt;完整OLAP工具矩阵&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;完整olap工具矩阵&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%8c%e6%95%b4olap%e5%b7%a5%e5%85%b7%e7%9f%a9%e9%98%b5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;商业工具&lt;/th&gt;
+          &lt;th&gt;开源工具&lt;/th&gt;
+          &lt;th&gt;核心特点&lt;/th&gt;
+          &lt;th&gt;代表用户&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ROLAP&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1. Snowflake&lt;br&gt;2. Amazon Redshift&lt;br&gt;3. Google BigQuery&lt;br&gt;4. Teradata&lt;br&gt;5. Vertica&lt;br&gt;6. IBM Db2 Warehouse&lt;br&gt;7. Exasol&lt;br&gt;8. SAP HANA&lt;/td&gt;
+          &lt;td&gt;1. Apache Doris&lt;br&gt;2. StarRocks&lt;br&gt;3. Presto/Trino&lt;br&gt;4. Druid&lt;br&gt;5. Greenplum&lt;br&gt;6. PostgreSQL Citus&lt;br&gt;7. Materialize&lt;br&gt;8. TiDB&lt;/td&gt;
+          &lt;td&gt;• 基于关系型存储&lt;br&gt;• 完整SQL支持&lt;br&gt;• 保留明细数据&lt;br&gt;• 支持实时更新&lt;br&gt;• 灵活分析能力强&lt;/td&gt;
+          &lt;td&gt;• Snowflake: 可口可乐&lt;br&gt;• Redshift: Airbnb&lt;br&gt;• Doris: 京东&lt;br&gt;• StarRocks: 腾讯&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;MOLAP&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1. Microsoft SSAS&lt;br&gt;2. Oracle Essbase&lt;br&gt;3. IBM Cognos TM1&lt;br&gt;4. SAS OLAP&lt;br&gt;5. MicroStrategy&lt;br&gt;6. Pentaho Mondrian&lt;br&gt;7. AtScale&lt;/td&gt;
+          &lt;td&gt;1. Apache Kylin&lt;br&gt;2. Druid&lt;br&gt;3. ClickHouse&lt;br&gt;4. Pinot&lt;br&gt;5. Cube.js&lt;br&gt;6. Kyligence CE&lt;/td&gt;
+          &lt;td&gt;• 预计算多维Cube&lt;br&gt;• 亚秒级响应&lt;br&gt;• 维度建模复杂&lt;br&gt;• 适合固定模式分析&lt;br&gt;• 存储开销大&lt;/td&gt;
+          &lt;td&gt;• SSAS: 沃尔玛&lt;br&gt;• Kylin: 美团&lt;br&gt;• Druid: Netflix&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;HOLAP&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1. SAP BW/4HANA&lt;br&gt;2. MicroStrategy&lt;br&gt;3. SAS OLAP&lt;br&gt;4. Oracle OLAP&lt;br&gt;5. IBM Planning Analytics&lt;/td&gt;
+          &lt;td&gt;1. ClickHouse&lt;br&gt;2. StarRocks&lt;br&gt;3. Apache Doris&lt;br&gt;4. Greenplum&lt;br&gt;5. MonetDB&lt;/td&gt;
+          &lt;td&gt;• 混合存储架构&lt;br&gt;• 自动路由查询&lt;br&gt;• 热数据加速&lt;br&gt;• 冷数据归档&lt;br&gt;• 资源利用率高&lt;/td&gt;
+          &lt;td&gt;• ClickHouse: 字节跳动&lt;br&gt;• SAP BW: 西门子&lt;br&gt;• Greenplum: 阿里云&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;商业工具对比&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;商业工具对比&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%95%86%e4%b8%9a%e5%b7%a5%e5%85%b7%e5%af%b9%e6%af%94&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;类型&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;代表商业工具&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;开发商&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;核心优势&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;许可模式&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;最新版本&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ROLAP&lt;/td&gt;
+          &lt;td&gt;Snowflake&lt;br&gt;Amazon Redshift&lt;/td&gt;
+          &lt;td&gt;Snowflake Inc&lt;br&gt;Amazon&lt;/td&gt;
+          &lt;td&gt;云原生、弹性扩展&lt;/td&gt;
+          &lt;td&gt;按量付费&lt;/td&gt;
+          &lt;td&gt;Snowflake 7.0&lt;br&gt;Redshift 3.0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MOLAP&lt;/td&gt;
+          &lt;td&gt;Microsoft SSAS&lt;br&gt;Oracle Essbase&lt;/td&gt;
+          &lt;td&gt;Microsoft&lt;br&gt;Oracle&lt;/td&gt;
+          &lt;td&gt;深度Office集成&lt;br&gt;企业级功能&lt;/td&gt;
+          &lt;td&gt;商业许可&lt;/td&gt;
+          &lt;td&gt;SSAS 2022&lt;br&gt;Essbase 21c&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;HOLAP&lt;/td&gt;
+          &lt;td&gt;SAP BW/4HANA&lt;br&gt;MicroStrategy&lt;/td&gt;
+          &lt;td&gt;SAP&lt;br&gt;MicroStrategy&lt;/td&gt;
+          &lt;td&gt;ERP深度集成&lt;br&gt;可视化强大&lt;/td&gt;
+          &lt;td&gt;商业许可&lt;/td&gt;
+          &lt;td&gt;BW/4HANA 2.0&lt;br&gt;MicroStrategy 2023&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;开源工具对比&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;开源工具对比&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%bc%80%e6%ba%90%e5%b7%a5%e5%85%b7%e5%af%b9%e6%af%94&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;工具&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;类型&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;开发语言&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;核心特性&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;适用数据规模&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;知名用户&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Apache Doris&lt;/td&gt;
+          &lt;td&gt;ROLAP&lt;/td&gt;
+          &lt;td&gt;C++&lt;/td&gt;
+          &lt;td&gt;MPP架构、MySQL协议兼容&lt;/td&gt;
+          &lt;td&gt;TB~PB&lt;/td&gt;
+          &lt;td&gt;美团、京东&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;StarRocks&lt;/td&gt;
+          &lt;td&gt;HOLAP&lt;/td&gt;
+          &lt;td&gt;Java/C++&lt;/td&gt;
+          &lt;td&gt;向量化引擎、存算分离&lt;/td&gt;
+          &lt;td&gt;PB级&lt;/td&gt;
+          &lt;td&gt;腾讯、小米&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Apache Kylin&lt;/td&gt;
+          &lt;td&gt;MOLAP&lt;/td&gt;
+          &lt;td&gt;Java&lt;/td&gt;
+          &lt;td&gt;Hadoop生态集成、Cube预计算&lt;/td&gt;
+          &lt;td&gt;TB级&lt;/td&gt;
+          &lt;td&gt;eBay、滴滴&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ClickHouse&lt;/td&gt;
+          &lt;td&gt;HOLAP&lt;/td&gt;
+          &lt;td&gt;C++&lt;/td&gt;
+          &lt;td&gt;列式存储、物化视图&lt;/td&gt;
+          &lt;td&gt;TB~PB&lt;/td&gt;
+          &lt;td&gt;字节跳动、Cloudflare&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Druid&lt;/td&gt;
+          &lt;td&gt;MOLAP/ROLAP&lt;/td&gt;
+          &lt;td&gt;Java&lt;/td&gt;
+          &lt;td&gt;实时摄入、时间序列优化&lt;/td&gt;
+          &lt;td&gt;TB级&lt;/td&gt;
+          &lt;td&gt;Netflix、阿里巴巴&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;性能指标对比&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;性能指标对比&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%80%a7%e8%83%bd%e6%8c%87%e6%a0%87%e5%af%b9%e6%af%94&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;工具&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;查询延迟(简单聚合)&lt;/th&gt;
+          &lt;th&gt;查询延迟(多表JOIN)&lt;/th&gt;
+          &lt;th&gt;数据摄入速度&lt;/th&gt;
+          &lt;th&gt;最大集群规模&lt;/th&gt;
+          &lt;th&gt;并发能力&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Apache Doris&lt;/td&gt;
+          &lt;td&gt;0.5s&lt;/td&gt;
+          &lt;td&gt;3s&lt;/td&gt;
+          &lt;td&gt;50MB/s&lt;/td&gt;
+          &lt;td&gt;100节点&lt;/td&gt;
+          &lt;td&gt;500+ QPS&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;StarRocks&lt;/td&gt;
+          &lt;td&gt;0.3s&lt;/td&gt;
+          &lt;td&gt;1.5s&lt;/td&gt;
+          &lt;td&gt;80MB/s&lt;/td&gt;
+          &lt;td&gt;300节点&lt;/td&gt;
+          &lt;td&gt;1000+ QPS&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Apache Kylin&lt;/td&gt;
+          &lt;td&gt;0.1s&lt;/td&gt;
+          &lt;td&gt;N/A&lt;/td&gt;
+          &lt;td&gt;30MB/s&lt;/td&gt;
+          &lt;td&gt;50节点&lt;/td&gt;
+          &lt;td&gt;200+ QPS&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ClickHouse&lt;/td&gt;
+          &lt;td&gt;0.2s&lt;/td&gt;
+          &lt;td&gt;5s+&lt;/td&gt;
+          &lt;td&gt;120MB/s&lt;/td&gt;
+          &lt;td&gt;200节点&lt;/td&gt;
+          &lt;td&gt;300+ QPS&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Druid&lt;/td&gt;
+          &lt;td&gt;0.05s&lt;/td&gt;
+          &lt;td&gt;不支持&lt;/td&gt;
+          &lt;td&gt;150MB/s&lt;/td&gt;
+          &lt;td&gt;100节点&lt;/td&gt;
+          &lt;td&gt;5000+ QPS&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;生态集成对比&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;生态集成对比&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%94%9f%e6%80%81%e9%9b%86%e6%88%90%e5%af%b9%e6%af%94&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;工具&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;Hadoop兼容&lt;/th&gt;
+          &lt;th&gt;Kafka集成&lt;/th&gt;
+          &lt;th&gt;Spark集成&lt;/th&gt;
+          &lt;th&gt;云原生支持&lt;/th&gt;
+          &lt;th&gt;BI工具兼容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Apache Doris&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;Tableau/Superset&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;StarRocks&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅️(K8s)&lt;/td&gt;
+          &lt;td&gt;主流全支持&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Apache Kylin&lt;/td&gt;
+          &lt;td&gt;✅️(强依赖)&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;❌&lt;/td&gt;
+          &lt;td&gt;有限支持&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ClickHouse&lt;/td&gt;
+          &lt;td&gt;❌&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;需JDBC适配&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Druid&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅️(原生)&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;Grafana集成优&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;云原生支持&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;云原生支持&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e4%ba%91%e5%8e%9f%e7%94%9f%e6%94%af%e6%8c%81&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;工具&lt;/th&gt;
+          &lt;th&gt;Kubernetes集成&lt;/th&gt;
+          &lt;th&gt;存算分离&lt;/th&gt;
+          &lt;th&gt;弹性扩展&lt;/th&gt;
+          &lt;th&gt;多云支持&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Snowflake&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;StarRocks&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Redshift&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;❌(AWS only)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ClickHouse&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;❌&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Druid&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;❌&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;选型决策指南&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;选型决策指南&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%80%89%e5%9e%8b%e5%86%b3%e7%ad%96%e6%8c%87%e5%8d%97&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;需求场景&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;首选工具&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;次选方案&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;选择理由&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;互联网实时用户行为分析&lt;/td&gt;
+          &lt;td&gt;Druid&lt;/td&gt;
+          &lt;td&gt;StarRocks&lt;/td&gt;
+          &lt;td&gt;时间序列优化+超高并发&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;企业级数据仓库&lt;/td&gt;
+          &lt;td&gt;StarRocks&lt;/td&gt;
+          &lt;td&gt;Apache Doris&lt;/td&gt;
+          &lt;td&gt;SQL兼容性+云原生支持&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;固定业务报表&lt;/td&gt;
+          &lt;td&gt;Apache Kylin&lt;/td&gt;
+          &lt;td&gt;SSAS&lt;/td&gt;
+          &lt;td&gt;预计算性能极致&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;跨源联邦查询&lt;/td&gt;
+          &lt;td&gt;Presto/Trino&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;无存储引擎设计&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;物联网时序数据分析&lt;/td&gt;
+          &lt;td&gt;ClickHouse&lt;/td&gt;
+          &lt;td&gt;TimescaleDB&lt;/td&gt;
+          &lt;td&gt;列存压缩比高&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;开源OLAP选型决策树&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;开源olap选型决策树&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%bc%80%e6%ba%90olap%e9%80%89%e5%9e%8b%e5%86%b3%e7%ad%96%e6%a0%91&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;graph LR
+    A[需求分析] --&gt; B{实时分析需求?}
+    B --&gt;|是| C{是否时间序列数据?}
+    C --&gt;|是| D[Druid/Pinot]
+    C --&gt;|否| E[StarRocks/Doris]
+    B --&gt;|否| F{是否需要复杂SQL支持?}
+    F --&gt;|是| G[PostgreSQL Citus/Greenplum]
+    F --&gt;|否| H{数据规模}
+    H --&gt;|TB级| I[ClickHouse]
+    H --&gt;|PB级| J[Trino on Spark]&lt;/pre&gt;&lt;h2&gt;参考网址：&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;参考网址&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%8f%82%e8%80%83%e7%bd%91%e5%9d%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1qv411y7Wv/?spm_id_from=333.337.search-card.all.click&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【入门精讲】数据仓库原理&amp;amp;实战 - 哈喽鹏程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;《DAMA 数据管理知识体系指南》原书第2版&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.yuque.com/lipengbo-z2uva/datawarehouse/agi120&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;数据仓库详细介绍-数仓建模-维度和事实设计&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>3.4. 数仓架构</title>
+      <link>http://localhost:1313/documentation/bigdata/data_warehouse/framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/bigdata/data_warehouse/framework/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>3.5. 数仓规范</title>
+      <link>http://localhost:1313/documentation/bigdata/data_warehouse/standard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/bigdata/data_warehouse/standard/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>3.6. 数仓建模</title>
+      <link>http://localhost:1313/documentation/bigdata/data_warehouse/model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/documentation/bigdata/data_warehouse/model/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
   </channel>
 </rss>

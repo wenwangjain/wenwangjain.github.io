@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>3.3. 数仓概述 – 数据科学实践</title>
+  <meta name="description" content="1. 为什么要构建数据仓库？ 1.1、历史问题 历史数据积存：历史数据使用频率低，堆积在业务库中，导致性能下降。 数据使用困难：各个部门自己建立独立的抽取系统，导致数据不一致，且使用效率低。 业务系统常见问题：
+业务系统的表结构为事务处理性能而优化，有时并不适合查询与分析。 某些业务数据由于安全或其他因素不能直接访问； 业务系统多，数据格式多元化（如日期、数字格式不统一）； 业务系统的列名通常是硬编码，有时仅仅是无意义的字符串，这让编写分析系统更加困难； 没有适当的方式将有价值的数据合并进特定应用的数据库。 没有适当的位置存储元数据。 通常事务处理的优先级比分析系统高，所以如果将分析系统和事务处理运行在同一硬件之上，分析系统往往性能很差。 有误用业务数据的风险。 用户需要看到的显示数据字段，有时在数据库中并不存在。 业务系统版本问题：
+业务系统的版本变更很频繁，每次变更都需要重写分析系统并重新测试； 数据来源于多个业务系统版本的报表，很难建立和维护； 1.2、业务驱动因素 决策支持： 公司业务对于数据的实时性越来越迫切，需要有实时数据来辅助完成决策。 合规需求： 随着数据监管法规（如 GDPR、CCPA、《数据安全法》）的加强，企业必须确保数据的准确性，可审计性，时效性等。 商务智能： 商务智能为组织、客户及产品提供洞察。是建设数仓的主要原因。通过 商务智能获得决策知识，能提升公司运营效率，增强其竞争优势。数据使用速度加快，商务智能从回顾性评价发展到预测分析领域。 1.3、技术进步 数据平台工具对整体实时开发的支持也日渐趋于成熟，开发成本降低。 尽管需要增加软硬件的投入，但建立独立数据仓库与直接访问业务数据相比，无论是成本还是带来的好处，这样做都是值得的。 2. 什么是数据仓库？ 2.1、定义 简单来说，数据仓库就是一个 支持决策的数据池，同时还是管理者可能感兴趣的企业 当前和历史数据的存储库。通常数据被组织成分析处理可用的形式（例如在线分析处理、数据挖掘、查询、报表和其他支持决策的应用）。 数据仓库，是一个用来 支持管理者决策（Decision Making Support）、面向主题的（Subject Oriented）、集成的（Integrate）、非易失/稳定的（Non-Volatile）、随时间变/化反映历史变化的（Time Variant）数据集合。主要用于组织积累的历史数据，并使用分析方法（OLAP、数据分析）进行整理，进而辅助决策，为管理者、企业系统提供数据支持，构建商务智能（BI）和决策支持系统（decision support system/DDS）。 2.2、特点 1️⃣ 面向主题的 传统数据库中，最大的特点是面向应用进行数据的组织，各个业务系统可能是相互分离的。" /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/overview/" itemprop="url" />
+
+<meta property="og:title" content="3.3. 数仓概述" />
+<meta property="og:description" content="1. 为什么要构建数据仓库？
+    1.1、历史问题
+    
+历史数据积存：历史数据使用频率低，堆积在业务库中，导致性能下降。
+数据使用困难：各个部门自己建立独立的抽取系统，导致数据不一致，且使用效率低。
+
+
+
+
+业务系统常见问题：
+
+业务系统的表结构为事务处理性能而优化，有时并不适合查询与分析。
+某些业务数据由于安全或其他因素不能直接访问；
+业务系统多，数据格式多元化（如日期、数字格式不统一）；
+业务系统的列名通常是硬编码，有时仅仅是无意义的字符串，这让编写分析系统更加困难；
+没有适当的方式将有价值的数据合并进特定应用的数据库。
+没有适当的位置存储元数据。
+通常事务处理的优先级比分析系统高，所以如果将分析系统和事务处理运行在同一硬件之上，分析系统往往性能很差。
+有误用业务数据的风险。
+用户需要看到的显示数据字段，有时在数据库中并不存在。
+
+
+
+
+
+
+业务系统版本问题：
+
+业务系统的版本变更很频繁，每次变更都需要重写分析系统并重新测试；
+数据来源于多个业务系统版本的报表，很难建立和维护；
+
+
+
+
+1.2、业务驱动因素
+    
+决策支持： 公司业务对于数据的实时性越来越迫切，需要有实时数据来辅助完成决策。
+合规需求： 随着数据监管法规（如 GDPR、CCPA、《数据安全法》）的加强，企业必须确保数据的准确性，可审计性，时效性等。
+商务智能： 商务智能为组织、客户及产品提供洞察。是建设数仓的主要原因。通过 商务智能获得决策知识，能提升公司运营效率，增强其竞争优势。数据使用速度加快，商务智能从回顾性评价发展到预测分析领域。
+
+
+1.3、技术进步
+    
+数据平台工具对整体实时开发的支持也日渐趋于成熟，开发成本降低。
+尽管需要增加软硬件的投入，但建立独立数据仓库与直接访问业务数据相比，无论是成本还是带来的好处，这样做都是值得的。
+
+
+2. 什么是数据仓库？
+    2.1、定义
+    
+简单来说，数据仓库就是一个 支持决策的数据池，同时还是管理者可能感兴趣的企业 当前和历史数据的存储库。通常数据被组织成分析处理可用的形式（例如在线分析处理、数据挖掘、查询、报表和其他支持决策的应用）。
+
+
+
+数据仓库，是一个用来 支持管理者决策（Decision Making Support）、面向主题的（Subject Oriented）、集成的（Integrate）、非易失/稳定的（Non-Volatile）、随时间变/化反映历史变化的（Time Variant）数据集合。主要用于组织积累的历史数据，并使用分析方法（OLAP、数据分析）进行整理，进而辅助决策，为管理者、企业系统提供数据支持，构建商务智能（BI）和决策支持系统（decision support system/DDS）。
+
+
+2.2、特点
+    1️⃣ 面向主题的
+    传统数据库中，最大的特点是面向应用进行数据的组织，各个业务系统可能是相互分离的。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/documentation/bigdata/data_warehouse/overview/" /><meta property="article:section" content="documentation" />
+
+
+
+  <meta itemprop="name" content="3.3. 数仓概述">
+  <meta itemprop="description" content="1. 为什么要构建数据仓库？ 1.1、历史问题 历史数据积存：历史数据使用频率低，堆积在业务库中，导致性能下降。 数据使用困难：各个部门自己建立独立的抽取系统，导致数据不一致，且使用效率低。 业务系统常见问题：
+业务系统的表结构为事务处理性能而优化，有时并不适合查询与分析。 某些业务数据由于安全或其他因素不能直接访问； 业务系统多，数据格式多元化（如日期、数字格式不统一）； 业务系统的列名通常是硬编码，有时仅仅是无意义的字符串，这让编写分析系统更加困难； 没有适当的方式将有价值的数据合并进特定应用的数据库。 没有适当的位置存储元数据。 通常事务处理的优先级比分析系统高，所以如果将分析系统和事务处理运行在同一硬件之上，分析系统往往性能很差。 有误用业务数据的风险。 用户需要看到的显示数据字段，有时在数据库中并不存在。 业务系统版本问题：
+业务系统的版本变更很频繁，每次变更都需要重写分析系统并重新测试； 数据来源于多个业务系统版本的报表，很难建立和维护； 1.2、业务驱动因素 决策支持： 公司业务对于数据的实时性越来越迫切，需要有实时数据来辅助完成决策。 合规需求： 随着数据监管法规（如 GDPR、CCPA、《数据安全法》）的加强，企业必须确保数据的准确性，可审计性，时效性等。 商务智能： 商务智能为组织、客户及产品提供洞察。是建设数仓的主要原因。通过 商务智能获得决策知识，能提升公司运营效率，增强其竞争优势。数据使用速度加快，商务智能从回顾性评价发展到预测分析领域。 1.3、技术进步 数据平台工具对整体实时开发的支持也日渐趋于成熟，开发成本降低。 尽管需要增加软硬件的投入，但建立独立数据仓库与直接访问业务数据相比，无论是成本还是带来的好处，这样做都是值得的。 2. 什么是数据仓库？ 2.1、定义 简单来说，数据仓库就是一个 支持决策的数据池，同时还是管理者可能感兴趣的企业 当前和历史数据的存储库。通常数据被组织成分析处理可用的形式（例如在线分析处理、数据挖掘、查询、报表和其他支持决策的应用）。 数据仓库，是一个用来 支持管理者决策（Decision Making Support）、面向主题的（Subject Oriented）、集成的（Integrate）、非易失/稳定的（Non-Volatile）、随时间变/化反映历史变化的（Time Variant）数据集合。主要用于组织积累的历史数据，并使用分析方法（OLAP、数据分析）进行整理，进而辅助决策，为管理者、企业系统提供数据支持，构建商务智能（BI）和决策支持系统（decision support system/DDS）。 2.2、特点 1️⃣ 面向主题的 传统数据库中，最大的特点是面向应用进行数据的组织，各个业务系统可能是相互分离的。">
+  <meta itemprop="wordCount" content="1003">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="3.3. 数仓概述">
+  <meta name="twitter:description" content="1. 为什么要构建数据仓库？ 1.1、历史问题 历史数据积存：历史数据使用频率低，堆积在业务库中，导致性能下降。 数据使用困难：各个部门自己建立独立的抽取系统，导致数据不一致，且使用效率低。 业务系统常见问题：
+业务系统的表结构为事务处理性能而优化，有时并不适合查询与分析。 某些业务数据由于安全或其他因素不能直接访问； 业务系统多，数据格式多元化（如日期、数字格式不统一）； 业务系统的列名通常是硬编码，有时仅仅是无意义的字符串，这让编写分析系统更加困难； 没有适当的方式将有价值的数据合并进特定应用的数据库。 没有适当的位置存储元数据。 通常事务处理的优先级比分析系统高，所以如果将分析系统和事务处理运行在同一硬件之上，分析系统往往性能很差。 有误用业务数据的风险。 用户需要看到的显示数据字段，有时在数据库中并不存在。 业务系统版本问题：
+业务系统的版本变更很频繁，每次变更都需要重写分析系统并重新测试； 数据来源于多个业务系统版本的报表，很难建立和维护； 1.2、业务驱动因素 决策支持： 公司业务对于数据的实时性越来越迫切，需要有实时数据来辅助完成决策。 合规需求： 随着数据监管法规（如 GDPR、CCPA、《数据安全法》）的加强，企业必须确保数据的准确性，可审计性，时效性等。 商务智能： 商务智能为组织、客户及产品提供洞察。是建设数仓的主要原因。通过 商务智能获得决策知识，能提升公司运营效率，增强其竞争优势。数据使用速度加快，商务智能从回顾性评价发展到预测分析领域。 1.3、技术进步 数据平台工具对整体实时开发的支持也日渐趋于成熟，开发成本降低。 尽管需要增加软硬件的投入，但建立独立数据仓库与直接访问业务数据相比，无论是成本还是带来的好处，这样做都是值得的。 2. 什么是数据仓库？ 2.1、定义 简单来说，数据仓库就是一个 支持决策的数据池，同时还是管理者可能感兴趣的企业 当前和历史数据的存储库。通常数据被组织成分析处理可用的形式（例如在线分析处理、数据挖掘、查询、报表和其他支持决策的应用）。 数据仓库，是一个用来 支持管理者决策（Decision Making Support）、面向主题的（Subject Oriented）、集成的（Integrate）、非易失/稳定的（Non-Volatile）、随时间变/化反映历史变化的（Time Variant）数据集合。主要用于组织积累的历史数据，并使用分析方法（OLAP、数据分析）进行整理，进而辅助决策，为管理者、企业系统提供数据支持，构建商务智能（BI）和决策支持系统（decision support system/DDS）。 2.2、特点 1️⃣ 面向主题的 传统数据库中，最大的特点是面向应用进行数据的组织，各个业务系统可能是相互分离的。">
+
+    <link href="/css/compiled/main.css" rel="stylesheet" />
+
+
+
+  <link href="/css/custom.css" rel="stylesheet" />
+
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+</head>
+<body dir="ltr"><div class="nav-container hx-sticky hx-top-0 hx-z-20 hx-w-full hx-bg-transparent print:hx-hidden">
+  <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
+
+  <nav class="hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-px-6 max-w-full">
+    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
+        <img class="hx-mr-2 hx-block dark:hx-hidden" src="/images/logo2.png" alt="数据科学实践" height="45" width="45" />
+        <img class="hx-mr-2 hx-hidden dark:hx-block" src="/images/logo2.png" alt="数据科学实践" height="45" width="45" />
+        <span class="hx-mr-2 hx-font-extrabold hx-inline hx-select-none" title="数据科学实践">数据科学实践</span>
+    </a><a
+            title="文档"
+            href="/documentation"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-font-medium"
+          >
+            <span class="hx-text-center">文档</span>
+          </a><a
+            title="指南"
+            href="/guide"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+          >
+            <span class="hx-text-center">指南</span>
+          </a><a
+            title="项目"
+            href="/project"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+          >
+            <span class="hx-text-center">项目</span>
+          </a><a
+            title="关于"
+            href="/about"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+          >
+            <span class="hx-text-center">关于</span>
+          </a><div class="search-wrapper hx-relative md:hx-w-64">
+  <div class="hx-relative hx-flex hx-items-center hx-text-gray-900 contrast-more:hx-text-gray-800 dark:hx-text-gray-300 contrast-more:dark:hx-text-gray-300">
+    <input
+      placeholder="搜索文档..."
+      class="search-input hx-block hx-w-full hx-appearance-none hx-rounded-lg hx-px-3 hx-py-2 hx-transition-colors hx-text-base hx-leading-tight md:hx-text-sm hx-bg-black/[.05] dark:hx-bg-gray-50/10 focus:hx-bg-white dark:focus:hx-bg-dark placeholder:hx-text-gray-500 dark:placeholder:hx-text-gray-400 contrast-more:hx-border contrast-more:hx-border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx-absolute hx-my-1.5 hx-select-none ltr:hx-right-1.5 rtl:hx-left-1.5 hx-h-5 hx-rounded hx-bg-white hx-px-1.5 hx-font-mono hx-text-[10px] hx-font-medium hx-text-gray-500 hx-border dark:hx-border-gray-100/20 dark:hx-bg-dark/50 contrast-more:hx-border-current contrast-more:hx-text-current contrast-more:dark:hx-border-current hx-items-center hx-gap-1 hx-transition-opacity hx-pointer-events-none hx-hidden sm:hx-flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hx-hidden hx-border hx-border-gray-200 hx-bg-white hx-text-gray-100 dark:hx-border-neutral-800 dark:hx-bg-neutral-900 hx-absolute hx-top-full hx-z-20 hx-mt-2 hx-overflow-auto hx-overscroll-contain hx-rounded-xl hx-py-2.5 hx-shadow-xl hx-max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:hx-max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx-inset-x-0 ltr:md:hx-left-auto rtl:md:hx-right-auto contrast-more:hx-border contrast-more:hx-border-gray-900 contrast-more:dark:hx-border-gray-50 hx-w-screen hx-min-h-[100px] hx-max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+          <a class="hx-p-2 hx-text-current" target="_blank" rel="noreferrer" href="https://github.com/wenwangjain/wenwangjain.github.io" title="GitHub"><svg height=24 xmlns="http://www.w3.org/2000/svg" width="2em" height="1.5em" viewBox="0 0 128 128"><g fill="#181616"><path fill-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388c0 26.682 17.303 49.317 41.297 57.303c3.017.56 4.125-1.31 4.125-2.905c0-1.44-.056-6.197-.082-11.243c-16.8 3.653-20.345-7.125-20.345-7.125c-2.747-6.98-6.705-8.836-6.705-8.836c-5.48-3.748.413-3.67.413-3.67c6.063.425 9.257 6.223 9.257 6.223c5.386 9.23 14.127 6.562 17.573 5.02c.542-3.903 2.107-6.568 3.834-8.076c-13.413-1.525-27.514-6.704-27.514-29.843c0-6.593 2.36-11.98 6.223-16.21c-.628-1.52-2.695-7.662.584-15.98c0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033c11.526-7.813 16.59-6.19 16.59-6.19c3.287 8.317 1.22 14.46.593 15.98c3.872 4.23 6.215 9.617 6.215 16.21c0 23.194-14.127 28.3-27.574 29.796c2.167 1.874 4.097 5.55 4.097 11.183c0 8.08-.07 14.583-.07 16.572c0 1.607 1.088 3.49 4.148 2.897c23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" clip-rule="evenodd"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185c-.44-.196-.685-.605-.543-.906c.13-.31.603-.395 1.04-.188c.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28c-.396-.42-.47-.983-.177-1.254c.298-.266.844-.14 1.24.28c.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52c-.37-.538-.37-1.183.01-1.44c.373-.258.97-.025 1.35.507c.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23c-.527-.487-.674-1.18-.343-1.544c.336-.366 1.045-.264 1.564.23c.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486c-.683-.207-1.13-.76-.99-1.238c.14-.477.823-.7 1.512-.485c.683.206 1.13.756.988 1.237m4.943.361c.017.498-.563.91-1.28.92c-.723.017-1.308-.387-1.315-.877c0-.503.568-.91 1.29-.924c.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117c-.7.13-1.35-.172-1.44-.653c-.086-.498.422-.997 1.122-1.126c.714-.123 1.354.17 1.444.663zm0 0"/></g></svg><span class="hx-sr-only">GitHub</span>
+          </a><button type="button" aria-label="Menu" class="hamburger-menu -hx-mr-2 hx-rounded hx-p-2 active:hx-bg-gray-400/20 md:hx-hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx-mx-auto hx-flex max-w-full'>
+    <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] hx-fixed hx-inset-0 hx-z-10 hx-bg-black/80 dark:hx-bg-black/60 hx-hidden"></div>
+<aside class="sidebar-container hx-flex hx-flex-col print:hx-hidden md:hx-top-16 md:hx-shrink-0 md:hx-w-80 md:hx-self-start max-md:[transform:translate3d(0,-100%,0)] md:hx-sticky">
+  
+  <div class="hx-px-4 hx-pt-4 md:hx-hidden">
+    <div class="search-wrapper hx-relative md:hx-w-64">
+  <div class="hx-relative hx-flex hx-items-center hx-text-gray-900 contrast-more:hx-text-gray-800 dark:hx-text-gray-300 contrast-more:dark:hx-text-gray-300">
+    <input
+      placeholder="搜索文档..."
+      class="search-input hx-block hx-w-full hx-appearance-none hx-rounded-lg hx-px-3 hx-py-2 hx-transition-colors hx-text-base hx-leading-tight md:hx-text-sm hx-bg-black/[.05] dark:hx-bg-gray-50/10 focus:hx-bg-white dark:focus:hx-bg-dark placeholder:hx-text-gray-500 dark:placeholder:hx-text-gray-400 contrast-more:hx-border contrast-more:hx-border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx-absolute hx-my-1.5 hx-select-none ltr:hx-right-1.5 rtl:hx-left-1.5 hx-h-5 hx-rounded hx-bg-white hx-px-1.5 hx-font-mono hx-text-[10px] hx-font-medium hx-text-gray-500 hx-border dark:hx-border-gray-100/20 dark:hx-bg-dark/50 contrast-more:hx-border-current contrast-more:hx-text-current contrast-more:dark:hx-border-current hx-items-center hx-gap-1 hx-transition-opacity hx-pointer-events-none hx-hidden sm:hx-flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hx-hidden hx-border hx-border-gray-200 hx-bg-white hx-text-gray-100 dark:hx-border-neutral-800 dark:hx-bg-neutral-900 hx-absolute hx-top-full hx-z-20 hx-mt-2 hx-overflow-auto hx-overscroll-contain hx-rounded-xl hx-py-2.5 hx-shadow-xl hx-max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:hx-max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx-inset-x-0 ltr:md:hx-left-auto rtl:md:hx-right-auto contrast-more:hx-border contrast-more:hx-border-gray-900 contrast-more:dark:hx-border-gray-50 hx-w-screen hx-min-h-[100px] hx-max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar hx-overflow-y-auto hx-overflow-x-hidden hx-p-4 hx-grow md:hx-h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx-flex hx-flex-col hx-gap-1 md:hx-hidden">
+      
+      
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/about/"
+    
+  >关于
+    </a></li>
+          <li class="open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/"
+    
+  >文档
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/"
+    
+  >人工智能
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/"
+    
+  >1. 端到端的机器学习
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/overview/"
+    
+  >1.1. 概述
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/tool/"
+    
+  >1.2. 工具
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/algorithms/"
+    
+  >1.3. 算法
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/"
+    
+  >1.4 步骤
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/define_problem/"
+    
+  >1️⃣ 定义问题
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/preparation/"
+    
+  >2️⃣ 数据准备
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/preparation/collect_data/"
+    
+  >2-1 收集数据
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/automl/"
+    
+  >1.5. 自动 ML
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/large_datasets/"
+    
+  >1.6. 大数据集
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/deep_learning/"
+    
+  >2. 深度学习
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/gai/"
+    
+  >3. 生成式人工智能
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/mlops/"
+    
+  >4. 模型部署 MLOps
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/distributed/"
+    
+  >5. 分布式训练
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/"
+    
+  >大数据
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/base/"
+    
+  >1. 基础知识
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/frame/"
+    
+  >2. 核心框架
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/"
+    
+  >3. 数据仓库
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/paradigm/"
+    
+  >3.1. 范式
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/er_model/"
+    
+  >3.2. ER 模型
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/documentation/bigdata/data_warehouse/overview/"
+    
+  >3.3. 数仓概述
+    </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e6%9e%84%e5%bb%ba%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >1. 为什么要构建数据仓库？</a>
+            </li>
+          <li>
+              <a
+                href="#2-%e4%bb%80%e4%b9%88%e6%98%af%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >2. 什么是数据仓库？</a>
+            </li>
+          <li>
+              <a
+                href="#3-%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93-vs-%e6%95%b0%e6%8d%ae%e5%ba%93"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >3. 数据仓库 vs 数据库</a>
+            </li>
+          <li>
+              <a
+                href="#4-oltp-vs-oltp"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >4. OLTP vs OLTP</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%8f%82%e8%80%83%e7%bd%91%e5%9d%80"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >参考网址：</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/framework/"
+    
+  >3.4. 数仓架构
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/standard/"
+    
+  >3.5. 数仓规范
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/model/"
+    
+  >3.6. 数仓建模
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_governance/"
+    
+  >4. 数据治理
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/cc/"
+    
+  >云计算
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/cc/base/"
+    
+  >1. 基础知识
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/cc/cloud_native/"
+    
+  >2. 云原生
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/iot/"
+    
+  >物联网
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/"
+    
+  >指南
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/markdown/"
+    
+  >Markdown
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/math_calculus/"
+    
+  >微积分
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/math_linear_algebra/"
+    
+  >线性代数
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/math_probability_theory/"
+    
+  >概率论
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/math_mathematical_statistics/"
+    
+  >数理统计
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/program_python/"
+    
+  >Python
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/program_java/"
+    
+  >Java
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/program_scala/"
+    
+  >Scala
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/program_go/"
+    
+  >Go
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/program_linux/"
+    
+  >Linux\Shell
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_numpy/"
+    
+  >Python_Numpy
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_pandas/"
+    
+  >Python_Pandas
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_sklearn/"
+    
+  >Python_Sklearn
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_sklearn_source_code/"
+    
+  >Python_Sklearn 源码
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_statsmodels/"
+    
+  >Python_Statsmodels
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_matplotlib/"
+    
+  >Python_Matplotlib
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_seaborn/"
+    
+  >Python_Seaborn
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_plotly/"
+    
+  >Python_Plotly
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_shap/"
+    
+  >Python_SHAP
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_streamlit/"
+    
+  >Python_Streamlit
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_flask/"
+    
+  >Python_Flask
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_geopandas/"
+    
+  >Python_GeoPandas
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/python_folium/"
+    
+  >Python_Folium
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/guide/bd_hive/"
+    
+  >Hive
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/"
+    
+  >项目
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/competition/"
+    
+  >数据竞赛
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/competition/page_001_test/"
+    
+  >2025测试
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/bigdata/"
+    
+  >大数据项目
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/project/visualization/"
+    
+  >数据可视化
+    </a>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <ul class="hx-flex hx-flex-col hx-gap-1 max-md:hx-hidden">
+        
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/"
+    
+  >人工智能
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/"
+    
+  >1. 端到端的机器学习
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/overview/"
+    
+  >1.1. 概述
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/tool/"
+    
+  >1.2. 工具
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/algorithms/"
+    
+  >1.3. 算法
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/"
+    
+  >1.4 步骤
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/define_problem/"
+    
+  >1️⃣ 定义问题
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/preparation/"
+    
+  >2️⃣ 数据准备
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/preparation/collect_data/"
+    
+  >2-1 收集数据
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/automl/"
+    
+  >1.5. 自动 ML
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/large_datasets/"
+    
+  >1.6. 大数据集
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/deep_learning/"
+    
+  >2. 深度学习
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/gai/"
+    
+  >3. 生成式人工智能
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/mlops/"
+    
+  >4. 模型部署 MLOps
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/distributed/"
+    
+  >5. 分布式训练
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class="open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/"
+    
+  >大数据
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/base/"
+    
+  >1. 基础知识
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/frame/"
+    
+  >2. 核心框架
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/"
+    
+  >3. 数据仓库
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/paradigm/"
+    
+  >3.1. 范式
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/er_model/"
+    
+  >3.2. ER 模型
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/documentation/bigdata/data_warehouse/overview/"
+    
+  >3.3. 数仓概述
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/framework/"
+    
+  >3.4. 数仓架构
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/standard/"
+    
+  >3.5. 数仓规范
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_warehouse/model/"
+    
+  >3.6. 数仓建模
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/bigdata/data_governance/"
+    
+  >4. 数据治理
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/cc/"
+    
+  >云计算
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/cc/base/"
+    
+  >1. 基础知识
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/cc/cloud_native/"
+    
+  >2. 云原生
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/iot/"
+    
+  >物联网
+    </a></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx-sticky hx-bottom-0 hx-bg-white dark:hx-bg-dark hx-mx-4 hx-py-4 hx-shadow-[0_-12px_16px_#fff] hx-flex hx-items-center hx-gap-2 dark:hx-border-neutral-800 dark:hx-shadow-[0_-12px_16px_#111] contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-shadow-none hx-border-t" data-toggle-animation="show"><div class="hx-flex hx-grow hx-flex-col"><button
+  title="切换主题"
+  data-theme="light"
+  class="theme-toggle hx-group hx-h-7 hx-rounded-md hx-px-2 hx-text-left hx-text-xs hx-font-medium hx-text-gray-600 hx-transition-colors dark:hx-text-gray-400 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50"
+  type="button"
+  aria-label="切换主题"
+>
+  <div class="hx-flex hx-items-center hx-gap-2 hx-capitalize"><svg height=12 class="group-data-[theme=light]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="group-data-[theme=light]:hx-hidden">浅色</span><svg height=12 class="group-data-[theme=dark]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="group-data-[theme=dark]:hx-hidden">深色</span></div>
+</button>
+</div></div></aside>
+    
+<nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">此页上</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e6%9e%84%e5%bb%ba%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93">1. 为什么要构建数据仓库？
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#11%e5%8e%86%e5%8f%b2%e9%97%ae%e9%a2%98">1.1、历史问题
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#12%e4%b8%9a%e5%8a%a1%e9%a9%b1%e5%8a%a8%e5%9b%a0%e7%b4%a0">1.2、业务驱动因素
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#13%e6%8a%80%e6%9c%af%e8%bf%9b%e6%ad%a5">1.3、技术进步
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-%e4%bb%80%e4%b9%88%e6%98%af%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93">2. 什么是数据仓库？
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#21%e5%ae%9a%e4%b9%89">2.1、定义
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#22%e7%89%b9%e7%82%b9">2.2、特点
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-%e9%9d%a2%e5%90%91%e4%b8%bb%e9%a2%98%e7%9a%84">1️⃣ 面向主题的
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-%e9%9b%86%e6%88%90%e7%9a%84">2️⃣ 集成的
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-%e9%9d%9e%e6%98%93%e5%a4%b1">3️⃣ 非易失
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#4-%e6%97%b6%e5%8f%98%e6%80%a7">4️⃣ 时变性
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#23%e4%bd%9c%e7%94%a8">2.3、作用
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#24%e7%9b%ae%e6%a0%87">2.4、目标
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#25%e5%8e%86%e5%8f%b2">2.5、历史
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#26%e5%86%85%e5%ae%b9">2.6、内容
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93-vs-%e6%95%b0%e6%8d%ae%e5%ba%93">3. 数据仓库 vs 数据库
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#4-oltp-vs-oltp">4. OLTP vs OLTP
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#41oltp-%e8%81%94%e6%9c%ba%e4%ba%8b%e7%89%a9%e5%a4%84%e7%90%86">4.1、OLTP 联机事物处理
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#42olap-%e8%81%94%e6%9c%ba%e5%88%86%e6%9e%90%e5%a4%84%e7%90%86">4.2、OLAP 联机分析处理
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-%e7%bb%b4%e5%ba%a6%e5%b1%9e%e6%80%a7%e5%ba%a6%e9%87%8f">1️⃣ 维度,属性,度量
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-rmholap">2️⃣ R\M\HOLAP
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-olap-%e5%b7%a5%e5%85%b7">3️⃣ OLAP 工具
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e5%ae%8c%e6%95%b4olap%e5%b7%a5%e5%85%b7%e7%9f%a9%e9%98%b5">完整OLAP工具矩阵
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e5%95%86%e4%b8%9a%e5%b7%a5%e5%85%b7%e5%af%b9%e6%af%94">商业工具对比
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e5%bc%80%e6%ba%90%e5%b7%a5%e5%85%b7%e5%af%b9%e6%af%94">开源工具对比
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e6%80%a7%e8%83%bd%e6%8c%87%e6%a0%87%e5%af%b9%e6%af%94">性能指标对比
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e7%94%9f%e6%80%81%e9%9b%86%e6%88%90%e5%af%b9%e6%af%94">生态集成对比
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e4%ba%91%e5%8e%9f%e7%94%9f%e6%94%af%e6%8c%81">云原生支持
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e9%80%89%e5%9e%8b%e5%86%b3%e7%ad%96%e6%8c%87%e5%8d%97">选型决策指南
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-12 rtl:hx-pr-12 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e5%bc%80%e6%ba%90olap%e9%80%89%e5%9e%8b%e5%86%b3%e7%ad%96%e6%a0%91">开源OLAP选型决策树
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#%e5%8f%82%e8%80%83%e7%bd%91%e5%9d%80">参考网址：
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
+          <span>返回顶部</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+        
+  <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/documentation/">文档</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/documentation/bigdata/">大数据</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/documentation/bigdata/data_warehouse/">3. 数据仓库</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">3.3. 数仓概述</div>
+  </div>
+
+        <div class="content">
+          <h1>3.3. 数仓概述</h1>
+          <h2>1. 为什么要构建数据仓库？<span class="hx-absolute -hx-mt-20" id="1-为什么要构建数据仓库"></span>
+    <a href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e6%9e%84%e5%bb%ba%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1.1、历史问题<span class="hx-absolute -hx-mt-20" id="11历史问题"></span>
+    <a href="#11%e5%8e%86%e5%8f%b2%e9%97%ae%e9%a2%98" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><em><strong>历史数据积存</strong></em>：历史数据使用频率低，堆积在业务库中，导致性能下降。</li>
+<li><em><strong>数据使用困难</strong></em>：各个部门自己建立独立的抽取系统，导致数据不一致，且使用效率低。</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>业务系统常见问题：</p>
+<ol>
+<li>业务系统的表结构为事务处理性能而优化，有时并不适合查询与分析。</li>
+<li>某些业务数据由于安全或其他因素不能直接访问；</li>
+<li>业务系统多，数据格式多元化（如日期、数字格式不统一）；</li>
+<li>业务系统的列名通常是硬编码，有时仅仅是无意义的字符串，这让编写分析系统更加困难；</li>
+<li>没有适当的方式将有价值的数据合并进特定应用的数据库。</li>
+<li>没有适当的位置存储元数据。</li>
+<li>通常事务处理的优先级比分析系统高，所以如果将分析系统和事务处理运行在同一硬件之上，分析系统往往性能很差。</li>
+<li>有误用业务数据的风险。</li>
+<li>用户需要看到的显示数据字段，有时在数据库中并不存在。</li>
+</ol>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>业务系统版本问题：</p>
+<ol>
+<li>业务系统的版本变更很频繁，每次变更都需要重写分析系统并重新测试；</li>
+<li>数据来源于多个业务系统版本的报表，很难建立和维护；</li>
+</ol>
+</li>
+</ul>
+<br>
+<h3>1.2、业务驱动因素<span class="hx-absolute -hx-mt-20" id="12业务驱动因素"></span>
+    <a href="#12%e4%b8%9a%e5%8a%a1%e9%a9%b1%e5%8a%a8%e5%9b%a0%e7%b4%a0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><em><strong>决策支持：</strong></em> 公司业务对于数据的实时性越来越迫切，需要有实时数据来辅助完成决策。</li>
+<li><em><strong>合规需求：</strong></em> 随着数据监管法规（如 GDPR、CCPA、《数据安全法》）的加强，企业必须确保数据的准确性，可审计性，时效性等。</li>
+<li><em><strong>商务智能：</strong></em> 商务智能为组织、客户及产品提供洞察。是建设数仓的主要原因。通过 <em><strong>商务智能获得决策知识，能提升公司运营效率，增强其竞争优势</strong></em>。数据使用速度加快，商务智能从回顾性评价发展到预测分析领域。</li>
+</ul>
+<br>
+<h3>1.3、技术进步<span class="hx-absolute -hx-mt-20" id="13技术进步"></span>
+    <a href="#13%e6%8a%80%e6%9c%af%e8%bf%9b%e6%ad%a5" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>数据平台工具对整体实时开发的支持也日渐趋于成熟，开发成本降低。</li>
+<li>尽管需要增加软硬件的投入，但建立独立数据仓库与直接访问业务数据相比，无论是成本还是带来的好处，这样做都是值得的。</li>
+</ul>
+<p><br><br></p>
+<h2>2. 什么是数据仓库？<span class="hx-absolute -hx-mt-20" id="2-什么是数据仓库"></span>
+    <a href="#2-%e4%bb%80%e4%b9%88%e6%98%af%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>2.1、定义<span class="hx-absolute -hx-mt-20" id="21定义"></span>
+    <a href="#21%e5%ae%9a%e4%b9%89" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>简单来说，数据仓库就是一个 <em><strong>支持决策的数据池</strong></em>，同时还是管理者可能感兴趣的企业 <em><strong>当前和历史数据的存储库</strong></em>。通常数据被组织成分析处理可用的形式（例如在线分析处理、数据挖掘、查询、报表和其他支持决策的应用）。</li>
+</ol>
+<br>
+<ol start="2">
+<li>数据仓库，是一个用来 <em><strong>支持管理者决策</strong></em>（Decision Making Support）、<em><strong>面向主题的</strong></em>（Subject Oriented）、<em><strong>集成的</strong></em>（Integrate）、<em><strong>非易失/稳定的</strong></em>（Non-Volatile）、<em><strong>随时间变/化反映历史变化的</strong></em>（Time Variant）数据集合。主要用于组织积累的历史数据，并使用分析方法（OLAP、数据分析）进行整理，进而辅助决策，为管理者、企业系统提供数据支持，构建商务智能（BI）和决策支持系统（decision support system/DDS）。</li>
+</ol>
+<br>
+<h3>2.2、特点<span class="hx-absolute -hx-mt-20" id="22特点"></span>
+    <a href="#22%e7%89%b9%e7%82%b9" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>1️⃣ 面向主题的<span class="hx-absolute -hx-mt-20" id="1-面向主题的"></span>
+    <a href="#1-%e9%9d%a2%e5%90%91%e4%b8%bb%e9%a2%98%e7%9a%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>传统数据库中，最大的特点是面向应用进行数据的组织，各个业务系统可能是相互分离的。</p>
+<p>数仓为数据分析提供服务，<em><strong>根据主题组织将原始数据集合在一起。面向主题（销售、客户、财务、人员、生产），用户可以确定业务如何开展</strong></em>，以及为什么要这样开展。面向主题它提供了一个对企业进行更加全面分析的视觉。</p>
+<p>
+    <img src="../image/1755348578544.png" alt="1755348578544" loading="lazy" /></p>
+<br>
+<h4>2️⃣ 集成的<span class="hx-absolute -hx-mt-20" id="2-集成的"></span>
+    <a href="#2-%e9%9b%86%e6%88%90%e7%9a%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>集成与面向主题密切相关。原始数据来源于不同数据源（分散、独立、异构的数据库），<em><strong>要整合成最终数据，需要经过抽取、清洗、转换的过程，最终将不同数据源的数据以一致（命名冲突、计量单位差异等）的格式存储</strong></em>    。</p>
+<p>
+    <img src="../image/1755348764276.png" alt="1755348764276" loading="lazy" /></p>
+<br>
+<h4>3️⃣ 非易失<span class="hx-absolute -hx-mt-20" id="3-非易失"></span>
+    <a href="#3-%e9%9d%9e%e6%98%93%e5%a4%b1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>数据仓库 <em><strong>保存的数据是一系列历史快照，不允许被修改，只允许通过工具进行查询、分析</strong></em>。过时的数据将会被抛弃，而更新的数据则作为新数据被记录下来。</p>
+<p>
+    <img src="../image/1755348890393.png" alt="1755348890393" loading="lazy" /></p>
+<br>
+<h4>4️⃣ 时变性<span class="hx-absolute -hx-mt-20" id="4-时变性"></span>
+    <a href="#4-%e6%97%b6%e5%8f%98%e6%80%a7" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>数仓会 <em><strong>定期接受、集成新的数据，从而反应出数据的最新变化</strong></em>。（每天同步一次）每个数仓都具有时间属性，时间是所有数据仓库都支持的一个重要维度。在数据仓库中，用于分析的多元数据包括不同的时间点（如日、周和月等）。</p>
+<br>
+<p>上述这些特点是数据仓库非常便于数据访问。此外，数据仓库还有一些其他特点:</p>
+<p>5️⃣ <em><strong>基于网络</strong></em>：数据仓库通常被用来为基于网络的应用提供高效的计算环境。<br>
+6️⃣ <em><strong>关系的/多维的</strong></em>：数据仓库常常是基于关系结构或多维结构。（参考 Romero 和 Abello 的文章）。<br>
+7️⃣ <em><strong>客户端/服务器</strong></em>：数据仓库运用客户端/服务器架构为终端用户提供更轻松便捷的访问。<br>
+8️⃣ <em><strong>实时的</strong></em>：新型的数据仓库已经具备提供实时或动态的数据访问和分析能力。<br>
+9️⃣ <em><strong>元数据</strong></em>：数据仓库通过元数据（即关于数据的数据）来描述数据的组成方式，以及如何有效的使用数据。<br></p>
+<br>
+<h3>2.3、作用<span class="hx-absolute -hx-mt-20" id="23作用"></span>
+    <a href="#23%e4%bd%9c%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>
+<p>以统一的形式存储数据，并以一种易于理解的形式提供给使用者，可以一览公司业务的实时状态，并快速识别问题，这是解决问题的首要步骤，也是最重要的一步。</p>
+</li>
+<li>
+<p>科学的数仓能够持续高效的为业务分析服务，可以帮助企业，<strong>改进业务流程</strong>、<strong>提升运营效率</strong>、<strong>提高产品质量</strong>等。</p>
+</li>
+<li>
+<p>为企业制定决策，提供数据支持，检测趋势、偏差和长期关系以便进行预测与比较，从而<strong>支持业务决策</strong>。</p>
+</li>
+</ol>
+<ul>
+<li>综合应用 <em><strong>实时数据仓库</strong></em>（real-time data warehouse/RDW），<em><strong>决策支持系统</strong></em>（Decision support system/DDS）和 <em><strong>商务智能（BI）</strong></em> 技术是实施业务的一种重要手段。</li>
+</ul>
+<br>
+<h3>2.4、目标<span class="hx-absolute -hx-mt-20" id="24目标"></span>
+    <a href="#24%e7%9b%ae%e6%a0%87" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>参考：《DAMA 数据管理知识体系指南》原书第2版</p>
+<ol>
+<li>
+<p>支持决策分析：核心目标是提供一致、集成的历史数据，支撑企业级分析。</p>
+</li>
+<li>
+<p>消除信息孤岛</p>
+</li>
+<li>
+<p>提升数据质量</p>
+</li>
+<li>
+<p>分离 OLTP 与 OLAP</p>
+</li>
+<li>
+<p>支撑数据资产化</p>
+</li>
+<li>
+<p>满足合规要求</p>
+</li>
+</ol>
+<br>
+<h3>2.5、历史<span class="hx-absolute -hx-mt-20" id="25历史"></span>
+    <a href="#25%e5%8e%86%e5%8f%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>
+    <img src="../image/1755349736076.png" alt="1755349736076" loading="lazy" /></p>
+<ul>
+<li>萌芽阶段（1978-1988年）将业务处理系统和分析系统分开。</li>
+<li>探索阶段（1988年左右）DEC公司提出TA2规范，定义分析系统的四个部分：数据获取、数据访问、目录和用户服务。</li>
+<li>雏形阶段（1988年左右）IBM，信息仓库，数据抽取、转换、有效性验证、加载、Cube 开发、图像化查询工具。</li>
+<li>确立阶段（1991年）比尔-恩门，《Building the Data Warehouse》，数据仓库之父</li>
+</ul>
+<p>
+    <img src="../image/1755349877539.png" alt="1755349877539" loading="lazy" /></p>
+<p>
+    <img src="../image/1755350134300.png" alt="1755350134300" loading="lazy" /></p>
+<ul>
+<li>确立阶段（1994年）拉尔夫-金博尔《The DataWarehouse Toolkit》，维度建模。</li>
+</ul>
+<p>
+    <img src="../image/1755350090245.png" alt="1755350090245" loading="lazy" /></p>
+<ul>
+<li>
+<p>争吵与混乱（1996-1997年）比尔-恩门 &amp; 拉尔夫-金博尔</p>
+</li>
+<li>
+<p>合并阶段（1998-2001年）比尔-恩门提出 <em><strong>CIF 架构</strong></em>：数仓分层，不同层采取不同的建模方式。</p>
+</li>
+</ul>
+<br>
+<h3>2.6、内容<span class="hx-absolute -hx-mt-20" id="26内容"></span>
+    <a href="#26%e5%86%85%e5%ae%b9" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300">
+  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"></div>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><em><strong>数据仓库 ≠ 仅技术工具</strong></em></div>
+  </div>
+</div>
+
+<ul>
+<li>数据仓库不仅仅是 SQL脚本、编程语言或ETL工具的使用</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>核心在于：</p>
+<ul>
+<li>业务理解（业务流程、指标口径、分析需求）</li>
+<li>数据建模能力（维度建模、星型/雪花模型、数据分层）</li>
+<li>架构设计（ODS → DWD → DWS → ADS 分层设计）</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>数据仓应用库三大核心内容：<br>
+<table>
+  <thead>
+      <tr>
+          <th>模块</th>
+          <th>关键内容</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>数据存储与管理</strong></td>
+          <td>- 数据分层（ODS/DWD/DWS/ADS）<br>- 维度建模（事实表、维度表）<br>- 数据质量监控</td>
+          <td>Hive、HDFS、Iceberg、ClickHouse</td>
+      </tr>
+      <tr>
+          <td><strong>数据采集与计算（ETL）</strong></td>
+          <td>- 数据抽取（Extract）<br>- 数据清洗转换（Transform）<br>- 数据加载（Load）<br>- 实时/离线调度</td>
+          <td>Flink、Kafka、Airflow、DataX</td>
+      </tr>
+      <tr>
+          <td><strong>数据应用（BI/分析）</strong></td>
+          <td>- 报表开发<br>- 即席查询（Ad-hoc）<br>- 数据挖掘（预测模型）<br>- 数据服务API</td>
+          <td>Tableau、Superset、机器学习平台</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<p><br><br></p>
+<h2>3. 数据仓库 vs 数据库<span class="hx-absolute -hx-mt-20" id="3-数据仓库-vs-数据库"></span>
+    <a href="#3-%e6%95%b0%e6%8d%ae%e4%bb%93%e5%ba%93-vs-%e6%95%b0%e6%8d%ae%e5%ba%93" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">对比维度</th>
+          <th style="text-align: center">数据仓库 (Data Warehouse)</th>
+          <th style="text-align: center">数据库 (Database)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>设计目的</strong></td>
+          <td style="text-align: center">面向事务<br>属于 OLTP（在线事务处理）系统</td>
+          <td style="text-align: center">面向主题/分析<br>属于 OLAP（在线分析处理）系统</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>典型应用</strong></td>
+          <td style="text-align: center">面向高层管理人员的，为其提供决策支持； <br> 长期信息需求、为分析数据\数据挖掘而设计； <br> <em><strong>报表系统、多维分析、决策支持系统&hellip;</strong></em></td>
+          <td style="text-align: center">面相业务处理人员日常操作，为捕获数据设计；<br> 为业务处理人员提供信息处理的支持； <br> <em><strong>管理系统、交易系统、在线应用&hellip;</strong></em></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>数据特性</strong></td>
+          <td style="text-align: center">集成、历史<br> 只读 <br> 延迟（ETL处理后可用）<br><br> 数据是静态的历史数据，只能定期添加、刷新</td>
+          <td style="text-align: center">当前 <br> 可更新  <br> 实时  <br><br> 数据是动态变化的，只要有业务发生，数据就会被更新</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>数据规模</strong></td>
+          <td style="text-align: center">TB~PB级</td>
+          <td style="text-align: center">GB~TB级</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>数据结构</strong></td>
+          <td style="text-align: center">星型/雪花模型（维度建模）</td>
+          <td style="text-align: center">关系模型（3NF规范化）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>典型操作</strong></td>
+          <td style="text-align: center">复杂查询、全表扫描</td>
+          <td style="text-align: center">增删改查、索引查询</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>响应时间</strong></td>
+          <td style="text-align: center">秒~分钟级</td>
+          <td style="text-align: center">毫秒~秒级</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>用户类型</strong></td>
+          <td style="text-align: center">数据分析师、决策者</td>
+          <td style="text-align: center">业务操作人员、开发人员</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>更新频率</strong></td>
+          <td style="text-align: center">定时批量加载（T+1/小时级）</td>
+          <td style="text-align: center">实时更新</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>典型技术</strong></td>
+          <td style="text-align: center">Hive/Redshift/Snowflake</td>
+          <td style="text-align: center">MySQL/Oracle/SQL Server</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>存储成本</strong></td>
+          <td style="text-align: center">高（保留多年历史数据）</td>
+          <td style="text-align: center">中（主要存储当前数据）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>查询复杂度</strong></td>
+          <td style="text-align: center">多表关联、聚合运算</td>
+          <td style="text-align: center">简单条件查询</td>
+      </tr>
+  </tbody>
+</table>
+<p><br><br></p>
+<h2>4. OLTP vs OLTP<span class="hx-absolute -hx-mt-20" id="4-oltp-vs-oltp"></span>
+    <a href="#4-oltp-vs-oltp" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th><strong>对比维度</strong></th>
+          <th><strong>OLAP (联机分析处理)</strong></th>
+          <th><strong>OLTP (联机事务处理)</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>设计目的</strong></td>
+          <td>支持复杂分析决策</td>
+          <td>支持日常业务操作</td>
+      </tr>
+      <tr>
+          <td><strong>数据特性</strong></td>
+          <td>集成、历史、只读</td>
+          <td>当前、可更新</td>
+      </tr>
+      <tr>
+          <td><strong>典型操作</strong></td>
+          <td>复杂查询、多表关联、聚合计算</td>
+          <td>简单的增删改查操作</td>
+      </tr>
+      <tr>
+          <td><strong>响应时间要求</strong></td>
+          <td>秒级到分钟级</td>
+          <td>毫秒级</td>
+      </tr>
+      <tr>
+          <td><strong>数据模型</strong></td>
+          <td>星型/雪花模型</td>
+          <td>关系模型(3NF)</td>
+      </tr>
+      <tr>
+          <td><strong>数据规模</strong></td>
+          <td>TB到PB级</td>
+          <td>GB到TB级</td>
+      </tr>
+      <tr>
+          <td><strong>用户类型</strong></td>
+          <td>数据分析师、决策者</td>
+          <td>业务操作人员、前端应用</td>
+      </tr>
+      <tr>
+          <td><strong>查询模式</strong></td>
+          <td>不固定、ad-hoc查询</td>
+          <td>固定模式、预定义查询</td>
+      </tr>
+      <tr>
+          <td><strong>数据更新方式</strong></td>
+          <td>批量加载(ETL)</td>
+          <td>实时单条记录更新</td>
+      </tr>
+      <tr>
+          <td><strong>索引使用</strong></td>
+          <td>位图索引、列存储</td>
+          <td>B树索引、哈希索引</td>
+      </tr>
+      <tr>
+          <td><strong>典型技术</strong></td>
+          <td>Snowflake、Redshift、ClickHouse、Doris</td>
+          <td>MySQL、PostgreSQL、Oracle</td>
+      </tr>
+      <tr>
+          <td><strong>并发量</strong></td>
+          <td>低到中(10-100)</td>
+          <td>高(1000+)</td>
+      </tr>
+      <tr>
+          <td><strong>事务特性</strong></td>
+          <td>不需要ACID</td>
+          <td>严格遵循ACID</td>
+      </tr>
+      <tr>
+          <td><strong>典型场景</strong></td>
+          <td>月度销售分析、客户行为分析</td>
+          <td>订单处理、账户余额查询</td>
+      </tr>
+  </tbody>
+</table>
+<p>关键差异图解</p>
+<pre class="mermaid hx-mt-6">graph LR
+    OLTP[OLTP系统] -->|ETL处理| OLAP[OLAP系统]
+    OLAP --> BI[BI工具]
+    style OLTP fill:#f9f,stroke:#333
+    style OLAP fill:#bbf,stroke:#333</pre><br>
+<h3>4.1、OLTP 联机事物处理<span class="hx-absolute -hx-mt-20" id="41oltp-联机事物处理"></span>
+    <a href="#41oltp-%e8%81%94%e6%9c%ba%e4%ba%8b%e7%89%a9%e5%a4%84%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><em><strong>OLTP</strong></em>（On-Line Transaction Processing）是面向 <em><strong>高并发事务处理</strong></em>的数据库系统，主要特征包括：</p>
+<pre class="mermaid hx-mt-6">graph TD
+    A[OLTP] --> B[高并发]
+    A --> C[短事务]
+    A --> D[实时响应]
+    A --> E[ACID保证]</pre><br>
+<p><em><strong>主流 OLTP 数据库</strong></em></p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>类型</strong></th>
+          <th><strong>代表产品</strong></th>
+          <th><strong>适用场景</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>关系型</td>
+          <td>MySQL, PostgreSQL, Oracle</td>
+          <td>通用业务系统</td>
+      </tr>
+      <tr>
+          <td>分布式</td>
+          <td>CockroachDB, TiDB</td>
+          <td>高扩展需求</td>
+      </tr>
+      <tr>
+          <td>内存数据库</td>
+          <td>Redis, MemSQL</td>
+          <td>极致性能场景</td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<p><em><strong>OLTP 联机事物处理存在许多不便，具体如下：</strong></em></p>
+<ol>
+<li>
+<p>数据过于分散。存放在多个数据库，甚至是异构数据。</p>
+</li>
+<li>
+<p>标准规则及编码不统一。不同业务系统间不统一，甚至单个业务系统不同时间段间也可能不统一。</p>
+</li>
+<li>
+<p>数据质量问题。会有部分垃圾数据、测试数据、系统 bug 等产生的错误数据，都会影响到数据质量。</p>
+</li>
+<li>
+<p>历史数据缺失。通常只会保留最近半年到一年左右数据，历史数据会被转移甚至删除。</p>
+</li>
+<li>
+<p>对业务系统性能的影响。过量的分析计算会抢占计算资源。</p>
+</li>
+<li>
+<p>面向 OLTP 的数据存储，有时候并不适合数据分析。</p>
+</li>
+</ol>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300">
+  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"></div>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">为了更好的支持各种数据应用，上世纪 90 年代初，<em><strong>联机分析处理</strong></em>（On-Line Analysis Processing）<em><strong>及数据仓库</strong></em> （Data Warehouse）的概念应运而生。</div>
+  </div>
+</div>
+
+<br>
+<h3>4.2、OLAP 联机分析处理<span class="hx-absolute -hx-mt-20" id="42olap-联机分析处理"></span>
+    <a href="#42olap-%e8%81%94%e6%9c%ba%e5%88%86%e6%9e%90%e5%a4%84%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>OLAP（On-Line Analysis Processing）联机分析处理：联机分析处理的概念最早由关系数据库之父 E．F．Codd 于 1993 年提出。Codd 提出了 <em><strong>多维数据库</strong></em> 和 <em><strong>多维分析</strong></em>的概念，把业务系统面向业务逻辑、面向事务增删改查而设计的存储结构，转换成面向分析、侧重查询的多维分析型存储结构。</p>
+<h4>1️⃣ 维度,属性,度量<span class="hx-absolute -hx-mt-20" id="1-维度属性度量"></span>
+    <a href="#1-%e7%bb%b4%e5%ba%a6%e5%b1%9e%e6%80%a7%e5%ba%a6%e9%87%8f" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>多维分析将所有对象都抽象为维度、度量、属性三类：</p>
+<table>
+  <thead>
+      <tr>
+          <th>要素类型</th>
+          <th>定义</th>
+          <th>业务意义</th>
+          <th>技术特征</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>维度</strong></td>
+          <td>分析视角/观察角度</td>
+          <td>确定&quot;按什么分析&quot;</td>
+          <td>通常作为GROUP BY字段</td>
+      </tr>
+      <tr>
+          <td><strong>属性</strong></td>
+          <td>维度的描述性特征</td>
+          <td>定义&quot;这个视角的具体分类&quot;</td>
+          <td>维度表的列</td>
+      </tr>
+      <tr>
+          <td><strong>度量</strong></td>
+          <td>可计算的数值指标</td>
+          <td>回答&quot;分析结果是多少&quot;</td>
+          <td>聚合函数(SUM/AVG等)操作对象</td>
+      </tr>
+  </tbody>
+</table>
+<p>零售行业维度分析\建模示例如下：</p>
+<pre class="mermaid hx-mt-6">erDiagram
+    DIM_DATE ||--o{ FACT_SALES : "时间维度"
+    DIM_PRODUCT ||--o{ FACT_SALES : "商品维度"
+    DIM_STORE ||--o{ FACT_SALES : "门店维度"
+    
+    DIM_PRODUCT {
+        string product_id PK
+        string product_name
+        string category
+        decimal price
+    }
+    
+    FACT_SALES {
+        string transaction_id PK
+        date sale_date FK
+        string product_id FK
+        string store_id FK
+        int quantity
+        decimal amount
+    }</pre><br>
+<h4>2️⃣ R\M\HOLAP<span class="hx-absolute -hx-mt-20" id="2-rmholap"></span>
+    <a href="#2-rmholap" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>OLAP 可细分为 ROLAP ， MOLAP ， HOLAP 三类</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>对比维度</strong></th>
+          <th style="text-align: center"><strong>ROLAP</strong></th>
+          <th style="text-align: center"><strong>MOLAP</strong></th>
+          <th style="text-align: center"><strong>HOLAP</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>全称</strong></td>
+          <td style="text-align: center">Relational OLAP</td>
+          <td style="text-align: center">Multidimensional OLAP</td>
+          <td style="text-align: center">Hybrid OLAP</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>定义</strong></td>
+          <td style="text-align: center">基于关系型数据库实现的OLAP</td>
+          <td style="text-align: center">通过预计算多维数据立方体(Cube)实现的OLAP</td>
+          <td style="text-align: center">混合ROLAP和MOLAP的实现方式</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>存储结构</strong></td>
+          <td style="text-align: center">关系型数据库(星型/雪花模型)</td>
+          <td style="text-align: center">专有多维数组(Cube)</td>
+          <td style="text-align: center">混合存储(关系型+Cube)</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>数据粒度</strong></td>
+          <td style="text-align: center">存储原始明细数据</td>
+          <td style="text-align: center">只存储预聚合数据</td>
+          <td style="text-align: center">热数据Cube+冷数据关系存储</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>查询性能</strong></td>
+          <td style="text-align: center">中等(依赖SQL优化)</td>
+          <td style="text-align: center">极快(毫秒级响应)</td>
+          <td style="text-align: center">热数据快/冷数据中等</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>存储效率</strong></td>
+          <td style="text-align: center">高(关系型压缩)</td>
+          <td style="text-align: center">低(存在维度爆炸)</td>
+          <td style="text-align: center">中(智能分层存储)</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>维度灵活性</strong></td>
+          <td style="text-align: center">高(支持动态增加维度)</td>
+          <td style="text-align: center">低(需预定义维度)</td>
+          <td style="text-align: center">热数据固定/冷数据灵活</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>更新延迟</strong></td>
+          <td style="text-align: center">近实时(分钟级)</td>
+          <td style="text-align: center">批量更新(小时/天级)</td>
+          <td style="text-align: center">热数据延迟/冷数据实时</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>明细查询支持</strong></td>
+          <td style="text-align: center">✔️ 完整支持</td>
+          <td style="text-align: center">❌ 不支持</td>
+          <td style="text-align: center">✔️ 仅冷数据支持</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>预计算开销</strong></td>
+          <td style="text-align: center">部分预聚合</td>
+          <td style="text-align: center">全量预计算</td>
+          <td style="text-align: center">按需预计算</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>典型工具</strong></td>
+          <td style="text-align: center">Snowflake, StarRocks</td>
+          <td style="text-align: center">Apache Kylin, SSAS</td>
+          <td style="text-align: center">ClickHouse, Azure Analysis Services</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>最佳适用场景</strong></td>
+          <td style="text-align: center">即席分析/需要明细数据</td>
+          <td style="text-align: center">固定报表/高频聚合查询</td>
+          <td style="text-align: center">混合工作负载环境</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>缺点</strong></td>
+          <td style="text-align: center">❌ 查询性能中等</td>
+          <td style="text-align: center">❌ 维度爆炸风险</td>
+          <td style="text-align: center">❌ 架构复杂</td>
+      </tr>
+  </tbody>
+</table>
+<pre class="mermaid hx-mt-6">graph TB
+
+    subgraph HOLAP
+    F[热数据Cube] -->|快速查询| G[前端应用]
+    H[冷数据RDBMS] -->|ETL| F
+    style F fill:#f9f,stroke:#333
+    style H fill:#bbf,stroke:#333
+    end
+
+    subgraph MOLAP
+    Cube[销售Cube] --> Time[时间维度]
+    Cube --> Product[产品维度]
+    Cube --> Region[地域维度]
+    style Cube fill:#f9f,stroke:#333
+    end
+
+    subgraph ROLAP
+    A[事实表] --> B[产品维度]
+    A --> C[时间维度]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bbf,stroke:#333
+    end</pre><br>
+<h4>3️⃣ OLAP 工具<span class="hx-absolute -hx-mt-20" id="3-olap-工具"></span>
+    <a href="#3-olap-%e5%b7%a5%e5%85%b7" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><h5>完整OLAP工具矩阵<span class="hx-absolute -hx-mt-20" id="完整olap工具矩阵"></span>
+    <a href="#%e5%ae%8c%e6%95%b4olap%e5%b7%a5%e5%85%b7%e7%9f%a9%e9%98%b5" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>商业工具</th>
+          <th>开源工具</th>
+          <th>核心特点</th>
+          <th>代表用户</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>ROLAP</strong></td>
+          <td>1. Snowflake<br>2. Amazon Redshift<br>3. Google BigQuery<br>4. Teradata<br>5. Vertica<br>6. IBM Db2 Warehouse<br>7. Exasol<br>8. SAP HANA</td>
+          <td>1. Apache Doris<br>2. StarRocks<br>3. Presto/Trino<br>4. Druid<br>5. Greenplum<br>6. PostgreSQL Citus<br>7. Materialize<br>8. TiDB</td>
+          <td>• 基于关系型存储<br>• 完整SQL支持<br>• 保留明细数据<br>• 支持实时更新<br>• 灵活分析能力强</td>
+          <td>• Snowflake: 可口可乐<br>• Redshift: Airbnb<br>• Doris: 京东<br>• StarRocks: 腾讯</td>
+      </tr>
+      <tr>
+          <td><strong>MOLAP</strong></td>
+          <td>1. Microsoft SSAS<br>2. Oracle Essbase<br>3. IBM Cognos TM1<br>4. SAS OLAP<br>5. MicroStrategy<br>6. Pentaho Mondrian<br>7. AtScale</td>
+          <td>1. Apache Kylin<br>2. Druid<br>3. ClickHouse<br>4. Pinot<br>5. Cube.js<br>6. Kyligence CE</td>
+          <td>• 预计算多维Cube<br>• 亚秒级响应<br>• 维度建模复杂<br>• 适合固定模式分析<br>• 存储开销大</td>
+          <td>• SSAS: 沃尔玛<br>• Kylin: 美团<br>• Druid: Netflix</td>
+      </tr>
+      <tr>
+          <td><strong>HOLAP</strong></td>
+          <td>1. SAP BW/4HANA<br>2. MicroStrategy<br>3. SAS OLAP<br>4. Oracle OLAP<br>5. IBM Planning Analytics</td>
+          <td>1. ClickHouse<br>2. StarRocks<br>3. Apache Doris<br>4. Greenplum<br>5. MonetDB</td>
+          <td>• 混合存储架构<br>• 自动路由查询<br>• 热数据加速<br>• 冷数据归档<br>• 资源利用率高</td>
+          <td>• ClickHouse: 字节跳动<br>• SAP BW: 西门子<br>• Greenplum: 阿里云</td>
+      </tr>
+  </tbody>
+</table>
+<h5>商业工具对比<span class="hx-absolute -hx-mt-20" id="商业工具对比"></span>
+    <a href="#%e5%95%86%e4%b8%9a%e5%b7%a5%e5%85%b7%e5%af%b9%e6%af%94" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th><strong>类型</strong></th>
+          <th><strong>代表商业工具</strong></th>
+          <th><strong>开发商</strong></th>
+          <th><strong>核心优势</strong></th>
+          <th><strong>许可模式</strong></th>
+          <th><strong>最新版本</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ROLAP</td>
+          <td>Snowflake<br>Amazon Redshift</td>
+          <td>Snowflake Inc<br>Amazon</td>
+          <td>云原生、弹性扩展</td>
+          <td>按量付费</td>
+          <td>Snowflake 7.0<br>Redshift 3.0</td>
+      </tr>
+      <tr>
+          <td>MOLAP</td>
+          <td>Microsoft SSAS<br>Oracle Essbase</td>
+          <td>Microsoft<br>Oracle</td>
+          <td>深度Office集成<br>企业级功能</td>
+          <td>商业许可</td>
+          <td>SSAS 2022<br>Essbase 21c</td>
+      </tr>
+      <tr>
+          <td>HOLAP</td>
+          <td>SAP BW/4HANA<br>MicroStrategy</td>
+          <td>SAP<br>MicroStrategy</td>
+          <td>ERP深度集成<br>可视化强大</td>
+          <td>商业许可</td>
+          <td>BW/4HANA 2.0<br>MicroStrategy 2023</td>
+      </tr>
+  </tbody>
+</table>
+<h5>开源工具对比<span class="hx-absolute -hx-mt-20" id="开源工具对比"></span>
+    <a href="#%e5%bc%80%e6%ba%90%e5%b7%a5%e5%85%b7%e5%af%b9%e6%af%94" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th><strong>工具</strong></th>
+          <th><strong>类型</strong></th>
+          <th><strong>开发语言</strong></th>
+          <th><strong>核心特性</strong></th>
+          <th><strong>适用数据规模</strong></th>
+          <th><strong>知名用户</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Apache Doris</td>
+          <td>ROLAP</td>
+          <td>C++</td>
+          <td>MPP架构、MySQL协议兼容</td>
+          <td>TB~PB</td>
+          <td>美团、京东</td>
+      </tr>
+      <tr>
+          <td>StarRocks</td>
+          <td>HOLAP</td>
+          <td>Java/C++</td>
+          <td>向量化引擎、存算分离</td>
+          <td>PB级</td>
+          <td>腾讯、小米</td>
+      </tr>
+      <tr>
+          <td>Apache Kylin</td>
+          <td>MOLAP</td>
+          <td>Java</td>
+          <td>Hadoop生态集成、Cube预计算</td>
+          <td>TB级</td>
+          <td>eBay、滴滴</td>
+      </tr>
+      <tr>
+          <td>ClickHouse</td>
+          <td>HOLAP</td>
+          <td>C++</td>
+          <td>列式存储、物化视图</td>
+          <td>TB~PB</td>
+          <td>字节跳动、Cloudflare</td>
+      </tr>
+      <tr>
+          <td>Druid</td>
+          <td>MOLAP/ROLAP</td>
+          <td>Java</td>
+          <td>实时摄入、时间序列优化</td>
+          <td>TB级</td>
+          <td>Netflix、阿里巴巴</td>
+      </tr>
+  </tbody>
+</table>
+<h5>性能指标对比<span class="hx-absolute -hx-mt-20" id="性能指标对比"></span>
+    <a href="#%e6%80%a7%e8%83%bd%e6%8c%87%e6%a0%87%e5%af%b9%e6%af%94" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th><strong>工具</strong></th>
+          <th>查询延迟(简单聚合)</th>
+          <th>查询延迟(多表JOIN)</th>
+          <th>数据摄入速度</th>
+          <th>最大集群规模</th>
+          <th>并发能力</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Apache Doris</td>
+          <td>0.5s</td>
+          <td>3s</td>
+          <td>50MB/s</td>
+          <td>100节点</td>
+          <td>500+ QPS</td>
+      </tr>
+      <tr>
+          <td>StarRocks</td>
+          <td>0.3s</td>
+          <td>1.5s</td>
+          <td>80MB/s</td>
+          <td>300节点</td>
+          <td>1000+ QPS</td>
+      </tr>
+      <tr>
+          <td>Apache Kylin</td>
+          <td>0.1s</td>
+          <td>N/A</td>
+          <td>30MB/s</td>
+          <td>50节点</td>
+          <td>200+ QPS</td>
+      </tr>
+      <tr>
+          <td>ClickHouse</td>
+          <td>0.2s</td>
+          <td>5s+</td>
+          <td>120MB/s</td>
+          <td>200节点</td>
+          <td>300+ QPS</td>
+      </tr>
+      <tr>
+          <td>Druid</td>
+          <td>0.05s</td>
+          <td>不支持</td>
+          <td>150MB/s</td>
+          <td>100节点</td>
+          <td>5000+ QPS</td>
+      </tr>
+  </tbody>
+</table>
+<h5>生态集成对比<span class="hx-absolute -hx-mt-20" id="生态集成对比"></span>
+    <a href="#%e7%94%9f%e6%80%81%e9%9b%86%e6%88%90%e5%af%b9%e6%af%94" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th><strong>工具</strong></th>
+          <th>Hadoop兼容</th>
+          <th>Kafka集成</th>
+          <th>Spark集成</th>
+          <th>云原生支持</th>
+          <th>BI工具兼容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Apache Doris</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>Tableau/Superset</td>
+      </tr>
+      <tr>
+          <td>StarRocks</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅️(K8s)</td>
+          <td>主流全支持</td>
+      </tr>
+      <tr>
+          <td>Apache Kylin</td>
+          <td>✅️(强依赖)</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>有限支持</td>
+      </tr>
+      <tr>
+          <td>ClickHouse</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>需JDBC适配</td>
+      </tr>
+      <tr>
+          <td>Druid</td>
+          <td>✅</td>
+          <td>✅️(原生)</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>Grafana集成优</td>
+      </tr>
+  </tbody>
+</table>
+<h5>云原生支持<span class="hx-absolute -hx-mt-20" id="云原生支持"></span>
+    <a href="#%e4%ba%91%e5%8e%9f%e7%94%9f%e6%94%af%e6%8c%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th>工具</th>
+          <th>Kubernetes集成</th>
+          <th>存算分离</th>
+          <th>弹性扩展</th>
+          <th>多云支持</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Snowflake</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td>StarRocks</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td>Redshift</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌(AWS only)</td>
+      </tr>
+      <tr>
+          <td>ClickHouse</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td>Druid</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>✅</td>
+      </tr>
+  </tbody>
+</table>
+<h5>选型决策指南<span class="hx-absolute -hx-mt-20" id="选型决策指南"></span>
+    <a href="#%e9%80%89%e5%9e%8b%e5%86%b3%e7%ad%96%e6%8c%87%e5%8d%97" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><table>
+  <thead>
+      <tr>
+          <th><strong>需求场景</strong></th>
+          <th><strong>首选工具</strong></th>
+          <th><strong>次选方案</strong></th>
+          <th><strong>选择理由</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>互联网实时用户行为分析</td>
+          <td>Druid</td>
+          <td>StarRocks</td>
+          <td>时间序列优化+超高并发</td>
+      </tr>
+      <tr>
+          <td>企业级数据仓库</td>
+          <td>StarRocks</td>
+          <td>Apache Doris</td>
+          <td>SQL兼容性+云原生支持</td>
+      </tr>
+      <tr>
+          <td>固定业务报表</td>
+          <td>Apache Kylin</td>
+          <td>SSAS</td>
+          <td>预计算性能极致</td>
+      </tr>
+      <tr>
+          <td>跨源联邦查询</td>
+          <td>Presto/Trino</td>
+          <td>-</td>
+          <td>无存储引擎设计</td>
+      </tr>
+      <tr>
+          <td>物联网时序数据分析</td>
+          <td>ClickHouse</td>
+          <td>TimescaleDB</td>
+          <td>列存压缩比高</td>
+      </tr>
+  </tbody>
+</table>
+<h5>开源OLAP选型决策树<span class="hx-absolute -hx-mt-20" id="开源olap选型决策树"></span>
+    <a href="#%e5%bc%80%e6%ba%90olap%e9%80%89%e5%9e%8b%e5%86%b3%e7%ad%96%e6%a0%91" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><pre class="mermaid hx-mt-6">graph LR
+    A[需求分析] --> B{实时分析需求?}
+    B -->|是| C{是否时间序列数据?}
+    C -->|是| D[Druid/Pinot]
+    C -->|否| E[StarRocks/Doris]
+    B -->|否| F{是否需要复杂SQL支持?}
+    F -->|是| G[PostgreSQL Citus/Greenplum]
+    F -->|否| H{数据规模}
+    H -->|TB级| I[ClickHouse]
+    H -->|PB级| J[Trino on Spark]</pre><h2>参考网址：<span class="hx-absolute -hx-mt-20" id="参考网址"></span>
+    <a href="#%e5%8f%82%e8%80%83%e7%bd%91%e5%9d%80" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ol>
+<li><a href="https://www.bilibili.com/video/BV1qv411y7Wv/?spm_id_from=333.337.search-card.all.click" target="_blank" rel="noopener">【入门精讲】数据仓库原理&amp;实战 - 哈喽鹏程</a></li>
+<li>《DAMA 数据管理知识体系指南》原书第2版</li>
+<li><a href="https://www.yuque.com/lipengbo-z2uva/datawarehouse/agi120" target="_blank" rel="noopener">数据仓库详细介绍-数仓建模-维度和事实设计</a></li>
+</ol>
+
+        </div>
+        <div class="hx-mt-16"></div>
+        <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
+        href="/documentation/bigdata/data_warehouse/er_model/"
+        title="3.2. ER 模型"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>3.2. ER 模型</a><a
+        href="/documentation/bigdata/data_warehouse/framework/"
+        title="3.4. 数仓架构"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
+      >3.4. 数仓架构<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx-bg-gray-100 hx-pb-[env(safe-area-inset-bottom)] dark:hx-bg-neutral-900 print:hx-bg-transparent"><div
+      class="hextra-custom-footer hx-max-w-[90rem] hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400"
+    ></div><div
+        class="hx-max-w-[90rem] hx-mx-auto hx-flex hx-justify-center hx-py-12 hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400 md:hx-justify-start"
+      >
+        <div class="hx-flex hx-w-full hx-flex-col hx-items-center sm:hx-items-start"><div class="hx-font-semibold"><a class="hx-flex hx-text-sm hx-items-center hx-gap-1 hx-text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>由 Hextra 驱动<svg height=1em class="hx-inline-block ltr:hx-ml-1 rtl:hx-mr-1 hx-align-[-2.5px]" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div></div>
+      </div></footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/lib/flexsearch/flexsearch.bundle.min.e45e7eb129aae9f684e7f863bb7c1d612ea124b7068e12af80c58c62764a5379.js" integrity="sha256-5F5&#43;sSmq6faE5/hju3wdYS6hJLcGjhKvgMWMYnZKU3k="></script>
+    <script defer src="/zh-cn.search.js" integrity=""></script>
+<script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach(el => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach(el => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>
+<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.7e5db7914b97e596a36c1abb67ccc7f174f8bb71d38c9a88c55b262ed1737f97.css" integrity="sha256-fl23kUuX5ZajbBq7Z8zH8XT4u3HTjJqIxVsmLtFzf5c=" />
+<script defer src="/lib/katex/katex.min.9f45307c5794ed247a0d095f3a62e52ef2215a67b2327203a7fd919959ae79d1.js" integrity="sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE="></script>
+<script defer src="/lib/katex/auto-render.min.7b57d427ac6270677daf8d8380ded2cc73336f9149a167b8e1fe0d6ef66604ae.js" integrity="sha256-e1fUJ6xicGd9r42DgN7SzHMzb5FJoWe44f4NbvZmBK4="></script>
+<script defer src="/lib/katex/mhchem.min.f0ca03df194b8c3d6017ff455db6a0ef98857905663fa311a6cded788b15340b.js" integrity="sha256-8MoD3xlLjD1gF/9FXbag75iFeQVmP6MRps3teIsVNAs="></script>
+<script>
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+        {left: "\\begin{align}", right: "\\end{align}", display: true},
+        {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+        {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+        {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      throwOnError: false,
+    });
+  });
+</script>
+
+  </body>
+</html>

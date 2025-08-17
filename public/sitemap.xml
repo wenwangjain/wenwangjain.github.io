@@ -12,6 +12,8 @@
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/</loc>
   </url><url>
+    <loc>http://localhost:1313/documentation/bigdata/data_warehouse/er_model/</loc>
+  </url><url>
     <loc>http://localhost:1313/guide/markdown/</loc>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
@@ -38,11 +40,15 @@
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/</loc>
   </url><url>
+    <loc>http://localhost:1313/documentation/bigdata/data_warehouse/overview/</loc>
+  </url><url>
     <loc>http://localhost:1313/project/visualization/</loc>
   </url><url>
     <loc>http://localhost:1313/project/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/cc/</loc>
+  </url><url>
+    <loc>http://localhost:1313/documentation/bigdata/data_warehouse/framework/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/ai/mlops/</loc>
   </url><url>
@@ -50,7 +56,11 @@
   </url><url>
     <loc>http://localhost:1313/documentation/iot/</loc>
   </url><url>
+    <loc>http://localhost:1313/documentation/bigdata/data_warehouse/standard/</loc>
+  </url><url>
     <loc>http://localhost:1313/documentation/ai/distributed/</loc>
+  </url><url>
+    <loc>http://localhost:1313/documentation/bigdata/data_warehouse/model/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/ai/end_to_end/overview/</loc>
   </url><url>
