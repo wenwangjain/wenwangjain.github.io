@@ -11,20 +11,191 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>3.4. 数仓架构 – 数据科学实践</title>
-  <meta name="description" content="" /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/framework/" itemprop="url" />
+  <meta name="description" content="1. 架构概述 架构维度 定位 核心任务 关键交付物 依赖关系 业务架构
+（战略层） 为什么建数仓？
+（价值定义） - 明确组织真实诉求（数据资产/数据应用）
+- 识别服务对象（高管/业务部门）
+- 制定数据战略目标 业务需求说明书
+数据治理框架 驱动所有其他架构设计 应用架构
+（战术层） 如何实现业务需求？
+（系统蓝图） - 功能模块划分：
+▪ 数据接入层
+▪ 数据存储层
+▪ 管理工具（元数据/质量监控）
+▪ 数据服务层（BI/API） 系统架构图
+接口规范文档 承接业务需求
+约束数据模型设计 数据架构
+（模型层） 数据如何结构化？
+（逻辑设计） - 分层建模（ODS→DWD→DWS→ADS）
+- 主题域划分（如销售、供应链）
+- 标准化定义（字段命名/计算口径） 数据模型ER图
+数据字典 受应用功能约束
+指导ETL开发 技术架构
+（实现层） 如何技术落地？
+（工具选型） - 技术栈选型（Hadoop/云数仓）
+- 组件集成（Spark&#43;Kafka&#43;Airflow）
+- 性能优化（索引/缓存策略） 技术方案书
+系统拓扑图 支撑数据模型
+决定部署方案 ETL架构
+（流水线层） 数据如何加工？
+（流程设计） - 处理流程（抽取→转换→加载）
+- 任务调度（依赖关系/优先级）
+- 容错处理（重试/报警机制） ETL流程图
+调度配置表 实现数据模型
+依赖技术组件 部署架构
+（物理层） 系统如何安装？
+（资源配置） - 环境规划（开发/测试/生产）
+- 硬件配置（服务器/存储/网络）
+- 高可用部署（集群/容灾） 部署方案书
+资源清单 依赖技术选型
+保障系统运行 2. 架构详述 2.1、业务架构 定义：描述数据仓库如何支持业务目标和业务流程。" /><link rel="canonical" href="http://localhost:1313/documentation/bigdata/data_warehouse/framework/" itemprop="url" />
 
 <meta property="og:title" content="3.4. 数仓架构" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="1. 架构概述
+    
+  
+      
+          架构维度
+          定位
+          核心任务
+          关键交付物
+          依赖关系
+      
+  
+  
+      
+          业务架构（战略层）
+          为什么建数仓？（价值定义）
+          - 明确组织真实诉求（数据资产/数据应用）- 识别服务对象（高管/业务部门）- 制定数据战略目标
+          业务需求说明书数据治理框架
+          驱动所有其他架构设计
+      
+      
+          应用架构（战术层）
+          如何实现业务需求？（系统蓝图）
+          - 功能模块划分： ▪ 数据接入层 ▪ 数据存储层 ▪ 管理工具（元数据/质量监控） ▪ 数据服务层（BI/API）
+          系统架构图接口规范文档
+          承接业务需求约束数据模型设计
+      
+      
+          数据架构（模型层）
+          数据如何结构化？（逻辑设计）
+          - 分层建模（ODS→DWD→DWS→ADS）- 主题域划分（如销售、供应链）- 标准化定义（字段命名/计算口径）
+          数据模型ER图数据字典
+          受应用功能约束指导ETL开发
+      
+      
+          技术架构（实现层）
+          如何技术落地？（工具选型）
+          - 技术栈选型（Hadoop/云数仓）- 组件集成（Spark&#43;Kafka&#43;Airflow）- 性能优化（索引/缓存策略）
+          技术方案书系统拓扑图
+          支撑数据模型决定部署方案
+      
+      
+          ETL架构（流水线层）
+          数据如何加工？（流程设计）
+          - 处理流程（抽取→转换→加载）- 任务调度（依赖关系/优先级）- 容错处理（重试/报警机制）
+          ETL流程图调度配置表
+          实现数据模型依赖技术组件
+      
+      
+          部署架构（物理层）
+          系统如何安装？（资源配置）
+          - 环境规划（开发/测试/生产）- 硬件配置（服务器/存储/网络）- 高可用部署（集群/容灾）
+          部署方案书资源清单
+          依赖技术选型保障系统运行
+      
+  
+
+
+2. 架构详述
+    2.1、业务架构
+    定义：描述数据仓库如何支持业务目标和业务流程。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/documentation/bigdata/data_warehouse/framework/" /><meta property="article:section" content="documentation" />
 
 
 
   <meta itemprop="name" content="3.4. 数仓架构">
-  <meta itemprop="description" content="Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.">
+  <meta itemprop="description" content="1. 架构概述 架构维度 定位 核心任务 关键交付物 依赖关系 业务架构
+（战略层） 为什么建数仓？
+（价值定义） - 明确组织真实诉求（数据资产/数据应用）
+- 识别服务对象（高管/业务部门）
+- 制定数据战略目标 业务需求说明书
+数据治理框架 驱动所有其他架构设计 应用架构
+（战术层） 如何实现业务需求？
+（系统蓝图） - 功能模块划分：
+▪ 数据接入层
+▪ 数据存储层
+▪ 管理工具（元数据/质量监控）
+▪ 数据服务层（BI/API） 系统架构图
+接口规范文档 承接业务需求
+约束数据模型设计 数据架构
+（模型层） 数据如何结构化？
+（逻辑设计） - 分层建模（ODS→DWD→DWS→ADS）
+- 主题域划分（如销售、供应链）
+- 标准化定义（字段命名/计算口径） 数据模型ER图
+数据字典 受应用功能约束
+指导ETL开发 技术架构
+（实现层） 如何技术落地？
+（工具选型） - 技术栈选型（Hadoop/云数仓）
+- 组件集成（Spark&#43;Kafka&#43;Airflow）
+- 性能优化（索引/缓存策略） 技术方案书
+系统拓扑图 支撑数据模型
+决定部署方案 ETL架构
+（流水线层） 数据如何加工？
+（流程设计） - 处理流程（抽取→转换→加载）
+- 任务调度（依赖关系/优先级）
+- 容错处理（重试/报警机制） ETL流程图
+调度配置表 实现数据模型
+依赖技术组件 部署架构
+（物理层） 系统如何安装？
+（资源配置） - 环境规划（开发/测试/生产）
+- 硬件配置（服务器/存储/网络）
+- 高可用部署（集群/容灾） 部署方案书
+资源清单 依赖技术选型
+保障系统运行 2. 架构详述 2.1、业务架构 定义：描述数据仓库如何支持业务目标和业务流程。">
+  <meta itemprop="wordCount" content="178">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="3.4. 数仓架构">
-  <meta name="twitter:description" content="Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.">
+  <meta name="twitter:description" content="1. 架构概述 架构维度 定位 核心任务 关键交付物 依赖关系 业务架构
+（战略层） 为什么建数仓？
+（价值定义） - 明确组织真实诉求（数据资产/数据应用）
+- 识别服务对象（高管/业务部门）
+- 制定数据战略目标 业务需求说明书
+数据治理框架 驱动所有其他架构设计 应用架构
+（战术层） 如何实现业务需求？
+（系统蓝图） - 功能模块划分：
+▪ 数据接入层
+▪ 数据存储层
+▪ 管理工具（元数据/质量监控）
+▪ 数据服务层（BI/API） 系统架构图
+接口规范文档 承接业务需求
+约束数据模型设计 数据架构
+（模型层） 数据如何结构化？
+（逻辑设计） - 分层建模（ODS→DWD→DWS→ADS）
+- 主题域划分（如销售、供应链）
+- 标准化定义（字段命名/计算口径） 数据模型ER图
+数据字典 受应用功能约束
+指导ETL开发 技术架构
+（实现层） 如何技术落地？
+（工具选型） - 技术栈选型（Hadoop/云数仓）
+- 组件集成（Spark&#43;Kafka&#43;Airflow）
+- 性能优化（索引/缓存策略） 技术方案书
+系统拓扑图 支撑数据模型
+决定部署方案 ETL架构
+（流水线层） 数据如何加工？
+（流程设计） - 处理流程（抽取→转换→加载）
+- 任务调度（依赖关系/优先级）
+- 容错处理（重试/报警机制） ETL流程图
+调度配置表 实现数据模型
+依赖技术组件 部署架构
+（物理层） 系统如何安装？
+（资源配置） - 环境规划（开发/测试/生产）
+- 硬件配置（服务器/存储/网络）
+- 高可用部署（集群/容灾） 部署方案书
+资源清单 依赖技术选型
+保障系统运行 2. 架构详述 2.1、业务架构 定义：描述数据仓库如何支持业务目标和业务流程。">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -369,6 +540,20 @@
     
   >3.4. 数仓架构
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#1-%e6%9e%b6%e6%9e%84%e6%a6%82%e8%bf%b0"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >1. 架构概述</a>
+            </li>
+          <li>
+              <a
+                href="#2-%e6%9e%b6%e6%9e%84%e8%af%a6%e8%bf%b0"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >2. 架构详述</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -961,8 +1146,36 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">此页上</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-%e6%9e%b6%e6%9e%84%e6%a6%82%e8%bf%b0">1. 架构概述
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-%e6%9e%b6%e6%9e%84%e8%af%a6%e8%bf%b0">2. 架构详述
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#21%e4%b8%9a%e5%8a%a1%e6%9e%b6%e6%9e%84">2.1、业务架构
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#22%e5%ba%94%e7%94%a8%e6%9e%b6%e6%9e%84">2.2、应用架构
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#23%e6%95%b0%e6%8d%ae%e6%9e%b6%e6%9e%84">2.3、数据架构
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#24%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84">2.4、技术架构
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#25etl-%e6%9e%b6%e6%9e%84">2.5、ETL 架构
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>返回顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -991,7 +1204,180 @@
 
         <div class="content">
           <h1>3.4. 数仓架构</h1>
-          
+          <h2>1. 架构概述<span class="hx-absolute -hx-mt-20" id="1-架构概述"></span>
+    <a href="#1-%e6%9e%b6%e6%9e%84%e6%a6%82%e8%bf%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>架构维度</th>
+          <th>定位</th>
+          <th>核心任务</th>
+          <th>关键交付物</th>
+          <th>依赖关系</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>业务架构</strong><br>（战略层）</td>
+          <td>为什么建数仓？<br>（价值定义）</td>
+          <td>- 明确组织真实诉求（数据资产/数据应用）<br>- 识别服务对象（高管/业务部门）<br>- 制定数据战略目标</td>
+          <td>业务需求说明书<br>数据治理框架</td>
+          <td>驱动所有其他架构设计</td>
+      </tr>
+      <tr>
+          <td><strong>应用架构</strong><br>（战术层）</td>
+          <td>如何实现业务需求？<br>（系统蓝图）</td>
+          <td>- 功能模块划分：<br> ▪ 数据接入层<br> ▪ 数据存储层<br> ▪ 管理工具（元数据/质量监控）<br> ▪ 数据服务层（BI/API）</td>
+          <td>系统架构图<br>接口规范文档</td>
+          <td>承接业务需求<br>约束数据模型设计</td>
+      </tr>
+      <tr>
+          <td><strong>数据架构</strong><br>（模型层）</td>
+          <td>数据如何结构化？<br>（逻辑设计）</td>
+          <td>- 分层建模（ODS→DWD→DWS→ADS）<br>- 主题域划分（如销售、供应链）<br>- 标准化定义（字段命名/计算口径）</td>
+          <td>数据模型ER图<br>数据字典</td>
+          <td>受应用功能约束<br>指导ETL开发</td>
+      </tr>
+      <tr>
+          <td><strong>技术架构</strong><br>（实现层）</td>
+          <td>如何技术落地？<br>（工具选型）</td>
+          <td>- 技术栈选型（Hadoop/云数仓）<br>- 组件集成（Spark+Kafka+Airflow）<br>- 性能优化（索引/缓存策略）</td>
+          <td>技术方案书<br>系统拓扑图</td>
+          <td>支撑数据模型<br>决定部署方案</td>
+      </tr>
+      <tr>
+          <td><strong>ETL架构</strong><br>（流水线层）</td>
+          <td>数据如何加工？<br>（流程设计）</td>
+          <td>- 处理流程（抽取→转换→加载）<br>- 任务调度（依赖关系/优先级）<br>- 容错处理（重试/报警机制）</td>
+          <td>ETL流程图<br>调度配置表</td>
+          <td>实现数据模型<br>依赖技术组件</td>
+      </tr>
+      <tr>
+          <td><strong>部署架构</strong><br>（物理层）</td>
+          <td>系统如何安装？<br>（资源配置）</td>
+          <td>- 环境规划（开发/测试/生产）<br>- 硬件配置（服务器/存储/网络）<br>- 高可用部署（集群/容灾）</td>
+          <td>部署方案书<br>资源清单</td>
+          <td>依赖技术选型<br>保障系统运行</td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<h2>2. 架构详述<span class="hx-absolute -hx-mt-20" id="2-架构详述"></span>
+    <a href="#2-%e6%9e%b6%e6%9e%84%e8%af%a6%e8%bf%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>2.1、业务架构<span class="hx-absolute -hx-mt-20" id="21业务架构"></span>
+    <a href="#21%e4%b8%9a%e5%8a%a1%e6%9e%b6%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>定义：<em><strong>描述数据仓库如何支持业务目标和业务流程</strong></em>。</p>
+<p>关键要素：</p>
+<ol>
+<li><em><strong>业务目标对齐</strong></em>：明确数据仓库要解决的业务问题</li>
+<li>利益相关者分析：识别业务用户、决策者等角色</li>
+<li>KPI体系：确定关键绩效指标和度量标准</li>
+<li>数据治理框架：数据所有权、质量标准等</li>
+<li><em><strong>价值流分析</strong></em>：数据如何为业务创造价值</li>
+</ol>
+<p>示例：销售分析、客户360视图、运营效率分析等业务场景</p>
+<br>
+<h3>2.2、应用架构<span class="hx-absolute -hx-mt-20" id="22应用架构"></span>
+    <a href="#22%e5%ba%94%e7%94%a8%e6%9e%b6%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>定义：<em><strong>描述数据仓库系统中的功能模块和应用组件</strong></em>。</p>
+<p>关键要素：</p>
+<ul>
+<li>
+<p>功能模块划分：</p>
+<ol>
+<li>数据采集</li>
+<li>数据处理</li>
+<li>数据存储</li>
+<li>数据分析</li>
+<li>数据服务</li>
+</ol>
+</li>
+<li>
+<p>应用组件：</p>
+<ol>
+<li>ETL/ELT工具</li>
+<li>BI工具</li>
+<li>报表系统</li>
+<li>数据挖掘工具</li>
+<li>数据目录</li>
+</ol>
+</li>
+</ul>
+<p>接口规范：系统间交互方式</p>
+<p>用户交互层：门户、自助分析工具等</p>
+<br>
+<h3>2.3、数据架构<span class="hx-absolute -hx-mt-20" id="23数据架构"></span>
+    <a href="#23%e6%95%b0%e6%8d%ae%e6%9e%b6%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>定义：<em><strong>描述数据的组织、结构和流动</strong></em>。</p>
+<p>关键要素：</p>
+<ul>
+<li>
+<p>数据分层：</p>
+<ol>
+<li>ODS (操作数据存储)</li>
+<li>DWD (数据仓库明细层)</li>
+<li>DWM (数据仓库中间层)</li>
+<li>DWS (数据仓库汇总层)</li>
+<li>ADS (应用数据服务层)</li>
+</ol>
+</li>
+<li>
+<p>数据模型：</p>
+<ol>
+<li>星型模型</li>
+<li>雪花模型</li>
+<li>星座模型</li>
+<li>数据宽表</li>
+</ol>
+</li>
+</ul>
+<p>数据生命周期管理</p>
+<p>主数据管理</p>
+<p>元数据管理</p>
+<p>数据质量框架</p>
+<br>
+<h3>2.4、技术架构<span class="hx-absolute -hx-mt-20" id="24技术架构"></span>
+    <a href="#24%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>定义：<em><strong>描述实现数据仓库的技术组件和基础设施</strong></em>。</p>
+<p>关键要素：</p>
+<ul>
+<li>技术栈选择：</li>
+</ul>
+<ol>
+<li>传统RDBMS (Oracle, Teradata)</li>
+<li>大数据平台 (Hadoop, Spark)</li>
+<li>云数据仓库 (Snowflake, Redshift, BigQuery)</li>
+</ol>
+<ul>
+<li>计算资源：</li>
+</ul>
+<ol>
+<li>批处理引擎</li>
+<li>流处理引擎</li>
+<li>查询引擎</li>
+</ol>
+<ul>
+<li>存储技术：</li>
+</ul>
+<ol>
+<li>关系型数据库</li>
+<li>NoSQL数据库</li>
+<li>数据湖存储</li>
+</ol>
+<ul>
+<li>数据处理框架：</li>
+</ul>
+<ol>
+<li>MapReduce</li>
+<li>Spark</li>
+<li>Flink</li>
+</ol>
+<ul>
+<li>安全架构：</li>
+</ul>
+<ol>
+<li>认证授权</li>
+<li>数据加密</li>
+<li>审计日志</li>
+</ol>
+<br>
+<h3>2.5、ETL 架构<span class="hx-absolute -hx-mt-20" id="25etl-架构"></span>
+    <a href="#25etl-%e6%9e%b6%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>定义：<em><strong>描述数据抽取、转换和加载的过程设计</strong></em>。</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
