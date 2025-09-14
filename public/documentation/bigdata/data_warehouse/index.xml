@@ -44,6 +44,7 @@
 &lt;li&gt;零范式：&lt;em&gt;&lt;strong&gt;数据中不存在重复数据&lt;/strong&gt;&lt;/em&gt;；&lt;/li&gt;
 &lt;li&gt;一范式：在零范式的基础上，加上关系中的 &lt;em&gt;&lt;strong&gt;每个属性（字段）都不可再分（原子性）&lt;/strong&gt;&lt;/em&gt;；&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;3. 常见范式&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-常见范式&#34;&gt;&lt;/span&gt;

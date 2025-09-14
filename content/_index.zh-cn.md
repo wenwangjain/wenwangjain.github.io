@@ -22,6 +22,7 @@ width: wide
 {{< hextra/hero-button text="⚓ 指南" link="guide" bgColor="#2d3a4a">}}
 {{< hextra/hero-button text="✍ 项目" link="project"  bgColor="#e76f51">}}
 {{< hextra/hero-button text="👻 关于" link="about" bgColor="#f4a261">}}
+{{< hextra/hero-button text="❓ 问答" link="interview"  bgColor="#2d3a4a">}}
 </div>
 
 
@@ -63,7 +64,7 @@ width: wide
   >}}
 
 
-  {{< card link="/project/competition" title="数据竞赛"  subtitle="kaggle，阿里天池..." icon="route" >}}
+  {{< card link="/project/competition" title="数据竞赛\数据分析"  subtitle="kaggle，阿里天池，书籍\博客案例..." icon="route" >}}
   {{< card link="/project/bigdata" title="大数据项目" subtitle="B 站，数仓项目学习（尚硅谷，等）；" icon="data_warehouse" >}}
   <div></div>
   <div></div>

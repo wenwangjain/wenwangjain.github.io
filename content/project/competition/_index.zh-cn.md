@@ -1,5 +1,5 @@
 ---
-title: 数据竞赛
+title: 数据竞赛\数据分析
 weight: 1
 #next: /step1
 #prev: /docs
@@ -9,93 +9,24 @@ toc: true
 math: true
 ---
 
-{{< tabs items="1️⃣入门, 2️⃣分类, 3️⃣回归, 4️⃣聚类, 5️⃣NLP, 6️⃣CV, 7️⃣数据分析" >}}
+### 1️⃣ 分类
 
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-  {{< /tab >}}
-
-
-
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-  {{< /tab >}}
-
-
-
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-  {{< /tab >}}
-
-
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-  {{< /tab >}}
-
-
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-  {{< /tab >}}
-
-
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-
-  {{< /tab >}}
-
-
-  {{< tab >}}
-| 序号    | 项目来源 | 项目名称  | 项目难度 | 代码 | 笔记 | 部署 |
-| :-: | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |
-| 1 | Kaggle|[Header Header Header Header](/project/page_001_test/)|⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-| 2 | 天池   |[Header](/project/page_001_test/) |⭐⭐⭐⭐⭐|[Github]()|[***Jupyterlab***]()|[Demo]()|
-  {{< /tab >}}
-
-{{< /tabs >}}
+| 序号 | 来源 | 名称  | 概述 | 难度 | 代码 | 文档 | 部署 |
+| :-:  | :-----------: |----------- |:-----------: |:-----------:| :-----------: |:-----------: |:-----------: |
+|0001| [**UCI ML**](https://archive.ics.uci.edu/dataset/53/iris)|鸢尾花(iris)分类| [***Jupyterlab***](/project/competition/ai_001_test/) |⭐|[***Github***]()|[***Docs***]()|[***Demo***]()|
 
 
 
 
-<br><br>
+
+### 2️⃣ 回归
+
+### 3️⃣ 聚类
+
+### 4️⃣ 数据分析
+
+### 5️⃣ NLP
+
+### 6️⃣ CV
 
 

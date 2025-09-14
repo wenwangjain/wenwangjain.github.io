@@ -38,6 +38,10 @@ menu:
       name: 关于
       pageRef: /about
       weight: 4
+    - identifier: interview
+      name: 问答
+      pageRef: /interview
+      weight: 5
       
     - name: Search
       weight: 8
