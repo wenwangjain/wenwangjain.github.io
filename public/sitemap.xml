@@ -8,8 +8,6 @@
   </url><url>
     <loc>http://localhost:1313/documentation/cc/base/</loc>
   </url><url>
-    <loc>http://localhost:1313/project/competition/page_001_test/</loc>
-  </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/paradigm/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/er_model/</loc>
@@ -23,6 +21,8 @@
     <loc>http://localhost:1313/project/competition/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/</loc>
+  </url><url>
+    <loc>http://localhost:1313/project/competition/ai_001_test/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/frame/</loc>
   </url><url>
@@ -59,6 +59,8 @@
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/standard/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/ai/distributed/</loc>
+  </url><url>
+    <loc>http://localhost:1313/interview/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/model/</loc>
   </url><url>
