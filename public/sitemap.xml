@@ -68,6 +68,10 @@
   </url><url>
     <loc>http://localhost:1313/documentation/bigdata/data_warehouse/model/</loc>
   </url><url>
+    <loc>http://localhost:1313/documentation/ai/end_to_end/crisp/preparation/collect_data/</loc>
+  </url><url>
+    <loc>http://localhost:1313/documentation/ai/end_to_end/crisp/eda/preliminary_understanding/</loc>
+  </url><url>
     <loc>http://localhost:1313/documentation/ai/end_to_end/overview/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/ai/end_to_end/tool/</loc>
@@ -92,7 +96,7 @@
   </url><url>
     <loc>http://localhost:1313/documentation/ai/end_to_end/crisp/preparation/</loc>
   </url><url>
-    <loc>http://localhost:1313/documentation/ai/end_to_end/crisp/preparation/collect_data/</loc>
+    <loc>http://localhost:1313/documentation/ai/end_to_end/crisp/eda/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/program_python/</loc>
   </url><url>

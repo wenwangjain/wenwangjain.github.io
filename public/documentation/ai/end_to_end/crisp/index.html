@@ -12,8 +12,9 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>1.4 步骤 – 数据科学实践</title>
   <meta name="description" content="CRISP-DM CRISP-DM（CRoss Industry Standard Process for Data Mining）是数据挖掘领域的标准流程框架，被广泛应用于从数据中发现商业价值的系统化方法。以下是其核心要点：
-1️⃣ 业务/研究理解（定义问题） 首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。 然后，将这些目标和约束转换为数据挖掘问题定义的公式。 最后，准备实现这些目标的初步策略。 2️⃣ 数据准备 该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。 选择要分析的案例和变量，为分析做好准备工作。 如果需要的话，对确定的变量进行转换。 对原始数据展开清理工作，为使用建模工具建模打下基础。 数据准备可以细分如下
-数据收集 数据初步准备 数据预处理 数据转换 特征构建 特征选择 降维 3️⃣ 数据理解 首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。 然后，评估数据质量。 最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。 4️⃣ 建模阶段 选择并应用适当的建模技术。 校准模型设置以优化结果。 通常，对同一个数据挖掘问题坑你要应用多种不同的技术。 可能需要返回数据准备阶段，以便使用数据形式能够符合特定数据挖掘技术对数据的特定需求。 5️⃣ 评估阶段 建模阶段将发布一个或多个模型。在将这些模型部署到现场进行使用前，对模型质量和效果开展评估工作。 同时要确认模型是否能完成阶段1设定的目标。 确认业务或研究问题的重要组成部分是否未被清楚的解释。 最后，做出有关是否使用数据挖掘结果的决定。 6️⃣ 部署阶段 建立了模型并不意味着项目已经完成。需要应用已建立的模型。 简单部署实例：建立报表。 复杂一些的部署实例：在其他部门实现并行数据挖掘过程。 对商业应用来说，客户通常会基于建立的模型开展部署工作。 📝 参考网址\书籍：" /><link rel="canonical" href="http://localhost:1313/documentation/ai/end_to_end/crisp/" itemprop="url" />
+1️⃣ 业务/研究理解（定义问题） 首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。 然后，将这些目标和约束转换为数据挖掘问题定义的公式。 最后，准备实现这些目标的初步策略。 2️⃣ 数据准备 该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。 选择要分析的案例和变量，为分析做好准备工作。 如果需要的话，对确定的变量进行转换。 对原始数据展开清理工作，为使用建模工具建模打下基础。 数据准备可以细分如下：
+数据收集 数据初步准备 数据预处理\清理：对缺失、重复、异常、不一致及不规范等数据进行删除或修复操作。 数据转换：运用缩放、属性分解和属性聚合、编码等技术，将预处理后的数据转换为可用的形态。 特征构建：对特征集进行转换，得到新的特征集，虽保留大部分信息，但新特征通常难以被人类直接解释。 特征选择：删除不重要的特征，保留其他特征的现有状态，在分析过程中可被人类完全理解。 此外，数据准备过程中还可以考虑以下方面：
+进行数据采样，平衡不同类别数据的数量，特别是在类别不平衡的情况下。 对时间序列数据进行平稳性检验和处理，以便更好地进行分析和建模。 3️⃣ 数据理解 首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。 然后，评估数据质量。 最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。 数据理解可以细分如下：" /><link rel="canonical" href="http://localhost:1313/documentation/ai/end_to_end/crisp/" itemprop="url" />
 
 <meta property="og:title" content="1.4 步骤" />
 <meta property="og:description" content="Modern, responsive, batteries-included Hugo theme for creating beautiful static websites." />
@@ -22,14 +23,16 @@
 
   <meta itemprop="name" content="1.4 步骤">
   <meta itemprop="description" content="CRISP-DM CRISP-DM（CRoss Industry Standard Process for Data Mining）是数据挖掘领域的标准流程框架，被广泛应用于从数据中发现商业价值的系统化方法。以下是其核心要点：
-1️⃣ 业务/研究理解（定义问题） 首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。 然后，将这些目标和约束转换为数据挖掘问题定义的公式。 最后，准备实现这些目标的初步策略。 2️⃣ 数据准备 该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。 选择要分析的案例和变量，为分析做好准备工作。 如果需要的话，对确定的变量进行转换。 对原始数据展开清理工作，为使用建模工具建模打下基础。 数据准备可以细分如下
-数据收集 数据初步准备 数据预处理 数据转换 特征构建 特征选择 降维 3️⃣ 数据理解 首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。 然后，评估数据质量。 最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。 4️⃣ 建模阶段 选择并应用适当的建模技术。 校准模型设置以优化结果。 通常，对同一个数据挖掘问题坑你要应用多种不同的技术。 可能需要返回数据准备阶段，以便使用数据形式能够符合特定数据挖掘技术对数据的特定需求。 5️⃣ 评估阶段 建模阶段将发布一个或多个模型。在将这些模型部署到现场进行使用前，对模型质量和效果开展评估工作。 同时要确认模型是否能完成阶段1设定的目标。 确认业务或研究问题的重要组成部分是否未被清楚的解释。 最后，做出有关是否使用数据挖掘结果的决定。 6️⃣ 部署阶段 建立了模型并不意味着项目已经完成。需要应用已建立的模型。 简单部署实例：建立报表。 复杂一些的部署实例：在其他部门实现并行数据挖掘过程。 对商业应用来说，客户通常会基于建立的模型开展部署工作。 📝 参考网址\书籍：">
-  <meta itemprop="wordCount" content="60">
+1️⃣ 业务/研究理解（定义问题） 首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。 然后，将这些目标和约束转换为数据挖掘问题定义的公式。 最后，准备实现这些目标的初步策略。 2️⃣ 数据准备 该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。 选择要分析的案例和变量，为分析做好准备工作。 如果需要的话，对确定的变量进行转换。 对原始数据展开清理工作，为使用建模工具建模打下基础。 数据准备可以细分如下：
+数据收集 数据初步准备 数据预处理\清理：对缺失、重复、异常、不一致及不规范等数据进行删除或修复操作。 数据转换：运用缩放、属性分解和属性聚合、编码等技术，将预处理后的数据转换为可用的形态。 特征构建：对特征集进行转换，得到新的特征集，虽保留大部分信息，但新特征通常难以被人类直接解释。 特征选择：删除不重要的特征，保留其他特征的现有状态，在分析过程中可被人类完全理解。 此外，数据准备过程中还可以考虑以下方面：
+进行数据采样，平衡不同类别数据的数量，特别是在类别不平衡的情况下。 对时间序列数据进行平稳性检验和处理，以便更好地进行分析和建模。 3️⃣ 数据理解 首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。 然后，评估数据质量。 最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。 数据理解可以细分如下：">
+  <meta itemprop="wordCount" content="71">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="1.4 步骤">
   <meta name="twitter:description" content="CRISP-DM CRISP-DM（CRoss Industry Standard Process for Data Mining）是数据挖掘领域的标准流程框架，被广泛应用于从数据中发现商业价值的系统化方法。以下是其核心要点：
-1️⃣ 业务/研究理解（定义问题） 首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。 然后，将这些目标和约束转换为数据挖掘问题定义的公式。 最后，准备实现这些目标的初步策略。 2️⃣ 数据准备 该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。 选择要分析的案例和变量，为分析做好准备工作。 如果需要的话，对确定的变量进行转换。 对原始数据展开清理工作，为使用建模工具建模打下基础。 数据准备可以细分如下
-数据收集 数据初步准备 数据预处理 数据转换 特征构建 特征选择 降维 3️⃣ 数据理解 首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。 然后，评估数据质量。 最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。 4️⃣ 建模阶段 选择并应用适当的建模技术。 校准模型设置以优化结果。 通常，对同一个数据挖掘问题坑你要应用多种不同的技术。 可能需要返回数据准备阶段，以便使用数据形式能够符合特定数据挖掘技术对数据的特定需求。 5️⃣ 评估阶段 建模阶段将发布一个或多个模型。在将这些模型部署到现场进行使用前，对模型质量和效果开展评估工作。 同时要确认模型是否能完成阶段1设定的目标。 确认业务或研究问题的重要组成部分是否未被清楚的解释。 最后，做出有关是否使用数据挖掘结果的决定。 6️⃣ 部署阶段 建立了模型并不意味着项目已经完成。需要应用已建立的模型。 简单部署实例：建立报表。 复杂一些的部署实例：在其他部门实现并行数据挖掘过程。 对商业应用来说，客户通常会基于建立的模型开展部署工作。 📝 参考网址\书籍：">
+1️⃣ 业务/研究理解（定义问题） 首先，根据业务或研究单元，从总体上清楚的阐明项目目标和需求。 然后，将这些目标和约束转换为数据挖掘问题定义的公式。 最后，准备实现这些目标的初步策略。 2️⃣ 数据准备 该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。 选择要分析的案例和变量，为分析做好准备工作。 如果需要的话，对确定的变量进行转换。 对原始数据展开清理工作，为使用建模工具建模打下基础。 数据准备可以细分如下：
+数据收集 数据初步准备 数据预处理\清理：对缺失、重复、异常、不一致及不规范等数据进行删除或修复操作。 数据转换：运用缩放、属性分解和属性聚合、编码等技术，将预处理后的数据转换为可用的形态。 特征构建：对特征集进行转换，得到新的特征集，虽保留大部分信息，但新特征通常难以被人类直接解释。 特征选择：删除不重要的特征，保留其他特征的现有状态，在分析过程中可被人类完全理解。 此外，数据准备过程中还可以考虑以下方面：
+进行数据采样，平衡不同类别数据的数量，特别是在类别不平衡的情况下。 对时间序列数据进行平稳性检验和处理，以便更好地进行分析和建模。 3️⃣ 数据理解 首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。 然后，评估数据质量。 最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。 数据理解可以细分如下：">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -267,6 +270,25 @@
     href="/documentation/ai/end_to_end/crisp/preparation/collect_data/"
     
   >2️⃣.1️⃣ 收集数据
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/eda/"
+    
+  >3️⃣ 数据探索
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/eda/preliminary_understanding/"
+    
+  >3️⃣.1️⃣ 初步了解数据
     </a>
               
             </li></ul>
@@ -810,6 +832,25 @@
               
             </li></ul>
       </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/eda/"
+    
+  >3️⃣ 数据探索
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/documentation/ai/end_to_end/crisp/eda/preliminary_understanding/"
+    
+  >3️⃣.1️⃣ 初步了解数据
+    </a>
+              
+            </li></ul>
+      </div>
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col "><a
@@ -1079,6 +1120,7 @@ style="width: 80%; border: 1px solid #eee;"
 <li>然后，将这些目标和约束转换为数据挖掘问题定义的公式。</li>
 <li>最后，准备实现这些目标的初步策略。</li>
 </ul>
+<br>
 <h3>2️⃣ 数据准备<span class="hx-absolute -hx-mt-20" id="2-数据准备"></span>
     <a href="#2-%e6%95%b0%e6%8d%ae%e5%87%86%e5%a4%87" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
 <li>该阶段需要投入大量的精力，涵盖准备最终数据集的方方面面，这些数据将用于后续阶段，涉及初始数据、原始数据和脏数据。</li>
@@ -1087,23 +1129,52 @@ style="width: 80%; border: 1px solid #eee;"
 <li>对原始数据展开清理工作，为使用建模工具建模打下基础。</li>
 </ul>
 <blockquote>
-  <p><em><strong>数据准备可以细分如下</strong></em></p>
+  <p><em><strong>数据准备可以细分如下：</strong></em></p>
 <ul>
 <li>数据收集</li>
 <li>数据初步准备</li>
-<li>数据预处理</li>
-<li>数据转换</li>
-<li>特征构建</li>
-<li>特征选择</li>
-<li>降维</li>
+<li>数据预处理\清理：对缺失、重复、异常、不一致及不规范等数据进行删除或修复操作。</li>
+<li>数据转换：运用缩放、属性分解和属性聚合、编码等技术，将预处理后的数据转换为可用的形态。</li>
+<li>特征构建：对特征集进行转换，得到新的特征集，虽保留大部分信息，但新特征通常难以被人类直接解释。</li>
+<li>特征选择：删除不重要的特征，保留其他特征的现有状态，在分析过程中可被人类完全理解。</li>
 </ul>
 </blockquote>
+<blockquote>
+  <p><em><strong>此外，数据准备过程中还可以考虑以下方面：</strong></em></p>
+<ul>
+<li>进行数据采样，平衡不同类别数据的数量，特别是在类别不平衡的情况下。</li>
+<li>对时间序列数据进行平稳性检验和处理，以便更好地进行分析和建模。</li>
+</ul>
+</blockquote>
+<br>
 <h3>3️⃣ 数据理解<span class="hx-absolute -hx-mt-20" id="3-数据理解"></span>
     <a href="#3-%e6%95%b0%e6%8d%ae%e7%90%86%e8%a7%a3" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
 <li>首先，通过探索性数据分析熟悉数据，发现浅层见解（数据探索，第一步：初步了解数据）。</li>
 <li>然后，评估数据质量。</li>
 <li>最后，如果需要的话，选择可能包含可执行模式的感兴趣的数据子集。</li>
 </ul>
+<blockquote>
+  <p><em><strong>数据理解可以细分如下：</strong></em></p>
+<ul>
+<li>
+<p><strong>初步了解数据集</strong>：通过描述统计分析，初步了解数据集的大小，分布，类型，特征取值，是否有缺失等信息。</p>
+</li>
+<li>
+<p><strong>探索分类变量</strong>：分类变量有名义变量（如：性别），有序分类变量（如：职业，日期，周，月等）或是一些需要处理的文本。了解分类变量的分布情况，常用方法或统计量有：</p>
+</li>
+</ul>
+<blockquote>
+  <ul>
+<li><strong>频数</strong>：数据集中每个类别出现的次数。</li>
+<li><strong>众数</strong>：数据集中出现次数最多的类别或值。</li>
+<li><strong>列联表</strong>：一种对两个或两个以上分类变量做计数的表格。</li>
+<li><strong>条形图</strong>：在绘图中，以条形表示每个类别出现的频数或占比情况。</li>
+<li><strong>饼图</strong>：在绘图中，圆饼中的一个扇形部分表示每个类别出现的频数或占比情况。</li>
+<li>&hellip;&hellip;</li>
+</ul>
+</blockquote>
+</blockquote>
+<br>
 <h3>4️⃣ 建模阶段<span class="hx-absolute -hx-mt-20" id="4-建模阶段"></span>
     <a href="#4-%e5%bb%ba%e6%a8%a1%e9%98%b6%e6%ae%b5" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
 <li>选择并应用适当的建模技术。</li>
@@ -1111,6 +1182,7 @@ style="width: 80%; border: 1px solid #eee;"
 <li>通常，对同一个数据挖掘问题坑你要应用多种不同的技术。</li>
 <li>可能需要返回数据准备阶段，以便使用数据形式能够符合特定数据挖掘技术对数据的特定需求。</li>
 </ul>
+<br>
 <h3>5️⃣ 评估阶段<span class="hx-absolute -hx-mt-20" id="5-评估阶段"></span>
     <a href="#5-%e8%af%84%e4%bc%b0%e9%98%b6%e6%ae%b5" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
 <li>建模阶段将发布一个或多个模型。在将这些模型部署到现场进行使用前，对模型质量和效果开展评估工作。</li>
@@ -1118,6 +1190,7 @@ style="width: 80%; border: 1px solid #eee;"
 <li>确认业务或研究问题的重要组成部分是否未被清楚的解释。</li>
 <li>最后，做出有关是否使用数据挖掘结果的决定。</li>
 </ul>
+<br>
 <h3>6️⃣ 部署阶段<span class="hx-absolute -hx-mt-20" id="6-部署阶段"></span>
     <a href="#6-%e9%83%a8%e7%bd%b2%e9%98%b6%e6%ae%b5" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
 <li>建立了模型并不意味着项目已经完成。需要应用已建立的模型。</li>
