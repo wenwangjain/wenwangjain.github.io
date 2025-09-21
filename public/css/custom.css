@@ -1,24 +1,16 @@
-/* 修改表格字体 */
+/* 表格基础样式 */
 table {
-  font-family: "Helvetica Neue", Arial, sans-serif; /* 替换为你想要的字体 */
-  font-size: 14px; /* 调整字体大小 */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 12px;        /* 字体大小 */
+  line-height: 1.2;       /* 行高 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 悬停效果 */
+tbody tr:hover {
+  background-color: #e9ecef;
 }
 
 
-
-/* 调整主侧边栏宽度 */
-.hextra-sidebar {
-  width: 350px !important;  /* 默认可能是 250px，调整为你需要的宽度 */
-  min-width: 350px !important;
-}
-
-/* 调整内容区域偏移，避免被侧边栏遮挡 */
-.main-content {
-  margin-left: 320px !important;  /* 比侧边栏宽度稍大 */
-}
-
-/* 如果目录项太长，可以调整内边距 */
-.hextra-toc-item {
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-}

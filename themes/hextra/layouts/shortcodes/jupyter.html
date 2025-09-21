@@ -56,15 +56,16 @@
                   <pre class="not-prose">{{- $textContent -}}</pre>
                 {{- else if eq (index $output "output_type") "execute_result" -}}
                   {{- $data := index $output "data" -}}
-                  {{- $text := index $data "text/plain" -}}
-                  {{- $textContent := (cond (reflect.IsSlice $text) (delimit $text "") $text) -}}
-                  <pre class="not-prose">{{- $textContent -}}</pre>
                   {{- $html := index $data "text/html" -}}
                   {{- if $html -}}
                     {{- $htmlText := delimit $html "" -}}
-                    <div>
+                    <div class="hextra-jupyter-output-html">
                       {{- $htmlText | safeHTML -}}
                     </div>
+                  {{- else -}}
+                    {{- $text := index $data "text/plain" -}}
+                    {{- $textContent := (cond (reflect.IsSlice $text) (delimit $text "") $text) -}}
+                    <pre class="not-prose hextra-jupyter-output-text">{{- $textContent -}}</pre>
                   {{- end -}}
                 {{- end -}}
               {{- end -}}

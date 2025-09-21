@@ -18,6 +18,8 @@
   </url><url>
     <loc>http://localhost:1313/documentation/ai/</loc>
   </url><url>
+    <loc>http://localhost:1313/interview/data_warehouse/</loc>
+  </url><url>
     <loc>http://localhost:1313/project/competition/</loc>
   </url><url>
     <loc>http://localhost:1313/documentation/</loc>
@@ -33,6 +35,8 @@
     <loc>http://localhost:1313/documentation/bigdata/</loc>
   </url><url>
     <loc>http://localhost:1313/project/bigdata/</loc>
+  </url><url>
+    <loc>http://localhost:1313/interview/sql_practice/</loc>
   </url><url>
     <loc>http://localhost:1313/guide/</loc>
   </url><url>

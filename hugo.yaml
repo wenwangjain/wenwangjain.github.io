@@ -129,9 +129,6 @@ params:
       inputPosition: top
       # lang: en
 
-  sidebar:
-    Width: 400
-
   article:
       # 文章分页显示
       displayPagination: true
@@ -157,3 +154,6 @@ params:
   markdown:
     render:
       jupyter: true  # 确保只有一个渲染器
+
+
+
