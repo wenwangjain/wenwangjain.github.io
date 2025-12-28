@@ -1,0 +1,33 @@
+/* ================ 最小化固定导航栏方案 ================ */
+
+/* 1. 确保导航栏固定在顶部 */
+.hextra-nav-container {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+/* 2. 为页面内容添加顶部内边距，避免被导航栏遮挡 */
+body > main {
+  padding-top: 64px !important;
+}
+
+
+
+
+/* 强制显示导航栏Logo */
+.hx-navbar .navbar-logo img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 如果Logo是背景图片 */
+.hx-navbar .navbar-logo {
+  background-image: url('/images/logo2.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 45px !important;
+  height: 45px !important;
+}
