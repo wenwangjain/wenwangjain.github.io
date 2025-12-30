@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Practice of Data Science Projects – 🏃 Alibaba Tianchi</title>
+    <link>http://localhost:1313/competition-event/alibaba-tianchi/</link>
+    <description>Recent content in 🏃 Alibaba Tianchi on Practice of Data Science Projects</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/competition-event/alibaba-tianchi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
