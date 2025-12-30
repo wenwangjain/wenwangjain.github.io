@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 💡 AI产品化 &#43; 提示工程</title>
+    <link>http://localhost:1313/zh-cn/core-direction/ai-productization/</link>
+    <description>Recent content in 💡 AI产品化 &#43; 提示工程 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/zh-cn/core-direction/ai-productization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

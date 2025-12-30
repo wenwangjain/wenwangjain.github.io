@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 📱 边缘AI与端侧部署</title>
+    <link>http://localhost:1313/zh-cn/core-direction/edge-ai/</link>
+    <description>Recent content in 📱 边缘AI与端侧部署 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/zh-cn/core-direction/edge-ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

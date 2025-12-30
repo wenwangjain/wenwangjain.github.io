@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 三大 AI 核心方向</title>
+    <link>http://localhost:1313/zh-cn/core-direction/</link>
+    <description>Recent content in 三大 AI 核心方向 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/zh-cn/core-direction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
