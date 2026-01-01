@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Practice of Data Science Projects – 🧩 Basic Theory of AI</title>
+    <link>http://localhost:1313/en/knowledge-base/ai-basic/</link>
+    <description>Recent content in 🧩 Basic Theory of AI on Practice of Data Science Projects</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/en/knowledge-base/ai-basic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

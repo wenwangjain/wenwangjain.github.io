@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Practice of Data Science Projects – 🔍 Algorithm &#43; Tool Source Code</title>
+    <link>http://localhost:1313/en/knowledge-base/algorithm-code/</link>
+    <description>Recent content in 🔍 Algorithm &#43; Tool Source Code on Practice of Data Science Projects</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/en/knowledge-base/algorithm-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

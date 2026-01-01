@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据科学实践 – 🏃 阿里天池</title>
+    <link>http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/</link>
+    <description>Recent content in 🏃 阿里天池 on 数据科学实践</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/competition-event/alibaba-tianchi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/competition-event/alibaba-tianchi/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/competition-event/kaggle/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/competition-event/kaggle/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/competition-event/kaggle/"
+                />
+  </url><url>
     <loc>http://localhost:1313/core-direction/ai-business/</loc>
     <xhtml:link
                 rel="alternate"
@@ -12,6 +36,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/core-direction/ai-business/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/about/"
                 />
   </url><url>
     <loc>http://localhost:1313/core-direction/</loc>
@@ -108,6 +144,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/categories/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/competition-event/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/competition-event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/competition-event/"
                 />
   </url><url>
     <loc>http://localhost:1313/</loc>
