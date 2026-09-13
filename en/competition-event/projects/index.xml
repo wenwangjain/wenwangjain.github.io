@@ -1,0 +1,495 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>From Data to AI Engineering: A Practical Exploration – Nine Hands-On Projects</title>
+    <link>http://localhost:1313/en/competition-event/projects/</link>
+    <description>Recent content in Nine Hands-On Projects on From Data to AI Engineering: A Practical Exploration</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/en/competition-event/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Structured Extraction</title>
+      <link>http://localhost:1313/en/competition-event/projects/structured-extraction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/structured-extraction/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Structured Extraction&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Making the model obediently output JSON&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master prompt engineering and output constraints&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Application&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;$0 (free API)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;5 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Resume parsing, contract data entry, ticket classification&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;Junior AI Application Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Enterprise RAG</title>
+      <link>http://localhost:1313/en/competition-event/projects/enterprise-rag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/enterprise-rag/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Enterprise RAG&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Letting the model answer from documents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master the full RAG pipeline&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Application&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;$0 (free API)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;10 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Internal knowledge base, smart support, compliance review&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;AI Application Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Multi-Tool Agent</title>
+      <link>http://localhost:1313/en/competition-event/projects/multi-tool-agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/multi-tool-agent/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Multi-Tool Agent&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Letting the model use tools to finish tasks&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master ReAct and Function Calling&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Application&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;$0 (free API)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;8 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Smart underwriting, office automation, personal assistant&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;AI Agent Developer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>On-Device Small Model</title>
+      <link>http://localhost:1313/en/competition-event/projects/on-device-small-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/on-device-small-model/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;On-Device Small Model&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Build a model that runs on a phone from scratch&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Principles + model compression + on-device deployment&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Model&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;$0 (Colab)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;12 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Offline AI, privacy computing, AIoT devices&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;On-Device AI Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Vertical Fine-Tuning</title>
+      <link>http://localhost:1313/en/competition-event/projects/vertical-finetune/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/vertical-finetune/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Vertical Fine-Tuning&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Teaching the model industry jargon&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master low-cost LoRA customization&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Model&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;$0 (local RTX 2070S)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;10 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Custom support style, domain-specific models&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;LLM Fine-Tuning Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Distributed Training</title>
+      <link>http://localhost:1313/en/competition-event/projects/distributed-training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/distributed-training/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Distributed Training&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Making multiple GPUs train huge models together&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master 3D parallelism and memory sharding&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Model&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;¥150 (cloud 4-GPU)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;8 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Full LLM fine-tuning, pretraining&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;LLM Training Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Inference Serving</title>
+      <link>http://localhost:1313/en/competition-event/projects/inference-serving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/inference-serving/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Inference Serving&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Helping the model handle 50 concurrent users&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master vLLM tuning and load testing&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Engineering&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;¥100 (cloud A100)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;8 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;High-concurrency AI products, API services&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;LLM Inference Optimization Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Edge Deployment</title>
+      <link>http://localhost:1313/en/competition-event/projects/edge-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/edge-deployment/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Edge Deployment&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Running the model on a Raspberry Pi&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master on-device inference and hardware adaptation&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Engineering&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;¥500 (Raspberry Pi hardware)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;10 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Private deployment, edge AI, data on-premise&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;Edge AI Deployment Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Observability</title>
+      <link>http://localhost:1313/en/competition-event/projects/observability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/projects/observability/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Observability&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — This project is about to start. The page will be updated as the hands-on work progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Making model issues diagnosable&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core goal:&lt;/strong&gt; Master monitoring, logging and RAG evaluation&lt;/p&gt;
+&lt;h2&gt;Project Spec&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;project-spec&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project-spec&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Item&lt;/th&gt;
+          &lt;th&gt;Detail&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Stage&lt;/td&gt;
+          &lt;td&gt;Engineering&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware cost&lt;/td&gt;
+          &lt;td&gt;$0 (open-source tools)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Duration&lt;/td&gt;
+          &lt;td&gt;7 days&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scenarios&lt;/td&gt;
+          &lt;td&gt;Production SLA assurance, continuous improvement&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Role mapping&lt;/td&gt;
+          &lt;td&gt;AI Ops / Platform Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Build Log&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;build-log&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build-log&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;lessons-learned&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#lessons-learned&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,102 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>From Data to AI Engineering: A Practical Exploration – Four Platform Systems</title>
+    <link>http://localhost:1313/en/competition-event/systems/</link>
+    <description>Recent content in Four Platform Systems on From Data to AI Engineering: A Practical Exploration</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/en/competition-event/systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Data Platform</title>
+      <link>http://localhost:1313/en/competition-event/systems/data-platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/systems/data-platform/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Data Platform&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: In Progress&lt;/strong&gt; — The platform is under construction. This page will be updated as development progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Data foundation + real-time computing + feature engineering + lightweight ML&lt;/p&gt;
+&lt;h2&gt;Capability Scope&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;capability-scope&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#capability-scope&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Ingestion, storage, computing, scheduling, OLAP, stream job management, basic features, Spark MLlib&lt;/p&gt;
+&lt;h2&gt;Progress&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;progress&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#progress&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>AI Training Platform</title>
+      <link>http://localhost:1313/en/competition-event/systems/ai-training-platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/systems/ai-training-platform/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;AI Training Platform&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — The platform is under construction. This page will be updated as development progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Full-spectrum AI training platform (classic ML + deep learning + LLMs)&lt;/p&gt;
+&lt;h2&gt;Capability Scope&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;capability-scope&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#capability-scope&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Classic ML, deep learning, graph computing, LLM fine-tuning, distributed training, experiment management&lt;/p&gt;
+&lt;h2&gt;Progress&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;progress&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#progress&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>MLOps Platform</title>
+      <link>http://localhost:1313/en/competition-event/systems/mlops-platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/systems/mlops-platform/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;MLOps Platform&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — The platform is under construction. This page will be updated as development progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; Model serving + high-concurrency inference + monitoring + auto retraining&lt;/p&gt;
+&lt;h2&gt;Capability Scope&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;capability-scope&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#capability-scope&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Model serving, high-performance inference, drift detection, performance monitoring, continuous training&lt;/p&gt;
+&lt;h2&gt;Progress&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;progress&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#progress&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Application Platform</title>
+      <link>http://localhost:1313/en/competition-event/systems/application-platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/competition-event/systems/application-platform/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Application Platform&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;Status: Planned&lt;/strong&gt; — The platform is under construction. This page will be updated as development progresses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Positioning:&lt;/strong&gt; User-facing delivery + RAG + Agent + visualization&lt;/p&gt;
+&lt;h2&gt;Capability Scope&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;capability-scope&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#capability-scope&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Frontend interaction, knowledge-base QA, AI agents, BI dashboards, graph query&lt;/p&gt;
+&lt;h2&gt;Progress&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;progress&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#progress&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(To be updated)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

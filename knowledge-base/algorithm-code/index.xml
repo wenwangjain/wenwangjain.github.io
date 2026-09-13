@@ -1,1 +1,18 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>从数据到AI工程的实战探索 – 🔍 算法 + 工具源码</title><link>https://wenwangjain.github.io/knowledge-base/algorithm-code/</link><description>Recent content in 🔍 算法 + 工具源码 on 从数据到AI工程的实战探索</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wenwangjain.github.io/knowledge-base/algorithm-code/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>从数据到AI工程的实战探索 – 🔍 算法 &#43; 工具源码</title>
+    <link>http://localhost:1313/knowledge-base/algorithm-code/</link>
+    <description>Recent content in 🔍 算法 &#43; 工具源码 on 从数据到AI工程的实战探索</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/knowledge-base/algorithm-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

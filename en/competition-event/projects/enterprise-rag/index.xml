@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>From Data to AI Engineering: A Practical Exploration – Enterprise RAG</title>
+    <link>http://localhost:1313/en/competition-event/projects/enterprise-rag/</link>
+    <description>Recent content in Enterprise RAG on From Data to AI Engineering: A Practical Exploration</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/en/competition-event/projects/enterprise-rag/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>从数据到AI工程的实战探索 – 企业级 RAG</title>
+    <link>http://localhost:1313/competition-event/projects/enterprise-rag/</link>
+    <description>Recent content in 企业级 RAG on 从数据到AI工程的实战探索</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/competition-event/projects/enterprise-rag/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

@@ -1,1 +1,18 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>From Data to AI Engineering: A Practical Exploration – Four Platform Systems</title><link>https://wenwangjain.github.io/en/systems/</link><description>Recent content in Four Platform Systems on From Data to AI Engineering: A Practical Exploration</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wenwangjain.github.io/en/systems/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>From Data to AI Engineering: A Practical Exploration – Four Platform Systems</title>
+    <link>http://localhost:50701/en/systems/</link>
+    <description>Recent content in Four Platform Systems on From Data to AI Engineering: A Practical Exploration</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:50701/en/systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

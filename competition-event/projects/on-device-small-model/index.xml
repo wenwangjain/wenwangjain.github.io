@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>从数据到AI工程的实战探索 – 端侧小模型</title>
+    <link>http://localhost:1313/competition-event/projects/on-device-small-model/</link>
+    <description>Recent content in 端侧小模型 on 从数据到AI工程的实战探索</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/competition-event/projects/on-device-small-model/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

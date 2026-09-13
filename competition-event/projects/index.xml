@@ -1,0 +1,495 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>从数据到AI工程的实战探索 – 九大实战项目</title>
+    <link>http://localhost:1313/competition-event/projects/</link>
+    <description>Recent content in 九大实战项目 on 从数据到AI工程的实战探索</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	  <atom:link href="http://localhost:1313/competition-event/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>结构化抽取</title>
+      <link>http://localhost:1313/competition-event/projects/structured-extraction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/structured-extraction/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;结构化抽取&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“听话”输出 JSON&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握提示词工程与输出约束&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;应用层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;0 元（免费 API）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;5 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;简历解析、合同信息录入、工单分类&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;初级 AI 应用工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>企业级 RAG</title>
+      <link>http://localhost:1313/competition-event/projects/enterprise-rag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/enterprise-rag/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;企业级 RAG&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“查文档”回答问题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握检索增强生成全流程&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;应用层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;0 元（免费 API）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;10 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;内部知识库、智能客服、合规审查&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;AI 应用工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>多工具 Agent</title>
+      <link>http://localhost:1313/competition-event/projects/multi-tool-agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/multi-tool-agent/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;多工具 Agent&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“用工具”完成任务&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握 ReAct 与 Function Calling&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;应用层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;0 元（免费 API）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;8 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;智能核保、自动化办公、个人助理&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;AI Agent 开发工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>端侧小模型</title>
+      <link>http://localhost:1313/competition-event/projects/on-device-small-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/on-device-small-model/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;端侧小模型&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 从 0 造一个能跑在手机上的模型&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 理解原理 + 模型压缩 + 端侧落地&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;模型层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;0 元（Colab）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;12 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;离线 AI、隐私计算、AIoT 设备&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;端侧 AI 工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>垂直微调</title>
+      <link>http://localhost:1313/competition-event/projects/vertical-finetune/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/vertical-finetune/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;垂直微调&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“学会行业黑话”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握 LoRA 低成本定制&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;模型层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;0 元（本地 2070S）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;10 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;客服风格定制、行业专属模型&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;大模型微调工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>分布式训练</title>
+      <link>http://localhost:1313/competition-event/projects/distributed-training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/distributed-training/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;分布式训练&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让多卡“合力”跑超大模型&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握 3D 并行与显存分片&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;模型层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;¥150（云 GPU 4 卡）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;8 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;大模型全量微调、预训练&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;大模型训练工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>推理服务化</title>
+      <link>http://localhost:1313/competition-event/projects/inference-serving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/inference-serving/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;推理服务化&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“扛住 50 人并发”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握 vLLM 调参与性能压测&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;工程层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;¥100（云 GPU A100）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;8 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;高并发 AI 产品、API 服务&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;LLM 推理优化工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>端侧部署</title>
+      <link>http://localhost:1313/competition-event/projects/edge-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/edge-deployment/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;端侧部署&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“跑在树莓派上”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握端侧推理与硬件适配&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;工程层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;¥500（树莓派硬件）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;10 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;私有化部署、边缘 AI、数据不出域&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;端侧 AI 部署工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>可观测性</title>
+      <link>http://localhost:1313/competition-event/projects/observability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competition-event/projects/observability/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;可观测性&lt;/h1&gt;&lt;blockquote&gt;
+  &lt;p&gt;🚧 &lt;strong&gt;状态：计划中&lt;/strong&gt; —— 本项目即将启动，页面将随实战进度持续更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一句话定位：&lt;/strong&gt; 让模型“出了问题能排查”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心目标：&lt;/strong&gt; 掌握监控、日志与 RAG 评估&lt;/p&gt;
+&lt;h2&gt;项目规格&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;项目规格&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e8%a7%84%e6%a0%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;项目&lt;/th&gt;
+          &lt;th&gt;内容&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;所属阶段&lt;/td&gt;
+          &lt;td&gt;工程层&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;硬件成本&lt;/td&gt;
+          &lt;td&gt;0 元（开源工具）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;学习周期&lt;/td&gt;
+          &lt;td&gt;7 天&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;业务场景&lt;/td&gt;
+          &lt;td&gt;线上系统 SLA 保障、持续优化&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;岗位映射&lt;/td&gt;
+          &lt;td&gt;AI 运维 / 平台工程师&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;实战记录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实战记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e6%88%98%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+&lt;h2&gt;经验与收获&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;经验与收获&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bb%8f%e9%aa%8c%e4%b8%8e%e6%94%b6%e8%8e%b7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;（待更新）&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
