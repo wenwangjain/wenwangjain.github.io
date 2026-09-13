@@ -1,18 +1,1 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Practice of Data Science Projects – 📱 Edge AI &amp; On-Device Deployment</title>
-    <link>http://localhost:1313/core-direction/edge-ai/</link>
-    <description>Recent content in 📱 Edge AI &amp; On-Device Deployment on Practice of Data Science Projects</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="http://localhost:1313/core-direction/edge-ai/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>从数据到AI工程的实战探索 – 📱 边缘AI与端侧部署</title><link>https://wenwangjain.github.io/core-direction/edge-ai/</link><description>Recent content in 📱 边缘AI与端侧部署 on 从数据到AI工程的实战探索</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wenwangjain.github.io/core-direction/edge-ai/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

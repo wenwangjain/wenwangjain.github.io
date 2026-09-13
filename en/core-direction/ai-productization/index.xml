@@ -1,18 +1,1 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Practice of Data Science Projects – 💡 AI Productization &#43; Prompt Engineering</title>
-    <link>http://localhost:1313/en/core-direction/ai-productization/</link>
-    <description>Recent content in 💡 AI Productization &#43; Prompt Engineering on Practice of Data Science Projects</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="http://localhost:1313/en/core-direction/ai-productization/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>From Data to AI Engineering: A Practical Exploration – 💡 AI Productization + Prompt Engineering</title><link>https://wenwangjain.github.io/en/core-direction/ai-productization/</link><description>Recent content in 💡 AI Productization + Prompt Engineering on From Data to AI Engineering: A Practical Exploration</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wenwangjain.github.io/en/core-direction/ai-productization/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

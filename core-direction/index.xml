@@ -1,18 +1,1 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Practice of Data Science Projects – Three Core AI Directions</title>
-    <link>http://localhost:1313/core-direction/</link>
-    <description>Recent content in Three Core AI Directions on Practice of Data Science Projects</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="http://localhost:1313/core-direction/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>从数据到AI工程的实战探索 – 三大 AI 核心方向</title><link>https://wenwangjain.github.io/core-direction/</link><description>Recent content in 三大 AI 核心方向 on 从数据到AI工程的实战探索</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wenwangjain.github.io/core-direction/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
