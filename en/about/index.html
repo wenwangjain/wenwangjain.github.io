@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,8 +9,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>About – From Data to AI Engineering: A Practical Exploration</title>
-  <meta name="description" content="
-About About About About About " /><link rel="canonical" href="http://localhost:1313/en/about/" itemprop="url" />
+  <meta name="description" content=" About Me Hi, I&#39;m an AI engineering explorer with 10 years of hands-on experience in the data field: 📊 4 years in data analysis, 💻 4 years in data engineering, 📋 1 year in data governance, and 🧠 1 year in machine learning — covering the full path from business problems to data infrastructure and model deployment.
+I now focus on AI engineering in production — turning LLM capabilities into shippable business products. I&#39;m building platform systems and landing a series of fine-grained hands-on projects on the Application Platform. This site openly documents my entire journey and practical insights." /><link rel="canonical" href="https://wenwangjain.github.io/en/about/" itemprop="url" />
 
 <meta property="og:title" content="About">
 <meta
@@ -25,20 +25,40 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
   content="
     website
   ">
-<meta property="og:url" content="http://localhost:1313/en/about/">
+<meta property="og:url" content="https://wenwangjain.github.io/en/about/">
 
 
   <meta itemprop="name" content="About">
-  <meta itemprop="description" content="About About About About About">
-  <meta itemprop="wordCount" content="5">
+  <meta itemprop="description" content="About Me Hi, I&#39;m an AI engineering explorer with 10 years of hands-on experience in the data field: 📊 4 years in data analysis, 💻 4 years in data engineering, 📋 1 year in data governance, and 🧠 1 year in machine learning — covering the full path from business problems to data infrastructure and model deployment.
+I now focus on AI engineering in production — turning LLM capabilities into shippable business products. I&#39;m building platform systems and landing a series of fine-grained hands-on projects on the Application Platform. This site openly documents my entire journey and practical insights.">
+  <meta itemprop="wordCount" content="486">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="About">
-  <meta name="twitter:description" content="About About About About About">
-<link href="/css/compiled/main.css" rel="stylesheet" />
-    <link href="/css/variables.css" rel="stylesheet" />
-    <link href="/css/custom.css" rel="stylesheet" />
+  <meta name="twitter:description" content="About Me Hi, I&#39;m an AI engineering explorer with 10 years of hands-on experience in the data field: 📊 4 years in data analysis, 💻 4 years in data engineering, 📋 1 year in data governance, and 🧠 1 year in machine learning — covering the full path from business problems to data infrastructure and model deployment.
+I now focus on AI engineering in production — turning LLM capabilities into shippable business products. I&#39;m building platform systems and landing a series of fine-grained hands-on projects on the Application Platform. This site openly documents my entire journey and practical insights.">
+
+    <link rel="preload" href="/css/compiled/main.min.bddc1eaddbb20981d05988c070db51a8ca5a14bf2d13347ce6715d2a8a8cc689.css" as="style" integrity="sha256-vdwerduyCYHQWYjAcNtRqMpaFL8tEzR85nFdKoqMxok=" />
+    <link href="/css/compiled/main.min.bddc1eaddbb20981d05988c070db51a8ca5a14bf2d13347ce6715d2a8a8cc689.css" rel="stylesheet" integrity="sha256-vdwerduyCYHQWYjAcNtRqMpaFL8tEzR85nFdKoqMxok=" />
 
   
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ3Q041EBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-VZ3Q041EBH");
+</script>
+
+
+
+
+
 
 
   <script>
@@ -71,100 +91,10 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
   
   <style>
 :root {
-  --hextra-max-page-width: 90rem;
+  --hextra-max-page-width: 100%;
 }
 </style>
-  <script>
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return;
-
-  var canvas = document.createElement('canvas');
-  canvas.id = 'hx-fx-canvas';
-  var ctx = null, W = 0, H = 0, pts = [], rafId = null, running = false;
-  var mouse = { x: -9999, y: -9999 };
-
-  function count() { return Math.min(90, Math.floor(window.innerWidth / 16)); }
-
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    pts = Array.from({ length: count() }, function () {
-      return {
-        x: Math.random() * W,
-        y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        r: Math.random() * 1.4 + 0.4
-      };
-    });
-  }
-
-  function frame() {
-    ctx.clearRect(0, 0, W, H);
-    for (var i = 0; i < pts.length; i++) {
-      var p = pts[i];
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1;
-      if (p.y < 0 || p.y > H) p.vy *= -1;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0,229,255,.55)';
-      ctx.fill();
-    }
-    for (var a = 0; a < pts.length; a++) {
-      for (var b = a + 1; b < pts.length; b++) {
-        var pa = pts[a], pb = pts[b];
-        var d = Math.hypot(pa.x - pb.x, pa.y - pb.y);
-        if (d < 120) {
-          ctx.strokeStyle = 'rgba(0,229,255,' + (0.10 * (1 - d / 120)) + ')';
-          ctx.lineWidth = 0.6;
-          ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
-        }
-      }
-      var dm = Math.hypot(pts[a].x - mouse.x, pts[a].y - mouse.y);
-      if (dm < 170) {
-        ctx.strokeStyle = 'rgba(124,92,255,' + (0.22 * (1 - dm / 170)) + ')';
-        ctx.lineWidth = 0.7;
-        ctx.beginPath(); ctx.moveTo(pts[a].x, pts[a].y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      }
-    }
-    rafId = requestAnimationFrame(frame);
-  }
-
-  function start() {
-    if (running) return;
-    running = true;
-    if (!ctx) ctx = canvas.getContext('2d');
-    resize();
-    rafId = requestAnimationFrame(frame);
-  }
-  function stop() {
-    running = false;
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = null;
-  }
-
-  function isDark() { return document.documentElement.classList.contains('dark'); }
-
-  function init() {
-    document.body.appendChild(canvas);
-    window.addEventListener('resize', function () { if (isDark()) resize(); });
-    window.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
-    window.addEventListener('mouseout', function () { mouse.x = mouse.y = -9999; });
-
-    
-    new MutationObserver(function () { isDark() ? start() : stop(); })
-      .observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-
-    if (isDark()) start();
-  }
-
-  if (document.body) init();
-  else document.addEventListener('DOMContentLoaded', init);
-})();
-</script>
-</head>
+  <link rel="stylesheet" href="/css/about-page.min.bd9701ebcbd91f85102c753acd49231866634ee52cba2d1af408ea34c1a3352f.css"></head>
 <body><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
   <div
     class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
@@ -174,7 +104,7 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
     <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/en/">
     <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo2.png" alt="Logo" height="45" width="45" />
     <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo2-dark.png" alt="Dark Logo" height="45" width="45" />
-    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="From Data to AI Engineering: A Practical Exploration">From Data to AI Engineering: A Practical Exploration</span>
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="From Data to AI Engineering: A Practical Exploration">AI Engineering in Practice</span>
 </a>
 <a
   title=""
@@ -258,16 +188,16 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
   >
     <li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
-        href="/en/systems/"
+        href="/en/competition-event/systems/"
         
         class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
-      >🏢 Four Platform Systems</a>
+      >🏢 Platform Systems</a>
     </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
-        href="/en/projects/"
+        href="/en/competition-event/projects/"
         
         class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
-      >🛠️ Nine Hands-On Projects</a>
+      >🛠️ Hands-On Projects</a>
     </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
         href="/en/competition-event/kaggle/"
@@ -435,14 +365,6 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
     
   >About
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#about"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >About</a>
-            </li>
-          </ul>
   </li>
           <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -541,7 +463,7 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/en/competition-event/systems/"
     
-  >Four Platform Systems
+  >Platform Systems
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -584,7 +506,7 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/en/competition-event/projects/"
     
-  >Nine Hands-On Projects
+  >Hands-On Projects
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -754,38 +676,7 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
   </ul>
 </div></div></aside>
     
-<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#about">About
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#about-1">About
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#about-2">About
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-12 hx:rtl:pr-12 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#about-3">About
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-16 hx:rtl:pr-16 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#about-4">About
-        </a>
-      </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
-        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
-          <span>Scroll to top</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents"></nav>
 
 
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
@@ -793,13 +684,172 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
         
         <div class="content">
           <h1>About</h1>
-          <br>
-<h2>About<span class="hx:absolute hx:-mt-20" id="about"></span>
-    <a href="#about" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>About<span class="hx:absolute hx:-mt-20" id="about-1"></span>
-    <a href="#about-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>About<span class="hx:absolute hx:-mt-20" id="about-2"></span>
-    <a href="#about-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><h5>About<span class="hx:absolute hx:-mt-20" id="about-3"></span>
-    <a href="#about-3" class="subheading-anchor" aria-label="Permalink for this section"></a></h5><h6>About<span class="hx:absolute hx:-mt-20" id="about-4"></span>
-    <a href="#about-4" class="subheading-anchor" aria-label="Permalink for this section"></a></h6>
+          <link rel="stylesheet" href="/css/about_contact-title.min.b66c19f90cdb493e5e3fc4d8bd280f15e48ef534a831683cb304b73ddf53da75.css"><section id="about" class="hx-contact-title">
+  <div class="hx-contact-title-container">
+    <h2 class="hx-contact-title-heading">About Me</h2><div class="hx-contact-title-content">
+      
+
+    </div></div>
+</section>
+<div class="about-page-wrap">
+  <!-- Bio -->
+  <div class="about-bio">
+    <p>Hi, I'm an AI engineering explorer with 10 years of hands-on experience in the data field: 📊 4 years in data analysis, 💻 4 years in data engineering, 📋 1 year in data governance, and 🧠 1 year in machine learning — covering the full path from business problems to data infrastructure and model deployment.</p>
+    <p>I now focus on AI engineering in production — turning LLM capabilities into shippable business products. I'm building platform systems and landing a series of fine-grained hands-on projects on the Application Platform. This site openly documents my entire journey and practical insights.</p>
+    <div class="about-bio-stats">
+      <span class="about-bio-stat">💼 10 Years in Data</span>
+      <span class="about-bio-stat">📣 1,400+ WeChat Readers</span>
+      <span class="about-bio-stat">📍 Shenzhen, China</span>
+      <span class="about-bio-stat">🎓 Statistics · B.A. in Economics</span>
+    </div>
+  </div>
+  <!-- Info & Contact -->
+  <h3 class="about-section-label">Basic Info & Contact</h3>
+  <link rel="stylesheet" href="/css/about_contact-cards.min.a6e9289343ed5a9ddb4424fe64f2300356d17635fb52042e8222c4abc214dbf6.css">
+  
+  <div class="contact-cards-container">
+      <div class="contact-cards-grid contact-cards-2" style="gap: 0.75rem;"><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-simple-content"><a href="mailto:wwj2011125@outlook.com">wwj2011125@outlook.com</a></div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-university"></i>
+              </div>
+              <div class="contact-simple-content">Shandong University of Finance and Economics</div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-simple-content"><a href="https://github.com/wenwangjain" target="_blank" rel="noopener noreferrer">wenwangjain</a></div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-book"></i>
+              </div>
+              <div class="contact-simple-content">Statistics</div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-simple-content"><a href="#ZgotmplZ">&#43;86 176*****407</a></div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="contact-simple-content">Bachelor</div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-simple-content">Shenzhen</div>
+          </div><div class="contact-simple-card">
+              <div class="contact-simple-icon">
+                  <i class="fas fa-scroll"></i>
+              </div>
+              <div class="contact-simple-content">B.A. in Economics</div>
+          </div></div>
+  </div>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Certifications -->
+  <h3 class="about-section-label">Certifications</h3>
+  <link rel="stylesheet" href="/css/about_certifications-tags.min.8231a7d4d16e6da73c603c1216cf5d606d0f646a90a31d230639b2267e6126a1.css"><div class="hx-certifications-tags-wrapper hx-tags-center"
+       style="--tags-rows: 1; --row-gap: 0.8rem; --tags-per-row: 1;"><div class="hx-tag-row"><span class="hx-certification-tag">CDGA Data Governance Engineer</span></div></div>
+  <!-- Platform systems -->
+  <h3 class="about-section-label">Building · Platform Systems</h3>
+  <div class="about-projects-grid">
+<pre><code><link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/data-platform/" class="hx-pcard hx-pcard-sys">
+      <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System I</span><span class="hx-pc-status">In Progress</span></div>
+    
+      <h5 class="hx-pc-title">Data Platform</h5><p class="hx-pc-oneliner">Data foundation &#43; real-time computing &#43; feature engineering &#43; lightweight ML</p><div class="hx-pc-meta"><span class="hx-pc-m">Ingestion &amp; Storage</span><span class="hx-pc-m">OLAP</span><span class="hx-pc-m">Stream Processing</span><span class="hx-pc-m">Spark MLlib</span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/ai-training-platform/" class="hx-pcard hx-pcard-sys">
+      <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System II</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">AI Training Platform</h5><p class="hx-pc-oneliner">Full-spectrum training: classic ML, deep learning, and LLMs</p><div class="hx-pc-meta"><span class="hx-pc-m">LoRA Fine-Tuning</span><span class="hx-pc-m">Distributed Training</span><span class="hx-pc-m">Graph Computing</span><span class="hx-pc-m">Experiment Management</span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/mlops-platform/" class="hx-pcard hx-pcard-sys">
+      <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System III</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">MLOps Platform</h5><p class="hx-pc-oneliner">Model serving &#43; high-concurrency inference &#43; monitoring &#43; auto retraining</p><div class="hx-pc-meta"><span class="hx-pc-m">Model Serving</span><span class="hx-pc-m">Drift Detection</span><span class="hx-pc-m">Performance Monitoring</span><span class="hx-pc-m">Continuous Training</span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/application-platform/" class="hx-pcard hx-pcard-sys">
+      <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System IV</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Application Platform</h5><p class="hx-pc-oneliner">User-facing delivery &#43; RAG &#43; Agent &#43; visualization</p><div class="hx-pc-meta"><span class="hx-pc-m">Knowledge QA</span><span class="hx-pc-m">AI Agent</span><span class="hx-pc-m">BI Dashboard</span><span class="hx-pc-m">Graph Query</span><span class="hx-pc-arrow">View details →</span></div></a>
+
+</code></pre>
+  </div>
+  <!-- Hands-on projects -->
+  <h3 class="about-section-label">Hands-On Projects · Three Stages</h3>
+  <div class="about-projects-grid">
+<pre><code><link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/structured-extraction/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">①</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Structured Extraction</h5><p class="hx-pc-oneliner">Making the model obediently output JSON · Resume parsing / contract entry / ticket classification</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 5 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 Junior AI Application Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/enterprise-rag/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">②</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Enterprise RAG</h5><p class="hx-pc-oneliner">Agentic RAG: letting the model answer from documents · Knowledge base / smart support / compliance review</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Application Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/multi-tool-agent/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">③</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Multi-Tool Agent</h5><p class="hx-pc-oneliner">MCP-powered tool use with multi-agent collaboration · Smart underwriting / office automation / assistant</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Agent Developer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/on-device-small-model/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">④</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">On-Device Small Model</h5><p class="hx-pc-oneliner">Build a model that runs on a phone from scratch · Offline AI / privacy / AIoT</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 12 days</span><span class="hx-pc-m">💰 $0 (Colab)</span><span class="hx-pc-m">🎯 On-Device AI Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/vertical-finetune/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">⑤</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Vertical Fine-Tuning</h5><p class="hx-pc-oneliner">Teaching the model industry jargon · Custom support style / domain-specific models</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 $0 (RTX 2070S)</span><span class="hx-pc-m">🎯 LLM Fine-Tuning Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/distributed-training/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">⑥</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Distributed Training</h5><p class="hx-pc-oneliner">Making multiple GPUs train huge models together · Full fine-tuning / pretraining</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 ¥150 (4 GPUs)</span><span class="hx-pc-m">🎯 LLM Training Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/inference-serving/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">⑦</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Inference Serving</h5><p class="hx-pc-oneliner">Helping the model handle 50 concurrent users · High-concurrency AI products / API services</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 ¥100 (A100)</span><span class="hx-pc-m">🎯 LLM Inference Optimization Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/edge-deployment/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">⑧</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Edge Deployment</h5><p class="hx-pc-oneliner">Running the model on a Raspberry Pi · Private deployment / edge AI / data on-premise</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 ¥500 (hardware)</span><span class="hx-pc-m">🎯 Edge AI Deployment Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+
+<link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/observability/" class="hx-pcard">
+      <div class="hx-pc-top"><span class="hx-pc-no">⑨</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
+    
+      <h5 class="hx-pc-title">Observability</h5><p class="hx-pc-oneliner">Making model issues diagnosable · Evals / production SLA assurance / continuous improvement</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 7 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Ops / Platform Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+
+</code></pre>
+  </div>
+  <!-- Footer CTA -->
+  <div class="about-footer-cta">
+    <p>Want to explore my technical directions and knowledge base?</p>
+    <a class="about-cta-btn" href="/en/#core-directions">🚀 Explore Directions</a>
+    <a class="about-cta-btn is-ghost" href="/en/knowledge-base/">📚 Knowledge Base</a>
+  </div>
+</div>
+
         </div>
         <div class="hx:mt-16"></div>
         <div class="hx:mt-16"></div>
@@ -852,8 +902,8 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
         
         <div class="footer-column">
           <h4 class="footer-column-title">Practical Projects</h4>
-          <a href="/en/systems/" class="footer-link">🏢 Four Platform Systems</a>
-          <a href="/en/projects/" class="footer-link">🛠️ Nine Hands-On Projects</a>
+          <a href="/en/competition-event/systems/" class="footer-link">🏢 Platform Systems</a>
+          <a href="/en/competition-event/projects/" class="footer-link">🛠️ Hands-On Projects</a>
           <a href="/en/competition-event/kaggle/" class="footer-link">🏃Kaggle</a>
           <a href="/en/competition-event/alibaba-tianchi/" class="footer-link">🏃Alibaba Tianchi</a>
         </div>
@@ -874,8 +924,8 @@ About About About About About " /><link rel="canonical" href="http://localhost:1
   </div>
 </footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
-<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/en.search.js" integrity=""></script>
+    <script defer src="/js/main.min.7d7f0bd80c52169ee43f3072b04ff899dc75021a3ce235ba6d8c7635109d8610.js" integrity="sha256-fX8L2AxSFp7kPzBysE/4mdx1Aho84jW6bYx2NRCdhhA="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/en.search.min.097e3a24da0aba2ac82ef0f53e82e1500343a7126260a0203f3a45bbe0876093.js" integrity="sha256-CX46JNoKuirILvD1PoLhUANDpxJiYKAgPzpFu&#43;CHYJM="></script>
   </body>
 </html>

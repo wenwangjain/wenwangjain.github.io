@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>从数据到AI工程的实战探索 – 四大平台系统</title>
-    <link>http://localhost:1313/competition-event/systems/</link>
-    <description>Recent content in 四大平台系统 on 从数据到AI工程的实战探索</description>
+    <title>从数据到AI工程的实战探索 – 平台系统</title>
+    <link>https://wenwangjain.github.io/competition-event/systems/</link>
+    <description>Recent content in 平台系统 on 从数据到AI工程的实战探索</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:1313/competition-event/systems/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://wenwangjain.github.io/competition-event/systems/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>数据平台</title>
-      <link>http://localhost:1313/competition-event/systems/data-platform/</link>
+      <link>https://wenwangjain.github.io/competition-event/systems/data-platform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/competition-event/systems/data-platform/</guid>
+      <guid>https://wenwangjain.github.io/competition-event/systems/data-platform/</guid>
       <description>
         
         
@@ -37,10 +37,10 @@
     
     <item>
       <title>AI 训练平台</title>
-      <link>http://localhost:1313/competition-event/systems/ai-training-platform/</link>
+      <link>https://wenwangjain.github.io/competition-event/systems/ai-training-platform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/competition-event/systems/ai-training-platform/</guid>
+      <guid>https://wenwangjain.github.io/competition-event/systems/ai-training-platform/</guid>
       <description>
         
         
@@ -58,10 +58,10 @@
     
     <item>
       <title>MLOps 平台</title>
-      <link>http://localhost:1313/competition-event/systems/mlops-platform/</link>
+      <link>https://wenwangjain.github.io/competition-event/systems/mlops-platform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/competition-event/systems/mlops-platform/</guid>
+      <guid>https://wenwangjain.github.io/competition-event/systems/mlops-platform/</guid>
       <description>
         
         
@@ -79,10 +79,10 @@
     
     <item>
       <title>应用平台</title>
-      <link>http://localhost:1313/competition-event/systems/application-platform/</link>
+      <link>https://wenwangjain.github.io/competition-event/systems/application-platform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/competition-event/systems/application-platform/</guid>
+      <guid>https://wenwangjain.github.io/competition-event/systems/application-platform/</guid>
       <description>
         
         

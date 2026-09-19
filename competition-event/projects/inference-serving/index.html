@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="zh-cn" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -13,7 +13,7 @@
 一句话定位： 让模型“扛住 50 人并发”
 核心目标： 掌握 vLLM 调参与性能压测
 项目规格 项目 内容 所属阶段 工程层 硬件成本 ¥100（云 GPU A100） 学习周期 8 天 业务场景 高并发 AI 产品、API 服务 岗位映射 LLM 推理优化工程师 实战记录 （待更新）
-经验与收获 （待更新）" /><link rel="canonical" href="http://localhost:1313/competition-event/projects/inference-serving/" itemprop="url" />
+经验与收获 （待更新）" /><link rel="canonical" href="https://wenwangjain.github.io/competition-event/projects/inference-serving/" itemprop="url" />
 
 <meta property="og:title" content="推理服务化">
 <meta
@@ -28,7 +28,7 @@
   content="
     website
   ">
-<meta property="og:url" content="http://localhost:1313/competition-event/projects/inference-serving/">
+<meta property="og:url" content="https://wenwangjain.github.io/competition-event/projects/inference-serving/">
 
 
   <meta itemprop="name" content="推理服务化">
@@ -45,11 +45,29 @@
 核心目标： 掌握 vLLM 调参与性能压测
 项目规格 项目 内容 所属阶段 工程层 硬件成本 ¥100（云 GPU A100） 学习周期 8 天 业务场景 高并发 AI 产品、API 服务 岗位映射 LLM 推理优化工程师 实战记录 （待更新）
 经验与收获 （待更新）">
-<link href="/css/compiled/main.css" rel="stylesheet" />
-    <link href="/css/variables.css" rel="stylesheet" />
-    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/css/compiled/main.min.bddc1eaddbb20981d05988c070db51a8ca5a14bf2d13347ce6715d2a8a8cc689.css" as="style" integrity="sha256-vdwerduyCYHQWYjAcNtRqMpaFL8tEzR85nFdKoqMxok=" />
+    <link href="/css/compiled/main.min.bddc1eaddbb20981d05988c070db51a8ca5a14bf2d13347ce6715d2a8a8cc689.css" rel="stylesheet" integrity="sha256-vdwerduyCYHQWYjAcNtRqMpaFL8tEzR85nFdKoqMxok=" />
 
   
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ3Q041EBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-VZ3Q041EBH");
+</script>
+
+
+
+
+
 
 
   <script>
@@ -85,97 +103,7 @@
   --hextra-max-page-width: 90rem;
 }
 </style>
-  <script>
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return;
-
-  var canvas = document.createElement('canvas');
-  canvas.id = 'hx-fx-canvas';
-  var ctx = null, W = 0, H = 0, pts = [], rafId = null, running = false;
-  var mouse = { x: -9999, y: -9999 };
-
-  function count() { return Math.min(90, Math.floor(window.innerWidth / 16)); }
-
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    pts = Array.from({ length: count() }, function () {
-      return {
-        x: Math.random() * W,
-        y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        r: Math.random() * 1.4 + 0.4
-      };
-    });
-  }
-
-  function frame() {
-    ctx.clearRect(0, 0, W, H);
-    for (var i = 0; i < pts.length; i++) {
-      var p = pts[i];
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1;
-      if (p.y < 0 || p.y > H) p.vy *= -1;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0,229,255,.55)';
-      ctx.fill();
-    }
-    for (var a = 0; a < pts.length; a++) {
-      for (var b = a + 1; b < pts.length; b++) {
-        var pa = pts[a], pb = pts[b];
-        var d = Math.hypot(pa.x - pb.x, pa.y - pb.y);
-        if (d < 120) {
-          ctx.strokeStyle = 'rgba(0,229,255,' + (0.10 * (1 - d / 120)) + ')';
-          ctx.lineWidth = 0.6;
-          ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
-        }
-      }
-      var dm = Math.hypot(pts[a].x - mouse.x, pts[a].y - mouse.y);
-      if (dm < 170) {
-        ctx.strokeStyle = 'rgba(124,92,255,' + (0.22 * (1 - dm / 170)) + ')';
-        ctx.lineWidth = 0.7;
-        ctx.beginPath(); ctx.moveTo(pts[a].x, pts[a].y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      }
-    }
-    rafId = requestAnimationFrame(frame);
-  }
-
-  function start() {
-    if (running) return;
-    running = true;
-    if (!ctx) ctx = canvas.getContext('2d');
-    resize();
-    rafId = requestAnimationFrame(frame);
-  }
-  function stop() {
-    running = false;
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = null;
-  }
-
-  function isDark() { return document.documentElement.classList.contains('dark'); }
-
-  function init() {
-    document.body.appendChild(canvas);
-    window.addEventListener('resize', function () { if (isDark()) resize(); });
-    window.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
-    window.addEventListener('mouseout', function () { mouse.x = mouse.y = -9999; });
-
-    
-    new MutationObserver(function () { isDark() ? start() : stop(); })
-      .observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-
-    if (isDark()) start();
-  }
-
-  if (document.body) init();
-  else document.addEventListener('DOMContentLoaded', init);
-})();
-</script>
-</head>
+  </head>
 <body><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
   <div
     class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
@@ -185,7 +113,7 @@
     <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
     <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo2.png" alt="Logo" height="45" width="45" />
     <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo2-dark.png" alt="Dark Logo" height="45" width="45" />
-    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="从数据到AI工程的实战探索">从数据到AI工程的实战探索</span>
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="从数据到AI工程的实战探索">AI工程实战</span>
 </a>
 <a
   title=""
@@ -269,16 +197,16 @@
   >
     <li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
-        href="/systems/"
+        href="/competition-event/systems/"
         
         class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
-      >🏢 四大平台系统</a>
+      >🏢 平台系统</a>
     </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
-        href="/projects/"
+        href="/competition-event/projects/"
         
         class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
-      >🛠️ 九大实战项目</a>
+      >🛠️ 实战项目</a>
     </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
         href="/competition-event/kaggle/"
@@ -444,7 +372,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/about/"
     
-  >About
+  >关于我
     </a></li>
           <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -543,7 +471,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/competition-event/systems/"
     
-  >四大平台系统
+  >平台系统
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -586,7 +514,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/competition-event/projects/"
     
-  >九大实战项目
+  >实战项目
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -710,7 +638,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/competition-event/systems/"
     
-  >四大平台系统
+  >平台系统
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
@@ -752,7 +680,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/competition-event/projects/"
     
-  >九大实战项目
+  >实战项目
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
@@ -1039,8 +967,8 @@
         
         <div class="footer-column">
           <h4 class="footer-column-title">实践项目</h4>
-          <a href="/systems/" class="footer-link">🏢 四大平台系统</a>
-          <a href="/projects/" class="footer-link">🛠️ 九大实战项目</a>
+          <a href="/competition-event/systems/" class="footer-link">🏢 平台系统</a>
+          <a href="/competition-event/projects/" class="footer-link">🛠️ 实战项目</a>
           <a href="/competition-event/kaggle/" class="footer-link">🏃Kaggle</a>
           <a href="/competition-event/alibaba-tianchi/" class="footer-link">🏃阿里天池</a>
         </div>
@@ -1061,8 +989,8 @@
   </div>
 </footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
-<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/zh-cn.search.js" integrity=""></script>
+    <script defer src="/js/main.min.7d7f0bd80c52169ee43f3072b04ff899dc75021a3ce235ba6d8c7635109d8610.js" integrity="sha256-fX8L2AxSFp7kPzBysE/4mdx1Aho84jW6bYx2NRCdhhA="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/zh-cn.search.min.ab56a95db0578872aef5cc3c7f439c056dba42c40fc48960b644d1829857d986.js" integrity="sha256-q1apXbBXiHKu9cw8f0OcBW26QsQPxIlgtkTRgphX2YY="></script>
   </body>
 </html>

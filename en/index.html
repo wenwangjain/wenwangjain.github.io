@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr"><head>
-	<meta name="generator" content="Hugo 0.149.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.149.1">
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>From Data to AI Engineering: A Practical Exploration</title>
-  <meta name="description" content="Modern, responsive, batteries-included Hugo theme for creating beautiful static websites." /><link rel="canonical" href="http://localhost:1313/en/" itemprop="url" />
+  <meta name="description" content="Modern, responsive, batteries-included Hugo theme for creating beautiful static websites." /><link rel="canonical" href="https://wenwangjain.github.io/en/" itemprop="url" />
 
 <meta property="og:title" content="From Data to AI Engineering: A Practical Exploration">
 <meta
@@ -25,20 +25,38 @@
   content="
     website
   ">
-<meta property="og:url" content="http://localhost:1313/en/">
+<meta property="og:url" content="https://wenwangjain.github.io/en/">
 
 
   <meta itemprop="name" content="From Data to AI Engineering: A Practical Exploration">
-  <meta itemprop="description" content="From Data to AI Engineering: A Practical Exploration Based on 10 years of experience in the data field, I systematically explore AI engineering in production: three business directions, four platform systems, and nine fine-grained hands-on projects. I openly share the entire exploration journey and practical insights here. 9 Hands-on Projects 4 Platform Systems 3 Progression Stages 1,400&#43; WeChat Readers 🚀 Explore Directions 📚 Browse Knowledge Base Three Core AI Directions From classic data science, to LLM productization, to on-device intelligence in the physical world">
-  <meta itemprop="wordCount" content="950">
+  <meta itemprop="description" content="From Data to AI Engineering: A Practical Exploration Based on 10 years of experience in the data field, I systematically explore AI engineering in production: three business directions, platform systems, and a series of fine-grained hands-on projects. I openly share the entire exploration journey and practical insights here. 3 Progression Stages 1,400&#43; WeChat Readers 🚀 Explore Directions 📚 Browse Knowledge Base Three Core AI Directions From classic data science, to LLM productization, to on-device intelligence in the physical world">
+  <meta itemprop="wordCount" content="1095">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="From Data to AI Engineering: A Practical Exploration">
-  <meta name="twitter:description" content="From Data to AI Engineering: A Practical Exploration Based on 10 years of experience in the data field, I systematically explore AI engineering in production: three business directions, four platform systems, and nine fine-grained hands-on projects. I openly share the entire exploration journey and practical insights here. 9 Hands-on Projects 4 Platform Systems 3 Progression Stages 1,400&#43; WeChat Readers 🚀 Explore Directions 📚 Browse Knowledge Base Three Core AI Directions From classic data science, to LLM productization, to on-device intelligence in the physical world">
-<link href="/css/compiled/main.css" rel="stylesheet" />
-    <link href="/css/variables.css" rel="stylesheet" />
-    <link href="/css/custom.css" rel="stylesheet" />
+  <meta name="twitter:description" content="From Data to AI Engineering: A Practical Exploration Based on 10 years of experience in the data field, I systematically explore AI engineering in production: three business directions, platform systems, and a series of fine-grained hands-on projects. I openly share the entire exploration journey and practical insights here. 3 Progression Stages 1,400&#43; WeChat Readers 🚀 Explore Directions 📚 Browse Knowledge Base Three Core AI Directions From classic data science, to LLM productization, to on-device intelligence in the physical world">
+
+    <link rel="preload" href="/css/compiled/main.min.bddc1eaddbb20981d05988c070db51a8ca5a14bf2d13347ce6715d2a8a8cc689.css" as="style" integrity="sha256-vdwerduyCYHQWYjAcNtRqMpaFL8tEzR85nFdKoqMxok=" />
+    <link href="/css/compiled/main.min.bddc1eaddbb20981d05988c070db51a8ca5a14bf2d13347ce6715d2a8a8cc689.css" rel="stylesheet" integrity="sha256-vdwerduyCYHQWYjAcNtRqMpaFL8tEzR85nFdKoqMxok=" />
 
   
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ3Q041EBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-VZ3Q041EBH");
+</script>
+
+
+
+
+
 
 
   <script>
@@ -74,97 +92,7 @@
   --hextra-max-page-width: 100%;
 }
 </style>
-  <script>
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return;
-
-  var canvas = document.createElement('canvas');
-  canvas.id = 'hx-fx-canvas';
-  var ctx = null, W = 0, H = 0, pts = [], rafId = null, running = false;
-  var mouse = { x: -9999, y: -9999 };
-
-  function count() { return Math.min(90, Math.floor(window.innerWidth / 16)); }
-
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    pts = Array.from({ length: count() }, function () {
-      return {
-        x: Math.random() * W,
-        y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        r: Math.random() * 1.4 + 0.4
-      };
-    });
-  }
-
-  function frame() {
-    ctx.clearRect(0, 0, W, H);
-    for (var i = 0; i < pts.length; i++) {
-      var p = pts[i];
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1;
-      if (p.y < 0 || p.y > H) p.vy *= -1;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0,229,255,.55)';
-      ctx.fill();
-    }
-    for (var a = 0; a < pts.length; a++) {
-      for (var b = a + 1; b < pts.length; b++) {
-        var pa = pts[a], pb = pts[b];
-        var d = Math.hypot(pa.x - pb.x, pa.y - pb.y);
-        if (d < 120) {
-          ctx.strokeStyle = 'rgba(0,229,255,' + (0.10 * (1 - d / 120)) + ')';
-          ctx.lineWidth = 0.6;
-          ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
-        }
-      }
-      var dm = Math.hypot(pts[a].x - mouse.x, pts[a].y - mouse.y);
-      if (dm < 170) {
-        ctx.strokeStyle = 'rgba(124,92,255,' + (0.22 * (1 - dm / 170)) + ')';
-        ctx.lineWidth = 0.7;
-        ctx.beginPath(); ctx.moveTo(pts[a].x, pts[a].y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      }
-    }
-    rafId = requestAnimationFrame(frame);
-  }
-
-  function start() {
-    if (running) return;
-    running = true;
-    if (!ctx) ctx = canvas.getContext('2d');
-    resize();
-    rafId = requestAnimationFrame(frame);
-  }
-  function stop() {
-    running = false;
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = null;
-  }
-
-  function isDark() { return document.documentElement.classList.contains('dark'); }
-
-  function init() {
-    document.body.appendChild(canvas);
-    window.addEventListener('resize', function () { if (isDark()) resize(); });
-    window.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
-    window.addEventListener('mouseout', function () { mouse.x = mouse.y = -9999; });
-
-    
-    new MutationObserver(function () { isDark() ? start() : stop(); })
-      .observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-
-    if (isDark()) start();
-  }
-
-  if (document.body) init();
-  else document.addEventListener('DOMContentLoaded', init);
-})();
-</script>
-</head>
+  </head>
 <body><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
   <div
     class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
@@ -174,7 +102,7 @@
     <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/en/">
     <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo2.png" alt="Logo" height="45" width="45" />
     <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo2-dark.png" alt="Dark Logo" height="45" width="45" />
-    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="From Data to AI Engineering: A Practical Exploration">From Data to AI Engineering: A Practical Exploration</span>
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="From Data to AI Engineering: A Practical Exploration">AI Engineering in Practice</span>
 </a>
 <a
   title=""
@@ -258,16 +186,16 @@
   >
     <li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
-        href="/en/systems/"
+        href="/en/competition-event/systems/"
         
         class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
-      >🏢 Four Platform Systems</a>
+      >🏢 Platform Systems</a>
     </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
-        href="/en/projects/"
+        href="/en/competition-event/projects/"
         
         class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
-      >🛠️ Nine Hands-On Projects</a>
+      >🛠️ Hands-On Projects</a>
     </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
       <a
         href="/en/competition-event/kaggle/"
@@ -532,7 +460,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/en/competition-event/systems/"
     
-  >Four Platform Systems
+  >Platform Systems
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -575,7 +503,7 @@
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/en/competition-event/projects/"
     
-  >Nine Hands-On Projects
+  >Hands-On Projects
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -748,14 +676,8 @@
     <div class="hx-hero-content">
       <h1 class="hx-hero-title">From Data to <span class="hx-hero-grad">AI Engineering</span>: A Practical Exploration</h1>
       <p class="hx-hero-subtitle">
-Based on 10 years of experience in the data field, I systematically explore AI engineering in production: three business directions, four platform systems, and nine fine-grained hands-on projects. I openly share the entire exploration journey and practical insights here.
+Based on 10 years of experience in the data field, I systematically explore AI engineering in production: three business directions, platform systems, and a series of fine-grained hands-on projects. I openly share the entire exploration journey and practical insights here.
 </p><div class="hx-hero-stats"><div class="hx-hero-stat">
-            <b>9</b>
-            <span>Hands-on Projects</span>
-          </div><div class="hx-hero-stat">
-            <b>4</b>
-            <span>Platform Systems</span>
-          </div><div class="hx-hero-stat">
             <b>3</b>
             <span>Progression Stages</span>
           </div><div class="hx-hero-stat">
@@ -794,8 +716,8 @@ Based on 10 years of experience in the data field, I systematically explore AI e
     
     <link rel="stylesheet" href="/css/home_direction-card.min.f1288e8a52068fb16c41acc0f11ac7a9293dbdb4e8176ef956edd386cdd5fdb3.css"><div class="hx-direction-card-wrapper">
       <a href="/en/core-direction/ai-productization/" class="hx-direction-card-link">
-        <div class="hx-direction-card"><h3 class="hx-direction-title">💡 AI Productization &#43; Prompt Engineering</h3>
-          <p class="hx-direction-description">Turning LLM capabilities into products that meet business needs: structured output, knowledge-base QA, and multi-tool agents — covering the full path from prompt engineering to Agent deployment.</p><div class="hx-direction-tags"><span class="hx-direction-tag">RAG</span><span class="hx-direction-tag">Function Calling</span><span class="hx-direction-tag">AI Agent</span><span class="hx-direction-tag">Prompt Engineering</span></div><div class="hx-direction-footnote">▸ Includes 9 fine-grained hands-on projects</div></div>
+        <div class="hx-direction-card"><h3 class="hx-direction-title">💡 AI Productization &#43; Context Engineering</h3>
+          <p class="hx-direction-description">Turning LLM capabilities into products that meet business needs: structured output, knowledge-base QA, and multi-tool agents — covering the full path from context engineering to Agent deployment.</p><div class="hx-direction-tags"><span class="hx-direction-tag">RAG</span><span class="hx-direction-tag">MCP</span><span class="hx-direction-tag">AI Agent</span><span class="hx-direction-tag">Context Engineering</span></div><div class="hx-direction-footnote">▸ Includes multiple fine-grained hands-on projects</div></div>
       </a>
     </div>
 
@@ -803,7 +725,7 @@ Based on 10 years of experience in the data field, I systematically explore AI e
     <link rel="stylesheet" href="/css/home_direction-card.min.f1288e8a52068fb16c41acc0f11ac7a9293dbdb4e8176ef956edd386cdd5fdb3.css"><div class="hx-direction-card-wrapper">
       <a href="/en/core-direction/edge-ai/" class="hx-direction-card-link">
         <div class="hx-direction-card"><h3 class="hx-direction-title">📱 Edge AI &amp; On-Device Deployment</h3>
-          <p class="hx-direction-description">Running AI on phones, Raspberry Pi, AIoT devices and robots: model compression, on-device inference and hardware adaptation for low-latency, privacy-first offline intelligence.</p><div class="hx-direction-tags"><span class="hx-direction-tag">Model Quantization</span><span class="hx-direction-tag">On-Device Inference</span><span class="hx-direction-tag">AIoT</span><span class="hx-direction-tag">Edge Computing</span></div><div class="hx-direction-footnote">Intelligence in the physical world</div></div>
+          <p class="hx-direction-description">Running AI on phones, Raspberry Pi, AIoT devices and robots: model compression, on-device inference and hardware adaptation for low-latency, privacy-first offline intelligence.</p><div class="hx-direction-tags"><span class="hx-direction-tag">Model Quantization</span><span class="hx-direction-tag">On-Device Inference</span><span class="hx-direction-tag">SLM</span><span class="hx-direction-tag">AIoT</span><span class="hx-direction-tag">Edge Computing</span></div><div class="hx-direction-footnote">Intelligence in the physical world</div></div>
       </a>
     </div>
 
@@ -818,8 +740,8 @@ Based on 10 years of experience in the data field, I systematically explore AI e
     <div class="hx-knowledge-content">
       <div class="hx-knowledge-text">
         <h2 class="hx-knowledge-title">Knowledge Base</h2>
-        <p class="hx-knowledge-description">A systematic knowledge system of machine learning theory, covering AI fundamentals, MLOps engineering practices, algorithm/tool source code analysis, and other in-depth content to build a complete AI engineering capability stack.</p>
-        
+        <p class="hx-knowledge-description">The full AI engineering stack — from classic machine learning, to LLM applications, to on-device intelligence: math &amp; programming foundations, RAG, context engineering and multi-agent systems, model quantization and edge deployment, all with source-code-level depth.</p>
+
         
         <ul class="hx-knowledge-features"><i class="fas fa-check-circle"></i>
                 <div>
@@ -841,7 +763,7 @@ Based on 10 years of experience in the data field, I systematically explore AI e
               </li>
               </ul>
         
-        
+
         <a href="/en/knowledge-base/" class="hx-knowledge-btn">  
           <i class="fas fa-book-open"></i>
           Explore Knowledge Base
@@ -850,38 +772,32 @@ Based on 10 years of experience in the data field, I systematically explore AI e
       
       <div class="hx-knowledge-cards">
         
-    
-    <link rel="stylesheet" href="/css/home_knowledge-card.min.f25df557486659457106b2f6966fa74e725a1cadf860bfb000fc455d2b079e6a.css"><div class="hx-knowledge-card">
-      <h4 class="hx-knowledge-card-title">
+
+    <link rel="stylesheet" href="/css/home_knowledge-card.min.a62a350d28167cdefdeff02e1417e2cc813afb56db7f45498b2708199defdc44.css"><a href="/en/core-direction/ai-business/" class="hx-knowledge-card"><h4 class="hx-knowledge-card-title">
         <i class="fas fa-layer-group" style="color: #8b5cf6;"></i>
-        🧩 Basic Theory of AI
+        🧩 AI Foundations &amp; Business Modeling
       </h4>
-      <p class="hx-knowledge-card-description">Programming Basics, Mathematical Foundations, End-to-End Machine Learning Pipelines, Statistical Learning, Core Machine Learning Concepts, Deep Learning Theory.</p>
-    </div>
-    
-    <link rel="stylesheet" href="/css/home_knowledge-card.min.f25df557486659457106b2f6966fa74e725a1cadf860bfb000fc455d2b079e6a.css"><div class="hx-knowledge-card">
-      <h4 class="hx-knowledge-card-title">
-        <i class="fas fa-cogs" style="color: #10b981;"></i>
-        ⚙️ MLOps practical combat
+      <p class="hx-knowledge-card-description">Math &amp; programming basics, end-to-end ML pipelines, feature engineering and business modeling: user profiling, sales forecasting, risk control, recommendation; sklearn source code for deeper understanding.</p></a>
+
+    <link rel="stylesheet" href="/css/home_knowledge-card.min.a62a350d28167cdefdeff02e1417e2cc813afb56db7f45498b2708199defdc44.css"><a href="/en/core-direction/ai-productization/" class="hx-knowledge-card"><h4 class="hx-knowledge-card-title">
+        <i class="fas fa-robot" style="color: #06b6d4;"></i>
+        💡 LLM Application Engineering
       </h4>
-      <p class="hx-knowledge-card-description">End-to-End Machine Learning Pipelines, Model Deployment &amp; Monitoring, Experiment Tracking, Automated ML Workflows, Production Environment Best Practices.</p>
-    </div>
-    
-    <link rel="stylesheet" href="/css/home_knowledge-card.min.f25df557486659457106b2f6966fa74e725a1cadf860bfb000fc455d2b079e6a.css"><div class="hx-knowledge-card">
-      <h4 class="hx-knowledge-card-title">
-        <i class="fas fa-code" style="color: #10b981;"></i>
-        🔍 Algorithm/Tool Source Code
+      <p class="hx-knowledge-card-description">LLM basics, context engineering, RAG &amp; knowledge-base QA, MCP tool integration, multi-agent collaboration, plus Evals and Guardrails.</p></a>
+
+    <link rel="stylesheet" href="/css/home_knowledge-card.min.a62a350d28167cdefdeff02e1417e2cc813afb56db7f45498b2708199defdc44.css"><a href="/en/core-direction/edge-ai/" class="hx-knowledge-card"><h4 class="hx-knowledge-card-title">
+        <i class="fas fa-mobile-alt" style="color: #10b981;"></i>
+        📱 On-Device Intelligence &amp; MLOps
       </h4>
-      <p class="hx-knowledge-card-description">Deep dive into sklearn/tensorflow/pytorch source code, algorithm visualization and analysis, understanding machine learning algorithms from implementation details.</p>
-    </div>
-    
+      <p class="hx-knowledge-card-description">Model compression &amp; quantization, SLMs, on-device inference and hardware adaptation; model deployment, inference serving, monitoring &amp; observability, and MLOps pipelines.</p></a>
+
 
       </div>
     </div>
   </div>
 </section>
-<!-- Author Section: intro on the left, scrolling cards on the right (4 systems + 9 projects) -->
-<link rel="stylesheet" href="/css/home_author-section.min.79baa418ee5815a12ec49774e4f33783cffc6c58b7adfdbd5f582e9ddecc91f8.css"><section class="hx-author-section">
+<!-- Author Section: intro on the left, scrolling cards on the right (systems + projects) -->
+<link rel="stylesheet" href="/css/home_author-section.min.11a7eaac865fc34770b9df6ebaddcb100fb685f377bb779cf3f0018b1a5e0790.css"><section class="hx-author-section">
   <div class="hx-author-container">
     <div class="hx-author-content">
       <div class="hx-author-text">
@@ -889,7 +805,7 @@ Based on 10 years of experience in the data field, I systematically explore AI e
         <p class="hx-author-description">
           📊 4 years Data Analysis &#43; 💻 4 years Data Engineering &#43; 💻 1 year Data Governance &#43; 🧠 1 year Machine Learning.</p>
 
-        <p class="hx-author-description">I now focus on turning LLM capabilities into shippable business products: building 4 platform systems and landing 9 fine-grained hands-on projects inside the Application Platform, documenting the full journey from theory to practice.</p><div class="hx-platform-stats"><span class="hx-platform-stat">WeChat 1</span><span class="hx-platform-stat">400&#43; followers</span><span class="hx-platform-stat">4 Platform Systems</span><span class="hx-platform-stat">9 Hands-on Projects</span></div><a href="/en/about/" class="hx-author-btn">
+        <p class="hx-author-description">I now focus on turning LLM capabilities into shippable business products: building platform systems and landing a series of fine-grained hands-on projects inside the Application Platform, documenting the full journey from theory to practice.</p><div class="hx-platform-stats"><span class="hx-platform-stat">WeChat 1</span><span class="hx-platform-stat">400&#43; followers</span><span class="hx-platform-stat">Platform Systems</span><span class="hx-platform-stat">Hands-On Projects</span></div><a href="/en/about/" class="hx-author-btn">
           <i class="fas fa-user-circle"></i>
           More About Me
         </a>
@@ -900,171 +816,171 @@ Based on 10 years of experience in the data field, I systematically explore AI e
           
           
 
-    <!-- ===== Platform-level work: 4 systems ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/data-platform/" class="hx-pcard hx-pcard-sys">
+    <!-- ===== Platform-level work: systems ===== -->
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/data-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System I</span><span class="hx-pc-status">In Progress</span></div>
     
       <h5 class="hx-pc-title">Data Platform</h5><p class="hx-pc-oneliner">Data foundation &#43; real-time computing &#43; feature engineering &#43; lightweight ML</p><div class="hx-pc-meta"><span class="hx-pc-m">Ingestion &amp; Storage</span><span class="hx-pc-m">OLAP</span><span class="hx-pc-m">Stream Processing</span><span class="hx-pc-m">Spark MLlib</span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/ai-training-platform/" class="hx-pcard hx-pcard-sys">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/ai-training-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System II</span><span class="hx-pc-status">Planned</span></div>
     
       <h5 class="hx-pc-title">AI Training Platform</h5><p class="hx-pc-oneliner">Full-spectrum training: classic ML, deep learning, and LLMs</p><div class="hx-pc-meta"><span class="hx-pc-m">LoRA Fine-Tuning</span><span class="hx-pc-m">Distributed Training</span><span class="hx-pc-m">Graph Computing</span><span class="hx-pc-m">Experiment Management</span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/mlops-platform/" class="hx-pcard hx-pcard-sys">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/mlops-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System III</span><span class="hx-pc-status">Planned</span></div>
     
       <h5 class="hx-pc-title">MLOps Platform</h5><p class="hx-pc-oneliner">Model serving &#43; high-concurrency inference &#43; monitoring &#43; auto retraining</p><div class="hx-pc-meta"><span class="hx-pc-m">Model Serving</span><span class="hx-pc-m">Drift Detection</span><span class="hx-pc-m">Performance Monitoring</span><span class="hx-pc-m">Continuous Training</span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/application-platform/" class="hx-pcard hx-pcard-sys">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/application-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System IV</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Application Platform</h5><p class="hx-pc-oneliner">User-facing delivery &#43; RAG &#43; Agent &#43; visualization</p><div class="hx-pc-meta"><span class="hx-pc-m">Knowledge QA</span><span class="hx-pc-m">AI Agent</span><span class="hx-pc-m">BI Dashboard</span><span class="hx-pc-m">Graph Query</span><span class="hx-pc-arrow">View details →</span></div><div class="hx-pc-note">Data → Training → MLOps → Application｜The 9 projects land here</div></a>
+      <h5 class="hx-pc-title">Application Platform</h5><p class="hx-pc-oneliner">User-facing delivery &#43; RAG &#43; Agent &#43; visualization</p><div class="hx-pc-meta"><span class="hx-pc-m">Knowledge QA</span><span class="hx-pc-m">AI Agent</span><span class="hx-pc-m">BI Dashboard</span><span class="hx-pc-m">Graph Query</span><span class="hx-pc-arrow">View details →</span></div><div class="hx-pc-note">Data → Training → MLOps → Application｜Hands-on projects land here</div></a>
 
 
-    <!-- ===== Fine-grained work: 9 projects · Stage 1 Application ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/structured-extraction/" class="hx-pcard">
+    <!-- ===== Fine-grained work: projects · Stage 1 Application ===== -->
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/structured-extraction/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">①</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Structured Extraction</h5><p class="hx-pc-oneliner">Making the model obediently output JSON · Resume parsing / contract entry / ticket classification</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Structured Extraction</h5><p class="hx-pc-oneliner">Making the model obediently output JSON · Resume parsing / contract entry / ticket classification</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 5 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 Junior AI Application Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/enterprise-rag/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/enterprise-rag/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">②</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Enterprise RAG</h5><p class="hx-pc-oneliner">Letting the model answer from documents · Knowledge base / smart support / compliance review</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Enterprise RAG</h5><p class="hx-pc-oneliner">Agentic RAG: letting the model answer from documents · Knowledge base / smart support / compliance review</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Application Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/multi-tool-agent/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/multi-tool-agent/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">③</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Multi-Tool Agent</h5><p class="hx-pc-oneliner">Letting the model use tools to finish tasks · Smart underwriting / office automation / assistant</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Multi-Tool Agent</h5><p class="hx-pc-oneliner">MCP-powered tool use with multi-agent collaboration · Smart underwriting / office automation / assistant</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Agent Developer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
     <!-- ===== Stage 2 Model ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/on-device-small-model/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/on-device-small-model/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">④</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">On-Device Small Model</h5><p class="hx-pc-oneliner">Build a model that runs on a phone from scratch · Offline AI / privacy / AIoT</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">On-Device Small Model</h5><p class="hx-pc-oneliner">Build a model that runs on a phone from scratch · Offline AI / privacy / AIoT</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 12 days</span><span class="hx-pc-m">💰 $0 (Colab)</span><span class="hx-pc-m">🎯 On-Device AI Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/vertical-finetune/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/vertical-finetune/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑤</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Vertical Fine-Tuning</h5><p class="hx-pc-oneliner">Teaching the model industry jargon · Custom support style / domain-specific models</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Vertical Fine-Tuning</h5><p class="hx-pc-oneliner">Teaching the model industry jargon · Custom support style / domain-specific models</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 $0 (RTX 2070S)</span><span class="hx-pc-m">🎯 LLM Fine-Tuning Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/distributed-training/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/distributed-training/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑥</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Distributed Training</h5><p class="hx-pc-oneliner">Making multiple GPUs train huge models together · Full fine-tuning / pretraining</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Distributed Training</h5><p class="hx-pc-oneliner">Making multiple GPUs train huge models together · Full fine-tuning / pretraining</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 ¥150 (4 GPUs)</span><span class="hx-pc-m">🎯 LLM Training Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
     <!-- ===== Stage 3 Engineering ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/inference-serving/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/inference-serving/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑦</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Inference Serving</h5><p class="hx-pc-oneliner">Helping the model handle 50 concurrent users · High-concurrency AI products / API services</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Inference Serving</h5><p class="hx-pc-oneliner">Helping the model handle 50 concurrent users · High-concurrency AI products / API services</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 ¥100 (A100)</span><span class="hx-pc-m">🎯 LLM Inference Optimization Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/edge-deployment/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/edge-deployment/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑧</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Edge Deployment</h5><p class="hx-pc-oneliner">Running the model on a Raspberry Pi · Private deployment / edge AI / data on-premise</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Edge Deployment</h5><p class="hx-pc-oneliner">Running the model on a Raspberry Pi · Private deployment / edge AI / data on-premise</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 ¥500 (hardware)</span><span class="hx-pc-m">🎯 Edge AI Deployment Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/observability/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/observability/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑨</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Observability</h5><p class="hx-pc-oneliner">Making model issues diagnosable · Production SLA assurance / continuous improvement</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Observability</h5><p class="hx-pc-oneliner">Making model issues diagnosable · Evals / production SLA assurance / continuous improvement</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 7 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Ops / Platform Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
 
           
 
-    <!-- ===== Platform-level work: 4 systems ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/data-platform/" class="hx-pcard hx-pcard-sys">
+    <!-- ===== Platform-level work: systems ===== -->
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/data-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System I</span><span class="hx-pc-status">In Progress</span></div>
     
       <h5 class="hx-pc-title">Data Platform</h5><p class="hx-pc-oneliner">Data foundation &#43; real-time computing &#43; feature engineering &#43; lightweight ML</p><div class="hx-pc-meta"><span class="hx-pc-m">Ingestion &amp; Storage</span><span class="hx-pc-m">OLAP</span><span class="hx-pc-m">Stream Processing</span><span class="hx-pc-m">Spark MLlib</span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/ai-training-platform/" class="hx-pcard hx-pcard-sys">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/ai-training-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System II</span><span class="hx-pc-status">Planned</span></div>
     
       <h5 class="hx-pc-title">AI Training Platform</h5><p class="hx-pc-oneliner">Full-spectrum training: classic ML, deep learning, and LLMs</p><div class="hx-pc-meta"><span class="hx-pc-m">LoRA Fine-Tuning</span><span class="hx-pc-m">Distributed Training</span><span class="hx-pc-m">Graph Computing</span><span class="hx-pc-m">Experiment Management</span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/mlops-platform/" class="hx-pcard hx-pcard-sys">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/mlops-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System III</span><span class="hx-pc-status">Planned</span></div>
     
       <h5 class="hx-pc-title">MLOps Platform</h5><p class="hx-pc-oneliner">Model serving &#43; high-concurrency inference &#43; monitoring &#43; auto retraining</p><div class="hx-pc-meta"><span class="hx-pc-m">Model Serving</span><span class="hx-pc-m">Drift Detection</span><span class="hx-pc-m">Performance Monitoring</span><span class="hx-pc-m">Continuous Training</span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/systems/application-platform/" class="hx-pcard hx-pcard-sys">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/systems/application-platform/" class="hx-pcard hx-pcard-sys">
       <div class="hx-pc-top"><span class="hx-pc-badge hx-pc-sysbadge">System IV</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Application Platform</h5><p class="hx-pc-oneliner">User-facing delivery &#43; RAG &#43; Agent &#43; visualization</p><div class="hx-pc-meta"><span class="hx-pc-m">Knowledge QA</span><span class="hx-pc-m">AI Agent</span><span class="hx-pc-m">BI Dashboard</span><span class="hx-pc-m">Graph Query</span><span class="hx-pc-arrow">View details →</span></div><div class="hx-pc-note">Data → Training → MLOps → Application｜The 9 projects land here</div></a>
+      <h5 class="hx-pc-title">Application Platform</h5><p class="hx-pc-oneliner">User-facing delivery &#43; RAG &#43; Agent &#43; visualization</p><div class="hx-pc-meta"><span class="hx-pc-m">Knowledge QA</span><span class="hx-pc-m">AI Agent</span><span class="hx-pc-m">BI Dashboard</span><span class="hx-pc-m">Graph Query</span><span class="hx-pc-arrow">View details →</span></div><div class="hx-pc-note">Data → Training → MLOps → Application｜Hands-on projects land here</div></a>
 
 
-    <!-- ===== Fine-grained work: 9 projects · Stage 1 Application ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/structured-extraction/" class="hx-pcard">
+    <!-- ===== Fine-grained work: projects · Stage 1 Application ===== -->
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/structured-extraction/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">①</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Structured Extraction</h5><p class="hx-pc-oneliner">Making the model obediently output JSON · Resume parsing / contract entry / ticket classification</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Structured Extraction</h5><p class="hx-pc-oneliner">Making the model obediently output JSON · Resume parsing / contract entry / ticket classification</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 5 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 Junior AI Application Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/enterprise-rag/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/enterprise-rag/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">②</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Enterprise RAG</h5><p class="hx-pc-oneliner">Letting the model answer from documents · Knowledge base / smart support / compliance review</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Enterprise RAG</h5><p class="hx-pc-oneliner">Agentic RAG: letting the model answer from documents · Knowledge base / smart support / compliance review</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Application Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/multi-tool-agent/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/multi-tool-agent/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">③</span><span class="hx-pc-badge hx-pc-stage-app">Application</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Multi-Tool Agent</h5><p class="hx-pc-oneliner">Letting the model use tools to finish tasks · Smart underwriting / office automation / assistant</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Multi-Tool Agent</h5><p class="hx-pc-oneliner">MCP-powered tool use with multi-agent collaboration · Smart underwriting / office automation / assistant</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Agent Developer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
     <!-- ===== Stage 2 Model ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/on-device-small-model/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/on-device-small-model/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">④</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">On-Device Small Model</h5><p class="hx-pc-oneliner">Build a model that runs on a phone from scratch · Offline AI / privacy / AIoT</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">On-Device Small Model</h5><p class="hx-pc-oneliner">Build a model that runs on a phone from scratch · Offline AI / privacy / AIoT</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 12 days</span><span class="hx-pc-m">💰 $0 (Colab)</span><span class="hx-pc-m">🎯 On-Device AI Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/vertical-finetune/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/vertical-finetune/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑤</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Vertical Fine-Tuning</h5><p class="hx-pc-oneliner">Teaching the model industry jargon · Custom support style / domain-specific models</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Vertical Fine-Tuning</h5><p class="hx-pc-oneliner">Teaching the model industry jargon · Custom support style / domain-specific models</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 $0 (RTX 2070S)</span><span class="hx-pc-m">🎯 LLM Fine-Tuning Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/distributed-training/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/distributed-training/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑥</span><span class="hx-pc-badge hx-pc-stage-model">Model</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Distributed Training</h5><p class="hx-pc-oneliner">Making multiple GPUs train huge models together · Full fine-tuning / pretraining</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Distributed Training</h5><p class="hx-pc-oneliner">Making multiple GPUs train huge models together · Full fine-tuning / pretraining</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 ¥150 (4 GPUs)</span><span class="hx-pc-m">🎯 LLM Training Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
     <!-- ===== Stage 3 Engineering ===== -->
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/inference-serving/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/inference-serving/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑦</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Inference Serving</h5><p class="hx-pc-oneliner">Helping the model handle 50 concurrent users · High-concurrency AI products / API services</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Inference Serving</h5><p class="hx-pc-oneliner">Helping the model handle 50 concurrent users · High-concurrency AI products / API services</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 8 days</span><span class="hx-pc-m">💰 ¥100 (A100)</span><span class="hx-pc-m">🎯 LLM Inference Optimization Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/edge-deployment/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/edge-deployment/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑧</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Edge Deployment</h5><p class="hx-pc-oneliner">Running the model on a Raspberry Pi · Private deployment / edge AI / data on-premise</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Edge Deployment</h5><p class="hx-pc-oneliner">Running the model on a Raspberry Pi · Private deployment / edge AI / data on-premise</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 10 days</span><span class="hx-pc-m">💰 ¥500 (hardware)</span><span class="hx-pc-m">🎯 Edge AI Deployment Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
-    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/projects/observability/" class="hx-pcard">
+    <link rel="stylesheet" href="/css/home_scroll-card.min.a23c058a8edf5a08683f71656c7c3c906b3ec498fcb8bd95898efc991791be56.css"><a href="/en/competition-event/projects/observability/" class="hx-pcard">
       <div class="hx-pc-top"><span class="hx-pc-no">⑨</span><span class="hx-pc-badge hx-pc-stage-eng">Engineering</span><span class="hx-pc-status">Planned</span></div>
     
-      <h5 class="hx-pc-title">Observability</h5><p class="hx-pc-oneliner">Making model issues diagnosable · Production SLA assurance / continuous improvement</p><div class="hx-pc-meta"><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
+      <h5 class="hx-pc-title">Observability</h5><p class="hx-pc-oneliner">Making model issues diagnosable · Evals / production SLA assurance / continuous improvement</p><div class="hx-pc-meta"><span class="hx-pc-m">⏱ 7 days</span><span class="hx-pc-m">💰 $0</span><span class="hx-pc-m">🎯 AI Ops / Platform Engineer</span><span class="hx-pc-m"></span><span class="hx-pc-arrow">View details →</span></div></a>
 
 
 
@@ -1202,8 +1118,8 @@ Based on 10 years of experience in the data field, I systematically explore AI e
         
         <div class="footer-column">
           <h4 class="footer-column-title">Practical Projects</h4>
-          <a href="/en/systems/" class="footer-link">🏢 Four Platform Systems</a>
-          <a href="/en/projects/" class="footer-link">🛠️ Nine Hands-On Projects</a>
+          <a href="/en/competition-event/systems/" class="footer-link">🏢 Platform Systems</a>
+          <a href="/en/competition-event/projects/" class="footer-link">🛠️ Hands-On Projects</a>
           <a href="/en/competition-event/kaggle/" class="footer-link">🏃Kaggle</a>
           <a href="/en/competition-event/alibaba-tianchi/" class="footer-link">🏃Alibaba Tianchi</a>
         </div>
@@ -1224,8 +1140,8 @@ Based on 10 years of experience in the data field, I systematically explore AI e
   </div>
 </footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
-<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/en.search.js" integrity=""></script>
+    <script defer src="/js/main.min.7d7f0bd80c52169ee43f3072b04ff899dc75021a3ce235ba6d8c7635109d8610.js" integrity="sha256-fX8L2AxSFp7kPzBysE/4mdx1Aho84jW6bYx2NRCdhhA="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/en.search.min.097e3a24da0aba2ac82ef0f53e82e1500343a7126260a0203f3a45bbe0876093.js" integrity="sha256-CX46JNoKuirILvD1PoLhUANDpxJiYKAgPzpFu&#43;CHYJM="></script>
   </body>
 </html>
