@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>知识库 – 从数据到AI工程的实战探索</title>
+  <meta name="description" content=" Learning Path · 2026 从数学基础到 AI 工程的学习路线 十二级台阶，自下而上。每张卡片左右分栏：左侧是阶段说明，右侧三排标签——必须掌握、补充了解、推荐工具链。" /><link rel="canonical" href="http://localhost:1313/zh-cn/knowledge-base/" itemprop="url" />
+
+<meta property="og:title" content="知识库">
+<meta
+  property="og:description"
+  content="
+    
+      Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.
+    
+  ">
+<meta
+  property="og:type"
+  content="
+    website
+  ">
+<meta property="og:url" content="http://localhost:1313/zh-cn/knowledge-base/">
+
+
+  <meta itemprop="name" content="知识库">
+  <meta itemprop="description" content="Learning Path · 2026 从数学基础到 AI 工程的学习路线 十二级台阶，自下而上。每张卡片左右分栏：左侧是阶段说明，右侧三排标签——必须掌握、补充了解、推荐工具链。">
+  <meta itemprop="wordCount" content="443">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="知识库">
+  <meta name="twitter:description" content="Learning Path · 2026 从数学基础到 AI 工程的学习路线 十二级台阶，自下而上。每张卡片左右分栏：左侧是阶段说明，右侧三排标签——必须掌握、补充了解、推荐工具链。">
+<link href="/css/compiled/main.css" rel="stylesheet" />
+    <link href="/css/variables.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+  
+
+
+  <script>
+    
+
+    function setTheme(theme) {
+      document.documentElement.classList.remove("light", "dark");
+
+      if (theme !== "light" && theme !== "dark") {
+       theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+
+      document.documentElement.classList.add(theme);
+      document.documentElement.style.colorScheme = theme;
+    }
+
+    setTheme("color-theme" in localStorage ? localStorage.getItem("color-theme") : 'system')
+
+  </script>
+
+  <script>
+    
+
+    if (localStorage.getItem('banner-closed')) {
+      document.documentElement.style.setProperty("--hextra-banner-height", "0px");
+      document.documentElement.classList.add("hextra-banner-hidden");
+    }
+  </script>
+
+  
+  <style>
+:root {
+  --hextra-max-page-width: 100%;
+}
+</style>
+  </head>
+<body><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/zh-cn/">
+    <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo2.png" alt="Logo" height="45" width="45" />
+    <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo2-dark.png" alt="Dark Logo" height="45" width="45" />
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="从数据到AI工程的实战探索">AI工程实战</span>
+</a>
+<a
+  title=""
+  href="/zh-cn/"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">首页</span>
+</a><div class="hx:relative hx:hidden hx:md:inline-block">
+  <button
+    title="核心方向"
+    data-state="closed"
+    class="hextra-nav-menu-toggle hx:cursor-pointer hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:whitespace-nowrap hx:p-2 hx:flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+    type="button"
+    aria-label="核心方向"
+  ><span class="hx:text-center">核心方向</span><svg height=12 class="hx:transition-transform hx:duration-200 hx:ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+  <ul
+    class="hextra-nav-menu-items hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="min-width: 100px;"
+  >
+    <li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/core-direction/ai-business/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >📊 AI 业务实战</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/core-direction/ai-productization/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >💡 AI 产品化 + 上下文工程</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/core-direction/edge-ai/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >📱 边缘AI与端侧部署</a>
+    </li></ul>
+</div><div class="hx:relative hx:hidden hx:md:inline-block">
+  <button
+    title="知识库"
+    data-state="closed"
+    class="hextra-nav-menu-toggle hx:cursor-pointer hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:whitespace-nowrap hx:p-2 hx:flex hx:items-center hx:gap-1 hx:font-medium"
+    type="button"
+    aria-label="知识库"
+  ><span class="hx:text-center">知识库</span><svg height=12 class="hx:transition-transform hx:duration-200 hx:ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+  <ul
+    class="hextra-nav-menu-items hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="min-width: 100px;"
+  >
+    <li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/knowledge-base/ai-basic/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >🧩 AI 基础理论</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/knowledge-base/mlops/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >⚙️ MLOps 实战</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/knowledge-base/algorithm-code/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >🔍 算法 + 工具源码</a>
+    </li></ul>
+</div><div class="hx:relative hx:hidden hx:md:inline-block">
+  <button
+    title="实践项目"
+    data-state="closed"
+    class="hextra-nav-menu-toggle hx:cursor-pointer hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:whitespace-nowrap hx:p-2 hx:flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+    type="button"
+    aria-label="实践项目"
+  ><span class="hx:text-center">实践项目</span><svg height=12 class="hx:transition-transform hx:duration-200 hx:ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+  <ul
+    class="hextra-nav-menu-items hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="min-width: 100px;"
+  >
+    <li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/competition-event/systems/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >🏢 平台系统</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/competition-event/projects/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >🛠️ 实战项目</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/competition-event/kaggle/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >🏃Kaggle</a>
+    </li><li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/zh-cn/competition-event/alibaba-tianchi/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >🏃阿里天池</a>
+    </li></ul>
+</div><a
+  title=""
+  href="/zh-cn/about"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">关于作者</span>
+</a><div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="搜索文档..."
+      class="hextra-search-input hx:focus:hextra-focus hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus:bg-white hx:dark:focus:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+          <a class="hx:p-2 hx:text-current" target="_blank" rel="noreferrer" href="https://github.com/wenwangjain/wenwangjain.github.io" title="GitHub"><svg height=24 xmlns="http://www.w3.org/2000/svg" width="2em" height="1.5em" viewBox="0 0 128 128"><g fill="#181616"><path fill-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388c0 26.682 17.303 49.317 41.297 57.303c3.017.56 4.125-1.31 4.125-2.905c0-1.44-.056-6.197-.082-11.243c-16.8 3.653-20.345-7.125-20.345-7.125c-2.747-6.98-6.705-8.836-6.705-8.836c-5.48-3.748.413-3.67.413-3.67c6.063.425 9.257 6.223 9.257 6.223c5.386 9.23 14.127 6.562 17.573 5.02c.542-3.903 2.107-6.568 3.834-8.076c-13.413-1.525-27.514-6.704-27.514-29.843c0-6.593 2.36-11.98 6.223-16.21c-.628-1.52-2.695-7.662.584-15.98c0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033c11.526-7.813 16.59-6.19 16.59-6.19c3.287 8.317 1.22 14.46.593 15.98c3.872 4.23 6.215 9.617 6.215 16.21c0 23.194-14.127 28.3-27.574 29.796c2.167 1.874 4.097 5.55 4.097 11.183c0 8.08-.07 14.583-.07 16.572c0 1.607 1.088 3.49 4.148 2.897c23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" clip-rule="evenodd"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185c-.44-.196-.685-.605-.543-.906c.13-.31.603-.395 1.04-.188c.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28c-.396-.42-.47-.983-.177-1.254c.298-.266.844-.14 1.24.28c.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52c-.37-.538-.37-1.183.01-1.44c.373-.258.97-.025 1.35.507c.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23c-.527-.487-.674-1.18-.343-1.544c.336-.366 1.045-.264 1.564.23c.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486c-.683-.207-1.13-.76-.99-1.238c.14-.477.823-.7 1.512-.485c.683.206 1.13.756.988 1.237m4.943.361c.017.498-.563.91-1.28.92c-.723.017-1.308-.387-1.315-.877c0-.503.568-.91 1.29-.924c.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117c-.7.13-1.35-.172-1.44-.653c-.086-.498.422-.997 1.122-1.126c.714-.123 1.354.17 1.444.663zm0 0"/></g></svg><span class="hx:sr-only">GitHub</span>
+          </a><div class="hx:flex hx:justify-items-start ">
+    <button
+      title="切换语言"
+      data-state="closed"
+      data-location="top"
+      class="hextra-language-switcher hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:p-2 hx:grow"
+      type="button"
+      aria-label="切换语言"
+    >
+      <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=24 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg></div>
+    </button>
+    <ul
+      class="hextra-language-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+      style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    >
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/zh-cn/knowledge-base/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
+        </li>
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/knowledge-base/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >English</a>
+        </li>
+      </ul>
+  </div><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="切换主题"
+    data-state="closed"
+    data-location="top"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:p-2 hx:grow"
+    type="button"
+    aria-label="切换主题"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=24 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg height=24 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><svg height=24 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+</div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+  >
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="light"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        浅色
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="dark"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        深色
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="system"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        跟随系统
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+  </ul>
+</div><button type="button" aria-label="Menu" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+  
+  <div class="hx:px-4 hx:pt-4 hx:md:hidden">
+    <div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="搜索文档..."
+      class="hextra-search-input hx:focus:hextra-focus hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus:bg-white hx:dark:focus:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/about/"
+    
+  >关于我
+    </a></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/core-direction/"
+    
+  >三大 AI 核心方向
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/core-direction/ai-business/"
+    
+  >📊 AI业务实战
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/core-direction/ai-productization/"
+    
+  >💡 AI产品化 &#43; 上下文工程
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/core-direction/edge-ai/"
+    
+  >📱 边缘AI与端侧部署
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class="open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+    href="/zh-cn/knowledge-base/"
+    
+  >知识库
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#%e5%ad%a6%e4%b9%a0%e8%b7%af%e5%be%84"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >学习路径</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%98%b6%e6%ae%b5-0%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >阶段 0：基础知识</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%98%b6%e6%ae%b5-1%e7%ab%af%e5%88%b0%e7%ab%af%e7%9a%84%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >阶段 1：端到端的机器学习</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%98%b6%e6%ae%b5-2%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >阶段 2：深度学习</a>
+            </li>
+          </ul>
+  <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base/ai-basic/"
+    
+  >🧩 AI基础理论
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base/mlops/"
+    
+  >⚙️ MLOps 实战
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base/algorithm-code/"
+    
+  >🔍 算法 &#43; 工具源码
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/"
+    
+  >实践项目
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/kaggle/"
+    
+  >🏃 Kaggle
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/alibaba-tianchi/"
+    
+  >🏃 阿里天池
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/systems/"
+    
+  >平台系统
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/systems/data-platform/"
+    
+  >数据平台
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/systems/ai-training-platform/"
+    
+  >AI 训练平台
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/systems/mlops-platform/"
+    
+  >MLOps 平台
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/systems/application-platform/"
+    
+  >应用平台
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/"
+    
+  >实战项目
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/structured-extraction/"
+    
+  >结构化抽取
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/enterprise-rag/"
+    
+  >企业级 RAG
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/multi-tool-agent/"
+    
+  >多工具 Agent
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/on-device-small-model/"
+    
+  >端侧小模型
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/vertical-finetune/"
+    
+  >垂直微调
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/distributed-training/"
+    
+  >分布式训练
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/inference-serving/"
+    
+  >推理服务化
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/edge-deployment/"
+    
+  >端侧部署
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event/projects/observability/"
+    
+  >可观测性
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+      <li class="[word-break:break-word] hx:mt-5 hx:mb-2 hx:px-2 hx:py-1.5 hx:text-sm hx:font-semibold hx:text-gray-900 hx:first:mt-0 hx:dark:text-gray-100">
+        <span class="hx:cursor-default">更多</span>
+      </li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/#core-direction"
+    
+  >核心方向</a></li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base"
+    
+  >知识库</a></li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event"
+    
+  >实践项目</a></li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/about"
+    
+  >关于</a></li>
+    
+    </ul>
+
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base/ai-basic/"
+    
+  >🧩 AI基础理论
+    </a></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base/mlops/"
+    
+  >⚙️ MLOps 实战
+    </a></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base/algorithm-code/"
+    
+  >🔍 算法 &#43; 工具源码
+    </a></li>
+        
+      <li class="[word-break:break-word] hx:mt-5 hx:mb-2 hx:px-2 hx:py-1.5 hx:text-sm hx:font-semibold hx:text-gray-900 hx:first:mt-0 hx:dark:text-gray-100">
+        <span class="hx:cursor-default">更多</span>
+      </li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/#core-direction"
+    
+  >核心方向</a></li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/knowledge-base"
+    
+  >知识库</a></li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/competition-event"
+    
+  >实践项目</a></li>
+    <li><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/zh-cn/about"
+    
+  >关于</a></li>
+    
+      </ul>
+    </div>
+  
+  
+    <div class=" hx:justify-end hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:justify-items-start hx:grow">
+    <button
+      title="切换语言"
+      data-state="closed"
+      data-location=""
+      class="hextra-language-switcher hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:grow"
+      type="button"
+      aria-label="切换语言"
+    >
+      <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg><span>简体中文</span></div>
+    </button>
+    <ul
+      class="hextra-language-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+      style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    >
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/zh-cn/knowledge-base/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
+        </li>
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/knowledge-base/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >English</a>
+        </li>
+      </ul>
+  </div><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="切换主题"
+    data-state="closed"
+    data-location="bottom-right"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
+    type="button"
+    aria-label="切换主题"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+</div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+  >
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="light"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        浅色
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="dark"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        深色
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="system"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        跟随系统
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+  </ul>
+</div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%ad%a6%e4%b9%a0%e8%b7%af%e5%be%84">学习路径
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%98%b6%e6%ae%b5-0%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86">阶段 0：基础知识
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%98%b6%e6%ae%b5-1%e7%ab%af%e5%88%b0%e7%ab%af%e7%9a%84%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">阶段 1：端到端的机器学习
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%98%b6%e6%ae%b5-2%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0">阶段 2：深度学习
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>返回顶部</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+        
+        <div class="content">
+          <h1>知识库</h1>
+          
+
+
+
+
+<style>
+  .kb-lp {
+    --lp-text: #0f172a;
+    --lp-text-2: #475569;
+    --lp-text-3: #64748b;
+    --lp-border: rgba(15, 23, 42, .09);
+    --lp-card: linear-gradient(180deg, #ffffff, #f8fafc);
+    --lp-title-grad: linear-gradient(180deg, #0f172a 25%, #475569 140%);
+    --lp-eyebrow-bg: rgba(15, 23, 42, .03);
+    --lp-glow: rgba(99, 102, 241, .07);
+    --lp-tag-text: color-mix(in srgb, var(--accent) 72%, #0f172a);
+    --lp-grid-line: rgba(148, 163, 184, .14);
+    --lp-sup-bg: rgba(148, 163, 184, .05);
+    --lp-sup-border: rgba(148, 163, 184, .12);
+    --lp-sup-text: #475569;
+    --lp-gold: #d97706;
+    --lp-gold-bg: rgba(251, 191, 36, .07);
+    --lp-gold-border: rgba(251, 191, 36, .22);
+  }
+  .dark .kb-lp {
+    --lp-text: #e6edf3;
+    --lp-text-2: #94a3b8;
+    --lp-text-3: #5a6478;
+    --lp-border: rgba(148, 163, 184, .1);
+    --lp-card: linear-gradient(180deg, rgba(20, 25, 40, .85), rgba(13, 16, 26, .9));
+    --lp-title-grad: linear-gradient(180deg, #f1f5f9 25%, #94a3b8 140%);
+    --lp-eyebrow-bg: rgba(148, 163, 184, .03);
+    --lp-glow: rgba(99, 102, 241, .14);
+    --lp-tag-text: var(--accent);
+    --lp-grid-line: rgba(148, 163, 184, .14);
+    --lp-sup-bg: rgba(148, 163, 184, .05);
+    --lp-sup-border: rgba(148, 163, 184, .12);
+    --lp-sup-text: #94a3b8;
+    --lp-gold: #fbbf24;
+    --lp-gold-bg: rgba(251, 191, 36, .07);
+    --lp-gold-border: rgba(251, 191, 36, .22);
+  }
+
+  .kb-lp { position: relative; padding: 24px 0 8px; }
+  .kb-lp::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 0%, var(--lp-glow) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .kb-lp-wrap { position: relative; max-width: 1120px; margin: 0 auto; }
+
+  .kb-lp-head { text-align: center; margin-bottom: 48px; }
+  .kb-lp-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11.5px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase;
+    color: var(--lp-text-3); margin-bottom: 22px;
+    padding: 7px 16px; border: 1px solid var(--lp-border); border-radius: 50px;
+    background: var(--lp-eyebrow-bg);
+  }
+  .kb-lp-eyebrow .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #10b981; box-shadow: 0 0 10px #10b981;
+    animation: kb-lp-pulse 2s ease-in-out infinite;
+  }
+  @keyframes kb-lp-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+  .kb-lp-head h1 {
+    font-size: clamp(28px, 4.6vw, 52px); font-weight: 800;
+    letter-spacing: -.03em; line-height: 1.12; margin: 0 0 20px;
+    background: var(--lp-title-grad);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .kb-lp-head h1 .hl {
+    background: linear-gradient(100deg, #22d3ee 0%, #8b5cf6 50%, #ec4899 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .kb-lp-head p { font-size: 14.5px; color: var(--lp-text-2); max-width: 700px; margin: 0 auto; line-height: 1.85; }
+
+  .kb-lp-legend {
+    display: flex; justify-content: center; gap: 26px; flex-wrap: wrap;
+    margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--lp-border);
+  }
+  .kb-lp-legend-item { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--lp-text-2); }
+  .kb-lp-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .kb-lp-legend-dot.core { background: #10b981; box-shadow: 0 0 10px #10b981; }
+  .kb-lp-legend-dot.key  { background: #06b6d4; box-shadow: 0 0 10px #06b6d4; }
+  .kb-lp-legend-dot.adv  { background: #f59e0b; box-shadow: 0 0 10px #f59e0b; animation: kb-lp-pulse 1.6s ease-in-out infinite; }
+  .kb-lp-legend-dot.ref  { background: #3b82f6; box-shadow: 0 0 10px #3b82f6; }
+  .kb-lp-legend-dot.opt  { background: var(--lp-text-3); }
+
+  .kb-lp-hint {
+    text-align: center; font-size: 12.5px; color: var(--lp-text-3);
+    margin: -26px auto 38px; letter-spacing: .02em;
+  }
+  .kb-lp-hint .kbd {
+    display: inline-block; padding: 3px 12px; border-radius: 50px;
+    border: 1px dashed var(--lp-border); background: var(--lp-eyebrow-bg);
+  }
+
+  .kb-lp-path { display: flex; flex-direction: column; align-items: center; position: relative; }
+  .kb-lp-level {
+    width: 100%; position: relative;
+    padding: 26px 30px; border-radius: 18px;
+    background: var(--lp-card); border: 1px solid var(--lp-border);
+    transition: transform .4s cubic-bezier(.2,.9,.3,1), box-shadow .4s ease;
+    margin-bottom: 36px; overflow: hidden;
+    display: grid; grid-template-columns: 330px 1fr; gap: 0; align-items: stretch;
+  }
+  .kb-lp-level::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: .75;
+  }
+  .kb-lp-level::after {
+    content: ''; position: absolute; top: 26px; bottom: 26px; left: 0; width: 3px;
+    border-radius: 0 3px 3px 0; background: var(--accent);
+    box-shadow: 0 0 20px var(--accent), 0 0 6px var(--accent);
+  }
+  .kb-lp-level:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--accent) 50%, transparent);
+  }
+  .kb-lp-level:not(:last-of-type) .kb-lp-connector {
+    position: absolute; bottom: -36px; left: 50%; transform: translateX(-50%);
+    width: 2px; height: 36px; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 55%, transparent), color-mix(in srgb, var(--accent) 8%, transparent)); z-index: 0;
+  }
+  .kb-lp-level:not(:last-of-type) .kb-lp-connector::after {
+    content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 12px var(--accent);
+  }
+
+   
+  .kb-lp-left {
+    padding: 4px 28px 4px 14px;
+    display: flex; flex-direction: column; justify-content: center; min-width: 0;
+  }
+  .kb-lp-level-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+  .kb-lp-num {
+    font-family: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 26px; font-weight: 800; letter-spacing: -.04em;
+    color: var(--accent); line-height: 1; flex-shrink: 0; font-style: italic;
+    text-shadow: 0 0 22px color-mix(in srgb, var(--accent) 55%, transparent);
+  }
+  .kb-lp-title-group { flex: 1; min-width: 0; }
+  .kb-lp-title { font-size: 18px; font-weight: 700; letter-spacing: -.015em; color: var(--lp-text); line-height: 1.25; margin: 0 0 2px; }
+  .kb-lp-sub { font-size: 11.5px; color: var(--lp-text-3); font-weight: 500; letter-spacing: .03em; }
+  .kb-lp-status {
+    font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: 4px 11px; border-radius: 50px; flex-shrink: 0; white-space: nowrap;
+  }
+  .kb-lp-status.core { color: #059669; background: rgba(16, 185, 129, .08); border: 1px solid rgba(5, 150, 105, .28); }
+  .kb-lp-status.key  { color: #0e7490; background: rgba(6, 182, 212, .08); border: 1px solid rgba(14, 116, 144, .3); }
+  .kb-lp-status.adv  { color: #b45309; background: rgba(245, 158, 11, .1); border: 1px solid rgba(217, 119, 6, .28); }
+  .kb-lp-status.ref  { color: #1d4ed8; background: rgba(59, 130, 246, .08); border: 1px solid rgba(37, 99, 235, .28); }
+  .kb-lp-status.opt  { color: #64748b; background: rgba(148, 163, 184, .08); border: 1px solid rgba(148, 163, 184, .2); }
+  .dark .kb-lp-status.core { color: #34d399; background: rgba(16, 185, 129, .1); border-color: rgba(16, 185, 129, .28); }
+  .dark .kb-lp-status.key  { color: #22d3ee; background: rgba(6, 182, 212, .1); border-color: rgba(34, 211, 238, .28); }
+  .dark .kb-lp-status.adv  { color: #fbbf24; background: rgba(245, 158, 11, .1); border-color: rgba(245, 158, 11, .28); }
+  .dark .kb-lp-status.ref  { color: #60a5fa; background: rgba(59, 130, 246, .1); border-color: rgba(96, 165, 250, .28); }
+  .dark .kb-lp-status.opt  { color: #64748b; background: rgba(148, 163, 184, .06); border-color: rgba(148, 163, 184, .14); }
+
+  .kb-lp-desc { font-size: 13px; color: var(--lp-text-2); line-height: 1.7; margin: 8px 0 0; }
+
+   
+  .kb-lp-right {
+    padding: 6px 6px 6px 28px;
+    border-left: 1px dashed var(--lp-grid-line);
+    display: flex; flex-direction: column; justify-content: center; gap: 10px; min-width: 0;
+  }
+  .kb-lp-tag-row {
+    display: grid; grid-template-columns: 62px 1fr; gap: 12px; align-items: flex-start;
+  }
+  .kb-lp-tag-row-label {
+    font-size: 10px; font-weight: 800; letter-spacing: .12em;
+    padding-top: 5px; text-align: right; white-space: nowrap;
+  }
+  .kb-lp-tag-row[data-kind="req"]  .kb-lp-tag-row-label { color: var(--accent); }
+  .kb-lp-tag-row[data-kind="sup"]  .kb-lp-tag-row-label { color: var(--lp-text-3); }
+  .kb-lp-tag-row[data-kind="best"] .kb-lp-tag-row-label { color: var(--lp-gold); }
+  .kb-lp-tag-row-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kb-lp-tag {
+    font-size: 11.5px; padding: 4px 12px; border-radius: 50px; font-weight: 500;
+    letter-spacing: .01em; white-space: nowrap; transition: all .25s ease;
+    border: 1px solid transparent;
+  }
+  .kb-lp-tag.req {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--lp-tag-text);
+    border-color: color-mix(in srgb, var(--accent) 26%, transparent);
+  }
+  .kb-lp-level:hover .kb-lp-tag.req {
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    box-shadow: 0 0 14px -2px color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+  .kb-lp-tag.sup {
+    background: var(--lp-sup-bg); color: var(--lp-sup-text);
+    border-color: var(--lp-sup-border);
+  }
+  .kb-lp-tag.sup::before { content: '+ '; opacity: .5; font-weight: 400; }
+  .kb-lp-level:hover .kb-lp-tag.sup { background: var(--lp-sup-border); color: var(--lp-text); }
+  .kb-lp-tag.best {
+    background: var(--lp-gold-bg); color: var(--lp-gold);
+    border-color: var(--lp-gold-border);
+    font-family: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 11px; letter-spacing: -.005em;
+  }
+  .kb-lp-level:hover .kb-lp-tag.best {
+    background: rgba(251, 191, 36, .14); border-color: rgba(251, 191, 36, .45);
+    box-shadow: 0 0 14px -2px rgba(251, 191, 36, .35);
+  }
+
+   
+  .kb-lp-level[data-tier="1"]  { --accent: #10b981; }
+  .kb-lp-level[data-tier="2"]  { --accent: #14b8a6; }
+  .kb-lp-level[data-tier="3"]  { --accent: #06b6d4; }
+  .kb-lp-level[data-tier="4"]  { --accent: #0ea5e9; }
+  .kb-lp-level[data-tier="5"]  { --accent: #3b82f6; }
+  .kb-lp-level[data-tier="6"]  { --accent: #6366f1; }
+  .kb-lp-level[data-tier="7"]  { --accent: #8b5cf6; }
+  .kb-lp-level[data-tier="8"]  { --accent: #a855f7; }
+  .kb-lp-level[data-tier="9"]  { --accent: #c026d3; }
+  .kb-lp-level[data-tier="10"] { --accent: #d946ef; }
+  .kb-lp-level[data-tier="11"] { --accent: #ec4899; }
+  .kb-lp-level[data-tier="12"] { --accent: #f97316; }
+
+   
+  .kb-lp-end { text-align: center; padding: 8px 0 0; margin-top: 8px; }
+  .kb-lp-end-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 68px; height: 68px; border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #ec4899);
+    font-size: 30px; margin-bottom: 18px;
+    box-shadow: 0 0 0 8px rgba(249, 115, 22, .08), 0 0 50px rgba(249, 115, 22, .5);
+    animation: kb-lp-float 3s ease-in-out infinite;
+  }
+  @keyframes kb-lp-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .kb-lp-end h3 { font-size: 19px; font-weight: 700; color: var(--lp-text); letter-spacing: -.015em; margin: 0 0 6px; }
+  .kb-lp-end p { font-size: 13px; color: var(--lp-text-3); letter-spacing: .03em; margin: 0; }
+
+   
+  @media (max-width: 900px) {
+    .kb-lp-level { grid-template-columns: 1fr; gap: 0; }
+    .kb-lp-left { padding: 4px 14px 16px; }
+    .kb-lp-right { padding: 18px 14px 4px; border-left: none; border-top: 1px dashed var(--lp-grid-line); }
+    .kb-lp-tag-row-label { text-align: left; }
+  }
+  @media (max-width: 768px) {
+    .kb-lp-level { padding: 22px 20px; margin-bottom: 28px; }
+    .kb-lp-level:not(:last-of-type) .kb-lp-connector { bottom: -28px; height: 28px; }
+    .kb-lp-level::after { top: 22px; bottom: 22px; }
+    .kb-lp-num { font-size: 22px; }
+    .kb-lp-title { font-size: 16.5px; }
+    .kb-lp-desc { font-size: 12.5px; }
+    .kb-lp-head h1 { font-size: 28px; }
+    .kb-lp-legend { gap: 16px; }
+  }
+  @media (max-width: 480px) {
+    .kb-lp-tag-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+
+   
+  @keyframes kb-lp-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  .kb-lp-head, .kb-lp-legend, .kb-lp-end { animation: kb-lp-up .8s cubic-bezier(.2,.9,.3,1) both; }
+  .kb-lp-legend { animation-delay: .1s; }
+  .kb-lp-level { animation: kb-lp-up .7s cubic-bezier(.2,.9,.3,1) both; }
+  .kb-lp-level[data-tier="1"]  { animation-delay: .16s; }
+  .kb-lp-level[data-tier="2"]  { animation-delay: .21s; }
+  .kb-lp-level[data-tier="3"]  { animation-delay: .26s; }
+  .kb-lp-level[data-tier="4"]  { animation-delay: .31s; }
+  .kb-lp-level[data-tier="5"]  { animation-delay: .36s; }
+  .kb-lp-level[data-tier="6"]  { animation-delay: .41s; }
+  .kb-lp-level[data-tier="7"]  { animation-delay: .46s; }
+  .kb-lp-level[data-tier="8"]  { animation-delay: .51s; }
+  .kb-lp-level[data-tier="9"]  { animation-delay: .56s; }
+  .kb-lp-level[data-tier="10"] { animation-delay: .61s; }
+  .kb-lp-level[data-tier="11"] { animation-delay: .66s; }
+  .kb-lp-level[data-tier="12"] { animation-delay: .71s; }
+  .kb-lp-end { animation-delay: .76s; }
+  @media (prefers-reduced-motion: reduce) {
+    .kb-lp-head, .kb-lp-legend, .kb-lp-level, .kb-lp-end, .kb-lp-eyebrow .dot, .kb-lp-legend-dot.adv, .kb-lp-end-icon { animation: none !important; }
+  }
+</style>
+
+<div class="kb-lp">
+  <div class="kb-lp-wrap">
+
+    <header class="kb-lp-head">
+      <div class="kb-lp-eyebrow"><span class="dot"></span>Learning Path · 2026</div>
+      
+        <h1>从数学基础到 <span class="hl">AI 工程</span>的学习路线</h1>
+        <p>十二级台阶，自下而上。每张卡片左右分栏：左侧是阶段说明，右侧三排标签——<b style="color:var(--lp-gold)">必须</b>掌握、<b>补充</b>了解、<b style="color:var(--lp-gold)">推荐</b>工具链。</p>
+      
+    </header>
+
+    <div class="kb-lp-legend">
+      
+        <span class="kb-lp-legend-item"><span class="kb-lp-legend-dot core"></span>核心必学</span>
+        <span class="kb-lp-legend-item"><span class="kb-lp-legend-dot key"></span>重点掌握</span>
+        <span class="kb-lp-legend-item"><span class="kb-lp-legend-dot adv"></span>进阶提升</span>
+        <span class="kb-lp-legend-item"><span class="kb-lp-legend-dot ref"></span>补充知识</span>
+        <span class="kb-lp-legend-item"><span class="kb-lp-legend-dot opt"></span>按需选修</span>
+      
+    </div>
+
+    <p class="kb-lp-hint"><span class="kbd">无需逐层解锁 · 各层可并行推进</span></p>
+
+    <div class="kb-lp-path">
+      
+      <div class="kb-lp-level" data-tier="1">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L1</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">基础知识</div>
+              <div class="kb-lp-sub">Foundations</div>
+            </div>
+            <span class="kb-lp-status ref">
+              补充知识
+            </span>
+          </div>
+          <p class="kb-lp-desc">AI 学习的地基，数学与编程双线并行，为后续所有进阶内容提供支撑。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">Python / R</span><span class="kb-lp-tag req">线性代数</span><span class="kb-lp-tag req">微积分</span><span class="kb-lp-tag req">概率论</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">数理统计</span><span class="kb-lp-tag sup">贝叶斯统计</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">Python &#43; NumPy</span><span class="kb-lp-tag best">Jupyter</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="2">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L2</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">数据分析</div>
+              <div class="kb-lp-sub">Data Analysis</div>
+            </div>
+            <span class="kb-lp-status ref">
+              补充知识
+            </span>
+          </div>
+          <p class="kb-lp-desc">围绕业务问题开展用户画像、销量预测与经营分析，用数据驱动业务决策。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">SQL</span><span class="kb-lp-tag req">统计学</span><span class="kb-lp-tag req">可视化</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">业务建模</span><span class="kb-lp-tag sup">用户画像</span><span class="kb-lp-tag sup">销量预测</span><span class="kb-lp-tag sup">经营分析</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">Pandas &#43; Matplotlib</span><span class="kb-lp-tag best">SQL &#43; Tableau</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="3">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L3</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">数据开发</div>
+              <div class="kb-lp-sub">Data Engineering</div>
+            </div>
+            <span class="kb-lp-status ref">
+              补充知识
+            </span>
+          </div>
+          <p class="kb-lp-desc">建设数据仓库、实时计算链路与数据底座，支撑亿级数据的采集、存储与计算。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">Spark</span><span class="kb-lp-tag req">Flink</span><span class="kb-lp-tag req">数仓建模</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">OLAP</span><span class="kb-lp-tag sup">特征工程</span><span class="kb-lp-tag sup">实时计算</span><span class="kb-lp-tag sup">数据底座</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">Spark &#43; Hive</span><span class="kb-lp-tag best">Flink &#43; Kafka</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="4">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L4</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">数据治理</div>
+              <div class="kb-lp-sub">Data Governance</div>
+            </div>
+            <span class="kb-lp-status ref">
+              补充知识
+            </span>
+          </div>
+          <p class="kb-lp-desc">负责元数据管理、数据质量与标准规范建设，让数据资产可信可用。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">元数据管理</span><span class="kb-lp-tag req">数据质量</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">标准规范</span><span class="kb-lp-tag sup">数据血缘</span><span class="kb-lp-tag sup">数据安全</span><span class="kb-lp-tag sup">CDGA 认证</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">Atlas &#43; DataHub</span><span class="kb-lp-tag best">Great Expectations</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="5">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L5</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">机器学习</div>
+              <div class="kb-lp-sub">Machine Learning</div>
+            </div>
+            <span class="kb-lp-status core">
+              核心必学
+            </span>
+          </div>
+          <p class="kb-lp-desc">以经典机器学习打底，掌握完整建模流程（CRISP-DM），完成从数据到模型的端到端闭环。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">经典 ML</span><span class="kb-lp-tag req">Scikit-learn</span><span class="kb-lp-tag req">CRISP-DM</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">模型评估</span><span class="kb-lp-tag sup">集成学习</span><span class="kb-lp-tag sup">时间序列</span><span class="kb-lp-tag sup">Auto ML</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">Scikit-learn &#43; Pandas</span><span class="kb-lp-tag best">XGBoost &#43; LightGBM</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="6">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L6</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">深度学习</div>
+              <div class="kb-lp-sub">Deep Learning</div>
+            </div>
+            <span class="kb-lp-status core">
+              核心必学
+            </span>
+          </div>
+          <p class="kb-lp-desc">掌握深度学习核心算法与主流框架，深入 NLP 与 CV 两大方向，并能自制框架理解底层。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">PyTorch</span><span class="kb-lp-tag req">深度学习算法</span><span class="kb-lp-tag req">NLP</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">Keras</span><span class="kb-lp-tag sup">TensorFlow</span><span class="kb-lp-tag sup">CV</span><span class="kb-lp-tag sup">DeZero 自制框架</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">PyTorch &#43; CUDA</span><span class="kb-lp-tag best">HuggingFace</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="7">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L7</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">大模型应用</div>
+              <div class="kb-lp-sub">LLM Application</div>
+            </div>
+            <span class="kb-lp-status core">
+              核心必学
+            </span>
+          </div>
+          <p class="kb-lp-desc">让模型「听懂」上下文、「查文档」回答、「用工具」协同，把大模型能力做成可交付的业务产品。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">RAG</span><span class="kb-lp-tag req">Agent</span><span class="kb-lp-tag req">上下文工程</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">MCP</span><span class="kb-lp-tag sup">多智能体</span><span class="kb-lp-tag sup">结构化抽取</span><span class="kb-lp-tag sup">VLM</span><span class="kb-lp-tag sup">多模态</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">LangChain &#43; FAISS</span><span class="kb-lp-tag best">LlamaIndex</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="8">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L8</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">模型微调</div>
+              <div class="kb-lp-sub">Fine-tuning</div>
+            </div>
+            <span class="kb-lp-status key">
+              重点掌握
+            </span>
+          </div>
+          <p class="kb-lp-desc">让模型「学会行业黑话」，完成垂直领域的风格与知识定制，把通用模型变成专属模型。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">LoRA 微调</span><span class="kb-lp-tag req">指令微调</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">模型量化</span><span class="kb-lp-tag sup">SLM</span><span class="kb-lp-tag sup">垂直领域定制</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">PEFT &#43; Transformers</span><span class="kb-lp-tag best">Unsloth</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="9">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L9</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">模型训练</div>
+              <div class="kb-lp-sub">Model Training</div>
+            </div>
+            <span class="kb-lp-status opt">
+              按需选修
+            </span>
+          </div>
+          <p class="kb-lp-desc">让多卡「合力」跑超大模型，完成全量微调与预训练，掌握大规模训练的底层工程能力。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">分布式训练</span><span class="kb-lp-tag req">预训练</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">全量微调</span><span class="kb-lp-tag sup">混合精度</span><span class="kb-lp-tag sup">显存优化</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">DeepSpeed &#43; Megatron</span><span class="kb-lp-tag best">FSDP</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="10">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L10</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">模型部署</div>
+              <div class="kb-lp-sub">Model Deployment</div>
+            </div>
+            <span class="kb-lp-status adv">
+              进阶提升
+            </span>
+          </div>
+          <p class="kb-lp-desc">把训练好的模型送到线上和端上，让模型跑得快、稳、省。服务端推理与端侧部署并行。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">推理服务化</span><span class="kb-lp-tag req">vLLM / SGLang</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">TensorRT-LLM</span><span class="kb-lp-tag sup">KV Cache · PD 分离</span><span class="kb-lp-tag sup">端侧部署</span><span class="kb-lp-tag sup">MLC-LLM</span><span class="kb-lp-tag sup">Ollama</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">vLLM &#43; Ray Serve</span><span class="kb-lp-tag best">llama.cpp &#43; Ollama</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="11">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L11</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">FDE 交付</div>
+              <div class="kb-lp-sub">Forward Deployed Engineer</div>
+            </div>
+            <span class="kb-lp-status adv">
+              进阶提升
+            </span>
+          </div>
+          <p class="kb-lp-desc">驻扎客户现场，理解业务、快速做 POC、把 AI 能力真正落地到具体场景里。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">快速 POC</span><span class="kb-lp-tag req">客户现场交付</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">业务理解</span><span class="kb-lp-tag sup">方案设计</span><span class="kb-lp-tag sup">客户沟通</span><span class="kb-lp-tag sup">需求拆解</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">Streamlit &#43; Gradio</span><span class="kb-lp-tag best">Cursor &#43; AI Coding</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+      <div class="kb-lp-level" data-tier="12">
+        <div class="kb-lp-left">
+          <div class="kb-lp-level-head">
+            <span class="kb-lp-num">L12</span>
+            <div class="kb-lp-title-group">
+              <div class="kb-lp-title">工程化 / MLOps</div>
+              <div class="kb-lp-sub">Engineering &amp; Operations</div>
+            </div>
+            <span class="kb-lp-status adv">
+              进阶提升
+            </span>
+          </div>
+          <p class="kb-lp-desc">构建覆盖端到端 AI 工程生命周期的平台系统，让模型可观测、可迭代、可治理。</p>
+        </div>
+        <div class="kb-lp-right">
+          <div class="kb-lp-tag-row" data-kind="req">
+            <span class="kb-lp-tag-row-label">必须</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag req">CI/CD</span><span class="kb-lp-tag req">可观测性</span><span class="kb-lp-tag req">Docker / K8s</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="sup">
+            <span class="kb-lp-tag-row-label">补充</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag sup">Evals</span><span class="kb-lp-tag sup">模型治理</span><span class="kb-lp-tag sup">HF Spaces</span><span class="kb-lp-tag sup">Git / GitHub</span>
+            </div>
+          </div>
+          <div class="kb-lp-tag-row" data-kind="best">
+            <span class="kb-lp-tag-row-label">推荐</span>
+            <div class="kb-lp-tag-row-tags">
+              <span class="kb-lp-tag best">MLFlow &#43; DVC</span><span class="kb-lp-tag best">Kubeflow &#43; Argo</span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-lp-connector"></div>
+      </div>
+      
+    </div>
+
+    <div class="kb-lp-end">
+      <div class="kb-lp-end-icon">🏆</div>
+      
+        <h3>端到端 AI 工程闭环</h3>
+        <p>从数据到模型，从训练到落地，持续探索中</p>
+      
+    </div>
+
+  </div>
+</div>
+
+<br>
+<h2>学习路径<span class="hx:absolute hx:-mt-20" id="学习路径"></span>
+    <a href="#%e5%ad%a6%e4%b9%a0%e8%b7%af%e5%be%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><pre class="mermaid hx:mt-6">
+  
+flowchart LR
+
+    classDef default stroke-width:0.15px
+
+    classDef someclassA fill:#58C9B9,stroke-width:0px
+    classDef someclassB fill:#9DC8C8,stroke-width:0px
+    classDef someclassC fill:#f100,stroke-width:0.15px
+    classDef someclassD fill:#a3c9c7,stroke-width:0px
+    classDef someclassE fill:#fff,stroke:#fff,color:#fff,stroke-width:0px
+    classDef someclassF fill:#ff9900,stroke-width:0px
+
+
+    A(人工智能):::someclassA 
+    
+    A -- 阶段0：基础 --&gt; B(基础知识):::someclassB --&gt; B1(Python\ R):::someclassC -.-&gt; B2(线性代数&lt;br&gt;微积分):::someclassC -.-&gt; B3(概率论&lt;br&gt;数理统计&lt;br&gt;贝叶斯统计):::someclassC
+
+    A -- 阶段1：入门 --&gt; C(端到端的&lt;br&gt;机器学习):::someclassA --&gt; C12(机器学习概述) --&gt; C13(机器学习算法) --&gt; C14(建模工具&lt;br&gt;Sklearn) --&gt; C15(建模步骤&lt;br&gt;CRISP-DM) --&gt; Y
+        C -.-&gt; C21(自动机器学习&lt;br&gt;Auto ML):::someclassC -.-&gt; C22(大数据集处理):::someclassC
+
+    A -- 阶段2：进阶 --&gt; D(深度学习):::someclassA --&gt; D11(深度学习概述) --&gt; D12(深度学习算法) --&gt; D13(建模工具&lt;br&gt;keras&lt;br&gt;PyTorch&lt;br&gt;Tensorflow&lt;br&gt;FastAI)
+        D -.-&gt; D21(深度解析算法):::someclassC -.-&gt; D22(自制框架&lt;br&gt;DeZero):::someclassC -.-&gt; D23(工具源码):::someclassC
+        D13 --&gt; D141(自然语言&lt;br&gt;NLP) --&gt; Y
+        D13 --&gt; D142(计算机视觉&lt;br&gt;CV) --&gt; Y
+
+    A -- 阶段3：先进 --&gt; F(生成式&lt;br&gt;人工智能):::someclassA --&gt; F1(上下文工程)
+        F3(从头构建&lt;br&gt;生成模型) --&gt; F4(最新趋势&lt;br&gt;\研究\论文) --&gt; Y
+        F1 --&gt; F21(NLP -&gt; LLM) --&gt; F3
+        F1 --&gt; F22(CV -&gt; VLM) --&gt; F3
+
+    Y(练习&lt;br&gt;UCI 数据集&lt;br&gt;&lt;br&gt;竞赛&lt;br&gt;kaggle&lt;br&gt;阿里天池&lt;br&gt;...):::someclassA --&gt; Z
+
+    A -- 阶段4：部署 --&gt; Z1
+    Z(模型部署&lt;br&gt;MLOps&lt;br&gt;&lt;br&gt;部署方式&lt;br&gt;核心概念&lt;br&gt;...):::someclassF
+    Z1(版本控制\协作:&lt;br&gt;Git\Github) --&gt; Z12(自动化CI/CD&lt;br&gt;流水线) -.-&gt;  Z13(云\系统:Linux&lt;br&gt;容器化部署:Docker) -.-&gt; Z2(《ML应用平台》&lt;br&gt;HF Spaces\&lt;br&gt;Streamlit Sharing):::someclassF --&gt; Z3(《主要内容》&lt;br&gt;自动化管道&lt;br&gt;监控&lt;br&gt;生命周期管理&lt;br&gt;治理):::someclassC --&gt; Z4(《管理工具》&lt;br&gt;MLFlow&lt;br&gt;DVC&lt;br&gt;Polyaxon&lt;br&gt;Metaflow&lt;br&gt;Kubeflow):::someclassC
+    Z4 --&gt; Z
+
+
+    A -- 按需拓展 --&gt; G1(集成学习):::someclassB -.- G2(时间序列):::someclassB -.- G3(迁移学习):::someclassB -.- G4(强化学习):::someclassB -.- G5(专业知识):::someclassB
+</pre><p><br><br><br><br></p>
+<h2>阶段 0：基础知识<span class="hx:absolute hx:-mt-20" id="阶段-0基础知识"></span>
+    <a href="#%e9%98%b6%e6%ae%b5-0%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><br><br><br><br></p>
+<h2>阶段 1：端到端的机器学习<span class="hx:absolute hx:-mt-20" id="阶段-1端到端的机器学习"></span>
+    <a href="#%e9%98%b6%e6%ae%b5-1%e7%ab%af%e5%88%b0%e7%ab%af%e7%9a%84%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200">
+  <div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"><svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0">以学习完整的建模过程为主要目标，以了解常用机器算法（优缺点，原理，步骤，应用）和学习建模工具（<code>Sklearn</code>\ <code>scikit-learn</code>）为次要目标，
+快速熟悉端到端的建模过程。</div>
+  </div>
+</div>
+
+<p><font color=DarkCyan face=Georgia align=right><em><strong>实践多个案例，熟悉端到端的建模过程，主要内容参考如下：</strong></em></font></p>
+<ol>
+<li>了解人工智能，机器学习，深度学习，统计机器学习等相关概念；</li>
+<li>学习常用算法原理。了解算法优缺点，原理，步骤，应用即可，不必过多关注数学公式；</li>
+<li>学习建模分步过程。如：<a href="https://www.ibm.com/docs/zh/spss-modeler/saas?topic=dm-crisp-help-overview"target="_blank" rel="noopener"><strong><code>CRISP-DM</code></strong></a>；</li>
+<li>学习建模工具。如：<a href="https://scikit-learn.org/stable/user_guide.html"target="_blank" rel="noopener"><strong><code>scikit-learn</code></strong></a>；</li>
+<li>在小数据集上练习。如： <a href="https://archive.ics.uci.edu/"target="_blank" rel="noopener">the UC Irvine Machine Learning Repository</a>；</li>
+<li>将模型打包或序列化后的结果部署为 <code>Flask API</code> 或 <code>Streamlit\Gradio</code> 应用；</li>
+</ol>
+<p><font color=DarkCyan face=Georgia align=right><em><strong>补充内容：</strong></em></font></p>
+<ol>
+<li>了解自动化机器学习工具。</li>
+<li>了解处理大数据集的 python 库。</li>
+</ol>
+<p><font color=DarkCyan face=Georgia align=right><em><strong>推荐阅读：</strong></em></font></p>
+<ul>
+<li>《深度学习：从基础到实践》 （上册）- [美] Andrew Glassner</li>
+<li>《Machine Learning with Python Cookbook》 Chris Albon</li>
+<li>《machine-learning-mastery-with-python》 Jason Brownlee</li>
+<li>《菜菜的机器学习sklearn课堂》</li>
+<li>《机器学习实战：基于Scikit-Learn和TensorFlow》 （法）奥雷利安·杰龙</li>
+<li>《Python机器学习》 （美）塞巴斯蒂安·拉施卡（Sebastian Raschka） （美）瓦希德·米尔贾利利（Vahid Mirjalili）</li>
+</ul>
+<p><br><br><br><br></p>
+<h2>阶段 2：深度学习<span class="hx:absolute hx:-mt-20" id="阶段-2深度学习"></span>
+    <a href="#%e9%98%b6%e6%ae%b5-2%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><br><br><br><br></p>
+
+        </div>
+        <div class="hx:mt-16"></div>
+        <div class="hx:mt-16"></div>
+        
+      </main>
+    </article>
+  </div>
+
+      
+
+<link rel="stylesheet" href="/css/custom_footer.min.86d9eeffa776acdfcda59a5cbd3c24b14ff2b1bf7f1473b4de017113ccf644c9.css" integrity="sha256-htnu/6d2rN/NpZpcvTwksU/ysb9/FHO03gFxE8z2RMk=">
+
+<footer class="footer-dark footer-footer-full">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="/zh-cn/" class="footer-logo">
+          <i class="fas fa-brain"></i>
+          🧠 AI工程实战
+        </a>
+        <p class="footer-description">
+          专注于AI工程化、产品化与边缘计算的全栈知识体系，尝试将AI技术转化为商业价值。
+        </p>
+        <div class="footer-buttons">
+          <a href="/zh-cn/knowledge-base/" class="footer-btn-primary">
+            <i class="fas fa-graduation-cap"></i>
+            开始系统学习
+          </a>
+          <a href="/zh-cn/" class="footer-btn-primary">
+            <i class="fas fa-home"></i>
+            首页
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-column-title">核心方向</h4>
+          <a href="/zh-cn/core-direction/ai-business/" class="footer-link">📊 AI 业务实战</a>
+          <a href="/zh-cn/core-direction/ai-productization/" class="footer-link">💡 AI 产品化 &#43; 上下文工程</a>
+          <a href="/zh-cn/core-direction/edge-ai/" class="footer-link">📱 边缘AI与端侧部署</a>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">知识库</h4>
+          <a href="/zh-cn/knowledge-base/ai-basic/" class="footer-link">🧩 AI 基础理论</a>
+          <a href="/zh-cn/knowledge-base/mlops/" class="footer-link">⚙️ MLOps 实战</a>
+          <a href="/zh-cn/knowledge-base/algorithm-code/" class="footer-link">🔍 算法 &#43; 工具源码</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">实践项目</h4>
+          <a href="/zh-cn/competition-event/systems/" class="footer-link">🏢 平台系统</a>
+          <a href="/zh-cn/competition-event/projects/" class="footer-link">🛠️ 实战项目</a>
+          <a href="/zh-cn/competition-event/kaggle/" class="footer-link">🏃Kaggle</a>
+          <a href="/zh-cn/competition-event/alibaba-tianchi/" class="footer-link">🏃阿里天池</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">关于作者</h4>
+          <a href="/zh-cn/about/" class="footer-link">作者简介</a>
+          <a href="/zh-cn/#" class="footer-link">微信公众号</a>
+          <a href="/zh-cn/#" class="footer-link">LinkedIn</a>
+          <a href="https://github.com/wenwangjain" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <a href="https://github.com/imfing/hextra" target="_blank">🚀 <u>由 Hextra 驱动</u></a>
+    </div>
+  </div>
+</footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
+        <script defer src="/zh-cn.search.js" integrity=""></script><script defer src="/js/mermaid.d57e86c41d0f0db5ae4ddb46eac375cedf804768587655a2db74a0c02928d0b3.js" integrity="sha256-1X6GxB0PDbWuTdtG6sN1zt&#43;AR2hYdlWi23SgwCko0LM=" crossorigin="anonymous"></script><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach((el) => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach((el) => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  });
+</script>
+
+  </body>
+</html>

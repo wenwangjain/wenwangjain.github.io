@@ -2,364 +2,364 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wenwangjain.github.io/competition-event/kaggle/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/kaggle/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/kaggle/"
+                href="http://localhost:1313/competition-event/kaggle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/kaggle/"
+                href="http://localhost:1313/zh-cn/competition-event/kaggle/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/alibaba-tianchi/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/alibaba-tianchi/"
+                href="http://localhost:1313/competition-event/alibaba-tianchi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/alibaba-tianchi/"
+                href="http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/core-direction/ai-business/</loc>
+    <loc>http://localhost:1313/zh-cn/core-direction/ai-business/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/core-direction/ai-business/"
+                href="http://localhost:1313/core-direction/ai-business/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/core-direction/ai-business/"
+                href="http://localhost:1313/zh-cn/core-direction/ai-business/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/knowledge-base/ai-basic/</loc>
+    <loc>http://localhost:1313/zh-cn/knowledge-base/ai-basic/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/knowledge-base/ai-basic/"
+                href="http://localhost:1313/knowledge-base/ai-basic/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/knowledge-base/ai-basic/"
+                href="http://localhost:1313/zh-cn/knowledge-base/ai-basic/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/about/</loc>
+    <loc>http://localhost:1313/zh-cn/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/about/"
+                href="http://localhost:1313/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/about/"
+                href="http://localhost:1313/zh-cn/about/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/structured-extraction/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/structured-extraction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/structured-extraction/"
+                href="http://localhost:1313/competition-event/projects/structured-extraction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/structured-extraction/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/structured-extraction/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/systems/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/systems/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/systems/"
+                href="http://localhost:1313/competition-event/systems/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/systems/"
+                href="http://localhost:1313/zh-cn/competition-event/systems/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/core-direction/</loc>
+    <loc>http://localhost:1313/zh-cn/core-direction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/core-direction/"
+                href="http://localhost:1313/core-direction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/core-direction/"
+                href="http://localhost:1313/zh-cn/core-direction/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/systems/data-platform/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/systems/data-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/systems/data-platform/"
+                href="http://localhost:1313/competition-event/systems/data-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/systems/data-platform/"
+                href="http://localhost:1313/zh-cn/competition-event/systems/data-platform/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/knowledge-base/mlops/</loc>
+    <loc>http://localhost:1313/zh-cn/knowledge-base/mlops/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/knowledge-base/mlops/"
+                href="http://localhost:1313/knowledge-base/mlops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/knowledge-base/mlops/"
+                href="http://localhost:1313/zh-cn/knowledge-base/mlops/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/core-direction/ai-productization/</loc>
+    <loc>http://localhost:1313/zh-cn/core-direction/ai-productization/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/core-direction/ai-productization/"
+                href="http://localhost:1313/core-direction/ai-productization/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/core-direction/ai-productization/"
+                href="http://localhost:1313/zh-cn/core-direction/ai-productization/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/systems/ai-training-platform/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/systems/ai-training-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/systems/ai-training-platform/"
+                href="http://localhost:1313/competition-event/systems/ai-training-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/systems/ai-training-platform/"
+                href="http://localhost:1313/zh-cn/competition-event/systems/ai-training-platform/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/enterprise-rag/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/enterprise-rag/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/enterprise-rag/"
+                href="http://localhost:1313/competition-event/projects/enterprise-rag/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/enterprise-rag/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/enterprise-rag/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/"
+                href="http://localhost:1313/competition-event/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/knowledge-base/</loc>
+    <loc>http://localhost:1313/zh-cn/knowledge-base/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/knowledge-base/"
+                href="http://localhost:1313/knowledge-base/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/knowledge-base/"
+                href="http://localhost:1313/zh-cn/knowledge-base/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/core-direction/edge-ai/</loc>
+    <loc>http://localhost:1313/zh-cn/core-direction/edge-ai/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/core-direction/edge-ai/"
+                href="http://localhost:1313/core-direction/edge-ai/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/core-direction/edge-ai/"
+                href="http://localhost:1313/zh-cn/core-direction/edge-ai/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/knowledge-base/algorithm-code/</loc>
+    <loc>http://localhost:1313/zh-cn/knowledge-base/algorithm-code/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/knowledge-base/algorithm-code/"
+                href="http://localhost:1313/knowledge-base/algorithm-code/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/knowledge-base/algorithm-code/"
+                href="http://localhost:1313/zh-cn/knowledge-base/algorithm-code/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/systems/mlops-platform/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/systems/mlops-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/systems/mlops-platform/"
+                href="http://localhost:1313/competition-event/systems/mlops-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/systems/mlops-platform/"
+                href="http://localhost:1313/zh-cn/competition-event/systems/mlops-platform/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/multi-tool-agent/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/multi-tool-agent/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/multi-tool-agent/"
+                href="http://localhost:1313/competition-event/projects/multi-tool-agent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/multi-tool-agent/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/multi-tool-agent/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/on-device-small-model/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/on-device-small-model/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/on-device-small-model/"
+                href="http://localhost:1313/competition-event/projects/on-device-small-model/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/on-device-small-model/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/on-device-small-model/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/systems/application-platform/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/systems/application-platform/"
+                href="http://localhost:1313/competition-event/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/systems/application-platform/"
+                href="http://localhost:1313/zh-cn/competition-event/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/vertical-finetune/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/systems/application-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/vertical-finetune/"
+                href="http://localhost:1313/competition-event/systems/application-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/vertical-finetune/"
+                href="http://localhost:1313/zh-cn/competition-event/systems/application-platform/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/distributed-training/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/vertical-finetune/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/distributed-training/"
+                href="http://localhost:1313/competition-event/projects/vertical-finetune/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/distributed-training/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/vertical-finetune/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/inference-serving/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/distributed-training/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/inference-serving/"
+                href="http://localhost:1313/competition-event/projects/distributed-training/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/inference-serving/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/distributed-training/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/edge-deployment/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/inference-serving/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/edge-deployment/"
+                href="http://localhost:1313/competition-event/projects/inference-serving/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/edge-deployment/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/inference-serving/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/projects/observability/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/edge-deployment/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/projects/observability/"
+                href="http://localhost:1313/competition-event/projects/edge-deployment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/projects/observability/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/edge-deployment/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/categories/</loc>
+    <loc>http://localhost:1313/zh-cn/competition-event/projects/observability/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/categories/"
+                href="http://localhost:1313/competition-event/projects/observability/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/categories/"
+                href="http://localhost:1313/zh-cn/competition-event/projects/observability/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/competition-event/</loc>
+    <loc>http://localhost:1313/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/competition-event/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/competition-event/"
+                href="http://localhost:1313/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/tags/</loc>
+    <loc>http://localhost:1313/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/tags/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/tags/"
+                href="http://localhost:1313/zh-cn/tags/"
                 />
   </url><url>
-    <loc>https://wenwangjain.github.io/</loc>
+    <loc>http://localhost:1313/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wenwangjain.github.io/en/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://wenwangjain.github.io/"
+                href="http://localhost:1313/zh-cn/"
                 />
   </url>
 </urlset>
