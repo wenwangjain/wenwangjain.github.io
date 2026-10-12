@@ -2,364 +2,364 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh-cn/competition-event/kaggle/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/kaggle/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/kaggle/"
+                href="http://localhost:62975/competition-event/kaggle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/kaggle/"
+                href="http://localhost:62975/zh-cn/competition-event/kaggle/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/alibaba-tianchi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/alibaba-tianchi/"
+                href="http://localhost:62975/competition-event/alibaba-tianchi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/alibaba-tianchi/"
+                href="http://localhost:62975/zh-cn/competition-event/alibaba-tianchi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/core-direction/ai-business/</loc>
+    <loc>http://localhost:62975/zh-cn/core-direction/ai-business/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/core-direction/ai-business/"
+                href="http://localhost:62975/core-direction/ai-business/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/core-direction/ai-business/"
+                href="http://localhost:62975/zh-cn/core-direction/ai-business/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/knowledge-base/ai-basic/</loc>
+    <loc>http://localhost:62975/zh-cn/knowledge-base/ai-basic/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/knowledge-base/ai-basic/"
+                href="http://localhost:62975/knowledge-base/ai-basic/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/knowledge-base/ai-basic/"
+                href="http://localhost:62975/zh-cn/knowledge-base/ai-basic/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/about/</loc>
+    <loc>http://localhost:62975/zh-cn/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/about/"
+                href="http://localhost:62975/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/about/"
+                href="http://localhost:62975/zh-cn/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/structured-extraction/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/structured-extraction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/structured-extraction/"
+                href="http://localhost:62975/competition-event/projects/structured-extraction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/structured-extraction/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/structured-extraction/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/systems/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/systems/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/systems/"
+                href="http://localhost:62975/competition-event/systems/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/systems/"
+                href="http://localhost:62975/zh-cn/competition-event/systems/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/core-direction/</loc>
+    <loc>http://localhost:62975/zh-cn/core-direction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/core-direction/"
+                href="http://localhost:62975/core-direction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/core-direction/"
+                href="http://localhost:62975/zh-cn/core-direction/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/systems/data-platform/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/systems/data-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/systems/data-platform/"
+                href="http://localhost:62975/competition-event/systems/data-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/systems/data-platform/"
+                href="http://localhost:62975/zh-cn/competition-event/systems/data-platform/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/knowledge-base/mlops/</loc>
+    <loc>http://localhost:62975/zh-cn/knowledge-base/mlops/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/knowledge-base/mlops/"
+                href="http://localhost:62975/knowledge-base/mlops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/knowledge-base/mlops/"
+                href="http://localhost:62975/zh-cn/knowledge-base/mlops/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/core-direction/ai-productization/</loc>
+    <loc>http://localhost:62975/zh-cn/core-direction/ai-productization/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/core-direction/ai-productization/"
+                href="http://localhost:62975/core-direction/ai-productization/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/core-direction/ai-productization/"
+                href="http://localhost:62975/zh-cn/core-direction/ai-productization/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/systems/ai-training-platform/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/systems/ai-training-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/systems/ai-training-platform/"
+                href="http://localhost:62975/competition-event/systems/ai-training-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/systems/ai-training-platform/"
+                href="http://localhost:62975/zh-cn/competition-event/systems/ai-training-platform/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/enterprise-rag/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/enterprise-rag/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/enterprise-rag/"
+                href="http://localhost:62975/competition-event/projects/enterprise-rag/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/enterprise-rag/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/enterprise-rag/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/"
+                href="http://localhost:62975/competition-event/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/knowledge-base/</loc>
+    <loc>http://localhost:62975/zh-cn/knowledge-base/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/knowledge-base/"
+                href="http://localhost:62975/knowledge-base/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/knowledge-base/"
+                href="http://localhost:62975/zh-cn/knowledge-base/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/core-direction/edge-ai/</loc>
+    <loc>http://localhost:62975/zh-cn/core-direction/edge-ai/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/core-direction/edge-ai/"
+                href="http://localhost:62975/core-direction/edge-ai/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/core-direction/edge-ai/"
+                href="http://localhost:62975/zh-cn/core-direction/edge-ai/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/knowledge-base/algorithm-code/</loc>
+    <loc>http://localhost:62975/zh-cn/knowledge-base/algorithm-code/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/knowledge-base/algorithm-code/"
+                href="http://localhost:62975/knowledge-base/algorithm-code/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/knowledge-base/algorithm-code/"
+                href="http://localhost:62975/zh-cn/knowledge-base/algorithm-code/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/systems/mlops-platform/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/systems/mlops-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/systems/mlops-platform/"
+                href="http://localhost:62975/competition-event/systems/mlops-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/systems/mlops-platform/"
+                href="http://localhost:62975/zh-cn/competition-event/systems/mlops-platform/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/multi-tool-agent/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/multi-tool-agent/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/multi-tool-agent/"
+                href="http://localhost:62975/competition-event/projects/multi-tool-agent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/multi-tool-agent/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/multi-tool-agent/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/on-device-small-model/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/on-device-small-model/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/on-device-small-model/"
+                href="http://localhost:62975/competition-event/projects/on-device-small-model/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/on-device-small-model/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/on-device-small-model/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/"
+                href="http://localhost:62975/competition-event/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/"
+                href="http://localhost:62975/zh-cn/competition-event/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/systems/application-platform/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/systems/application-platform/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/systems/application-platform/"
+                href="http://localhost:62975/competition-event/systems/application-platform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/systems/application-platform/"
+                href="http://localhost:62975/zh-cn/competition-event/systems/application-platform/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/vertical-finetune/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/vertical-finetune/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/vertical-finetune/"
+                href="http://localhost:62975/competition-event/projects/vertical-finetune/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/vertical-finetune/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/vertical-finetune/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/distributed-training/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/distributed-training/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/distributed-training/"
+                href="http://localhost:62975/competition-event/projects/distributed-training/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/distributed-training/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/distributed-training/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/inference-serving/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/inference-serving/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/inference-serving/"
+                href="http://localhost:62975/competition-event/projects/inference-serving/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/inference-serving/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/inference-serving/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/edge-deployment/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/edge-deployment/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/edge-deployment/"
+                href="http://localhost:62975/competition-event/projects/edge-deployment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/edge-deployment/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/edge-deployment/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/competition-event/projects/observability/</loc>
+    <loc>http://localhost:62975/zh-cn/competition-event/projects/observability/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/competition-event/projects/observability/"
+                href="http://localhost:62975/competition-event/projects/observability/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/competition-event/projects/observability/"
+                href="http://localhost:62975/zh-cn/competition-event/projects/observability/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/categories/</loc>
+    <loc>http://localhost:62975/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="http://localhost:62975/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/categories/"
+                href="http://localhost:62975/zh-cn/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/tags/</loc>
+    <loc>http://localhost:62975/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="http://localhost:62975/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/tags/"
+                href="http://localhost:62975/zh-cn/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh-cn/</loc>
+    <loc>http://localhost:62975/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="http://localhost:62975/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/"
+                href="http://localhost:62975/zh-cn/"
                 />
   </url>
 </urlset>

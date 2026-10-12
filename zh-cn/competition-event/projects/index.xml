@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>从数据到AI工程的实战探索 – 实战项目</title>
-    <link>http://localhost:1313/zh-cn/competition-event/projects/</link>
+    <link>http://localhost:62975/zh-cn/competition-event/projects/</link>
     <description>Recent content in 实战项目 on 从数据到AI工程的实战探索</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	  <atom:link href="http://localhost:1313/zh-cn/competition-event/projects/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:62975/zh-cn/competition-event/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>结构化抽取</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/structured-extraction/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/structured-extraction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/structured-extraction/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/structured-extraction/</guid>
       <description>
         
         
@@ -69,10 +69,10 @@
     
     <item>
       <title>企业级 RAG</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/enterprise-rag/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/enterprise-rag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/enterprise-rag/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/enterprise-rag/</guid>
       <description>
         
         
@@ -122,10 +122,10 @@
     
     <item>
       <title>多工具 Agent</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/multi-tool-agent/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/multi-tool-agent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/multi-tool-agent/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/multi-tool-agent/</guid>
       <description>
         
         
@@ -175,10 +175,10 @@
     
     <item>
       <title>端侧小模型</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/on-device-small-model/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/on-device-small-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/on-device-small-model/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/on-device-small-model/</guid>
       <description>
         
         
@@ -228,10 +228,10 @@
     
     <item>
       <title>垂直微调</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/vertical-finetune/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/vertical-finetune/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/vertical-finetune/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/vertical-finetune/</guid>
       <description>
         
         
@@ -281,10 +281,10 @@
     
     <item>
       <title>分布式训练</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/distributed-training/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/distributed-training/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/distributed-training/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/distributed-training/</guid>
       <description>
         
         
@@ -334,10 +334,10 @@
     
     <item>
       <title>推理服务化</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/inference-serving/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/inference-serving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/inference-serving/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/inference-serving/</guid>
       <description>
         
         
@@ -387,10 +387,10 @@
     
     <item>
       <title>端侧部署</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/edge-deployment/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/edge-deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/edge-deployment/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/edge-deployment/</guid>
       <description>
         
         
@@ -440,10 +440,10 @@
     
     <item>
       <title>可观测性</title>
-      <link>http://localhost:1313/zh-cn/competition-event/projects/observability/</link>
+      <link>http://localhost:62975/zh-cn/competition-event/projects/observability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/zh-cn/competition-event/projects/observability/</guid>
+      <guid>http://localhost:62975/zh-cn/competition-event/projects/observability/</guid>
       <description>
         
         
